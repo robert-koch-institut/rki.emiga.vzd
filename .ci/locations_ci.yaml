@@ -1,0 +1,11 @@
+locations:
+  - name: rki_za_vzd
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: "$CI_PROJECT_DIR"
+# ------------------------------------------------------------------------ 
+  - name: vzd_napi_output_location
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: "${CI_PROJECT_DIR}/target"
+# ------------------------------------------------------------------------ 

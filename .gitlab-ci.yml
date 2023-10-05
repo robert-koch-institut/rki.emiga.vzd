@@ -1,0 +1,17 @@
+stages:
+  - qa
+
+
+# Needs variable FLOW to be defined in extending jobs
+# This variable must be the absolute path to the job to execute
+current_branch_flow:
+  stage: qa
+  image: 
+    name: $CI_REGISTRY/demis-light/demis-profile-loader:latest
+    entrypoint: [""]
+    pull_policy: always
+  script:
+    - |
+      java -jar /workspace/profile-loader.jar \
+          -f .ci/notificationApi-current_branch.yaml \
+          -l .ci/locations_ci.yaml
