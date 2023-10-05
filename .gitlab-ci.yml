@@ -13,7 +13,8 @@ current_branch_flow:
   script:
     - |
       echo $CI_COMMIT_REF_NAME
-      CI_SIMPLE_BRANCH_NAME=${CI_COMMIT_REF_NAME##*/} \
+      echo $CI_PROJECT_DIR
+      ls -la $CI_PROJECT_DIR
       java -jar /workspace/profile-loader.jar \
           -f .ci/notificationApi-current_branch.yaml \
           -l .ci/locations_ci.yaml
