@@ -1,6 +1,11 @@
 stages:
+  - tmp
   - qa
 
+list_branches:
+  image: alpine/git:v2.40.1
+  stage: tmp
+  script: git branch --format "%(refname) [%(upstream)]"
 
 # Needs variable FLOW to be defined in extending jobs
 # This variable must be the absolute path to the job to execute
