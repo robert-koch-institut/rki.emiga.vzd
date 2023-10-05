@@ -12,6 +12,7 @@ current_branch_flow:
   script:
     - |
       git fetch origin $CI_COMMIT_REF_NAME
+      git branch -a --format "%(refname) [%(upstream)]"
       java -jar /workspace/profile-loader.jar \
           -f .ci/notificationApi-current_branch.yaml \
           -l .ci/locations_ci.yaml
