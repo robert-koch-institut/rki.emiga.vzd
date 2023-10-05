@@ -12,7 +12,8 @@ current_branch_flow:
     pull_policy: always
   script:
     - |
-      CI_SIMPLE_BRANCH_NAME=${CI_COMMIT_REF_NAME##*/}
+      echo $CI_COMMIT_REF_NAME
+      CI_SIMPLE_BRANCH_NAME=${CI_COMMIT_REF_NAME##*/} \
       java -jar /workspace/profile-loader.jar \
           -f .ci/notificationApi-current_branch.yaml \
           -l .ci/locations_ci.yaml
