@@ -11,7 +11,7 @@ list_branches:
   stage: tmp
   script: 
     - | 
-      git fetch --all
+      git fetch origin $CI_COMMIT_REF_NAME
       git branch -a --format "%(refname) [%(upstream)]"
 
 # Needs variable FLOW to be defined in extending jobs
