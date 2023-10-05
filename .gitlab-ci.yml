@@ -3,6 +3,8 @@ stages:
   - qa
 
 list_branches:
+  variables:
+    GIT_STRATEGY: clone
   image: 
     name: alpine/git:v2.40.1
     entrypoint: [""]
@@ -17,6 +19,8 @@ current_branch_flow:
     name: $CI_REGISTRY/demis-light/demis-profile-loader:latest
     entrypoint: [""]
     pull_policy: always
+  variables:
+    GIT_STRATEGY: clone
   script:
     - |
       echo $CI_COMMIT_REF_NAME
