@@ -10,8 +10,6 @@ current_branch_flow:
     name: $CI_REGISTRY/demis-light/demis-profile-loader:latest
     entrypoint: [""]
     pull_policy: always
-  before_script:
-       - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY/demis-light/demis-profile-loader:latest
   script:
     - |
       CI_SIMPLE_BRANCH_NAME=${CI_COMMIT_REF_NAME##*/}
