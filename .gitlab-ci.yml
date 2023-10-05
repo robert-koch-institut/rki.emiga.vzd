@@ -1,34 +1,17 @@
 stages:
-  - tmp
   - qa
-
-list_branches:
-  variables:
-    GIT_STRATEGY: clone
-  image: 
-    name: alpine/git:v2.40.1
-    entrypoint: [""]
-  stage: tmp
-  script: 
-    - | 
-      git fetch origin $CI_COMMIT_REF_NAME
-      git branch -a --format "%(refname) [%(upstream)]"
 
 # Needs variable FLOW to be defined in extending jobs
 # This variable must be the absolute path to the job to execute
 current_branch_flow:
   stage: qa
-  variables:
-    GIT_STRATEGY: clone
   image: 
     name: $CI_REGISTRY/demis-light/demis-profile-loader:latest
     entrypoint: [""]
     pull_policy: always
   script:
     - |
-      echo $CI_COMMIT_REF_NAME
-      echo $CI_PROJECT_DIR
-      ls -la $CI_PROJECT_DIR
+      git fetch origin $CI_COMMIT_REF_NAME
       java -jar /workspace/profile-loader.jar \
           -f .ci/notificationApi-current_branch.yaml \
           -l .ci/locations_ci.yaml
