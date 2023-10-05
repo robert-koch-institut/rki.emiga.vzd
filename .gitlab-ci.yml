@@ -3,7 +3,9 @@ stages:
   - qa
 
 list_branches:
-  image: alpine/git:v2.40.1
+  image: 
+    name: alpine/git:v2.40.1
+    entrypoint: [""]
   stage: tmp
   script: git branch --format "%(refname) [%(upstream)]"
 
