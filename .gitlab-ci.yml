@@ -9,10 +9,11 @@ current_branch_flow:
     name: $CI_REGISTRY/demis-light/demis-profile-loader:latest
     entrypoint: [""]
     pull_policy: always
+  # The fetched git repo only has a detached head. 
+  # We have to attach it to the branch name for which we execute the pipeline
   script:
     - |
-      git fetch origin $CI_COMMIT_REF_NAME
-      git branch -a --format "%(refname) [%(upstream)]"
+      git checkout -B "$CI_COMMIT_REF_NAME"
       java -jar /workspace/profile-loader.jar \
           -f .ci/notificationApi-current_branch.yaml \
           -l .ci/locations_ci.yaml
