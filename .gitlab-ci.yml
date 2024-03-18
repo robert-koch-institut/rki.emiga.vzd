@@ -17,3 +17,10 @@ current_branch_flow:
       java -jar /workspace/profile-loader.jar \
           -f .ci/notificationApi-current_branch.yaml \
           -l .ci/locations_ci.yaml
+  artifacts:
+    when: always
+    name: "$CI_COMMIT_REF_NAME"
+    expire_in: "7 days"
+    paths:
+      - target/
+    
