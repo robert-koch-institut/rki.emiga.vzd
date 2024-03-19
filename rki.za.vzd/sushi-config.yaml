@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: rki.za.vzd
-canonical: https://vzd.za.rki.de
+canonical: https://emiga.rki.de/fhir
 name: rki.za.vzd
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI

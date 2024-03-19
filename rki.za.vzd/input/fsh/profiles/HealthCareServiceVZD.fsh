@@ -4,6 +4,7 @@ Id: HealthcareServiceDirectory
 Title: "HealthcareService in RKI Directory"
 Description: "HealthcareService in RKI Directory"
 * insert Meta
+* insert Security
 * ^version = "0.1.0-alpha.1"
 * ^date = "2024-03-18"
 * id MS
