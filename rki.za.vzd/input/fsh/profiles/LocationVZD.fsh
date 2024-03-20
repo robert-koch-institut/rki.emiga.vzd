@@ -5,12 +5,14 @@ Title: "Location in RKI Directory"
 Description: """Defines the data structure for medical, regulatory and technical
 organisations specific for german Healthcare and Telematics Infrastructure."""
 * insert Meta
+* insert Security
 * ^version = "0.1.0-alpha.1"
 * ^date = "2024-03-18"
 * id MS
 * meta.tag MS
 * name MS
 * description MS
+* type from LocationType
 * address MS
   * use MS
   * text MS

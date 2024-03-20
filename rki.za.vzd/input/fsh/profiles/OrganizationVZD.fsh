@@ -4,6 +4,7 @@ Id: OrganizationDirectory
 Title: "Organization in RKI Directory"
 Description: "Organization in RKI Directory"
 * insert Meta
+* insert Security
 * ^version = "0.1.0-alpha.1"
 * ^date = "2024-03-18"
 * id MS
