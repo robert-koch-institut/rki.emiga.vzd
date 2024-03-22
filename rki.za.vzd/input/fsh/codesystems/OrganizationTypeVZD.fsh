@@ -13,6 +13,7 @@ ValueSet: OrganizationType
 Id: organizationType
 Title: "Organization Type in RKI Directory (Value Set)"
 Description: "Organization Type in RKI Directory"
+* insert Meta
 * ^date = "2024-03-19"
 * ^version = "0.1.0-alpha.1"
 * include codes from system OrganizationType

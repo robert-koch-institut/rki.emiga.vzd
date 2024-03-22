@@ -15,6 +15,7 @@ ValueSet: LocationType
 Title: "Location Type in RKI Directory (Value Set)"
 Description: "Location Type in RKI Directory"
 Id: locationType
+* insert Meta
 * ^date = "2024-03-19"
 * ^version = "0.1.0-alpha.1"
 * include codes from system LocationType
