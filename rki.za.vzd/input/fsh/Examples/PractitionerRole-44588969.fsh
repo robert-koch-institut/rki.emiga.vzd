@@ -5,3 +5,5 @@ Usage: #example
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
 * practitioner = Reference(44588968)
 * organization = Reference(44588964)
+* code[emigaPractitionerRole] = $PractitionerRole#director
+* code[emigaPractitionerRole] = $PractitionerRole#publicMedicalOfficer

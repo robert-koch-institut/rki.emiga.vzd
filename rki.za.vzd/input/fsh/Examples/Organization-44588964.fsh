@@ -6,8 +6,9 @@ Usage: #example
 * identifier.type = $v2-0203#PRN
 * identifier.system = $CodeSiteId
 * identifier.value = "1.12.99.99."
-* type[emigaOrganizationType] = $OrganizationType#gap
-* name = "Stadt XYZ - FB 9 / Dienste"
+* active = true
+* type[emigaOrganizationType] = $OrganizationType#ga
+* name = "Stadt XYZ - Gesundheitsamt"
 * telecom[0].system = #email
 * telecom[=].value = "test@example.org"
 * telecom[+].system = #phone
