@@ -11,13 +11,22 @@ RuleSet: Security
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "system"
     * ^slicing.rules = #open
-    * ^slicing.description = "Slicing security attributey by coding system"
+    * ^slicing.description = "Slicing security attribute by coding system"
     * ^slicing.ordered = false
   * security contains
-      visibility 1..1 and
-      responsibility 1..1
-  * security[visibility] from VisibilityType
-    * system = $visibilityType
-  * security[responsibility] from DataResponsibility
-    * system = $dataResponsibility
-  
+      visibility 0..1 and
+      responsibility 0..1
+  * security[visibility] from ResourceVisibilityType
+    * system = $ResourceVisibilityType
+  * security[responsibility] from ResourceResponsibility
+    * system = $ResourceResponsibility
+
+
+RuleSet: ResourceCommon
+* implicitRules 0..0
+
+
+RuleSet: DomainResourceCommon
+* text 0..0
+* contained 0..0
+* modifierExtension 0..0

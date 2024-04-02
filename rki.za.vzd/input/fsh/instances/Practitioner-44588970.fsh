@@ -1,8 +1,8 @@
 Instance: 44588970
-InstanceOf: PractitionerDirectory
+InstanceOf: BasePractitioner
 Usage: #example
-* meta.security[visibility] = $visibilityType#internal
-* meta.security[responsibility] = $dataResponsibility#1.12.99.99.
+* meta.security[visibility] = $ResourceVisibilityType#internal
+* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
 * name.family = "Hahn"
 * name.given = "Wilhelm"
 * name.text = "Wilhelm Hahn"
