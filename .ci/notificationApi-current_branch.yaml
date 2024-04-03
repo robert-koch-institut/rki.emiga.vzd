@@ -6,6 +6,8 @@ output: vzd_napi_output_location
 skipFhirSchemaValidation: false
 resourceParseMode: STRICT
 skipExampleValidation: false
+loadNpmDependencies: true
+snapshotDependenciesForSushi: true
 fhirSchemaValidationMaxSeverity: INFORMATION
 testFileDirectories: []
 profileSets:
