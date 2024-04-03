@@ -49,14 +49,14 @@ Description: "Location - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 // 'Type of function performed' - 0..* - CodeableConcept
 // Derzeit unterstützen wir lediglich die Angabe des Standorttyps über EMIGA eigne Konzepte. Die Ressource ist jedoch so angelegt, dass wir weitere Slices hinzunehmen können, falls perspektivisch erforderlich
 * type 0.. MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #closed
   * ^slicing.description = "slicing location type by system"
   * ^slicing.ordered = false
 * type contains emigaLocationType 0..1 MS
-* type[emigaLocationType] from LocationType
-  * coding.system = $LocationType
+* type[emigaLocationType] from LocationType (required)
+  * ^patternCodeableConcept.coding.system = $LocationType
 
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
