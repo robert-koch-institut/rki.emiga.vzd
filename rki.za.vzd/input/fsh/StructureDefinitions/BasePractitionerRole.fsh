@@ -46,7 +46,7 @@ Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
   * ^slicing.ordered = false
 * code contains emigaPractitionerRole 0.. MS
 * code[emigaPractitionerRole] from PractitionerRole (required)
-  * ^patternCodeableConcept.coding = $PractitionerRole
+  * ^patternCodeableConcept.coding.system = $PractitionerRole
 //  * ^binding.description = "emigaPractitionerRole"
 
 // 'Specific specialty of the practitioner'
