@@ -31,14 +31,14 @@ Description: "HealthcareService - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 // 'Broad category of service being performed or delivered'
 // Sollten wir für eine bessere Kategorisierung der Dienstleistungen nutzen. Entsprechend machen wir das Element verpflichtend und binden es an eine Werteliste.
 * category 1.. MS 
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #closed
   * ^slicing.description = "slicing healthcare service category by system"
   * ^slicing.ordered = false
 * category contains emigaHealthcareServiceCategory 0..1 MS
-* category[emigaHealthcareServiceCategory] from HealthcareServiceCategory
-  * coding.system = $HealthcareServiceCategory
+* category[emigaHealthcareServiceCategory] from HealthcareServiceCategory (required)
+  * ^patternCodeableConcept.coding.system = $HealthcareServiceCategory
 
 // 'Type of service that may be delivered or performed'
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
