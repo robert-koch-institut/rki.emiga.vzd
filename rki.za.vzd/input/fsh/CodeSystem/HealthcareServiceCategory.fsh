@@ -4,7 +4,7 @@ Title: "Dienstleistungskategorie"
 Description: "Beschreibt die grobe Kategorie, in welche eine angebotene Dienstleistung einsortiert werden kann."
 * ^version = "1.0.0"
 * ^date = "2024-03-19"
-* ^valueSet = "https://emiga.rki.de/fhir/ValueSet/HealthcareServiceCategory"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory"
 * ^caseSensitive = true
 * ^content = #complete
 * insert Meta
