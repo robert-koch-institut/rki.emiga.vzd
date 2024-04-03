@@ -1,7 +1,7 @@
 CodeSystem: ResourceVisibilityType
 Id: ResourceVisibilityType
-Title: "ResourceVisibility Type Code System"
-Description: "Defines visibility of resources in VZD"
+Title: "Sichtbarkeit von Ressourcen"
+Description: "Definiert Konzepte, die die gewünschte Sichtbarkeit von Ressourcen beschreiben. Die entsprechende Information kann herangezogen werden, um im Rahmen des Access Control Systems zu entscheiden, ob eine Information für bestimmte Nutzergruppen sichtbar gemacht werden soll, oder nicht."
 * insert MetaTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-19"
