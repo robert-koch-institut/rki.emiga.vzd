@@ -6,7 +6,7 @@ Usage: #example
 * status = #active
 * name = "Stadt XYZ - FB 9 / Dienste"
 * mode = #instance
-* type[emigaLocationType] = $LocationType#centralOffice
+* type[emigaLocationType] = $LocationType#centralOfficer
 * address.type = #physical
 * address.line = "Test Straße 21"
 * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
