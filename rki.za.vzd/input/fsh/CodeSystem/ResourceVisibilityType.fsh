@@ -2,7 +2,7 @@ CodeSystem: ResourceVisibilityType
 Id: ResourceVisibilityType
 Title: "ResourceVisibility Type Code System"
 Description: "Defines visibility of resources in VZD"
-* ^valueSet = "https://emiga.rki.de/fhir/ValueSet/ResourceVisibilityType"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/ResourceVisibilityType"
 * ^content = #complete
 * ^caseSensitive = true
 * ^date = "2024-03-19"
@@ -10,6 +10,7 @@ Description: "Defines visibility of resources in VZD"
 * insert Meta
 * #public "Public"
 * #internal "Internal"
+* #private "Private"
 
 
 ValueSet: ResourceVisibilityType

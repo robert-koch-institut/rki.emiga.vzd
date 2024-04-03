@@ -2,7 +2,7 @@ CodeSystem: ResourceResponsibility
 Id: ResourceResponsibility
 Title: "ResourceResponsibility"
 Description: "Responsible organization"
-* ^valueSet = "https://emiga.rki.de/fhir/ValueSet/ResourceResponsibility"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/ResourceResponsibility"
 * ^content = #complete
 * ^caseSensitive = true
 * ^date = "2024-03-19"
