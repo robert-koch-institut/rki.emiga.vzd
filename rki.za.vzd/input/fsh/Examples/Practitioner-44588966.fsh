@@ -6,7 +6,10 @@ Usage: #example
 * active = true
 * name.family = "Sommer"
 * name.given = "Gerd"
-* name.text = "Gerd Sommer"
+* name.prefix = "Dr."
+* name.prefix.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension[=].valueCode = #AC
+* name.text = "Dr. Gerd Sommer"
 * telecom[0].system = #email
 * telecom[=].value = "gerd.sommer@example.org"
 * telecom[+].system = #phone
