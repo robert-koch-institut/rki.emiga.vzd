@@ -5,7 +5,7 @@ Description: "Organization Type in RKI Directory"
 * ^date = "2024-03-19"
 * ^version = "1.0.0"
 * ^caseSensitive = true
-* ^valueSet = "https://emiga.rki.de/fhir/ValueSet/OrganizationType"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
 * insert Meta
 * #ga "Gesundheitsamt"
 
