@@ -35,14 +35,14 @@ Description: "Organization - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 // 'Kind of organization' - 0..* - CodeableConcept
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
 * type 1.. MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #closed
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS
-* type[emigaOrganizationType] from OrganizationType
-  * coding.system = $OrganizationType
+* type[emigaOrganizationType] from OrganizationType (required)
+  * ^patternCodeableConcept.coding.system = $OrganizationType
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
