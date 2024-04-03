@@ -39,14 +39,15 @@ Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 // 'Roles which this practitioner may perform'
 // Diskussion: Wollen wir das Feld verpflichtend machen?
 * code 0.. MS 
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #closed
   * ^slicing.description = "slicing practitioner role code by system"
   * ^slicing.ordered = false
 * code contains emigaPractitionerRole 0.. MS
-* code[emigaPractitionerRole] from PractitionerRole
-  * coding.system = $PractitionerRole
+* code[emigaPractitionerRole] from PractitionerRole (required)
+  * ^patternCodeableConcept.coding = $PractitionerRole
+//  * ^binding.description = "emigaPractitionerRole"
 
 // 'Specific specialty of the practitioner'
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
