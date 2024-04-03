@@ -2,12 +2,12 @@ CodeSystem: PractitionerRole
 Id: PractitionerRole
 Title: "Rolle einer Person im Kontext einer Organisation"
 Description: "Definiert Konzepte, die die Rolle beschreiben, die eine Person innerhalb einer Organisation einnehmen kann."
-* ^language = #de-DE
+* insert MetaTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-28"
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole"
+* ^caseSensitive = true
 * ^content = #complete
-* insert Meta
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole"
 * #director "Leiter/-in"
 * #director ^designation[0].language = #de-DE
 * #director ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -41,7 +41,7 @@ ValueSet: PractitionerRole
 Title: "Rolle einer Person im Kontext einer Organisation (ValueSet)"
 Description: "Werteliste für Rollen, die eine Person im Kontext einer Organisation im EMIGA-Kontext einnehmen kann."
 Id: PractitionerRole
-* insert Meta
-* ^date = "2024-03-19"
+* insert MetaTerminology
 * ^version = "1.0.0"
+* ^date = "2024-03-19"
 * include codes from system PractitionerRole

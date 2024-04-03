@@ -2,21 +2,20 @@ CodeSystem: ResourceResponsibility
 Id: ResourceResponsibility
 Title: "ResourceResponsibility"
 Description: "Responsible organization"
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/ResourceResponsibility"
-* ^content = #complete
-* ^caseSensitive = true
-* ^date = "2024-03-19"
+* insert MetaTerminology
 * ^version = "1.0.0"
-* insert Meta
+* ^date = "2024-03-19"
+* ^caseSensitive = true
+* ^content = #complete
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/ResourceResponsibility"
 * #1.12.99.99. "A"
-
 
 ValueSet: ResourceResponsibility
 Id: ResourceResponsibility
 Title: "ResourceResponsibility Value Set"
 Description: "Responsible organization"
-* insert Meta
-* ^date = "2024-03-19"
+* insert MetaTerminology
 * ^version = "1.0.0"
+* ^date = "2024-03-19"
 * include codes from system ResourceResponsibility
 

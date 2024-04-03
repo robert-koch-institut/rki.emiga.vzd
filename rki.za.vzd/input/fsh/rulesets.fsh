@@ -4,6 +4,15 @@ RuleSet: Meta
 * ^experimental = false
 * ^publisher = "Robert Koch-Institut"
 
+RuleSet: MetaTerminology
+* ^language = #de-DE
+* ^status = #active
+* ^experimental = false
+* ^publisher = "Robert Koch-Institut"
+* ^contact.name = "Robert Koch-Institut"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "https://rki.de"
+
 
 RuleSet: Security
 * meta

@@ -2,12 +2,12 @@ CodeSystem: LocationType
 Id: LocationType
 Title: "EMIGA Standorttypen"
 Description: "Definiert Konzepte, die die im EMIGA-Kontext verwendeten Standorttypen beschreiben."
+* insert MetaTerminology
 * ^version = "1.0.0"
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/LocationType"
 * ^date = "2024-03-19"
 * ^caseSensitive = true
-* ^version = "1.0.0"
-* insert Meta
+* ^content = #complete
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/LocationType"
 * #centralOffice "Zentralstelle"
 * #centralOffice ^designation.language = #de-DE
 * #centralOffice ^designation.use = $ConceptDesignationUse#short
@@ -17,12 +17,11 @@ Description: "Definiert Konzepte, die die im EMIGA-Kontext verwendeten Standortt
 * #branchOffice ^designation.use = $ConceptDesignationUse#short
 * #branchOffice ^designation.value = "Außenstelle"
 
-
 ValueSet: LocationType
 Title: "EMIGA Standorttypen (ValueSet)"
 Description: "Werteliste für die Standorttypen im EMIGA-Kontext."
 Id: LocationType
-* insert Meta
-* ^date = "2024-03-19"
+* insert MetaTerminology
 * ^version = "1.0.0"
+* ^date = "2024-03-19"
 * include codes from system LocationType
