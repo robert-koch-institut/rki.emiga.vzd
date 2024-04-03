@@ -1,14 +1,12 @@
 Instance: 44588965
-InstanceOf: LocationDirectory
+InstanceOf: BaseLocation
 Usage: #example
-* meta.security[visibility] = $visibilityType#public
-* meta.security[responsibility] = $dataResponsibility#1.12.99.99.
+* meta.security[visibility] = $ResourceVisibilityType#public
+* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
 * status = #active
 * name = "Stadt XYZ - FB 9 / Dienste"
 * mode = #instance
-* type = $locationType#office
-* address.extension.url = $addressLine
-* address.extension.valueString = "Test Straße 21"
+* type[emigaLocationType] = $LocationType#centralOffice
 * address.type = #physical
 * address.line = "Test Straße 21"
 * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"

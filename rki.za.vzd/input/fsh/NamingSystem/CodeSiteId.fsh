@@ -9,4 +9,4 @@ Usage: #definition
 * status = #active
 * kind = #identifier
 * uniqueId[+].type = #uri
-* uniqueId[=].value = $codeSiteId
+* uniqueId[=].value = $CodeSiteId

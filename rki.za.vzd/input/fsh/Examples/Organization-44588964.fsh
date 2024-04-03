@@ -1,13 +1,14 @@
 Instance: 44588964
-InstanceOf: OrganizationDirectory
+InstanceOf: BaseOrganization
 Usage: #example
-* meta.security[visibility] = $visibilityType#public
-* meta.security[responsibility] = $dataResponsibility#1.12.99.99.
-* identifier.type = $v2-0203#PRN
-* identifier.system = $codeSiteId
+* meta.security[visibility] = $ResourceVisibilityType#public
+* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* identifier.type = $v2-0203#XX
+* identifier.system = $CodeSiteId
 * identifier.value = "1.12.99.99."
-* type = $organizationType#ga
-* name = "Stadt XYZ - FB 9 / Dienste"
+* active = true
+* type[emigaOrganizationType] = $OrganizationType#ga
+* name = "Stadt XYZ - Gesundheitsamt"
 * telecom[0].system = #email
 * telecom[=].value = "test@example.org"
 * telecom[+].system = #phone
