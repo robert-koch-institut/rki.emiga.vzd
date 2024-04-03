@@ -11,6 +11,7 @@ Description: "Enthält Konzepte, welche genutzt werden können, um verschiedene 
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://rki.de"
 * ^content = #complete
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/ConceptDesignationUse"
 * #abbreviation "Abkürzung" "Abkürzung für den Anzeigetext - Diese Darstellung repräsentiert eine maximal verkürzte Form des Anzeigetextes und kann beispielsweise zur platzsparenden Anzeige in Tabellen genutzt werden."
 * #short "Kurzform" "Kurzform des Anzeigetextes - Diese Form sollte üblicherweise weniger umfassend sein als die Normalform und wird immer dann genutzt, wenn ein weniger platzintensive Darstellung erforderlich ist."
 * #default "Normalform" "Normalform des Anzeigetextes - entspricht üblicherweise dem 'display'-Wert des Konzeptes"
