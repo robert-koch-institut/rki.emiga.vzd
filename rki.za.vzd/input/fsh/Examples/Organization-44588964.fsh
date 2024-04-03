@@ -3,7 +3,7 @@ InstanceOf: BaseOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
-* identifier.type = $v2-0203#PRN
+* identifier.type = $v2-0203#XX
 * identifier.system = $CodeSiteId
 * identifier.value = "1.12.99.99."
 * active = true
