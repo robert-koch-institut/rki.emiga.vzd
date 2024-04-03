@@ -15,3 +15,12 @@ Description: "Enthält Konzepte, welche genutzt werden können, um verschiedene 
 * #short "Kurzform" "Kurzform des Anzeigetextes - Diese Form sollte üblicherweise weniger umfassend sein als die Normalform und wird immer dann genutzt, wenn ein weniger platzintensive Darstellung erforderlich ist."
 * #default "Normalform" "Normalform des Anzeigetextes - entspricht üblicherweise dem 'display'-Wert des Konzeptes"
 * #long "Langform" "Langform des Anzeigetextes - Diese Form der Darstellung kann genutzt werden, wenn viel Platz vorhanden ist und ggf. mehr Informationen als in der Normalform transortiert werden müssen."
+
+ValueSet: ConceptDesignationUse
+Id: ConceptDesignationUse
+Title: "Nutzungszwecke für Anzeigetexte (Value Set)"
+Description: "Nutzungszwecke für Anzeigetexte"
+* insert Meta
+* ^date = "2024-03-19"
+* ^version = "1.0.0"
+* include codes from system ConceptDesignationUse
