@@ -14,7 +14,7 @@ locations:
     environment: PROD
     props:
     url: https://gitlab.fokus.fraunhofer.de/fhir/rki.emiga.common.git
-    accessToken: ${CI_JOB_TOKEN}
+    accessToken: ${GITLAB_ACCESS_TOKEN}
 # ------------------------------------------------------------------------ 
   - name: common_git_dir
     type: FILESYSTEM

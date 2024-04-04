@@ -1,9 +1,8 @@
 
 // rki.emiga.common
-// TODO: rename
-Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/vzd/CodeSystem/ConceptDesignationUse
-Alias: $ResourceVisibilityType = https://emiga.rki.de/fhir/vzd/CodeSystem/ResourceVisibilityType
-Alias: $ResourceResponsibility = https://emiga.rki.de/fhir/vzd/CodeSystem/ResourceResponsibility
+Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
+Alias: $ResourceVisibilityType = https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType
+Alias: $ResourceResponsibility = https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility
 
 // rki.emiga.vzd
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
