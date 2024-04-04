@@ -48,7 +48,7 @@ Description: "Endpoint in RKI Directory"
 
 // 'The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)' - 1..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* payloadType 0..0
+* payloadType 1..* MS
 
 // 'Mimetype to send. If not specified, the content could be anything (including no payload, if the connectionType defined this)' - 0..* - code
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
