@@ -6,7 +6,7 @@ output: vzd_napi_output_location
 skipFhirSchemaValidation: false
 resourceParseMode: STRICT
 skipExampleValidation: false
-loadNpmDependencies: true
+loadNpmDependencies: false
 snapshotDependenciesForSushi: true
 fhirSchemaValidationMaxSeverity: INFORMATION
 testFileDirectories: []
@@ -27,3 +27,23 @@ profileSets:
       - name: MatchingNameAndIdCheck
         reasoning: EMIGA uses different NamingConventions then DEMIS
     localCopyLocation: common_git_dir
+  - identifier: rki.emiga.external
+    artifactRepo: gitlab_rki_emiga_external
+    reference: "main"
+    skipFhirSchemaValidation: false
+    ignoredSanityChecks: 
+      - name: MatchingNameAndIdCheck
+        reasoning: EMIGA uses different NamingConventions then DEMIS
+      - name: ValidUrlPatternCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: ExistenceOfCountCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: SimilarityUrlAndValueSetCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: ValidReferencedValueSetCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: MatchingCountAndConceptsCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: ExistenceOfExperimentalCheck
+        reasoning: External resources don't have to respect our sanity checks
+    localCopyLocation: external_git_dir

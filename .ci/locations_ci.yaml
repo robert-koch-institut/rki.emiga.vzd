@@ -19,4 +19,16 @@ locations:
   - name: common_git_dir
     type: FILESYSTEM
     environment: PROD
-    fullPath: "./git-repos/rki.demis.disease"
+    fullPath: "./git-repos/rki.emiga.common"
+# ------------------------------------------------------------------------ 
+  - name: gitlab_rki_emiga_external
+    type: ARTIFACT_REPOSITORY
+    environment: PROD
+    props:
+    url: https://gitlab.fokus.fraunhofer.de/fhir/rki.emiga.external.git
+    accessToken: ${GITLAB_EXTERNAL_ACCESS_TOKEN}
+# ------------------------------------------------------------------------ 
+  - name: external_git_dir
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: "./git-repos/rki.emiga.external"
