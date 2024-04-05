@@ -8,7 +8,7 @@ resourceParseMode: STRICT
 skipExampleValidation: false
 loadNpmDependencies: false
 snapshotDependenciesForSushi: true
-fhirSchemaValidationMaxSeverity: INFORMATION
+fhirSchemaValidationMaxSeverity: WARNING
 testFileDirectories: []
 profileSets:
 
