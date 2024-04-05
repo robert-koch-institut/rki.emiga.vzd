@@ -10,7 +10,6 @@ Alias: $ResourceResponsibilityVS = https://emiga.rki.de/fhir/common/ValueSet/Res
 // rki.emiga.vzd
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
 Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType
-Alias: $LocationType = https://emiga.rki.de/fhir/vzd/CodeSystem/LocationType
 Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
