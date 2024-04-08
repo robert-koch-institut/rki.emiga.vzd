@@ -1,8 +1,10 @@
 # EMIGA - Elektronisches Melde- und Informationssystem für Gesundheitsämter
-EMIGA wird die neue Software für das Melde-und Infektionsschutzwesen vom Robert Koch-Institut (RKI) und ist das bundeseinheitliche Kernmodul für den Infektionsschutz der IT-Zielarchitektur
-für den ÖGD. EMIGA steht für Elektronisches Melde-und Informationssystem für Gesundheitsämter. Auch wenn im Namen die Gesundheitsämter genannt sind, so wird EMIGA auch die von den zuständigen Behörden auf Landesebene notwendige Funktionalität enthalten.
+EMIGA steht für „Elektronisches Melde- und Informationssystem für Gesundheitsämter“. Als neue Software für Meldewesen und Infektionsschutz soll EMIGA als bundesweites Kernmodul innerhalb der IT-Zielarchitektur für den Infektionsschutz für das Öffentlichen Gesundheitsdienstes (ÖGD) fungieren. 
+
 # EMIGA Organisationsverzeichnis (Verzeichnisdienst)
-Das Organisationsverzeichnis soll ein einheitliches Verzeichnis für Organisationen und Einrichtungen des öffentlichen Gesundheitsdienstes (ÖGD) sein. Für die Erfassung, Überprüfung und Pflege der Daten soll eine Webanwendung für die Gesundheitsämter verfügbar sein. Das Organisationsverzeichnis ist als erste Komponente von EMIGA geplant. Es handelt sich um eine Art Adressbuch für den ÖGD. Darin sollen Kontakte und Ansprechpersonen, die für die Zusammenarbeit und Kommunikation innerhalb des ÖGD gebraucht werden, abrufbar sein. Das Organisationsverzeichnis wird von den Gesundheitsämtern, Landesbehörden und dem RKI geführt und gepflegt.
-Zunächst werden die Kontakte der Gesundheitsämter und deren Abteilungen eingepflegt. Mit der Zeit soll das Verzeichnis an Informationen wachsen und auch Informationen zu Laboren, Krankenhäusern etc. zentral zur Verfügung stellen.
+Das Minimum Viable Product (MVP) von EMIGA wird mit dem Modul "Verzeichnisdienst" (VZD) initialisiert. Das Hauptziel des VZD ist die Schaffung eines einheitlichen Verzeichnisses für Organisationen im ÖGD, um die Kommunikationsaufgaben des ÖGDs zu unterstützen.
+
 # Überblick
-Das vorliegende Projekt realisiert die zentrale Artefakt-Verwaltung für Informationsmodellbestandteile des rki.emiga.vzd Packages.
+Für die Erfassung, Überprüfung und Pflege der Organisationsverzeichnisdaten wird eine Webanwendung für das ÖGD bereitgestellt. Diese dient als Adressbuch für den ÖGD, in dem dienstlichen Kontakte und Ansprechpersonen zur Zusammenarbeit und Kommunikation abrufbar sind. Das Organisationsverzeichnis wird von den Gesundheitsämtern, Landesbehörden und dem RKI geführt und gepflegt.
+
+Das vorliegende Projekt realisiert die zentrale Verwaltung von Artefakten für Informationsmodellbestandteile des rki.emiga.vzd Packages.
