@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: rki.za.vzd
+id: rki.emiga.vzd
 canonical: https://emiga.rki.de/fhir/vzd
-name: rki.za.vzd
+name: rki.emiga.vzd
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
