@@ -6,9 +6,9 @@ output: vzd_napi_output_location
 skipFhirSchemaValidation: false
 resourceParseMode: STRICT
 skipExampleValidation: false
-loadNpmDependencies: true
+loadNpmDependencies: false
 snapshotDependenciesForSushi: true
-fhirSchemaValidationMaxSeverity: INFORMATION
+fhirSchemaValidationMaxSeverity: WARNING
 testFileDirectories: []
 valueSetExpansionIgnoreUrls:
   - http://ihe-d.de/ValueSets/IHEXDSeventCodeList
@@ -21,9 +21,38 @@ valueSetExpansionIgnoreUrls:
   - http://fhir.de/ValueSet/abdata/wg14
 profileSets:
 
-  - identifier: rki.za.vzd
-    artifactRepo: rki_za_vzd
+  - identifier: rki.emiga.vzd
+    artifactRepo: rki_emiga_vzd
     reference: "$CI_COMMIT_REF_NAME"
     ignoredSanityChecks:  
       - name: MatchingNameAndIdCheck
         reasoning: EMIGA uses different NamingConventions then DEMIS
+  - identifier: rki.emiga.common
+    artifactRepo: gitlab_rki_emiga_common
+    reference: "main"
+    skipFhirSchemaValidation: false
+    resourceBaseUrl: https://emiga.rki.de/fhir/common
+    ignoredSanityChecks: 
+      - name: MatchingNameAndIdCheck
+        reasoning: EMIGA uses different NamingConventions then DEMIS
+    localCopyLocation: common_git_dir
+  - identifier: rki.emiga.external
+    artifactRepo: gitlab_rki_emiga_external
+    reference: "main"
+    skipFhirSchemaValidation: false
+    ignoredSanityChecks: 
+      - name: MatchingNameAndIdCheck
+        reasoning: EMIGA uses different NamingConventions then DEMIS
+      - name: ValidUrlPatternCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: ExistenceOfCountCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: SimilarityUrlAndValueSetCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: ValidReferencedValueSetCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: MatchingCountAndConceptsCheck
+        reasoning: External resources don't have to respect our sanity checks
+      - name: ExistenceOfExperimentalCheck
+        reasoning: External resources don't have to respect our sanity checks
+    localCopyLocation: external_git_dir

@@ -1,5 +1,5 @@
 locations:
-  - name: rki_za_vzd
+  - name: rki_emiga_vzd
     type: FILESYSTEM
     environment: PROD
     fullPath: "$CI_PROJECT_DIR"
@@ -9,3 +9,26 @@ locations:
     environment: PROD
     fullPath: "${CI_PROJECT_DIR}/target"
 # ------------------------------------------------------------------------ 
+  - name: gitlab_rki_emiga_common
+    type: ARTIFACT_REPOSITORY
+    environment: PROD
+    props:
+    url: https://gitlab.fokus.fraunhofer.de/fhir/rki.emiga.common.git
+    accessToken: ${GITLAB_ACCESS_TOKEN}
+# ------------------------------------------------------------------------ 
+  - name: common_git_dir
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: "./git-repos/rki.emiga.common"
+# ------------------------------------------------------------------------ 
+  - name: gitlab_rki_emiga_external
+    type: ARTIFACT_REPOSITORY
+    environment: PROD
+    props:
+    url: https://gitlab.fokus.fraunhofer.de/fhir/rki.emiga.external.git
+    accessToken: ${GITLAB_EXTERNAL_ACCESS_TOKEN}
+# ------------------------------------------------------------------------ 
+  - name: external_git_dir
+    type: FILESYSTEM
+    environment: PROD
+    fullPath: "./git-repos/rki.emiga.external"

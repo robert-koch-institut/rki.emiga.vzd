@@ -25,9 +25,9 @@ RuleSet: Security
   * security contains
       visibility 0..1 and
       responsibility 0..1
-  * security[visibility] from ResourceVisibilityType
+  * security[visibility] from $ResourceVisibilityTypeVS
     * system = $ResourceVisibilityType
-  * security[responsibility] from ResourceResponsibility
+  * security[responsibility] from $ResourceResponsibilityVS
     * system = $ResourceResponsibility
 
 
