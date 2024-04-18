@@ -39,6 +39,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * category contains emigaHealthcareServiceCategory 0..1 MS
 * category[emigaHealthcareServiceCategory] from HealthcareServiceCategory (required)
   * ^patternCodeableConcept.coding.system = $HealthcareServiceCategory
+  * insert StrictCodableConcept
 
 // 'Type of service that may be delivered or performed' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

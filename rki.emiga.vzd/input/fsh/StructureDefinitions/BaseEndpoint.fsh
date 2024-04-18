@@ -31,6 +31,7 @@ Description: "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Di
 // 'Protocol/Profile/Standard to be followed by this endpoint connection' - 1..1 - Coding
 * connectionType 1..1 MS
 * connectionType from EndpointConnectionType
+  * insert StrictCoding
 
 // 'A name that this endpoint can be identified by' - 0..1 - string
 * name 1..1 MS

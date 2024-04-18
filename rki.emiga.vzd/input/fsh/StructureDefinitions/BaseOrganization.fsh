@@ -42,6 +42,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 * type contains emigaOrganizationType 0..1 MS
 * type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
+  * insert StrictCodableConcept
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld

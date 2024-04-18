@@ -47,6 +47,8 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 * code contains emigaPractitionerRole 0.. MS
 * code[emigaPractitionerRole] from PractitionerRole (required)
   * ^patternCodeableConcept.coding.system = $PractitionerRole
+  * insert StrictCodableConcept
+
 //  * ^binding.description = "emigaPractitionerRole"
 
 // 'Specific specialty of the practitioner' - 0..* - CodeableConcept
