@@ -21,7 +21,7 @@ valueSetExpansionIgnoreUrls:
   - http://fhir.de/ValueSet/abdata/wg14
 profileSets:
 
-  - identifier: rki.za.vzd
+  - identifier: rki.emiga.vzd
     artifactRepo: rki_emiga_vzd
     reference: "$CI_COMMIT_REF_NAME"
     ignoredSanityChecks:  
