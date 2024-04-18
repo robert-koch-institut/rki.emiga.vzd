@@ -1,8 +1,8 @@
 Profile: BaseOrganization
 Parent: Organization
 Id: BaseOrganization
-Title: "Organization - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "Organization - Basis-Ressource des EMIGA-Verzeichnisdienstes"
+Title: "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 * insert Meta
 * insert Security
 * insert ResourceCommon

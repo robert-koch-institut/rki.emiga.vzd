@@ -1,8 +1,8 @@
 Profile: BaseHealthcareService
 Parent: HealthcareService
 Id: BaseHealthcareService
-Title: "HealthcareService - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "HealthcareService - Basis-Ressource des EMIGA-Verzeichnisdienstes"
+Title: "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
 * insert Meta
 * insert Security
 * ^version = "1.0.0"

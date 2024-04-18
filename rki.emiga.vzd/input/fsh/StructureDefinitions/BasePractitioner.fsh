@@ -1,8 +1,8 @@
 Profile: BasePractitioner
 Parent: Practitioner
 Id: BasePractitioner
-Title: "Practitioner - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "Practitioner - Basis-Ressource des EMIGA-Verzeichnisdienstes"
+Title: "BasePractitioner (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie."
 * insert Meta
 * insert Security
 * ^version = "1.0.0"

@@ -1,8 +1,8 @@
 Profile: BasePractitionerRole
 Parent: PractitionerRole
 Id: BasePractitionerRole
-Title: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
+Title: "BasePractitionerRole (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
 * insert Meta
 * insert Security
 * ^version = "1.0.0"
@@ -20,7 +20,7 @@ Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 * identifier 0..0
 
 // 'Whether this practitioner role record is in active use' - 0..1 - boolean
-* active 0..1
+* active 1..1 MS
 
 // 'The period during which the practitioner is authorized to perform in these role(s)' - 0..1 - Period
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

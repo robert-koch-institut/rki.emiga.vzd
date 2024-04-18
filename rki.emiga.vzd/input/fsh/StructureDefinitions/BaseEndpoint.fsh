@@ -1,8 +1,8 @@
 Profile: BaseEndpoint
 Parent: Endpoint
 Id: BaseEndpoint
-Title: "Endpoint in RKI Directory"
-Description: "Endpoint in RKI Directory"
+Title: "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Dienst-Endpunkt zu machen. Dies beinhaltet sowohl Adressierungsinformationen als auch Informationen zum Sicherheitskontext, z.B. Zertifikate"
 * insert Meta
 * insert Security
 * ^version = "1.0.0"
