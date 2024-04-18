@@ -1,15 +1,15 @@
 Profile: BaseHealthcareService
 Parent: HealthcareService
 Id: BaseHealthcareService
-Title: "HealthcareService - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "HealthcareService - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-* insert Meta
-* insert Security
+Title: "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
+* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
-* id MS
-* meta.tag MS
-* insert DomainResourceCommon
+
+* insert ProfileResourceCommon
+* insert ProfileDomainResourceCommon
+* insert ProfileSecurityTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -39,6 +39,7 @@ Description: "HealthcareService - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 * category contains emigaHealthcareServiceCategory 0..1 MS
 * category[emigaHealthcareServiceCategory] from HealthcareServiceCategory (required)
   * ^patternCodeableConcept.coding.system = $HealthcareServiceCategory
+  * insert StrictCodableConcept
 
 // 'Type of service that may be delivered or performed' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

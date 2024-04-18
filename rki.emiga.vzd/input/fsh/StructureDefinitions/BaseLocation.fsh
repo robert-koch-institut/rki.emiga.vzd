@@ -1,16 +1,15 @@
 Profile: BaseLocation
 Parent: Location
 Id: BaseLocation
-Title: "Location - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "Location - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-* insert Meta
-* insert Security
-* insert ResourceCommon
+Title: "BaseLocation (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
+* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
-* id MS
-* meta.tag MS
-* insert DomainResourceCommon
+
+* insert ProfileResourceCommon
+* insert ProfileDomainResourceCommon
+* insert ProfileSecurityTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt

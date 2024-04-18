@@ -1,14 +1,15 @@
 Profile: BaseEndpoint
 Parent: Endpoint
 Id: BaseEndpoint
-Title: "Endpoint in RKI Directory"
-Description: "Endpoint in RKI Directory"
-* insert Meta
-* insert Security
+Title: "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Dienst-Endpunkt zu machen. Dies beinhaltet sowohl Adressierungsinformationen als auch Informationen zum Sicherheitskontext, z.B. Zertifikate"
+* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
-* id MS
-* meta.tag MS
+
+* insert ProfileResourceCommon
+* insert ProfileDomainResourceCommon
+* insert ProfileSecurityTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
@@ -30,6 +31,7 @@ Description: "Endpoint in RKI Directory"
 // 'Protocol/Profile/Standard to be followed by this endpoint connection' - 1..1 - Coding
 * connectionType 1..1 MS
 * connectionType from EndpointConnectionType
+  * insert StrictCoding
 
 // 'A name that this endpoint can be identified by' - 0..1 - string
 * name 1..1 MS

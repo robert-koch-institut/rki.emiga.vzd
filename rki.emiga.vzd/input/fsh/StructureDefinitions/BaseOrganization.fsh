@@ -1,16 +1,15 @@
 Profile: BaseOrganization
 Parent: Organization
 Id: BaseOrganization
-Title: "Organization - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "Organization - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-* insert Meta
-* insert Security
-* insert ResourceCommon
+Title: "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
-* id MS
-* meta.tag MS
-* insert DomainResourceCommon
+
+* insert ProfileResourceCommon
+* insert ProfileDomainResourceCommon
+* insert ProfileSecurityTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -43,6 +42,7 @@ Description: "Organization - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 * type contains emigaOrganizationType 0..1 MS
 * type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
+  * insert StrictCodableConcept
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld

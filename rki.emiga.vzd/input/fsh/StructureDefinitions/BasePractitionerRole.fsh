@@ -1,15 +1,15 @@
 Profile: BasePractitionerRole
 Parent: PractitionerRole
 Id: BasePractitionerRole
-Title: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
-* insert Meta
-* insert Security
+Title: "BasePractitionerRole (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
+* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
-* id MS
-* meta.tag MS
-* insert DomainResourceCommon
+
+* insert ProfileResourceCommon
+* insert ProfileDomainResourceCommon
+* insert ProfileSecurityTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -20,7 +20,7 @@ Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 * identifier 0..0
 
 // 'Whether this practitioner role record is in active use' - 0..1 - boolean
-* active 0..1
+* active 1..1 MS
 
 // 'The period during which the practitioner is authorized to perform in these role(s)' - 0..1 - Period
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
@@ -47,6 +47,8 @@ Description: "PractitionerRole - Basis-Ressource des EMIGA-Verzeichnisdienstes"
 * code contains emigaPractitionerRole 0.. MS
 * code[emigaPractitionerRole] from PractitionerRole (required)
   * ^patternCodeableConcept.coding.system = $PractitionerRole
+  * insert StrictCodableConcept
+
 //  * ^binding.description = "emigaPractitionerRole"
 
 // 'Specific specialty of the practitioner' - 0..* - CodeableConcept
