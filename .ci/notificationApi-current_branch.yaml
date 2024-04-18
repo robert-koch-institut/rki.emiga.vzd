@@ -10,6 +10,15 @@ loadNpmDependencies: false
 snapshotDependenciesForSushi: true
 fhirSchemaValidationMaxSeverity: WARNING
 testFileDirectories: []
+valueSetExpansionIgnoreUrls:
+  - http://ihe-d.de/ValueSets/IHEXDSeventCodeList
+  - http://fhir.de/ValueSet/bfarm/alpha-id
+  - http://fhir.de/ValueSet/ask
+  - http://fhir.de/ValueSet/bfarm/icd-10-gm
+  - http://fhir.de/ValueSet/bfarm/atc
+  - http://fhir.de/ValueSet/bfarm/ops
+  - http://fhir.de/ValueSet/ifa/pzn
+  - http://fhir.de/ValueSet/abdata/wg14
 profileSets:
 
   - identifier: rki.za.vzd
