@@ -1,7 +1,7 @@
 CodeSystem: OrganizationType
 Id: OrganizationType
-Title: "Organization Type in RKI Directory (Code System)"
-Description: "Organization Type in RKI Directory"
+Title: "Organizationstyp"
+Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-19"
@@ -27,8 +27,8 @@ Description: "Organization Type in RKI Directory"
 
 ValueSet: OrganizationType
 Id: OrganizationType
-Title: "Organization Type in RKI Directory (Value Set)"
-Description: "Organization Type in RKI Directory"
+Title: "Organisationstyp (Werteliste)"
+Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-19"

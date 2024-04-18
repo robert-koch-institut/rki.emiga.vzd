@@ -1,7 +1,7 @@
 CodeSystem: EndpointConnectionType
 Id: EndpointConnectionType
-Title: "EMIGA EndpointConnectionType"
-Description: "Definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen beschreiben."
+Title: "Endpunktverbindungstyp"
+Description: "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-04-03"
@@ -11,8 +11,8 @@ Description: "Definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte
 * #survnetTransport "SurvNet (Transport)"
 
 ValueSet: EndpointConnectionType
-Title: "EMIGA EndpointConnectionType (ValueSet)"
-Description: "Werteliste für die EndpointConnectionType im EMIGA-Kontext."
+Title: "Endpunktverbindungstyp (Werteliste)"
+Description: "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben."
 Id: EndpointConnectionType
 * insert MetadataTerminology
 * ^version = "1.0.0"

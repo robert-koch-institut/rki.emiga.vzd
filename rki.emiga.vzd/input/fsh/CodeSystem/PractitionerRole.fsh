@@ -1,7 +1,7 @@
 CodeSystem: PractitionerRole
 Id: PractitionerRole
-Title: "Rolle einer Person im Kontext einer Organisation"
-Description: "Definiert Konzepte, die die Rolle beschreiben, die eine Person innerhalb einer Organisation einnehmen kann."
+Title: "Personenrolle"
+Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die die Rolle, die eine Person (Practitioner) innerhalb einer Organisation einnehmen/wahrnehmen kann."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-28"
@@ -38,8 +38,8 @@ Description: "Definiert Konzepte, die die Rolle beschreiben, die eine Person inn
 * #personOfContact ^designation[=].value = "Ansprechpartner/Ansprechpartnerin"
 
 ValueSet: PractitionerRole
-Title: "Rolle einer Person im Kontext einer Organisation (ValueSet)"
-Description: "Werteliste für Rollen, die eine Person im Kontext einer Organisation im EMIGA-Kontext einnehmen kann."
+Title: "Personenrolle (Werteliste)"
+Description: "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann."
 Id: PractitionerRole
 * insert MetadataTerminology
 * ^version = "1.0.0"

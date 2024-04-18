@@ -1,7 +1,7 @@
 CodeSystem: HealthcareServiceCategory
 Id: HealthcareServiceCategory
 Title: "Dienstleistungskategorie"
-Description: "Beschreibt die grobe Kategorie, in welche eine angebotene Dienstleistung einsortiert werden kann."
+Description: "Die Kodiersystematik 'HealthcareServiceCategory' definiert Konzepte, die die Kategorie, in welche eine angebotene Dienstleistung einsortiert werden kann, näher beschreiben."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-19"
@@ -13,8 +13,8 @@ Description: "Beschreibt die grobe Kategorie, in welche eine angebotene Dienstle
 
 
 ValueSet: HealthcareServiceCategory
-Title: "Werteliste mit Dienstleistungskategorien"
-Description: "Werteliste mit Dienstleistungskategorien"
+Title: "Dienstleistungskategorien (Werteliste)"
+Description: "Werteliste mit Konzepten, die die Kategorie einer Dienstleistung näher beschreiben."
 Id: HealthcareServiceCategory
 * insert MetadataTerminology
 * ^version = "1.0.0"
