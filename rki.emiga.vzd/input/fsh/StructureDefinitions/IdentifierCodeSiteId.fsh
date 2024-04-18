@@ -3,7 +3,7 @@ Parent: Identifier
 Id: IdentifierCodeSiteId
 Title: "Identifier-Profil CodeSiteId"
 Description: "TODO"
-* insert Meta
+* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2023-11-30"
 * type = $v2-0203#PRN

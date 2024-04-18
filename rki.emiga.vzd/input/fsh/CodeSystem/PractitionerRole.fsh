@@ -2,7 +2,7 @@ CodeSystem: PractitionerRole
 Id: PractitionerRole
 Title: "Rolle einer Person im Kontext einer Organisation"
 Description: "Definiert Konzepte, die die Rolle beschreiben, die eine Person innerhalb einer Organisation einnehmen kann."
-* insert MetaTerminology
+* insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-28"
 * ^caseSensitive = true
@@ -41,7 +41,7 @@ ValueSet: PractitionerRole
 Title: "Rolle einer Person im Kontext einer Organisation (ValueSet)"
 Description: "Werteliste für Rollen, die eine Person im Kontext einer Organisation im EMIGA-Kontext einnehmen kann."
 Id: PractitionerRole
-* insert MetaTerminology
+* insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-03-19"
 * include codes from system PractitionerRole
