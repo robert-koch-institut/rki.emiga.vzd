@@ -13,8 +13,9 @@ Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/Organization
 Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
+Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 
-// deutsces Basisprofil
+// deutsches Basisprofil
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $humanname-de-basis = http://fhir.de/StructureDefinition/humanname-de-basis
 
