@@ -1,0 +1,297 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BaseOrganization",
+  "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+  "version": "1.0.0",
+  "name": "BaseOrganization",
+  "title": "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-03-18",
+  "publisher": "Robert Koch-Institut",
+  "description": "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.meta",
+        "path": "Organization.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.security",
+        "path": "Organization.meta.security",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing security attribute by coding system",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.security:visibility",
+        "path": "Organization.meta.security",
+        "sliceName": "visibility",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        }
+      },
+      {
+        "id": "Organization.meta.security:visibility.system",
+        "path": "Organization.meta.security.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.security:visibility.code",
+        "path": "Organization.meta.security.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.security:responsibility",
+        "path": "Organization.meta.security",
+        "sliceName": "responsibility",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility"
+        }
+      },
+      {
+        "id": "Organization.meta.security:responsibility.system",
+        "path": "Organization.meta.security.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.security:responsibility.code",
+        "path": "Organization.meta.security.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.implicitRules",
+        "path": "Organization.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Organization.text",
+        "path": "Organization.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.contained",
+        "path": "Organization.contained",
+        "max": "0"
+      },
+      {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "max": "0"
+      },
+      {
+        "id": "Organization.modifierExtension",
+        "path": "Organization.modifierExtension",
+        "max": "0"
+      },
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "slicing organization identifier by system",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Organization.identifier:codeSiteId",
+        "path": "Organization.identifier",
+        "sliceName": "codeSiteId",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.active",
+        "path": "Organization.active",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type",
+        "path": "Organization.type",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "description": "slicing organization type by system",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType",
+        "path": "Organization.type",
+        "sliceName": "emigaOrganizationType",
+        "min": 0,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
+        }
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.coding",
+        "path": "Organization.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.coding.code",
+        "path": "Organization.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.text",
+        "path": "Organization.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.alias",
+        "path": "Organization.alias",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.telecom",
+        "path": "Organization.telecom",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address",
+        "path": "Organization.address",
+        "max": "1",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://fhir.de/StructureDefinition/address-de-basis"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.partOf",
+        "path": "Organization.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.contact",
+        "path": "Organization.contact",
+        "max": "0"
+      },
+      {
+        "id": "Organization.endpoint",
+        "path": "Organization.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}

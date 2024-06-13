@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "EndpointConnectionType",
+  "id": "EndpointConnectionType",
+  "title": "Endpunktverbindungstyp",
+  "description": "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren.",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/EndpointConnectionType",
+  "concept": [
+    {
+      "code": "survnetTransport",
+      "display": "SurvNet (Transport)"
+    }
+  ],
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-04-03",
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/EndpointConnectionType",
+  "count": 1
+}

@@ -1,0 +1,119 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PractitionerRole",
+  "id": "PractitionerRole",
+  "title": "Personenrolle",
+  "description": "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die die Rolle, die eine Person (Practitioner) innerhalb einer Organisation einnehmen/wahrnehmen kann.",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+  "concept": [
+    {
+      "code": "director",
+      "display": "Leiter/-in",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "L"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Leiter/Leiterin"
+        }
+      ]
+    },
+    {
+      "code": "publicMedicalOfficer",
+      "display": "Amtsarzt/-ärztin",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "AA"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Amtsarzt/Amtsärztin"
+        }
+      ]
+    },
+    {
+      "code": "caseOfficer",
+      "display": "Sachbearbeiter/in",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "SB"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Sachbearbeiter/Sachbearbeiterin"
+        }
+      ]
+    },
+    {
+      "code": "personOfContact",
+      "display": "Ansprechpartner/-in",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "AP"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Ansprechpartner/Ansprechpartnerin"
+        }
+      ]
+    }
+  ],
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-03-28",
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
+  "count": 4
+}

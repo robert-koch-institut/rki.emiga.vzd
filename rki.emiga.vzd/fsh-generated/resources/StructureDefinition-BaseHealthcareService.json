@@ -1,0 +1,319 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BaseHealthcareService",
+  "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseHealthcareService",
+  "version": "1.0.0",
+  "name": "BaseHealthcareService",
+  "title": "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-03-18",
+  "publisher": "Robert Koch-Institut",
+  "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService.meta",
+        "path": "HealthcareService.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.meta.security",
+        "path": "HealthcareService.meta.security",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing security attribute by coding system",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.meta.security:visibility",
+        "path": "HealthcareService.meta.security",
+        "sliceName": "visibility",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        }
+      },
+      {
+        "id": "HealthcareService.meta.security:visibility.system",
+        "path": "HealthcareService.meta.security.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.meta.security:visibility.code",
+        "path": "HealthcareService.meta.security.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.meta.security:responsibility",
+        "path": "HealthcareService.meta.security",
+        "sliceName": "responsibility",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility"
+        }
+      },
+      {
+        "id": "HealthcareService.meta.security:responsibility.system",
+        "path": "HealthcareService.meta.security.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.meta.security:responsibility.code",
+        "path": "HealthcareService.meta.security.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.implicitRules",
+        "path": "HealthcareService.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.text",
+        "path": "HealthcareService.text",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.contained",
+        "path": "HealthcareService.contained",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.extension",
+        "path": "HealthcareService.extension",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.modifierExtension",
+        "path": "HealthcareService.modifierExtension",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.identifier",
+        "path": "HealthcareService.identifier",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.active",
+        "path": "HealthcareService.active",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.providedBy",
+        "path": "HealthcareService.providedBy",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.category",
+        "path": "HealthcareService.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed",
+          "description": "slicing healthcare service category by system",
+          "ordered": false
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.category:emigaHealthcareServiceCategory",
+        "path": "HealthcareService.category",
+        "sliceName": "emigaHealthcareServiceCategory",
+        "min": 0,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory"
+        }
+      },
+      {
+        "id": "HealthcareService.category:emigaHealthcareServiceCategory.coding",
+        "path": "HealthcareService.category.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.category:emigaHealthcareServiceCategory.coding.system",
+        "path": "HealthcareService.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.category:emigaHealthcareServiceCategory.coding.code",
+        "path": "HealthcareService.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.category:emigaHealthcareServiceCategory.text",
+        "path": "HealthcareService.category.text",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.type",
+        "path": "HealthcareService.type",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.specialty",
+        "path": "HealthcareService.specialty",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.location",
+        "path": "HealthcareService.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.name",
+        "path": "HealthcareService.name",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.comment",
+        "path": "HealthcareService.comment",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.extraDetails",
+        "path": "HealthcareService.extraDetails",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.photo",
+        "path": "HealthcareService.photo",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.coverageArea",
+        "path": "HealthcareService.coverageArea",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.serviceProvisionCode",
+        "path": "HealthcareService.serviceProvisionCode",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.eligibility",
+        "path": "HealthcareService.eligibility",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.program",
+        "path": "HealthcareService.program",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.characteristic",
+        "path": "HealthcareService.characteristic",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.communication",
+        "path": "HealthcareService.communication",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.referralMethod",
+        "path": "HealthcareService.referralMethod",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.appointmentRequired",
+        "path": "HealthcareService.appointmentRequired",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.availableTime",
+        "path": "HealthcareService.availableTime",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.notAvailable",
+        "path": "HealthcareService.notAvailable",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.availabilityExceptions",
+        "path": "HealthcareService.availabilityExceptions",
+        "max": "0"
+      },
+      {
+        "id": "HealthcareService.endpoint",
+        "path": "HealthcareService.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}
