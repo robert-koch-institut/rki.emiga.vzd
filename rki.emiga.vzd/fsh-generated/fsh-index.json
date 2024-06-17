@@ -149,7 +149,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BaseOrganization.fsh",
     "startLine": 1,
-    "endLine": 78
+    "endLine": 113
   },
   {
     "outputFile": "StructureDefinition-BasePractitioner.json",
