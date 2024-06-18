@@ -188,6 +188,134 @@
         "mustSupport": true
       },
       {
+        "id": "Location.address.extension:Stadtteil",
+        "path": "Location.address.extension",
+        "sliceName": "Stadtteil",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.extension:Stadtteil.value[x]",
+        "path": "Location.address.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Strasse",
+        "path": "Location.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Strasse.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Hausnummer",
+        "path": "Location.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Hausnummer.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validHouseNumber",
+            "human": "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,50}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Adresszusatz",
+        "path": "Location.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Adresszusatz.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Postfach",
+        "path": "Location.address.line.extension",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Postfach.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.city",
+        "path": "Location.address.city",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.postalCode",
+        "path": "Location.address.postalCode",
+        "constraint": [
+          {
+            "key": "validPLZ",
+            "human": "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,10}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Location.physicalType",
         "path": "Location.physicalType",
         "max": "0"

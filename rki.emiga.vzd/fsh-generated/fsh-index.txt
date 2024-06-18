@@ -16,9 +16,9 @@ PractitionerRole-44588969.json                         44588969                 
 PractitionerRole-44588971.json                         44588971                      Instance    Examples\PractitionerRole-44588971.fsh                 1 - 9
 StructureDefinition-BaseEndpoint.json                  BaseEndpoint                  Profile     StructureDefinitions\BaseEndpoint.fsh                  1 - 64
 StructureDefinition-BaseHealthcareService.json         BaseHealthcareService         Profile     StructureDefinitions\BaseHealthcareService.fsh         1 - 122
-StructureDefinition-BaseLocation.json                  BaseLocation                  Profile     StructureDefinitions\BaseLocation.fsh                  1 - 97
-StructureDefinition-BaseOrganization.json              BaseOrganization              Profile     StructureDefinitions\BaseOrganization.fsh              1 - 113
-StructureDefinition-BasePractitioner.json              BasePractitioner              Profile     StructureDefinitions\BasePractitioner.fsh              1 - 57
+StructureDefinition-BaseLocation.json                  BaseLocation                  Profile     StructureDefinitions\BaseLocation.fsh                  1 - 117
+StructureDefinition-BaseOrganization.json              BaseOrganization              Profile     StructureDefinitions\BaseOrganization.fsh              1 - 126
+StructureDefinition-BasePractitioner.json              BasePractitioner              Profile     StructureDefinitions\BasePractitioner.fsh              1 - 84
 StructureDefinition-BasePractitionerRole.json          BasePractitionerRole          Profile     StructureDefinitions\BasePractitionerRole.fsh          1 - 84
 StructureDefinition-IdentifierCodeSiteId.json          IdentifierCodeSiteId          Profile     StructureDefinitions\IdentifierCodeSiteId.fsh          1 - 12
 StructureDefinition-IdentifierTransmittingSiteId.json  IdentifierTransmittingSiteId  Profile     StructureDefinitions\IdentifierTransmittingSiteId.fsh  1 - 16
