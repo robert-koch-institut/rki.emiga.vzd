@@ -28,7 +28,7 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 * name 1..1 MS
 * name only $humanname-de-basis
 * name.family 1.. MS  
-* name.family obeys validString
+* name.family.extension[nachname] obeys validString
 * name.given 1.. MS  
 * name.given obeys validString
 
@@ -82,41 +82,6 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 // 'A language the practitioner is able to use in patient communication' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * communication 0..0
-/*
-// Invariants to validate the address and telecom values
-
-//    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
-Invariant: validEmailAddress
-Description: "Die E-Mail-Adresse muss valide sein."
-* severity = #warning
-* expression = "$this.matches('^(?=.{1,255}$)[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+[.])+[a-zA-Z0-9]{2,63}$')"
-
-//    Max. Zeichenlänge = 50 / Nur Zahlen erlaubt / Länderpräfix mit Deutschland als Default 
-Invariant: validPhoneNumber
-Description: "Die Telefonnummer muss valide sein."
-* severity = #warning
-* expression = "$this.matches('^(49|0049|0)?\d{1,50}$')"
-
-// TODO: Verify need of regex
-Invariant: validFaxNumber
-Description: "Die Faxnummer muss valide sein."
-* severity = #warning
-* expression = "$this.matches('^[0+][0-9 \\\\-\\\\(\\\\)]{6,50}$')"
-
-// valid String
-
-Invariant: validString
-Description: "Zeichenlänge maximal 255 Zeichen"
-* severity = #warning
-* expression = "$this.matches('^.{1,255}$')"
-
-// valid Hausnummer
-
-Invariant: validHouseNumber
-Description: "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen"
-* severity = #warning
-* expression = "$this.matches('^.{1,50}$')"
-*/
 
 
 

@@ -166,6 +166,12 @@
         "id": "Practitioner.name.family",
         "path": "Practitioner.name.family",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family.extension:nachname",
+        "path": "Practitioner.name.family.extension",
+        "sliceName": "nachname",
         "constraint": [
           {
             "key": "validString",
@@ -174,8 +180,7 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,255}$')"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Practitioner.name.given",
