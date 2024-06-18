@@ -145,11 +145,29 @@
       {
         "id": "Location.name",
         "path": "Location.name",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "Location.alias",
         "path": "Location.alias",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
         "mustSupport": true
       },
       {
