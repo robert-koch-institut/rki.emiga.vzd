@@ -62,7 +62,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
 * telecom ^slicing.rules = #closed
-* telecom ^definition = "Kontaktangaben der Einrichtung. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
+* telecom ^definition = "Kontaktangaben der Organisation. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
 * telecom contains
     Email 0..* and
     Phone 0..* and
@@ -90,11 +90,24 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // Wir starten strikt mit maximal einer Adresse. Später können wir hier auch über Slicing mehrere Adressen abbilden, falls erforderlich
 * address 0..1 MS
 * address only $address-de-basis
+* address.extension[Stadtteil] ^mustSupport = true
+* address.extension[Stadtteil].valueString MS
 * address.extension[Stadtteil].valueString obeys validString
+* address.line.extension[Strasse] ^mustSupport = true
+* address.line.extension[Strasse].valueString MS
 * address.line.extension[Strasse].valueString obeys validString
+* address.line.extension[Hausnummer] ^mustSupport = true
+* address.line.extension[Hausnummer].valueString MS
 * address.line.extension[Hausnummer].valueString obeys validHouseNumber
+* address.line.extension[Adresszusatz] ^mustSupport = true
+* address.line.extension[Adresszusatz].valueString MS
 * address.line.extension[Adresszusatz].valueString obeys validString
+* address.line.extension[Postfach] ^mustSupport = true
+* address.line.extension[Postfach].valueString MS
 * address.line.extension[Postfach].valueString obeys validString
+* address.city MS
+* address.city obeys validString
+* address.postalCode MS 
 * address.postalCode obeys validPLZ
 
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
@@ -112,7 +125,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
 * endpoint 0..0
 
-// Invariants to validate the telecom values
+// Invariants to validate the address and telecom values
 
 //    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
 Invariant: validEmailAddress

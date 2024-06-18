@@ -274,7 +274,7 @@
           ],
           "rules": "closed"
         },
-        "definition": "Kontaktangaben der Einrichtung. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden.",
+        "definition": "Kontaktangaben der Organisation. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden.",
         "mustSupport": true
       },
       {
@@ -410,7 +410,8 @@
       {
         "id": "Organization.address.extension:Stadtteil",
         "path": "Organization.address.extension",
-        "sliceName": "Stadtteil"
+        "sliceName": "Stadtteil",
+        "mustSupport": true
       },
       {
         "id": "Organization.address.extension:Stadtteil.value[x]",
@@ -423,12 +424,14 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,255}$')"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Strasse",
         "path": "Organization.address.line.extension",
-        "sliceName": "Strasse"
+        "sliceName": "Strasse",
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Strasse.value[x]",
@@ -441,12 +444,14 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,255}$')"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Hausnummer",
         "path": "Organization.address.line.extension",
-        "sliceName": "Hausnummer"
+        "sliceName": "Hausnummer",
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Hausnummer.value[x]",
@@ -459,12 +464,14 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,50}$')"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Adresszusatz",
         "path": "Organization.address.line.extension",
-        "sliceName": "Adresszusatz"
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Adresszusatz.value[x]",
@@ -477,12 +484,14 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,255}$')"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Postfach",
         "path": "Organization.address.line.extension",
-        "sliceName": "Postfach"
+        "sliceName": "Postfach",
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line.extension:Postfach.value[x]",
@@ -495,7 +504,22 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,255}$')"
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.address.city",
+        "path": "Organization.address.city",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "severity": "warning",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.address.postalCode",
@@ -508,7 +532,8 @@
             "severity": "warning",
             "expression": "$this.matches('^.{1,10}$')"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Organization.partOf",
