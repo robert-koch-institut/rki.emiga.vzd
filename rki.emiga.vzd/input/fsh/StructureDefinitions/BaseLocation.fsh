@@ -30,10 +30,12 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // 'Name of the location as used by humans' - 0..1 - string
 // Bezeichnung des Standortes, z.B. 'Niederlassung Berliner Str.'
 * name 0..1 MS
+* name obeys validString
 
 // 'A list of alternate names that the location is known as or was known as in the past' - 0..* - string
 // Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen
 * alias 0..* MS
+* alias obeys validString
 
 // 'Additional details about the location that could be displayed as further information to identify the location beyond its name' - 0..1 - string
 // Begründung: Es kann sinnvoll sein, Standorte durch zusätzliche Informationen zu identifizieren

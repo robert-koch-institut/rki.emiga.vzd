@@ -88,6 +88,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'An address for the organization' - 0..* - Address
 // Diskussion: Wie viele Adressen benötigen wir, wenn wir hier eh nur die Postadresse festlegen? 
 // Wir starten strikt mit maximal einer Adresse. Später können wir hier auch über Slicing mehrere Adressen abbilden, falls erforderlich
+
 * address 0..1 MS
 * address only $address-de-basis
 * address.extension[Stadtteil] ^mustSupport = true
