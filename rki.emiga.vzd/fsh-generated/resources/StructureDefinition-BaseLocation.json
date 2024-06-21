@@ -150,7 +150,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -164,7 +164,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -219,7 +219,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -239,7 +239,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -259,7 +259,7 @@
             "key": "validHouseNumber",
             "human": "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,50}$')"
           }
         ],
@@ -279,7 +279,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -299,7 +299,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -313,7 +313,7 @@
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
         ],
@@ -327,7 +327,7 @@
             "key": "validPLZ",
             "human": "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
-            "severity": "warning",
+            "severity": "error",
             "expression": "$this.matches('^.{1,10}$')"
           }
         ],

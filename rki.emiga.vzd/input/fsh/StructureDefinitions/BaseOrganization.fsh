@@ -131,40 +131,40 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 //    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
 Invariant: validEmailAddress
 Description: "Die E-Mail-Adresse muss valide sein."
-* severity = #warning
-* expression = "$this.matches('^(?=.{1,255}$)[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+[.])+[a-zA-Z0-9]{2,63}$')"
+* severity = #error
+* expression = "$this.matches('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/<mailto:+@[a-zA-Z0-9.-]+\.%5ba-zA-Z%5d%7b2,%7d$/>')"
 
 //    Max. Zeichenlänge = 50 / Nur Zahlen erlaubt / Länderpräfix mit Deutschland als Default 
 Invariant: validPhoneNumber
 Description: "Die Telefonnummer muss valide sein."
-* severity = #warning
-* expression = "$this.matches('^(49|0049|0)?\d{1,50}$')"
+* severity = #error
+* expression = "$this.matches('^(\d{1,50}$')"
 
 //     Max. Zeichenlänge = 1000 / Alle Zeichen erlaubt / Formatvalidierung Website
 
 Invariant: validUrl
 Description: "Die Url muss valide sein."
-* severity = #warning
+* severity = #error
 * expression = "$this.matches('^(https?:\/\/)?([\da-z.-]{1,1000})\.([a-z.]{2,6})([/\w.-]{0,999})\/?$')"
 
 // TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
-* severity = #warning
+* severity = #error
 * expression = "$this.matches('^[0+][0-9 \\\\-\\\\(\\\\)]{6,50}$')"
 
 // valid String
 
 Invariant: validString
 Description: "Zeichenlänge maximal 255 Zeichen"
-* severity = #warning
+* severity = #error
 * expression = "$this.matches('^.{1,255}$')"
 
 // valid Hausnummer
 
 Invariant: validHouseNumber
 Description: "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen"
-* severity = #warning
+* severity = #error
 * expression = "$this.matches('^.{1,50}$')"
 
 
@@ -172,6 +172,5 @@ Description: "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen"
 
 Invariant: validPLZ
 Description: "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen"
-* severity = #warning
+* severity = #error
 * expression = "$this.matches('^.{1,10}$')"
-
