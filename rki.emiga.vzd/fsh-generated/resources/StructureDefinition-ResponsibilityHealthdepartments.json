@@ -95,6 +95,11 @@
         "mustSupport": true
       },
       {
+        "id": "Extension.extension:geographicRegion.value[x].display",
+        "path": "Extension.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
         "id": "Extension.extension:responsibilityType",
         "path": "Extension.extension",
         "sliceName": "responsibilityType",
@@ -119,9 +124,6 @@
             "code": "Coding"
           }
         ],
-        "patternCoding": {
-          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
-        },
         "binding": {
           "strength": "required",
           "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
@@ -139,6 +141,11 @@
         "id": "Extension.extension:responsibilityType.value[x].code",
         "path": "Extension.extension.value[x].code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:responsibilityType.value[x].display",
+        "path": "Extension.extension.value[x].display",
         "mustSupport": true
       },
       {

@@ -205,7 +205,7 @@
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
-    "endLine": 31
+    "endLine": 33
   },
   {
     "outputFile": "ValueSet-EndpointConnectionType.json",
