@@ -200,6 +200,14 @@
     "endLine": 16
   },
   {
+    "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
+    "fshName": "ResponsibilityHealthdepartments",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
+    "startLine": 4,
+    "endLine": 30
+  },
+  {
     "outputFile": "ValueSet-EndpointConnectionType.json",
     "fshName": "EndpointConnectionType",
     "fshType": "ValueSet",
