@@ -129,7 +129,23 @@
       {
         "id": "Organization.extension",
         "path": "Organization.extension",
-        "max": "0"
+        "min": 1
+      },
+      {
+        "id": "Organization.extension:responsibilityHealthdepartments",
+        "path": "Organization.extension",
+        "sliceName": "responsibilityHealthdepartments",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+            ]
+          }
+        ],
+        "isModifier": false
       },
       {
         "id": "Organization.modifierExtension",

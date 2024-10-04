@@ -14,8 +14,11 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-* extension 0..0
-
+// Update: extension benuzt um die Art derZuständigkeit abzubilden
+* extension 1..
+* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
+* extension[responsibilityHealthdepartments] ^isModifier = false
+* modifierExtension ..0
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
