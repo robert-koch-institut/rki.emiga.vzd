@@ -235,6 +235,11 @@
         "mustSupport": true
       },
       {
+        "id": "PractitionerRole.code:emigaPractitionerRole.coding.display",
+        "path": "PractitionerRole.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "PractitionerRole.code:emigaPractitionerRole.text",
         "path": "PractitionerRole.code.text",
         "max": "0"
@@ -247,7 +252,16 @@
       {
         "id": "PractitionerRole.location",
         "path": "PractitionerRole.location",
-        "max": "0"
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "PractitionerRole.healthcareService",

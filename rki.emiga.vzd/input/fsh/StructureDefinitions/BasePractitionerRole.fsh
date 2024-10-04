@@ -48,7 +48,7 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 * code[emigaPractitionerRole] from PractitionerRole (required)
   * ^patternCodeableConcept.coding.system = $PractitionerRole
   * insert StrictCodableConcept
-
+* code[emigaPractitionerRole].coding.display MS
 //  * ^binding.description = "emigaPractitionerRole"
 
 // 'Specific specialty of the practitioner' - 0..* - CodeableConcept
@@ -57,7 +57,9 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 
 // 'The location(s) at which this practitioner provides care' - 0..* - Reference(Location)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* location 0..0
+// Update 04.10.2024 location referenz auf Baselocation
+* location 0..1 MS
+* location only Reference(BaseLocation)
 
 // 'The list of healthcare services that this worker provides for this role's Organization/Location(s)' - 0..* - Reference(HealthcareService)
 * healthcareService 0.. MS
