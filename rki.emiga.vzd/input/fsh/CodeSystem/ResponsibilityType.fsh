@@ -27,21 +27,16 @@ Description: "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten 
 //* #all-exceptTB ^designation.value = "all-exceptTB"
 
 
-Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
+
 
 ValueSet: ResponsibilityType
 Id: responsibilityType
 Title: "Art der Zuständigkeit OEGD (Werteliste)"
 Description: "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden."
-* ^language = #de-DE
+* insert MetadataTerminology
+
 * ^version = "1.0.0"
-* ^status = #active
-* ^experimental = false
-* ^date = "2024-07-30"
-* ^publisher = "Robert Koch-Institut"
-* ^contact.name = "Robert Koch-Institut"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://rki.de"
+
 * ^expansion.timestamp = "2024-07-23T00:00:00+01:00"
 * ^expansion.contains[0].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * ^expansion.contains[=].code = #all

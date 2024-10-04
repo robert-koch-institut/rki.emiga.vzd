@@ -28,4 +28,4 @@ ValueSet-EndpointConnectionType.json                   EndpointConnectionType   
 ValueSet-HealthcareServiceCategory.json                HealthcareServiceCategory     ValueSet    CodeSystem\HealthcareServiceCategory.fsh               15 - 22
 ValueSet-OrganizationType.json                         OrganizationType              ValueSet    CodeSystem\OrganizationType.fsh                        28 - 35
 ValueSet-PractitionerRole.json                         PractitionerRole              ValueSet    CodeSystem\PractitionerRole.fsh                        40 - 47
-ValueSet-responsibilityType.json                       ResponsibilityType            ValueSet    CodeSystem\ResponsibilityType.fsh                      32 - 55
+ValueSet-responsibilityType.json                       ResponsibilityType            ValueSet    CodeSystem\ResponsibilityType.fsh                      32 - 50
