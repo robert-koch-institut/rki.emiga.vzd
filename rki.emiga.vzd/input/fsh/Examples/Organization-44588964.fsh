@@ -7,6 +7,13 @@ Usage: #example
 * identifier.system = $CodeSiteId
 * identifier.value = "1.12.99.99."
 * active = true
+* extension.url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+* extension.extension[0].url = "geographicRegion"
+* extension.extension[=].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
+* extension.extension[=].valueCoding.code = #11005711
+* extension.extension[+].url = "responsibilityType"
+* extension.extension[=].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+* extension.extension[=].valueCoding.code = #all
 * type[emigaOrganizationType] = $OrganizationType#ga
 * name = "Stadt XYZ - Gesundheitsamt"
 * telecom[Email].system = #email

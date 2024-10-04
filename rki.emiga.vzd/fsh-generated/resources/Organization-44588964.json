@@ -30,6 +30,27 @@
       "value": "1.12.99.99."
     }
   ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://demis.rki.de/fhir/CodeSystem/geographicRegion",
+            "code": "11005711"
+          },
+          "url": "geographicRegion"
+        },
+        {
+          "valueCoding": {
+            "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+            "code": "all"
+          },
+          "url": "responsibilityType"
+        }
+      ],
+      "url": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+    }
+  ],
   "type": [
     {
       "coding": [

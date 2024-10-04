@@ -77,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\Organization-44588964.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 34
   },
   {
     "outputFile": "Practitioner-44588966.json",
@@ -157,7 +157,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BaseOrganization.fsh",
     "startLine": 1,
-    "endLine": 127
+    "endLine": 130
   },
   {
     "outputFile": "StructureDefinition-BasePractitioner.json",
@@ -173,7 +173,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BasePractitionerRole.fsh",
     "startLine": 1,
-    "endLine": 84
+    "endLine": 86
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
@@ -205,7 +205,7 @@
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
-    "endLine": 30
+    "endLine": 31
   },
   {
     "outputFile": "ValueSet-EndpointConnectionType.json",
