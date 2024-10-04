@@ -104,6 +104,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/responsibilityType"
+        },
+        "name": "Art der Zuständigkeit OEGD (Werteliste)",
+        "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/BaseEndpoint"
         },
         "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",

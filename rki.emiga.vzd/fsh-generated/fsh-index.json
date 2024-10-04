@@ -37,7 +37,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\ResponsibilityType.fsh",
     "startLine": 3,
-    "endLine": 33
+    "endLine": 24
   },
   {
     "outputFile": "HealthcareService-44588972.json",
@@ -230,5 +230,13 @@
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
     "startLine": 40,
     "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-responsibilityType.json",
+    "fshName": "ResponsibilityType",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\ResponsibilityType.fsh",
+    "startLine": 32,
+    "endLine": 55
   }
 ]

@@ -10,51 +10,19 @@
   "concept": [
     {
       "code": "all",
-      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger",
-      "designation": [
-        {
-          "language": "de-DE",
-          "use": {
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse",
-            "code": "abbreviation"
-          },
-          "value": "all"
-        }
-      ]
+      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger"
     },
     {
       "code": "TB",
-      "display": "zuständig nur für Tuberkulose",
-      "designation": [
-        {
-          "language": "de-DE",
-          "use": {
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse",
-            "code": "abbreviation"
-          },
-          "value": "TB"
-        }
-      ]
+      "display": "zuständig nur für Tuberkulose"
     },
     {
       "code": "all-exceptTB",
-      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger außer Tuberkulose",
-      "designation": [
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "abbreviation",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "all-exceptTB"
-        }
-      ]
+      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger außer Tuberkulose"
     }
   ],
   "language": "de-DE",
-  "version": "1.0.0",
   "experimental": false,
-  "date": "2024-07-30",
   "publisher": "Robert Koch-Institut",
   "contact": [
     {
@@ -67,6 +35,7 @@
       ]
     }
   ],
+  "version": "1.0.0",
   "caseSensitive": true,
   "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
   "count": 3
