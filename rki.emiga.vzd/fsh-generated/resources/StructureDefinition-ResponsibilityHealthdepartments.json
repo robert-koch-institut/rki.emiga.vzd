@@ -54,10 +54,7 @@
         "path": "Extension.extension",
         "sliceName": "geographicRegion",
         "min": 1,
-        "max": "*",
-        "binding": {
-          "description": "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
-        }
+        "max": "*"
       },
       {
         "id": "Extension.extension:geographicRegion.extension",
@@ -76,28 +73,32 @@
           {
             "code": "Coding"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://demis.rki.de/fhir/ValueSet/county",
+          "description": "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
+        }
       },
       {
         "id": "Extension.extension:geographicRegion.value[x].system",
         "path": "Extension.extension.value[x].system",
         "min": 1,
-        "patternUri": "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
+        "patternUri": "https://demis.rki.de/fhir/CodeSystem/geographicRegion",
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:geographicRegion.value[x].code",
         "path": "Extension.extension.value[x].code",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:responsibilityType",
         "path": "Extension.extension",
         "sliceName": "responsibilityType",
         "min": 1,
-        "max": "*",
-        "binding": {
-          "description": "Über das ValueSet kann die Art der Zuständigkeit einer ÖGD-Stelle ausgewählt werden."
-        }
+        "max": "*"
       },
       {
         "id": "Extension.extension:responsibilityType.extension",
@@ -119,18 +120,25 @@
         ],
         "patternCoding": {
           "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+          "description": "Über das ValueSet kann die Art der Zuständigkeit einer ÖGD-Stelle ausgewählt werden."
         }
       },
       {
         "id": "Extension.extension:responsibilityType.value[x].system",
         "path": "Extension.extension.value[x].system",
         "min": 1,
-        "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+        "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:responsibilityType.value[x].code",
         "path": "Extension.extension.value[x].code",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Extension.url",

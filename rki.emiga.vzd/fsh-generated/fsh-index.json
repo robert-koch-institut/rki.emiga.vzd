@@ -204,7 +204,7 @@
     "fshName": "ResponsibilityHealthdepartments",
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
-    "startLine": 4,
+    "startLine": 2,
     "endLine": 30
   },
   {
