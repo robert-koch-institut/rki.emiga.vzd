@@ -27,7 +27,7 @@ Description: "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten 
 //* #all-exceptTB ^designation.value = "all-exceptTB"
 
 
-Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/Art-der-Zustaendigkeit
+Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
 
 ValueSet: ResponsibilityType
 Id: responsibilityType
@@ -43,13 +43,13 @@ Description: "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werde
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://rki.de"
 * ^expansion.timestamp = "2024-07-23T00:00:00+01:00"
-* ^expansion.contains[0].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/Art-der-Zustaendigkeit"
+* ^expansion.contains[0].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * ^expansion.contains[=].code = #all
 * ^expansion.contains[=].display = "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger"
-* ^expansion.contains[+].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/Art-der-Zustaendigkeit"
+* ^expansion.contains[+].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * ^expansion.contains[=].code = #TB
 * ^expansion.contains[=].display = "zuständig nur für Tuberkulose"
-* ^expansion.contains[+].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/Art-der-Zustaendigkeit"
+* ^expansion.contains[+].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * ^expansion.contains[=].code = #all-exceptTB
 * ^expansion.contains[=].display = "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger außer Tuberkulose"
 * include codes from system $Art-der-Zustaendigkeit
