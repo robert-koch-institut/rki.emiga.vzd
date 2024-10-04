@@ -3,6 +3,7 @@ CodeSystem-EndpointConnectionType.json                 EndpointConnectionType   
 CodeSystem-HealthcareServiceCategory.json              HealthcareServiceCategory     CodeSystem  CodeSystem\HealthcareServiceCategory.fsh               1 - 12
 CodeSystem-OrganizationType.json                       OrganizationType              CodeSystem  CodeSystem\OrganizationType.fsh                        1 - 26
 CodeSystem-PractitionerRole.json                       PractitionerRole              CodeSystem  CodeSystem\PractitionerRole.fsh                        1 - 38
+CodeSystem-responsibilityType.json                     ResponsibilityType            CodeSystem  CodeSystem\ResponsibilityType.fsh                      3 - 33
 HealthcareService-44588972.json                        44588972                      Instance    Examples\HealthcareService-44588971.fsh                1 - 15
 Location-44588965.json                                 44588965                      Instance    Examples\Location-44588965.fsh                         1 - 19
 NamingSystem-CodeSiteId.json                           CodeSiteId                    Instance    NamingSystem\CodeSiteId.fsh                            1 - 12

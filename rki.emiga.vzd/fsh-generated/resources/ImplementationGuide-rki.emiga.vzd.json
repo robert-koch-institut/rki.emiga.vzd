@@ -96,6 +96,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/responsibilityType"
+        },
+        "name": "Art der Zustaendigkeit OEGD",
+        "description": "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/BaseEndpoint"
         },
         "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",

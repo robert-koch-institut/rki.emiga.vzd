@@ -32,6 +32,14 @@
     "endLine": 38
   },
   {
+    "outputFile": "CodeSystem-responsibilityType.json",
+    "fshName": "ResponsibilityType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\ResponsibilityType.fsh",
+    "startLine": 3,
+    "endLine": 33
+  },
+  {
     "outputFile": "HealthcareService-44588972.json",
     "fshName": "44588972",
     "fshType": "Instance",

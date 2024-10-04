@@ -1,0 +1,73 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ResponsibilityType",
+  "id": "responsibilityType",
+  "title": "Art der Zustaendigkeit OEGD",
+  "description": "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+  "concept": [
+    {
+      "code": "all",
+      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse",
+            "code": "abbreviation"
+          },
+          "value": "all"
+        }
+      ]
+    },
+    {
+      "code": "TB",
+      "display": "zuständig nur für Tuberkulose",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse",
+            "code": "abbreviation"
+          },
+          "value": "TB"
+        }
+      ]
+    },
+    {
+      "code": "all-exceptTB",
+      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger außer Tuberkulose",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "all-exceptTB"
+        }
+      ]
+    }
+  ],
+  "language": "de-DE",
+  "version": "1.0.0",
+  "experimental": false,
+  "date": "2024-07-30",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+  "count": 3
+}

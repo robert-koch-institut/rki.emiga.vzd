@@ -1,5 +1,6 @@
 
 // rki.emiga.common
+
 Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
 Alias: $ConceptDesignationUseVS = https://emiga.rki.de/fhir/common/ValueSet/ConceptDesignationUse
 Alias: $ResourceVisibilityType = https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType
@@ -14,6 +15,11 @@ Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/Hea
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
+
+//Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
+//Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
+//Alias: $VSArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/ValueSet/ArtDerZustaendigkeit
+//Alias: $VSKreisschluessel = https://emiga.rki.de/fhir/vzd/ValueSet/Kreisschluessel
 
 // deutsches Basisprofil
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
