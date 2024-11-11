@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2023-11-30",
   "publisher": "Robert Koch-Institut",
-  "description": "TODO",
+  "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -51,12 +51,14 @@
         "id": "Identifier.system",
         "path": "Identifier.system",
         "min": 1,
-        "patternUri": "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId"
+        "patternUri": "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId",
+        "mustSupport": true
       },
       {
         "id": "Identifier.value",
         "path": "Identifier.value",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

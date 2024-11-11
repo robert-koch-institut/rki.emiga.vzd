@@ -209,7 +209,7 @@
           "reference": "StructureDefinition/IdentifierCodeSiteId"
         },
         "name": "Identifier-Profil CodeSiteId",
-        "description": "TODO",
+        "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
         "exampleBoolean": false
       },
       {
