@@ -3,7 +3,7 @@ Id: OrganizationType
 Title: "Organizationstyp"
 Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.0.1"
+* ^version = "1.1.0"
 * ^date = "2024-11-11"
 * ^caseSensitive = true
 * ^content = #complete
