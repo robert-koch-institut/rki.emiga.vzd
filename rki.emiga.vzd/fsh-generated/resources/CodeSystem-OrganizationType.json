@@ -23,8 +23,8 @@
       ]
     },
     {
-      "code": "ls",
-      "display": "Landesstelle",
+      "code": "lb",
+      "display": "Landesbehörde",
       "designation": [
         {
           "language": "de-DE",
@@ -32,7 +32,7 @@
             "code": "abbreviation",
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
-          "value": "LS"
+          "value": "LB"
         }
       ]
     },
@@ -79,8 +79,8 @@
       ]
     }
   ],
-  "version": "1.0.0",
-  "date": "2024-03-19",
+  "version": "1.0.1",
+  "date": "2024-11-11",
   "caseSensitive": true,
   "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType",
   "count": 4
