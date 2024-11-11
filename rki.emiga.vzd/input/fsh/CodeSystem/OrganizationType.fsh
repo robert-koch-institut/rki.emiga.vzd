@@ -30,6 +30,6 @@ Id: OrganizationType
 Title: "Organisationstyp (Werteliste)"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.0.0"
-* ^date = "2024-03-19"
+* ^version = "1.1.0"
+* ^date = "2024-11-11"
 * include codes from system OrganizationType
