@@ -76,8 +76,16 @@
     "fshName": "44588964",
     "fshType": "Instance",
     "fshFile": "Examples\\Organization-44588964.fsh",
-    "startLine": 1,
-    "endLine": 34
+    "startLine": 2,
+    "endLine": 35
+  },
+  {
+    "outputFile": "Organization-44588980.json",
+    "fshName": "44588980",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588980.fsh",
+    "startLine": 2,
+    "endLine": 35
   },
   {
     "outputFile": "Practitioner-44588966.json",

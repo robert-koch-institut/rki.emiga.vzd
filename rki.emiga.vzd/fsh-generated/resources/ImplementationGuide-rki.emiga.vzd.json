@@ -102,6 +102,13 @@
       },
       {
         "reference": {
+          "reference": "Organization/44588980"
+        },
+        "name": "44588980",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/responsibilityType"
         },
         "name": "Art der Zustaendigkeit OEGD",

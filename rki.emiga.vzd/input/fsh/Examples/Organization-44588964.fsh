@@ -1,3 +1,4 @@
+//Example for Version 1.0.0 BaseOrganization (alt)
 Instance: 44588964
 InstanceOf: BaseOrganization
 Usage: #example
