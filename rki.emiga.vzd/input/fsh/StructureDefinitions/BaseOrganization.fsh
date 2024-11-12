@@ -4,8 +4,8 @@ Id: BaseOrganization
 Title: "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
 Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 * insert MetadataProfile
-* ^version = "1.0.0"
-* ^date = "2024-03-18"
+* ^version = "1.1.0"
+* ^date = "2024-11-12"
 
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
@@ -15,10 +15,11 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um die Art derZuständigkeit abzubilden
-* extension 1..
-* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
-* extension[responsibilityHealthdepartments] ^isModifier = false
-* modifierExtension ..0
+// Version 1.1.0 die Extension wird in Organization Public Health abgebildet
+//* extension 1..
+//* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
+//* extension[responsibilityHealthdepartments] ^isModifier = false
+//* modifierExtension ..0
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
@@ -40,7 +41,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 * type 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #closed
+  * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS
@@ -122,12 +123,12 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen
-* contact 0..0
+//* contact 0..0
 
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
-* endpoint 0..0
+//* endpoint 0..0
 
 // Invariants to validate the address and telecom values
 

@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "BaseOrganization",
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "BaseOrganization",
   "title": "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
   "status": "active",
   "experimental": false,
-  "date": "2024-03-18",
+  "date": "2024-11-12",
   "publisher": "Robert Koch-Institut",
   "description": "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
   "fhirVersion": "4.0.1",
@@ -127,27 +127,6 @@
         "max": "0"
       },
       {
-        "id": "Organization.extension",
-        "path": "Organization.extension",
-        "min": 1
-      },
-      {
-        "id": "Organization.extension:responsibilityHealthdepartments",
-        "path": "Organization.extension",
-        "sliceName": "responsibilityHealthdepartments",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
-            ]
-          }
-        ],
-        "isModifier": false
-      },
-      {
         "id": "Organization.modifierExtension",
         "path": "Organization.modifierExtension",
         "max": "0"
@@ -199,7 +178,7 @@
               "path": "$this"
             }
           ],
-          "rules": "closed",
+          "rules": "open",
           "description": "slicing organization type by system",
           "ordered": false
         },
@@ -569,16 +548,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Organization.contact",
-        "path": "Organization.contact",
-        "max": "0"
-      },
-      {
-        "id": "Organization.endpoint",
-        "path": "Organization.endpoint",
-        "max": "0"
       }
     ]
   }
