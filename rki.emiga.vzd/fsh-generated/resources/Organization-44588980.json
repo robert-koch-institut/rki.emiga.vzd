@@ -1,0 +1,106 @@
+{
+  "resourceType": "Organization",
+  "id": "44588980",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1.12.99.99."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PRN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId",
+      "value": "1.12.99.99."
+    }
+  ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://demis.rki.de/fhir/CodeSystem/geographicRegion",
+            "code": "11005711"
+          },
+          "url": "geographicRegion"
+        },
+        {
+          "valueCoding": {
+            "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+            "code": "all"
+          },
+          "url": "responsibilityType"
+        }
+      ],
+      "url": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+          "code": "ga"
+        }
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "test@example.org"
+    },
+    {
+      "system": "phone",
+      "value": "0123 4567890"
+    },
+    {
+      "system": "fax",
+      "value": "0123 4567899"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Test Straße 21"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Test Straße"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "21"
+            }
+          ]
+        }
+      ],
+      "type": "postal",
+      "city": "Teststadt",
+      "state": "DE-BB",
+      "postalCode": "12345",
+      "country": "DE"
+    }
+  ],
+  "active": true,
+  "name": "Stadt XYZ - Gesundheitsamt"
+}
