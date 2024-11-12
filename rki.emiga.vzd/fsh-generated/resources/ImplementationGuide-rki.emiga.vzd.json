@@ -262,6 +262,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/PublicHealthOrganization"
+        },
+        "name": "Public Health Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "NamingSystem/TransmittingSiteId"
         },
         "name": "TransmittingSite ID",

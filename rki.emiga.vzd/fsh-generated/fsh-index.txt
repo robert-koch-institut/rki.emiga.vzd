@@ -18,12 +18,13 @@ PractitionerRole-44588971.json                            44588971              
 StructureDefinition-BaseEndpoint.json                     BaseEndpoint                     Profile     StructureDefinitions\BaseEndpoint.fsh                              1 - 64
 StructureDefinition-BaseHealthcareService.json            BaseHealthcareService            Profile     StructureDefinitions\BaseHealthcareService.fsh                     1 - 122
 StructureDefinition-BaseLocation.json                     BaseLocation                     Profile     StructureDefinitions\BaseLocation.fsh                              1 - 119
-StructureDefinition-BaseOrganization.json                 BaseOrganization                 Profile     StructureDefinitions\BaseOrganization.fsh                          1 - 130
+StructureDefinition-BaseOrganization.json                 BaseOrganization                 Profile     StructureDefinitions\BaseOrganization.fsh                          1 - 121
 StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 84
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
 StructureDefinition-IdentifierTransmittingSiteId.json     IdentifierTransmittingSiteId     Profile     StructureDefinitions\IdentifierTransmittingSiteId.fsh              1 - 16
 StructureDefinition-ParentSite.json                       ParentSite                       Extension   StructureDefinitions\ExtensionParentSite.fsh                       1 - 16
+StructureDefinition-PublicHealthOrganization.json         PublicHealthOrganization         Profile     StructureDefinitions\PublicHealthOrganization.fsh                  1 - 121
 StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthdepartments  Extension   StructureDefinitions\ExtensionResponsibilityHealthdepartments.fsh  2 - 34
 ValueSet-EndpointConnectionType.json                      EndpointConnectionType           ValueSet    CodeSystem\EndpointConnectionType.fsh                              13 - 20
 ValueSet-HealthcareServiceCategory.json                   HealthcareServiceCategory        ValueSet    CodeSystem\HealthcareServiceCategory.fsh                           15 - 22

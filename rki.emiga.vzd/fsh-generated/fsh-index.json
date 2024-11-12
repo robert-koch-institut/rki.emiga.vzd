@@ -157,7 +157,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BaseOrganization.fsh",
     "startLine": 1,
-    "endLine": 130
+    "endLine": 121
   },
   {
     "outputFile": "StructureDefinition-BasePractitioner.json",
@@ -198,6 +198,14 @@
     "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
     "startLine": 1,
     "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-PublicHealthOrganization.json",
+    "fshName": "PublicHealthOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\PublicHealthOrganization.fsh",
+    "startLine": 1,
+    "endLine": 121
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
