@@ -184,6 +184,14 @@
     "endLine": 86
   },
   {
+    "outputFile": "StructureDefinition-HealthCareOrganization.json",
+    "fshName": "HealthCareOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\HealthcareOrganization.fsh",
+    "startLine": 1,
+    "endLine": 67
+  },
+  {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
     "fshName": "IdentifierCodeSiteId",
     "fshType": "Profile",

@@ -22,6 +22,7 @@ StructureDefinition-BaseLocation.json                     BaseLocation          
 StructureDefinition-BaseOrganization.json                 BaseOrganization                 Profile     StructureDefinitions\BaseOrganization.fsh                          1 - 121
 StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 84
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
+StructureDefinition-HealthCareOrganization.json           HealthCareOrganization           Profile     StructureDefinitions\HealthcareOrganization.fsh                    1 - 67
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
 StructureDefinition-IdentifierTransmittingSiteId.json     IdentifierTransmittingSiteId     Profile     StructureDefinitions\IdentifierTransmittingSiteId.fsh              1 - 16
 StructureDefinition-ParentSite.json                       ParentSite                       Extension   StructureDefinitions\ExtensionParentSite.fsh                       1 - 16
