@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -209,6 +209,14 @@
         },
         "name": "Endpunktverbindungstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/HealthCareOrganization"
+        },
+        "name": "Gesundheits-Einrichtung",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
