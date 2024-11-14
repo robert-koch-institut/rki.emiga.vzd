@@ -189,7 +189,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\HealthcareOrganization.fsh",
     "startLine": 1,
-    "endLine": 67
+    "endLine": 158
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
@@ -221,7 +221,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\PublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 121
+    "endLine": 126
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
