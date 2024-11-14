@@ -82,118 +82,20 @@
         "isModifier": false
       },
       {
-        "id": "Organization.address.extension:Stadtteil",
-        "path": "Organization.address.extension",
-        "sliceName": "Stadtteil"
-      },
-      {
-        "id": "Organization.address.extension:Stadtteil.value[x]",
-        "path": "Organization.address.extension.value[x]",
-        "constraint": [
+        "id": "Organization.partOf",
+        "path": "Organization.partOf",
+        "type": [
           {
-            "key": "validString",
-            "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,255}$')"
-          }
-        ]
-      },
-      {
-        "id": "Organization.address.line.extension:Strasse",
-        "path": "Organization.address.line.extension",
-        "sliceName": "Strasse"
-      },
-      {
-        "id": "Organization.address.line.extension:Strasse.value[x]",
-        "path": "Organization.address.line.extension.value[x]",
-        "constraint": [
-          {
-            "key": "validString",
-            "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,255}$')"
-          }
-        ]
-      },
-      {
-        "id": "Organization.address.line.extension:Hausnummer",
-        "path": "Organization.address.line.extension",
-        "sliceName": "Hausnummer"
-      },
-      {
-        "id": "Organization.address.line.extension:Hausnummer.value[x]",
-        "path": "Organization.address.line.extension.value[x]",
-        "constraint": [
-          {
-            "key": "validHouseNumber",
-            "human": "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,50}$')"
-          }
-        ]
-      },
-      {
-        "id": "Organization.address.line.extension:Adresszusatz",
-        "path": "Organization.address.line.extension",
-        "sliceName": "Adresszusatz"
-      },
-      {
-        "id": "Organization.address.line.extension:Adresszusatz.value[x]",
-        "path": "Organization.address.line.extension.value[x]",
-        "constraint": [
-          {
-            "key": "validString",
-            "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,255}$')"
-          }
-        ]
-      },
-      {
-        "id": "Organization.address.line.extension:Postfach",
-        "path": "Organization.address.line.extension",
-        "sliceName": "Postfach"
-      },
-      {
-        "id": "Organization.address.line.extension:Postfach.value[x]",
-        "path": "Organization.address.line.extension.value[x]",
-        "constraint": [
-          {
-            "key": "validString",
-            "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,255}$')"
-          }
-        ]
-      },
-      {
-        "id": "Organization.address.city",
-        "path": "Organization.address.city",
-        "constraint": [
-          {
-            "key": "validString",
-            "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,255}$')"
-          }
-        ]
-      },
-      {
-        "id": "Organization.address.postalCode",
-        "path": "Organization.address.postalCode",
-        "constraint": [
-          {
-            "key": "validPLZ",
-            "human": "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
-            "severity": "error",
-            "expression": "$this.matches('^.{1,10}$')"
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+                "valueBoolean": true
+              }
+            ]
           }
         ]
       }
