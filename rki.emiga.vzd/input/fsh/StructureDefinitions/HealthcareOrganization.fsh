@@ -154,7 +154,8 @@ Description: "TODO"
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.
 //* partOf 0..1 MS
-//* partOf only Reference(BaseOrganization) 
+
+* partOf only Reference(HealthCareOrganization) 
 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
