@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 27
   },
   {
     "outputFile": "CodeSystem-PractitionerRole.json",
@@ -60,6 +60,14 @@
     "fshName": "CodeSiteId",
     "fshType": "Instance",
     "fshFile": "NamingSystem\\CodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "NamingSystem-EpiWarnId.json",
+    "fshName": "EpiWarnId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\EpiWarnId.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -136,6 +144,14 @@
     "endLine": 9
   },
   {
+    "outputFile": "StructureDefinition-AuthorityOrganization.json",
+    "fshName": "AuthorityOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\AuthorityOrganization.fsh",
+    "startLine": 1,
+    "endLine": 132
+  },
+  {
     "outputFile": "StructureDefinition-BaseEndpoint.json",
     "fshName": "BaseEndpoint",
     "fshType": "Profile",
@@ -200,6 +216,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "StructureDefinition-IdentifierEpiWarnId.json",
+    "fshName": "IdentifierEpiWarnId",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierEpiWarnId.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
     "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
     "fshName": "IdentifierTransmittingSiteId",
     "fshType": "Profile",
@@ -232,6 +256,14 @@
     "endLine": 34
   },
   {
+    "outputFile": "ValueSet-AuthorityType.json",
+    "fshName": "AuthorityType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\AuthorityType.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
     "outputFile": "ValueSet-EndpointConnectionType.json",
     "fshName": "EndpointConnectionType",
     "fshType": "ValueSet",
@@ -252,8 +284,8 @@
     "fshName": "OrganizationType",
     "fshType": "ValueSet",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
-    "startLine": 28,
-    "endLine": 35
+    "startLine": 30,
+    "endLine": 37
   },
   {
     "outputFile": "ValueSet-PractitionerRole.json",

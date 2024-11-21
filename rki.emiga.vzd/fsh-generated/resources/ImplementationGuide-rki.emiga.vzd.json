@@ -125,6 +125,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/AuthorityOrganization"
+        },
+        "name": "Authority Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/BaseEndpoint"
         },
         "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
@@ -173,6 +181,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/AuthorityType"
+        },
+        "name": "Behördenarten",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
@@ -213,6 +229,14 @@
       },
       {
         "reference": {
+          "reference": "NamingSystem/EpiWarnId"
+        },
+        "name": "EpiWarn ID",
+        "description": "epiWarnId ID to be used in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/HealthCareOrganization"
         },
         "name": "Gesundheits-Einrichtung",
@@ -225,6 +249,14 @@
         },
         "name": "Identifier-Profil CodeSiteId",
         "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IdentifierEpiWarnId"
+        },
+        "name": "Identifier-Profil epiWarnId",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
