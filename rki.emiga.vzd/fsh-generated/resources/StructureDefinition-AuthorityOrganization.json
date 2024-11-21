@@ -1,0 +1,125 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AuthorityOrganization",
+  "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
+  "version": "1.0.0",
+  "name": "AuthorityOrganization",
+  "title": "Authority Organization",
+  "status": "draft",
+  "date": "2024-11-15",
+  "description": "TODO",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.meta.profile",
+        "path": "Organization.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Organization.meta.profile:emigaprofile",
+        "path": "Organization.meta.profile",
+        "sliceName": "emigaprofile",
+        "min": 0,
+        "max": "*",
+        "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+      },
+      {
+        "id": "Organization.type:authorityOrganizationType",
+        "path": "Organization.type",
+        "sliceName": "authorityOrganizationType",
+        "min": 0,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType"
+        }
+      },
+      {
+        "id": "Organization.type:authorityOrganizationType.coding",
+        "path": "Organization.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:authorityOrganizationType.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:authorityOrganizationType.coding.code",
+        "path": "Organization.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:authorityOrganizationType.text",
+        "path": "Organization.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Organization.partOf",
+        "path": "Organization.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
