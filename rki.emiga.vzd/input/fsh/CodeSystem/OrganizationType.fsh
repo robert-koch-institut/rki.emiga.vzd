@@ -8,6 +8,7 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
+* #sepFedAut "Oberste Bundesbehörden"
 * #ga "Gesundheitsamt"
 * #ga ^designation.language = #de-DE
 * #ga ^designation.use = $ConceptDesignationUse#abbreviation
@@ -24,6 +25,7 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * #bw ^designation.language = #de-DE
 * #bw ^designation.use = $ConceptDesignationUse#abbreviation
 * #bw ^designation.value = "BW"
+
 
 ValueSet: OrganizationType
 Id: OrganizationType

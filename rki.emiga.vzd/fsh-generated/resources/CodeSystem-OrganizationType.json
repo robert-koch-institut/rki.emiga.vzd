@@ -9,6 +9,10 @@
   "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
   "concept": [
     {
+      "code": "sepFedAut",
+      "display": "Oberste Bundesbehörden"
+    },
+    {
       "code": "ga",
       "display": "Gesundheitsamt",
       "designation": [
@@ -83,5 +87,5 @@
   "date": "2024-11-11",
   "caseSensitive": true,
   "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType",
-  "count": 4
+  "count": 5
 }
