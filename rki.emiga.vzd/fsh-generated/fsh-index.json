@@ -69,7 +69,7 @@
     "fshType": "Instance",
     "fshFile": "NamingSystem\\EpiWarnId.fsh",
     "startLine": 1,
-    "endLine": 12
+    "endLine": 13
   },
   {
     "outputFile": "NamingSystem-TransmittingSiteId.json",
@@ -149,7 +149,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\AuthorityOrganization.fsh",
     "startLine": 1,
-    "endLine": 132
+    "endLine": 140
   },
   {
     "outputFile": "StructureDefinition-BaseEndpoint.json",
@@ -221,7 +221,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\IdentifierEpiWarnId.fsh",
     "startLine": 1,
-    "endLine": 13
+    "endLine": 16
   },
   {
     "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
@@ -245,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\PublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 126
+    "endLine": 137
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",

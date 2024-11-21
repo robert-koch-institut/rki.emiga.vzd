@@ -5,10 +5,8 @@
   "version": "1.0.0",
   "name": "IdentifierEpiWarnId",
   "title": "Identifier-Profil epiWarnId",
-  "status": "active",
-  "experimental": false,
+  "status": "draft",
   "date": "2024-05-22",
-  "publisher": "Robert Koch-Institut",
   "description": "TODO",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -46,6 +44,19 @@
             }
           ]
         }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/vzd/sid/EpiWarnId",
+        "mustSupport": true
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }
