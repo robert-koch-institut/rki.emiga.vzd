@@ -1,16 +1,16 @@
 Profile: AuthorityOrganization
-Parent: BaseOrganization
+Parent: Organization
 Id: AuthorityOrganization
 Title: "Authority Organization"
 Description: "TODO"
-//* insert MetadataProfile
+
 * ^version = "1.0.0"
 * ^date = "2024-11-15"
-
-//* insert ProfileResourceCommon
-//* insert ProfileDomainResourceCommon
-//* insert ProfileSecurityTags
-//* insert ProfileMetaProfileTags
+// Temporarily Outcomment to flag draft for presentation in Simplifier
+//* insert MetadataProfile
+* insert ProfileResourceCommon
+* insert ProfileDomainResourceCommon
+* insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
 
@@ -24,31 +24,29 @@ Description: "TODO"
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
-/*
+
 * identifier
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
-  */
-//* identifier contains epiWarnId 0..1 MS
-//* identifier[epiWarnId] only IdentifierEpiWarnId
+* identifier contains epiWarnId 0..1 MS
+* identifier[epiWarnId] only IdentifierEpiWarnId
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
-//* active 1..1 MS
+* active 1..1 MS
 
 // 'Kind of organization' - 0..* - CodeableConcept
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
-/*
+
 * type 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-*/
 * type contains authorityOrganizationType 0..1 MS
 /** type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
@@ -58,21 +56,21 @@ Description: "TODO"
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 
-/*
+
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
 * name 1..1 MS
 * name obeys validString
-*/
+
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
-//* alias 0.. MS
-//* alias obeys validString
+* alias 0.. MS
+* alias obeys validString
 
 // 'A contact detail for the organization' - 0..* - ContactPoint
 // Diskussion: Wollen wir verschiedene Telekommunikationswege über Slicing abbilden?
 // Entscheidung: Wir bilden die verschiedene Telekommunikationswege über Slicing ab, um den regex regeln zu implementieren
-/*
+
 * telecom 0.. MS
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
@@ -99,12 +97,12 @@ Description: "TODO"
 * telecom[Fax].system = #fax (exactly)
 * telecom[Fax].value 1.. MS
 * telecom[Fax].value obeys validFaxNumber
-*/
+
 // 'An address for the organization' - 0..* - Address
 // Diskussion: Wie viele Adressen benötigen wir, wenn wir hier eh nur die Postadresse festlegen? 
 // Wir starten strikt mit maximal einer Adresse. Später können wir hier auch über Slicing mehrere Adressen abbilden, falls erforderlich
-/*
-* address 0..1 MS
+// Für V 1.1.0 erlauben wir mehrere Addressen um Hauptaddresse etc. abzubilden
+* address 0..* MS
 * address only $address-de-basis
 * address.extension[Stadtteil] ^mustSupport = true
 * address.extension[Stadtteil].valueString MS
@@ -125,21 +123,21 @@ Description: "TODO"
 * address.city obeys validString
 * address.postalCode MS 
 * address.postalCode obeys validPLZ
-*/
+
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.
-//* partOf 0..1 MS
+* partOf 0..1 MS
 * partOf only Reference(AuthorityOrganization) 
 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen
-//* contact 0..0
+* contact 0..0
 
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
-//* endpoint 0..0
+* endpoint 0..0
 
 // Invariants to validate the address and telecom values
 
