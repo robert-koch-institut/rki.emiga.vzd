@@ -126,8 +126,8 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 //* contact 0..0
 
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
-// Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-// Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
+// -Update v 1.1.0: Endpoint wird geöffnet um weitere UC abzubilden (epiWarn Behörden).Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. 
+// -Update v 1.1.0: Profilierung in Spezialisierte Profile. Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
 //* endpoint 0..0
 
 // Invariants to validate the address and telecom values
