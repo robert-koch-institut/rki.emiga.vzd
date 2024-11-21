@@ -1,0 +1,15 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "EpiWarnId",
+  "description": "epiWarnId ID to be used in Identifiers",
+  "uniqueId": [
+    {
+      "type": "uri"
+    }
+  ],
+  "publisher": "Robert Koch-Institut",
+  "date": "2024-03-19",
+  "name": "EpiWarnId",
+  "status": "active",
+  "kind": "identifier"
+}
