@@ -163,7 +163,8 @@
           "rules": "open",
           "description": "slicing organization identifier by system",
           "ordered": false
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:epiWarnId",
@@ -205,9 +206,9 @@
         "mustSupport": true
       },
       {
-        "id": "Organization.type:authorityOrganizationType",
+        "id": "Organization.type:emigaOrganizationType",
         "path": "Organization.type",
-        "sliceName": "authorityOrganizationType",
+        "sliceName": "emigaOrganizationType",
         "min": 0,
         "max": "1",
         "patternCodeableConcept": {
@@ -224,26 +225,26 @@
         }
       },
       {
-        "id": "Organization.type:authorityOrganizationType.coding",
+        "id": "Organization.type:emigaOrganizationType.coding",
         "path": "Organization.type.coding",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Organization.type:authorityOrganizationType.coding.system",
+        "id": "Organization.type:emigaOrganizationType.coding.system",
         "path": "Organization.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Organization.type:authorityOrganizationType.coding.code",
+        "id": "Organization.type:emigaOrganizationType.coding.code",
         "path": "Organization.type.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Organization.type:authorityOrganizationType.text",
+        "id": "Organization.type:emigaOrganizationType.text",
         "path": "Organization.type.text",
         "max": "0"
       },
@@ -265,6 +266,7 @@
       {
         "id": "Organization.alias",
         "path": "Organization.alias",
+        "comment": "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist.",
         "constraint": [
           {
             "key": "validString",
@@ -551,20 +553,6 @@
       {
         "id": "Organization.partOf",
         "path": "Organization.partOf",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
-            ],
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
-                "valueBoolean": true
-              }
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {

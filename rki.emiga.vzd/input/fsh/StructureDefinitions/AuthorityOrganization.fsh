@@ -25,7 +25,7 @@ Description: "TODO"
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 
-* identifier
+* identifier MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
@@ -47,12 +47,12 @@ Description: "TODO"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains authorityOrganizationType 0..1 MS
+* type contains emigaOrganizationType 0..1 MS
 /** type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
   */
-* type[authorityOrganizationType] from AuthorityType (required)
+* type[emigaOrganizationType] from AuthorityType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 
@@ -65,6 +65,7 @@ Description: "TODO"
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
 * alias 0.. MS
+* alias ^comment = "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist."
 * alias obeys validString
 
 // 'A contact detail for the organization' - 0..* - ContactPoint
@@ -127,7 +128,7 @@ Description: "TODO"
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.
 * partOf 0..1 MS
-* partOf only Reference(AuthorityOrganization) 
+* partOf only Reference(Organization) 
 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
