@@ -185,7 +185,8 @@
           "rules": "open",
           "description": "slicing organization identifier by system",
           "ordered": false
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:codeSiteId",
@@ -242,7 +243,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationType"
         }
       },
       {
@@ -287,6 +288,7 @@
       {
         "id": "Organization.alias",
         "path": "Organization.alias",
+        "comment": "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist.",
         "constraint": [
           {
             "key": "validString",
@@ -573,20 +575,6 @@
       {
         "id": "Organization.partOf",
         "path": "Organization.partOf",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
-            ],
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
-                "valueBoolean": true
-              }
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
