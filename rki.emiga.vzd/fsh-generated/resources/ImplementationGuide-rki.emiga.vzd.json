@@ -109,6 +109,13 @@
       },
       {
         "reference": {
+          "reference": "Organization/44588981"
+        },
+        "name": "44588981",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/responsibilityType"
         },
         "name": "Art der Zustaendigkeit OEGD",
@@ -329,6 +336,14 @@
         },
         "name": "Zuständigkeit der ÖGD-Stellen",
         "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PublicHealthOrganizationType"
+        },
+        "name": "ÖGD Stellen",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
         "exampleBoolean": false
       }
     ],

@@ -96,6 +96,14 @@
     "endLine": 35
   },
   {
+    "outputFile": "Organization-44588981.json",
+    "fshName": "44588981",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588981.fsh",
+    "startLine": 2,
+    "endLine": 29
+  },
+  {
     "outputFile": "Practitioner-44588966.json",
     "fshName": "44588966",
     "fshType": "Instance",
@@ -149,7 +157,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\AuthorityOrganization.fsh",
     "startLine": 1,
-    "endLine": 140
+    "endLine": 141
   },
   {
     "outputFile": "StructureDefinition-BaseEndpoint.json",
@@ -245,7 +253,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\PublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 137
+    "endLine": 138
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
@@ -294,6 +302,14 @@
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
     "startLine": 40,
     "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-PublicHealthOrganizationType.json",
+    "fshName": "PublicHealthOrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\PublicHealthOrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 23
   },
   {
     "outputFile": "ValueSet-responsibilityType.json",
