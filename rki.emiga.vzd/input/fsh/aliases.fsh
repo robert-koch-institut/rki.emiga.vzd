@@ -31,6 +31,7 @@ Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-t
 Alias: $IHEXDShealthcareFacilityTypeCode = http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode
 Alias: $Fachabteilungsschluessel-erweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
 Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/DemisParticipantId
+Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
