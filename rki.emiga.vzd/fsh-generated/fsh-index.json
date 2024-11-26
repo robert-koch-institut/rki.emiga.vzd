@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "CodeSystem-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "CodeSystem",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "CodeSystem-HealthcareServiceCategory.json",
     "fshName": "HealthcareServiceCategory",
     "fshType": "CodeSystem",
@@ -120,14 +112,6 @@
     "endLine": 9
   },
   {
-    "outputFile": "StructureDefinition-BaseEndpoint.json",
-    "fshName": "BaseEndpoint",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseEndpoint.fsh",
-    "startLine": 1,
-    "endLine": 64
-  },
-  {
     "outputFile": "StructureDefinition-BaseHealthcareService.json",
     "fshName": "BaseHealthcareService",
     "fshType": "Profile",
@@ -182,14 +166,6 @@
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
     "endLine": 34
-  },
-  {
-    "outputFile": "ValueSet-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 13,
-    "endLine": 20
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",

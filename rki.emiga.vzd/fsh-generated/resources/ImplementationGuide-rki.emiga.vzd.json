@@ -118,14 +118,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/BaseEndpoint"
-        },
-        "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Dienst-Endpunkt zu machen. Dies beinhaltet sowohl Adressierungsinformationen als auch Informationen zum Sicherheitskontext, z.B. Zertifikate",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/BaseHealthcareService"
         },
         "name": "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
@@ -186,22 +178,6 @@
         },
         "name": "Dienstleistungskategorien (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Kategorie einer Dienstleistung näher beschreiben.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp",
-        "description": "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
         "exampleBoolean": false
       },
       {
