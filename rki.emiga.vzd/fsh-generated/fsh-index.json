@@ -64,14 +64,6 @@
     "endLine": 12
   },
   {
-    "outputFile": "NamingSystem-TransmittingSiteId.json",
-    "fshName": "TransmittingSiteId",
-    "fshType": "Instance",
-    "fshFile": "NamingSystem\\TransmittingSiteId.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
     "outputFile": "Organization-44588964.json",
     "fshName": "44588964",
     "fshType": "Instance",
@@ -182,22 +174,6 @@
     "fshFile": "StructureDefinitions\\IdentifierCodeSiteId.fsh",
     "startLine": 1,
     "endLine": 12
-  },
-  {
-    "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
-    "fshName": "IdentifierTransmittingSiteId",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierTransmittingSiteId.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
-    "outputFile": "StructureDefinition-ParentSite.json",
-    "fshName": "ParentSite",
-    "fshType": "Extension",
-    "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
-    "startLine": 1,
-    "endLine": 16
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",

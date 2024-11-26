@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "name": "rkiemigavzd",
   "status": "draft",
   "publisher": "Robert Koch Institut",
@@ -214,14 +214,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/IdentifierTransmittingSiteId"
-        },
-        "name": "Identifier-Profil TransmittingSiteId",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/OrganizationType"
         },
         "name": "Organisationstyp (Werteliste)",
@@ -238,14 +230,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ParentSite"
-        },
-        "name": "Parent Site",
-        "description": "TO DO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/PractitionerRole"
         },
         "name": "Personenrolle",
@@ -258,14 +242,6 @@
         },
         "name": "Personenrolle (Werteliste)",
         "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/TransmittingSiteId"
-        },
-        "name": "TransmittingSite ID",
-        "description": "TransmittingSite ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
