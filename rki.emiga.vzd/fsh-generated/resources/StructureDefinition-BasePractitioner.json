@@ -198,6 +198,11 @@
         "mustSupport": true
       },
       {
+        "id": "Practitioner.name.prefix",
+        "path": "Practitioner.name.prefix",
+        "mustSupport": true
+      },
+      {
         "id": "Practitioner.telecom",
         "path": "Practitioner.telecom",
         "slicing": {
