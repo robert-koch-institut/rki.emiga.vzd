@@ -1,0 +1,391 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BaseLocation",
+  "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+  "version": "1.0.0",
+  "name": "BaseLocation",
+  "title": "BaseLocation (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-03-18",
+  "publisher": "Robert Koch-Institut",
+  "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location.meta",
+        "path": "Location.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.meta.security",
+        "path": "Location.meta.security",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing security attribute by coding system",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Location.meta.security:visibility",
+        "path": "Location.meta.security",
+        "sliceName": "visibility",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        }
+      },
+      {
+        "id": "Location.meta.security:visibility.system",
+        "path": "Location.meta.security.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.meta.security:visibility.code",
+        "path": "Location.meta.security.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.meta.security:responsibility",
+        "path": "Location.meta.security",
+        "sliceName": "responsibility",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility"
+        }
+      },
+      {
+        "id": "Location.meta.security:responsibility.system",
+        "path": "Location.meta.security.system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.meta.security:responsibility.code",
+        "path": "Location.meta.security.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.implicitRules",
+        "path": "Location.implicitRules",
+        "max": "0"
+      },
+      {
+        "id": "Location.text",
+        "path": "Location.text",
+        "max": "0"
+      },
+      {
+        "id": "Location.contained",
+        "path": "Location.contained",
+        "max": "0"
+      },
+      {
+        "id": "Location.extension",
+        "path": "Location.extension",
+        "max": "0"
+      },
+      {
+        "id": "Location.modifierExtension",
+        "path": "Location.modifierExtension",
+        "max": "0"
+      },
+      {
+        "id": "Location.identifier",
+        "path": "Location.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Location.status",
+        "path": "Location.status",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.operationalStatus",
+        "path": "Location.operationalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Location.name",
+        "path": "Location.name",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.alias",
+        "path": "Location.alias",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.description",
+        "path": "Location.description",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.mode",
+        "path": "Location.mode",
+        "min": 1,
+        "patternCode": "instance",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.type",
+        "path": "Location.type",
+        "max": "0"
+      },
+      {
+        "id": "Location.telecom",
+        "path": "Location.telecom",
+        "max": "0"
+      },
+      {
+        "id": "Location.address",
+        "path": "Location.address",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://fhir.de/StructureDefinition/address-de-basis"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.extension:Stadtteil",
+        "path": "Location.address.extension",
+        "sliceName": "Stadtteil",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.extension:Stadtteil.value[x]",
+        "path": "Location.address.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Strasse",
+        "path": "Location.address.line.extension",
+        "sliceName": "Strasse",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Strasse.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Hausnummer",
+        "path": "Location.address.line.extension",
+        "sliceName": "Hausnummer",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Hausnummer.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validHouseNumber",
+            "human": "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,50}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Adresszusatz",
+        "path": "Location.address.line.extension",
+        "sliceName": "Adresszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Adresszusatz.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Postfach",
+        "path": "Location.address.line.extension",
+        "sliceName": "Postfach",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line.extension:Postfach.value[x]",
+        "path": "Location.address.line.extension.value[x]",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.city",
+        "path": "Location.address.city",
+        "constraint": [
+          {
+            "key": "validString",
+            "human": "Zeichenlänge maximal 255 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,255}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.postalCode",
+        "path": "Location.address.postalCode",
+        "constraint": [
+          {
+            "key": "validPLZ",
+            "human": "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation",
+            "severity": "error",
+            "expression": "$this.matches('^.{1,10}$')"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.physicalType",
+        "path": "Location.physicalType",
+        "max": "0"
+      },
+      {
+        "id": "Location.position",
+        "path": "Location.position",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.position.longitude",
+        "path": "Location.position.longitude",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.position.latitude",
+        "path": "Location.position.latitude",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.managingOrganization",
+        "path": "Location.managingOrganization",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Location.partOf",
+        "path": "Location.partOf",
+        "max": "0"
+      },
+      {
+        "id": "Location.hoursOfOperation",
+        "path": "Location.hoursOfOperation",
+        "max": "0"
+      },
+      {
+        "id": "Location.availabilityExceptions",
+        "path": "Location.availabilityExceptions",
+        "max": "0"
+      },
+      {
+        "id": "Location.endpoint",
+        "path": "Location.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}

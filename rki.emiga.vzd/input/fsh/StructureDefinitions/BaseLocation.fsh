@@ -30,10 +30,12 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // 'Name of the location as used by humans' - 0..1 - string
 // Bezeichnung des Standortes, z.B. 'Niederlassung Berliner Str.'
 * name 0..1 MS
+* name obeys validString
 
 // 'A list of alternate names that the location is known as or was known as in the past' - 0..* - string
 // Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen
 * alias 0..* MS
+* alias obeys validString
 
 // 'Additional details about the location that could be displayed as further information to identify the location beyond its name' - 0..1 - string
 // Begründung: Es kann sinnvoll sein, Standorte durch zusätzliche Informationen zu identifizieren
@@ -59,6 +61,26 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Besuchbare Anschrift des Standortes
 * address 0..1 MS
 * address only $address-de-basis
+* address.extension[Stadtteil] ^mustSupport = true
+* address.extension[Stadtteil].valueString MS
+* address.extension[Stadtteil].valueString obeys validString
+* address.line.extension[Strasse] ^mustSupport = true
+* address.line.extension[Strasse].valueString MS
+* address.line.extension[Strasse].valueString obeys validString
+* address.line.extension[Hausnummer] ^mustSupport = true
+* address.line.extension[Hausnummer].valueString MS
+* address.line.extension[Hausnummer].valueString obeys validHouseNumber
+* address.line.extension[Adresszusatz] ^mustSupport = true
+* address.line.extension[Adresszusatz].valueString MS
+* address.line.extension[Adresszusatz].valueString obeys validString
+* address.line.extension[Postfach] ^mustSupport = true
+* address.line.extension[Postfach].valueString MS
+* address.line.extension[Postfach].valueString obeys validString
+* address.city MS
+* address.city obeys validString
+* address.postalCode MS 
+* address.postalCode obeys validPLZ
+
 
 // 'Physical form of the location' - 0..1 - code
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

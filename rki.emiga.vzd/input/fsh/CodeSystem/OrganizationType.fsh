@@ -3,8 +3,8 @@ Id: OrganizationType
 Title: "Organizationstyp"
 Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.0.0"
-* ^date = "2024-03-19"
+* ^version = "1.1.0"
+* ^date = "2024-11-11"
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
@@ -12,10 +12,10 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * #ga ^designation.language = #de-DE
 * #ga ^designation.use = $ConceptDesignationUse#abbreviation
 * #ga ^designation.value = "GA"
-* #ls "Landesstelle"
-* #ls ^designation.language = #de-DE
-* #ls ^designation.use = $ConceptDesignationUse#abbreviation
-* #ls ^designation.value = "LS"
+* #lb "Landesbehörde"
+* #lb ^designation.language = #de-DE
+* #lb ^designation.use = $ConceptDesignationUse#abbreviation
+* #lb ^designation.value = "LB"
 * #rki "Robert Koch-Institut"
 * #rki ^designation.language = #de-DE
 * #rki ^designation.use = $ConceptDesignationUse#abbreviation
@@ -30,6 +30,6 @@ Id: OrganizationType
 Title: "Organisationstyp (Werteliste)"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.0.0"
-* ^date = "2024-03-19"
+* ^version = "1.1.0"
+* ^date = "2024-11-11"
 * include codes from system OrganizationType

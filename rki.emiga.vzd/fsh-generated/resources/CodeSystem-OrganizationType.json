@@ -1,0 +1,87 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "OrganizationType",
+  "id": "OrganizationType",
+  "title": "Organizationstyp",
+  "description": "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+  "concept": [
+    {
+      "code": "ga",
+      "display": "Gesundheitsamt",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "GA"
+        }
+      ]
+    },
+    {
+      "code": "lb",
+      "display": "Landesbehörde",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "LB"
+        }
+      ]
+    },
+    {
+      "code": "rki",
+      "display": "Robert Koch-Institut",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "RKI"
+        }
+      ]
+    },
+    {
+      "code": "bw",
+      "display": "Sanitätsdienst der Bundeswehr",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "BW"
+        }
+      ]
+    }
+  ],
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.1.0",
+  "date": "2024-11-11",
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType",
+  "count": 4
+}

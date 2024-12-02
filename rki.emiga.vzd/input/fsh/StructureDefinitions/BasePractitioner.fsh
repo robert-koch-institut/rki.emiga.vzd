@@ -27,9 +27,36 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 // 'The name(s) associated with the practitioner' - 0..* - HumanName
 * name 1..1 MS
 * name only $humanname-de-basis
+* name.family 1.. MS  
+* name.family.extension[nachname] obeys validString
+* name.given 1.. MS  
+* name.given obeys validString
+
 
 // 'A contact detail for the practitioner (that apply to all roles)' - 0..* - ContactPoint
+// We slice the telecom element to apply the regex rules
+
 * telecom 0.. MS
+* telecom ^slicing.discriminator.type = #value
+* telecom ^slicing.discriminator.path = "system"
+* telecom ^slicing.rules = #closed
+* telecom ^definition = "Kontaktangaben der Organisation. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
+* telecom contains
+    Email 0..* and
+    Phone 0..* and
+    Fax 0..*
+* telecom[Email].system 1.. MS
+* telecom[Email].system = #email (exactly)
+* telecom[Email].value 1.. MS
+* telecom[Email].value obeys validEmailAddress
+* telecom[Phone].system 1.. MS
+* telecom[Phone].system = #phone (exactly)
+* telecom[Phone].value 1.. MS
+* telecom[Phone].value obeys validPhoneNumber
+* telecom[Fax].system 1.. MS
+* telecom[Fax].system = #fax (exactly)
+* telecom[Fax].value 1.. MS
+* telecom[Fax].value obeys validFaxNumber
 
 // 'Address(es) of the practitioner that are not role specific (typically home address)' - 0..* - Address
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
@@ -55,3 +82,6 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 // 'A language the practitioner is able to use in patient communication' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * communication 0..0
+
+
+

@@ -1,0 +1,36 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "44588969",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "internal"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1.12.99.99."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+    ]
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+          "code": "publicMedicalOfficer"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "practitioner": {
+    "reference": "Practitioner/44588968"
+  },
+  "organization": {
+    "reference": "Organization/44588964"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ResponsibilityHealthdepartments",
+  "url": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments",
+  "version": "1.0.0",
+  "name": "ResponsibilityHealthdepartments",
+  "title": "Zuständigkeit der ÖGD-Stellen",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Organization",
+      "type": "element"
+    },
+    {
+      "expression": "Location",
+      "type": "element"
+    },
+    {
+      "expression": "Practitioner",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Zuständigkeit der ÖGD-Stellen",
+        "definition": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:geographicRegion",
+        "path": "Extension.extension",
+        "sliceName": "geographicRegion",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Extension.extension:geographicRegion.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:geographicRegion.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "geographicRegion"
+      },
+      {
+        "id": "Extension.extension:geographicRegion.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://demis.rki.de/fhir/ValueSet/county",
+          "description": "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
+        }
+      },
+      {
+        "id": "Extension.extension:geographicRegion.value[x].system",
+        "path": "Extension.extension.value[x].system",
+        "min": 1,
+        "patternUri": "https://demis.rki.de/fhir/CodeSystem/geographicRegion",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:geographicRegion.value[x].code",
+        "path": "Extension.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:geographicRegion.value[x].display",
+        "path": "Extension.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:responsibilityType",
+        "path": "Extension.extension",
+        "sliceName": "responsibilityType",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Extension.extension:responsibilityType.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:responsibilityType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "responsibilityType"
+      },
+      {
+        "id": "Extension.extension:responsibilityType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+          "description": "Über das ValueSet kann die Art der Zuständigkeit einer ÖGD-Stelle ausgewählt werden."
+        }
+      },
+      {
+        "id": "Extension.extension:responsibilityType.value[x].system",
+        "path": "Extension.extension.value[x].system",
+        "min": 1,
+        "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:responsibilityType.value[x].code",
+        "path": "Extension.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:responsibilityType.value[x].display",
+        "path": "Extension.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

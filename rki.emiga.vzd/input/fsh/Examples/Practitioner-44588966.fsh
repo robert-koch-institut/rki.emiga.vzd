@@ -10,7 +10,7 @@ Usage: #example
 * name.prefix.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
 * name.prefix.extension[=].valueCode = #AC
 * name.text = "Dr. Gerd Sommer"
-* telecom[0].system = #email
-* telecom[=].value = "gerd.sommer@example.org"
-* telecom[+].system = #phone
-* telecom[=].value = "0123 456789-1280"
+* telecom[Email].system = #email
+* telecom[Email].value = "gerd.sommer@example.org"
+* telecom[Phone].system = #phone
+* telecom[Phone].value = "0123 456789-1280"

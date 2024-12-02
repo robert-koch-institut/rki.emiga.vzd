@@ -1,0 +1,250 @@
+[
+  {
+    "outputFile": "CodeSystem-EndpointConnectionType.json",
+    "fshName": "EndpointConnectionType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "CodeSystem-HealthcareServiceCategory.json",
+    "fshName": "HealthcareServiceCategory",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\HealthcareServiceCategory.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-OrganizationType.json",
+    "fshName": "OrganizationType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\OrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "CodeSystem-PractitionerRole.json",
+    "fshName": "PractitionerRole",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\PractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 38
+  },
+  {
+    "outputFile": "CodeSystem-responsibilityType.json",
+    "fshName": "ResponsibilityType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\ResponsibilityType.fsh",
+    "startLine": 3,
+    "endLine": 24
+  },
+  {
+    "outputFile": "HealthcareService-44588972.json",
+    "fshName": "44588972",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HealthcareService-44588971.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Location-44588965.json",
+    "fshName": "44588965",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Location-44588965.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "NamingSystem-CodeSiteId.json",
+    "fshName": "CodeSiteId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\CodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "NamingSystem-TransmittingSiteId.json",
+    "fshName": "TransmittingSiteId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\TransmittingSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Organization-44588964.json",
+    "fshName": "44588964",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588964.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "Practitioner-44588966.json",
+    "fshName": "44588966",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Practitioner-44588966.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Practitioner-44588968.json",
+    "fshName": "44588968",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Practitioner-44588968.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "Practitioner-44588970.json",
+    "fshName": "44588970",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Practitioner-44588970.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "PractitionerRole-44588967.json",
+    "fshName": "44588967",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRole-44588967.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "PractitionerRole-44588969.json",
+    "fshName": "44588969",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRole-44588969.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "PractitionerRole-44588971.json",
+    "fshName": "44588971",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRole-44588971.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-BaseEndpoint.json",
+    "fshName": "BaseEndpoint",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\BaseEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 64
+  },
+  {
+    "outputFile": "StructureDefinition-BaseHealthcareService.json",
+    "fshName": "BaseHealthcareService",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\BaseHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 122
+  },
+  {
+    "outputFile": "StructureDefinition-BaseLocation.json",
+    "fshName": "BaseLocation",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\BaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 119
+  },
+  {
+    "outputFile": "StructureDefinition-BaseOrganization.json",
+    "fshName": "BaseOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\BaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 130
+  },
+  {
+    "outputFile": "StructureDefinition-BasePractitioner.json",
+    "fshName": "BasePractitioner",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\BasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 84
+  },
+  {
+    "outputFile": "StructureDefinition-BasePractitionerRole.json",
+    "fshName": "BasePractitionerRole",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\BasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 86
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
+    "fshName": "IdentifierCodeSiteId",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierCodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
+    "fshName": "IdentifierTransmittingSiteId",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierTransmittingSiteId.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-ParentSite.json",
+    "fshName": "ParentSite",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
+    "fshName": "ResponsibilityHealthdepartments",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
+    "startLine": 2,
+    "endLine": 34
+  },
+  {
+    "outputFile": "ValueSet-EndpointConnectionType.json",
+    "fshName": "EndpointConnectionType",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
+    "startLine": 13,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceCategory.json",
+    "fshName": "HealthcareServiceCategory",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\HealthcareServiceCategory.fsh",
+    "startLine": 15,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ValueSet-OrganizationType.json",
+    "fshName": "OrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\OrganizationType.fsh",
+    "startLine": 28,
+    "endLine": 35
+  },
+  {
+    "outputFile": "ValueSet-PractitionerRole.json",
+    "fshName": "PractitionerRole",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\PractitionerRole.fsh",
+    "startLine": 40,
+    "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-responsibilityType.json",
+    "fshName": "ResponsibilityType",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\ResponsibilityType.fsh",
+    "startLine": 32,
+    "endLine": 50
+  }
+]

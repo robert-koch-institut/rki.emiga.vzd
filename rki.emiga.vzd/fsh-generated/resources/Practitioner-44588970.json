@@ -1,0 +1,52 @@
+{
+  "resourceType": "Practitioner",
+  "id": "44588970",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "internal"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1.12.99.99."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "Wilhelm"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "family": "Hahn",
+      "text": "Dr. Wilhelm Hahn"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "wilhelm.hahn@example.org"
+    },
+    {
+      "system": "phone",
+      "value": "0123 456789-1281"
+    }
+  ],
+  "active": true
+}
