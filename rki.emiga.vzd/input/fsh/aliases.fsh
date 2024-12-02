@@ -19,8 +19,20 @@ Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/Hea
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
+Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
 Alias: $ResponsibilityHealthdepartments = https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments
+Alias: $sct = http://snomed.info/sct
+Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $identifier-bsnr = http://fhir.de/StructureDefinition/identifier-bsnr
+Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-telematik-id
+Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
+Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
+Alias: $IHEXDShealthcareFacilityTypeCode = http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode
+Alias: $Fachabteilungsschluessel-erweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
+Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/DemisParticipantId
+Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
+
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel

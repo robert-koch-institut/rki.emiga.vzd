@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 27
   },
   {
     "outputFile": "CodeSystem-PractitionerRole.json",
@@ -64,6 +64,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "NamingSystem-EpiWarnId.json",
+    "fshName": "EpiWarnId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\EpiWarnId.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
     "outputFile": "NamingSystem-TransmittingSiteId.json",
     "fshName": "TransmittingSiteId",
     "fshType": "Instance",
@@ -76,8 +84,24 @@
     "fshName": "44588964",
     "fshType": "Instance",
     "fshFile": "Examples\\Organization-44588964.fsh",
-    "startLine": 1,
-    "endLine": 34
+    "startLine": 2,
+    "endLine": 35
+  },
+  {
+    "outputFile": "Organization-44588980.json",
+    "fshName": "44588980",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588980.fsh",
+    "startLine": 2,
+    "endLine": 35
+  },
+  {
+    "outputFile": "Organization-44588981.json",
+    "fshName": "44588981",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588981.fsh",
+    "startLine": 2,
+    "endLine": 29
   },
   {
     "outputFile": "Practitioner-44588966.json",
@@ -128,6 +152,14 @@
     "endLine": 9
   },
   {
+    "outputFile": "StructureDefinition-AuthorityOrganization.json",
+    "fshName": "AuthorityOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\AuthorityOrganization.fsh",
+    "startLine": 1,
+    "endLine": 141
+  },
+  {
     "outputFile": "StructureDefinition-BaseEndpoint.json",
     "fshName": "BaseEndpoint",
     "fshType": "Profile",
@@ -157,7 +189,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BaseOrganization.fsh",
     "startLine": 1,
-    "endLine": 130
+    "endLine": 121
   },
   {
     "outputFile": "StructureDefinition-BasePractitioner.json",
@@ -165,7 +197,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BasePractitioner.fsh",
     "startLine": 1,
-    "endLine": 84
+    "endLine": 85
   },
   {
     "outputFile": "StructureDefinition-BasePractitionerRole.json",
@@ -176,12 +208,28 @@
     "endLine": 86
   },
   {
+    "outputFile": "StructureDefinition-HealthCareOrganization.json",
+    "fshName": "HealthCareOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\HealthcareOrganization.fsh",
+    "startLine": 1,
+    "endLine": 158
+  },
+  {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
     "fshName": "IdentifierCodeSiteId",
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\IdentifierCodeSiteId.fsh",
     "startLine": 1,
     "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierEpiWarnId.json",
+    "fshName": "IdentifierEpiWarnId",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierEpiWarnId.fsh",
+    "startLine": 1,
+    "endLine": 16
   },
   {
     "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
@@ -200,12 +248,28 @@
     "endLine": 16
   },
   {
+    "outputFile": "StructureDefinition-PublicHealthOrganization.json",
+    "fshName": "PublicHealthOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\PublicHealthOrganization.fsh",
+    "startLine": 1,
+    "endLine": 138
+  },
+  {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
     "fshName": "ResponsibilityHealthdepartments",
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
     "endLine": 34
+  },
+  {
+    "outputFile": "ValueSet-AuthorityType.json",
+    "fshName": "AuthorityType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\AuthorityType.fsh",
+    "startLine": 1,
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-EndpointConnectionType.json",
@@ -228,8 +292,8 @@
     "fshName": "OrganizationType",
     "fshType": "ValueSet",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
-    "startLine": 28,
-    "endLine": 35
+    "startLine": 30,
+    "endLine": 37
   },
   {
     "outputFile": "ValueSet-PractitionerRole.json",
@@ -238,6 +302,14 @@
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
     "startLine": 40,
     "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-PublicHealthOrganizationType.json",
+    "fshName": "PublicHealthOrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\PublicHealthOrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 23
   },
   {
     "outputFile": "ValueSet-responsibilityType.json",

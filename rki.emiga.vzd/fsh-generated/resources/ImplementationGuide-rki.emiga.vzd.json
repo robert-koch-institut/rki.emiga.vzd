@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -102,6 +102,20 @@
       },
       {
         "reference": {
+          "reference": "Organization/44588980"
+        },
+        "name": "44588980",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/44588981"
+        },
+        "name": "44588981",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/responsibilityType"
         },
         "name": "Art der Zustaendigkeit OEGD",
@@ -114,6 +128,14 @@
         },
         "name": "Art der Zuständigkeit OEGD (Werteliste)",
         "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AuthorityOrganization"
+        },
+        "name": "Authority Organization",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
@@ -166,6 +188,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/AuthorityType"
+        },
+        "name": "Behördenarten",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
@@ -206,10 +236,34 @@
       },
       {
         "reference": {
+          "reference": "NamingSystem/EpiWarnId"
+        },
+        "name": "EpiWarn ID",
+        "description": "epiWarnId ID to be used in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/HealthCareOrganization"
+        },
+        "name": "Gesundheits-Einrichtung",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/IdentifierCodeSiteId"
         },
         "name": "Identifier-Profil CodeSiteId",
         "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IdentifierEpiWarnId"
+        },
+        "name": "Identifier-Profil epiWarnId",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
@@ -262,6 +316,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/PublicHealthOrganization"
+        },
+        "name": "Public Health Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "NamingSystem/TransmittingSiteId"
         },
         "name": "TransmittingSite ID",
@@ -274,6 +336,14 @@
         },
         "name": "Zuständigkeit der ÖGD-Stellen",
         "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PublicHealthOrganizationType"
+        },
+        "name": "ÖGD Stellen",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
         "exampleBoolean": false
       }
     ],

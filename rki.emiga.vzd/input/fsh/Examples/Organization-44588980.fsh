@@ -1,6 +1,6 @@
-//Example for Version 1.0.0 BaseOrganization (alt)
-Instance: 44588964
-InstanceOf: BaseOrganization
+// Example for the new Version 1.1.0
+Instance: 44588980
+InstanceOf: PublicHealthOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.

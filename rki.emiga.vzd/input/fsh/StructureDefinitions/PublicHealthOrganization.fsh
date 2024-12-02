@@ -1,29 +1,32 @@
-Profile: BaseOrganization
+Profile: PublicHealthOrganization
 Parent: Organization
-Id: BaseOrganization
-Title: "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
-Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
-* insert MetadataProfile
-* ^version = "1.1.0"
+Id: PublicHealthOrganization
+Title: "Public Health Organization"
+Description: "TODO"
+// Temporarily Outcomment to flag draft for presentation in Simplifier
+//* insert MetadataProfile
+* ^version = "1.0.0"
 * ^date = "2024-11-12"
 
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
 
+* insert ProfileMetaProfileTags
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um die Art derZuständigkeit abzubilden
-// Version 1.1.0 die Extension wird in Organization Public Health abgebildet
-//* extension 1..
-//* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
-//* extension[responsibilityHealthdepartments] ^isModifier = false
-//* modifierExtension ..0
+* extension 1.. MS
+* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
+* extension[responsibilityHealthdepartments] ^isModifier = false
+* modifierExtension ..0
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
-* identifier
+
+* identifier MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
@@ -38,6 +41,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 
 // 'Kind of organization' - 0..* - CodeableConcept
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
+
 * type 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -45,9 +49,10 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS
-* type[emigaOrganizationType] from OrganizationType (required)
+* type[emigaOrganizationType] from PublicHealthOrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
+ 
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
@@ -57,11 +62,13 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
 * alias 0.. MS
+* alias ^comment = "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist."
 * alias obeys validString
 
 // 'A contact detail for the organization' - 0..* - ContactPoint
 // Diskussion: Wollen wir verschiedene Telekommunikationswege über Slicing abbilden?
 // Entscheidung: Wir bilden die verschiedene Telekommunikationswege über Slicing ab, um den regex regeln zu implementieren
+
 * telecom 0.. MS
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
@@ -92,8 +99,8 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'An address for the organization' - 0..* - Address
 // Diskussion: Wie viele Adressen benötigen wir, wenn wir hier eh nur die Postadresse festlegen? 
 // Wir starten strikt mit maximal einer Adresse. Später können wir hier auch über Slicing mehrere Adressen abbilden, falls erforderlich
-
-* address 0..1 MS
+// Update: In V 1.1.0 erlauben wir mehree Addressen um "HauptAdresse etc. abzubilden"
+* address 0..* MS
 * address only $address-de-basis
 * address.extension[Stadtteil] ^mustSupport = true
 * address.extension[Stadtteil].valueString MS
@@ -118,21 +125,22 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.
 * partOf 0..1 MS
-* partOf only Reference(BaseOrganization) 
+* partOf only Reference(Organization) 
 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen
-//* contact 0..0
+* contact 0..0
 
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
-// -Update v 1.1.0: Endpoint wird geöffnet um weitere UC abzubilden (epiWarn Behörden).Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. 
-// -Update v 1.1.0: Profilierung in Spezialisierte Profile. Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
-//* endpoint 0..0
+// Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
+// Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
+* endpoint 0..0
 
 // Invariants to validate the address and telecom values
 
 //    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
+/*
 Invariant: validEmailAddress
 Description: "Die E-Mail-Adresse muss valide sein."
 * severity = #error
@@ -178,3 +186,4 @@ Invariant: validPLZ
 Description: "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen"
 * severity = #error
 * expression = "$this.matches('^.{1,10}$')"
+*/
