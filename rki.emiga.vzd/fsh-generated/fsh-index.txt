@@ -7,7 +7,7 @@ CodeSystem-responsibilityType.json                        ResponsibilityType    
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
 Location-44588965.json                                    44588965                         Instance    Examples\Location-44588965.fsh                                     1 - 19
 NamingSystem-CodeSiteId.json                              CodeSiteId                       Instance    NamingSystem\CodeSiteId.fsh                                        1 - 12
-NamingSystem-EpiWarnId.json                               EpiWarnId                        Instance    NamingSystem\EpiWarnId.fsh                                         1 - 13
+NamingSystem-IfsgKoordVwVId.json                          IfsgKoordVwVId                   Instance    NamingSystem\IfsgKoordVwVId.fsh                                    1 - 13
 NamingSystem-TransmittingSiteId.json                      TransmittingSiteId               Instance    NamingSystem\TransmittingSiteId.fsh                                1 - 12
 Organization-44588964.json                                44588964                         Instance    Examples\Organization-44588964.fsh                                 2 - 35
 Organization-44588980.json                                44588980                         Instance    Examples\Organization-44588980.fsh                                 2 - 35
@@ -27,7 +27,7 @@ StructureDefinition-BasePractitioner.json                 BasePractitioner      
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
 StructureDefinition-HealthCareOrganization.json           HealthCareOrganization           Profile     StructureDefinitions\HealthcareOrganization.fsh                    1 - 158
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
-StructureDefinition-IdentifierEpiWarnId.json              IdentifierEpiWarnId              Profile     StructureDefinitions\IdentifierEpiWarnId.fsh                       1 - 16
+StructureDefinition-IdentifierIfsgKoordVwVId.json         IdentifierIfsgKoordVwVId         Profile     StructureDefinitions\IdentifierIfsgKoordVwVId.fsh                  1 - 16
 StructureDefinition-IdentifierTransmittingSiteId.json     IdentifierTransmittingSiteId     Profile     StructureDefinitions\IdentifierTransmittingSiteId.fsh              1 - 16
 StructureDefinition-ParentSite.json                       ParentSite                       Extension   StructureDefinitions\ExtensionParentSite.fsh                       1 - 16
 StructureDefinition-PublicHealthOrganization.json         PublicHealthOrganization         Profile     StructureDefinitions\PublicHealthOrganization.fsh                  1 - 138

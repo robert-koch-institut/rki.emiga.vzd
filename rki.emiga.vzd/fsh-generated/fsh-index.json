@@ -64,10 +64,10 @@
     "endLine": 12
   },
   {
-    "outputFile": "NamingSystem-EpiWarnId.json",
-    "fshName": "EpiWarnId",
+    "outputFile": "NamingSystem-IfsgKoordVwVId.json",
+    "fshName": "IfsgKoordVwVId",
     "fshType": "Instance",
-    "fshFile": "NamingSystem\\EpiWarnId.fsh",
+    "fshFile": "NamingSystem\\IfsgKoordVwVId.fsh",
     "startLine": 1,
     "endLine": 13
   },
@@ -224,10 +224,10 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-IdentifierEpiWarnId.json",
-    "fshName": "IdentifierEpiWarnId",
+    "outputFile": "StructureDefinition-IdentifierIfsgKoordVwVId.json",
+    "fshName": "IdentifierIfsgKoordVwVId",
     "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierEpiWarnId.fsh",
+    "fshFile": "StructureDefinitions\\IdentifierIfsgKoordVwVId.fsh",
     "startLine": 1,
     "endLine": 16
   },
