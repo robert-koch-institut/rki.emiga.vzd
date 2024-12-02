@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "CodeSystem-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "CodeSystem",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "CodeSystem-HealthcareServiceCategory.json",
     "fshName": "HealthcareServiceCategory",
     "fshType": "CodeSystem",
@@ -60,14 +52,6 @@
     "fshName": "CodeSiteId",
     "fshType": "Instance",
     "fshFile": "NamingSystem\\CodeSiteId.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
-    "outputFile": "NamingSystem-TransmittingSiteId.json",
-    "fshName": "TransmittingSiteId",
-    "fshType": "Instance",
-    "fshFile": "NamingSystem\\TransmittingSiteId.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -128,14 +112,6 @@
     "endLine": 9
   },
   {
-    "outputFile": "StructureDefinition-BaseEndpoint.json",
-    "fshName": "BaseEndpoint",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseEndpoint.fsh",
-    "startLine": 1,
-    "endLine": 64
-  },
-  {
     "outputFile": "StructureDefinition-BaseHealthcareService.json",
     "fshName": "BaseHealthcareService",
     "fshType": "Profile",
@@ -184,36 +160,12 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
-    "fshName": "IdentifierTransmittingSiteId",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierTransmittingSiteId.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
-    "outputFile": "StructureDefinition-ParentSite.json",
-    "fshName": "ParentSite",
-    "fshType": "Extension",
-    "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
     "fshName": "ResponsibilityHealthdepartments",
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
     "endLine": 34
-  },
-  {
-    "outputFile": "ValueSet-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 13,
-    "endLine": 20
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",

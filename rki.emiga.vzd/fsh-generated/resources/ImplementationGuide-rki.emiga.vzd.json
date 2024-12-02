@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "name": "rkiemigavzd",
   "status": "draft",
   "publisher": "Robert Koch Institut",
@@ -33,6 +33,12 @@
       "version": "1.0.2",
       "uri": "https://demis.rki.de/fhir/common",
       "id": "rki_demis_common"
+    },
+    {
+      "packageId": "rki.emiga.common",
+      "version": "1.0.0",
+      "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
+      "id": "rki_emiga_common"
     }
   ],
   "definition": {
@@ -118,14 +124,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/BaseEndpoint"
-        },
-        "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Dienst-Endpunkt zu machen. Dies beinhaltet sowohl Adressierungsinformationen als auch Informationen zum Sicherheitskontext, z.B. Zertifikate",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/BaseHealthcareService"
         },
         "name": "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
@@ -190,34 +188,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp",
-        "description": "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/IdentifierCodeSiteId"
         },
         "name": "Identifier-Profil CodeSiteId",
         "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IdentifierTransmittingSiteId"
-        },
-        "name": "Identifier-Profil TransmittingSiteId",
-        "description": "TODO",
         "exampleBoolean": false
       },
       {
@@ -238,14 +212,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ParentSite"
-        },
-        "name": "Parent Site",
-        "description": "TO DO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/PractitionerRole"
         },
         "name": "Personenrolle",
@@ -258,14 +224,6 @@
         },
         "name": "Personenrolle (Werteliste)",
         "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/TransmittingSiteId"
-        },
-        "name": "TransmittingSite ID",
-        "description": "TransmittingSite ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
