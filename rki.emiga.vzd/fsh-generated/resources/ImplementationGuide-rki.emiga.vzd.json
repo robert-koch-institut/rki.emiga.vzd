@@ -236,14 +236,6 @@
       },
       {
         "reference": {
-          "reference": "NamingSystem/EpiWarnId"
-        },
-        "name": "EpiWarn ID",
-        "description": "epiWarnId ID to be used in Identifiers",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/HealthCareOrganization"
         },
         "name": "Gesundheits-Einrichtung",
@@ -260,9 +252,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/IdentifierEpiWarnId"
+          "reference": "StructureDefinition/IdentifierIfsgKoordVwVId"
         },
-        "name": "Identifier-Profil epiWarnId",
+        "name": "Identifier-Profil IfSGKoordVwV-Id",
         "description": "TODO",
         "exampleBoolean": false
       },
@@ -272,6 +264,14 @@
         },
         "name": "Identifier-Profil TransmittingSiteId",
         "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/IfsgKoordVwVId"
+        },
+        "name": "IfSGKoordVwV ID",
+        "description": "IfSGKoordVwV-ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
