@@ -1,7 +1,7 @@
-Profile: IdentifierEpiWarnId
+Profile: IdentifierIfsgKoordVwVId
 Parent: Identifier
-Id: IdentifierEpiWarnId
-Title: "Identifier-Profil epiWarnId"
+Id: IdentifierIfsgKoordVwVId
+Title: "Identifier-Profil IfSGKoordVwV-Id"
 Description: "TODO"
 // Temporarily Outcomment to flag draft for presentation in Simplifier
 //* insert MetadataProfile
@@ -12,5 +12,5 @@ Description: "TODO"
 
 * type = $v2-0203#XX
 * system 1.. MS
-* system = $epiWarnId
+* system = $IfsgKoordVwVId
 * value 1.. MS
