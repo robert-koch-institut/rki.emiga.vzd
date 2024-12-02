@@ -5,7 +5,7 @@ Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
 * identifier.type = $v2-0203#PRN
-* identifier.system = $epiWarnId
+* identifier.system = $IfsgKoordVwVId
 * identifier.value = "012345"
 * active = true
 

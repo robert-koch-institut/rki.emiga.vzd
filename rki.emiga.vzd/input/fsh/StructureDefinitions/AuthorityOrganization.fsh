@@ -32,7 +32,7 @@ Description: "TODO"
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
 * identifier contains epiWarnId 0..1 MS
-* identifier[epiWarnId] only IdentifierEpiWarnId
+* identifier[epiWarnId] only IdentifierIfsgKoordVwVId
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
