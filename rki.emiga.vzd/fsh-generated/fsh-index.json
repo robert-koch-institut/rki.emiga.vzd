@@ -197,7 +197,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\BasePractitioner.fsh",
     "startLine": 1,
-    "endLine": 84
+    "endLine": 85
   },
   {
     "outputFile": "StructureDefinition-BasePractitionerRole.json",
