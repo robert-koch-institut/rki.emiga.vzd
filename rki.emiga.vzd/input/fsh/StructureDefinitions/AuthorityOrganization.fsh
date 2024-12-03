@@ -1,7 +1,7 @@
 Profile: AuthorityOrganization
 Parent: Organization
 Id: AuthorityOrganization
-Title: "Authority Organization"
+Title: "Behörde Organization"
 Description: "TODO"
 
 * ^version = "1.0.0"
@@ -31,8 +31,8 @@ Description: "TODO"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
-* identifier contains epiWarnId 0..1 MS
-* identifier[epiWarnId] only IdentifierIfsgKoordVwVId
+* identifier contains IfsgKoordVwVId 0..1 MS
+* identifier[IfsgKoordVwVId] only IdentifierIfsgKoordVwVId
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
