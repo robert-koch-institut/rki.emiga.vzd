@@ -4,7 +4,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization",
   "version": "1.0.0",
   "name": "PublicHealthOrganization",
-  "title": "Public Health Organization",
+  "title": "ÖGD Organization",
   "status": "draft",
   "date": "2024-11-12",
   "description": "TODO",

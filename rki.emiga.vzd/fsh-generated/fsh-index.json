@@ -152,6 +152,14 @@
     "endLine": 9
   },
   {
+    "outputFile": "StructureDefinition-AuthorityDepartmentOrganization.json",
+    "fshName": "AuthorityDepartmentOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\DepartmentOrganization.fsh",
+    "startLine": 1,
+    "endLine": 145
+  },
+  {
     "outputFile": "StructureDefinition-AuthorityOrganization.json",
     "fshName": "AuthorityOrganization",
     "fshType": "Profile",

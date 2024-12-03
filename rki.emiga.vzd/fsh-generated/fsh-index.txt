@@ -18,6 +18,7 @@ Practitioner-44588970.json                                44588970              
 PractitionerRole-44588967.json                            44588967                         Instance    Examples\PractitionerRole-44588967.fsh                             1 - 9
 PractitionerRole-44588969.json                            44588969                         Instance    Examples\PractitionerRole-44588969.fsh                             1 - 10
 PractitionerRole-44588971.json                            44588971                         Instance    Examples\PractitionerRole-44588971.fsh                             1 - 9
+StructureDefinition-AuthorityDepartmentOrganization.json  AuthorityDepartmentOrganization  Profile     StructureDefinitions\DepartmentOrganization.fsh                    1 - 145
 StructureDefinition-AuthorityOrganization.json            AuthorityOrganization            Profile     StructureDefinitions\AuthorityOrganization.fsh                     1 - 141
 StructureDefinition-BaseEndpoint.json                     BaseEndpoint                     Profile     StructureDefinitions\BaseEndpoint.fsh                              1 - 64
 StructureDefinition-BaseHealthcareService.json            BaseHealthcareService            Profile     StructureDefinitions\BaseHealthcareService.fsh                     1 - 122

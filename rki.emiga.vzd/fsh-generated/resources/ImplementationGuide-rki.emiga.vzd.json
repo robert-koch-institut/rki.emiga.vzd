@@ -132,14 +132,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/AuthorityOrganization"
-        },
-        "name": "Authority Organization",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/BaseEndpoint"
         },
         "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
@@ -188,6 +180,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/AuthorityOrganization"
+        },
+        "name": "Behörde Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/AuthorityType"
         },
         "name": "Behördenarten",
@@ -232,6 +232,14 @@
         },
         "name": "Endpunktverbindungstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AuthorityDepartmentOrganization"
+        },
+        "name": "Fachabteilung",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
@@ -316,14 +324,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/PublicHealthOrganization"
-        },
-        "name": "Public Health Organization",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "NamingSystem/TransmittingSiteId"
         },
         "name": "TransmittingSite ID",
@@ -336,6 +336,14 @@
         },
         "name": "Zuständigkeit der ÖGD-Stellen",
         "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PublicHealthOrganization"
+        },
+        "name": "ÖGD Organization",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
