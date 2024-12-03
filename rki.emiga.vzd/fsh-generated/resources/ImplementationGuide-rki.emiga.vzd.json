@@ -81,6 +81,13 @@
       },
       {
         "reference": {
+          "reference": "HealthcareService/4458897"
+        },
+        "name": "4458897",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
           "reference": "Practitioner/44588970"
         },
         "name": "44588970",
@@ -248,6 +255,14 @@
         },
         "name": "Gesundheits-Einrichtung",
         "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHealthcareService"
+        },
+        "name": "HealthcareService (Ressource des EMIGA-Verzeichnisdienstes)",
+        "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
         "exampleBoolean": false
       },
       {

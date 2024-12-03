@@ -40,6 +40,14 @@
     "endLine": 24
   },
   {
+    "outputFile": "HealthcareService-4458897.json",
+    "fshName": "4458897",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HealthcareService-44588973.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
     "outputFile": "HealthcareService-44588972.json",
     "fshName": "44588972",
     "fshType": "Instance",
@@ -214,6 +222,14 @@
     "fshFile": "StructureDefinitions\\BasePractitionerRole.fsh",
     "startLine": 1,
     "endLine": 86
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHealthcareService.json",
+    "fshName": "EmigaHealthcareService",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\HealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 126
   },
   {
     "outputFile": "StructureDefinition-HealthCareOrganization.json",

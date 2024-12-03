@@ -4,6 +4,7 @@ CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCateg
 CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 27
 CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 38
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
+HealthcareService-4458897.json                            4458897                          Instance    Examples\HealthcareService-44588973.fsh                            1 - 24
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
 Location-44588965.json                                    44588965                         Instance    Examples\Location-44588965.fsh                                     1 - 19
 NamingSystem-CodeSiteId.json                              CodeSiteId                       Instance    NamingSystem\CodeSiteId.fsh                                        1 - 12
@@ -26,6 +27,7 @@ StructureDefinition-BaseLocation.json                     BaseLocation          
 StructureDefinition-BaseOrganization.json                 BaseOrganization                 Profile     StructureDefinitions\BaseOrganization.fsh                          1 - 121
 StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 85
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
+StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\HealthcareService.fsh                         1 - 126
 StructureDefinition-HealthCareOrganization.json           HealthCareOrganization           Profile     StructureDefinitions\HealthcareOrganization.fsh                    1 - 158
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
 StructureDefinition-IdentifierIfsgKoordVwVId.json         IdentifierIfsgKoordVwVId         Profile     StructureDefinitions\IdentifierIfsgKoordVwVId.fsh                  1 - 16
