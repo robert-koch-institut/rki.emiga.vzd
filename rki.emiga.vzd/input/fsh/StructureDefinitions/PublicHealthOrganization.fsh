@@ -1,7 +1,7 @@
 Profile: PublicHealthOrganization
 Parent: Organization
 Id: PublicHealthOrganization
-Title: "Public Health Organization"
+Title: "ÖGD Organization"
 Description: "TODO"
 // Temporarily Outcomment to flag draft for presentation in Simplifier
 //* insert MetadataProfile
