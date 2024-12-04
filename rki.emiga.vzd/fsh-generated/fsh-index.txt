@@ -27,7 +27,7 @@ StructureDefinition-BaseLocation.json                     BaseLocation          
 StructureDefinition-BaseOrganization.json                 BaseOrganization                 Profile     StructureDefinitions\BaseOrganization.fsh                          1 - 121
 StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 85
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
-StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\HealthcareService.fsh                         1 - 126
+StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 127
 StructureDefinition-HealthCareOrganization.json           HealthCareOrganization           Profile     StructureDefinitions\HealthcareOrganization.fsh                    1 - 158
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
 StructureDefinition-IdentifierIfsgKoordVwVId.json         IdentifierIfsgKoordVwVId         Profile     StructureDefinitions\IdentifierIfsgKoordVwVId.fsh                  1 - 16

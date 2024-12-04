@@ -227,9 +227,9 @@
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",
     "fshName": "EmigaHealthcareService",
     "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\HealthcareService.fsh",
+    "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 126
+    "endLine": 127
   },
   {
     "outputFile": "StructureDefinition-HealthCareOrganization.json",

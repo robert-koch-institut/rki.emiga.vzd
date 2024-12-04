@@ -3,7 +3,8 @@ Parent: HealthcareService
 Id: EmigaHealthcareService
 Title: "HealthcareService (Ressource des EMIGA-Verzeichnisdienstes)"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
-* insert MetadataProfile
+//Temporäre outcomment um draft zu kennzeichnen.
+//* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
 
