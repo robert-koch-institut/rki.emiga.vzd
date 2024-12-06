@@ -40,14 +40,6 @@
     "endLine": 24
   },
   {
-    "outputFile": "HealthcareService-4458897.json",
-    "fshName": "4458897",
-    "fshType": "Instance",
-    "fshFile": "Examples\\HealthcareService-44588973.fsh",
-    "startLine": 1,
-    "endLine": 24
-  },
-  {
     "outputFile": "HealthcareService-44588972.json",
     "fshName": "44588972",
     "fshType": "Instance",
@@ -56,10 +48,34 @@
     "endLine": 15
   },
   {
+    "outputFile": "HealthcareService-44588973.json",
+    "fshName": "44588973",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HealthcareService-44588973.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "HealthcareService-EpiWarnHealthcareService.json",
+    "fshName": "EpiWarnHealthcareService",
+    "fshType": "Instance",
+    "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
     "outputFile": "Location-44588965.json",
     "fshName": "44588965",
     "fshType": "Instance",
     "fshFile": "Examples\\Location-44588965.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "Location-EpiWarnLocation.json",
+    "fshName": "EpiWarnLocation",
+    "fshType": "Instance",
+    "fshFile": "Examples\\LocationEpiWarn.fsh",
     "startLine": 1,
     "endLine": 19
   },
@@ -112,6 +128,14 @@
     "endLine": 29
   },
   {
+    "outputFile": "Organization-EpiWarnOrganization.json",
+    "fshName": "EpiWarnOrganization",
+    "fshType": "Instance",
+    "fshFile": "Examples\\OrganizationEpiWarn.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
     "outputFile": "Practitioner-44588966.json",
     "fshName": "44588966",
     "fshType": "Instance",
@@ -132,6 +156,14 @@
     "fshName": "44588970",
     "fshType": "Instance",
     "fshFile": "Examples\\Practitioner-44588970.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Practitioner-EpiWarnPractitioner.json",
+    "fshName": "EpiWarnPractitioner",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerEpiWarn.fsh",
     "startLine": 1,
     "endLine": 16
   },
@@ -158,6 +190,14 @@
     "fshFile": "Examples\\PractitionerRole-44588971.fsh",
     "startLine": 1,
     "endLine": 9
+  },
+  {
+    "outputFile": "PractitionerRole-EpiWarnPractitionerRole.json",
+    "fshName": "EpiWarnPractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRoleEpiWarn.fsh",
+    "startLine": 1,
+    "endLine": 11
   },
   {
     "outputFile": "StructureDefinition-AuthorityDepartmentOrganization.json",
@@ -229,7 +269,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 127
+    "endLine": 129
   },
   {
     "outputFile": "StructureDefinition-HealthCareOrganization.json",

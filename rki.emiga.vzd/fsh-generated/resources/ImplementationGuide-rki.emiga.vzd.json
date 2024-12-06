@@ -81,13 +81,6 @@
       },
       {
         "reference": {
-          "reference": "HealthcareService/4458897"
-        },
-        "name": "4458897",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
-      },
-      {
-        "reference": {
           "reference": "Practitioner/44588970"
         },
         "name": "44588970",
@@ -106,6 +99,14 @@
         },
         "name": "44588972",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/44588973"
+        },
+        "name": "44588973",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
       },
       {
         "reference": {
@@ -240,6 +241,42 @@
         "name": "Endpunktverbindungstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/EpiWarnHealthcareService"
+        },
+        "name": "EpiWarnHealthcareService",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "Location/EpiWarnLocation"
+        },
+        "name": "EpiWarnLocation",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EpiWarnOrganization"
+        },
+        "name": "EpiWarnOrganization",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/EpiWarnPractitioner"
+        },
+        "name": "EpiWarnPractitioner",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/EpiWarnPractitionerRole"
+        },
+        "name": "EpiWarnPractitionerRole",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
       },
       {
         "reference": {
