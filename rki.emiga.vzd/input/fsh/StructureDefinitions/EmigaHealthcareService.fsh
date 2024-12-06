@@ -46,7 +46,9 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // !!! Perspektivisch wäre das sicherlich sinnvoll, um die Dienstleistungen besser zu kategorisieren. !!!
 // !!! Dann benötigen wir aber auch eine entsprechende Werteliste. !!!
-* type 0..0 
+// !!! Update: wird ermöglicht um "telephone counseling" etc. abzubilden
+* type MS
+* type from $serviceType (extensible)
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
 // Würde einer Fachrichtung (z.B. 'Kardiologie') entsprechen.
