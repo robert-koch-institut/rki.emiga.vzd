@@ -45,3 +45,4 @@ Alias: $humanname-de-basis = http://fhir.de/StructureDefinition/humanname-de-bas
 
 // HL7 FHIR Basisspezifikation
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
