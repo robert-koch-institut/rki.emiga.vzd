@@ -1,6 +1,6 @@
-Profile: PublicHealthOrganization
+Profile: EmigaPublicHealthOrganization
 Parent: Organization
-Id: PublicHealthOrganization
+Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organization"
 Description: "TODO"
 // Temporarily Outcomment to flag draft for presentation in Simplifier
@@ -13,7 +13,7 @@ Description: "TODO"
 * insert ProfileSecurityTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
