@@ -113,7 +113,7 @@
           "reference": "Organization/44588980"
         },
         "name": "44588980",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/PublicHealthOrganization"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
       },
       {
         "reference": {
@@ -262,7 +262,7 @@
           "reference": "Organization/EpiWarnOrganization"
         },
         "name": "EpiWarnOrganization",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
@@ -283,14 +283,6 @@
           "reference": "StructureDefinition/AuthorityDepartmentOrganization"
         },
         "name": "Fachabteilung",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/HealthCareOrganization"
-        },
-        "name": "Gesundheits-Einrichtung",
         "description": "TODO",
         "exampleBoolean": false
       },
@@ -344,6 +336,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaOrganization"
+        },
+        "name": "Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/OrganizationType"
         },
         "name": "Organizationstyp",
@@ -392,7 +392,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/PublicHealthOrganization"
+          "reference": "StructureDefinition/EmigaPublicHealthOrganization"
         },
         "name": "ÖGD Organization",
         "description": "TODO",

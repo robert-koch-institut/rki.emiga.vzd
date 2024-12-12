@@ -272,12 +272,20 @@
     "endLine": 129
   },
   {
-    "outputFile": "StructureDefinition-HealthCareOrganization.json",
-    "fshName": "HealthCareOrganization",
+    "outputFile": "StructureDefinition-EmigaOrganization.json",
+    "fshName": "EmigaOrganization",
     "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\HealthcareOrganization.fsh",
+    "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 158
+    "endLine": 159
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPublicHealthOrganization.json",
+    "fshName": "EmigaPublicHealthOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
+    "startLine": 1,
+    "endLine": 138
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
@@ -310,14 +318,6 @@
     "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
     "startLine": 1,
     "endLine": 16
-  },
-  {
-    "outputFile": "StructureDefinition-PublicHealthOrganization.json",
-    "fshName": "PublicHealthOrganization",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\PublicHealthOrganization.fsh",
-    "startLine": 1,
-    "endLine": 138
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
