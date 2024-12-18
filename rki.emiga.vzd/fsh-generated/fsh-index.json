@@ -16,6 +16,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "CodeSystem-HealthcareServiceDutyHours.json",
+    "fshName": "HealthcareServiceDutyHours",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\HealthcareServiceDutyHours.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
     "outputFile": "CodeSystem-OrganizationType.json",
     "fshName": "OrganizationType",
     "fshType": "CodeSystem",
@@ -29,7 +37,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 73
   },
   {
     "outputFile": "CodeSystem-Relevance.json",
@@ -256,6 +264,14 @@
     "endLine": 86
   },
   {
+    "outputFile": "StructureDefinition-DutyHoursAvailability.json",
+    "fshName": "DutyHoursAvailability",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionDutyHoursOpeningTimes.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
     "outputFile": "StructureDefinition-EmigaDepartmentOrganization.json",
     "fshName": "EmigaDepartmentOrganization",
     "fshType": "Profile",
@@ -269,7 +285,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 129
+    "endLine": 146
   },
   {
     "outputFile": "StructureDefinition-EmigaOrganization.json",
@@ -352,6 +368,14 @@
     "endLine": 22
   },
   {
+    "outputFile": "ValueSet-HealthcareServiceDutyHours.json",
+    "fshName": "HealthcareServiceDutyHours",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\HealthcareServiceDutyHours.fsh",
+    "startLine": 18,
+    "endLine": 25
+  },
+  {
     "outputFile": "ValueSet-OrganizationType.json",
     "fshName": "OrganizationType",
     "fshType": "ValueSet",
@@ -364,8 +388,8 @@
     "fshName": "PractitionerRole",
     "fshType": "ValueSet",
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
-    "startLine": 40,
-    "endLine": 47
+    "startLine": 76,
+    "endLine": 83
   },
   {
     "outputFile": "ValueSet-PublicHealthOrganizationType.json",

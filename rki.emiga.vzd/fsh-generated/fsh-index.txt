@@ -1,8 +1,9 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
 CodeSystem-EndpointConnectionType.json                    EndpointConnectionType           CodeSystem  CodeSystem\EndpointConnectionType.fsh                              1 - 11
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
+CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 107
-CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 38
+CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 73
 CodeSystem-Relevance.json                                 Relevance                        CodeSystem  CodeSystem\Relevance.fsh                                           1 - 12
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
@@ -31,8 +32,9 @@ StructureDefinition-BaseHealthcareService.json            BaseHealthcareService 
 StructureDefinition-BaseLocation.json                     BaseLocation                     Profile     StructureDefinitions\BaseLocation.fsh                              1 - 119
 StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 85
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
+StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 14
 StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 173
-StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 129
+StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 146
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 159
 StructureDefinition-EmigaPublicHealthOrganization.json    EmigaPublicHealthOrganization    Profile     StructureDefinitions\EmigaPublicHealthOrganization.fsh             1 - 138
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
@@ -43,8 +45,9 @@ StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthde
 ValueSet-AuthorityType.json                               AuthorityType                    ValueSet    ValueSet\AuthorityType.fsh                                         1 - 8
 ValueSet-EndpointConnectionType.json                      EndpointConnectionType           ValueSet    CodeSystem\EndpointConnectionType.fsh                              13 - 20
 ValueSet-HealthcareServiceCategory.json                   HealthcareServiceCategory        ValueSet    CodeSystem\HealthcareServiceCategory.fsh                           15 - 22
+ValueSet-HealthcareServiceDutyHours.json                  HealthcareServiceDutyHours       ValueSet    CodeSystem\HealthcareServiceDutyHours.fsh                          18 - 25
 ValueSet-OrganizationType.json                            OrganizationType                 ValueSet    CodeSystem\OrganizationType.fsh                                    110 - 118
-ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    40 - 47
+ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    76 - 83
 ValueSet-PublicHealthOrganizationType.json                PublicHealthOrganizationType     ValueSet    ValueSet\PublicHealthOrganizationType.fsh                          1 - 23
 ValueSet-Relevance.json                                   Relevance                        ValueSet    CodeSystem\Relevance.fsh                                           14 - 22
 ValueSet-responsibilityType.json                          ResponsibilityType               ValueSet    CodeSystem\ResponsibilityType.fsh                                  32 - 50

@@ -226,6 +226,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/HealthcareServiceDutyHours"
+        },
+        "name": "Dienstzeiten",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceDutyHours"
+        },
+        "name": "Dienstzeiten (Werteliste)",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/EndpointConnectionType"
         },
         "name": "Endpunktverbindungstyp",
@@ -275,6 +291,14 @@
         },
         "name": "EpiWarnPractitionerRole",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DutyHoursAvailability"
+        },
+        "name": "Erreichbarkeit Dienstzeiten",
+        "description": "Extension zur Abbildung der Erreichbarkeit der Organizationen anhand der Dienstzeiten.",
+        "exampleBoolean": false
       },
       {
         "reference": {
