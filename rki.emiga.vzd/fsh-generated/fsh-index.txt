@@ -1,7 +1,7 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
 CodeSystem-EndpointConnectionType.json                    EndpointConnectionType           CodeSystem  CodeSystem\EndpointConnectionType.fsh                              1 - 11
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
-CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 27
+CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 107
 CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 38
 CodeSystem-Relevance.json                                 Relevance                        CodeSystem  CodeSystem\Relevance.fsh                                           1 - 12
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
@@ -43,7 +43,7 @@ StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthde
 ValueSet-AuthorityType.json                               AuthorityType                    ValueSet    ValueSet\AuthorityType.fsh                                         1 - 8
 ValueSet-EndpointConnectionType.json                      EndpointConnectionType           ValueSet    CodeSystem\EndpointConnectionType.fsh                              13 - 20
 ValueSet-HealthcareServiceCategory.json                   HealthcareServiceCategory        ValueSet    CodeSystem\HealthcareServiceCategory.fsh                           15 - 22
-ValueSet-OrganizationType.json                            OrganizationType                 ValueSet    CodeSystem\OrganizationType.fsh                                    30 - 38
+ValueSet-OrganizationType.json                            OrganizationType                 ValueSet    CodeSystem\OrganizationType.fsh                                    110 - 118
 ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    40 - 47
 ValueSet-PublicHealthOrganizationType.json                PublicHealthOrganizationType     ValueSet    ValueSet\PublicHealthOrganizationType.fsh                          1 - 23
 ValueSet-Relevance.json                                   Relevance                        ValueSet    CodeSystem\Relevance.fsh                                           14 - 22

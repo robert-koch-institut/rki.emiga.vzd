@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 107
   },
   {
     "outputFile": "CodeSystem-PractitionerRole.json",
@@ -356,8 +356,8 @@
     "fshName": "OrganizationType",
     "fshType": "ValueSet",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
-    "startLine": 30,
-    "endLine": 38
+    "startLine": 110,
+    "endLine": 118
   },
   {
     "outputFile": "ValueSet-PractitionerRole.json",
