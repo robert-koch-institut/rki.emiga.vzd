@@ -10,6 +10,7 @@ Description: "TODO"
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
+* insert ProfileMetaTags
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
@@ -35,9 +36,8 @@ Description: "TODO"
 * identifier contains
     IKNR 0..1 MS and
     BSNR 0..1 MS and
-    organisationseinheitenID 0..1 MS 
-    //and telematikID 0..1 MS
-    //and demisParticipantId 0..1 MS
+    organisationseinheitenID 0..1 MS and 
+    demisParticipantId 0..1 MS
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
@@ -48,17 +48,17 @@ Description: "TODO"
 * identifier[organisationseinheitenID] ^patternIdentifier.type = $sct#43741000
 * identifier[organisationseinheitenID].system 1.. MS
 * identifier[organisationseinheitenID].value 1.. MS
-/*
-* identifier[telematikID] only $identifier-telematik-id
-* identifier[telematikID] ^comment = "Motivation: Entsprechend der Profil-Festlegung der KBV Organisation 1.5.0. (https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization) und der VZD-FHIR-Directory Organisation-Ressource in der Version 0.10.2 (https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory), muss ein System ein Telematik-ID verarbeiten können, sofern diese Information verfügbar ist."
-* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+
 * identifier[demisParticipantId] only Identifier
 * identifier[demisParticipantId] ^short = "DEMIS-Teilnehmer-Nummer"
 * identifier[demisParticipantId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/DemisParticipantId"
 * identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
 * identifier[demisParticipantId].system 1.. MS
-
 * identifier[demisParticipantId].value 1.. MS
+/*
+* identifier[telematikID] only $identifier-telematik-id
+* identifier[telematikID] ^comment = "TODO Rephrase the comment -> Motivation: Entsprechend der Profil-Festlegung der KBV Organisation 1.5.0. (https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization) und der VZD-FHIR-Directory Organisation-Ressource in der Version 0.10.2 (https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory), muss ein System ein Telematik-ID verarbeiten können, sofern diese Information verfügbar ist."
+* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 */
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
@@ -86,7 +86,7 @@ Description: "TODO"
 
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
-* alias 0.. MS
+* alias MS
 * alias obeys validString
 
 // 'A contact detail for the organization' - 0..* - ContactPoint
@@ -166,7 +166,7 @@ Description: "TODO"
 // Invariants to validate the address and telecom values
 
 //    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
-/*
+
 Invariant: validEmailAddress
 Description: "Die E-Mail-Adresse muss valide sein."
 * severity = #error
@@ -212,4 +212,3 @@ Invariant: validPLZ
 Description: "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen"
 * severity = #error
 * expression = "$this.matches('^.{1,10}$')"
-*/
