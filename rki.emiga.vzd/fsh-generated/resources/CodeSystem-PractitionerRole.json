@@ -10,7 +10,7 @@
   "concept": [
     {
       "code": "director",
-      "display": "Leiter/-in",
+      "display": "Amtsleiter/Amtsleiterin",
       "designation": [
         {
           "language": "de-DE",
@@ -18,7 +18,7 @@
             "code": "abbreviation",
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
-          "value": "L"
+          "value": "AL"
         },
         {
           "language": "de-DE",
@@ -26,7 +26,7 @@
             "code": "long",
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
-          "value": "Leiter/Leiterin"
+          "value": "Amtsleiter/Amtsleiterin"
         }
       ]
     },
@@ -54,7 +54,7 @@
     },
     {
       "code": "caseOfficer",
-      "display": "Sachbearbeiter/in",
+      "display": "Sachbearbeiter/Sachbearbeiterin",
       "designation": [
         {
           "language": "de-DE",
@@ -76,7 +76,7 @@
     },
     {
       "code": "personOfContact",
-      "display": "Ansprechpartner/-in",
+      "display": "Ansprechperson",
       "designation": [
         {
           "language": "de-DE",
@@ -92,7 +92,117 @@
             "code": "long",
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
-          "value": "Ansprechpartner/Ansprechpartnerin"
+          "value": "Ansprechperson"
+        }
+      ]
+    },
+    {
+      "code": "headOfUnit",
+      "display": "Referatsleiter/Referatsleiterin",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "RL"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Referatsleiter/Referatsleiterin"
+        }
+      ]
+    },
+    {
+      "code": "airPortMedServ",
+      "display": "Hafen- und/oder Flughafen-ärztlicher Dienst",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "HFAED"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Hafen- und/oder Flughafen-ärztlicher Dienst"
+        }
+      ]
+    },
+    {
+      "code": "expertWitness",
+      "display": "Sachverständiger/Sachverständige",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "SV"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Sachverständiger/Sachverständige"
+        }
+      ]
+    },
+    {
+      "code": "infectionProtectionOfficer",
+      "display": "Infektionsschutzreferent/Infektionsschutzreferentin",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "ISR"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Infektionsschutzreferent/Infektionsschutzreferentin"
+        }
+      ]
+    },
+    {
+      "code": "hygieneInspector",
+      "display": "Hygienekontrolleur/Hygienekontrolleurin",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "HK"
+        },
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "long",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "Hygienekontrolleur/Hygienekontrolleurin"
         }
       ]
     }
@@ -111,9 +221,9 @@
       ]
     }
   ],
-  "version": "1.0.0",
-  "date": "2024-03-28",
+  "version": "2.0.0",
+  "date": "2024-12-18",
   "caseSensitive": true,
   "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
-  "count": 4
+  "count": 9
 }
