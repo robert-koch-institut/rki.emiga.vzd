@@ -53,7 +53,7 @@ RuleSet: ProfileMetaTags
 * meta.tag ^slicing.discriminator.type = #pattern
 * meta.tag ^slicing.discriminator.path = "system"
 * meta.tag ^slicing.rules = #open
-* meta.tag contains relevance 1..1 MS
+* meta.tag contains relevance 0..* MS
 * meta.tag[relevance] from $RelevanceVS (required)
 * meta.tag[relevance].system 1..
 * meta.tag[relevance].system = $RelevanceCS
