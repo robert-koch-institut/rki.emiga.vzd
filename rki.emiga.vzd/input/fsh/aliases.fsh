@@ -7,6 +7,8 @@ Alias: $ResourceVisibilityType = https://emiga.rki.de/fhir/common/CodeSystem/Res
 Alias: $ResourceVisibilityTypeVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType
 Alias: $ResourceResponsibility = https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility
 Alias: $ResourceResponsibilityVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility
+Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
+Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/Relevance
 
 // rki.emiga.vzd
 Alias: $county = https://demis.rki.de/fhir/ValueSet/county
@@ -46,3 +48,6 @@ Alias: $humanname-de-basis = http://fhir.de/StructureDefinition/humanname-de-bas
 // HL7 FHIR Basisspezifikation
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
+
+//DEMIS
+Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
