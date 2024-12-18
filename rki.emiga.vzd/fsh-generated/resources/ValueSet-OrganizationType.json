@@ -26,6 +26,9 @@
     "include": [
       {
         "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType"
       }
     ]
   }

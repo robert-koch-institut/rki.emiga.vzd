@@ -35,3 +35,4 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation a
 * ^version = "1.1.0"
 * ^date = "2024-11-11"
 * include codes from system OrganizationType
+* include codes from system $DemisOrgType
