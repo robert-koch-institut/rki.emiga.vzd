@@ -28,44 +28,44 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * #bw ^designation.use = $ConceptDesignationUse#abbreviation
 * #bw ^designation.value = "BW"
 
-* #authority "Behörden"
+* #authority "Behörde"
 * #authority ^designation[0].language = #en-US
 * #authority ^designation[=].use.system = "http://snomed.info/sct"
 * #authority ^designation[=].use = $sct#900000000000003001
 * #authority ^designation[=].value = "Authority"
 
 * #authority #sepFedAut "Oberste Bundesbehörde"
-* #authority #sepFedAut ^designation[0].language = #en-US
+* #authority #sepFedAut ^designation[+].language = #en-US
 * #authority #sepFedAut ^designation[=].use.system = "http://snomed.info/sct"
 * #authority #sepFedAut ^designation[=].use = $sct#900000000000003001
 * #authority #sepFedAut ^designation[=].value = "Supreme federal authority"
 
 * #authority #hiFedAut "Bundesoberbehörde"
-* #authority #hiFedAut ^designation[0].language = #en-US
+* #authority #hiFedAut ^designation[+].language = #en-US
 * #authority #hiFedAut ^designation[=].use.system = "http://snomed.info/sct"
 * #authority #hiFedAut ^designation[=].use = $sct#900000000000003001
 * #authority #hiFedAut ^designation[=].value = "Higher federal authority"
 
 * #authority #fedInsti "Bundesanstalt"
-* #authority #fedInsti ^designation[0].language = #en-US
+* #authority #fedInsti ^designation[+].language = #en-US
 * #authority #fedInsti ^designation[=].use.system = "http://snomed.info/sct"
 * #authority #fedInsti ^designation[=].use = $sct#900000000000003001
 * #authority #fedInsti ^designation[=].value = "Federal Institute"
 
-* #authority #supFedStaAut "Supreme Federal State authority"
-* #authority #supFedStaAut ^designation[0].language = #en-US
+* #authority #supFedStaAut "Oberste Landesbehörde"
+* #authority #supFedStaAut ^designation[+].language = #en-US
 * #authority #supFedStaAut ^designation[=].use.system = "http://snomed.info/sct"
 * #authority #supFedStaAut ^designation[=].use = $sct#900000000000003001
 * #authority #supFedStaAut ^designation[=].value = "Supreme Federal State authority"
 
 * #authority #otherAutFed "Sonstige Behörde auf Bundesebene"
-* #authority #otherAutFed ^designation[0].language = #en-US
+* #authority #otherAutFed ^designation[+].language = #en-US
 * #authority #otherAutFed ^designation[=].use.system = "http://snomed.info/sct"
 * #authority #otherAutFed ^designation[=].use = $sct#900000000000003001
 * #authority #otherAutFed ^designation[=].value = "Other authority federal" 
 
 * #authority #otherAutState "Sonstige Behörde auf Landesebene"
-* #authority #otherAutState ^designation[0].language = #en-US
+* #authority #otherAutState ^designation[+].language = #en-US
 * #authority #otherAutState ^designation[=].use.system = "http://snomed.info/sct"
 * #authority #otherAutState ^designation[=].use = $sct#900000000000003001
 * #authority #otherAutState ^designation[=].value = "Other authority state" 
@@ -95,13 +95,13 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * #transport ^designation[=].value = "Transport" 
 
 * #transport #airport "Flughafen"
-* #transport #airport ^designation[0].language = #en-US  
+* #transport #airport ^designation[+].language = #en-US  
 * #transport #airport ^designation[=].use.system = "http://snomed.info/sct" 
 * #transport #airport ^designation[=].use = $sct#900000000000003001 
 * #transport #airport ^designation[=].value = "Airport" 
 
 * #transport #harbor "Hafen"
-* #transport #harbor ^designation[0].language = #en-US  
+* #transport #harbor ^designation[+].language = #en-US  
 * #transport #harbor ^designation[=].use.system = "http://snomed.info/sct" 
 * #transport #harbor ^designation[=].use = $sct#900000000000003001 
 * #transport #harbor ^designation[=].value = "Harbor" 
