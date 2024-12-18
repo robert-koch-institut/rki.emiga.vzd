@@ -26,7 +26,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'Organization that provides this service' - 0..1 - Reference(Organization)
 // Dienstleistungen müssen immer auf eine anbietende Organisation zurückzuführen sein. Entsprechend machen wir das Element verpflichtend.
 * providedBy 1..1 MS
-* providedBy only Reference(BaseOrganization)
+* providedBy only Reference(Organization)
 
 // 'Broad category of service being performed or delivered' - 0..* - CodeableConcept
 // Sollten wir für eine bessere Kategorisierung der Dienstleistungen nutzen. Entsprechend machen wir das Element verpflichtend und binden es an eine Werteliste.

@@ -97,7 +97,7 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Über dieses Element kann der Standort einer Organisation zugeordnet werden
 // Begründung: Ein Standort gehört zwar üblicherweise zu einer Organisation. Perspektivisch kann sich der Anwendungsfall jedoch ändern, sodass ein Standort nicht direkt einer Organisation zugeordnet werden kann.
 * managingOrganization 0..1 MS
-* managingOrganization only Reference(BaseOrganization)
+* managingOrganization only Reference(Organization)
 
 // 'Another location this one is physically a partof' - 0..1 - Reference(Location)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

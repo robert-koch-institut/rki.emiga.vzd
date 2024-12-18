@@ -38,7 +38,7 @@ Description: "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Di
 
 // 'Organization that manages this endpoint (may not be the organization that exposes the endpoint)' - 0..1 - Reference(Organization)
 * managingOrganization 1..1 MS
-* managingOrganization only Reference(BaseOrganization) 
+* managingOrganization only Reference(Organization) 
 
 // 'Contact details for source (e.g. troubleshooting)' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
