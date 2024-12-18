@@ -11,6 +11,10 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
+* insert ProfileMetaProfileTags
+* insert ProfileMetaTags
+
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -34,7 +38,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * category 1.. MS 
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #closed
+  * ^slicing.rules = #open
   * ^slicing.description = "slicing healthcare service category by system"
   * ^slicing.ordered = false
 * category contains emigaHealthcareServiceCategory 0..1 MS
@@ -53,7 +57,15 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
 // Würde einer Fachrichtung (z.B. 'Kardiologie') entsprechen.
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* specialty 0..0
+// Update: Wird benuzt um den epiWarn Zuständigkeiten abzubilden.
+* specialty MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+  * ^slicing.description = "slicing healthcare service specialty by system"
+  * ^slicing.ordered = false
+* specialty contains emigaHealthcareServiceSpecialty 0..1 MS
+
 
 // 'Location(s) where service may be provided' - 0..* - Reference(Location)
 // Referenzierung der Standorte, an denen die Dienstleistung angeboten wird.
@@ -111,19 +123,29 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'Times the Service Site is available' - 0..* - BackboneElement
 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
-* availableTime 0..1 MS
-* availableTime.daysOfWeek 1.. MS
+* availableTime MS
+* availableTime obeys ORGV-Service-Opening-Time
+* availableTime.extension contains $dutyHoursEx named dutyHoursAvailability 0..1 MS
+
+* availableTime.daysOfWeek MS
 * availableTime.allDay MS
 * availableTime.availableStartTime MS
 * availableTime.availableEndTime MS
 // 'Not available during this time due to provided reason' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* notAvailable 0..0
+// Update: Wird benötigt
+* notAvailable MS
 
 // 'Description of availability exceptions' - 0..1 - string
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* availabilityExceptions 0..0
+// Update: Wird benötigt
+* availabilityExceptions MS
 
 // 'Technical endpoints providing access to services operated for the healthcare service' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * endpoint 0..0
+
+Invariant: ORGV-Service-Opening-Time
+Description: "Only allows either specialOpeningTimes extension or daysOfWeek, availableStartTime, availableEndTime"
+* severity = #error
+* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"
