@@ -1,6 +1,6 @@
-Profile: AuthorityDepartmentOrganization
+Profile: EmigaDepartmentOrganization
 Parent: Organization
-Id: AuthorityDepartmentOrganization
+Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "TODO"
 
@@ -12,7 +12,8 @@ Description: "TODO"
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityDepartmentOrganization"
+* insert ProfileMetaTags
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -26,13 +27,31 @@ Description: "TODO"
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 
 * identifier MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "system"
-  * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization identifier by system"
-  * ^slicing.ordered = false
-* identifier contains IfsgKoordVwVId 1..1 MS
-* identifier[IfsgKoordVwVId] only IdentifierIfsgKoordVwVId
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open
+* identifier contains
+    IKNR 0..1 MS and
+    BSNR 0..1 MS and
+    Abteilungsidentifikator 0..1 MS and
+    demisParticipantId 0..1 MS
+* identifier[IKNR] only $identifier-iknr
+* identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
+* identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
+* identifier[BSNR] only $identifier-bsnr
+* identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
+* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+* identifier[Abteilungsidentifikator] ^comment = "Motivation: Für IDs, die Krankhausintern spezifischen Fachabteilungen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung."
+* identifier[Abteilungsidentifikator] ^patternIdentifier.type = $sct#225746001
+* identifier[Abteilungsidentifikator].system 1.. MS
+* identifier[Abteilungsidentifikator].value 1.. MS
+
+* identifier[demisParticipantId] only Identifier
+* identifier[demisParticipantId] ^short = "DEMIS-Teilnehmer-Nummer"
+* identifier[demisParticipantId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/DemisParticipantId"
+* identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
+* identifier[demisParticipantId].system 1.. MS
+* identifier[demisParticipantId].value 1.. MS
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
@@ -47,17 +66,26 @@ Description: "TODO"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains emigaOrganizationType 0..1 MS and organizationType 1..1 MS
+* type contains emigaOrganizationType 0..1 MS and 
+  organizationType 1..1 MS and
+  ErweiterterFachabteilungsschluessel 0..1 MS and
+  Fachbereich 0..1 MS
 /** type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
   */
-* type[emigaOrganizationType] from AuthorityType (required)
+* type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[organizationType] = $hl7-organization-type#dept
   //* ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
+* type[ErweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
+  * insert StrictCodableConcept
+* type[ErweiterterFachabteilungsschluessel] ^comment = "Motivation: Das ValueSet muss bindend sein, damit Systemübergreifend der Fachabteilungstyp einheitlich kodiert werden kann. \n  \n  Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."
+* type[Fachbereich] from $IHEXDSpracticeSettingCode (required)
+  * insert StrictCodableConcept
+
 
 
 
