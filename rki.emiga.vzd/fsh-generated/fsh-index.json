@@ -32,6 +32,14 @@
     "endLine": 38
   },
   {
+    "outputFile": "CodeSystem-Relevance.json",
+    "fshName": "Relevance",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\Relevance.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
     "outputFile": "CodeSystem-responsibilityType.json",
     "fshName": "ResponsibilityType",
     "fshType": "CodeSystem",
@@ -240,14 +248,6 @@
     "endLine": 119
   },
   {
-    "outputFile": "StructureDefinition-BaseOrganization.json",
-    "fshName": "BaseOrganization",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseOrganization.fsh",
-    "startLine": 1,
-    "endLine": 121
-  },
-  {
     "outputFile": "StructureDefinition-BasePractitioner.json",
     "fshName": "BasePractitioner",
     "fshType": "Profile",
@@ -357,7 +357,7 @@
     "fshType": "ValueSet",
     "fshFile": "CodeSystem\\OrganizationType.fsh",
     "startLine": 30,
-    "endLine": 37
+    "endLine": 38
   },
   {
     "outputFile": "ValueSet-PractitionerRole.json",
@@ -374,6 +374,14 @@
     "fshFile": "ValueSet\\PublicHealthOrganizationType.fsh",
     "startLine": 1,
     "endLine": 23
+  },
+  {
+    "outputFile": "ValueSet-Relevance.json",
+    "fshName": "Relevance",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\Relevance.fsh",
+    "startLine": 14,
+    "endLine": 22
   },
   {
     "outputFile": "ValueSet-responsibilityType.json",

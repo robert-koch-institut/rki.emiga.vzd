@@ -170,14 +170,6 @@
         "id": "PractitionerRole.organization",
         "path": "PractitionerRole.organization",
         "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {

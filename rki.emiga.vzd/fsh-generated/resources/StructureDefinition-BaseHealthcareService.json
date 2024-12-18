@@ -141,14 +141,6 @@
         "id": "HealthcareService.providedBy",
         "path": "HealthcareService.providedBy",
         "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {

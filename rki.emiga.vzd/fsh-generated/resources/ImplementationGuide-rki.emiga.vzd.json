@@ -33,6 +33,12 @@
       "version": "1.0.2",
       "uri": "https://demis.rki.de/fhir/common",
       "id": "rki_demis_common"
+    },
+    {
+      "packageId": "rki.emiga.common",
+      "version": "1.0.0",
+      "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
+      "id": "rki_emiga_common"
     }
   ],
   "definition": {
@@ -42,7 +48,7 @@
           "reference": "Organization/44588964"
         },
         "name": "44588964",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
       },
       {
         "reference": {
@@ -160,14 +166,6 @@
         },
         "name": "BaseLocation (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
         "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BaseOrganization"
-        },
-        "name": "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
         "exampleBoolean": false
       },
       {
@@ -372,6 +370,22 @@
         },
         "name": "Personenrolle (Werteliste)",
         "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Relevance"
+        },
+        "name": "Relevance",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Relevance"
+        },
+        "name": "Relevance (Werteliste)",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
