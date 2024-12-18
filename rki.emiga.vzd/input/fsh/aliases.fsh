@@ -11,6 +11,9 @@ Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
 Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/Relevance
 
 // rki.emiga.vzd
+Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
+Alias: $dutyHoursCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours
+Alias: $dutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours
 Alias: $county = https://demis.rki.de/fhir/ValueSet/county
 Alias: $responsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
 Alias: $BaseLocation = https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation
