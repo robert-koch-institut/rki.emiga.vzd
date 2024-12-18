@@ -278,7 +278,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/AuthorityDepartmentOrganization"
+          "reference": "StructureDefinition/EmigaDepartmentOrganization"
         },
         "name": "Fachabteilung",
         "description": "TODO",

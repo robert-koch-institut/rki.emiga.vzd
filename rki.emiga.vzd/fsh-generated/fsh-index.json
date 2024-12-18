@@ -208,14 +208,6 @@
     "endLine": 11
   },
   {
-    "outputFile": "StructureDefinition-AuthorityDepartmentOrganization.json",
-    "fshName": "AuthorityDepartmentOrganization",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\DepartmentOrganization.fsh",
-    "startLine": 1,
-    "endLine": 145
-  },
-  {
     "outputFile": "StructureDefinition-AuthorityOrganization.json",
     "fshName": "AuthorityOrganization",
     "fshType": "Profile",
@@ -262,6 +254,14 @@
     "fshFile": "StructureDefinitions\\BasePractitionerRole.fsh",
     "startLine": 1,
     "endLine": 86
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaDepartmentOrganization.json",
+    "fshName": "EmigaDepartmentOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
+    "startLine": 1,
+    "endLine": 173
   },
   {
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",

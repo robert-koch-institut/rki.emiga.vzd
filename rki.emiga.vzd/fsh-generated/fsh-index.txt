@@ -25,13 +25,13 @@ PractitionerRole-44588967.json                            44588967              
 PractitionerRole-44588969.json                            44588969                         Instance    Examples\PractitionerRole-44588969.fsh                             1 - 10
 PractitionerRole-44588971.json                            44588971                         Instance    Examples\PractitionerRole-44588971.fsh                             1 - 9
 PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRole          Instance    Examples\PractitionerRoleEpiWarn.fsh                               1 - 11
-StructureDefinition-AuthorityDepartmentOrganization.json  AuthorityDepartmentOrganization  Profile     StructureDefinitions\DepartmentOrganization.fsh                    1 - 145
 StructureDefinition-AuthorityOrganization.json            AuthorityOrganization            Profile     StructureDefinitions\AuthorityOrganization.fsh                     1 - 141
 StructureDefinition-BaseEndpoint.json                     BaseEndpoint                     Profile     StructureDefinitions\BaseEndpoint.fsh                              1 - 64
 StructureDefinition-BaseHealthcareService.json            BaseHealthcareService            Profile     StructureDefinitions\BaseHealthcareService.fsh                     1 - 122
 StructureDefinition-BaseLocation.json                     BaseLocation                     Profile     StructureDefinitions\BaseLocation.fsh                              1 - 119
 StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 85
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
+StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 173
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 129
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 159
 StructureDefinition-EmigaPublicHealthOrganization.json    EmigaPublicHealthOrganization    Profile     StructureDefinitions\EmigaPublicHealthOrganization.fsh             1 - 138

@@ -31,10 +31,12 @@ Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $IHEXDShealthcareFacilityTypeCode = http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode
-Alias: $Fachabteilungsschluessel-erweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
+Alias: $Fachabteilungsschluessel-erweitert = http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert
 Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/DemisParticipantId
 Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type
+Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
+
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
