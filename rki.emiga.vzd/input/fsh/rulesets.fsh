@@ -48,12 +48,24 @@ RuleSet: ProfileSecurityTags
     * system = $ResourceResponsibility
     * code 1..1 MS
 
-// 
+RuleSet: ProfileMetaTags
+* meta.tag MS
+* meta.tag ^slicing.discriminator.type = #pattern
+* meta.tag ^slicing.discriminator.path = "system"
+* meta.tag ^slicing.rules = #open
+* meta.tag contains relevance 1..1 MS
+* meta.tag[relevance] from $RelevanceVS (required)
+* meta.tag[relevance].system 1..
+* meta.tag[relevance].system = $RelevanceCS
+
+
 RuleSet: ProfileMetaProfileTags
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
 * meta.profile contains emigaprofile 0..*
+
+
 
 // Standardprofil für die strikte Ausgestaltung von CodableConcepts, die lediglich ein Coding-Element zulässt
 RuleSet: StrictCodableConcept
