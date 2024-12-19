@@ -77,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 29
   },
   {
     "outputFile": "Location-44588965.json",
@@ -294,6 +294,22 @@
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
     "endLine": 165
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPractitioner.json",
+    "fshName": "EmigaPractitioner",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPractitioner.fsh",
+    "startLine": 1,
+    "endLine": 88
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPractitionerRole.json",
+    "fshName": "EmigaPractitionerRole",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 89
   },
   {
     "outputFile": "StructureDefinition-EmigaPublicHealthOrganization.json",
