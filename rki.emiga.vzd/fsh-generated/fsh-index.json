@@ -293,7 +293,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 159
+    "endLine": 165
   },
   {
     "outputFile": "StructureDefinition-EmigaPublicHealthOrganization.json",
@@ -379,9 +379,9 @@
     "outputFile": "ValueSet-OrganizationType.json",
     "fshName": "OrganizationType",
     "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\OrganizationType.fsh",
-    "startLine": 110,
-    "endLine": 118
+    "fshFile": "ValueSet\\OrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 87
   },
   {
     "outputFile": "ValueSet-PractitionerRole.json",
