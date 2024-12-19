@@ -73,9 +73,15 @@ Description: "TODO"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains emigaOrganizationType 0..1 MS
+* type contains emigaOrganizationType 0..1 MS and
+    einrichtungsArt 0..1 MS and
+    erweiterterFachabteilungsschluessel 0..1 MS
 * type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
+  * insert StrictCodableConcept
+* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
+  * insert StrictCodableConcept
+* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
   * insert StrictCodableConcept
  
 
