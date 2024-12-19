@@ -25,10 +25,194 @@
   "compose": {
     "include": [
       {
-        "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType"
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType"
       },
       {
-        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType"
+        "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+        "concept": [
+          {
+            "code": "authority",
+            "display": "Behörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Authority"
+              }
+            ]
+          },
+          {
+            "code": "sepFedAut",
+            "display": "Oberste Bundesbehörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Supreme federal authority"
+              }
+            ]
+          },
+          {
+            "code": "hiFedAut",
+            "display": "Bundesoberbehörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Higher federal authority"
+              }
+            ]
+          },
+          {
+            "code": "fedInsti",
+            "display": "Bundesanstalt",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Federal Institute"
+              }
+            ]
+          },
+          {
+            "code": "supFedStaAut",
+            "display": "Oberste Landesbehörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Supreme Federal State authority"
+              }
+            ]
+          },
+          {
+            "code": "otherAutFed",
+            "display": "Sonstige Behörde auf Bundesebene",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Other authority federal"
+              }
+            ]
+          },
+          {
+            "code": "otherAutState",
+            "display": "Sonstige Behörde auf Landesebene",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Other authority state"
+              }
+            ]
+          },
+          {
+            "code": "intOrg",
+            "display": "Internationale Organisation",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "International Organization"
+              }
+            ]
+          },
+          {
+            "code": "resFacility",
+            "display": "Forschungseinrichtung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Research Facility"
+              }
+            ]
+          },
+          {
+            "code": "otherOrg",
+            "display": "sonstige Einrichtung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "other Organization"
+              }
+            ]
+          },
+          {
+            "code": "transport",
+            "display": "Transport",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Transport"
+              }
+            ]
+          },
+          {
+            "code": "airport",
+            "display": "Flughafen",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Airport"
+              }
+            ]
+          },
+          {
+            "code": "harbor",
+            "display": "Hafen",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Harbor"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
