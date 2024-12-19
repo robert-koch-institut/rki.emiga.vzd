@@ -9,7 +9,7 @@ Description: "TODO"
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/common/ValueSet/Relevance"
-* #IfsgKoordVwV "§ 2 IfSG-Koordinierungs-VwV"
+* #IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
 
 ValueSet: Relevance
 Id: Relevance
