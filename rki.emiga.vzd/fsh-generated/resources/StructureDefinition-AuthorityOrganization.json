@@ -238,9 +238,19 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.type:emigaOrganizationType.coding.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.type:emigaOrganizationType.coding.code",
         "path": "Organization.type.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.coding.display",
+        "path": "Organization.type.coding.display",
         "mustSupport": true
       },
       {
