@@ -146,6 +146,6 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * endpoint 0..0
 
 Invariant: ORGV-Service-Opening-Time
-Description: "Only allows either specialOpeningTimes extension or daysOfWeek, availableStartTime, availableEndTime"
+Description: "Only allows either DutyHours extension or daysOfWeek, availableStartTime, availableEndTime"
 * severity = #error
 * expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"
