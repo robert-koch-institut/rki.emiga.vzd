@@ -178,9 +178,19 @@
         "mustSupport": true
       },
       {
+        "id": "Endpoint.connectionType.version",
+        "path": "Endpoint.connectionType.version",
+        "mustSupport": true
+      },
+      {
         "id": "Endpoint.connectionType.code",
         "path": "Endpoint.connectionType.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Endpoint.connectionType.display",
+        "path": "Endpoint.connectionType.display",
         "mustSupport": true
       },
       {

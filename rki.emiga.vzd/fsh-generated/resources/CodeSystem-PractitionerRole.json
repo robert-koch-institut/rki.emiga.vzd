@@ -19,14 +19,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "AL"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Amtsleiter/Amtsleiterin"
         }
       ]
     },
@@ -41,14 +33,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "AA"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Amtsarzt/Amtsärztin"
         }
       ]
     },
@@ -63,14 +47,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "SB"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Sachbearbeiter/Sachbearbeiterin"
         }
       ]
     },
@@ -85,14 +61,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "AP"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Ansprechperson"
         }
       ]
     },
@@ -107,14 +75,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "RL"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Referatsleiter/Referatsleiterin"
         }
       ]
     },
@@ -129,14 +89,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "HFAED"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Hafen- und/oder Flughafen-ärztlicher Dienst"
         }
       ]
     },
@@ -151,14 +103,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "SV"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Sachverständiger/Sachverständige"
         }
       ]
     },
@@ -173,14 +117,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "ISR"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Infektionsschutzreferent/Infektionsschutzreferentin"
         }
       ]
     },
@@ -195,14 +131,6 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "HK"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Hygienekontrolleur/Hygienekontrolleurin"
         }
       ]
     }
