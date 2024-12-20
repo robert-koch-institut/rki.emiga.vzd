@@ -1,7 +1,7 @@
 Profile: EmigaPractitionerRole
 Parent: PractitionerRole
 Id: EmigaPractitionerRole
-Title: "BasePractitionerRole (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Title: "EmigaPractitionerRole"
 Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
 //* insert MetadataProfile
 * ^version = "1.0.0"
