@@ -71,12 +71,14 @@ RuleSet: ProfileMetaProfileTags
 RuleSet: StrictCodableConcept
 * coding 1..1 MS
   * system 1..1 MS
+  * version 0..1 MS
   * code 1..1 MS
-  * display 0..1
+  * display 0..1 MS
 * text 0..0
 
 // Standardprofil für die strikte Ausgestaltung von Codings (system + code sind verpflichtend)
 RuleSet: StrictCoding
 * system 1..1 MS
+* version 0..1 MS
 * code 1..1 MS
-* display 0..1
+* display 0..1 MS
