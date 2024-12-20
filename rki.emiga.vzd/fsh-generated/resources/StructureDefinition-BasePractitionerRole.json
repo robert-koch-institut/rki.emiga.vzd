@@ -221,6 +221,11 @@
         "mustSupport": true
       },
       {
+        "id": "PractitionerRole.code:emigaPractitionerRole.coding.version",
+        "path": "PractitionerRole.code.coding.version",
+        "mustSupport": true
+      },
+      {
         "id": "PractitionerRole.code:emigaPractitionerRole.coding.code",
         "path": "PractitionerRole.code.coding.code",
         "min": 1,
