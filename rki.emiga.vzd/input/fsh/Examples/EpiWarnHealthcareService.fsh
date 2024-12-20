@@ -9,13 +9,13 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#consultation
 * location = Reference(EpiWarnLocation)
 * type[0].coding = $serviceType#538 "Telephone Counselling"
-* name = "test_dienst"
+* name = "Rufbereitschaft"
 * comment = "diverse Angebote, Präventionsberatung"
 * telecom[0].system = #email
 * telecom[=].value = "Ruf@MS.NI.de"
 * telecom[+].system = #phone
 * telecom[=].value = "54548797989"
-
+/*
 * availableTime.daysOfWeek[0] = #mon
 * availableTime.daysOfWeek[+] = #tue
 * availableTime.daysOfWeek[+] = #wed
@@ -24,6 +24,6 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 * availableTime.daysOfWeek[+] = #sat
 * availableTime.daysOfWeek[+] = #sun
 * availableTime.allDay = true
-
+*/
 * availableTime.extension[dutyHoursAvailability].valueCoding.code = #24/7 
 * availableTime.extension[dutyHoursAvailability].valueCoding.display = "24/7"

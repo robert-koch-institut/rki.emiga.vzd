@@ -242,6 +242,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaLocation"
+        },
+        "name": "EmigaLocation",
+        "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaPractitioner"
         },
         "name": "EmigaPractitioner",
