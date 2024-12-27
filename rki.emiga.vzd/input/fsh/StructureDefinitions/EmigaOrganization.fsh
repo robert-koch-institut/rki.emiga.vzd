@@ -29,6 +29,8 @@ Description: "TODO"
 
 
 //Identifiers harmonisiert mit IsiK und MII. Die Demis und telematikID Werden diskutiert
+* identifier ^short = "Logischer Identifier"
+* identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -63,10 +65,13 @@ Description: "TODO"
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
 * active 1..1 MS
+* active ^comment = "Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist."
+
 
 // 'Kind of organization' - 0..* - CodeableConcept
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
-
+* type ^short = "Organizationsart"
+* type ^definition = "Art der Organization"
 * type 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -88,11 +93,15 @@ Description: "TODO"
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
 * name 1..1 MS
+* name ^short = "Name"
+* name ^definition = "Name der Organization"
+
 * name obeys validString
 
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
 * alias MS
+* alias ^comment = "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist."
 * alias obeys validString
 
 // 'A contact detail for the organization' - 0..* - ContactPoint
@@ -157,17 +166,19 @@ Description: "TODO"
 * partOf 0..1 MS
 
 * partOf only Reference(Organization) 
-
+* partOf ^comment = "Über dieses Element ist eine Hierarchiebildung möglich."
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen
-//Update: Wird in v2 erlaubt um weitere compatibilität zu ermöglichen
+
 * contact 0..0
+* contact ^comment = "Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen"
 
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
-//* endpoint 0..0
+* endpoint 0..0
+* endpoint ^comment = "Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen"
 
 // Invariants to validate the address and telecom values
 
