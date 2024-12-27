@@ -1,5 +1,5 @@
 Instance: 44588972
-InstanceOf: BaseHealthcareService
+InstanceOf: EmigaHealthcareService
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.

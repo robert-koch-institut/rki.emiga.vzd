@@ -1,7 +1,7 @@
 Instance: 44588973
 InstanceOf: EmigaHealthcareService
 Usage: #example
-Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist" 
+Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist" 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
 * active = true
@@ -21,6 +21,10 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 * availableTime.daysOfWeek[+] = #wed
 * availableTime.daysOfWeek[+] = #thu
 * availableTime.daysOfWeek[+] = #fri
-* availableTime.daysOfWeek[+] = #sat
-* availableTime.daysOfWeek[+] = #sun
-* availableTime.allDay = true
+
+* availableTime.extension[dutyHoursAvailability].valueCoding.code = #duringService
+* availableTime.extension[dutyHoursAvailability].valueCoding.display = "Während der Dienstzeit"
+
+//* availableTime.daysOfWeek[+] = #sat
+//* availableTime.daysOfWeek[+] = #sun
+* availableTime.allDay = false

@@ -1,5 +1,5 @@
 Instance: EpiWarnLocation
-InstanceOf: BaseLocation
+InstanceOf: EmigaLocation
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.

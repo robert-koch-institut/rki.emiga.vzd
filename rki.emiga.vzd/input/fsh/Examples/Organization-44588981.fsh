@@ -1,6 +1,6 @@
 // Example for the new Version 1.1.0 AuthorityOrganization
 Instance: 44588981
-InstanceOf: AuthorityOrganization
+InstanceOf: EmigaOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
