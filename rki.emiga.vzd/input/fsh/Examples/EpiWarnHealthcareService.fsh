@@ -7,6 +7,7 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 * active = true
 * providedBy = Reference(EpiWarnOrganization)
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#consultation
+* specialty = $HealthcareServiceSpecialtyCS#infectionProtectionAndEpi 
 * location = Reference(EpiWarnLocation)
 //* type[0].coding = $serviceType#538 "Telephone Counselling"
 * name = "Rufbereitschaft"
