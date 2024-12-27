@@ -33,11 +33,13 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 // Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich.
 * practitioner 1..1 MS
 * practitioner only Reference(Practitioner)
+* practitioner ^comment = "Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich."
 
 // 'Organization where the roles are available' - 0..1 - Reference(Organization)
 // Ein Bezug zu einer konkreten Organization-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich.
 * organization 1..1 MS
 * organization only Reference(EmigaOrganization or EmigaPublicHealthOrganization)
+* organization ^comment = "Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich."
 
 // 'Roles which this practitioner may perform' - 0..* - CodeableConcept
 // Diskussion: Wollen wir das Feld verpflichtend machen?
