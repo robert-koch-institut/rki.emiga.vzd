@@ -4,7 +4,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
   "version": "1.0.0",
   "name": "AuthorityOrganization",
-  "title": "Authority Organization",
+  "title": "Behörde Organization",
   "status": "draft",
   "date": "2024-11-15",
   "description": "TODO",
@@ -167,16 +167,16 @@
         "mustSupport": true
       },
       {
-        "id": "Organization.identifier:epiWarnId",
+        "id": "Organization.identifier:IfsgKoordVwVId",
         "path": "Organization.identifier",
-        "sliceName": "epiWarnId",
+        "sliceName": "IfsgKoordVwVId",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Identifier",
             "profile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEpiWarnId"
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierIfsgKoordVwVId"
             ]
           }
         ],
@@ -238,9 +238,19 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.type:emigaOrganizationType.coding.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.type:emigaOrganizationType.coding.code",
         "path": "Organization.type.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.coding.display",
+        "path": "Organization.type.coding.display",
         "mustSupport": true
       },
       {

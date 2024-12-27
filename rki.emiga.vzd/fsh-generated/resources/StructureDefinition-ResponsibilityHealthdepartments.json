@@ -89,6 +89,11 @@
         "mustSupport": true
       },
       {
+        "id": "Extension.extension:geographicRegion.value[x].version",
+        "path": "Extension.extension.value[x].version",
+        "mustSupport": true
+      },
+      {
         "id": "Extension.extension:geographicRegion.value[x].code",
         "path": "Extension.extension.value[x].code",
         "min": 1,
@@ -135,6 +140,11 @@
         "path": "Extension.extension.value[x].system",
         "min": 1,
         "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:responsibilityType.value[x].version",
+        "path": "Extension.extension.value[x].version",
         "mustSupport": true
       },
       {

@@ -8,7 +8,7 @@ Description: "Die Kodiersystematik 'HealthcareServiceCategory' definiert Konzept
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory"
-* #consultation "Baratungsangebot"
+* #consultation "Beratungsangebot"
 * #preventiveExamination "Vorsorgeangebot"
 
 
