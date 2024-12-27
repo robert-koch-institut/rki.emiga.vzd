@@ -1,7 +1,7 @@
 Profile: EmigaHealthcareService
 Parent: HealthcareService
 Id: EmigaHealthcareService
-Title: "HealthcareService (Ressource des EMIGA-Verzeichnisdienstes)"
+Title: "Dienstleistung"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
 //Temporäre outcomment um draft zu kennzeichnen.
 //* insert MetadataProfile
@@ -52,9 +52,9 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // !!! Perspektivisch wäre das sicherlich sinnvoll, um die Dienstleistungen besser zu kategorisieren. !!!
 // !!! Dann benötigen wir aber auch eine entsprechende Werteliste. !!!
-// !!! Update: wird ermöglicht um "telephone counseling" etc. abzubilden
-* type MS
-* type from $serviceType (extensible)
+// !!! Update: Wird noch nicht ermöglicht
+* type 0..0
+//* type from $serviceType (extensible)
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
 // Würde einer Fachrichtung (z.B. 'Kardiologie') entsprechen.
@@ -67,6 +67,10 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.description = "slicing healthcare service specialty by system"
   * ^slicing.ordered = false
 * specialty contains emigaHealthcareServiceSpecialty 0..1 MS
+* specialty[emigaHealthcareServiceSpecialty] from HealthcareServiceSpecialty (required)
+  * ^patternCodeableConcept.coding.system = $HealthcareServiceSpecialtyCS
+  * insert StrictCodableConcept 
+
 
 
 // 'Location(s) where service may be provided' - 0..* - Reference(Location)
