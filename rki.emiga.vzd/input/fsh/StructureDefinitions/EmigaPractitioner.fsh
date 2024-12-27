@@ -26,6 +26,7 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 // 'Whether this practitioner's record is in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
 * active 1..1 MS
+* active ^comment = "Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist."
 
 // 'The name(s) associated with the practitioner' - 0..* - HumanName
 * name 1..1 MS
