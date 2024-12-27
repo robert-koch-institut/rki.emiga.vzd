@@ -19,9 +19,11 @@ Description: "TODO"
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um die Art derZuständigkeit abzubilden
 * extension 1.. MS
+* extension ^definition = "Art der Zuständigkeit"
 * extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
 * extension[responsibilityHealthdepartments] ^isModifier = false
 * modifierExtension ..0
+
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
@@ -34,10 +36,14 @@ Description: "TODO"
   * ^slicing.ordered = false
 * identifier contains codeSiteId 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
-
+* identifier ^short = "Logischer Identifier"
+* identifier ^definition = "Logischer Identifier der Organisation"
+//* identifier ^comment = "Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)"
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
+
 * active 1..1 MS
+* active ^comment = "Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist."
 
 // 'Kind of organization' - 0..* - CodeableConcept
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
@@ -58,6 +64,9 @@ Description: "TODO"
 // Der Name der Organisation ist für uns ein Pflichtfeld
 * name 1..1 MS
 * name obeys validString
+* name ^short = "Name"
+* name ^definition = "Name der Organization"
+
 
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
@@ -126,16 +135,21 @@ Description: "TODO"
 // Über dieses Element ist eine Hierarchiebildung möglich.
 * partOf 0..1 MS
 * partOf only Reference(Organization) 
+* partOf ^comment = "Über dieses Element ist eine Hierarchiebildung möglich."
 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen
 * contact 0..0
+* contact ^comment = "Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen"
+
 
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
 * endpoint 0..0
+* endpoint ^comment = "Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen"
+
 
 // Invariants to validate the address and telecom values
 
