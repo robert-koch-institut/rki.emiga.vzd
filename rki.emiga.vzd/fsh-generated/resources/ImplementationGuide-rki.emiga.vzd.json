@@ -146,14 +146,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/AuthorityType"
-        },
-        "name": "Behördenarten",
-        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
@@ -314,14 +306,6 @@
         },
         "name": "Organizationstyp",
         "description": "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/ParentSite"
-        },
-        "name": "Parent Site",
-        "description": "TO DO",
         "exampleBoolean": false
       },
       {

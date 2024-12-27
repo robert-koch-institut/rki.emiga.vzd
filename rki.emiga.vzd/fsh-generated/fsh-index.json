@@ -229,7 +229,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaLocation.fsh",
     "startLine": 1,
-    "endLine": 132
+    "endLine": 133
   },
   {
     "outputFile": "StructureDefinition-EmigaOrganization.json",
@@ -237,7 +237,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 181
+    "endLine": 182
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitioner.json",
@@ -245,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPractitioner.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitionerRole.json",
@@ -253,7 +253,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPractitionerRole.fsh",
     "startLine": 1,
-    "endLine": 91
+    "endLine": 92
   },
   {
     "outputFile": "StructureDefinition-EmigaPublicHealthOrganization.json",
@@ -261,7 +261,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 151
+    "endLine": 150
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
@@ -272,28 +272,12 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-ParentSite.json",
-    "fshName": "ParentSite",
-    "fshType": "Extension",
-    "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
     "fshName": "ResponsibilityHealthdepartments",
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
     "endLine": 34
-  },
-  {
-    "outputFile": "ValueSet-AuthorityType.json",
-    "fshName": "AuthorityType",
-    "fshType": "ValueSet",
-    "fshFile": "ValueSet\\AuthorityType.fsh",
-    "startLine": 1,
-    "endLine": 8
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",
