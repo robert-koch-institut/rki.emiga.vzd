@@ -334,6 +334,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/HealthcareServiceSpecialty"
+        },
+        "name": "Fachspezialisierung",
+        "description": "Fachspezialisierungskodes für Dienstleistungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceSpecialty"
+        },
+        "name": "Fachspezialisierung (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaHealthcareService"
         },
         "name": "HealthcareService (Ressource des EMIGA-Verzeichnisdienstes)",
