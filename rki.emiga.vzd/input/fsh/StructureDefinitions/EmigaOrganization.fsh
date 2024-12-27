@@ -3,10 +3,11 @@ Parent: Organization
 Id: EmigaOrganization
 Title: "Organization"
 Description: "TODO"
-//* insert MetadataProfile
+
 * ^version = "1.0.0"
 * ^date = "2024-12-12"
 
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags

@@ -3,11 +3,10 @@ Parent: Organization
 Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organization"
 Description: "TODO"
-// Temporarily Outcomment to flag draft for presentation in Simplifier
-//* insert MetadataProfile
+
 * ^version = "1.0.0"
 * ^date = "2024-11-12"
-
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags

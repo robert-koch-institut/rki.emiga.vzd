@@ -3,10 +3,11 @@ Parent: Location
 Id: EmigaLocation
 Title: "Standort"
 Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
-//* insert MetadataProfile
+//
 * ^version = "1.0.0"
 * ^date = "2024-12-20"
 
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags

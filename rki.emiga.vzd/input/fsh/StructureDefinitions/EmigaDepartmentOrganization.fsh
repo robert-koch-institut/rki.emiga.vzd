@@ -6,8 +6,8 @@ Description: "TODO"
 
 * ^version = "1.0.0"
 * ^date = "2024-03-12"
-// Temporarily Outcomment to flag draft for presentation in Simplifier
-//* insert MetadataProfile
+
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
