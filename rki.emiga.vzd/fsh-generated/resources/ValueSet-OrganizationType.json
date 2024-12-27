@@ -38,7 +38,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Authority"
               }
@@ -52,7 +52,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Supreme federal authority"
               }
@@ -66,7 +66,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Higher federal authority"
               }
@@ -80,7 +80,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Federal Institute"
               }
@@ -94,7 +94,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Supreme Federal State authority"
               }
@@ -108,7 +108,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Other authority federal"
               }
@@ -122,7 +122,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Other authority state"
               }
@@ -136,7 +136,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "International Organization"
               }
@@ -150,7 +150,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Research Facility"
               }
@@ -164,7 +164,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "other Organization"
               }
@@ -178,7 +178,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Transport"
               }
@@ -192,7 +192,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Airport"
               }
@@ -206,7 +206,7 @@
                 "language": "en-US",
                 "use": {
                   "system": "http://snomed.info/sct",
-                  "code": "900000000000003001"
+                  "code": "900000000000003009"
                 },
                 "value": "Harbor"
               }
