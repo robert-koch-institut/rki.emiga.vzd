@@ -24,6 +24,14 @@
     "endLine": 16
   },
   {
+    "outputFile": "CodeSystem-HealthcareServiceSpecialty.json",
+    "fshName": "HealthcareServiceSpecialty",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
+    "startLine": 1,
+    "endLine": 154
+  },
+  {
     "outputFile": "CodeSystem-OrganizationType.json",
     "fshName": "OrganizationType",
     "fshType": "CodeSystem",
@@ -317,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPractitionerRole.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 91
   },
   {
     "outputFile": "StructureDefinition-EmigaPublicHealthOrganization.json",
@@ -398,6 +406,14 @@
     "fshFile": "CodeSystem\\HealthcareServiceDutyHours.fsh",
     "startLine": 18,
     "endLine": 25
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceSpecialty.json",
+    "fshName": "HealthcareServiceSpecialty",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
+    "startLine": 158,
+    "endLine": 165
   },
   {
     "outputFile": "ValueSet-OrganizationType.json",
