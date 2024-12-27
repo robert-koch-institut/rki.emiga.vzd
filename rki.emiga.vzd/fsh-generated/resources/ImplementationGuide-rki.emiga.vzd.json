@@ -55,63 +55,63 @@
           "reference": "Location/44588965"
         },
         "name": "44588965",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
       },
       {
         "reference": {
           "reference": "Practitioner/44588966"
         },
         "name": "44588966",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/44588967"
         },
         "name": "44588967",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "Practitioner/44588968"
         },
         "name": "44588968",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/44588969"
         },
         "name": "44588969",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "Practitioner/44588970"
         },
         "name": "44588970",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/44588971"
         },
         "name": "44588971",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "HealthcareService/44588972"
         },
         "name": "44588972",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseHealthcareService"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
       },
       {
         "reference": {
           "reference": "HealthcareService/44588973"
         },
         "name": "44588973",
-        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
       },
       {
@@ -126,7 +126,7 @@
           "reference": "Organization/44588981"
         },
         "name": "44588981",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
@@ -142,54 +142,6 @@
         },
         "name": "Art der Zuständigkeit OEGD (Werteliste)",
         "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BaseEndpoint"
-        },
-        "name": "BaseEndpoint (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Hilfskonstrukt, welches es erlaubt, technische Angaben zu einem Dienst-Endpunkt zu machen. Dies beinhaltet sowohl Adressierungsinformationen als auch Informationen zum Sicherheitskontext, z.B. Zertifikate",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BaseHealthcareService"
-        },
-        "name": "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BaseLocation"
-        },
-        "name": "BaseLocation (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BasePractitioner"
-        },
-        "name": "BasePractitioner (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BasePractitionerRole"
-        },
-        "name": "BasePractitionerRole (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AuthorityOrganization"
-        },
-        "name": "Behörde Organization",
-        "description": "TODO",
         "exampleBoolean": false
       },
       {
@@ -266,22 +218,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp",
-        "description": "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "HealthcareService/EpiWarnHealthcareService"
         },
         "name": "EpiWarnHealthcareService",
@@ -293,7 +229,7 @@
           "reference": "Location/EpiWarnLocation"
         },
         "name": "EpiWarnLocation",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
       },
       {
         "reference": {
@@ -307,14 +243,14 @@
           "reference": "Practitioner/EpiWarnPractitioner"
         },
         "name": "EpiWarnPractitioner",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/EpiWarnPractitionerRole"
         },
         "name": "EpiWarnPractitionerRole",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
@@ -354,30 +290,6 @@
         },
         "name": "Identifier-Profil CodeSiteId",
         "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IdentifierIfsgKoordVwVId"
-        },
-        "name": "Identifier-Profil IfSGKoordVwV-Id",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IdentifierTransmittingSiteId"
-        },
-        "name": "Identifier-Profil TransmittingSiteId",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/IfsgKoordVwVId"
-        },
-        "name": "IfSGKoordVwV ID",
-        "description": "IfSGKoordVwV-ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -450,14 +362,6 @@
         },
         "name": "Standort",
         "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/TransmittingSiteId"
-        },
-        "name": "TransmittingSite ID",
-        "description": "TransmittingSite ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {

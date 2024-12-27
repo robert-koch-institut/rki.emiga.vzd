@@ -1,5 +1,4 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
-CodeSystem-EndpointConnectionType.json                    EndpointConnectionType           CodeSystem  CodeSystem\EndpointConnectionType.fsh                              1 - 11
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 154
@@ -8,13 +7,11 @@ CodeSystem-PractitionerRole.json                          PractitionerRole      
 CodeSystem-Relevance.json                                 Relevance                        CodeSystem  CodeSystem\Relevance.fsh                                           1 - 12
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
-HealthcareService-44588973.json                           44588973                         Instance    Examples\HealthcareService-44588973.fsh                            1 - 26
-HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareService         Instance    Examples\EpiWarnHealthcareService.fsh                              1 - 29
+HealthcareService-44588973.json                           44588973                         Instance    Examples\HealthcareService-44588973.fsh                            1 - 30
+HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareService         Instance    Examples\EpiWarnHealthcareService.fsh                              1 - 30
 Location-44588965.json                                    44588965                         Instance    Examples\Location-44588965.fsh                                     1 - 19
 Location-EpiWarnLocation.json                             EpiWarnLocation                  Instance    Examples\LocationEpiWarn.fsh                                       1 - 19
 NamingSystem-CodeSiteId.json                              CodeSiteId                       Instance    NamingSystem\CodeSiteId.fsh                                        1 - 12
-NamingSystem-IfsgKoordVwVId.json                          IfsgKoordVwVId                   Instance    NamingSystem\IfsgKoordVwVId.fsh                                    1 - 13
-NamingSystem-TransmittingSiteId.json                      TransmittingSiteId               Instance    NamingSystem\TransmittingSiteId.fsh                                1 - 12
 Organization-44588964.json                                44588964                         Instance    Examples\Organization-44588964.fsh                                 2 - 35
 Organization-44588980.json                                44588980                         Instance    Examples\Organization-44588980.fsh                                 2 - 35
 Organization-44588981.json                                44588981                         Instance    Examples\Organization-44588981.fsh                                 2 - 29
@@ -27,12 +24,6 @@ PractitionerRole-44588967.json                            44588967              
 PractitionerRole-44588969.json                            44588969                         Instance    Examples\PractitionerRole-44588969.fsh                             1 - 10
 PractitionerRole-44588971.json                            44588971                         Instance    Examples\PractitionerRole-44588971.fsh                             1 - 9
 PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRole          Instance    Examples\PractitionerRoleEpiWarn.fsh                               1 - 11
-StructureDefinition-AuthorityOrganization.json            AuthorityOrganization            Profile     StructureDefinitions\AuthorityOrganization.fsh                     1 - 141
-StructureDefinition-BaseEndpoint.json                     BaseEndpoint                     Profile     StructureDefinitions\BaseEndpoint.fsh                              1 - 64
-StructureDefinition-BaseHealthcareService.json            BaseHealthcareService            Profile     StructureDefinitions\BaseHealthcareService.fsh                     1 - 122
-StructureDefinition-BaseLocation.json                     BaseLocation                     Profile     StructureDefinitions\BaseLocation.fsh                              1 - 119
-StructureDefinition-BasePractitioner.json                 BasePractitioner                 Profile     StructureDefinitions\BasePractitioner.fsh                          1 - 85
-StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 14
 StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 186
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 154
@@ -42,12 +33,9 @@ StructureDefinition-EmigaPractitioner.json                EmigaPractitioner     
 StructureDefinition-EmigaPractitionerRole.json            EmigaPractitionerRole            Profile     StructureDefinitions\EmigaPractitionerRole.fsh                     1 - 91
 StructureDefinition-EmigaPublicHealthOrganization.json    EmigaPublicHealthOrganization    Profile     StructureDefinitions\EmigaPublicHealthOrganization.fsh             1 - 151
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
-StructureDefinition-IdentifierIfsgKoordVwVId.json         IdentifierIfsgKoordVwVId         Profile     StructureDefinitions\IdentifierIfsgKoordVwVId.fsh                  1 - 16
-StructureDefinition-IdentifierTransmittingSiteId.json     IdentifierTransmittingSiteId     Profile     StructureDefinitions\IdentifierTransmittingSiteId.fsh              1 - 16
 StructureDefinition-ParentSite.json                       ParentSite                       Extension   StructureDefinitions\ExtensionParentSite.fsh                       1 - 16
 StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthdepartments  Extension   StructureDefinitions\ExtensionResponsibilityHealthdepartments.fsh  2 - 34
 ValueSet-AuthorityType.json                               AuthorityType                    ValueSet    ValueSet\AuthorityType.fsh                                         1 - 8
-ValueSet-EndpointConnectionType.json                      EndpointConnectionType           ValueSet    CodeSystem\EndpointConnectionType.fsh                              13 - 20
 ValueSet-HealthcareServiceCategory.json                   HealthcareServiceCategory        ValueSet    CodeSystem\HealthcareServiceCategory.fsh                           15 - 22
 ValueSet-HealthcareServiceDutyHours.json                  HealthcareServiceDutyHours       ValueSet    CodeSystem\HealthcareServiceDutyHours.fsh                          18 - 25
 ValueSet-HealthcareServiceSpecialty.json                  HealthcareServiceSpecialty       ValueSet    CodeSystem\HealthcareServiceSpecialty.fsh                          158 - 165

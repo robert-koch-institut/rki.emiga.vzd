@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "CodeSystem-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "CodeSystem",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "CodeSystem-HealthcareServiceCategory.json",
     "fshName": "HealthcareServiceCategory",
     "fshType": "CodeSystem",
@@ -77,7 +69,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\HealthcareService-44588973.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 30
   },
   {
     "outputFile": "HealthcareService-EpiWarnHealthcareService.json",
@@ -85,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 30
   },
   {
     "outputFile": "Location-44588965.json",
@@ -108,22 +100,6 @@
     "fshName": "CodeSiteId",
     "fshType": "Instance",
     "fshFile": "NamingSystem\\CodeSiteId.fsh",
-    "startLine": 1,
-    "endLine": 12
-  },
-  {
-    "outputFile": "NamingSystem-IfsgKoordVwVId.json",
-    "fshName": "IfsgKoordVwVId",
-    "fshType": "Instance",
-    "fshFile": "NamingSystem\\IfsgKoordVwVId.fsh",
-    "startLine": 1,
-    "endLine": 13
-  },
-  {
-    "outputFile": "NamingSystem-TransmittingSiteId.json",
-    "fshName": "TransmittingSiteId",
-    "fshType": "Instance",
-    "fshFile": "NamingSystem\\TransmittingSiteId.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -224,54 +200,6 @@
     "endLine": 11
   },
   {
-    "outputFile": "StructureDefinition-AuthorityOrganization.json",
-    "fshName": "AuthorityOrganization",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\AuthorityOrganization.fsh",
-    "startLine": 1,
-    "endLine": 141
-  },
-  {
-    "outputFile": "StructureDefinition-BaseEndpoint.json",
-    "fshName": "BaseEndpoint",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseEndpoint.fsh",
-    "startLine": 1,
-    "endLine": 64
-  },
-  {
-    "outputFile": "StructureDefinition-BaseHealthcareService.json",
-    "fshName": "BaseHealthcareService",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseHealthcareService.fsh",
-    "startLine": 1,
-    "endLine": 122
-  },
-  {
-    "outputFile": "StructureDefinition-BaseLocation.json",
-    "fshName": "BaseLocation",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseLocation.fsh",
-    "startLine": 1,
-    "endLine": 119
-  },
-  {
-    "outputFile": "StructureDefinition-BasePractitioner.json",
-    "fshName": "BasePractitioner",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BasePractitioner.fsh",
-    "startLine": 1,
-    "endLine": 85
-  },
-  {
-    "outputFile": "StructureDefinition-BasePractitionerRole.json",
-    "fshName": "BasePractitionerRole",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BasePractitionerRole.fsh",
-    "startLine": 1,
-    "endLine": 86
-  },
-  {
     "outputFile": "StructureDefinition-DutyHoursAvailability.json",
     "fshName": "DutyHoursAvailability",
     "fshType": "Extension",
@@ -344,22 +272,6 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-IdentifierIfsgKoordVwVId.json",
-    "fshName": "IdentifierIfsgKoordVwVId",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierIfsgKoordVwVId.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
-    "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
-    "fshName": "IdentifierTransmittingSiteId",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierTransmittingSiteId.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
     "outputFile": "StructureDefinition-ParentSite.json",
     "fshName": "ParentSite",
     "fshType": "Extension",
@@ -382,14 +294,6 @@
     "fshFile": "ValueSet\\AuthorityType.fsh",
     "startLine": 1,
     "endLine": 8
-  },
-  {
-    "outputFile": "ValueSet-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 13,
-    "endLine": 20
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",
