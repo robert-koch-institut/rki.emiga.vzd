@@ -210,6 +210,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaHealthcareService"
+        },
+        "name": "Dienstleistung",
+        "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/HealthcareServiceCategory"
         },
         "name": "Dienstleistungskategorie",
@@ -238,14 +246,6 @@
         },
         "name": "Dienstzeiten (Werteliste)",
         "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/EmigaLocation"
-        },
-        "name": "EmigaLocation",
-        "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
         "exampleBoolean": false
       },
       {
@@ -350,14 +350,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/EmigaHealthcareService"
-        },
-        "name": "HealthcareService (Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/IdentifierCodeSiteId"
         },
         "name": "Identifier-Profil CodeSiteId",
@@ -450,6 +442,14 @@
         },
         "name": "Relevance (Werteliste)",
         "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaLocation"
+        },
+        "name": "Standort",
+        "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
         "exampleBoolean": false
       },
       {

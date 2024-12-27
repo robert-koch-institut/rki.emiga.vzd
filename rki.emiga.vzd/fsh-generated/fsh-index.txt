@@ -35,7 +35,7 @@ StructureDefinition-BasePractitioner.json                 BasePractitioner      
 StructureDefinition-BasePractitionerRole.json             BasePractitionerRole             Profile     StructureDefinitions\BasePractitionerRole.fsh                      1 - 86
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 14
 StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 186
-StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 150
+StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 154
 StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 132
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 181
 StructureDefinition-EmigaPractitioner.json                EmigaPractitioner                Profile     StructureDefinitions\EmigaPractitioner.fsh                         1 - 89

@@ -293,7 +293,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 150
+    "endLine": 154
   },
   {
     "outputFile": "StructureDefinition-EmigaLocation.json",
