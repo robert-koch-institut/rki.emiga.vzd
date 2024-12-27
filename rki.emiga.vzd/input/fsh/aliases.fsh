@@ -11,6 +11,7 @@ Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
 Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/Relevance
 
 // rki.emiga.vzd
+Alias: $HealthcareServiceSpecialtyCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty
 Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
 Alias: $dutyHoursCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours
 Alias: $dutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours
