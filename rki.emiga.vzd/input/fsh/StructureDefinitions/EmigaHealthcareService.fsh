@@ -27,15 +27,17 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'Whether this HealthcareService record is in active use' - 0..1 - boolean
 // Wir wollen den Status von angebotenen Dienstleistungen klar unterscheiden können. Entsprechend machen wir das Element verpflichtend.
 * active 1..1 MS
+* active ^comment = "Wir wollen den Status von angebotenen Dienstleistungen klar unterscheiden können. Entsprechend machen wir das Element verpflichtend."
 
 // 'Organization that provides this service' - 0..1 - Reference(Organization)
 // Dienstleistungen müssen immer auf eine anbietende Organisation zurückzuführen sein. Entsprechend machen wir das Element verpflichtend.
 * providedBy 1..1 MS
 * providedBy only Reference(Organization)
+* providedBy ^comment = "Dienstleistungen müssen immer auf eine anbietende Organisation zurückzuführen sein. Entsprechend machen wir das Element verpflichtend."
 
 // 'Broad category of service being performed or delivered' - 0..* - CodeableConcept
 // Sollten wir für eine bessere Kategorisierung der Dienstleistungen nutzen. Entsprechend machen wir das Element verpflichtend und binden es an eine Werteliste.
-* category 1.. MS 
+* category MS 
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
@@ -70,10 +72,12 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'Location(s) where service may be provided' - 0..* - Reference(Location)
 // Referenzierung der Standorte, an denen die Dienstleistung angeboten wird.
 * location 0..* MS
-* location only Reference(BaseLocation)
+* location only Reference(EmigaLocation)
+* location ^comment = "Referenzierung der Standorte, an denen die Dienstleistung angeboten wird."
 
 // 'Description of service as presented to a consumer while searching' - 0..1 - string
 * name 0..1 MS
+
 
 // 'Additional description and/or any specific issues not covered elsewhere' - 0..1 - string
 * comment 0..1 MS
@@ -146,6 +150,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * endpoint 0..0
 
 Invariant: ORGV-Service-Opening-Time
-Description: "Only allows either DutyHours extension or daysOfWeek, availableStartTime, availableEndTime"
+Description: "If DutyHoursAvailability code is '24/7', then daysOfWeek, availableStartTime, and availableEndTime must not be present."
 * severity = #error
-* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"
+* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
+//* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"
