@@ -18,7 +18,7 @@ Description: "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte
 ValueSet: HealthcareServiceDutyHours
 Id: HealthcareServiceDutyHours
 Title: "Dienstzeiten (Werteliste)"
-Description: "Werteliste mit Konzepten, die die die die Verfügbarkeit von Dienstleistungen darstellen"
+Description: "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen"
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-12-18"

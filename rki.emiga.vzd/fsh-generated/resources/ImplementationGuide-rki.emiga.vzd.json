@@ -189,7 +189,7 @@
           "reference": "ValueSet/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die die die Verfügbarkeit von Dienstleistungen darstellen",
+        "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
         "exampleBoolean": false
       },
       {
