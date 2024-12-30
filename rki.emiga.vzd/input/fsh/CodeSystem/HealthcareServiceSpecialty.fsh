@@ -1,7 +1,7 @@
 CodeSystem: HealthcareServiceSpecialty
 Id: HealthcareServiceSpecialty
 Title: "Fachspezialisierung"
-Description: "Fachspezialisierungskodes für Dienstleistungen"
+Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben"
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-12-27"

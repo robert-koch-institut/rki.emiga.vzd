@@ -181,7 +181,7 @@
           "reference": "CodeSystem/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten",
-        "description": "TODO",
+        "description": "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen.",
         "exampleBoolean": false
       },
       {
@@ -189,7 +189,7 @@
           "reference": "ValueSet/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten (Werteliste)",
-        "description": "TODO",
+        "description": "Werteliste mit Konzepten, die die die die Verfügbarkeit von Dienstleistungen darstellen",
         "exampleBoolean": false
       },
       {
@@ -249,7 +249,7 @@
           "reference": "StructureDefinition/DutyHoursAvailability"
         },
         "name": "Erreichbarkeit Dienstzeiten",
-        "description": "Extension zur Abbildung der Erreichbarkeit der Organizationen anhand der Dienstzeiten.",
+        "description": "Extension zur Abbildung der Erreichbarkeit der Dienstleistungen einer Organisation anhand der Dienstzeiten.",
         "exampleBoolean": false
       },
       {
@@ -265,7 +265,7 @@
           "reference": "CodeSystem/HealthcareServiceSpecialty"
         },
         "name": "Fachspezialisierung",
-        "description": "Fachspezialisierungskodes für Dienstleistungen",
+        "description": "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben",
         "exampleBoolean": false
       },
       {
@@ -328,16 +328,16 @@
         "reference": {
           "reference": "CodeSystem/Relevance"
         },
-        "name": "Relevance",
-        "description": "TODO",
+        "name": "Relevanz",
+        "description": "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Use Cases relevanten Ressourcen kennzeichnen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/Relevance"
         },
-        "name": "Relevance (Werteliste)",
-        "description": "TODO",
+        "name": "Relevanz (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
         "exampleBoolean": false
       },
       {
@@ -368,8 +368,8 @@
         "reference": {
           "reference": "ValueSet/PublicHealthOrganizationType"
         },
-        "name": "ÖGD Stellen",
-        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
+        "name": "ÖGD Organizationen",
+        "description": "Werteliste mit Konzepten, die die Arten einer Organisation des öffentlichen Gesundheitsdienstes näher beschreiben.",
         "exampleBoolean": false
       }
     ],

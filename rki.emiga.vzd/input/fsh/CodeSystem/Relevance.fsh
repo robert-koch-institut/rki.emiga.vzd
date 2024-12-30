@@ -1,7 +1,7 @@
 CodeSystem: Relevance
 Id: Relevance
-Title: "Relevance"
-Description: "TODO"
+Title: "Relevanz"
+Description: "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Use Cases relevanten Ressourcen kennzeichnen."
 * ^url = "https://emiga.rki.de/fhir/common/CodeSystem/Relevance"
 * insert MetadataTerminology
 * ^version = "1.0.0"
@@ -13,8 +13,8 @@ Description: "TODO"
 
 ValueSet: Relevance
 Id: Relevance
-Title: "Relevance (Werteliste)"
-Description: "TODO"
+Title: "Relevanz (Werteliste)"
+Description: "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen."
 * ^url = "https://emiga.rki.de/fhir/common/ValueSet/Relevance"
 * insert MetadataTerminology
 * ^version = "1.0.0"
