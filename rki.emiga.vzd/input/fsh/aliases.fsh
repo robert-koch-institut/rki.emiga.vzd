@@ -40,6 +40,7 @@ Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/D
 Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
+Alias: $HL7DesignationUse = http://terminology.hl7.org/CodeSystem/designation-usage
 
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
@@ -57,3 +58,7 @@ Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
 
 //DEMIS
 Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
+
+//IHE De
+Alias: $IHEFachrichtungen = http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen
+Alias: $IHEnichtAerztlicheFachrichtungen = http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen
