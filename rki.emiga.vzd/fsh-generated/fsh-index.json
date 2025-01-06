@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
     "startLine": 1,
-    "endLine": 154
+    "endLine": 152
   },
   {
     "outputFile": "CodeSystem-OrganizationType.json",
@@ -221,7 +221,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 154
+    "endLine": 160
   },
   {
     "outputFile": "StructureDefinition-EmigaLocation.json",
@@ -299,9 +299,17 @@
     "outputFile": "ValueSet-HealthcareServiceSpecialty.json",
     "fshName": "HealthcareServiceSpecialty",
     "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
-    "startLine": 158,
-    "endLine": 165
+    "fshFile": "ValueSet\\HealthcareServiceSpecialty.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceType.json",
+    "fshName": "HealthcareServiceType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HealthcareServiceType.fsh",
+    "startLine": 1,
+    "endLine": 42
   },
   {
     "outputFile": "ValueSet-OrganizationType.json",

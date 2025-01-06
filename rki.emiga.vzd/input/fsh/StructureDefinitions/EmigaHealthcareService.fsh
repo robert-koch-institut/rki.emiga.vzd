@@ -37,6 +37,8 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 
 // 'Broad category of service being performed or delivered' - 0..* - CodeableConcept
 // Sollten wir für eine bessere Kategorisierung der Dienstleistungen nutzen. Entsprechend machen wir das Element verpflichtend und binden es an eine Werteliste.
+* category ^short = "Kategorie"
+* category ^definition = "Breite Kategorie der durchgeführten oder erbrachten Dienstleistung."
 * category MS 
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -52,14 +54,18 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // !!! Perspektivisch wäre das sicherlich sinnvoll, um die Dienstleistungen besser zu kategorisieren. !!!
 // !!! Dann benötigen wir aber auch eine entsprechende Werteliste. !!!
-// !!! Update: Wird noch nicht ermöglicht
-* type 0..0
-//* type from $serviceType (extensible)
+
+* type MS
+* type from $serviceType (extensible)
+* type ^short = "Dienstleistungstyp"
+* type ^definition = "Art der Dienstleistung, die erbracht oder durchgeführt werden kann."
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
 // Würde einer Fachrichtung (z.B. 'Kardiologie') entsprechen.
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Update: Wird benuzt um den epiWarn Zuständigkeiten abzubilden.
+* specialty ^short = "Fachrichtung"
+* specialty ^definition = "Fachrichtungen, die von der Dienstleistung abgedeckt werden."
 * specialty MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -80,7 +86,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * location ^comment = "Referenzierung der Standorte, an denen die Dienstleistung angeboten wird."
 
 // 'Description of service as presented to a consumer while searching' - 0..1 - string
-* name 0..1 MS
+* name 1..1 MS
 
 
 // 'Additional description and/or any specific issues not covered elsewhere' - 0..1 - string

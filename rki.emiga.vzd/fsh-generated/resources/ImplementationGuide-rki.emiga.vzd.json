@@ -178,6 +178,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/HealthcareServiceType"
+        },
+        "name": "Dienstleistungstyp (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten",
