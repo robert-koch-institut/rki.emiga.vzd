@@ -6,7 +6,7 @@ Id: HealthcareServiceSpecialty
 * ^version = "1.0.0"
 * ^date = "2024-12-27"
 * include codes from system HealthcareServiceSpecialty
-
+/*
 * $IHEFachrichtungen#GESU "Öffentliches Gesundheitswesen"
 * $IHEFachrichtungen#LABO "Laboratoriumsmedizin"
 * $IHEFachrichtungen#MZKH "Zahnmedizin"
@@ -15,3 +15,4 @@ Id: HealthcareServiceSpecialty
 * $IHEnichtAerztlicheFachrichtungen#SOZ "Sozialwesen"
 * $IHEnichtAerztlicheFachrichtungen#PRV "Prävention"
 * $IHEnichtAerztlicheFachrichtungen#VER "Verwaltung"
+*/
