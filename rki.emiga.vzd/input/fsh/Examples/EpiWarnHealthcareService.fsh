@@ -4,12 +4,14 @@ Usage: #example
 Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist" 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
 * active = true
 * providedBy = Reference(EpiWarnOrganization)
-* category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#consultation
-* specialty = $HealthcareServiceSpecialtyCS#infectionProtectionAndEpi 
+* category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#consultation "Beratungsangebot"
+* specialty = $HealthcareServiceSpecialtyCS#infectionProtectionAndEpi "Infektionsschutz und Infektionsepidemiologie"
+* type[0].coding = $serviceType#538 "Telephone Counselling"
 * location = Reference(EpiWarnLocation)
-//* type[0].coding = $serviceType#538 "Telephone Counselling"
+
 * name = "Rufbereitschaft"
 * comment = "diverse Angebote, Präventionsberatung"
 * telecom[0].system = #email
