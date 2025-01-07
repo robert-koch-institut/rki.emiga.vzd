@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
     "startLine": 1,
-    "endLine": 152
+    "endLine": 167
   },
   {
     "outputFile": "CodeSystem-OrganizationType.json",
@@ -77,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 30
+    "endLine": 32
   },
   {
     "outputFile": "Location-44588965.json",
@@ -93,7 +93,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\LocationEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "NamingSystem-CodeSiteId.json",
@@ -165,7 +165,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\PractitionerEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 17
   },
   {
     "outputFile": "PractitionerRole-44588967.json",
@@ -197,7 +197,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\PractitionerRoleEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 11
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-DutyHoursAvailability.json",
@@ -301,7 +301,7 @@
     "fshType": "ValueSet",
     "fshFile": "ValueSet\\HealthcareServiceSpecialty.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 8
   },
   {
     "outputFile": "ValueSet-HealthcareServiceType.json",

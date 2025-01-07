@@ -39,13 +39,13 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #trainingAndTeaching ^designation[=].use = $HL7DesignationUse#display
 * #trainingAndTeaching ^designation[=].value = "training and teaching"
 
-/*
+// Possibly overlapping with ihefachrichtungen
 * #surveillanceReporting "Surveillance/Meldewesen"
 * #surveillanceReporting ^designation[0].language = #en-US
 * #surveillanceReporting ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #surveillanceReporting ^designation[=].use = $HL7DesignationUse#display
 * #surveillanceReporting ^designation[=].value = "surveillance/reporting"
-*/
+
 
 * #infectionProtectionAndEpi "Infektionsschutz und Infektionsepidemiologie"
 * #infectionProtectionAndEpi ^designation[0].language = #en-US
@@ -65,13 +65,13 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #igvAirportAndPort ^designation[=].use = $HL7DesignationUse#display
 * #igvAirportAndPort ^designation[=].value = "IGV-designated airports and ports"
 
-/*
+// Possibly overlapping with ihefachrichtungen
 * #labor "Labor"
 * #labor ^designation[0].language = #en-US
 * #labor ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #labor ^designation[=].use = $HL7DesignationUse#display
 * #labor ^designation[=].value = "laboratory"
-*/
+
 
 * #vaccPrevention "Impfprävention"
 * #vaccPrevention ^designation[0].language = #en-US
@@ -121,29 +121,29 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #antibioticResistantGerms ^designation[=].use = $HL7DesignationUse#display
 * #antibioticResistantGerms ^designation[=].value = "antibiotic-resistant germs"
 
-/*
+// Possibly overlapping with ihefachrichtungen
 * #childAndYouthHealth "Kinder- und Jugendgesundheit"	
 * #childAndYouthHealth ^designation[0].language = #en-US
 * #childAndYouthHealth ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #childAndYouthHealth ^designation[=].use = $HL7DesignationUse#display
 * #childAndYouthHealth ^designation[=].value = "child and youth health"
-*/
 
-/*
+
+//Possibly overlapping with ihefachrichtungen
 * #socialPsychiatricService	"Sozialpsychiatrischer Dienst"
 * #socialPsychiatricService ^designation[0].language = #en-US
 * #socialPsychiatricService ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #socialPsychiatricService ^designation[=].use = $HL7DesignationUse#display
 * #socialPsychiatricService ^designation[=].value = "social psychiatric service"
-*/
 
-/*
+
+//Possibly overlapping with ihefachrichtungen
 * #preventionAndHealthPromotion	"Prävention und Gesundheitsförderung"
 * #preventionAndHealthPromotion ^designation[0].language = #en-US
 * #preventionAndHealthPromotion ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #preventionAndHealthPromotion ^designation[=].use = $HL7DesignationUse#display
 * #preventionAndHealthPromotion ^designation[=].value = "prevention and health promotion"
-*/
+
 
 * #medServicesAndCons "Medizinische Dienste und Sprechstunden"	
 * #medServicesAndCons ^designation[0].language = #en-US
@@ -151,20 +151,20 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #medServicesAndCons ^designation[=].use = $HL7DesignationUse#display
 * #medServicesAndCons ^designation[=].value = "medical services and consultations"
 
-/*
+// Possibly overlapping with ihefachrichtungen
 * #dentistry "Zahnmedizin"	
 * #dentistry ^designation[0].language = #en-US
 * #dentistry ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #dentistry ^designation[=].use = $HL7DesignationUse#display
 * #dentistry ^designation[=].value = "dentistry"
-*/
 
-/*
+
+// Possibly overlapping with ihefachrichtungen
 * #adminLegalMattersAndDataPrtct "Verwaltung, Recht und Datenschutz"
 * #adminLegalMattersAndDataPrtct ^designation[0].language = #en-US
 * #adminLegalMattersAndDataPrtct ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #adminLegalMattersAndDataPrtct ^designation[=].use = $HL7DesignationUse#display
 * #adminLegalMattersAndDataPrtct ^designation[=].value = "administration, legal matters and data protection"
-*/
+
 
 
