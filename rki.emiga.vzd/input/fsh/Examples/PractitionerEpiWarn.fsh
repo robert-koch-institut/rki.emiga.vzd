@@ -3,6 +3,7 @@ InstanceOf: EmigaPractitioner
 Usage: #example
 * meta.security[visibility]  = $ResourceVisibilityType#internal
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
 * active = true
 * name.family = "Goetze"
 * name.given = "Doris"
