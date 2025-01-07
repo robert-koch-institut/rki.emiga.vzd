@@ -26,7 +26,7 @@ PractitionerRole-44588971.json                            44588971              
 PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRole          Instance    Examples\PractitionerRoleEpiWarn.fsh                               1 - 12
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 14
 StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 186
-StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 160
+StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 169
 StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 133
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 182
 StructureDefinition-EmigaPractitioner.json                EmigaPractitioner                Profile     StructureDefinitions\EmigaPractitioner.fsh                         1 - 90

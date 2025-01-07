@@ -55,10 +55,19 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // !!! Perspektivisch wäre das sicherlich sinnvoll, um die Dienstleistungen besser zu kategorisieren. !!!
 // !!! Dann benötigen wir aber auch eine entsprechende Werteliste. !!!
 
-* type MS
-* type from $serviceType (extensible)
+
 * type ^short = "Dienstleistungstyp"
 * type ^definition = "Art der Dienstleistung, die erbracht oder durchgeführt werden kann."
+* type MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+  * ^slicing.description = "slicing healthcare service type by system"
+  * ^slicing.ordered = false
+* type contains emigaHealthcareServiceType 0..1 MS
+* type[emigaHealthcareServiceType] from $ServiceTypeVS (extensible)
+  * ^patternCodeableConcept.coding.system = $ServiceTypeCS
+  * insert StrictCodableConcept
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
 // Würde einer Fachrichtung (z.B. 'Kardiologie') entsprechen.

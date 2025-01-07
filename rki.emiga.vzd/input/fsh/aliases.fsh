@@ -41,7 +41,8 @@ Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
 Alias: $HL7DesignationUse = http://terminology.hl7.org/CodeSystem/designation-usage
-
+Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType
+Alias: $ServiceTypeCS = http://terminology.hl7.org/CodeSystem/service-type
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
