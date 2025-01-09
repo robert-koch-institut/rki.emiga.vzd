@@ -127,6 +127,7 @@ Description: "TODO"
 * address.line.extension[Postfach].valueString obeys validString
 * address.city MS
 * address.city obeys validString
+* address.state MS
 * address.postalCode MS 
 * address.postalCode obeys validPLZ
 

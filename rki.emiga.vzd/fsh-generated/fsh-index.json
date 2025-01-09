@@ -213,7 +213,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
     "startLine": 1,
-    "endLine": 186
+    "endLine": 187
   },
   {
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",
@@ -229,7 +229,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaLocation.fsh",
     "startLine": 1,
-    "endLine": 133
+    "endLine": 134
   },
   {
     "outputFile": "StructureDefinition-EmigaOrganization.json",
@@ -237,7 +237,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 182
+    "endLine": 183
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitioner.json",
@@ -261,7 +261,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 150
+    "endLine": 151
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
