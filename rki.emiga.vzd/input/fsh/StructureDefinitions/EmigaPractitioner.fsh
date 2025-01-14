@@ -13,7 +13,7 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 * insert ProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

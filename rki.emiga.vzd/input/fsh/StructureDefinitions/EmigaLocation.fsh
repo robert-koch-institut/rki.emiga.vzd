@@ -14,6 +14,8 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|1.0.0"
+
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 * extension 0..0

@@ -13,7 +13,7 @@ Description: "TODO"
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
