@@ -16,11 +16,16 @@ Description: "TODO"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-// Update: extension benuzt um die Art derZuständigkeit abzubilden
+// Update: extension benuzt um die Art derZuständigkeit und den Zeitraum der Gültigkeit abzubilden
 * extension 1.. MS
-* extension ^definition = "Art der Zuständigkeit"
-* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
+//* extension ^definition = "Art der Zuständigkeit"
+* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..* and $OrganizationPeriod named organizationPeriod 0..*
+* extension[organizationPeriod] ^isModifier = false
+* extension[organizationPeriod] ^mustSupport = true
+* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
+* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
 * extension[responsibilityHealthdepartments] ^isModifier = false
+* extension[responsibilityHealthdepartments] ^mustSupport = true
 * modifierExtension ..0
 
 // 'Identifies this organization across multiple systems' - 0..* - Identifier

@@ -337,7 +337,7 @@
           "reference": "CodeSystem/Relevance"
         },
         "name": "Relevanz",
-        "description": "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Use Cases relevanten Ressourcen kennzeichnen.",
+        "description": "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Emiga Use Cases relevanten Ressourcen kennzeichnen.",
         "exampleBoolean": false
       },
       {

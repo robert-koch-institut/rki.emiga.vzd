@@ -19,11 +19,15 @@ Description: "TODO"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-// Update: extension benuzt um die Art derZuständigkeit abzubilden
-//* extension 1.. MS
-//* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
-//* extension[responsibilityHealthdepartments] ^isModifier = false
-//* modifierExtension ..0
+// Update: extension benuzt um den Zeitraum der Gültigkeit abzubilden
+* extension MS
+* extension contains $OrganizationPeriod named organizationPeriod 0..*
+* extension[organizationPeriod] ^isModifier = false
+* extension[organizationPeriod] ^mustSupport = true
+* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
+* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
+* modifierExtension ..0
+
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
