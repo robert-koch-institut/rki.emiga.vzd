@@ -40,7 +40,8 @@ Description: "TODO"
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     Abteilungsidentifikator 0..1 MS and
-    demisParticipantId 0..1 MS
+    demisParticipantId 0..1 MS and
+    telematikID 0..1 MS 
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
@@ -58,6 +59,12 @@ Description: "TODO"
 * identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
 * identifier[demisParticipantId].system 1.. MS
 * identifier[demisParticipantId].value 1.. MS
+
+* identifier[telematikID] only $identifier-telematik-id
+* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
+* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* identifier[telematikID].system 1.. MS
+* identifier[telematikID].value 1.. MS
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.

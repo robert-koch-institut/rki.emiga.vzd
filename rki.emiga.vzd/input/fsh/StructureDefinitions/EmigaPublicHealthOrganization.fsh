@@ -38,11 +38,18 @@ Description: "TODO"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
-* identifier contains codeSiteId 0..1 MS
+* identifier contains codeSiteId 0..1 MS and
+          telematikID 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 //* identifier ^comment = "Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)"
+//Update: identifier telematikID hinzugefügt weil Anschluß GA in TI s.gematik.de/sektoren/oegd
+* identifier[telematikID] only $identifier-telematik-id
+* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
+* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
+
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
 
