@@ -32,17 +32,18 @@ Description: "TODO"
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 
-* identifier MS
+* identifier 1.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
-* identifier contains codeSiteId 0..1 MS and
+* identifier contains codeSiteId 1..1 MS and
           telematikID 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
+* identifier[codeSiteId] ^patternIdentifier.system = $CodeSiteId
 //* identifier ^comment = "Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)"
 //Update: identifier telematikID hinzugefügt weil Anschluß GA in TI s.gematik.de/sektoren/oegd
 * identifier[telematikID] only $identifier-telematik-id
