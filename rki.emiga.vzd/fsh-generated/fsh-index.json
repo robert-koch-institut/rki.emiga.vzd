@@ -104,6 +104,14 @@
     "endLine": 12
   },
   {
+    "outputFile": "NamingSystem-EmigaOrgvId.json",
+    "fshName": "EmigaOrgvId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\EmigaId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
     "outputFile": "Organization-44588964.json",
     "fshName": "44588964",
     "fshType": "Instance",
@@ -237,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 190
+    "endLine": 191
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitioner.json",
@@ -268,6 +276,14 @@
     "fshName": "IdentifierCodeSiteId",
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\IdentifierCodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierEmigaOrgvId.json",
+    "fshName": "IdentifierEmigaOrgvId",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierEmigaOrgvId.fsh",
     "startLine": 1,
     "endLine": 12
   },

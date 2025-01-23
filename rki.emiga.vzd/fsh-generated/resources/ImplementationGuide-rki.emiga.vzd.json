@@ -202,6 +202,14 @@
       },
       {
         "reference": {
+          "reference": "NamingSystem/EmigaOrgvId"
+        },
+        "name": "Emiga Organizationsverzeichnis ID",
+        "description": "Emiga Organizationsverzeichnis ID to be used in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaPractitioner"
         },
         "name": "EmigaPractitioner",
@@ -290,6 +298,14 @@
         },
         "name": "Identifier-Profil CodeSiteId",
         "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IdentifierEmigaOrgvId"
+        },
+        "name": "Identifier-Profil EmigaOrgvId",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
