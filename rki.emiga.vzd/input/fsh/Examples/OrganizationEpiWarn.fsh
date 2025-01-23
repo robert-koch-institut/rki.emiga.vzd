@@ -6,7 +6,10 @@ Usage: #example
 * meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
 
 * active = true
-
+* extension[organizationPeriod].valuePeriod.start = "1900-01-01"
+* identifier[emigaOrgvId].type = $v2-0203#XX
+* identifier[emigaOrgvId].system = $EmigaOrgvId
+* identifier[emigaOrgvId].value = "0123456789"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"
 * name = "Zentrum für Gesundheits- und Infektionsschutz"
 * telecom[Email].system = #email
