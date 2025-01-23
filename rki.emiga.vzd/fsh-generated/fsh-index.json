@@ -107,7 +107,7 @@
     "outputFile": "NamingSystem-EmigaOrgvId.json",
     "fshName": "EmigaOrgvId",
     "fshType": "Instance",
-    "fshFile": "NamingSystem\\EmigaId.fsh",
+    "fshFile": "NamingSystem\\EmigaOrgvId.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -141,7 +141,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\OrganizationEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 30
   },
   {
     "outputFile": "Practitioner-44588966.json",
@@ -221,7 +221,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
     "startLine": 1,
-    "endLine": 198
+    "endLine": 205
   },
   {
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",
@@ -245,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 191
+    "endLine": 200
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitioner.json",
@@ -269,7 +269,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 163
+    "endLine": 164
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
