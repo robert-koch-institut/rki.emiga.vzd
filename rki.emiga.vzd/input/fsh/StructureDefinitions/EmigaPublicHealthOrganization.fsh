@@ -48,7 +48,7 @@ Description: "TODO"
 * identifier[telematikID] only $identifier-telematik-id
 * identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
+//* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
