@@ -49,7 +49,7 @@ Description: "TODO"
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS
 
-* identifier[emigaOrgvId] only $EmigaOrgvId
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
 * identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS

@@ -30,9 +30,10 @@ Description: "TODO"
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 // Update zu v2: Wir  nutzen Slicing um die verschiedenen Identifier-Typen zu unterscheiden. Addiert gematik-ID und emigaOrgvId
+// Discussion: Soll identifier pflicht sein 1..1?
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
-* identifier 1.. MS
+* identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
@@ -44,7 +45,7 @@ Description: "TODO"
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS 
 
-* identifier[emigaOrgvId] only $EmigaOrgvId
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
 * identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
