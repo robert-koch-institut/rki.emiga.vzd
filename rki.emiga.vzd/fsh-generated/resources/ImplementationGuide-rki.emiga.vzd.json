@@ -36,7 +36,7 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.0.0",
+      "version": "1.1.0-alpha.1",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     }
