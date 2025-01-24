@@ -23,6 +23,8 @@ Usage: #example
 * telecom[Phone].value = "0123 4567890"
 * telecom[Fax].system = #fax
 * telecom[Fax].value = "0123 4567899"
+* telecom[Url].system = #url
+* telecom[Url].value = "https://www.example.org"
 * address.type = #postal
 * address.line = "Test Straße 21"
 * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"

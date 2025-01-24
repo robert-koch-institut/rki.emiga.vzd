@@ -219,7 +219,7 @@ Description: "Die Telefonnummer muss valide sein."
 Invariant: validUrl
 Description: "Die Url muss valide sein."
 * severity = #error
-* expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
+* expression = "$this.matches('^(https?:\\/\\/)?([0-9a-z.-]{1,1000})\\.([a-z.]{2,6})([\\/\\w.-]{0,999})\\/?$')"
 
 // TODO: Verify need of regex
 Invariant: validFaxNumber
