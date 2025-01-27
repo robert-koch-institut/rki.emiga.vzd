@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "BaseOrganization",
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "BaseOrganization",
   "title": "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
   "status": "active",
@@ -375,7 +375,7 @@
             "human": "Die Url muss valide sein.",
             "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
             "severity": "error",
-            "expression": "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
+            "expression": "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
           }
         ],
         "mustSupport": true
