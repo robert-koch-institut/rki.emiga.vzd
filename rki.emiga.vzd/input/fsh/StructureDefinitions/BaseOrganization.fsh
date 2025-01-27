@@ -4,7 +4,7 @@ Id: BaseOrganization
 Title: "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
 Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 * insert MetadataProfile
-* ^version = "1.0.0"
+* ^version = "1.0.1"
 * ^date = "2024-03-18"
 
 * insert ProfileResourceCommon
@@ -148,7 +148,7 @@ Description: "Die Telefonnummer muss valide sein."
 Invariant: validUrl
 Description: "Die Url muss valide sein."
 * severity = #error
-* expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
+* expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
 
 // TODO: Verify need of regex
 Invariant: validFaxNumber
