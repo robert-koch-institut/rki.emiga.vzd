@@ -9,8 +9,11 @@ Context: HealthcareService
 * insert MetadataProfile
 * . ^short = "Dienstzeiten"
 * . ^definition = "Erreichbarkeit der Organisation anhand der Dienstzeiten"
-* value[x] only Coding
 * value[x] MS
+* value[x] only Coding
+* value[x].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
+* value[x].system 1..1 MS
+* value[x].code 1..1 MS
 * value[x] from $dutyHoursVS (required)
 
 
