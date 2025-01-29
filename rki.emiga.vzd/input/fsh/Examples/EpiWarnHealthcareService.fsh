@@ -28,5 +28,6 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 * availableTime.daysOfWeek[+] = #sun
 * availableTime.allDay = true
 */
+* availableTime.extension[dutyHoursAvailability].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
 * availableTime.extension[dutyHoursAvailability].valueCoding.code = #24/7 
 * availableTime.extension[dutyHoursAvailability].valueCoding.display = "24/7"
