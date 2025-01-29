@@ -234,6 +234,14 @@
       },
       {
         "reference": {
+          "reference": "HealthcareService/EpiWarnHealthcareServiceInvTest"
+        },
+        "name": "EpiWarnHealthcareServiceInvTest",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
           "reference": "Location/EpiWarnLocation"
         },
         "name": "EpiWarnLocation",

@@ -77,7 +77,15 @@
     "fshType": "Instance",
     "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 33
+  },
+  {
+    "outputFile": "HealthcareService-EpiWarnHealthcareServiceInvTest.json",
+    "fshName": "EpiWarnHealthcareServiceInvTest",
+    "fshType": "Instance",
+    "fshFile": "Examples\\EpiWarnHealthcareServiceInvTest.fsh",
+    "startLine": 1,
+    "endLine": 34
   },
   {
     "outputFile": "Location-44588965.json",
@@ -213,7 +221,7 @@
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionDutyHoursOpeningTimes.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 17
   },
   {
     "outputFile": "StructureDefinition-EmigaDepartmentOrganization.json",
