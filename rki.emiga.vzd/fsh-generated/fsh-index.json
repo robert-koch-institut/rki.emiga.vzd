@@ -245,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaLocation.fsh",
     "startLine": 1,
-    "endLine": 136
+    "endLine": 144
   },
   {
     "outputFile": "StructureDefinition-EmigaOrganization.json",

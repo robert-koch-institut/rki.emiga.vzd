@@ -22,11 +22,18 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 
 // 'Unique code or number identifying the location to its users' - 0..* - Identifier
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-* identifier 0..0
+// Update: Wir öffnen die Identifikation des Standortes, um diesen eindeutiger zuordnen zu können
+
+* identifier 0..*
+* identifier.system 1..1  MS
+* identifier.value 1..1  MS
 
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
 * status 1..1 MS
+* status ^short = "Status"
+* status ^definition = "Aktivitätsstatus des Standortes"
+* status ^comment = "Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe"
 
 // 'The operational status of the location (typically only for a bed/room)' - 0..1 - Coding
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -36,7 +43,7 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Bezeichnung des Standortes, z.B. 'Niederlassung Berliner Str.'
 * name 0..1 MS
 * name ^short = "Bezeichnung"
-* name ^definition = "Bezeichnung des Standortes"
+* name ^definition = "Bezeichnung des Standortes , z.B. 'Niederlassung Berliner Str."
 * name obeys validString
 
 // 'A list of alternate names that the location is known as or was known as in the past' - 0..* - string
@@ -59,6 +66,7 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Entsprechend wird der Mode auf 'instance' gesetzt.
 * mode 1..1 MS
 * mode = #instance
+* mode ^comment = "Wir wollen im Verzeichnis lediglich tatsächliche Standorte verwalten. Typen/Arten von Standorten sind nicht von Interesse."
 
 // 'Type of function performed' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
