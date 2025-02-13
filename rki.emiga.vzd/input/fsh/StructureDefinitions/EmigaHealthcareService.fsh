@@ -109,7 +109,32 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * photo 0..0
 
 // 'Contacts related to the healthcare service' - 0..* - ContactPoint
-* telecom 0.. 
+* telecom 0.. MS
+* telecom ^slicing.discriminator.type = #value
+* telecom ^slicing.discriminator.path = "system"
+* telecom ^slicing.rules = #closed
+* telecom ^definition = "Kontaktangaben der Dienstleistung. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
+* telecom contains
+    Email 0..* and
+    Phone 0..* and
+    Url 0..* and
+    Fax 0..*
+* telecom[Email].system 1.. MS
+* telecom[Email].system = #email (exactly)
+* telecom[Email].value 1.. MS
+* telecom[Email].value obeys validEmailAddress
+* telecom[Phone].system 1.. MS
+* telecom[Phone].system = #phone (exactly)
+* telecom[Phone].value 1.. MS
+* telecom[Phone].value obeys validPhoneNumber
+* telecom[Url].system 1.. MS
+* telecom[Url].system = #url (exactly)
+* telecom[Url].value 1.. MS
+* telecom[Url].value obeys validUrl
+* telecom[Fax].system 1.. MS
+* telecom[Fax].system = #fax (exactly)
+* telecom[Fax].value 1.. MS
+* telecom[Fax].value obeys validFaxNumber
 
 // 'Location(s) service is intended for/available to' - 0..* - Reference(Location)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
