@@ -15,10 +15,11 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 
 * name = "Test_Invariant"
 * comment = "diverse Angebote, Präventionsberatung"
-* telecom[0].system = #email
-* telecom[=].value = "testinvMS.NI.de"
-* telecom[+].system = #phone
-* telecom[=].value = "54548797999"
+
+* telecom[Email].system = #email
+* telecom[Email].value = "testinvMS.NI.de"
+* telecom[Phone].system = #phone
+* telecom[Phone].value = "54548797999"
 
 * availableTime.daysOfWeek[0] = #mon
 * availableTime.daysOfWeek[+] = #tue

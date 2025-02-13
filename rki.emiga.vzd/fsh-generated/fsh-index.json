@@ -85,7 +85,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\EpiWarnHealthcareServiceInvTest.fsh",
     "startLine": 1,
-    "endLine": 34
+    "endLine": 35
   },
   {
     "outputFile": "Location-44588965.json",
@@ -237,7 +237,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 169
+    "endLine": 194
   },
   {
     "outputFile": "StructureDefinition-EmigaLocation.json",

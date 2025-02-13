@@ -9,7 +9,7 @@ CodeSystem-responsibilityType.json                        ResponsibilityType    
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
 HealthcareService-44588973.json                           44588973                         Instance    Examples\HealthcareService-44588973.fsh                            1 - 30
 HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareService         Instance    Examples\EpiWarnHealthcareService.fsh                              1 - 33
-HealthcareService-EpiWarnHealthcareServiceInvTest.json    EpiWarnHealthcareServiceInvTest  Instance    Examples\EpiWarnHealthcareServiceInvTest.fsh                       1 - 34
+HealthcareService-EpiWarnHealthcareServiceInvTest.json    EpiWarnHealthcareServiceInvTest  Instance    Examples\EpiWarnHealthcareServiceInvTest.fsh                       1 - 35
 Location-44588965.json                                    44588965                         Instance    Examples\Location-44588965.fsh                                     1 - 19
 Location-EpiWarnLocation.json                             EpiWarnLocation                  Instance    Examples\LocationEpiWarn.fsh                                       1 - 20
 NamingSystem-CodeSiteId.json                              CodeSiteId                       Instance    NamingSystem\CodeSiteId.fsh                                        1 - 12
@@ -28,7 +28,7 @@ PractitionerRole-44588971.json                            44588971              
 PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRole          Instance    Examples\PractitionerRoleEpiWarn.fsh                               1 - 12
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 17
 StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 206
-StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 169
+StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 194
 StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 144
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 200
 StructureDefinition-EmigaPractitioner.json                EmigaPractitioner                Profile     StructureDefinitions\EmigaPractitioner.fsh                         1 - 90
