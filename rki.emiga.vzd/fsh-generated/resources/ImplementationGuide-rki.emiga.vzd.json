@@ -24,13 +24,13 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.0",
+      "version": "1.5.2-snapshots",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
     {
       "packageId": "rki.demis.common",
-      "version": "1.0.2",
+      "version": "2.0.0-snapshots",
       "uri": "https://demis.rki.de/fhir/common",
       "id": "rki_demis_common"
     },
