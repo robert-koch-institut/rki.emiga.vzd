@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
     "startLine": 1,
-    "endLine": 167
+    "endLine": 181
   },
   {
     "outputFile": "CodeSystem-OrganizationType.json",

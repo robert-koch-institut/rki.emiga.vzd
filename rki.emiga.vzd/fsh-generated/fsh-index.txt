@@ -1,7 +1,7 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
-CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 167
+CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 181
 CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 107
 CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 87
 CodeSystem-Relevance.json                                 Relevance                        CodeSystem  CodeSystem\Relevance.fsh                                           1 - 12
