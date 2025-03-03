@@ -2,7 +2,7 @@ Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
 Title: "Organization"
-Description: "TODO"
+Description: "Unter der EmigaOrganization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
 * ^version = "1.0.0"
 * ^date = "2024-12-12"
@@ -103,6 +103,7 @@ Description: "TODO"
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
+* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
   * insert StrictCodableConcept
 * type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
   * insert StrictCodableConcept

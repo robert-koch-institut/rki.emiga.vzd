@@ -281,7 +281,7 @@
           "reference": "StructureDefinition/EmigaDepartmentOrganization"
         },
         "name": "Fachabteilung",
-        "description": "TODO",
+        "description": "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort).",
         "exampleBoolean": false
       },
       {
@@ -329,7 +329,7 @@
           "reference": "StructureDefinition/EmigaOrganization"
         },
         "name": "Organization",
-        "description": "TODO",
+        "description": "Unter der EmigaOrganization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
         "exampleBoolean": false
       },
       {

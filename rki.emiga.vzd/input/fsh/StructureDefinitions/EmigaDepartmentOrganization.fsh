@@ -2,7 +2,7 @@ Profile: EmigaDepartmentOrganization
 Parent: Organization
 Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
-Description: "TODO"
+Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
 * ^version = "1.0.0"
 * ^date = "2024-03-12"
