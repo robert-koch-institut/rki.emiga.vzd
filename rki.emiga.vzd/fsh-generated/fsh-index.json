@@ -37,7 +37,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
     "startLine": 1,
-    "endLine": 87
+    "endLine": 107
   },
   {
     "outputFile": "CodeSystem-Relevance.json",
@@ -325,7 +325,7 @@
     "fshType": "ValueSet",
     "fshFile": "ValueSet\\HealthcareServiceSpecialty.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 14
   },
   {
     "outputFile": "ValueSet-HealthcareServiceType.json",
@@ -348,8 +348,8 @@
     "fshName": "PractitionerRole",
     "fshType": "ValueSet",
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
-    "startLine": 94,
-    "endLine": 101
+    "startLine": 120,
+    "endLine": 132
   },
   {
     "outputFile": "ValueSet-PublicHealthOrganizationType.json",

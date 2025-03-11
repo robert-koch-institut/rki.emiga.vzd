@@ -321,7 +321,7 @@
           "reference": "StructureDefinition/IdentifierEmigaOrgvId"
         },
         "name": "Identifier-Profil EmigaOrgvId",
-        "description": "TODO",
+        "description": "Identifier Profil für EmigaOrgvId",
         "exampleBoolean": false
       },
       {
@@ -393,7 +393,7 @@
           "reference": "StructureDefinition/EmigaPublicHealthOrganization"
         },
         "name": "ÖGD Organization",
-        "description": "TODO",
+        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen.",
         "exampleBoolean": false
       },
       {
