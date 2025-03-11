@@ -179,3 +179,4 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #medEmergencyResponse ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #medEmergencyResponse ^designation[=].use = $HL7DesignationUse#display
 * #medEmergencyResponse ^designation[=].value = "medical emergency response"
+
