@@ -1,241 +1,305 @@
 **feat: CS PractitionerRole - Add new Codes after Internal Comments / VS PractitionerRole - Add new Code other/sonstige**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-PractitionerRole.json
-rki.emiga.vzd/fsh-generated/resources/ValueSet-PractitionerRole.json
+
+CodeSystem-PractitionerRole.json
+ValueSet-PractitionerRole.json
 
 **feat: VS HealthCareServiceSpecialty Add code "other"/Sonstige**
-rki.emiga.vzd/input/fsh/ValueSet/HealthcareServiceSpecialty.fsh
+
+ValueSet/HealthcareServiceSpecialty.json
 
 **feat: Add new codes after internal comments**
-rki.emiga.vzd/input/fsh/CodeSystem/HealthcareServiceSpecialty.fsh
+
+ CodeSystem/HealthcareServiceSpecialty.json
 
 **feat: Updated dependencies**
-rki.emiga.vzd/sushi-config.yaml
+
+ sushi-config.yaml
 
 **feat: Add telecom MS, slice**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
+
+ StructureDefinitions/EmigaHealthcareService.json
 
 **feat: Open Location.identifier**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaLocation.fsh
+
+ StructureDefinitions/EmigaLocation.json
 
 **feat: Add strict value.system/code, add system.value**
-rki.emiga.vzd/input/fsh/StructureDefinitions/ExtensionDutyHoursOpeningTimes.fsh
+
+ StructureDefinitions/ExtensionDutyHoursOpeningTimes.json
 
 **feat: add dependency to rki.emiga.common 1.1.0-alpha.1**
-rki.emiga.vzd/fsh-generated/resources/ImplementationGuide-rki.emiga.vzd.json
-rki.emiga.vzd/sushi-config.yaml
+
+ sushi-config.yaml
 
 **feat: strict cardinality on identifier**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **feat: Add Identifier emigaOrgvId**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
+ StructureDefinitions/EmigaOrganization.json
 
 **feat: Add identifier EmigaOrgvId**
-rki.emiga.vzd/input/fsh/StructureDefinitions/IdentifierEmigaOrgvId.fsh
+
+ StructureDefinitions/IdentifierEmigaOrgvId.json
 
 **feat: Add NamingSystem EmigaOrgvId**
-rki.emiga.vzd/input/fsh/NamingSystem/EmigaId.fsh
+
+ NamingSystem/EmigaId.json
 
 **feat: Add identifier telematikID in Organization Profiles**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
+ StructureDefinitions/EmigaOrganization.json
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **feat: Add extension Period in Organization Profiles**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
+ StructureDefinitions/EmigaOrganization.json
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **feat: Add version in meta.profile**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaLocation.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPractitioner.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPractitionerRole.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
+ StructureDefinitions/EmigaHealthcareService.json
+ StructureDefinitions/EmigaLocation.json
+ StructureDefinitions/EmigaOrganization.json
+ StructureDefinitions/EmigaPractitioner.json
+ StructureDefinitions/EmigaPractitionerRole.json
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **feat: add address.state MS**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaLocation.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
+ StructureDefinitions/EmigaLocation.json
+ StructureDefinitions/EmigaOrganization.json
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **feat: slice HealthcareService.type**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
+
+ StructureDefinitions/EmigaHealthcareService.json
 
 **feat: outcomment ihe fachrichtung codes**
-rki.emiga.vzd/input/fsh/ValueSet/HealthcareServiceSpecialty.fsh
+
+ ValueSet/HealthcareServiceSpecialty.json
 
 **feat: Add VS HealthcareService Specialty**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-OrganizationType.json
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-PractitionerRole.json
-rki.emiga.vzd/fsh-generated/resources/ImplementationGuide-rki.emiga.vzd.json
-rki.emiga.vzd/fsh-generated/resources/ValueSet-OrganizationType.json
+
+ CodeSystem-OrganizationType.json
+ CodeSystem-PractitionerRole.json
+ ValueSet-OrganizationType.json
 
 **feat: Add VS ServiceType**
-rki.emiga.vzd/input/fsh/ValueSet/HealthcareServiceType.fsh
+
+ ValueSet/HealthcareServiceType.json
 
 **fix: remove unused VS**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-ParentSite.json
-rki.emiga.vzd/fsh-generated/resources/ValueSet-AuthorityType.json
-rki.emiga.vzd/input/fsh/ValueSet/AuthorityType.fsh
+
+ StructureDefinition-ParentSite.json
+ ValueSet-AuthorityType.json
+ ValueSet/AuthorityType.json
 
 **feat: Add MetadataProfile**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaLocation.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPractitioner.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPractitionerRole.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
+ StructureDefinitions/EmigaHealthcareService.json
+ StructureDefinitions/EmigaLocation.json
+ StructureDefinitions/EmigaOrganization.json
+ StructureDefinitions/EmigaPractitioner.json
+ StructureDefinitions/EmigaPractitionerRole.json
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **fix: remove unsused Extension**
-rki.emiga.vzd/input/fsh/StructureDefinitions/ExtensionParentSite.fsh
+
+ StructureDefinitions/ExtensionParentSite.json
 
 **feat: Add CS HealthcareServiceSpecialty**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-OrganizationType.json
-rki.emiga.vzd/input/fsh/CodeSystem/HealthcareServiceSpecialty.fsh
+
+ CodeSystem-OrganizationType.json
+ CodeSystem/HealthcareServiceSpecialty.json
 
 **feat: loosen cardinality, reference emigalocation, set invariant**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
+
+ StructureDefinitions/EmigaHealthcareService.json
 
 **feat: Add EmigaLocationProfile**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaLocation.fsh
+
+ StructureDefinitions/EmigaLocation.json
 
 **feat: tighten partOf cardinality to 1..1**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-AuthorityOrganization.json
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
+
+ StructureDefinition-AuthorityOrganization.json
+ StructureDefinitions/EmigaDepartmentOrganization.json
 
 **feat: Add Profile EmigaPractitioner**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPractitioner.fsh
+
+ StructureDefinitions/EmigaPractitioner.json
 
 **feat: Add Profile EmigaPractitionerRole**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPractitionerRole.fsh
+
+ StructureDefinitions/EmigaPractitionerRole.json
 
 **feat: Add type VS to harmonize with isik**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
+
+ StructureDefinitions/EmigaOrganization.json
 
 **feat: add VS OrganizationType**
-rki.emiga.vzd/fsh-generated/resources/ValueSet-OrganizationType.json
+
+ ValueSet-OrganizationType.json
 
 **feat: CSW DutyHours**
-rki.emiga.vzd/input/fsh/CodeSystem/HealthcareServiceDutyHours.fsh
+
+ CodeSystem/HealthcareServiceDutyHours.json
 
 **feat: Add codes for epiwarn**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-PractitionerRole.json
+
+ CodeSystem-PractitionerRole.json
 
 **feat: open slicing category, add extension, open specialty**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
+
+ StructureDefinitions/EmigaHealthcareService.json
 
 **feat: Add extension**
-rki.emiga.vzd/input/fsh/StructureDefinitions/ExtensionDutyHoursOpeningTimes.fsh
+
+ StructureDefinitions/ExtensionDutyHoursOpeningTimes.json
 
 **feat: Add Codes in OrganizationType CS**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-OrganizationType.json
-rki.emiga.vzd/input/fsh/CodeSystem/OrganizationType.fsh
+
+ CodeSystem-OrganizationType.json
+
 
 **feat: rename Department Organization Profile with Emiga prefix**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaDepartmentOrganization.fsh
+
+ StructureDefinitions/EmigaDepartmentOrganization.json
 
 **feat: add DemisOrgType in VS**
-rki.emiga.vzd/fsh-generated/resources/ValueSet-OrganizationType.json
+
+ ValueSet-OrganizationType.json
 
 **feat: add dependency emiga common**
-rki.emiga.vzd/sushi-config.yaml
+
+ sushi-config.yaml
 
 **fix: reference fhir core Organization instead of base**
-rki.emiga.vzd/input/fsh/StructureDefinitions/BaseEndpoint.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/BaseHealthcareService.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/BaseLocation.fsh
-rki.emiga.vzd/input/fsh/StructureDefinitions/BasePractitionerRole.fsh
+
+ StructureDefinitions/BaseEndpoint.json
+ StructureDefinitions/BaseHealthcareService.json
+ StructureDefinitions/BaseLocation.json
+ StructureDefinitions/BasePractitionerRole.json
 
 **feat: Remove BaseOrganization, replaced by specified Profiles**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-BaseOrganization.json
+
+ StructureDefinition-BaseOrganization.json
 
 **feat: Add demisParticipantId identifier**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
+
+ StructureDefinitions/EmigaOrganization.json
 
 **feat: Add CS and VS Relevance for meta.tag**
-rki.emiga.vzd/input/fsh/CodeSystem/Relevance.fsh
+
+ CodeSystem/Relevance.json
 
 **fix: Rename PublicHealthOrganization to comply with prefix**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh
+
+ StructureDefinitions/EmigaPublicHealthOrganization.json
 
 **feat: Rename Healthcare Organization, generalize Profile for all types of organizations**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaOrganization.fsh
+
+ StructureDefinitions/EmigaOrganization.json
 
 **feat: Open HealthcareService.type Add VS ServiceType**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
+
+ StructureDefinitions/EmigaHealthcareService.json
 
 **feat: Add EmigaHealthcareService Profile**
-rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaHealthcareService.fsh
+
+ StructureDefinitions/EmigaHealthcareService.json
 
 **feat: add identifier, change title**
-rki.emiga.vzd/input/fsh/StructureDefinitions/AuthorityOrganization.fsh
+
+ StructureDefinitions/AuthorityOrganization.json
 
 **feat: add department organization profile**
-rki.emiga.vzd/input/fsh/StructureDefinitions/DepartmentOrganization.fsh
+
+ StructureDefinitions/DepartmentOrganization.json
 
 **feat: change Naming System name to align with requirements**
-rki.emiga.vzd/input/fsh/NamingSystem/IfsgKoordVwVId.fsh
+
+ NamingSystem/IfsgKoordVwVId.json
 
 **feat: change identifier name to align with official name**
-rki.emiga.vzd/input/fsh/StructureDefinitions/IdentifierIfsgKoordVwVId.fsh
+
+ StructureDefinitions/IdentifierIfsgKoordVwVId.json
 
 **feat: add prefix MS**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-BasePractitioner.json
+
+ StructureDefinition-BasePractitioner.json
 
 **feat: Add Identifier MS, change type binding to VS PublicHealthOrganizationType**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-PublicHealthOrganization.json
+
+ StructureDefinition-PublicHealthOrganization.json
 
 **feat: VS PublicHealth OrganizationType**
-rki.emiga.vzd/input/fsh/ValueSet/PublicHealthOrganizationType.fsh
+
+ ValueSet/PublicHealthOrganizationType.json
 
 **feat: Add MS in identifier,rename slice to match baseorganization slice**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-AuthorityOrganization.json
-rki.emiga.vzd/input/fsh/StructureDefinitions/AuthorityOrganization.fsh
+
+ StructureDefinition-AuthorityOrganization.json
+ StructureDefinitions/AuthorityOrganization.json
 
 **Update: Change basedefinition to Organization**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-AuthorityOrganization.json
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-PublicHealthOrganization.json
+
+ StructureDefinition-AuthorityOrganization.json
+ StructureDefinition-PublicHealthOrganization.json
 
 **Update: open endpoint**
-rki.emiga.vzd/input/fsh/StructureDefinitions/BaseOrganization.fsh
+
+ StructureDefinitions/BaseOrganization.json
 
 **Update: Add CS code for Oberste Bundesbehörde**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-OrganizationType.json
+
+ CodeSystem-OrganizationType.json
 
 **Add: Identifier EpiWarnId**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-IdentifierEpiWarnId.json
+
+ StructureDefinition-IdentifierEpiWarnId.json
 
 **Add: Identifier EpiWarnID**
-rki.emiga.vzd/fsh-generated/resources/NamingSystem-EpiWarnId.json
+
+ NamingSystem-EpiWarnId.json
 
 **Add: VS AuthorityType**
-rki.emiga.vzd/fsh-generated/resources/ValueSet-AuthorityType.json
+
+ ValueSet-AuthorityType.json
 
 **Add: Profile HealthcarOrganization**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-HealthCareOrganization.json
+
+ StructureDefinition-HealthCareOrganization.json
 
 **Update: Dependency de.basisprofil to recent version 1.5.0**
-rki.emiga.vzd/sushi-config.yaml
 
-**Add: Example Organization44588980**
-rki.emiga.vzd/fsh-generated/resources/Organization-44588980.json
+ sushi-config.yaml
+
 
 **Update: Remove extension ResponsibilityHealthdepartments, open slicing, allow contact, allow endpoint**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-BaseOrganization.json
+
+ StructureDefinition-BaseOrganization.json
 
 **Add: Profile PublicHealthOrganization**
-rki.emiga.vzd/fsh-generated/resources/StructureDefinition-PublicHealthOrganization.json
+
+ StructureDefinition-PublicHealthOrganization.json
 
 **Update: Change VS Version and date**
-rki.emiga.vzd/fsh-generated/resources/ValueSet-OrganizationType.json
+
+ ValueSet-OrganizationType.json
 
 **Update: Change CS Version to 1.1.0**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-OrganizationType.json
+
+ CodeSystem-OrganizationType.json
 
 **Fix: Change code:display from ls:Landesstelle to lb:Landesbehörde**
-rki.emiga.vzd/fsh-generated/resources/CodeSystem-OrganizationType.json
+
+ CodeSystem-OrganizationType.json
