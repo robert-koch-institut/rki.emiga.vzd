@@ -82,7 +82,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #airPortMedServ ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #airPortMedServ ^designation[=].value = "Hafen- und/oder Flughafen-ärztlicher Dienst"
 */
-* #expertWitness "Sachverständiger/Sachverständigerin"
+* #expertWitness "Sachverständiger/Sachverständige"
 /*
 * #expertWitness ^designation[0].language = #de-DE  
 * #expertWitness ^designation[=].use = $ConceptDesignationUse#abbreviation
