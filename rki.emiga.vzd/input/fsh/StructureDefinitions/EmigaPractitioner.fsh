@@ -33,7 +33,9 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 * name 1..1 MS
 * name only $humanname-de-basis
 * name.family 1.. MS  
-* name.family.extension[nachname] obeys validString
+* name.family.extension[namenszusatz].valueString obeys validString
+* name.family.extension[nachname].valueString obeys validString
+* name.family.extension[vorsatzwort].valueString obeys validString
 * name.given 1.. MS  
 * name.given obeys validString
 * name.prefix MS

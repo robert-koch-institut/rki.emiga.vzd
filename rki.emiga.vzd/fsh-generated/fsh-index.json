@@ -261,7 +261,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPractitioner.fsh",
     "startLine": 1,
-    "endLine": 90
+    "endLine": 92
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitionerRole.json",
