@@ -9,7 +9,7 @@ name: rki.emiga.vzd
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 1.0.0-alpha.1
+version: 2.0.0-alpha.3
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -28,6 +28,7 @@ dependencies:
   de.basisprofil.r4: 1.5.2-snapshots
   rki.demis.common: 2.0.0-snapshots
   rki.emiga.common: 1.1.0-alpha.1 
+  rki.emiga.orgv: 1.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
