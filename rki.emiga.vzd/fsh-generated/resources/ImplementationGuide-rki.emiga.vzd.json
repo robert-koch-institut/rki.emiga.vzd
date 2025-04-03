@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-  "version": "1.0.0-alpha.1",
+  "version": "2.0.0-alpha.3",
   "name": "rkiemigavzd",
   "status": "draft",
   "publisher": "Robert Koch Institut",
@@ -39,6 +39,12 @@
       "version": "1.1.0-alpha.1",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
+    },
+    {
+      "packageId": "rki.emiga.orgv",
+      "version": "1.1.0",
+      "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
+      "id": "rki_emiga_orgv"
     }
   ],
   "definition": {
