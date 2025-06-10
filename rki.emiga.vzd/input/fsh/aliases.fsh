@@ -52,11 +52,12 @@ Alias: $nullflavour = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
 Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
 
-Alias: $BundleIdCS = https://emiga.rki.de/fhir/CodeSystem/BundleId
-Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/BundleId
+Alias: $BundleIdCS = https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId
+Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
 
-Alias: $BundleVersionCS = https://emiga.rki.de/fhir/CodeSystem/BundleVersion
-Alias: $BundleVersionVS = https://emiga.rki.de/fhir/ValueSet/BundleVersion
+Alias: $BundleVersionCS = https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion
+Alias: $BundleVersionVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion
+
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
 //Alias: $VSArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/ValueSet/ArtDerZustaendigkeit
