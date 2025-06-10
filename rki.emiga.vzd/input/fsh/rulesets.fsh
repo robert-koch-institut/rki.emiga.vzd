@@ -53,13 +53,23 @@ RuleSet: ProfileMetaTags
 * meta.tag ^slicing.discriminator.type = #pattern
 * meta.tag ^slicing.discriminator.path = "system"
 * meta.tag ^slicing.rules = #open
-* meta.tag contains relevance 0..* MS
+* meta.tag contains relevance 0..* MS and 
+    bundleId 0..1 MS and bundleVersion 0..1 MS
 * meta.tag[relevance] from $RelevanceVS (required)
 * meta.tag[relevance].system 1.. MS
 * meta.tag[relevance].system = $RelevanceCS
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
-
+* meta.tag[bundleId] from $BundleIdVS (preferred)
+* meta.tag[bundleId].system 1.. MS
+* meta.tag[bundleId].system = $BundleIdCS
+* meta.tag[bundleId].code 1.. 
+* meta.tag[bundleId].display MS
+* meta.tag[bundleVersion] from $BundleVersionVS (preferred)
+* meta.tag[bundleVersion].system 1.. MS
+* meta.tag[bundleVersion].system = $BundleVersionCS 
+* meta.tag[bundleVersion].code 1.. MS
+* meta.tag[bundleVersion].display MS
 
 RuleSet: ProfileMetaProfileTags
 * meta.profile ^slicing.discriminator.type = #value
