@@ -100,7 +100,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
     einrichtungsArt 0..1 MS and
     erweiterterFachabteilungsschluessel 0..1 MS
 * type[emigaOrganizationType] from OrganizationType (required)
-  * ^patternCodeableConcept.coding.system = $OrganizationType
+//  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
 * type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
