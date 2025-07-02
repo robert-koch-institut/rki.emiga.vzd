@@ -99,7 +99,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
   * insert StrictCodableConcept
   */
 * type[emigaOrganizationType] from OrganizationType (required)
-  * ^patternCodeableConcept.coding.system = $OrganizationType
+//  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[organizationType] = $hl7-organization-type#dept
 //* type[organizationType] ^definition = "TODO: Ein beschreibung über den feste Kode dept schreiben"
