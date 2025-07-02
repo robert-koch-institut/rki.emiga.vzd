@@ -12,6 +12,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 * insert ProfileSecurityTags
 
 * insert ProfileMetaProfileTags
+* insert MetaTagOrgVBundle
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
