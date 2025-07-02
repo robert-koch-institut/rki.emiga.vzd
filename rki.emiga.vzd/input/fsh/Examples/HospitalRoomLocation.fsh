@@ -21,6 +21,10 @@ Description: "Beispiel eines Raums in einer Krankenhaus."
 * status = #active
 * name = "Raum 101 am Test-Krankenhaus"
 * mode = #instance
+
+* operationalStatus.system = "http://terminology.hl7.org/CodeSystem/v2-0116"
+* operationalStatus.code = #I
+* operationalStatus.display = "Isoliert"
 /*
 * type.coding.system = $IneKFacilityTypeCS 
 * type.coding.code = #15
