@@ -54,22 +54,39 @@ RuleSet: ProfileMetaTags
 * meta.tag ^slicing.discriminator.path = "system"
 * meta.tag ^slicing.rules = #open
 * meta.tag contains relevance 0..* MS and 
-    bundleId 0..1 MS and bundleVersion 0..1 MS
+    orgvBundleId 0..1 MS and orgvBundleVersion 0..1 MS
 * meta.tag[relevance] from $RelevanceVS (required)
 * meta.tag[relevance].system 1.. MS
 * meta.tag[relevance].system = $RelevanceCS
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
-* meta.tag[bundleId] from $BundleIdVS (preferred)
-* meta.tag[bundleId].system 1.. MS
-* meta.tag[bundleId].system = $BundleIdCS
-* meta.tag[bundleId].code 1.. 
-* meta.tag[bundleId].display MS
-* meta.tag[bundleVersion] from $BundleVersionVS (preferred)
-* meta.tag[bundleVersion].system 1.. MS
-* meta.tag[bundleVersion].system = $BundleVersionCS 
-* meta.tag[bundleVersion].code 1.. MS
-* meta.tag[bundleVersion].display MS
+* meta.tag[orgvBundleId] from $BundleIdVS (preferred)
+* meta.tag[orgvBundleId].system 1.. MS
+* meta.tag[orgvBundleId].system = $BundleIdCS
+* meta.tag[orgvBundleId].code MS 
+* meta.tag[orgvBundleId].display MS
+* meta.tag[orgvBundleVersion] from $BundleVersionVS (preferred)
+* meta.tag[orgvBundleVersion].system 1.. MS
+* meta.tag[orgvBundleVersion].system = $BundleVersionCS 
+* meta.tag[orgvBundleVersion].code MS
+* meta.tag[orgvBundleVersion].display MS
+
+RuleSet: MetaTagOrgVBundle
+* meta.tag MS
+* meta.tag ^slicing.discriminator.type = #pattern
+* meta.tag ^slicing.discriminator.path = "system"
+* meta.tag ^slicing.rules = #open
+* meta.tag contains orgvBundleId 0..1 MS and orgvBundleVersion 0..1 MS
+* meta.tag[orgvBundleId] from $BundleIdVS (preferred)
+* meta.tag[orgvBundleId].system 1.. MS
+* meta.tag[orgvBundleId].system = $BundleIdCS
+* meta.tag[orgvBundleId].code MS 
+* meta.tag[orgvBundleId].display MS
+* meta.tag[orgvBundleVersion] from $BundleVersionVS (preferred)
+* meta.tag[orgvBundleVersion].system 1.. MS
+* meta.tag[orgvBundleVersion].system = $BundleVersionCS 
+* meta.tag[orgvBundleVersion].code MS
+* meta.tag[orgvBundleVersion].display MS
 
 RuleSet: ProfileMetaProfileTags
 * meta.profile ^slicing.discriminator.type = #value
