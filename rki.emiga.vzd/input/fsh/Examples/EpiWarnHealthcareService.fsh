@@ -3,7 +3,7 @@ InstanceOf: EmigaHealthcareService
 Usage: #example
 Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist" 
 * meta.security[visibility] = $ResourceVisibilityType#public
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
 * active = true
 * providedBy = Reference(EpiWarnOrganization)
