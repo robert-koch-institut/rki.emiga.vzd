@@ -24,6 +24,14 @@
     "endLine": 181
   },
   {
+    "outputFile": "CodeSystem-IneKFacilityType.json",
+    "fshName": "IneKFacilityType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\IneKFacilityType.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
     "outputFile": "CodeSystem-OrgVBundleId.json",
     "fshName": "OrgVBundleId",
     "fshType": "CodeSystem",
@@ -54,14 +62,6 @@
     "fshFile": "CodeSystem\\PractitionerRole.fsh",
     "startLine": 1,
     "endLine": 24
-  },
-  {
-    "outputFile": "CodeSystem-Relevance.json",
-    "fshName": "Relevance",
-    "fshType": "CodeSystem",
-    "fshFile": "CodeSystem\\Relevance.fsh",
-    "startLine": 1,
-    "endLine": 13
   },
   {
     "outputFile": "CodeSystem-responsibilityType.json",
@@ -120,6 +120,38 @@
     "endLine": 20
   },
   {
+    "outputFile": "Location-HospitalRoomLocation.json",
+    "fshName": "HospitalRoomLocation",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HospitalRoomLocation.fsh",
+    "startLine": 1,
+    "endLine": 56
+  },
+  {
+    "outputFile": "Location-IneKStandort.json",
+    "fshName": "IneKStandort",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekStandort.fsh",
+    "startLine": 1,
+    "endLine": 50
+  },
+  {
+    "outputFile": "Location-InekEinricthung01.json",
+    "fshName": "InekEinricthung01",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekEinrichtung01.fsh",
+    "startLine": 1,
+    "endLine": 58
+  },
+  {
+    "outputFile": "Location-InekEinricthung02.json",
+    "fshName": "InekEinricthung02",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekEinrichtung02.fsh",
+    "startLine": 1,
+    "endLine": 62
+  },
+  {
     "outputFile": "NamingSystem-CodeSiteId.json",
     "fshName": "CodeSiteId",
     "fshType": "Instance",
@@ -174,6 +206,14 @@
     "fshFile": "Examples\\OrganizationEpiWarn.fsh",
     "startLine": 1,
     "endLine": 30
+  },
+  {
+    "outputFile": "Organization-InekKrankenhausOrganization.json",
+    "fshName": "InekKrankenhausOrganization",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekKrankenhaus.fsh",
+    "startLine": 1,
+    "endLine": 24
   },
   {
     "outputFile": "Practitioner-44588966.json",
@@ -264,12 +304,36 @@
     "endLine": 194
   },
   {
+    "outputFile": "StructureDefinition-EmigaHospitalFacilityLocation.json",
+    "fshName": "EmigaHospitalFacilityLocation",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalFacilityLocation.fsh",
+    "startLine": 1,
+    "endLine": 249
+  },
+  {
     "outputFile": "StructureDefinition-EmigaHospitalLocation.json",
     "fshName": "EmigaHospitalLocation",
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalLocation.fsh",
     "startLine": 1,
-    "endLine": 196
+    "endLine": 271
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHospitalOrganization.json",
+    "fshName": "EmigaHospitalOrganization",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalOrganization.fsh",
+    "startLine": 1,
+    "endLine": 207
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHospitalRoomLocation.json",
+    "fshName": "EmigaHospitalRoomLocation",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalRoomLocation.fsh",
+    "startLine": 1,
+    "endLine": 239
   },
   {
     "outputFile": "StructureDefinition-EmigaLocation.json",
@@ -309,7 +373,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 164
+    "endLine": 165
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
@@ -352,12 +416,20 @@
     "endLine": 19
   },
   {
+    "outputFile": "StructureDefinition-IneKVersionPeriod.json",
+    "fshName": "IneKVersionPeriod",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionIneKVersionPeriod.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
     "outputFile": "StructureDefinition-OrgVBundle.json",
     "fshName": "OrgVBundle",
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\OrgVBundle.fsh",
     "startLine": 3,
-    "endLine": 21
+    "endLine": 22
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
@@ -366,6 +438,14 @@
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
     "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-UTMCoordinates.json",
+    "fshName": "UTMCoordinates",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionUTMCoordinates.fsh",
+    "startLine": 1,
+    "endLine": 26
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",
@@ -398,6 +478,14 @@
     "fshFile": "ValueSet\\HealthcareServiceType.fsh",
     "startLine": 1,
     "endLine": 42
+  },
+  {
+    "outputFile": "ValueSet-IneKFacilityType.json",
+    "fshName": "IneKFacilityType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\IneKFacilityType.fsh",
+    "startLine": 1,
+    "endLine": 45
   },
   {
     "outputFile": "ValueSet-OrgVBundleId.json",
@@ -437,14 +525,6 @@
     "fshType": "ValueSet",
     "fshFile": "ValueSet\\PublicHealthOrganizationType.fsh",
     "startLine": 1,
-    "endLine": 23
-  },
-  {
-    "outputFile": "ValueSet-Relevance.json",
-    "fshName": "Relevance",
-    "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\Relevance.fsh",
-    "startLine": 15,
     "endLine": 23
   },
   {

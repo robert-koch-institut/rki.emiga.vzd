@@ -36,7 +36,7 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.1.0-alpha.1",
+      "version": "1.2.0-alpha.5-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     },
@@ -208,6 +208,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaHospitalOrganization"
+        },
+        "name": "Emiga Krankenhaus",
+        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaOrganization"
         },
         "name": "Emiga Organization",
@@ -364,6 +372,86 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/IneKFacilityType"
+        },
+        "name": "IneK Einrichtungstyp",
+        "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein Platzhalter CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die eigentlichen Codes werden in der ValueSet IneKFacilityType definiert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/IneKFacilityType"
+        },
+        "name": "IneK Einrichtungstyp (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Organization/InekKrankenhausOrganization"
+        },
+        "name": "InEK Krankenhaus Beispiel",
+        "description": "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Location/InekEinricthung01"
+        },
+        "name": "InEK Standort Beispiel",
+        "description": "Beispiel eines Standorts aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/InekEinricthung02"
+        },
+        "name": "InEK Standort Beispiel",
+        "description": "Beispiel eines Standorts aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/IneKStandort"
+        },
+        "name": "InEK Standort Beispiel",
+        "description": "Beispiel eines Standorts aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IneKVersionPeriod"
+        },
+        "name": "IneK Version Period",
+        "description": "Information about the version and validity period of a site/location from IneK.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Location/HospitalRoomLocation"
+        },
+        "name": "KH Raum Beispiel",
+        "description": "Beispiel eines Raums in einer Krankenhaus.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHospitalFacilityLocation"
+        },
+        "name": "Krankenhaus - Einrichtungsstandort",
+        "description": "TO DO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHospitalRoomLocation"
+        },
+        "name": "Krankenhaus - Raum",
+        "description": "TO DO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaHospitalLocation"
         },
         "name": "Krankenhaus-Standort",
@@ -428,14 +516,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/Relevance"
-        },
-        "name": "Relevanz",
-        "description": "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Emiga Use Cases relevanten Ressourcen kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/OrgVBundleId"
         },
         "name": "Relevanz (Werteliste)",
@@ -452,18 +532,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Relevance"
-        },
-        "name": "Relevanz (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/EmigaLocation"
         },
         "name": "Standort",
         "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/UTMCoordinates"
+        },
+        "name": "UTM Coordinates (ETRS89)",
+        "description": "Representiert die UTM-Koordinaten (ETRS89) einer Einrichtung.",
         "exampleBoolean": false
       },
       {
