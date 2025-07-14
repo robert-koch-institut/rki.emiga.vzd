@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.5"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.6"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -41,7 +41,7 @@ Description: "TO DO"
 
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Standort"
-* identifier MS
+* identifier 1..* MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
@@ -195,16 +195,16 @@ Description: "TO DO"
 
 // 'Physical form of the location' - 0..1 - code
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-/*
+
 * physicalType MS
 * physicalType.coding.system 1..1 MS
 * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
 * physicalType.coding.version MS
 * physicalType.coding.code 1..1 MS
-* physicalType.coding.code = #si
+* physicalType.coding.code = #wa
 * physicalType.coding.display MS
-* physicalType.coding.display = "Site"
-*/
+* physicalType.coding.display = "Ward"
+
 // 'The absolute geographic location' - 0..1 - BackboneElement
 // Begründung: Perspektivisch hilfreich, wenn Standorte in Karten dargestellt werden sollen und eine Ableitung über die Adresse nicht möglich oder inkorrekt ist
 * position 0..1 MS
