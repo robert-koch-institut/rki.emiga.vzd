@@ -36,7 +36,7 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.2.0-alpha.5-snapshots",
+      "version": "1.2.0-alpha.7-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     },
@@ -133,6 +133,14 @@
         },
         "name": "44588981",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AddressTypePhysicalBoth"
+        },
+        "name": "Addressentyp  (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben.",
+        "exampleBoolean": false
       },
       {
         "reference": {
@@ -375,7 +383,7 @@
           "reference": "CodeSystem/IneKFacilityType"
         },
         "name": "IneK Einrichtungstyp",
-        "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein Platzhalter CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die eigentlichen Codes werden in der ValueSet IneKFacilityType definiert.",
+        "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die Verwaltung und Publikation der IneK Einrichtungstypen erfolgt durch das Institut für das Entgeltsystem im Krankenhaus (InEK GmbH). ",
         "exampleBoolean": false
       },
       {
@@ -383,7 +391,7 @@
           "reference": "ValueSet/IneKFacilityType"
         },
         "name": "IneK Einrichtungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis.",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren.",
         "exampleBoolean": false
       },
       {
@@ -393,6 +401,14 @@
         "name": "InEK Krankenhaus Beispiel",
         "description": "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis.",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/InekPostalAddress"
+        },
+        "name": "IneK Postal Address",
+        "description": "Information about the postal address of a site/location from IneK.",
+        "exampleBoolean": false
       },
       {
         "reference": {
