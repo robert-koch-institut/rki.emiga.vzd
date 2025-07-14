@@ -57,7 +57,7 @@ Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/Extension/IneKVersionP
 Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates
 Alias: $MunicipalityKey = https://emiga.rki.de/fhir/common/Extension/MunicipalityKey
 
-
+Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress
 
 Alias: $BundleIdCS = https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId
 Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
