@@ -27,12 +27,12 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.5"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.6"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 * extension MS
-* extension contains $IneKVersionPeriod named inekVersionPeriod 0..*
+* extension contains $IneKVersionPeriod named inekVersionPeriod 0..* and $InekPostalAddress named inekPostalAddress 0..1 MS
 
 // 'Unique code or number identifying the location to its users' - 0..* - Identifier
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -40,7 +40,7 @@ Description: "TO DO"
 
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Standort"
-* identifier MS
+* identifier 1..* MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
@@ -162,8 +162,9 @@ Description: "TO DO"
 * address ^comment = "Besuchbare Anschrift des Standortes"
 * address 0..1 MS
 * address.type 1..1 MS
+* address.type from AddressTypePhysicalBoth (required)
 * address.type ^short = "Addressen-Typ"
-* address.type ^definition = "Kennzeichnet den physische Addressen-Typ, z.B. ob es sich um eine Postanschrift oder eine Besuchsadresse handelt oder beides."
+* address.type ^definition = "Kennzeichnet den physische Addressen-Typ, z.B. ob es sich um  eine Besuchsadresse handelt oder eine Postanschrift und eine Besuchsadresse."
 * address.type.value MS
 //* address.type ^comment = "Es wird benötigt um den physische Addressen-Typ zu kennzeichnen, z.B. ob es sich um eine Postanschrift oder eine Besuchsadresse handelt."
 * address.extension contains $MunicipalityKey named municipalityKey 0..1 MS
