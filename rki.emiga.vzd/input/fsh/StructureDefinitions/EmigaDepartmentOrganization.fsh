@@ -31,6 +31,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 // Update zu v2: Wir  nutzen Slicing um die verschiedenen Identifier-Typen zu unterscheiden. Addiert gematik-ID und emigaOrgvId
 // Discussion: Soll identifier pflicht sein 1..1?
+* identifier 1..* MS
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
