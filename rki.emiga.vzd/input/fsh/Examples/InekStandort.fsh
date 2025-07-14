@@ -7,10 +7,19 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.5"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.6"
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
+* extension[inekPostalAddress].valueAddress.type = #postal
+* extension[inekPostalAddress].valueAddress.line = "Am Krankenhaus 2"
+* extension[inekPostalAddress].valueAddress.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
+* extension[inekPostalAddress].valueAddress.line.extension[Strasse].valueString = "Am Krankenhaus"
+* extension[inekPostalAddress].valueAddress.line.extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
+* extension[inekPostalAddress].valueAddress.line.extension[Hausnummer].valueString = "2"
+* extension[inekPostalAddress].valueAddress.city = "Warendorf"
+* extension[inekPostalAddress].valueAddress.postalCode = "48231"
+
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "0123456789"
