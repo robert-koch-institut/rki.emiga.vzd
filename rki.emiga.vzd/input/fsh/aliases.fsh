@@ -27,7 +27,11 @@ Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/Hea
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
 Alias: $IneKFileHeaderId = https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
+
+Alias: $EmigaOrgvFileNumber = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber
+
 Alias: $EmigaOrgvId = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
+
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
@@ -64,6 +68,14 @@ Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
 
 Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleVersion
 Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
+
+Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
+
+Alias: $Fachrichtung = https://emiga.rki.de/fhir/vzd/ValueSet/Fachrichtung
+
+Alias: $Stationstyp = https://demis.rki.de/fhir/ars/ValueSet/stationstyp
+
+Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
