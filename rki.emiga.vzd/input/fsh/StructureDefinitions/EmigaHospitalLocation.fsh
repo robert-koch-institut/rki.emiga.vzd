@@ -1,7 +1,7 @@
 Profile: EmigaHospitalLocation
 Parent: Location
 Id: EmigaHospitalLocation
-Title: "Krankenhaus-Standort"
+Title: "Krankenhaus - Standort"
 Description: "TO DO"
 //
 * ^version = "0.1.0"
@@ -46,6 +46,7 @@ Description: "TO DO"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
+    emigaOrgvFileNumber 0..1 MS and
    standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    IKNR 0..1 MS and
@@ -59,6 +60,12 @@ Description: "TO DO"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
+
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
 
 * identifier[standortId] only Identifier
 * identifier[standortId] ^short = "Standort-Id"
@@ -147,8 +154,22 @@ Description: "TO DO"
 // 'Type of function performed' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
-* type 0..0
-* type ^comment = "Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
+* type MS
+* type ^short = "Standortstyp für Standorte ausserhalb von InEK-Szenarien"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+  * ^slicing.description = "slicing organization type by system"
+  * ^slicing.ordered = false
+* type contains fachrichtung 0..1 MS
+
+* type[fachrichtung] from $Fachrichtung (required)
+//* type[fachrichtung] ^patternCodeableConcept.coding.system = $Fachrichtung
+* type[fachrichtung].coding.code 1..1 MS
+* type[fachrichtung].coding.system 1..1 MS
+* type[fachrichtung].coding.display MS
+//* type 0..0
+//* type ^comment = "Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

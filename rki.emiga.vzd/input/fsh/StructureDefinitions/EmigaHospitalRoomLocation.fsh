@@ -47,6 +47,7 @@ Description: "TO DO"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
+    emigaOrgvFileNumber 0..1 MS and
    standortnummer-dkg 0..1 MS 
    
     
@@ -56,6 +57,12 @@ Description: "TO DO"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
+
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
 /*
 * identifier[standortId] only Identifier
 * identifier[standortId] ^short = "Standort-Id"
