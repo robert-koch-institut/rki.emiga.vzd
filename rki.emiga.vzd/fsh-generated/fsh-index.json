@@ -152,10 +152,26 @@
     "endLine": 62
   },
   {
+    "outputFile": "Location-Station01.json",
+    "fshName": "Station01",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Station01.fsh",
+    "startLine": 1,
+    "endLine": 58
+  },
+  {
     "outputFile": "NamingSystem-CodeSiteId.json",
     "fshName": "CodeSiteId",
     "fshType": "Instance",
     "fshFile": "NamingSystem\\CodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "NamingSystem-EmigaOrgvFileNumber.json",
+    "fshName": "EmigaOrgvFileNumber",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\EmigaOrgvFileNumber.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -293,7 +309,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
     "startLine": 1,
-    "endLine": 207
+    "endLine": 215
   },
   {
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",
@@ -309,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalFacilityLocation.fsh",
     "startLine": 1,
-    "endLine": 249
+    "endLine": 270
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalLocation.json",
@@ -317,7 +333,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalLocation.fsh",
     "startLine": 1,
-    "endLine": 272
+    "endLine": 293
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalOrganization.json",
@@ -325,7 +341,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalOrganization.fsh",
     "startLine": 1,
-    "endLine": 207
+    "endLine": 225
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalRoomLocation.json",
@@ -333,7 +349,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalRoomLocation.fsh",
     "startLine": 1,
-    "endLine": 239
+    "endLine": 246
   },
   {
     "outputFile": "StructureDefinition-EmigaLocation.json",
@@ -341,7 +357,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaLocation.fsh",
     "startLine": 1,
-    "endLine": 144
+    "endLine": 164
   },
   {
     "outputFile": "StructureDefinition-EmigaOrganization.json",
@@ -349,7 +365,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 201
+    "endLine": 209
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitioner.json",
@@ -380,6 +396,14 @@
     "fshName": "IdentifierCodeSiteId",
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\IdentifierCodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierEmigaOrgvFileNumber.json",
+    "fshName": "IdentifierEmigaOrgvFileNumber",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierEmigaOrgvFileNumber.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -462,6 +486,14 @@
     "fshFile": "ValueSet\\AddressTypePhysicalBoth.fsh",
     "startLine": 1,
     "endLine": 12
+  },
+  {
+    "outputFile": "ValueSet-Fachrichtung.json",
+    "fshName": "Fachrichtung",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\Fachrichtung.fsh",
+    "startLine": 1,
+    "endLine": 18
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",

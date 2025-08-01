@@ -27,8 +27,9 @@ publisher:
 dependencies:
   de.basisprofil.r4: 1.4.0
   rki.demis.common: 2.0.0-snapshots
-  rki.emiga.common: 1.2.0-alpha.7-snapshots
+  rki.emiga.common: 1.2.0-alpha.8-snapshots
   rki.emiga.orgv: 1.1.1
+  rki.demis.ars: 1.0.0-alpha.1-snapshots
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode

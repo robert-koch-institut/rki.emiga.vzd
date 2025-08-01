@@ -36,7 +36,7 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.2.0-alpha.7-snapshots",
+      "version": "1.2.0-alpha.8-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     },
@@ -45,6 +45,12 @@
       "version": "1.1.1",
       "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
       "id": "rki_emiga_orgv"
+    },
+    {
+      "packageId": "rki.demis.ars",
+      "version": "1.0.0-alpha.1-snapshots",
+      "uri": "http://fhir.org/packages/rki.demis.ars/ImplementationGuide/rki.demis.ars",
+      "id": "rki_demis_ars"
     }
   ],
   "definition": {
@@ -160,6 +166,14 @@
       },
       {
         "reference": {
+          "reference": "Location/Station01"
+        },
+        "name": "Beispiel eines Stationsstandorts",
+        "description": "Beispiel eines Standorts, der eine Station in einem Krankenhaus beschreibt.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
+      },
+      {
+        "reference": {
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
@@ -216,18 +230,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/EmigaHospitalOrganization"
+          "reference": "NamingSystem/EmigaOrgvFileNumber"
         },
-        "name": "Emiga Krankenhaus",
-        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/EmigaOrganization"
-        },
-        "name": "Emiga Organization",
-        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+        "name": "EMIGA Organizationsverzeichnis Aktenzeichen",
+        "description": "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -236,22 +242,6 @@
         },
         "name": "Emiga Organizationsverzeichnis ID",
         "description": "Emiga Organizationsverzeichnis ID to be used in Identifiers",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/EmigaPractitioner"
-        },
-        "name": "EmigaPractitioner",
-        "description": "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/EmigaPractitionerRole"
-        },
-        "name": "EmigaPractitionerRole",
-        "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
         "exampleBoolean": false
       },
       {
@@ -316,6 +306,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/Fachrichtung"
+        },
+        "name": "Fachrichtung (Werteliste)",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/HealthcareServiceSpecialty"
         },
         "name": "Fachspezialisierung",
@@ -344,6 +342,14 @@
         },
         "name": "Identifier-Profil EmigaOrgvId",
         "description": "Identifier Profil für EmigaOrgvId",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IdentifierEmigaOrgvFileNumber"
+        },
+        "name": "Identifier-Profil Orgv Aktenzeichen",
+        "description": "Identifier Profil für EMIGA Organizationsverzeichnis Aktenzeichen",
         "exampleBoolean": false
       },
       {
@@ -452,9 +458,17 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaHospitalOrganization"
+        },
+        "name": "Krankenhaus",
+        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaHospitalFacilityLocation"
         },
-        "name": "Krankenhaus - Einrichtungsstandort",
+        "name": "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis ab oder Stationen eines Krankenhauses ab",
         "description": "TO DO",
         "exampleBoolean": false
       },
@@ -470,7 +484,7 @@
         "reference": {
           "reference": "StructureDefinition/EmigaHospitalLocation"
         },
-        "name": "Krankenhaus-Standort",
+        "name": "Krankenhaus - Standort",
         "description": "TO DO",
         "exampleBoolean": false
       },
@@ -496,6 +510,14 @@
         },
         "name": "Organisationstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaOrganization"
+        },
+        "name": "Organization",
+        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
         "exampleBoolean": false
       },
       {
@@ -528,6 +550,22 @@
         },
         "name": "Personenrolle (Werteliste)",
         "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaPractitioner"
+        },
+        "name": "Practitioner",
+        "description": "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaPractitionerRole"
+        },
+        "name": "Practitioner Role",
+        "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
         "exampleBoolean": false
       },
       {
