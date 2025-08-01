@@ -6,7 +6,7 @@ Description: "Beispiel eines Raums in einer Krankenhaus."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.tag[relevance] = $RelevanceCS#LDAP "Durch OEGD angelegt"
+* meta.tag[relevance] = $RelevanceCS#UserCreated "Durch OEGD angelegt"
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation|2.0.0-alpha.6"
 //* extension[InekVersionPeriod].extension[version].valueInteger = 3
 //* extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
