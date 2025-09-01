@@ -325,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalFacilityLocation.fsh",
     "startLine": 1,
-    "endLine": 270
+    "endLine": 275
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalLocation.json",
@@ -416,30 +416,6 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-IneKBundle.json",
-    "fshName": "IneKBundle",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IneKBundle.fsh",
-    "startLine": 3,
-    "endLine": 25
-  },
-  {
-    "outputFile": "StructureDefinition-IneKFileHeaderIdentifier.json",
-    "fshName": "IneKFileHeaderIdentifier",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IneKFileHeaderIdentifier.fsh",
-    "startLine": 1,
-    "endLine": 17
-  },
-  {
-    "outputFile": "StructureDefinition-IneKFileHeaderMetadata.json",
-    "fshName": "IneKFileHeaderMetadata",
-    "fshType": "Extension",
-    "fshFile": "StructureDefinitions\\ExtensionIneKFileHeaderMetadata.fsh",
-    "startLine": 1,
-    "endLine": 19
-  },
-  {
     "outputFile": "StructureDefinition-IneKVersionPeriod.json",
     "fshName": "IneKVersionPeriod",
     "fshType": "Extension",
@@ -488,10 +464,10 @@
     "endLine": 12
   },
   {
-    "outputFile": "ValueSet-Fachrichtung.json",
-    "fshName": "Fachrichtung",
+    "outputFile": "ValueSet-Fachbereich.json",
+    "fshName": "Fachbereich",
     "fshType": "ValueSet",
-    "fshFile": "ValueSet\\Fachrichtung.fsh",
+    "fshFile": "ValueSet\\Fachbereich.fsh",
     "startLine": 1,
     "endLine": 18
   },

@@ -71,7 +71,7 @@ Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersi
 
 Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
 
-Alias: $Fachrichtung = https://emiga.rki.de/fhir/vzd/ValueSet/Fachrichtung
+Alias: $Fachbereich = https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich
 
 Alias: $Stationstyp = https://demis.rki.de/fhir/ars/ValueSet/stationstyp
 
