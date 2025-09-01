@@ -2,7 +2,7 @@ Profile: EmigaHospitalOrganization
 Parent: Organization
 Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
-Description: "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+Description: "TODO"
 
 * ^version = "0.1.0"
 * ^date = "2025-06-18"
@@ -15,7 +15,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.7"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.8"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -112,7 +112,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
     //einrichtungsArt 0..1 MS and
     //erweiterterFachabteilungsschluessel 0..1 MS and
     //fachbereich 0..1 MS
-    fachrichtung 0..1 MS
+    fachbereich 0..1 MS
 
 * type[emigaOrganizationType] from OrganizationType (required)
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
@@ -127,11 +127,11 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 //* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
  // * insert StrictCodableConcept
 //* type[fachbereich] from $IHEXDSpracticeSettingCode (required)
-* type[fachrichtung] from $Fachrichtung (required)
-* type[fachrichtung].coding.code 1..1 MS
-* type[fachrichtung].coding.system 1..1 MS
-* type[fachrichtung].coding.display MS
-//* type[fachrichtung] ^patternCodeableConcept.coding.system = $Fachrichtung
+* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich].coding.code 1..1 MS
+* type[fachbereich].coding.system 1..1 MS
+* type[fachbereich].coding.display MS
+//* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
