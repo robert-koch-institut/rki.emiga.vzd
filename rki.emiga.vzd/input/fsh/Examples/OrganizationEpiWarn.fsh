@@ -1,22 +1,14 @@
-//Example for Version 1.0.0 BaseOrganization (alt)
-Instance: 44588964
-InstanceOf: EmigaPublicHealthOrganization
+Instance: EpiWarnOrganization
+InstanceOf: EmigaOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
-* identifier.type = $v2-0203#PRN
-* identifier.system = $CodeSiteId
-* identifier.value = "1.12.99.99."
+* meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
+
 * active = true
-* extension.url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
-* extension.extension[0].url = "geographicRegion"
-* extension.extension[=].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
-* extension.extension[=].valueCoding.code = #11005711
-* extension.extension[+].url = "responsibilityType"
-* extension.extension[=].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
-* extension.extension[=].valueCoding.code = #all
-* type[emigaOrganizationType] = $OrganizationType#ga
-* name = "Stadt XYZ - Gesundheitsamt"
+
+* type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"
+* name = "Zentrum für Gesundheits- und Infektionsschutz"
 * telecom[Email].system = #email
 * telecom[Email].value = "test@example.org"
 * telecom[Phone].system = #phone

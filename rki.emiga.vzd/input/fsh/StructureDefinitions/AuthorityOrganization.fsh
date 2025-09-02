@@ -1,4 +1,4 @@
-Profile: BaseOrganization
+Profile: AuthorityOrganization
 Parent: Organization
 Id: BaseOrganization
 Title: "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
@@ -6,30 +6,39 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 * insert MetadataProfile
 * ^version = "1.0.1"
 * ^date = "2024-03-18"
+Id: AuthorityOrganization
+Title: "Behörde Organization"
+Description: "TODO"
 
+* ^version = "1.0.0"
+* ^date = "2024-11-15"
+// Temporarily Outcomment to flag draft for presentation in Simplifier
+//* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
-
+* insert ProfileMetaProfileTags
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um die Art derZuständigkeit abzubilden
-* extension 1..
-* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
-* extension[responsibilityHealthdepartments] ^isModifier = false
-* modifierExtension ..0
+//* extension 1.. MS
+//* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
+//* extension[responsibilityHealthdepartments] ^isModifier = false
+//* modifierExtension ..0
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
-* identifier
+
+* identifier MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
-* identifier contains codeSiteId 0..1 MS
-* identifier[codeSiteId] only IdentifierCodeSiteId
+* identifier contains IfsgKoordVwVId 0..1 MS
+* identifier[IfsgKoordVwVId] only IdentifierIfsgKoordVwVId
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
@@ -37,16 +46,22 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 
 // 'Kind of organization' - 0..* - CodeableConcept
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
+
 * type 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #closed
+  * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS
-* type[emigaOrganizationType] from OrganizationType (required)
+/** type[emigaOrganizationType] from OrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
+  */
+* type[emigaOrganizationType] from AuthorityType (required)
+  * ^patternCodeableConcept.coding.system = $OrganizationType
+  * insert StrictCodableConcept
+
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
@@ -56,11 +71,13 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
 * alias 0.. MS
+* alias ^comment = "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist."
 * alias obeys validString
 
 // 'A contact detail for the organization' - 0..* - ContactPoint
 // Diskussion: Wollen wir verschiedene Telekommunikationswege über Slicing abbilden?
 // Entscheidung: Wir bilden die verschiedene Telekommunikationswege über Slicing ab, um den regex regeln zu implementieren
+
 * telecom 0.. MS
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"
@@ -91,8 +108,8 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'An address for the organization' - 0..* - Address
 // Diskussion: Wie viele Adressen benötigen wir, wenn wir hier eh nur die Postadresse festlegen? 
 // Wir starten strikt mit maximal einer Adresse. Später können wir hier auch über Slicing mehrere Adressen abbilden, falls erforderlich
-
-* address 0..1 MS
+// Für V 1.1.0 erlauben wir mehrere Addressen um Hauptaddresse etc. abzubilden
+* address 0..* MS
 * address only $address-de-basis
 * address.extension[Stadtteil] ^mustSupport = true
 * address.extension[Stadtteil].valueString MS
@@ -117,7 +134,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.
 * partOf 0..1 MS
-* partOf only Reference(BaseOrganization) 
+* partOf only Reference(Organization) 
 
 // 'Contact for the organization for a certain purpose' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
@@ -132,6 +149,7 @@ Description: "Ein formaler Zusammenschluss von Personen, Institutionen etc., um 
 // Invariants to validate the address and telecom values
 
 //    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
+/*
 Invariant: validEmailAddress
 Description: "Die E-Mail-Adresse muss valide sein."
 * severity = #error
@@ -177,3 +195,4 @@ Invariant: validPLZ
 Description: "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen"
 * severity = #error
 * expression = "$this.matches('^.{1,10}$')"
+*/

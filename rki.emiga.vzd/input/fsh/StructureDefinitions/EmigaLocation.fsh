@@ -1,15 +1,17 @@
-Profile: BaseLocation
+Profile: EmigaLocation
 Parent: Location
-Id: BaseLocation
-Title: "BaseLocation (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Id: EmigaLocation
+Title: "Standort"
 Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
-* insert MetadataProfile
+//* insert MetadataProfile
 * ^version = "1.0.0"
-* ^date = "2024-03-18"
+* ^date = "2024-12-20"
 
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
+* insert ProfileMetaTags
+* insert ProfileMetaProfileTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -30,16 +32,24 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // 'Name of the location as used by humans' - 0..1 - string
 // Bezeichnung des Standortes, z.B. 'Niederlassung Berliner Str.'
 * name 0..1 MS
+* name ^short = "Bezeichnung"
+* name ^definition = "Bezeichnung des Standortes"
 * name obeys validString
 
 // 'A list of alternate names that the location is known as or was known as in the past' - 0..* - string
 // Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen
 * alias 0..* MS
+* alias ^short = "Kürzel"
+* alias ^definition = "Alternativ oder Kurznamme"
 * alias obeys validString
+* alias ^comment = "Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen"
 
 // 'Additional details about the location that could be displayed as further information to identify the location beyond its name' - 0..1 - string
 // Begründung: Es kann sinnvoll sein, Standorte durch zusätzliche Informationen zu identifizieren
 * description 0..1 MS
+* description ^short = "zusätzliche Informationen"
+* description ^definition = "zusätzliche Informationen"
+* description ^comment = "Begründung: Es kann sinnvoll sein, Standorte durch zusätzliche Informationen zu identifizieren"
 
 // 'instance | kind' - 0..1 - code
 // Wir wollen im Verzeichnis lediglich tatsächliche Standorte verwalten. Typen/Arten von Standorten sind nicht von Interesse.
@@ -51,14 +61,17 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * type 0..0
+* type ^comment = "Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * telecom 0..0
+* telecom ^comment = "Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Physical location' - 0..1 - Address
 // Besuchbare Anschrift des Standortes
+* address ^comment = "Besuchbare Anschrift des Standortes"
 * address 0..1 MS
 * address only $address-de-basis
 * address.extension[Stadtteil] ^mustSupport = true

@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PublicHealthOrganizationType",
+  "id": "PublicHealthOrganizationType",
+  "title": "ÖGD Stellen",
+  "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationType",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-11-25",
+  "compose": {
+    "include": [
+      {
+        "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+        "concept": [
+          {
+            "code": "ga",
+            "display": "Gesundheitsamt",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "code": "abbreviation",
+                  "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+                },
+                "value": "GA"
+              }
+            ]
+          },
+          {
+            "code": "lb",
+            "display": "Landesbehörde",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "code": "abbreviation",
+                  "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+                },
+                "value": "LB"
+              }
+            ]
+          },
+          {
+            "code": "rki",
+            "display": "Robert Koch-Institut",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "code": "abbreviation",
+                  "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+                },
+                "value": "RKI"
+              }
+            ]
+          },
+          {
+            "code": "bw",
+            "display": "Sanitätsdienst der Bundeswehr",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "code": "abbreviation",
+                  "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+                },
+                "value": "BW"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

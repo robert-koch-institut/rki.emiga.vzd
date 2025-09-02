@@ -1,6 +1,6 @@
 {
   "resourceType": "Organization",
-  "id": "44588964",
+  "id": "44588981",
   "meta": {
     "security": [
       {
@@ -13,7 +13,7 @@
       }
     ],
     "profile": [
-      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
     ]
   },
   "identifier": [
@@ -26,29 +26,8 @@
           }
         ]
       },
-      "system": "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId",
-      "value": "1.12.99.99."
-    }
-  ],
-  "extension": [
-    {
-      "extension": [
-        {
-          "valueCoding": {
-            "system": "https://demis.rki.de/fhir/CodeSystem/geographicRegion",
-            "code": "11005711"
-          },
-          "url": "geographicRegion"
-        },
-        {
-          "valueCoding": {
-            "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
-            "code": "all"
-          },
-          "url": "responsibilityType"
-        }
-      ],
-      "url": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EpiWarnId",
+      "value": "012345"
     }
   ],
   "type": [
@@ -56,7 +35,7 @@
       "coding": [
         {
           "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
-          "code": "ga"
+          "code": "sepFedAut"
         }
       ]
     }
@@ -64,7 +43,7 @@
   "telecom": [
     {
       "system": "email",
-      "value": "test@example.org"
+      "value": "test_authority@example.org"
     },
     {
       "system": "phone",
@@ -78,29 +57,29 @@
   "address": [
     {
       "line": [
-        "Test Straße 21"
+        "AuthorityTest Straße 11"
       ],
       "_line": [
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-              "valueString": "Test Straße"
+              "valueString": "AuthorityTest Straße"
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-              "valueString": "21"
+              "valueString": "11"
             }
           ]
         }
       ],
       "type": "postal",
-      "city": "Teststadt",
+      "city": "AuthorityTeststadt",
       "state": "DE-BB",
       "postalCode": "12345",
       "country": "DE"
     }
   ],
   "active": true,
-  "name": "Stadt XYZ - Gesundheitsamt"
+  "name": "Stadt XYZ - Oberstebundesbehörde"
 }

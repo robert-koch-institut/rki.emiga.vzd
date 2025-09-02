@@ -1,15 +1,18 @@
-Profile: BasePractitionerRole
+Profile: EmigaPractitionerRole
 Parent: PractitionerRole
-Id: BasePractitionerRole
-Title: "BasePractitionerRole (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Id: EmigaPractitionerRole
+Title: "EmigaPractitionerRole"
 Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
-* insert MetadataProfile
+//* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
 
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
+* insert ProfileMetaProfileTags
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole" 
+* insert ProfileMetaTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -29,12 +32,14 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 // 'Practitioner that is able to provide the defined services for the organization' - 0..1 - Reference(Practitioner)
 // Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich.
 * practitioner 1..1 MS
-* practitioner only Reference(BasePractitioner)
+* practitioner only Reference(Practitioner)
+* practitioner ^comment = "Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich."
 
 // 'Organization where the roles are available' - 0..1 - Reference(Organization)
 // Ein Bezug zu einer konkreten Organization-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich.
 * organization 1..1 MS
-* organization only Reference(Organization)
+* organization only Reference(EmigaOrganization or EmigaPublicHealthOrganization)
+* organization ^comment = "Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich."
 
 // 'Roles which this practitioner may perform' - 0..* - CodeableConcept
 // Diskussion: Wollen wir das Feld verpflichtend machen?
@@ -63,7 +68,7 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 
 // 'The list of healthcare services that this worker provides for this role's Organization/Location(s)' - 0..* - Reference(HealthcareService)
 * healthcareService 0.. MS
-* healthcareService only Reference(BaseHealthcareService)
+* healthcareService only Reference(HealthcareService)
 
 // 'Contact details that are specific to the role/location/service' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Die Angaben zur Erreichbarkeit werden über die Practitioner-Ressource abgebildet.

@@ -1,15 +1,18 @@
-Profile: BasePractitioner
+Profile: EmigaPractitioner
 Parent: Practitioner
-Id: BasePractitioner
-Title: "BasePractitioner (Basis-Ressource des EMIGA-Verzeichnisdienstes)"
+Id: EmigaPractitioner
+Title: "EmigaPractitioner"
 Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie."
-* insert MetadataProfile
+//* insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
 
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
+* insert ProfileMetaTags
+* insert ProfileMetaProfileTags
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
@@ -23,6 +26,7 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 // 'Whether this practitioner's record is in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
 * active 1..1 MS
+* active ^comment = "Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist."
 
 // 'The name(s) associated with the practitioner' - 0..* - HumanName
 * name 1..1 MS

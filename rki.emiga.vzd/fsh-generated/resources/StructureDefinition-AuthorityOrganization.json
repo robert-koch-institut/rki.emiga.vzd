@@ -10,6 +10,14 @@
   "date": "2024-03-18",
   "publisher": "Robert Koch-Institut",
   "description": "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+  "id": "AuthorityOrganization",
+  "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
+  "version": "1.0.0",
+  "name": "AuthorityOrganization",
+  "title": "Behörde Organization",
+  "status": "draft",
+  "date": "2024-11-15",
+  "description": "TODO",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -44,6 +52,27 @@
         "id": "Organization.meta",
         "path": "Organization.meta",
         "mustSupport": true
+      },
+      {
+        "id": "Organization.meta.profile",
+        "path": "Organization.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Organization.meta.profile:emigaprofile",
+        "path": "Organization.meta.profile",
+        "sliceName": "emigaprofile",
+        "min": 0,
+        "max": "*",
+        "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
       },
       {
         "id": "Organization.meta.security",
@@ -127,27 +156,6 @@
         "max": "0"
       },
       {
-        "id": "Organization.extension",
-        "path": "Organization.extension",
-        "min": 1
-      },
-      {
-        "id": "Organization.extension:responsibilityHealthdepartments",
-        "path": "Organization.extension",
-        "sliceName": "responsibilityHealthdepartments",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
-            ]
-          }
-        ],
-        "isModifier": false
-      },
-      {
         "id": "Organization.modifierExtension",
         "path": "Organization.modifierExtension",
         "max": "0"
@@ -165,19 +173,20 @@
           "rules": "open",
           "description": "slicing organization identifier by system",
           "ordered": false
-        }
+        },
+        "mustSupport": true
       },
       {
-        "id": "Organization.identifier:codeSiteId",
+        "id": "Organization.identifier:IfsgKoordVwVId",
         "path": "Organization.identifier",
-        "sliceName": "codeSiteId",
+        "sliceName": "IfsgKoordVwVId",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Identifier",
             "profile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId"
+              "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierIfsgKoordVwVId"
             ]
           }
         ],
@@ -199,7 +208,7 @@
               "path": "$this"
             }
           ],
-          "rules": "closed",
+          "rules": "open",
           "description": "slicing organization type by system",
           "ordered": false
         },
@@ -222,7 +231,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType"
         }
       },
       {
@@ -239,9 +248,19 @@
         "mustSupport": true
       },
       {
+        "id": "Organization.type:emigaOrganizationType.coding.version",
+        "path": "Organization.type.coding.version",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.type:emigaOrganizationType.coding.code",
         "path": "Organization.type.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.type:emigaOrganizationType.coding.display",
+        "path": "Organization.type.coding.display",
         "mustSupport": true
       },
       {
@@ -257,7 +276,7 @@
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -267,11 +286,12 @@
       {
         "id": "Organization.alias",
         "path": "Organization.alias",
+        "comment": "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist.",
         "constraint": [
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -315,7 +335,7 @@
           {
             "key": "validEmailAddress",
             "human": "Die E-Mail-Adresse muss valide sein.",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+[.])+[a-zA-Z0-9]{2,63}$')"
           }
@@ -344,7 +364,7 @@
           {
             "key": "validPhoneNumber",
             "human": "Die Telefonnummer muss valide sein.",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^(( ?\\\\+[0-9]{2,4}( ?[0-9]+? ?| ? \\\\([0-9]+?\\\\) ?))|(\\\\(0[0-9 ]+?\\\\) ?)|( 0[0-9]+? ?( |-|\\/) ?))? ?[0-9]+?[0-9 \\/-]*[0-9]$')"
           }
@@ -373,7 +393,7 @@
           {
             "key": "validUrl",
             "human": "Die Url muss valide sein.",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
           }
@@ -402,7 +422,7 @@
           {
             "key": "validFaxNumber",
             "human": "Die Faxnummer muss valide sein.",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^(( ?\\\\+[0-9]{2,4}( ?[0-9]+? ?| ? \\\\([0-9]+?\\\\) ?))|(\\\\(0[0-9 ]+?\\\\) ?)|( 0[0-9]+? ?( |-|\\/) ?))? ?[0-9]+?[0-9 \\/-]*[0-9]$')"
           }
@@ -412,7 +432,6 @@
       {
         "id": "Organization.address",
         "path": "Organization.address",
-        "max": "1",
         "type": [
           {
             "code": "Address",
@@ -436,7 +455,7 @@
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -456,7 +475,7 @@
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -476,7 +495,7 @@
           {
             "key": "validHouseNumber",
             "human": "Die Hausnummer muss valide sein. Zeichenlänge maximal 50 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,50}$')"
           }
@@ -496,7 +515,7 @@
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -516,7 +535,7 @@
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -530,7 +549,7 @@
           {
             "key": "validString",
             "human": "Zeichenlänge maximal 255 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,255}$')"
           }
@@ -544,7 +563,7 @@
           {
             "key": "validPLZ",
             "human": "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen",
-            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization",
+            "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization",
             "severity": "error",
             "expression": "$this.matches('^.{1,10}$')"
           }
@@ -554,20 +573,6 @@
       {
         "id": "Organization.partOf",
         "path": "Organization.partOf",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
-            ],
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
-                "valueBoolean": true
-              }
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
