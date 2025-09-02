@@ -1,8 +1,8 @@
 Profile: EmigaHospitalFacilityLocation
 Parent: Location
 Id: EmigaHospitalFacilityLocation
-Title: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis ab oder Stationen eines Krankenhauses ab"
-Description: "TO DO"
+Title: "Krankenhaus - Einrichtungsstandort"
+Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab"
 //
 * ^version = "0.1.0"
 * ^date = "2025-05-26"
@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.7"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.8"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -48,7 +48,7 @@ Description: "TO DO"
 * identifier contains
    emigaOrgvId 0..1 MS and 
     emigaOrgvFileNumber 0..1 MS and
-   standortId 0..1 MS and 
+   //standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    abrechnungs-IKNR 0..1 MS and
     BSNR 0..1 MS and
@@ -93,9 +93,14 @@ Description: "TO DO"
 * identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].period 0..1 MS
 
+* identifier[demisParticipantId] only Identifier
+* identifier[demisParticipantId] ^short = "DEMIS-Teilnehmer-Nummer"
+* identifier[demisParticipantId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/DemisParticipantId"
+* identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
+* identifier[demisParticipantId].system 1.. MS
+* identifier[demisParticipantId].value 1.. MS
 
 
-/*
 * identifier[telematikID] only $identifier-telematik-id
 * identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
@@ -103,7 +108,7 @@ Description: "TO DO"
 * identifier[telematikID].value 1.. MS
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
-*/
+
 * status 1..1 MS
 * status ^short = "Status"
 * status ^definition = "Aktivitätsstatus des Standortes"
@@ -155,7 +160,7 @@ Description: "TO DO"
   * ^slicing.ordered = false
 * type contains inekFacilityType 0..1 MS and
                 stationstyp 0..1 MS and
-                fachrichtung 0..1 MS 
+                fachbereich 0..1 MS 
 * type[inekFacilityType] from $IneKFacilityTypeVS (required)
 * type[inekFacilityType] ^patternCodeableConcept.coding.system = $IneKFacilityTypeCS
 * type[inekFacilityType].coding.code 1..1 MS
@@ -168,11 +173,11 @@ Description: "TO DO"
 * type[stationstyp].coding.system 1..1 MS
 * type[stationstyp].coding.display MS
 
-* type[fachrichtung] from $Fachrichtung (required)
-//* type[fachrichtung] ^patternCodeableConcept.coding.system = $Fachrichtung
-* type[fachrichtung].coding.code 1..1 MS
-* type[fachrichtung].coding.system 1..1 MS
-* type[fachrichtung].coding.display MS
+* type[fachbereich] from $Fachbereich (required)
+//* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
+* type[fachbereich].coding.code 1..1 MS
+* type[fachbereich].coding.system 1..1 MS
+* type[fachbereich].coding.display MS
 
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

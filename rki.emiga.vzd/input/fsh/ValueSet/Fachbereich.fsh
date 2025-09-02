@@ -1,11 +1,11 @@
-ValueSet: Fachrichtung
-Id: Fachrichtung
-Title: "Fachrichtung (Werteliste)"
+ValueSet: Fachbereich
+Id: Fachbereich
+Title: "Fachbereich (Werteliste)"
 Description: "TODO"
 * insert MetadataTerminology
 * ^version = "0.1.0"
 * ^date = "2025-08-01"
-* ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/Fachrichtung"
+* ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich"
 //* include codes from system $DemisOrgType
 
 * include codes from system $FachabteilungsschluesselErweitert

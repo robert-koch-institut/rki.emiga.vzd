@@ -310,9 +310,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Fachrichtung"
+          "reference": "ValueSet/Fachbereich"
         },
-        "name": "Fachrichtung (Werteliste)",
+        "name": "Fachbereich (Werteliste)",
         "description": "TODO",
         "exampleBoolean": false
       },
@@ -358,34 +358,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/IneKBundle"
-        },
-        "name": "IneK Bundle",
-        "description": "To Do German - A profile on the Bundle resource for IneK data.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IneKFileHeaderIdentifier"
-        },
-        "name": "IneK DateiKopf",
-        "description": "To Do German - A profile on the Identifier resource for IneK file header identification.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "NamingSystem/IneKFileHeaderId"
         },
         "name": "IneK DateiKopf",
         "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IneKFileHeaderMetadata"
-        },
-        "name": "IneK Dateikopf Metadaten",
-        "description": "TO DO - ",
         "exampleBoolean": false
       },
       {
@@ -465,15 +441,15 @@
           "reference": "StructureDefinition/EmigaHospitalOrganization"
         },
         "name": "Krankenhaus",
-        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/EmigaHospitalFacilityLocation"
         },
-        "name": "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis ab oder Stationen eines Krankenhauses ab",
-        "description": "TO DO",
+        "name": "Krankenhaus - Einrichtungsstandort",
+        "description": "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab",
         "exampleBoolean": false
       },
       {

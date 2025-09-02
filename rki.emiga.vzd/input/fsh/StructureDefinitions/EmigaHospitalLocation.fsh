@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.7"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.8"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -161,13 +161,13 @@ Description: "TO DO"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains fachrichtung 0..1 MS
+* type contains fachbereich 0..1 MS
 
-* type[fachrichtung] from $Fachrichtung (required)
-//* type[fachrichtung] ^patternCodeableConcept.coding.system = $Fachrichtung
-* type[fachrichtung].coding.code 1..1 MS
-* type[fachrichtung].coding.system 1..1 MS
-* type[fachrichtung].coding.display MS
+* type[fachbereich] from $Fachbereich (required)
+//* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
+* type[fachbereich].coding.code 1..1 MS
+* type[fachbereich].coding.system 1..1 MS
+* type[fachbereich].coding.display MS
 //* type 0..0
 //* type ^comment = "Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
