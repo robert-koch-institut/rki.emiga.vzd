@@ -1,7 +1,7 @@
 Profile: EmigaHospitalFacilityLocation
 Parent: Location
 Id: EmigaHospitalFacilityLocation
-Title: "Krankenhaus - Einrichtungsstandort"
+Title: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis ab oder Stationen eines Krankenhauses ab"
 Description: "TO DO"
 //
 * ^version = "0.1.0"
@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.6"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.7"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -47,6 +47,7 @@ Description: "TO DO"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
+    emigaOrgvFileNumber 0..1 MS and
    standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    abrechnungs-IKNR 0..1 MS and
@@ -60,6 +61,12 @@ Description: "TO DO"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
+
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
 /*
 * identifier[standortId] only Identifier
 * identifier[standortId] ^short = "Standort-Id"
@@ -139,19 +146,33 @@ Description: "TO DO"
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * type MS
-* type ^short = "Einrichtungstyp nach InEK"
+//* type ^short = "Einrichtungstyp nach InEK"
 * type 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains inekFacilityType 0..1 MS 
+* type contains inekFacilityType 0..1 MS and
+                stationstyp 0..1 MS and
+                fachrichtung 0..1 MS 
 * type[inekFacilityType] from $IneKFacilityTypeVS (required)
 * type[inekFacilityType] ^patternCodeableConcept.coding.system = $IneKFacilityTypeCS
 * type[inekFacilityType].coding.code 1..1 MS
 * type[inekFacilityType].coding.system 1..1 MS
+* type[inekFacilityType].coding.display MS
 * type ^comment = "Begründung: Einrichtungstyp wird benuzt um InEK Szenarios zu bedienen. In EMIGA Szenarios wird der Typ nicht benötigt, da die Dienstleistungen an den Standorten abgebildet werden"
+
+* type[stationstyp] from $Stationstyp (required)
+* type[stationstyp].coding.code 1..1 MS
+* type[stationstyp].coding.system 1..1 MS
+* type[stationstyp].coding.display MS
+
+* type[fachrichtung] from $Fachrichtung (required)
+//* type[fachrichtung] ^patternCodeableConcept.coding.system = $Fachrichtung
+* type[fachrichtung].coding.code 1..1 MS
+* type[fachrichtung].coding.system 1..1 MS
+* type[fachrichtung].coding.display MS
 
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

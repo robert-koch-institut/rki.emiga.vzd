@@ -24,10 +24,30 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: Wir öffnen die Identifikation des Standortes, um diesen eindeutiger zuordnen zu können
 
-* identifier 0..*
-* identifier.system 1..1  MS
-* identifier.value 1..1  MS
+//* identifier 0..*
+//* identifier.system 1..1  MS
+//* identifier.value 1..1  MS
+* identifier ^short = "Logischer Identifier"
+* identifier ^definition = "Logischer Identifier der Organisation"
+* identifier 0..* MS
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open
+* identifier contains
+   emigaOrgvId 0..1 MS and
+    emigaOrgvFileNumber 0..1 MS
 
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
+* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
+* identifier[emigaOrgvId].system 1.. MS
+* identifier[emigaOrgvId].value 1.. MS
+
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
 * status 1..1 MS

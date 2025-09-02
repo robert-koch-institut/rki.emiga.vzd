@@ -1,7 +1,7 @@
 Profile: EmigaHospitalOrganization
 Parent: Organization
 Id: EmigaHospitalOrganization
-Title: "Emiga Krankenhaus"
+Title: "Krankenhaus"
 Description: "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
 * ^version = "0.1.0"
@@ -15,7 +15,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.6"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.7"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -45,6 +45,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and
+    emigaOrgvFileNumber 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     organisationseinheitenID 0..1 MS and 
@@ -56,14 +57,23 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
+
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
+
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].system 1.. MS
 * identifier[IKNR].value 1.. MS
+
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
 * identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+
 * identifier[organisationseinheitenID] ^comment = "Kommentar von Isik Basis: Motivation: Für IDs, die Krankhausintern spezifischen Organisationseinheiten wie Abteilungen oder Stationen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung. Da auch Stationen im Identifier-System inkludiert werden könnten, sollte hier das Identifier generisch Organisationseinheiten abbilden und nicht Abteilungen allein."
 * identifier[organisationseinheitenID] ^patternIdentifier.type = $sct#43741000
 * identifier[organisationseinheitenID].system 1.. MS
@@ -98,9 +108,12 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains emigaOrganizationType 0..1 MS and
-    einrichtungsArt 0..1 MS and
-    erweiterterFachabteilungsschluessel 0..1 MS
+* type contains emigaOrganizationType 1..1 MS and
+    //einrichtungsArt 0..1 MS and
+    //erweiterterFachabteilungsschluessel 0..1 MS and
+    //fachbereich 0..1 MS
+    fachrichtung 0..1 MS
+
 * type[emigaOrganizationType] from OrganizationType (required)
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
 
@@ -108,12 +121,17 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 * type[emigaOrganizationType].coding.system = $DemisOrgType
 * type[emigaOrganizationType].coding.display = "Krankenhaus"
   //* insert StrictCodableConcept
-* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
-* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
+//* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
+//* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
  // * insert StrictCodableConcept
-* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
+//* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
  // * insert StrictCodableConcept
- 
+//* type[fachbereich] from $IHEXDSpracticeSettingCode (required)
+* type[fachrichtung] from $Fachrichtung (required)
+* type[fachrichtung].coding.code 1..1 MS
+* type[fachrichtung].coding.system 1..1 MS
+* type[fachrichtung].coding.display MS
+//* type[fachrichtung] ^patternCodeableConcept.coding.system = $Fachrichtung
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld
