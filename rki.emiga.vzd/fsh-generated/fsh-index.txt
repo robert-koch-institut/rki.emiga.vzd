@@ -1,9 +1,9 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
-CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 167
+CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 181
 CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 107
-CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 87
+CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 107
 CodeSystem-Relevance.json                                 Relevance                        CodeSystem  CodeSystem\Relevance.fsh                                           1 - 12
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
@@ -39,10 +39,10 @@ StructureDefinition-IdentifierEmigaOrgvId.json            IdentifierEmigaOrgvId 
 StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthdepartments  Extension   StructureDefinitions\ExtensionResponsibilityHealthdepartments.fsh  2 - 34
 ValueSet-HealthcareServiceCategory.json                   HealthcareServiceCategory        ValueSet    CodeSystem\HealthcareServiceCategory.fsh                           15 - 22
 ValueSet-HealthcareServiceDutyHours.json                  HealthcareServiceDutyHours       ValueSet    CodeSystem\HealthcareServiceDutyHours.fsh                          18 - 25
-ValueSet-HealthcareServiceSpecialty.json                  HealthcareServiceSpecialty       ValueSet    ValueSet\HealthcareServiceSpecialty.fsh                            1 - 8
+ValueSet-HealthcareServiceSpecialty.json                  HealthcareServiceSpecialty       ValueSet    ValueSet\HealthcareServiceSpecialty.fsh                            1 - 14
 ValueSet-HealthcareServiceType.json                       HealthcareServiceType            ValueSet    ValueSet\HealthcareServiceType.fsh                                 1 - 42
 ValueSet-OrganizationType.json                            OrganizationType                 ValueSet    ValueSet\OrganizationType.fsh                                      1 - 87
-ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    94 - 101
+ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    120 - 132
 ValueSet-PublicHealthOrganizationType.json                PublicHealthOrganizationType     ValueSet    ValueSet\PublicHealthOrganizationType.fsh                          1 - 23
 ValueSet-Relevance.json                                   Relevance                        ValueSet    CodeSystem\Relevance.fsh                                           14 - 22
 ValueSet-responsibilityType.json                          ResponsibilityType               ValueSet    CodeSystem\ResponsibilityType.fsh                                  32 - 50

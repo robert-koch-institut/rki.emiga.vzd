@@ -2,7 +2,7 @@ Profile: IdentifierEmigaOrgvId
 Parent: Identifier
 Id: IdentifierEmigaOrgvId
 Title: "Identifier-Profil EmigaOrgvId"
-Description: "TODO"
+Description: "Identifier Profil für EmigaOrgvId"
 * insert MetadataProfile
 * ^version = "1.0.0"
 * ^date = "2025-01-22"

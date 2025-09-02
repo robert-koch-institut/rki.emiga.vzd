@@ -3,8 +3,8 @@ Id: HealthcareServiceSpecialty
 Title: "Fachspezialisierung"
 Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben"
 * insert MetadataTerminology
-* ^version = "1.0.0"
-* ^date = "2024-12-27"
+* ^version = "1.1.0"
+* ^date = "2025-03-03"
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty"
@@ -90,13 +90,13 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #hepatitis ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #hepatitis ^designation[=].use = $HL7DesignationUse#display
 * #hepatitis ^designation[=].value = "hepatitis"
-
+/*
 * #diseasesTransmissibleThroughBlood "Krankheiten, die über Blut übertragbar sind"
 * #diseasesTransmissibleThroughBlood ^designation[0].language = #en-US
 * #diseasesTransmissibleThroughBlood ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #diseasesTransmissibleThroughBlood ^designation[=].use = $HL7DesignationUse#display
 * #diseasesTransmissibleThroughBlood ^designation[=].value = "diseases that are transmissible through blood"
-
+*/
 * #zoonoses "Zoonosen"
 * #zoonoses ^designation[0].language = #en-US
 * #zoonoses ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
@@ -109,17 +109,25 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #foodborneDiseases ^designation[=].use = $HL7DesignationUse#display
 * #foodborneDiseases ^designation[=].value = "foodborne diseases"
 
-* #respDiseases	"Atemwegserkrankungen wie Influenza, Tuberkulose, Legionellose"
+* #respDiseases	"Atemwegserkrankungen"
 * #respDiseases ^designation[0].language = #en-US
 * #respDiseases ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #respDiseases ^designation[=].use = $HL7DesignationUse#display
 * #respDiseases ^designation[=].value = "respiratory diseases such as influenza, tuberculosis, legionellosis"
 
-* #antibioticResistantGerms	"Antibiotikaresistente Keime"	
+* #tuberculosis	"Tuberkulose"
+* #tuberculosis ^designation[0].language = #en-US
+* #tuberculosis ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
+* #tuberculosis ^designation[=].use = $HL7DesignationUse#display
+* #tuberculosis ^designation[=].value = "tuberculosis"
+
+
+
+* #antibioticResistantGerms	"Antibiotikaresistente Erreger"	
 * #antibioticResistantGerms ^designation[0].language = #en-US
 * #antibioticResistantGerms ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
 * #antibioticResistantGerms ^designation[=].use = $HL7DesignationUse#display
-* #antibioticResistantGerms ^designation[=].value = "antibiotic-resistant germs"
+* #antibioticResistantGerms ^designation[=].value = "antibiotic-resistant pathogen"
 
 // Possibly overlapping with ihefachrichtungen
 * #childAndYouthHealth "Kinder- und Jugendgesundheit"	
@@ -166,5 +174,9 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * #adminLegalMattersAndDataPrtct ^designation[=].use = $HL7DesignationUse#display
 * #adminLegalMattersAndDataPrtct ^designation[=].value = "administration, legal matters and data protection"
 
-
+* #medEmergencyResponse "Medizinische Gefahrenabwehr"
+* #medEmergencyResponse ^designation[0].language = #en-US
+* #medEmergencyResponse ^designation[=].use.system = "http://terminology.hl7.org/CodeSystem/designation-usage"
+* #medEmergencyResponse ^designation[=].use = $HL7DesignationUse#display
+* #medEmergencyResponse ^designation[=].value = "medical emergency response"
 

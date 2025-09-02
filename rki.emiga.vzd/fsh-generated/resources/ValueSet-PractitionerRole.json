@@ -20,12 +20,31 @@
       ]
     }
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "date": "2024-03-19",
   "compose": {
     "include": [
       {
         "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "concept": [
+          {
+            "code": "OTH",
+            "display": "other",
+            "designation": [
+              {
+                "use": {
+                  "code": "display",
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage"
+                },
+                "value": "Sonstige",
+                "language": "de-DE"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
