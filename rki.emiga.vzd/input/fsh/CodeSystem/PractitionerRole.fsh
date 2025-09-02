@@ -8,7 +8,22 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole"
+
+* #headOfDivision "Abteilungsleiter/Abteilungsleiterin"
+* #publicMedicalOfficer "Amtsärztlicher Dienst"
 * #director "Amtsleiter/Amtsleiterin"
+* #personOfContact "Ansprechperson"
+* #headofAuthority "Behördenleiter/Behördenleiterin"
+* #headOfDepartment "Fachgebietsleiter/Fachgebietsleiterin"
+* #airPortMedServ "Hafen- und/oder Flughafen-ärztlicher Dienst"
+* #hygieneInspector "Hygienekontrolleur/Hygienekontrolleurin"
+* #infectionProtectionOfficer "Infektionsschutzreferent/Infektionsschutzreferentin"
+* #headOfUnit "Referatsleiter/Referatsleiterin"
+* #caseOfficer "Sachbearbeiter/Sachbearbeiterin"
+* #headOfSubject "Sachgebietsleiter/Sachgebietleiterin"
+* #expertWitness "Sachverständiger/Sachverständige"
+
+
 /*
 * #director ^designation[0].language = #de-DE
 * #director ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -19,12 +34,12 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #director ^designation[=].use = $ConceptDesignationUse#long
 //* #director ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #director ^designation[=].value = "Amtsleiter/Amtsleiterin"
-* #headOfSubject "Sachgebietsleiter/Sachgebietleiterin"
-* #headOfDepartment "Fachgebietsleiter/Fachgebietsleiterin"
-* #headOfDivision "Abteilungsleiter/Abteilungsleiterin"
-* #headofAuthority "Behördenleiter/Behördenleiterin"
 
-* #publicMedicalOfficer "Amtsärztlicher Dienst"
+
+
+
+
+
 /*
 * #publicMedicalOfficer ^designation[0].language = #de-DE
 * #publicMedicalOfficer ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -37,7 +52,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #publicMedicalOfficer ^designation[=].value = "Amtsarzt/Amtsärztin"
 */
 
-* #caseOfficer "Sachbearbeiter/Sachbearbeiterin"
+
 /*
 * #caseOfficer ^designation[0].language = #de-DE
 * #caseOfficer ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -49,7 +64,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #caseOfficer ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #caseOfficer ^designation[=].value = "Sachbearbeiter/Sachbearbeiterin"
 
-* #personOfContact "Ansprechperson"
+
 /*
 * #personOfContact ^designation[0].language = #de-DE
 * #personOfContact ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -60,7 +75,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #personOfContact ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #personOfContact ^designation[=].value = "Ansprechperson"
 */
-* #headOfUnit "Referatsleiter/Referatsleiterin"
+
 /*
 * #headOfUnit ^designation[0].language = #de-DE 
 * #headOfUnit ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -71,7 +86,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #headOfUnit ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #headOfUnit ^designation[=].value = "Referatsleiter/Referatsleiterin"
 */
-* #airPortMedServ "Hafen- und/oder Flughafen-ärztlicher Dienst"
+
 /*
 * #airPortMedServ ^designation[0].language = #de-DE  
 * #airPortMedServ ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -82,7 +97,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #airPortMedServ ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #airPortMedServ ^designation[=].value = "Hafen- und/oder Flughafen-ärztlicher Dienst"
 */
-* #expertWitness "Sachverständiger/Sachverständigerin"
+
 /*
 * #expertWitness ^designation[0].language = #de-DE  
 * #expertWitness ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -93,7 +108,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #expertWitness ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #expertWitness ^designation[=].value = "Sachverständiger/Sachverständige"
 */
-* #infectionProtectionOfficer "Infektionsschutzreferent/Infektionsschutzreferentin"
+
 /*
 * #infectionProtectionOfficer ^designation[0].language = #de-DE   
 * #infectionProtectionOfficer ^designation[=].use = $ConceptDesignationUse#abbreviation
@@ -104,7 +119,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #infectionProtectionOfficer ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #infectionProtectionOfficer ^designation[=].value = "Infektionsschutzreferent/Infektionsschutzreferentin"
 */
-* #hygieneInspector "Hygienekontrolleur/Hygienekontrolleurin"
+
 /*
 * #hygieneInspector ^designation[0].language = #de-DE   
 * #hygieneInspector ^designation[=].use = $ConceptDesignationUse#abbreviation

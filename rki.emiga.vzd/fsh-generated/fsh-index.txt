@@ -3,7 +3,7 @@ CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCateg
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 181
 CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 107
-CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 107
+CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 24
 CodeSystem-Relevance.json                                 Relevance                        CodeSystem  CodeSystem\Relevance.fsh                                           1 - 12
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 15
@@ -31,7 +31,7 @@ StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganiz
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 194
 StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 144
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 201
-StructureDefinition-EmigaPractitioner.json                EmigaPractitioner                Profile     StructureDefinitions\EmigaPractitioner.fsh                         1 - 90
+StructureDefinition-EmigaPractitioner.json                EmigaPractitioner                Profile     StructureDefinitions\EmigaPractitioner.fsh                         1 - 92
 StructureDefinition-EmigaPractitionerRole.json            EmigaPractitionerRole            Profile     StructureDefinitions\EmigaPractitionerRole.fsh                     1 - 92
 StructureDefinition-EmigaPublicHealthOrganization.json    EmigaPublicHealthOrganization    Profile     StructureDefinitions\EmigaPublicHealthOrganization.fsh             1 - 164
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
@@ -42,7 +42,7 @@ ValueSet-HealthcareServiceDutyHours.json                  HealthcareServiceDutyH
 ValueSet-HealthcareServiceSpecialty.json                  HealthcareServiceSpecialty       ValueSet    ValueSet\HealthcareServiceSpecialty.fsh                            1 - 14
 ValueSet-HealthcareServiceType.json                       HealthcareServiceType            ValueSet    ValueSet\HealthcareServiceType.fsh                                 1 - 42
 ValueSet-OrganizationType.json                            OrganizationType                 ValueSet    ValueSet\OrganizationType.fsh                                      1 - 87
-ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    120 - 132
+ValueSet-PractitionerRole.json                            PractitionerRole                 ValueSet    CodeSystem\PractitionerRole.fsh                                    135 - 147
 ValueSet-PublicHealthOrganizationType.json                PublicHealthOrganizationType     ValueSet    ValueSet\PublicHealthOrganizationType.fsh                          1 - 23
 ValueSet-Relevance.json                                   Relevance                        ValueSet    CodeSystem\Relevance.fsh                                           14 - 22
 ValueSet-responsibilityType.json                          ResponsibilityType               ValueSet    CodeSystem\ResponsibilityType.fsh                                  32 - 50

@@ -9,56 +9,56 @@
   "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
   "concept": [
     {
-      "code": "director",
-      "display": "Amtsleiter/Amtsleiterin"
-    },
-    {
-      "code": "headOfSubject",
-      "display": "Sachgebietsleiter/Sachgebietleiterin"
-    },
-    {
-      "code": "headOfDepartment",
-      "display": "Fachgebietsleiter/Fachgebietsleiterin"
-    },
-    {
       "code": "headOfDivision",
       "display": "Abteilungsleiter/Abteilungsleiterin"
-    },
-    {
-      "code": "headofAuthority",
-      "display": "Behördenleiter/Behördenleiterin"
     },
     {
       "code": "publicMedicalOfficer",
       "display": "Amtsärztlicher Dienst"
     },
     {
-      "code": "caseOfficer",
-      "display": "Sachbearbeiter/Sachbearbeiterin"
+      "code": "director",
+      "display": "Amtsleiter/Amtsleiterin"
     },
     {
       "code": "personOfContact",
       "display": "Ansprechperson"
     },
     {
-      "code": "headOfUnit",
-      "display": "Referatsleiter/Referatsleiterin"
+      "code": "headofAuthority",
+      "display": "Behördenleiter/Behördenleiterin"
+    },
+    {
+      "code": "headOfDepartment",
+      "display": "Fachgebietsleiter/Fachgebietsleiterin"
     },
     {
       "code": "airPortMedServ",
       "display": "Hafen- und/oder Flughafen-ärztlicher Dienst"
     },
     {
-      "code": "expertWitness",
-      "display": "Sachverständiger/Sachverständigerin"
+      "code": "hygieneInspector",
+      "display": "Hygienekontrolleur/Hygienekontrolleurin"
     },
     {
       "code": "infectionProtectionOfficer",
       "display": "Infektionsschutzreferent/Infektionsschutzreferentin"
     },
     {
-      "code": "hygieneInspector",
-      "display": "Hygienekontrolleur/Hygienekontrolleurin"
+      "code": "headOfUnit",
+      "display": "Referatsleiter/Referatsleiterin"
+    },
+    {
+      "code": "caseOfficer",
+      "display": "Sachbearbeiter/Sachbearbeiterin"
+    },
+    {
+      "code": "headOfSubject",
+      "display": "Sachgebietsleiter/Sachgebietleiterin"
+    },
+    {
+      "code": "expertWitness",
+      "display": "Sachverständiger/Sachverständige"
     }
   ],
   "language": "de-DE",
