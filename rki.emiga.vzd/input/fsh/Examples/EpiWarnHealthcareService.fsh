@@ -14,10 +14,10 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 
 * name = "Rufbereitschaft"
 * comment = "diverse Angebote, Präventionsberatung"
-* telecom[0].system = #email
-* telecom[=].value = "Ruf@MS.NI.de"
-* telecom[+].system = #phone
-* telecom[=].value = "54548797989"
+* telecom[Email].system = #email
+* telecom[Email].value = "Ruf@MS.NI.de"
+* telecom[Phone].system = #phone
+* telecom[Phone].value = "54548797989"
 /*
 * availableTime.daysOfWeek[0] = #mon
 * availableTime.daysOfWeek[+] = #tue

@@ -89,10 +89,11 @@ RuleSet: MetaTagOrgVBundle
 * meta.tag[orgvBundleVersion].display MS
 
 RuleSet: ProfileMetaProfileTags
+* meta.profile MS
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
-* meta.profile contains emigaprofile 0..*
+* meta.profile contains emigaprofile 0..* MS
 
 
 

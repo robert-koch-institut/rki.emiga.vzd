@@ -29,7 +29,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\IneKFacilityType.fsh",
     "startLine": 1,
-    "endLine": 11
+    "endLine": 36
   },
   {
     "outputFile": "CodeSystem-OrgVBundleId.json",
@@ -133,7 +133,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\InekStandort.fsh",
     "startLine": 1,
-    "endLine": 50
+    "endLine": 59
   },
   {
     "outputFile": "Location-InekEinricthung01.json",
@@ -293,7 +293,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
     "startLine": 1,
-    "endLine": 206
+    "endLine": 207
   },
   {
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",
@@ -317,7 +317,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalLocation.fsh",
     "startLine": 1,
-    "endLine": 271
+    "endLine": 272
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalOrganization.json",
@@ -424,6 +424,14 @@
     "endLine": 30
   },
   {
+    "outputFile": "StructureDefinition-InekPostalAddress.json",
+    "fshName": "InekPostalAddress",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionInekPostalAddress.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
     "outputFile": "StructureDefinition-OrgVBundle.json",
     "fshName": "OrgVBundle",
     "fshType": "Profile",
@@ -446,6 +454,14 @@
     "fshFile": "StructureDefinitions\\ExtensionUTMCoordinates.fsh",
     "startLine": 1,
     "endLine": 26
+  },
+  {
+    "outputFile": "ValueSet-AddressTypePhysicalBoth.json",
+    "fshName": "AddressTypePhysicalBoth",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\AddressTypePhysicalBoth.fsh",
+    "startLine": 1,
+    "endLine": 12
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",
@@ -485,7 +501,7 @@
     "fshType": "ValueSet",
     "fshFile": "ValueSet\\IneKFacilityType.fsh",
     "startLine": 1,
-    "endLine": 45
+    "endLine": 18
   },
   {
     "outputFile": "ValueSet-OrgVBundleId.json",
