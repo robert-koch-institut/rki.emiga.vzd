@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "name": "rkiemigavzd",
   "status": "draft",
   "publisher": "Robert Koch Institut",
@@ -142,6 +142,54 @@
         },
         "name": "Art der Zuständigkeit OEGD (Werteliste)",
         "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BaseHealthcareService"
+        },
+        "name": "BaseHealthcareService (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+        "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BaseLocation"
+        },
+        "name": "BaseLocation (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+        "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BasePractitioner"
+        },
+        "name": "BasePractitioner (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+        "description": "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BasePractitionerRole"
+        },
+        "name": "BasePractitionerRole (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
+        "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AuthorityOrganization"
+        },
+        "name": "Behörde Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AuthorityType"
+        },
+        "name": "Behördenarten",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
         "exampleBoolean": false
       },
       {
