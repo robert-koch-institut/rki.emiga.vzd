@@ -1,6 +1,7 @@
 .DS_Store
 Thumbs.db
 /fsh-generated
+/fsh-generated/resources
 /fsh-generated/includes
 /input-cache
 /output

@@ -171,7 +171,11 @@
       {
         "id": "Practitioner.name.family.extension:nachname",
         "path": "Practitioner.name.family.extension",
-        "sliceName": "nachname",
+        "sliceName": "nachname"
+      },
+      {
+        "id": "Practitioner.name.family.extension:nachname.value[x]",
+        "path": "Practitioner.name.family.extension.value[x]",
         "constraint": [
           {
             "key": "validString",
