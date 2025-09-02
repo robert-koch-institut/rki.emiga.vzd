@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -33,6 +33,12 @@
       "version": "1.0.2",
       "uri": "https://demis.rki.de/fhir/common",
       "id": "rki_demis_common"
+    },
+    {
+      "packageId": "rki.emiga.common",
+      "version": "1.0.0",
+      "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
+      "id": "rki_emiga_common"
     },
     {
       "packageId": "rki.emiga.common",
@@ -48,7 +54,7 @@
           "reference": "Organization/44588964"
         },
         "name": "44588964",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseOrganization"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
       },
       {
         "reference": {
@@ -108,6 +114,28 @@
       },
       {
         "reference": {
+          "reference": "HealthcareService/44588973"
+        },
+        "name": "44588973",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "Organization/44588980"
+        },
+        "name": "44588980",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/44588981"
+        },
+        "name": "44588981",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/responsibilityType"
         },
         "name": "Art der Zustaendigkeit OEGD",
@@ -140,14 +168,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/BaseOrganization"
-        },
-        "name": "BaseOrganization (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
-        "description": "Ein formaler Zusammenschluss von Personen, Institutionen etc., um einen gemeinsamen Zweck zu erreichen. Dies können zum Beispiel Arztpraxen, Gesundheitsämter, Schulen aber auch eine einzelne Abteilung eines Gesundheitsamtes sein. Organisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/BasePractitioner"
         },
         "name": "BasePractitioner (Basis-Ressource des EMIGA-Verzeichnisdienstes)",
@@ -164,10 +184,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/AuthorityOrganization"
+        },
+        "name": "Behörde Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AuthorityType"
+        },
+        "name": "Behördenarten",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
         "description": "CodeSite ID to be used in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHealthcareService"
+        },
+        "name": "Dienstleistung",
+        "description": "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle",
         "exampleBoolean": false
       },
       {
@@ -188,6 +232,122 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/HealthcareServiceDutyHours"
+        },
+        "name": "Dienstzeiten",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceDutyHours"
+        },
+        "name": "Dienstzeiten (Werteliste)",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaPractitioner"
+        },
+        "name": "EmigaPractitioner",
+        "description": "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaPractitionerRole"
+        },
+        "name": "EmigaPractitionerRole",
+        "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/EndpointConnectionType"
+        },
+        "name": "Endpunktverbindungstyp",
+        "description": "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/EndpointConnectionType"
+        },
+        "name": "Endpunktverbindungstyp (Werteliste)",
+        "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/EpiWarnHealthcareService"
+        },
+        "name": "EpiWarnHealthcareService",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "Location/EpiWarnLocation"
+        },
+        "name": "EpiWarnLocation",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EpiWarnOrganization"
+        },
+        "name": "EpiWarnOrganization",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/EpiWarnPractitioner"
+        },
+        "name": "EpiWarnPractitioner",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/EpiWarnPractitionerRole"
+        },
+        "name": "EpiWarnPractitionerRole",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DutyHoursAvailability"
+        },
+        "name": "Erreichbarkeit Dienstzeiten",
+        "description": "Extension zur Abbildung der Erreichbarkeit der Organizationen anhand der Dienstzeiten.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaDepartmentOrganization"
+        },
+        "name": "Fachabteilung",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/HealthcareServiceSpecialty"
+        },
+        "name": "Fachspezialisierung",
+        "description": "Fachspezialisierungskodes für Dienstleistungen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceSpecialty"
+        },
+        "name": "Fachspezialisierung (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/IdentifierCodeSiteId"
         },
         "name": "Identifier-Profil CodeSiteId",
@@ -196,10 +356,42 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/IdentifierIfsgKoordVwVId"
+        },
+        "name": "Identifier-Profil IfSGKoordVwV-Id",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IdentifierTransmittingSiteId"
+        },
+        "name": "Identifier-Profil TransmittingSiteId",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/IfsgKoordVwVId"
+        },
+        "name": "IfSGKoordVwV ID",
+        "description": "IfSGKoordVwV-ID to be used in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/OrganizationType"
         },
         "name": "Organisationstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaOrganization"
+        },
+        "name": "Organization",
+        "description": "TODO",
         "exampleBoolean": false
       },
       {
@@ -228,10 +420,58 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/Relevance"
+        },
+        "name": "Relevance",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Relevance"
+        },
+        "name": "Relevance (Werteliste)",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaLocation"
+        },
+        "name": "Standort",
+        "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/TransmittingSiteId"
+        },
+        "name": "TransmittingSite ID",
+        "description": "TransmittingSite ID to be used in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/ResponsibilityHealthdepartments"
         },
         "name": "Zuständigkeit der ÖGD-Stellen",
         "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaPublicHealthOrganization"
+        },
+        "name": "ÖGD Organization",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PublicHealthOrganizationType"
+        },
+        "name": "ÖGD Stellen",
+        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
         "exampleBoolean": false
       }
     ],

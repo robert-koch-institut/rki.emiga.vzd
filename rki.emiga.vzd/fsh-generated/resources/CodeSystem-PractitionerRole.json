@@ -10,7 +10,7 @@
   "concept": [
     {
       "code": "director",
-      "display": "Leiter/-in",
+      "display": "Amtsleiter/Amtsleiterin",
       "designation": [
         {
           "language": "de-DE",
@@ -18,15 +18,7 @@
             "code": "abbreviation",
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
-          "value": "L"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Leiter/Leiterin"
+          "value": "AL"
         }
       ]
     },
@@ -41,20 +33,12 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "AA"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Amtsarzt/Amtsärztin"
         }
       ]
     },
     {
       "code": "caseOfficer",
-      "display": "Sachbearbeiter/in",
+      "display": "Sachbearbeiter/Sachbearbeiterin",
       "designation": [
         {
           "language": "de-DE",
@@ -63,20 +47,12 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "SB"
-        },
-        {
-          "language": "de-DE",
-          "use": {
-            "code": "long",
-            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
-          },
-          "value": "Sachbearbeiter/Sachbearbeiterin"
         }
       ]
     },
     {
       "code": "personOfContact",
-      "display": "Ansprechpartner/-in",
+      "display": "Ansprechperson",
       "designation": [
         {
           "language": "de-DE",
@@ -85,14 +61,76 @@
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
           "value": "AP"
-        },
+        }
+      ]
+    },
+    {
+      "code": "headOfUnit",
+      "display": "Referatsleiter/Referatsleiterin",
+      "designation": [
         {
           "language": "de-DE",
           "use": {
-            "code": "long",
+            "code": "abbreviation",
             "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
           },
-          "value": "Ansprechpartner/Ansprechpartnerin"
+          "value": "RL"
+        }
+      ]
+    },
+    {
+      "code": "airPortMedServ",
+      "display": "Hafen- und/oder Flughafen-ärztlicher Dienst",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "HFAED"
+        }
+      ]
+    },
+    {
+      "code": "expertWitness",
+      "display": "Sachverständiger/Sachverständige",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "SV"
+        }
+      ]
+    },
+    {
+      "code": "infectionProtectionOfficer",
+      "display": "Infektionsschutzreferent/Infektionsschutzreferentin",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "ISR"
+        }
+      ]
+    },
+    {
+      "code": "hygieneInspector",
+      "display": "Hygienekontrolleur/Hygienekontrolleurin",
+      "designation": [
+        {
+          "language": "de-DE",
+          "use": {
+            "code": "abbreviation",
+            "system": "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
+          },
+          "value": "HK"
         }
       ]
     }
@@ -111,9 +149,9 @@
       ]
     }
   ],
-  "version": "1.0.0",
-  "date": "2024-03-28",
+  "version": "2.0.0",
+  "date": "2024-12-18",
   "caseSensitive": true,
   "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
-  "count": 4
+  "count": 9
 }
