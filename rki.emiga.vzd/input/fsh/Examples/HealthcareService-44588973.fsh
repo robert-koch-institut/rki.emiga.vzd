@@ -3,7 +3,7 @@ InstanceOf: EmigaHealthcareService
 Usage: #example
 Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist" 
 * meta.security[visibility] = $ResourceVisibilityType#public
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * active = true
 * providedBy = Reference(EpiWarnOrganization)
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#consultation

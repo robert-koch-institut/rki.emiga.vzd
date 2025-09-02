@@ -11,6 +11,8 @@ Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
 Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/Relevance
 
 // rki.emiga.vzd
+Alias: $locationPhysicalType = http://terminology.hl7.org/CodeSystem/location-physical-type
+Alias: $identifier-standortnummer = http://fhir.de/StructureDefinition/identifier-standortnummer
 Alias: $HealthcareServiceSpecialtyCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty
 Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
 Alias: $dutyHoursCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours
@@ -24,6 +26,7 @@ Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/Organization
 Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
+Alias: $IneKFileHeaderId = https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
 Alias: $EmigaOrgvId = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
@@ -46,6 +49,21 @@ Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareService
 Alias: $ServiceTypeCS = http://terminology.hl7.org/CodeSystem/service-type
 Alias: $OrganizationPeriod = http://hl7.org/fhir/StructureDefinition/organization-period
 Alias: $nullflavour = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $IneKFacilityTypeCS = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType
+Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
+
+Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
+Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod
+Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates
+Alias: $MunicipalityKey = https://emiga.rki.de/fhir/common/Extension/MunicipalityKey
+
+
+
+Alias: $BundleIdCS = https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId
+Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
+
+Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleVersion
+Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel

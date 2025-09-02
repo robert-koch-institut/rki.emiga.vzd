@@ -2,7 +2,7 @@ Instance: 44588965
 InstanceOf: EmigaLocation
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * status = #active
 * name = "Stadt XYZ - FB 9 / Dienste"
 * mode = #instance

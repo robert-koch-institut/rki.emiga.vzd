@@ -26,7 +26,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.2-snapshots",
+      "version": "1.4.0",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -38,13 +38,13 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.1.0-alpha.1",
+      "version": "1.2.0-alpha.5-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     },
     {
       "packageId": "rki.emiga.orgv",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
       "id": "rki_emiga_orgv"
     }
@@ -258,6 +258,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaHospitalOrganization"
+        },
+        "name": "Emiga Krankenhaus",
+        "description": "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaOrganization"
         },
         "name": "Emiga Organization",
@@ -382,6 +390,142 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/IneKBundle"
+        },
+        "name": "IneK Bundle",
+        "description": "To Do German - A profile on the Bundle resource for IneK data.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IneKFileHeaderIdentifier"
+        },
+        "name": "IneK DateiKopf",
+        "description": "To Do German - A profile on the Identifier resource for IneK file header identification.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/IneKFileHeaderId"
+        },
+        "name": "IneK DateiKopf",
+        "description": "TODO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IneKFileHeaderMetadata"
+        },
+        "name": "IneK Dateikopf Metadaten",
+        "description": "TO DO - ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/IneKFacilityType"
+        },
+        "name": "IneK Einrichtungstyp",
+        "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein Platzhalter CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die eigentlichen Codes werden in der ValueSet IneKFacilityType definiert.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/IneKFacilityType"
+        },
+        "name": "IneK Einrichtungstyp (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Organization/InekKrankenhausOrganization"
+        },
+        "name": "InEK Krankenhaus Beispiel",
+        "description": "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Location/InekEinricthung01"
+        },
+        "name": "InEK Standort Beispiel",
+        "description": "Beispiel eines Standorts aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/InekEinricthung02"
+        },
+        "name": "InEK Standort Beispiel",
+        "description": "Beispiel eines Standorts aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/IneKStandort"
+        },
+        "name": "InEK Standort Beispiel",
+        "description": "Beispiel eines Standorts aus dem InEK Standortverzeichnis.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IneKVersionPeriod"
+        },
+        "name": "IneK Version Period",
+        "description": "Information about the version and validity period of a site/location from IneK.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Location/HospitalRoomLocation"
+        },
+        "name": "KH Raum Beispiel",
+        "description": "Beispiel eines Raums in einer Krankenhaus.",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHospitalFacilityLocation"
+        },
+        "name": "Krankenhaus - Einrichtungsstandort",
+        "description": "TO DO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHospitalRoomLocation"
+        },
+        "name": "Krankenhaus - Raum",
+        "description": "TO DO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaHospitalLocation"
+        },
+        "name": "Krankenhaus-Standort",
+        "description": "TO DO",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/OrgVBundleId"
+        },
+        "name": "Organisations-Bundle-ID",
+        "description": "Die Kodiersystematik Organisations-Bundle-ID definiert Konzepte, die den Organisations-Bundle kennzeichnen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/OrgVBundleVersion"
+        },
+        "name": "Organisations-Bundle-Version",
+        "description": "Die Kodiersystematik Organisations-Bundle-Version definiert Konzepte, die den Organisations-Bundle Version kennzeichnen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/OrganizationType"
         },
         "name": "Organisationstyp (Werteliste)",
@@ -394,6 +538,14 @@
         },
         "name": "Organizationstyp",
         "description": "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/OrgVBundle"
+        },
+        "name": "Organizationsverzeichnis Bundle",
+        "description": "To Do",
         "exampleBoolean": false
       },
       {
@@ -414,15 +566,15 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/Relevance"
+          "reference": "ValueSet/OrgVBundleId"
         },
-        "name": "Relevanz",
-        "description": "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Emiga Use Cases relevanten Ressourcen kennzeichnen.",
+        "name": "Relevanz (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/Relevance"
+          "reference": "ValueSet/OrgVBundleVersion"
         },
         "name": "Relevanz (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
@@ -434,6 +586,14 @@
         },
         "name": "Standort",
         "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/UTMCoordinates"
+        },
+        "name": "UTM Coordinates (ETRS89)",
+        "description": "Representiert die UTM-Koordinaten (ETRS89) einer Einrichtung.",
         "exampleBoolean": false
       },
       {

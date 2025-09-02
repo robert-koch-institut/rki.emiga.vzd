@@ -3,7 +3,7 @@ Instance: 44588981
 InstanceOf: EmigaOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "012345"

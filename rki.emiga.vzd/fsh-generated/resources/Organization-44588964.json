@@ -9,7 +9,7 @@
       },
       {
         "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
-        "code": "1.12.99.99."
+        "code": "1."
       }
     ],
     "profile": [
@@ -27,7 +27,7 @@
         ]
       },
       "system": "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId",
-      "value": "1.12.99.99."
+      "value": "1."
     }
   ],
   "extension": [

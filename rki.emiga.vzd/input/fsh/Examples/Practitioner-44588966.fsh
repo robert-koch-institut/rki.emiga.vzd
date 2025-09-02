@@ -2,7 +2,7 @@ Instance: 44588966
 InstanceOf: EmigaPractitioner
 Usage: #example
 * meta.security[visibility]  = $ResourceVisibilityType#internal
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * active = true
 * name.family = "Sommer"
 * name.given = "Gerd"

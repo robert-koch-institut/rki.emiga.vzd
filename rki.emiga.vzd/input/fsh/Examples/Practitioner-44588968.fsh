@@ -2,7 +2,7 @@ Instance: 44588968
 InstanceOf: EmigaPractitioner
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#internal
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * active = true
 * name.family = "Baronin von Baldrichshausen"
 * name.family.extension[0].url = "http://fhir.de/StructureDefinition/humanname-namenszusatz"

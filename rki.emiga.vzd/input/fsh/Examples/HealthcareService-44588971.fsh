@@ -2,7 +2,7 @@ Instance: 44588972
 InstanceOf: EmigaHealthcareService
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
-* meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.security[responsibility] = $ResourceResponsibility#1.
 * active = true
 * providedBy = Reference(44588964)
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#preventiveExamination

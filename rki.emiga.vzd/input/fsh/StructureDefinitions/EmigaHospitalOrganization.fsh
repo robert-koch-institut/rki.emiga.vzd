@@ -1,11 +1,11 @@
-Profile: EmigaOrganization
+Profile: EmigaHospitalOrganization
 Parent: Organization
-Id: EmigaOrganization
-Title: "Emiga Organization"
+Id: EmigaHospitalOrganization
+Title: "Emiga Krankenhaus"
 Description: "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
-* ^version = "1.0.0"
-* ^date = "2024-12-12"
+* ^version = "0.1.0"
+* ^date = "2025-06-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -15,19 +15,21 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|1.0.0"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.5"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um den Zeitraum der Gültigkeit abzubilden
 * extension MS
+* extension contains $IneKVersionPeriod named inekVersionPeriod 0..1 MS
+/*
 * extension contains $OrganizationPeriod named organizationPeriod 0..*
 * extension[organizationPeriod] ^isModifier = false
 * extension[organizationPeriod] ^mustSupport = true
 * extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
 * extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
 * modifierExtension ..0
-
+*/
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
@@ -101,12 +103,16 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
     erweiterterFachabteilungsschluessel 0..1 MS
 * type[emigaOrganizationType] from OrganizationType (required)
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
-  * insert StrictCodableConcept
+
+* type[emigaOrganizationType].coding.code = #hospital
+* type[emigaOrganizationType].coding.system = $DemisOrgType
+* type[emigaOrganizationType].coding.display = "Krankenhaus"
+  //* insert StrictCodableConcept
 * type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
 * type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
-  * insert StrictCodableConcept
+ // * insert StrictCodableConcept
 * type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
-  * insert StrictCodableConcept
+ // * insert StrictCodableConcept
  
 
 // 'Name used for the organization' - 0..1 - string
@@ -203,7 +209,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 // Invariants to validate the address and telecom values
 
 //    Max. Zeichenlänge = 255 / Alle Zeichen erlaubt / Formatvalidierung E-Mail 
-
+/*
 Invariant: validEmailAddress
 Description: "Die E-Mail-Adresse muss valide sein."
 * severity = #error
@@ -220,8 +226,10 @@ Description: "Die Telefonnummer muss valide sein."
 Invariant: validUrl
 Description: "Die Url muss valide sein."
 * severity = #error
-* expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
+*/
 
+//* expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
+/*
 // TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
@@ -249,3 +257,4 @@ Invariant: validPLZ
 Description: "Die PLZ muss valide sein. Zeichenlänge maximal 10 Zeichen"
 * severity = #error
 * expression = "$this.matches('^.{1,10}$')"
+*/
