@@ -29,7 +29,7 @@ profileSets:
         reasoning: EMIGA uses different NamingConventions then DEMIS
   - identifier: rki.emiga.common
     artifactRepo: gitlab_rki_emiga_common
-    reference: "main"
+    reference: "master"
     skipFhirSchemaValidation: false
     resourceBaseUrl: https://emiga.rki.de/fhir/common
     ignoredSanityChecks: 

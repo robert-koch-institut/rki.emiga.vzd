@@ -1,5 +1,4 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
-CodeSystem-EndpointConnectionType.json                    EndpointConnectionType           CodeSystem  CodeSystem\EndpointConnectionType.fsh                              1 - 11
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 154

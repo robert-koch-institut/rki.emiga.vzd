@@ -1,13 +1,5 @@
 [
   {
-    "outputFile": "CodeSystem-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "CodeSystem",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 1,
-    "endLine": 11
-  },
-  {
     "outputFile": "CodeSystem-HealthcareServiceCategory.json",
     "fshName": "HealthcareServiceCategory",
     "fshType": "CodeSystem",
