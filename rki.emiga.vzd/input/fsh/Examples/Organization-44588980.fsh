@@ -4,9 +4,9 @@ InstanceOf: EmigaPublicHealthOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
-* identifier.type = $v2-0203#PRN
-* identifier.system = $CodeSiteId
-* identifier.value = "1.12.99.99."
+* identifier[codeSiteId].type = $v2-0203#PRN
+* identifier[codeSiteId].system = $CodeSiteId
+* identifier[codeSiteId].value = "1.12.99.99."
 * active = true
 * extension.url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
 * extension.extension[0].url = "geographicRegion"

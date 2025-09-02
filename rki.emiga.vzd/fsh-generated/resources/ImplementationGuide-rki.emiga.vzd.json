@@ -24,25 +24,19 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.5.0",
+      "version": "1.5.2-snapshots",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
     {
       "packageId": "rki.demis.common",
-      "version": "1.0.2",
+      "version": "2.0.0-snapshots",
       "uri": "https://demis.rki.de/fhir/common",
       "id": "rki_demis_common"
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.0.0",
-      "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
-      "id": "rki_emiga_common"
-    },
-    {
-      "packageId": "rki.emiga.common",
-      "version": "1.0.0",
+      "version": "1.1.0-alpha.1",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     }
@@ -61,63 +55,63 @@
           "reference": "Location/44588965"
         },
         "name": "44588965",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
       },
       {
         "reference": {
           "reference": "Practitioner/44588966"
         },
         "name": "44588966",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/44588967"
         },
         "name": "44588967",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "Practitioner/44588968"
         },
         "name": "44588968",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/44588969"
         },
         "name": "44588969",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "Practitioner/44588970"
         },
         "name": "44588970",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/44588971"
         },
         "name": "44588971",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "HealthcareService/44588972"
         },
         "name": "44588972",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseHealthcareService"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
       },
       {
         "reference": {
           "reference": "HealthcareService/44588973"
         },
         "name": "44588973",
-        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
       },
       {
@@ -132,7 +126,7 @@
           "reference": "Organization/44588981"
         },
         "name": "44588981",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
@@ -232,10 +226,18 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/HealthcareServiceType"
+        },
+        "name": "Dienstleistungstyp (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten",
-        "description": "TODO",
+        "description": "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen.",
         "exampleBoolean": false
       },
       {
@@ -243,7 +245,15 @@
           "reference": "ValueSet/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten (Werteliste)",
-        "description": "TODO",
+        "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/EmigaOrgvId"
+        },
+        "name": "Emiga Organizationsverzeichnis ID",
+        "description": "Emiga Organizationsverzeichnis ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -264,22 +274,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp",
-        "description": "Die Kodiersystematik 'EndpointConnectionType' definiert Konzepte, die die im EMIGA-Kontext verwendeten Endpunkte bzw. die durch sie abgebildeten Verbindungen grob charakterisieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EndpointConnectionType"
-        },
-        "name": "Endpunktverbindungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die den Typ einer Endpunktverbindung näher beschreiben.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "HealthcareService/EpiWarnHealthcareService"
         },
         "name": "EpiWarnHealthcareService",
@@ -288,10 +282,18 @@
       },
       {
         "reference": {
+          "reference": "HealthcareService/EpiWarnHealthcareServiceInvTest"
+        },
+        "name": "EpiWarnHealthcareServiceInvTest",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um die Uhr verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
           "reference": "Location/EpiWarnLocation"
         },
         "name": "EpiWarnLocation",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
       },
       {
         "reference": {
@@ -305,21 +307,21 @@
           "reference": "Practitioner/EpiWarnPractitioner"
         },
         "name": "EpiWarnPractitioner",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitioner"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
       },
       {
         "reference": {
           "reference": "PractitionerRole/EpiWarnPractitionerRole"
         },
         "name": "EpiWarnPractitionerRole",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/BasePractitionerRole"
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
           "reference": "StructureDefinition/DutyHoursAvailability"
         },
         "name": "Erreichbarkeit Dienstzeiten",
-        "description": "Extension zur Abbildung der Erreichbarkeit der Organizationen anhand der Dienstzeiten.",
+        "description": "Extension zur Abbildung der Erreichbarkeit der Dienstleistungen einer Organisation anhand der Dienstzeiten.",
         "exampleBoolean": false
       },
       {
@@ -327,7 +329,7 @@
           "reference": "StructureDefinition/EmigaDepartmentOrganization"
         },
         "name": "Fachabteilung",
-        "description": "TODO",
+        "description": "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort).",
         "exampleBoolean": false
       },
       {
@@ -335,7 +337,7 @@
           "reference": "CodeSystem/HealthcareServiceSpecialty"
         },
         "name": "Fachspezialisierung",
-        "description": "Fachspezialisierungskodes für Dienstleistungen",
+        "description": "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben",
         "exampleBoolean": false
       },
       {
@@ -356,26 +358,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/IdentifierIfsgKoordVwVId"
+          "reference": "StructureDefinition/IdentifierEmigaOrgvId"
         },
-        "name": "Identifier-Profil IfSGKoordVwV-Id",
+        "name": "Identifier-Profil EmigaOrgvId",
         "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IdentifierTransmittingSiteId"
-        },
-        "name": "Identifier-Profil TransmittingSiteId",
-        "description": "TODO",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/IfsgKoordVwVId"
-        },
-        "name": "IfSGKoordVwV ID",
-        "description": "IfSGKoordVwV-ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -391,7 +377,7 @@
           "reference": "StructureDefinition/EmigaOrganization"
         },
         "name": "Organization",
-        "description": "TODO",
+        "description": "Unter der EmigaOrganization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
         "exampleBoolean": false
       },
       {
@@ -422,16 +408,16 @@
         "reference": {
           "reference": "CodeSystem/Relevance"
         },
-        "name": "Relevance",
-        "description": "TODO",
+        "name": "Relevanz",
+        "description": "Die Kodiersystematik Relevance definiert Konzepte, die die für verschiedene Emiga Use Cases relevanten Ressourcen kennzeichnen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/Relevance"
         },
-        "name": "Relevance (Werteliste)",
-        "description": "TODO",
+        "name": "Relevanz (Werteliste)",
+        "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
         "exampleBoolean": false
       },
       {
@@ -440,14 +426,6 @@
         },
         "name": "Standort",
         "description": "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/TransmittingSiteId"
-        },
-        "name": "TransmittingSite ID",
-        "description": "TransmittingSite ID to be used in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -470,8 +448,8 @@
         "reference": {
           "reference": "ValueSet/PublicHealthOrganizationType"
         },
-        "name": "ÖGD Stellen",
-        "description": "Werteliste mit Konzepten, die die Arten einer Behörde näher beschreiben.",
+        "name": "ÖGD Organizationen",
+        "description": "Werteliste mit Konzepten, die die Arten einer Organisation des öffentlichen Gesundheitsdienstes näher beschreiben.",
         "exampleBoolean": false
       }
     ],

@@ -24,7 +24,7 @@
     },
     {
       "code": "publicMedicalOfficer",
-      "display": "Amtsarzt/-ärztin",
+      "display": "Amtsarzt/Amtsärztin",
       "designation": [
         {
           "language": "de-DE",

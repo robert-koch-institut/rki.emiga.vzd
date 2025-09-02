@@ -2,30 +2,35 @@ Profile: EmigaDepartmentOrganization
 Parent: Organization
 Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
-Description: "TODO"
+Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
 * ^version = "1.0.0"
 * ^date = "2024-03-12"
-// Temporarily Outcomment to flag draft for presentation in Simplifier
-//* insert MetadataProfile
+
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-// Update: extension benuzt um die Art derZuständigkeit abzubilden
-//* extension 1.. MS
-//* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
-//* extension[responsibilityHealthdepartments] ^isModifier = false
+// Update: extension benuzt um den Zeitraum der Gültigkeit der Organisation abzubilden
+* extension MS
+* extension contains $OrganizationPeriod named organizationPeriod 0..*
+* extension[organizationPeriod] ^isModifier = false
+* extension[organizationPeriod] ^mustSupport = true
+* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
+* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
+* modifierExtension ..0
 //* modifierExtension ..0
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
-
+// Update zu v2: Wir  nutzen Slicing um die verschiedenen Identifier-Typen zu unterscheiden. Addiert gematik-ID und emigaOrgvId
+// Discussion: Soll identifier pflicht sein 1..1?
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
@@ -33,10 +38,18 @@ Description: "TODO"
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
+    emigaOrgvId 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     Abteilungsidentifikator 0..1 MS and
-    demisParticipantId 0..1 MS
+    demisParticipantId 0..1 MS and
+    telematikID 0..1 MS 
+
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
+* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
+* identifier[emigaOrgvId].system 1.. MS
+* identifier[emigaOrgvId].value 1.. MS
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
@@ -54,6 +67,12 @@ Description: "TODO"
 * identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
 * identifier[demisParticipantId].system 1.. MS
 * identifier[demisParticipantId].value 1.. MS
+
+* identifier[telematikID] only $identifier-telematik-id
+* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
+* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* identifier[telematikID].system 1.. MS
+* identifier[telematikID].value 1.. MS
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
@@ -163,6 +182,7 @@ Description: "TODO"
 * address.line.extension[Postfach].valueString obeys validString
 * address.city MS
 * address.city obeys validString
+* address.state MS
 * address.postalCode MS 
 * address.postalCode obeys validPLZ
 

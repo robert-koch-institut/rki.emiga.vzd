@@ -4,9 +4,9 @@ InstanceOf: EmigaPublicHealthOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
-* identifier.type = $v2-0203#PRN
-* identifier.system = $CodeSiteId
-* identifier.value = "1.12.99.99."
+* identifier[codeSiteId].type = $v2-0203#PRN
+* identifier[codeSiteId].system = $CodeSiteId
+* identifier[codeSiteId].value = "1.12.99.99."
 * active = true
 * extension.url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
 * extension.extension[0].url = "geographicRegion"
@@ -23,6 +23,8 @@ Usage: #example
 * telecom[Phone].value = "0123 4567890"
 * telecom[Fax].system = #fax
 * telecom[Fax].value = "0123 4567899"
+* telecom[Url].system = #url
+* telecom[Url].value = "https://www.example.org"
 * address.type = #postal
 * address.line = "Test Straße 21"
 * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"

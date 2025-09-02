@@ -3,42 +3,54 @@ Parent: Organization
 Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organization"
 Description: "TODO"
-// Temporarily Outcomment to flag draft for presentation in Simplifier
-//* insert MetadataProfile
+
 * ^version = "1.0.0"
 * ^date = "2024-11-12"
-
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-// Update: extension benuzt um die Art derZuständigkeit abzubilden
+// Update: extension benuzt um die Art derZuständigkeit und den Zeitraum der Gültigkeit abzubilden
 * extension 1.. MS
-* extension ^definition = "Art der Zuständigkeit"
-* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
+//* extension ^definition = "Art der Zuständigkeit"
+* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..* and $OrganizationPeriod named organizationPeriod 0..*
+* extension[organizationPeriod] ^isModifier = false
+* extension[organizationPeriod] ^mustSupport = true
+* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
+* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
 * extension[responsibilityHealthdepartments] ^isModifier = false
+* extension[responsibilityHealthdepartments] ^mustSupport = true
 * modifierExtension ..0
 
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 
-* identifier MS
+* identifier 1.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by system"
   * ^slicing.ordered = false
-* identifier contains codeSiteId 0..1 MS
+* identifier contains codeSiteId 1..1 MS and
+          telematikID 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
+* identifier[codeSiteId] ^patternIdentifier.system = $CodeSiteId
 //* identifier ^comment = "Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)"
+//Update: identifier telematikID hinzugefügt weil Anschluß GA in TI s.gematik.de/sektoren/oegd
+* identifier[telematikID] only $identifier-telematik-id
+* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
+* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+//* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
+
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
 
@@ -128,6 +140,7 @@ Description: "TODO"
 * address.line.extension[Postfach].valueString obeys validString
 * address.city MS
 * address.city obeys validString
+* address.state MS
 * address.postalCode MS 
 * address.postalCode obeys validPLZ
 

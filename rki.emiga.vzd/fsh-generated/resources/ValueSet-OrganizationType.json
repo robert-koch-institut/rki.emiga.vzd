@@ -37,8 +37,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Authority"
               }
@@ -51,8 +51,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Supreme federal authority"
               }
@@ -65,8 +65,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Higher federal authority"
               }
@@ -79,8 +79,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Federal Institute"
               }
@@ -93,8 +93,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Supreme Federal State authority"
               }
@@ -107,8 +107,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Other authority federal"
               }
@@ -121,8 +121,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Other authority state"
               }
@@ -135,8 +135,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "International Organization"
               }
@@ -149,8 +149,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Research Facility"
               }
@@ -163,8 +163,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "other Organization"
               }
@@ -177,8 +177,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Transport"
               }
@@ -191,8 +191,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Airport"
               }
@@ -205,8 +205,8 @@
               {
                 "language": "en-US",
                 "use": {
-                  "system": "http://snomed.info/sct",
-                  "code": "900000000000003009"
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
                 },
                 "value": "Harbor"
               }

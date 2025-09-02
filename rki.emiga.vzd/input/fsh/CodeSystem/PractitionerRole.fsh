@@ -17,7 +17,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 //* #director ^designation[=].use = $ConceptDesignationUse#long
 //* #director ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"
 //* #director ^designation[=].value = "Amtsleiter/Amtsleiterin"
-* #publicMedicalOfficer "Amtsarzt/-ärztin"
+* #publicMedicalOfficer "Amtsarzt/Amtsärztin"
 * #publicMedicalOfficer ^designation[0].language = #de-DE
 * #publicMedicalOfficer ^designation[=].use = $ConceptDesignationUse#abbreviation
 * #publicMedicalOfficer ^designation[=].use.system = "https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse"

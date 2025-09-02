@@ -1,5 +1,5 @@
 Instance: 44588968
-InstanceOf: BasePractitioner
+InstanceOf: EmigaPractitioner
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#internal
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.

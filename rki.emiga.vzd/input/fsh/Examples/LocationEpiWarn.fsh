@@ -1,8 +1,9 @@
 Instance: EpiWarnLocation
-InstanceOf: BaseLocation
+InstanceOf: EmigaLocation
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.12.99.99.
+* meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
 * status = #active
 * name = "Umweltbezogene Risikobewertung"
 * mode = #instance

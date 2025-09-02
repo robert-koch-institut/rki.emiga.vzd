@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
     "startLine": 1,
-    "endLine": 154
+    "endLine": 167
   },
   {
     "outputFile": "CodeSystem-OrganizationType.json",
@@ -69,7 +69,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\HealthcareService-44588973.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 30
   },
   {
     "outputFile": "HealthcareService-EpiWarnHealthcareService.json",
@@ -77,7 +77,15 @@
     "fshType": "Instance",
     "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 33
+  },
+  {
+    "outputFile": "HealthcareService-EpiWarnHealthcareServiceInvTest.json",
+    "fshName": "EpiWarnHealthcareServiceInvTest",
+    "fshType": "Instance",
+    "fshFile": "Examples\\EpiWarnHealthcareServiceInvTest.fsh",
+    "startLine": 1,
+    "endLine": 35
   },
   {
     "outputFile": "Location-44588965.json",
@@ -93,7 +101,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\LocationEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "NamingSystem-CodeSiteId.json",
@@ -104,18 +112,10 @@
     "endLine": 12
   },
   {
-    "outputFile": "NamingSystem-IfsgKoordVwVId.json",
-    "fshName": "IfsgKoordVwVId",
+    "outputFile": "NamingSystem-EmigaOrgvId.json",
+    "fshName": "EmigaOrgvId",
     "fshType": "Instance",
-    "fshFile": "NamingSystem\\IfsgKoordVwVId.fsh",
-    "startLine": 1,
-    "endLine": 13
-  },
-  {
-    "outputFile": "NamingSystem-TransmittingSiteId.json",
-    "fshName": "TransmittingSiteId",
-    "fshType": "Instance",
-    "fshFile": "NamingSystem\\TransmittingSiteId.fsh",
+    "fshFile": "NamingSystem\\EmigaOrgvId.fsh",
     "startLine": 1,
     "endLine": 12
   },
@@ -125,7 +125,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\Organization-44588964.fsh",
     "startLine": 2,
-    "endLine": 35
+    "endLine": 37
   },
   {
     "outputFile": "Organization-44588980.json",
@@ -149,7 +149,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\OrganizationEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 30
   },
   {
     "outputFile": "Practitioner-44588966.json",
@@ -181,7 +181,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\PractitionerEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 17
   },
   {
     "outputFile": "PractitionerRole-44588967.json",
@@ -213,55 +213,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\PractitionerRoleEpiWarn.fsh",
     "startLine": 1,
-    "endLine": 11
-  },
-  {
-    "outputFile": "StructureDefinition-AuthorityOrganization.json",
-    "fshName": "AuthorityOrganization",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\AuthorityOrganization.fsh",
-    "startLine": 1,
-    "endLine": 141
-  },
-  {
-    "outputFile": "StructureDefinition-BaseEndpoint.json",
-    "fshName": "BaseEndpoint",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseEndpoint.fsh",
-    "startLine": 1,
-    "endLine": 64
-  },
-  {
-    "outputFile": "StructureDefinition-BaseHealthcareService.json",
-    "fshName": "BaseHealthcareService",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseHealthcareService.fsh",
-    "startLine": 1,
-    "endLine": 122
-  },
-  {
-    "outputFile": "StructureDefinition-BaseLocation.json",
-    "fshName": "BaseLocation",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BaseLocation.fsh",
-    "startLine": 1,
-    "endLine": 119
-  },
-  {
-    "outputFile": "StructureDefinition-BasePractitioner.json",
-    "fshName": "BasePractitioner",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BasePractitioner.fsh",
-    "startLine": 1,
-    "endLine": 85
-  },
-  {
-    "outputFile": "StructureDefinition-BasePractitionerRole.json",
-    "fshName": "BasePractitionerRole",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\BasePractitionerRole.fsh",
-    "startLine": 1,
-    "endLine": 86
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-DutyHoursAvailability.json",
@@ -269,7 +221,7 @@
     "fshType": "Extension",
     "fshFile": "StructureDefinitions\\ExtensionDutyHoursOpeningTimes.fsh",
     "startLine": 1,
-    "endLine": 14
+    "endLine": 17
   },
   {
     "outputFile": "StructureDefinition-EmigaDepartmentOrganization.json",
@@ -277,7 +229,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
     "startLine": 1,
-    "endLine": 186
+    "endLine": 206
   },
   {
     "outputFile": "StructureDefinition-EmigaHealthcareService.json",
@@ -285,7 +237,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
     "startLine": 1,
-    "endLine": 154
+    "endLine": 194
   },
   {
     "outputFile": "StructureDefinition-EmigaLocation.json",
@@ -293,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaLocation.fsh",
     "startLine": 1,
-    "endLine": 132
+    "endLine": 144
   },
   {
     "outputFile": "StructureDefinition-EmigaOrganization.json",
@@ -301,7 +253,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
     "startLine": 1,
-    "endLine": 181
+    "endLine": 201
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitioner.json",
@@ -309,7 +261,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPractitioner.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-EmigaPractitionerRole.json",
@@ -317,7 +269,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPractitionerRole.fsh",
     "startLine": 1,
-    "endLine": 91
+    "endLine": 92
   },
   {
     "outputFile": "StructureDefinition-EmigaPublicHealthOrganization.json",
@@ -325,7 +277,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
     "startLine": 1,
-    "endLine": 151
+    "endLine": 164
   },
   {
     "outputFile": "StructureDefinition-IdentifierCodeSiteId.json",
@@ -336,28 +288,12 @@
     "endLine": 12
   },
   {
-    "outputFile": "StructureDefinition-IdentifierIfsgKoordVwVId.json",
-    "fshName": "IdentifierIfsgKoordVwVId",
+    "outputFile": "StructureDefinition-IdentifierEmigaOrgvId.json",
+    "fshName": "IdentifierEmigaOrgvId",
     "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierIfsgKoordVwVId.fsh",
+    "fshFile": "StructureDefinitions\\IdentifierEmigaOrgvId.fsh",
     "startLine": 1,
-    "endLine": 16
-  },
-  {
-    "outputFile": "StructureDefinition-IdentifierTransmittingSiteId.json",
-    "fshName": "IdentifierTransmittingSiteId",
-    "fshType": "Profile",
-    "fshFile": "StructureDefinitions\\IdentifierTransmittingSiteId.fsh",
-    "startLine": 1,
-    "endLine": 16
-  },
-  {
-    "outputFile": "StructureDefinition-ParentSite.json",
-    "fshName": "ParentSite",
-    "fshType": "Extension",
-    "fshFile": "StructureDefinitions\\ExtensionParentSite.fsh",
-    "startLine": 1,
-    "endLine": 16
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
@@ -366,22 +302,6 @@
     "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
     "startLine": 2,
     "endLine": 34
-  },
-  {
-    "outputFile": "ValueSet-AuthorityType.json",
-    "fshName": "AuthorityType",
-    "fshType": "ValueSet",
-    "fshFile": "ValueSet\\AuthorityType.fsh",
-    "startLine": 1,
-    "endLine": 8
-  },
-  {
-    "outputFile": "ValueSet-EndpointConnectionType.json",
-    "fshName": "EndpointConnectionType",
-    "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\EndpointConnectionType.fsh",
-    "startLine": 13,
-    "endLine": 20
   },
   {
     "outputFile": "ValueSet-HealthcareServiceCategory.json",
@@ -403,9 +323,17 @@
     "outputFile": "ValueSet-HealthcareServiceSpecialty.json",
     "fshName": "HealthcareServiceSpecialty",
     "fshType": "ValueSet",
-    "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
-    "startLine": 158,
-    "endLine": 165
+    "fshFile": "ValueSet\\HealthcareServiceSpecialty.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceType.json",
+    "fshName": "HealthcareServiceType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HealthcareServiceType.fsh",
+    "startLine": 1,
+    "endLine": 42
   },
   {
     "outputFile": "ValueSet-OrganizationType.json",

@@ -3,18 +3,18 @@ Parent: HealthcareService
 Id: EmigaHealthcareService
 Title: "Dienstleistung"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
-//Temporäre outcomment um draft zu kennzeichnen.
-//* insert MetadataProfile
+
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
 
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -37,6 +37,8 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 
 // 'Broad category of service being performed or delivered' - 0..* - CodeableConcept
 // Sollten wir für eine bessere Kategorisierung der Dienstleistungen nutzen. Entsprechend machen wir das Element verpflichtend und binden es an eine Werteliste.
+* category ^short = "Kategorie"
+* category ^definition = "Breite Kategorie der durchgeführten oder erbrachten Dienstleistung."
 * category MS 
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -52,14 +54,27 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // !!! Perspektivisch wäre das sicherlich sinnvoll, um die Dienstleistungen besser zu kategorisieren. !!!
 // !!! Dann benötigen wir aber auch eine entsprechende Werteliste. !!!
-// !!! Update: Wird noch nicht ermöglicht
-* type 0..0
-//* type from $serviceType (extensible)
+
+
+* type ^short = "Dienstleistungstyp"
+* type ^definition = "Art der Dienstleistung, die erbracht oder durchgeführt werden kann."
+* type MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+  * ^slicing.description = "slicing healthcare service type by system"
+  * ^slicing.ordered = false
+* type contains emigaHealthcareServiceType 0..1 MS
+* type[emigaHealthcareServiceType] from $ServiceTypeVS (extensible)
+  * ^patternCodeableConcept.coding.system = $ServiceTypeCS
+  * insert StrictCodableConcept
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
 // Würde einer Fachrichtung (z.B. 'Kardiologie') entsprechen.
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Update: Wird benuzt um den epiWarn Zuständigkeiten abzubilden.
+* specialty ^short = "Fachrichtung"
+* specialty ^definition = "Fachrichtungen, die von der Dienstleistung abgedeckt werden."
 * specialty MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -80,7 +95,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * location ^comment = "Referenzierung der Standorte, an denen die Dienstleistung angeboten wird."
 
 // 'Description of service as presented to a consumer while searching' - 0..1 - string
-* name 0..1 MS
+* name 1..1 MS
 
 
 // 'Additional description and/or any specific issues not covered elsewhere' - 0..1 - string
@@ -94,7 +109,32 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * photo 0..0
 
 // 'Contacts related to the healthcare service' - 0..* - ContactPoint
-* telecom 0.. 
+* telecom 0.. MS
+* telecom ^slicing.discriminator.type = #value
+* telecom ^slicing.discriminator.path = "system"
+* telecom ^slicing.rules = #closed
+* telecom ^definition = "Kontaktangaben der Dienstleistung. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
+* telecom contains
+    Email 0..* and
+    Phone 0..* and
+    Url 0..* and
+    Fax 0..*
+* telecom[Email].system 1.. MS
+* telecom[Email].system = #email (exactly)
+* telecom[Email].value 1.. MS
+* telecom[Email].value obeys validEmailAddress
+* telecom[Phone].system 1.. MS
+* telecom[Phone].system = #phone (exactly)
+* telecom[Phone].value 1.. MS
+* telecom[Phone].value obeys validPhoneNumber
+* telecom[Url].system 1.. MS
+* telecom[Url].system = #url (exactly)
+* telecom[Url].value 1.. MS
+* telecom[Url].value obeys validUrl
+* telecom[Fax].system 1.. MS
+* telecom[Fax].system = #fax (exactly)
+* telecom[Fax].value 1.. MS
+* telecom[Fax].value obeys validFaxNumber
 
 // 'Location(s) service is intended for/available to' - 0..* - Reference(Location)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

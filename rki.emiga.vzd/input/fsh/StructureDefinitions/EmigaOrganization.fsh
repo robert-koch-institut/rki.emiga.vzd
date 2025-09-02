@@ -2,11 +2,12 @@ Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
 Title: "Organization"
-Description: "TODO"
-//* insert MetadataProfile
+Description: "Unter der EmigaOrganization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+
 * ^version = "1.0.0"
 * ^date = "2024-12-12"
 
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
@@ -14,21 +15,26 @@ Description: "TODO"
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|1.0.0"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
-// Update: extension benuzt um die Art derZuständigkeit abzubilden
-//* extension 1.. MS
-//* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..*
-//* extension[responsibilityHealthdepartments] ^isModifier = false
-//* modifierExtension ..0
+// Update: extension benuzt um den Zeitraum der Gültigkeit abzubilden
+* extension MS
+* extension contains $OrganizationPeriod named organizationPeriod 0..*
+* extension[organizationPeriod] ^isModifier = false
+* extension[organizationPeriod] ^mustSupport = true
+* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
+* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
+* modifierExtension ..0
+
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
 
 
 //Identifiers harmonisiert mit IsiK und MII. Die Demis und telematikID Werden diskutiert
+//Update v2: Demis und telematikID und emigaOrgvId hinzugefügt
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
@@ -36,17 +42,27 @@ Description: "TODO"
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
+   emigaOrgvId 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     organisationseinheitenID 0..1 MS and 
-    demisParticipantId 0..1 MS
+    demisParticipantId 0..1 MS and
+    telematikID 0..1 MS
+
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
+* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
+* identifier[emigaOrgvId].system 1.. MS
+* identifier[emigaOrgvId].value 1.. MS
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
+* identifier[IKNR].system 1.. MS
+* identifier[IKNR].value 1.. MS
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
 * identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
-* identifier[organisationseinheitenID] ^comment = "Motivation: Für IDs, die Krankhausintern spezifischen Organisationseinheiten wie Abteilungen oder Stationen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung. Da auch Stationen im Identifier-System inkludiert werden könnten, sollte hier das Identifier generisch Organisationseinheiten abbilden und nicht Abteilungen allein."
+* identifier[organisationseinheitenID] ^comment = "Kommentar von Isik Basis: Motivation: Für IDs, die Krankhausintern spezifischen Organisationseinheiten wie Abteilungen oder Stationen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung. Da auch Stationen im Identifier-System inkludiert werden könnten, sollte hier das Identifier generisch Organisationseinheiten abbilden und nicht Abteilungen allein."
 * identifier[organisationseinheitenID] ^patternIdentifier.type = $sct#43741000
 * identifier[organisationseinheitenID].system 1.. MS
 * identifier[organisationseinheitenID].value 1.. MS
@@ -57,11 +73,13 @@ Description: "TODO"
 * identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
 * identifier[demisParticipantId].system 1.. MS
 * identifier[demisParticipantId].value 1.. MS
-/*
+
 * identifier[telematikID] only $identifier-telematik-id
-* identifier[telematikID] ^comment = "TODO Rephrase the comment -> Motivation: Entsprechend der Profil-Festlegung der KBV Organisation 1.5.0. (https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization) und der VZD-FHIR-Directory Organisation-Ressource in der Version 0.10.2 (https://gematik.de/fhir/directory/StructureDefinition/OrganizationDirectory), muss ein System ein Telematik-ID verarbeiten können, sofern diese Information verfügbar ist."
+* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
-*/
+* identifier[telematikID].system 1.. MS
+* identifier[telematikID].value 1.. MS
+
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
 * active 1..1 MS
@@ -85,6 +103,7 @@ Description: "TODO"
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
+* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
   * insert StrictCodableConcept
 * type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
   * insert StrictCodableConcept
@@ -158,6 +177,7 @@ Description: "TODO"
 * address.line.extension[Postfach].valueString obeys validString
 * address.city MS
 * address.city obeys validString
+* address.state MS
 * address.postalCode MS 
 * address.postalCode obeys validPLZ
 
@@ -200,7 +220,7 @@ Description: "Die Telefonnummer muss valide sein."
 Invariant: validUrl
 Description: "Die Url muss valide sein."
 * severity = #error
-* expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
+* expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
 
 // TODO: Verify need of regex
 Invariant: validFaxNumber

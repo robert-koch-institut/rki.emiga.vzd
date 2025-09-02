@@ -3,15 +3,16 @@ Parent: PractitionerRole
 Id: EmigaPractitionerRole
 Title: "EmigaPractitionerRole"
 Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
-//* insert MetadataProfile
+//
 * ^version = "1.0.0"
 * ^date = "2024-03-18"
 
+* insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole" 
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole|1.0.0" 
 * insert ProfileMetaTags
 
 // 'Additional content defined by implementations' - 0..* - Extension
@@ -32,7 +33,7 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 // 'Practitioner that is able to provide the defined services for the organization' - 0..1 - Reference(Practitioner)
 // Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich.
 * practitioner 1..1 MS
-* practitioner only Reference(Practitioner)
+* practitioner only Reference(EmigaPractitioner)
 * practitioner ^comment = "Ein Bezug zu einer konkreten Practitioner-Ressource ist für die EMIGA Anwendungsfälle zwingend erforderlich."
 
 // 'Organization where the roles are available' - 0..1 - Reference(Organization)
@@ -64,11 +65,11 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Update 04.10.2024 location referenz auf Baselocation
 * location 0..1 MS
-* location only Reference(BaseLocation)
+* location only Reference(EmigaLocation)
 
 // 'The list of healthcare services that this worker provides for this role's Organization/Location(s)' - 0..* - Reference(HealthcareService)
 * healthcareService 0.. MS
-* healthcareService only Reference(HealthcareService)
+* healthcareService only Reference(EmigaHealthcareService)
 
 // 'Contact details that are specific to the role/location/service' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Die Angaben zur Erreichbarkeit werden über die Practitioner-Ressource abgebildet.

@@ -24,6 +24,7 @@ Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/Organization
 Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
+Alias: $EmigaOrgvId = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
@@ -40,7 +41,10 @@ Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/D
 Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
-
+Alias: $HL7DesignationUse = http://terminology.hl7.org/CodeSystem/designation-usage
+Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType
+Alias: $ServiceTypeCS = http://terminology.hl7.org/CodeSystem/service-type
+Alias: $OrganizationPeriod = http://hl7.org/fhir/StructureDefinition/organization-period
 
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
@@ -57,3 +61,7 @@ Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
 
 //DEMIS
 Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
+
+//IHE De
+Alias: $IHEFachrichtungen = http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen
+Alias: $IHEnichtAerztlicheFachrichtungen = http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen
