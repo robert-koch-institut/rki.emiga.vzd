@@ -6,7 +6,7 @@ Description: "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
+* meta.tag[relevance] = $RelevanceCS#InEK "Aus Krankenhausverzeichnis"
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.8"
 
 * active = true
@@ -20,5 +20,11 @@ Description: "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis."
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "260551132"
 * identifier[IKNR].period.start = "2019-01-01"
-* type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
+* type[emigaOrganizationType].coding.system = "https://demis.rki.de/fhir/CodeSystem/organizationType"
+* type[emigaOrganizationType].coding.code = #hospital
+* type[emigaOrganizationType].coding.display = "Krankenhaus"
+* type[fachbereich].coding.system = "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
+* type[fachbereich].coding.code = #0100
+* type[fachbereich].coding.display = "Innere Medizin"
+
 * name = "Josephs-Hospital Warendorf"
