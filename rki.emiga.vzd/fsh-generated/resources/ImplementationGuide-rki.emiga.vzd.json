@@ -2,9 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-
   "version": "2.0.0-alpha.3",
-
   "name": "rkiemigavzd",
   "status": "draft",
   "publisher": "Robert Koch Institut",
@@ -168,13 +166,11 @@
       },
       {
         "reference": {
-
           "reference": "Location/Station01"
         },
         "name": "Beispiel eines Stationsstandorts",
         "description": "Beispiel eines Standorts, der eine Station in einem Krankenhaus beschreibt.",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
-
       },
       {
         "reference": {

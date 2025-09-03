@@ -229,7 +229,7 @@
     "fshType": "Instance",
     "fshFile": "Examples\\InekKrankenhaus.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 30
   },
   {
     "outputFile": "Practitioner-44588966.json",
@@ -341,7 +341,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalOrganization.fsh",
     "startLine": 1,
-    "endLine": 225
+    "endLine": 229
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalRoomLocation.json",

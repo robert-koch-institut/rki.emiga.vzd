@@ -27,7 +27,7 @@ Organization-44588964.json                                44588964              
 Organization-44588980.json                                44588980                         Instance    Examples\Organization-44588980.fsh                                 2 - 35
 Organization-44588981.json                                44588981                         Instance    Examples\Organization-44588981.fsh                                 2 - 29
 Organization-EpiWarnOrganization.json                     EpiWarnOrganization              Instance    Examples\OrganizationEpiWarn.fsh                                   1 - 30
-Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 24
+Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 30
 Practitioner-44588966.json                                44588966                         Instance    Examples\Practitioner-44588966.fsh                                 1 - 16
 Practitioner-44588968.json                                44588968                         Instance    Examples\Practitioner-44588968.fsh                                 1 - 22
 Practitioner-44588970.json                                44588970                         Instance    Examples\Practitioner-44588970.fsh                                 1 - 16
@@ -41,7 +41,7 @@ StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganiz
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 194
 StructureDefinition-EmigaHospitalFacilityLocation.json    EmigaHospitalFacilityLocation    Profile     StructureDefinitions\EmigaHospitalFacilityLocation.fsh             1 - 275
 StructureDefinition-EmigaHospitalLocation.json            EmigaHospitalLocation            Profile     StructureDefinitions\EmigaHospitalLocation.fsh                     1 - 293
-StructureDefinition-EmigaHospitalOrganization.json        EmigaHospitalOrganization        Profile     StructureDefinitions\EmigaHospitalOrganization.fsh                 1 - 225
+StructureDefinition-EmigaHospitalOrganization.json        EmigaHospitalOrganization        Profile     StructureDefinitions\EmigaHospitalOrganization.fsh                 1 - 229
 StructureDefinition-EmigaHospitalRoomLocation.json        EmigaHospitalRoomLocation        Profile     StructureDefinitions\EmigaHospitalRoomLocation.fsh                 1 - 246
 StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 164
 StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 209
