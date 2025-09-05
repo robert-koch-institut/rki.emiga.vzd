@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.8"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.10"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -192,6 +192,12 @@ Description: "TO DO"
 * address.extension[municipalityKey] ^short = "Gemeindeschlüssel"
 * address.extension[municipalityKey] ^definition = "Amtlicher Gemeindeschlüssel (AGS) der Gemeinde, in der sich der Standort befindet."
 * address.extension[municipalityKey] ^mustSupport = true
+* address.extension[municipalityKey].valueCoding MS
+* address.extension[municipalityKey].valueCoding.system MS
+* address.extension[municipalityKey].valueCoding.code MS
+* address.extension[municipalityKey].valueCoding ^short = "Gemeindeschlüssel"
+* address.extension[municipalityKey].valueCoding ^definition = "Der Gemeindeschlüssel (AGS) ist ein eindeutiger Identifikator für jede Gemeinde in Deutschland."
+* address.extension[municipalityKey].valueCoding ^mustSupport = true
 * address.extension[Stadtteil] ^mustSupport = true
 * address.extension[Stadtteil].valueString MS
 * address.extension[Stadtteil].valueString obeys validString
