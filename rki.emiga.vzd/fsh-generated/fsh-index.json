@@ -333,7 +333,7 @@
     "fshType": "Profile",
     "fshFile": "StructureDefinitions\\EmigaHospitalLocation.fsh",
     "startLine": 1,
-    "endLine": 293
+    "endLine": 299
   },
   {
     "outputFile": "StructureDefinition-EmigaHospitalOrganization.json",
