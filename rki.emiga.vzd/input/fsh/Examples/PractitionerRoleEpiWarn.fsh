@@ -8,5 +8,5 @@ Usage: #example
 * practitioner = Reference(EpiWarnPractitioner)
 * organization = Reference(EpiWarnOrganization)
 * location = Reference(EpiWarnLocation)
-* healthcareService = Reference(EpiWarnHealthcareServiceHealthcareService)
+* healthcareService = Reference(EpiWarnHealthcareService)
 * code[emigaPractitionerRole] = $PractitionerRole#personOfContact "Ansprechperson"
