@@ -2,9 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-
   "version": "2.0.0-alpha.3",
-
   "name": "rkiemigavzd",
   "status": "draft",
   "publisher": "Robert Koch Institut",
@@ -26,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.4.0-snapshots",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -44,7 +42,7 @@
     },
     {
       "packageId": "rki.emiga.orgv",
-      "version": "1.1.1",
+      "version": "1.1.1-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
       "id": "rki_emiga_orgv"
     },
@@ -168,13 +166,11 @@
       },
       {
         "reference": {
-
           "reference": "Location/Station01"
         },
         "name": "Beispiel eines Stationsstandorts",
         "description": "Beispiel eines Standorts, der eine Station in einem Krankenhaus beschreibt.",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
-
       },
       {
         "reference": {
