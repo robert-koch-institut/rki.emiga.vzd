@@ -2,7 +2,7 @@ Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
 Title: "Organization"
-Description: "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
 * ^version = "1.0.0"
 * ^date = "2024-12-12"
@@ -51,13 +51,13 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
     telematikID 0..1 MS
 
 * identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
 
 * identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
 * identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
 * identifier[emigaOrgvFileNumber].system 1.. MS
 * identifier[emigaOrgvFileNumber].value 1.. MS
