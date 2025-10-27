@@ -7,7 +7,7 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.8"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.10"
 //* extension[InekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 //* extension[ineKVersionPeriod].extension[lastChange].valueDate = "2024-03-06"

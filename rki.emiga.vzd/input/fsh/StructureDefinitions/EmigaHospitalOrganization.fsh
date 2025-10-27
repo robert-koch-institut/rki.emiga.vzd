@@ -15,7 +15,7 @@ Description: "TODO"
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.8"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.10"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -103,16 +103,16 @@ Description: "TODO"
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
 * type 1.. MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "coding.system"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains emigaOrganizationType 1..1 MS and
+* type contains emigaOrganizationType 0..1 MS and fachbereich 0..1 MS
     //einrichtungsArt 0..1 MS and
     //erweiterterFachabteilungsschluessel 0..1 MS and
     //fachbereich 0..1 MS
-    fachbereich 0..1 MS
+    
 
 * type[emigaOrganizationType] from HospitalOrganizationType (required)
 //  * ^patternCodeableConcept.coding.system = $HospitalOrganizationType
@@ -127,9 +127,10 @@ Description: "TODO"
 //* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
  // * insert StrictCodableConcept
 //* type[fachbereich] from $IHEXDSpracticeSettingCode (required)
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from Fachbereich (required)
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
+* type[fachbereich].coding.system from Fachbereich
 * type[fachbereich].coding.display MS
 //* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
 

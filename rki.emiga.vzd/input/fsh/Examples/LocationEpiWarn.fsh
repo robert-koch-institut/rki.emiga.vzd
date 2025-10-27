@@ -17,4 +17,4 @@ Usage: #example
 * address.state = "Niedersachsen"
 * address.postalCode = "30161"
 * address.country = "DE"
-* managingOrganization = Reference(EpiWarn)
+* managingOrganization = Reference(EpiWarnOrganization)
