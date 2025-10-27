@@ -4,8 +4,8 @@ Id: EmigaLocation
 Title: "Bereich / Standort"
 Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
 //
-* ^version = "1.1.0"
-* ^date = "2025-10-20"
+* ^version = "1.2.0"
+* ^date = "2025-10-27"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -77,7 +77,8 @@ Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Or
 * identifier[telematikID].value 1.. MS
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
-* status 1..1 MS
+// Update 27.10.25 Status wird auf "optional" gesetzt, um bestehende Standorte ohne Statusangabe weiterhin nutzen zu können.
+* status 0..1 MS
 * status ^short = "Status"
 * status ^definition = "Aktivitätsstatus des Standortes"
 * status ^comment = "Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe"
@@ -181,7 +182,8 @@ Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Or
 //Update(20.10.2025) Wir öffnen das Element, um ggf. Standort-Hierarchien abbilden zu können.
 * partOf MS
 * partOf ^short = "Übergeordneter Standort/Bereich"
-* partOf ^definition = "Übergeordneter Standort/Bereich"
+* partOf ^definition = "Referenz auf übergeordneten Standort/Bereich"
+* partOf ^comment = "Dieses Element kann genutzt werden, um Standort/Bereich-Hierarchien abzubilden. Wenn es belegt ist, verweist es auf den übergeordneten Standort/Bereich und die Instanz bildet ein Subbereich ab."
 
 // 'What days/times during a week is this location usually open' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
