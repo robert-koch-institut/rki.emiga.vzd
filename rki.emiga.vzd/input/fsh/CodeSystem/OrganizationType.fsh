@@ -3,8 +3,8 @@ Id: OrganizationType
 Title: "Organizationstyp"
 Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.1.0"
-* ^date = "2024-11-11"
+* ^version = "1.2.0"
+* ^date = "2025-10-27"
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
@@ -125,7 +125,7 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * #juvenileDetentionCenter "Jugendstrafanstalt"
 * #majorEvent "Großveranstaltung"
 * #nightclub "Diskothek"
-* #otherFacility "Sonstige Einrichtung"
+//* #otherFacility "Sonstige Einrichtung"
 * #pharmacy "Apotheke"
 * #professionalSchool  "Berufsschule"
 * #prostitutionIndustryEstab "Einrichtung des Prostitutionsgewerbes"
