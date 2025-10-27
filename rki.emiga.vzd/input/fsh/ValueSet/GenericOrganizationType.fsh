@@ -1,12 +1,68 @@
-ValueSet: OrganizationType
-Id: OrganizationType
+ValueSet: GenericOrganizationType
+Id: GenericOrganizationType
 Title: "Organisationstyp (Werteliste)"
-Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
+Description: "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.1.1"
+* ^version = "1.0.0"
 * ^date = "2025-10-27"
 
-* include codes from system $DemisOrgType
+* $DemisOrgType#medFacility "Medizinische Einrichtung"
+* $DemisOrgType#medFacility #outpatSurgery "Einrichtung für ambulantes Operieren"
+* $DemisOrgType#medFacility #prevCareRehab "Vorsorge- oder Reha-Einrichtung"
+* $DemisOrgType#medFacility #dialysisFacility "Dialyseeinrichtung"
+* $DemisOrgType#medFacility #dayHospital "Tagesklinik"
+* $DemisOrgType#medFacility #maternity "Entbindungseinrichtung"
+* $DemisOrgType#medFacility #physicianOffice "Arztpraxis"
+* $DemisOrgType#medFacility #dentalSurgery "Zahnarztpraxis"
+* $DemisOrgType#medFacility #psycFacility "Psychotherapeutische Praxis"
+* $DemisOrgType#medFacility #othMedPractice "Sonstige Heilberufepraxis"
+* $DemisOrgType#medFacility #medFacPHA "Medizinische Einrichtung des ÖGDs"
+* $DemisOrgType#medFacility #emResServ "emResServ"
+* $DemisOrgType#medFacility #civDisFacility "Einrichtungen des Zivil- und Katastrophenschutzes	"
+* $DemisOrgType#medFacility #othMedFacility "Sonstige medizinische Einrichtung"
+
+* $DemisOrgType#childCareFacility "Gemeinschaftseinrichtung" "§ 33 IfSG; Einrichtung, in der überwiegend Säuglinge, Kinder oder Jugendliche betreut werden"
+* $DemisOrgType#childCareFacility #kindergarten "Kindertageseinrichtung (z. B. Kita)"
+* $DemisOrgType#childCareFacility #childDayNursery "Kindertagespflege"
+* $DemisOrgType#childCareFacility #school "Schule"
+* $DemisOrgType#childCareFacility #childHome "Kinderheim o.ä." "Heim, in dem überwiegend Säuglinge, Kinder oder Jugendliche untergebracht sind"
+* $DemisOrgType#childCareFacility #holidayCamp "Ferienlager"
+* $DemisOrgType#childCareFacility #childDayCare "Kinderhort"
+* $DemisOrgType#childCareFacility #othEdFac "sonstige Ausbildungseinrichtung"
+* $DemisOrgType#childCareFacility #othChildCareFac "Sonstige Kinderbetreuungseinrichtung" "	Sonstige Einrichtung, in der überwiegend Säuglinge, Kinder oder Jugendliche betreut werden"
+
+* $DemisOrgType#housingFacility "Gemeinschaftsunterkunft" "§ 36 Abs. 1 Nr. 3 - 6 IfSG"
+* $DemisOrgType#housingFacility #homelessShelter "Obdachlosenunterkunft"
+* $DemisOrgType#housingFacility #migrantAccom "Migrantenunterkunft" "	Einrichtung zur gemeinschaftlichen Unterbringung von Asylbewerbern, vollziehbar Ausreisepflichtigen, Flüchtlingen und Spätaussiedlern"
+* $DemisOrgType#housingFacility #prison "Justizvollzugsanstalt"
+* $DemisOrgType#housingFacility #othMassAccom "Sonstige Massenunterkunft"
+
+* $DemisOrgType#nursingHome "voll- oder teilstationäre Einrichtung und besondere Wohnform zur Betreuung und Unterbringung" "35 Abs. 1"
+* $DemisOrgType#nursingHome #elderlyCareHome "Einrichtung zur Betreuung/Unterbringung älterer Menschen"
+* $DemisOrgType#nursingHome #disabledCareHome "Einrichtung zur Betreuung/Unterbringung behinderter Menschen"
+* $DemisOrgType#nursingHome #assistedCareHome "Einrichtung zur Betreuung/Unterbringung pflegebedürftiger Menschen"
+* $DemisOrgType#nursingHome #outpatICServ "Ambulanter Intensivpflegedienst" "ambulanter Pflegedienst, der ambulante Intensivpflege in Einrichtungen, Wohngruppen oder sonstigen gemeinschaftlichen Wohnformen erbringt"
+* $DemisOrgType#nursingHome #othOutpatCareS "Sonstiger ambulanter Pflegedienst"
+
+* $DemisOrgType#othBloodRiskFac "Sonstige Einrichtung mit Blutübertragungsrisiko" "	Einrichtung oder Unternehmen, in dem durch Tätigkeiten am Menschen durch Blut Krankheitserreger übertragen werden können"
+
+* $DemisOrgType#othHygRelFacility "Sonstige hygienerelevante Einrichtung"
+
+* $DemisOrgType#othAccom "Andere Unterkunft"
+* $DemisOrgType#othAccom #hotel "Hotel o.ä."
+* $DemisOrgType#othAccom #holidayHome "Ferienwohnung"
+* $DemisOrgType#othAccom #camping "Campingplatz o.ä."
+* $DemisOrgType#othAccom #ship "Schiff o.ä."
+
+* $DemisOrgType#foodEstablmt "Lebensmittelbetrieb"
+
+* $DemisOrgType#laboratory "Erregerdiagnostische Untersuchungsstelle"
+* $DemisOrgType#laboratory #publicHealthLab "Medizinaluntersuchungsamt"
+* $DemisOrgType#laboratory #refLab "Einrichtung der Spezialdiagnostik" "inkl. NRZ, Konsiliarlabor"
+* $DemisOrgType#laboratory #hospitalLab "Krankenhauslabor"
+* $DemisOrgType#laboratory #pathology "Pathologisch-anatomische Einrichtung" "Einrichtung der pathologisch-anatomischen Diagnostik"
+* $DemisOrgType#laboratory #othPublicLab "Sonstige öffentliche Untersuchungsstelle"
+* $DemisOrgType#laboratory #othPrivatLab "Sonstige private Untersuchungsstelle" "inkl. Arztpraxis mit Infektionserregerdiagnostik"
 
 * $OrganizationType#authority "Behörde"
 * $OrganizationType#authority ^designation[0].language = #en-US

@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.4.0-snapshots",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -42,7 +42,7 @@
     },
     {
       "packageId": "rki.emiga.orgv",
-      "version": "1.1.1",
+      "version": "1.1.1-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
       "id": "rki_emiga_orgv"
     },
@@ -171,14 +171,6 @@
         "name": "Beispiel eines Stationsstandorts",
         "description": "Beispiel eines Standorts, der eine Station in einem Krankenhaus beschreibt.",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/EmigaLocation"
-        },
-        "name": "Bereich / Standort",
-        "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
       },
       {
         "reference": {

@@ -53,13 +53,13 @@ Description: "TODO"
     telematikID 0..1 MS
 
 * identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
 
 * identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
 * identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
 * identifier[emigaOrgvFileNumber].system 1.. MS
 * identifier[emigaOrgvFileNumber].value 1.. MS
@@ -114,11 +114,8 @@ Description: "TODO"
     //fachbereich 0..1 MS
     
 
-* type[emigaOrganizationType] from OrganizationType (required)
-//  * ^patternCodeableConcept.coding.system = $OrganizationType
-* type[emigaOrganizationType].coding.code 1..1 MS
-* type[emigaOrganizationType].coding.system 1..1 MS
-* type[emigaOrganizationType].coding.display MS
+* type[emigaOrganizationType] from HospitalOrganizationType (required)
+//  * ^patternCodeableConcept.coding.system = $HospitalOrganizationType
 
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.system = $DemisOrgType

@@ -27,10 +27,10 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  de.basisprofil.r4: 1.4.0
+  de.basisprofil.r4: 1.4.0-snapshots
   rki.demis.common: 2.0.0-snapshots
   rki.emiga.common: 1.2.0-alpha.8-snapshots
-  rki.emiga.orgv: 1.1.1
+  rki.emiga.orgv: 1.1.1-snapshots
   rki.demis.ars: 1.0.0-alpha.1-snapshots
 #   hl7.fhir.us.mcode:
 #     id: mcode
