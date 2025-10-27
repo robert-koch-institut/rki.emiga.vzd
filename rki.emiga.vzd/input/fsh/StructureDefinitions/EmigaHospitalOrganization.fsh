@@ -114,8 +114,8 @@ Description: "TODO"
     //fachbereich 0..1 MS
     fachbereich 0..1 MS
 
-* type[emigaOrganizationType] from OrganizationType (required)
-//  * ^patternCodeableConcept.coding.system = $OrganizationType
+* type[emigaOrganizationType] from HospitalOrganizationType (required)
+//  * ^patternCodeableConcept.coding.system = $HospitalOrganizationType
 
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.system = $DemisOrgType
