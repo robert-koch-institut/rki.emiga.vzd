@@ -103,7 +103,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
-* type 1..1 MS
+* type 0..1 MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
