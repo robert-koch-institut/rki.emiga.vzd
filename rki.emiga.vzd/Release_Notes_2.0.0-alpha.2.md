@@ -170,7 +170,7 @@ ValueSet/HealthcareServiceSpecialty.json
  CodeSystem-OrganizationType.json
 
 
-**feat: rename Department Organization Profile with Emiga prefix**
+**feat: rename Department Organization Profile with EMIGA prefix**
 
  StructureDefinitions/EmigaDepartmentOrganization.json
 

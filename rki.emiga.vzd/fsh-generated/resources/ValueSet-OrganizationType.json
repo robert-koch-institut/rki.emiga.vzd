@@ -20,8 +20,8 @@
       ]
     }
   ],
-  "version": "1.1.0",
-  "date": "2024-11-11",
+  "version": "1.1.1",
+  "date": "2025-10-27",
   "compose": {
     "include": [
       {
@@ -211,6 +211,158 @@
                 "value": "Harbor"
               }
             ]
+          },
+          {
+            "code": "barracks",
+            "display": "Kaserne"
+          },
+          {
+            "code": "carWash",
+            "display": "Autowaschanlage"
+          },
+          {
+            "code": "cemetery",
+            "display": "Friedhof"
+          },
+          {
+            "code": "coolingTowers",
+            "display": "Kühltürme"
+          },
+          {
+            "code": "crematorium",
+            "display": "Krematorium"
+          },
+          {
+            "code": "deportationDetCenter",
+            "display": "Abschiebehaftanstalt"
+          },
+          {
+            "code": "detentionCenter",
+            "display": "Untersuchungshaftanstalt"
+          },
+          {
+            "code": "evaporativeCoolingSystem",
+            "display": "Verdunstungskühlanlage"
+          },
+          {
+            "code": "fullInpatientCareNursingFacility",
+            "display": "Pflege- und Betreuungseinrichtung, Vollstationäre Pflegeeinrichtung"
+          },
+          {
+            "code": "funeralHome",
+            "display": "Bestattungsunternehmen"
+          },
+          {
+            "code": "funeralServiceEstab",
+            "display": "Einrichtung des Bestattungswesens"
+          },
+          {
+            "code": "gym",
+            "display": "Fitnessstudio"
+          },
+          {
+            "code": "healthInsurance",
+            "display": "Krankenkasse"
+          },
+          {
+            "code": "initialReceptionCenter",
+            "display": "Erstaufnahmeeinrichtung"
+          },
+          {
+            "code": "inpatientHospice",
+            "display": "Stationäres Hospiz"
+          },
+          {
+            "code": "inpatientIntegrationAssistance",
+            "display": "Stationäre Eingliederungshilfe"
+          },
+          {
+            "code": "juvenileDetentionCenter",
+            "display": "Jugendstrafanstalt"
+          },
+          {
+            "code": "majorEvent",
+            "display": "Großveranstaltung"
+          },
+          {
+            "code": "nightclub",
+            "display": "Diskothek"
+          },
+          {
+            "code": "pharmacy",
+            "display": "Apotheke"
+          },
+          {
+            "code": "professionalSchool",
+            "display": "Berufsschule"
+          },
+          {
+            "code": "prostitutionIndustryEstab",
+            "display": "Einrichtung des Prostitutionsgewerbes"
+          },
+          {
+            "code": "publicHealthServiceEstab",
+            "display": "Einrichtung des öffentlichen Gesundheitsdienstes"
+          },
+          {
+            "code": "publicHealthSystemEstab",
+            "display": "Einrichtung des öffentlichen Gesundheitswesens"
+          },
+          {
+            "code": "retirementHomeWithoutService",
+            "display": "Altenwohnheim"
+          },
+          {
+            "code": "retirementHomeWithService",
+            "display": "Altenheim"
+          },
+          {
+            "code": "saunaWellnessFacility",
+            "display": "Sauna- und Wellnessanlage"
+          },
+          {
+            "code": "sea",
+            "display": "Sonstige Einrichtung mit relevanter Wasser Aerosolierung"
+          },
+          {
+            "code": "sewageTreatmentPlant",
+            "display": "Kläranlage"
+          },
+          {
+            "code": "sportsLeisureRecreationFacility",
+            "display": "Sport- Freizeit- und Erholungsanlage"
+          },
+          {
+            "code": "substituteImprisonmentPenalInstitution",
+            "display": "Vollzugsanstalt für Ersatzfreiheitsstrafe"
+          },
+          {
+            "code": "swimmingBathingArea",
+            "display": "Schwimm- und Badestelle"
+          },
+          {
+            "code": "tanningSalon",
+            "display": "Sonnenstudio"
+          },
+          {
+            "code": "testCenter",
+            "display": "Teststelle"
+          },
+          {
+            "code": "university",
+            "display": "Hochschule"
+          },
+          {
+            "code": "wasteDisposalFacility",
+            "display": "Abfallbeseitigungsanlage"
+          },
+          {
+            "code": "womenShelter",
+            "display": "Frauenhaus"
+          },
+          {
+            "code": "workplace",
+            "display": "Arbeitsstätte"
           }
         ]
       }

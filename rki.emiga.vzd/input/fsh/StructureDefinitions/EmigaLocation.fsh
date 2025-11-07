@@ -1,11 +1,11 @@
 Profile: EmigaLocation
 Parent: Location
 Id: EmigaLocation
-Title: "Standort"
-Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstelle oder Zweigstelle eines Gesundheitsamtes. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
+Title: "Bereich / Standort"
+Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
 //
-* ^version = "1.0.0"
-* ^date = "2024-12-20"
+* ^version = "1.2.0"
+* ^date = "2025-10-27"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -14,7 +14,7 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|1.0.0"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|2.0.0-alpha.10"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -35,22 +35,50 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and
-    emigaOrgvFileNumber 0..1 MS
+    emigaOrgvFileNumber 0..1 MS and 
+    BSNR 0..1 MS and
+    demisParticipantId 0..1 MS and
+    telematikID 0..1 MS
 
 * identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
 
 * identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
 * identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
 * identifier[emigaOrgvFileNumber].system 1.. MS
 * identifier[emigaOrgvFileNumber].value 1.. MS
+
+* identifier[BSNR] only $identifier-bsnr
+* identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
+//* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+* identifier[BSNR].system 1..1 MS
+* identifier[BSNR].value 1..1 MS
+/*
+* identifier[organisationseinheitenID] ^comment = "Kommentar von Isik Basis: Motivation: Für IDs, die Krankhausintern spezifischen Organisationseinheiten wie Abteilungen oder Stationen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung. Da auch Stationen im Identifier-System inkludiert werden könnten, sollte hier das Identifier generisch Organisationseinheiten abbilden und nicht Abteilungen allein."
+* identifier[organisationseinheitenID] ^patternIdentifier.type = $sct#43741000
+* identifier[organisationseinheitenID].system 1.. MS
+* identifier[organisationseinheitenID].value 1.. MS
+*/
+* identifier[demisParticipantId] only Identifier
+* identifier[demisParticipantId] ^short = "DEMIS-Teilnehmer-Nummer"
+* identifier[demisParticipantId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/DemisParticipantId"
+* identifier[demisParticipantId] ^definition = "DEMIS-Teilnehmernummer, welche durch das RKI an ausgewählte Systemteilnehmer vergeben wird. Der Identifier entstammt folgendem NamingSystem: https://demis.rki.de/fhir/NamingSystem/DemisParticipantId."
+* identifier[demisParticipantId].system 1.. MS
+* identifier[demisParticipantId].value 1.. MS
+
+* identifier[telematikID] only $identifier-telematik-id
+* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
+* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
+* identifier[telematikID].system 1.. MS
+* identifier[telematikID].value 1.. MS
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
-* status 1..1 MS
+// Update 27.10.25 Status wird auf "optional" gesetzt, um bestehende Standorte ohne Statusangabe weiterhin nutzen zu können.
+* status 0..1 MS
 * status ^short = "Status"
 * status ^definition = "Aktivitätsstatus des Standortes"
 * status ^comment = "Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe"
@@ -68,7 +96,7 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 
 // 'A list of alternate names that the location is known as or was known as in the past' - 0..* - string
 // Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen
-* alias 0..* MS
+* alias 0..1 MS
 * alias ^short = "Kürzel"
 * alias ^definition = "Alternativ oder Kurznamme"
 * alias obeys validString
@@ -130,10 +158,13 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // 'Physical form of the location' - 0..1 - code
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * physicalType 0..0
+* physicalType ^comment = "Wird für die EMIGA generische Bereiche / Standorte derzeit nicht benötigt."
 
 // 'The absolute geographic location' - 0..1 - BackboneElement
 // Begründung: Perspektivisch hilfreich, wenn Standorte in Karten dargestellt werden sollen und eine Ableitung über die Adresse nicht möglich oder inkorrekt ist
 * position 0..1 MS
+* position ^short = "Geographische Koordinaten"
+* position ^definition = "Geographische Koordinaten"
   * longitude MS
   * latitude MS
   * altitude
@@ -143,22 +174,30 @@ Description: "Ein 'physischer' Ort, der besucht werden kann, z.B. die Hauptstell
 // Begründung: Ein Standort gehört zwar üblicherweise zu einer Organisation. Perspektivisch kann sich der Anwendungsfall jedoch ändern, sodass ein Standort nicht direkt einer Organisation zugeordnet werden kann.
 * managingOrganization 0..1 MS
 * managingOrganization only Reference(Organization)
+* managingOrganization ^comment = "Über dieses Element kann der Standort einer Organisation zugeordnet werden"
 
 // 'Another location this one is physically a partof' - 0..1 - Reference(Location)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Wir haben erstmal nicht den Bedarf Hierarchien von Standorten abzubilden. Dies kann sich ggf. zukünftig ändern.
-* partOf 0..0
+//Update(20.10.2025) Wir öffnen das Element, um ggf. Standort-Hierarchien abbilden zu können.
+* partOf MS
+* partOf ^short = "Übergeordneter Standort/Bereich"
+* partOf ^definition = "Referenz auf übergeordneten Standort/Bereich"
+* partOf ^comment = "Dieses Element kann genutzt werden, um Standort/Bereich-Hierarchien abzubilden. Wenn es belegt ist, verweist es auf den übergeordneten Standort/Bereich und die Instanz bildet ein Subbereich ab."
 
 // 'What days/times during a week is this location usually open' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * hoursOfOperation 0..0
+* hoursOfOperation ^comment = "Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Description of availability exceptions' - 0..1 - string
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * availabilityExceptions 0..0
+* availabilityExceptions ^comment = "Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Technical endpoints providing access to services operated for the location' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * endpoint 0..0
+* endpoint ^comment = "Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt."

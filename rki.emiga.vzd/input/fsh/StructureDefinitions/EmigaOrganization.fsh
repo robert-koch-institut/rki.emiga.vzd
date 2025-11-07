@@ -2,10 +2,10 @@ Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
 Title: "Organization"
-Description: "Unter der Emiga Organization werden alle Organisationen zusammengefasst, die NICHT Emiga direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter Emiga Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
-* ^version = "1.0.0"
-* ^date = "2024-12-12"
+* ^version = "1.1.0"
+* ^date = "2025-10-20"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -15,7 +15,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|1.0.0"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.10"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -46,18 +46,18 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
    emigaOrgvFileNumber 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
-    organisationseinheitenID 0..1 MS and 
+    //organisationseinheitenID 0..1 MS and 
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS
 
 * identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "Emiga Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
 
 * identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "Emiga Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
 * identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
 * identifier[emigaOrgvFileNumber].system 1.. MS
 * identifier[emigaOrgvFileNumber].value 1.. MS
@@ -67,14 +67,19 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].system 1.. MS
 * identifier[IKNR].value 1.. MS
+* identifier[IKNR].period MS
+
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
-* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+//* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+* identifier[BSNR].system 1..1 MS
+* identifier[BSNR].value 1..1 MS
+/*
 * identifier[organisationseinheitenID] ^comment = "Kommentar von Isik Basis: Motivation: Für IDs, die Krankhausintern spezifischen Organisationseinheiten wie Abteilungen oder Stationen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung. Da auch Stationen im Identifier-System inkludiert werden könnten, sollte hier das Identifier generisch Organisationseinheiten abbilden und nicht Abteilungen allein."
 * identifier[organisationseinheitenID] ^patternIdentifier.type = $sct#43741000
 * identifier[organisationseinheitenID].system 1.. MS
 * identifier[organisationseinheitenID].value 1.. MS
-
+*/
 * identifier[demisParticipantId] only Identifier
 * identifier[demisParticipantId] ^short = "DEMIS-Teilnehmer-Nummer"
 * identifier[demisParticipantId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/DemisParticipantId"
@@ -98,23 +103,23 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
-* type 1.. MS
+* type 0..1 MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
-* type contains emigaOrganizationType 0..1 MS and
-    einrichtungsArt 0..1 MS and
-    erweiterterFachabteilungsschluessel 0..1 MS
-* type[emigaOrganizationType] from OrganizationType (required)
+* type contains emigaOrganizationType 1.. MS //and
+   // einrichtungsArt 0..1 MS and
+   // erweiterterFachabteilungsschluessel 0..1 MS
+* type[emigaOrganizationType] from GenericOrganizationType (required)
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
-* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
-* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
-  * insert StrictCodableConcept
-* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
-  * insert StrictCodableConcept
+//* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
+//* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"
+  //* insert StrictCodableConcept
+//* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
+  //* insert StrictCodableConcept
  
 
 // 'Name used for the organization' - 0..1 - string
@@ -127,7 +132,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 
 // 'A list of alternate names that the organization is known as, or was known as in the past' - 0..* - string
 // Wir lassen bewusst eine beliebige Anzahl von Alias-Namen zu. Sollte hier aus fachlichen Gründen eine Beschränkung notwendig sein, können wir das später nachziehen.
-* alias MS
+* alias ..1 MS
 * alias ^comment = "Hinweis: Hier können Kürzel genutzt werden. Ein System muss den Alias einer Organisation zum Abruf bereitstellen, sofern diese Information verfügbar ist."
 * alias obeys validString
 
@@ -191,7 +196,7 @@ Description: "Unter der Emiga Organization werden alle Organisationen zusammenge
 
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.
-* partOf 0..1 MS
+* partOf MS
 
 * partOf only Reference(Organization) 
 * partOf ^comment = "Über dieses Element ist eine Hierarchiebildung möglich."

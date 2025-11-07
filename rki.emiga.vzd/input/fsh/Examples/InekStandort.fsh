@@ -7,7 +7,7 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.8"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.10"
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
@@ -30,8 +30,8 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * mode = #instance
 * address.type = #both
 * address.line = "Am Krankenhaus 2"
-* address.extension[municipalityKey].url = "https://emiga.rki.de/fhir/common/Extension/MunicipalityKey"
-* address.extension[municipalityKey].valueCoding.system = "https://emiga.rki.de/fhir/common/CodeSystem/MunicipalityKey"
+* address.extension[municipalityKey].url = "http://fhir.de/StructureDefinition/destatis/ags"
+* address.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
 * address.extension[municipalityKey].valueCoding.code = #05570052
 
 * address.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"

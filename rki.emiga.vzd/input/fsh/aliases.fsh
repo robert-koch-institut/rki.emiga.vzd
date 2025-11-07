@@ -22,6 +22,8 @@ Alias: $responsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/responsibili
 Alias: $BaseLocation = https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
 Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType
+Alias: $HospitalOrganizationType = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType
+Alias: $GenericOrganizationType = https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType
 Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
@@ -59,7 +61,7 @@ Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacility
 Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
 Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod
 Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates
-Alias: $MunicipalityKey = https://emiga.rki.de/fhir/common/Extension/MunicipalityKey
+
 
 Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress
 
@@ -77,6 +79,7 @@ Alias: $Stationstyp = https://demis.rki.de/fhir/ars/ValueSet/stationstyp
 
 Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
 
+
 //Alias: $ArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ArtDerZustaendigkeit
 //Alias: $Kreisschluessel = https://emiga.rki.de/fhir/vzd/CodeSystem/Kreisschluessel
 //Alias: $VSArtDerZustaendigkeit = https://emiga.rki.de/fhir/vzd/ValueSet/ArtDerZustaendigkeit
@@ -85,6 +88,7 @@ Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fach
 // deutsches Basisprofil
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $humanname-de-basis = http://fhir.de/StructureDefinition/humanname-de-basis
+Alias: $MunicipalityKey = http://fhir.de/StructureDefinition/destatis/ags
 
 // HL7 FHIR Basisspezifikation
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203

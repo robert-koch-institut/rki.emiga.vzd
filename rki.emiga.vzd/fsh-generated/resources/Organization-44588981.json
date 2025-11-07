@@ -9,11 +9,11 @@
       },
       {
         "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
-        "code": "1.12.99.99."
+        "code": "1."
       }
     ],
     "profile": [
-      "https://emiga.rki.de/fhir/vzd/StructureDefinition/AuthorityOrganization"
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
     ]
   },
   "identifier": [
@@ -21,21 +21,29 @@
       "type": {
         "coding": [
           {
-            "code": "PRN",
+            "code": "XX",
             "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
           }
         ]
       },
-      "system": "https://emiga.rki.de/fhir/vzd/sid/EpiWarnId",
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId",
       "value": "012345"
+    }
+  ],
+  "extension": [
+    {
+      "valuePeriod": {
+        "start": "1900-01-01"
+      },
+      "url": "http://hl7.org/fhir/StructureDefinition/organization-period"
     }
   ],
   "type": [
     {
       "coding": [
         {
-          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
-          "code": "sepFedAut"
+          "code": "sepFedAut",
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType"
         }
       ]
     }
