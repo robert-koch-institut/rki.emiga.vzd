@@ -252,155 +252,535 @@
     },
     {
       "code": "barracks",
-      "display": "Kaserne"
+      "display": "Kaserne",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Barracks"
+        }
+      ]
     },
     {
       "code": "carWash",
-      "display": "Autowaschanlage"
+      "display": "Autowaschanlage",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Car Wash"
+        }
+      ]
     },
     {
       "code": "cemetery",
-      "display": "Friedhof"
+      "display": "Friedhof",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Cemetery"
+        }
+      ]
     },
     {
       "code": "coolingTowers",
-      "display": "Kühltürme"
+      "display": "Kühltürme",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Cooling Towers"
+        }
+      ]
     },
     {
       "code": "crematorium",
-      "display": "Krematorium"
+      "display": "Krematorium",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Crematorium"
+        }
+      ]
     },
     {
       "code": "deportationDetCenter",
-      "display": "Abschiebehaftanstalt"
+      "display": "Abschiebehaftanstalt",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Deportation Detention Center"
+        }
+      ]
     },
     {
       "code": "detentionCenter",
-      "display": "Untersuchungshaftanstalt"
+      "display": "Untersuchungshaftanstalt",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Detention Center"
+        }
+      ]
     },
     {
       "code": "evaporativeCoolingSystem",
-      "display": "Verdunstungskühlanlage"
+      "display": "Verdunstungskühlanlage",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Evaporative Cooling System"
+        }
+      ]
     },
     {
       "code": "fullInpatientCareNursingFacility",
-      "display": "Pflege- und Betreuungseinrichtung, Vollstationäre Pflegeeinrichtung"
+      "display": "Pflege- und Betreuungseinrichtung, Vollstationäre Pflegeeinrichtung",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Full Inpatient Care Nursing Facility"
+        }
+      ]
     },
     {
       "code": "funeralHome",
-      "display": "Bestattungsunternehmen"
+      "display": "Bestattungsunternehmen",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Funeral Home"
+        }
+      ]
     },
     {
       "code": "funeralServiceEstab",
-      "display": "Einrichtung des Bestattungswesens"
+      "display": "Einrichtung des Bestattungswesens",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Funeral Service Establishment"
+        }
+      ]
     },
     {
       "code": "gym",
-      "display": "Fitnessstudio"
+      "display": "Fitnessstudio",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Gym"
+        }
+      ]
     },
     {
       "code": "healthInsurance",
-      "display": "Krankenkasse"
+      "display": "Krankenkasse",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Health Insurance"
+        }
+      ]
     },
     {
       "code": "initialReceptionCenter",
-      "display": "Erstaufnahmeeinrichtung"
+      "display": "Erstaufnahmeeinrichtung",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Initial Reception Center"
+        }
+      ]
     },
     {
       "code": "inpatientHospice",
-      "display": "Stationäres Hospiz"
+      "display": "Stationäres Hospiz",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Inpatient Hospice"
+        }
+      ]
     },
     {
       "code": "inpatientIntegrationAssistance",
-      "display": "Stationäre Eingliederungshilfe"
+      "display": "Stationäre Eingliederungshilfe",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Inpatient Integration Assistance"
+        }
+      ]
     },
     {
       "code": "juvenileDetentionCenter",
-      "display": "Jugendstrafanstalt"
+      "display": "Jugendstrafanstalt",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Juvenile Detention Center"
+        }
+      ]
     },
     {
       "code": "majorEvent",
-      "display": "Großveranstaltung"
+      "display": "Großveranstaltung",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Major Event"
+        }
+      ]
     },
     {
       "code": "nightclub",
-      "display": "Diskothek"
+      "display": "Diskothek",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Nightclub"
+        }
+      ]
     },
     {
       "code": "pharmacy",
-      "display": "Apotheke"
+      "display": "Apotheke",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Pharmacy"
+        }
+      ]
     },
     {
       "code": "professionalSchool",
-      "display": "Berufsschule"
+      "display": "Berufsschule",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Professional School"
+        }
+      ]
     },
     {
       "code": "prostitutionIndustryEstab",
-      "display": "Einrichtung des Prostitutionsgewerbes"
+      "display": "Einrichtung des Prostitutionsgewerbes",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Prostitution Industry Establishment"
+        }
+      ]
     },
     {
       "code": "publicHealthServiceEstab",
-      "display": "Einrichtung des öffentlichen Gesundheitsdienstes"
+      "display": "Einrichtung des öffentlichen Gesundheitsdienstes",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Public Health Service Establishment"
+        }
+      ]
     },
     {
       "code": "publicHealthSystemEstab",
-      "display": "Einrichtung des öffentlichen Gesundheitswesens"
+      "display": "Einrichtung des öffentlichen Gesundheitswesens",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Public Health System Establishment"
+        }
+      ]
     },
     {
       "code": "retirementHomeWithoutService",
-      "display": "Altenwohnheim"
+      "display": "Altenwohnheim",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Retirement Home without Service"
+        }
+      ]
     },
     {
       "code": "retirementHomeWithService",
-      "display": "Altenheim"
+      "display": "Altenheim",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Retirement Home with Service"
+        }
+      ]
     },
     {
       "code": "saunaWellnessFacility",
-      "display": "Sauna- und Wellnessanlage"
+      "display": "Sauna- und Wellnessanlage",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Sauna and Wellness Facility"
+        }
+      ]
     },
     {
       "code": "sea",
-      "display": "Sonstige Einrichtung mit relevanter Wasser Aerosolierung"
+      "display": "Sonstige Einrichtung mit relevanter Wasser Aerosolierung",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "SEA (Other Facility with relevant water aerosolization)"
+        }
+      ]
     },
     {
       "code": "sewageTreatmentPlant",
-      "display": "Kläranlage"
+      "display": "Kläranlage",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Sewage Treatment Plant"
+        }
+      ]
     },
     {
       "code": "sportsLeisureRecreationFacility",
-      "display": "Sport- Freizeit- und Erholungsanlage"
+      "display": "Sport- Freizeit- und Erholungsanlage",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Sports, Leisure and Recreation Facility"
+        }
+      ]
     },
     {
       "code": "substituteImprisonmentPenalInstitution",
-      "display": "Vollzugsanstalt für Ersatzfreiheitsstrafe"
+      "display": "Vollzugsanstalt für Ersatzfreiheitsstrafe",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Substitute Imprisonment Penal Institution"
+        }
+      ]
     },
     {
       "code": "swimmingBathingArea",
-      "display": "Schwimm- und Badestelle"
+      "display": "Schwimm- und Badestelle",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Swimming and Bathing Area"
+        }
+      ]
     },
     {
       "code": "tanningSalon",
-      "display": "Sonnenstudio"
+      "display": "Sonnenstudio",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Tanning Salon"
+        }
+      ]
     },
     {
       "code": "testCenter",
-      "display": "Teststelle"
+      "display": "Teststelle",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Test Center"
+        }
+      ]
     },
     {
       "code": "university",
-      "display": "Hochschule"
+      "display": "Hochschule",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "University"
+        }
+      ]
     },
     {
       "code": "wasteDisposalFacility",
-      "display": "Abfallbeseitigungsanlage"
+      "display": "Abfallbeseitigungsanlage",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Waste Disposal Facility"
+        }
+      ]
     },
     {
       "code": "womenShelter",
-      "display": "Frauenhaus"
+      "display": "Frauenhaus",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Women Shelter"
+        }
+      ]
     },
     {
       "code": "workplace",
-      "display": "Arbeitsstätte"
+      "display": "Arbeitsstätte",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Workplace"
+        }
+      ]
     }
   ],
   "language": "de-DE",

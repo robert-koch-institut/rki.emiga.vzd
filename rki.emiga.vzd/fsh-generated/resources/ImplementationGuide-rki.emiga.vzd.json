@@ -36,7 +36,7 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.2.0-alpha.8-snapshots",
+      "version": "1.2.0-alpha.10-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
     },
@@ -51,6 +51,12 @@
       "version": "1.0.0-alpha.1-snapshots",
       "uri": "http://fhir.org/packages/rki.demis.ars/ImplementationGuide/rki.demis.ars",
       "id": "rki_demis_ars"
+    },
+    {
+      "packageId": "kbv.basis",
+      "version": "1.7.0-snapshots",
+      "uri": "http://fhir.org/packages/kbv.basis/ImplementationGuide/kbv.basis",
+      "id": "kbv_basis"
     }
   ],
   "definition": {
@@ -479,6 +485,27 @@
         "name": "Krankenhaus-Organisationstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Location/LaborLocation"
+        },
+        "name": "LaborLocation",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/LaborLocationSub"
+        },
+        "name": "LaborLocationSub",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
+          "reference": "Organization/LaborOrganization"
+        },
+        "name": "LaborOrganization",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
