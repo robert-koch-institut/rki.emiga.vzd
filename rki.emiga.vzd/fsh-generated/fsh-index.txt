@@ -30,7 +30,7 @@ Organization-44588980.json                                44588980              
 Organization-44588981.json                                44588981                         Instance    Examples\Organization-44588981.fsh                                 2 - 29
 Organization-EpiWarnOrganization.json                     EpiWarnOrganization              Instance    Examples\OrganizationEpiWarn.fsh                                   1 - 30
 Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 30
-Organization-LaborOrganization.json                       LaborOrganization                Instance    Examples\LaborOrganization.fsh                                     1 - 41
+Organization-LaborOrganization.json                       LaborOrganization                Instance    Examples\LaborOrganization.fsh                                     1 - 42
 Practitioner-44588966.json                                44588966                         Instance    Examples\Practitioner-44588966.fsh                                 1 - 16
 Practitioner-44588968.json                                44588968                         Instance    Examples\Practitioner-44588968.fsh                                 1 - 22
 Practitioner-44588970.json                                44588970                         Instance    Examples\Practitioner-44588970.fsh                                 1 - 16

@@ -19,8 +19,9 @@ Usage: #example
 * active = true
 
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
-* type[emigaOrganizationType].coding.system = $OrganizationType
-* type[emigaOrganizationType].coding.code = #laboratory "Erregerdiagnostische Untersuchungsstelle"
+* type[emigaOrganizationType].coding.system = $DemisOrgType
+* type[emigaOrganizationType].coding.code = #laboratory 
+* type[emigaOrganizationType].coding.display = "Erregerdiagnostische Untersuchungsstelle"
 
 * name = "Labor XYZ GmbH"
 * telecom[Email].system = #email
