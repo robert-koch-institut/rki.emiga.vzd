@@ -1,7 +1,7 @@
 Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
-Title: "Organization"
+Title: "EMIGA Organization"
 Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
 * ^version = "1.1.0"

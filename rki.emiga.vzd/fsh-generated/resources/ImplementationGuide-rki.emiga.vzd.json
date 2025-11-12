@@ -174,14 +174,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/EmigaLocation"
-        },
-        "name": "Bereich / Standort",
-        "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
@@ -234,6 +226,22 @@
         },
         "name": "Dienstzeiten (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaLocation"
+        },
+        "name": "EMIGA Bereich / Standort",
+        "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaOrganization"
+        },
+        "name": "EMIGA Organization",
+        "description": "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
         "exampleBoolean": false
       },
       {
@@ -535,14 +543,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/EmigaOrganization"
-        },
-        "name": "Organization",
-        "description": "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/OrganizationType"
         },
         "name": "Organizationstyp",
@@ -625,8 +625,8 @@
         "reference": {
           "reference": "StructureDefinition/EmigaPublicHealthOrganization"
         },
-        "name": "ÖGD Organization",
-        "description": "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen.",
+        "name": "ÖGD Organisation",
+        "description": "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen.",
         "exampleBoolean": false
       },
       {
