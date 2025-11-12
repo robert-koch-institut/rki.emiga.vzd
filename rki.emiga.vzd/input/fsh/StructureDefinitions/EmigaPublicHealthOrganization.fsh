@@ -1,8 +1,8 @@
 Profile: EmigaPublicHealthOrganization
 Parent: Organization
 Id: EmigaPublicHealthOrganization
-Title: "ÖGD Organization"
-Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
+Title: "ÖGD Organisation"
+Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
 
 * ^version = "1.0.0"
 * ^date = "2024-11-12"
@@ -13,7 +13,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 
 * insert ProfileMetaProfileTags
 * insert MetaTagOrgVBundle
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|1.0.0"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization2.0.0-alpha.11"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
