@@ -39,9 +39,7 @@ Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
 Alias: $ResponsibilityHealthdepartments = https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments
 Alias: $sct = http://snomed.info/sct
-Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
-Alias: $identifier-bsnr = http://fhir.de/StructureDefinition/identifier-bsnr
-Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-telematik-id
+
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $IHEXDShealthcareFacilityTypeCode = http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode
@@ -89,6 +87,11 @@ Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fach
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $humanname-de-basis = http://fhir.de/StructureDefinition/humanname-de-basis
 Alias: $MunicipalityKey = http://fhir.de/StructureDefinition/destatis/ags
+Alias: $identifier-lanr = http://fhir.de/StructureDefinition/identifier-lanr
+
+Alias: $identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
+Alias: $identifier-bsnr = http://fhir.de/StructureDefinition/identifier-bsnr
+Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-telematik-id
 
 // HL7 FHIR Basisspezifikation
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
