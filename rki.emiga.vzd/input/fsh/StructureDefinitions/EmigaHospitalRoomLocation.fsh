@@ -42,8 +42,8 @@ Description: "TO DO"
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Standort"
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
