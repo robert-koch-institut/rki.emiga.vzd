@@ -92,10 +92,10 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
 * type 1.. MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
+  * ^slicing.discriminator.type = #exists
+  * ^slicing.discriminator.path = "coding"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by system"
+  * ^slicing.description = "slicing organization type by existence"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS and 
   organizationType 1..1 MS and
