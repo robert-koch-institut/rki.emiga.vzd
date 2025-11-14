@@ -46,7 +46,7 @@ Description: "TO DO"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
-    emigaOrgvFileNumber 0..1 MS and
+    emigaOrgvFileNumber 1..1 MS and
    standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    IKNR 0..1 MS and
@@ -158,14 +158,14 @@ Description: "TO DO"
 // Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * type MS
 * type ^short = "Standortstyp für Standorte ausserhalb von InEK-Szenarien"
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
+  * ^slicing.discriminator.type = #exists
+  * ^slicing.discriminator.path = "coding"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by system"
+  * ^slicing.description = "slicing organization type by existence"
   * ^slicing.ordered = false
 * type contains fachbereich 0..1 MS
 
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from Fachbereich (required)
 //* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS

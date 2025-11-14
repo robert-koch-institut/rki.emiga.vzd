@@ -13,7 +13,7 @@
       }
     ],
     "profile": [
-      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.13"
     ]
   },
   "identifier": [
@@ -27,7 +27,19 @@
         ]
       },
       "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId",
-      "value": "012345"
+      "value": "OrgvID-012345"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber",
+      "value": "OrgvFileNumber-987654"
     }
   ],
   "extension": [
