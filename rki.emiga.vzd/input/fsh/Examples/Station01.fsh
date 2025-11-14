@@ -14,6 +14,9 @@ Description: "Beispiel eines Standorts, der eine Station in einem Krankenhaus be
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "9876543210"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-987123654"
 //* identifier[standortnummer-dkg].system = "http://fhir.de/sid/dkgev/standortnummer"
 //* identifier[standortnummer-dkg].value = "771077015"
 

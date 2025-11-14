@@ -23,6 +23,9 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "0123456789"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-987654123"
 * identifier[standortId].system = "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
 * identifier[standortId].value = "771077"
 * status = #active

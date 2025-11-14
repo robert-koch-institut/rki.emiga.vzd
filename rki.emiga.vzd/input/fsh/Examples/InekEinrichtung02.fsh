@@ -14,12 +14,16 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "7654345"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-1239854"
 * identifier[standortnummer-dkg].system = "http://fhir.de/sid/dkgev/standortnummer"
 * identifier[standortnummer-dkg].value = "771077000"
 
 * identifier[abrechnungs-IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[abrechnungs-IKNR].value = "260551132"
 * identifier[abrechnungs-IKNR].period.start = "2019-01-01"
+
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "999999999"
 * identifier[BSNR].period.start = "2019-01-01"

@@ -47,7 +47,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
-    emigaOrgvFileNumber 0..1 MS and
+    emigaOrgvFileNumber 1..1 MS and
    //standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    abrechnungs-IKNR 0..1 MS and
@@ -155,10 +155,10 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * type MS
 //* type ^short = "Einrichtungstyp nach InEK"
 * type 1.. MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
+  * ^slicing.discriminator.type = #exists
+  * ^slicing.discriminator.path = "coding"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by system"
+  * ^slicing.description = "slicing organization type by existence"
   * ^slicing.ordered = false
 * type contains inekFacilityType 0..1 MS and
                 stationstyp 0..1 MS and

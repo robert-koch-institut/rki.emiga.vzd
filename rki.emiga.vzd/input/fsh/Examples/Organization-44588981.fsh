@@ -4,9 +4,13 @@ InstanceOf: EmigaOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.13"
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
-* identifier[emigaOrgvId].value = "012345"
+* identifier[emigaOrgvId].value = "OrgvID-012345"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-987654"
 * active = true
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut
