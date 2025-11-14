@@ -7,7 +7,7 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.13"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.14"
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
@@ -23,6 +23,9 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "0123456789"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-987654123"
 * identifier[standortId].system = "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
 * identifier[standortId].value = "771077"
 * status = #active
