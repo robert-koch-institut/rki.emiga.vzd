@@ -9,7 +9,10 @@ Usage: #example
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
-* identifier[emigaOrgvId].value = "0123456789"
+* identifier[emigaOrgvId].value = "OrgvID-0123456789"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-9876543210"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"
 * name = "Zentrum für Gesundheits- und Infektionsschutz"
 * telecom[Email].system = #email

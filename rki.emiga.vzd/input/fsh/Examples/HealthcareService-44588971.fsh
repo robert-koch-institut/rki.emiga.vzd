@@ -3,6 +3,7 @@ InstanceOf: EmigaHealthcareService
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.14"
 * active = true
 * providedBy = Reference(44588964)
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#preventiveExamination

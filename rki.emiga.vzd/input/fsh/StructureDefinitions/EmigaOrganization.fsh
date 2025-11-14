@@ -15,7 +15,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.13"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.14"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -43,7 +43,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and
-   emigaOrgvFileNumber 0..1 MS and
+   emigaOrgvFileNumber 1..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     LANR 0..1 MS and
@@ -120,8 +120,8 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
 * type 0..1 MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
+  * ^slicing.discriminator.type = #exists
+  * ^slicing.discriminator.path = "coding"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by system"
   * ^slicing.ordered = false
