@@ -45,6 +45,12 @@
       "version": "1.1.1-snapshots",
       "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
       "id": "rki_emiga_orgv"
+    },
+    {
+      "packageId": "kbv.basis",
+      "version": "1.4.0-snapshots",
+      "uri": "http://fhir.org/packages/kbv.basis/ImplementationGuide/kbv.basis",
+      "id": "kbv_basis"
     }
   ],
   "definition": {
