@@ -13,7 +13,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.10"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.13"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -35,8 +35,8 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
     emigaOrgvId 0..1 MS and

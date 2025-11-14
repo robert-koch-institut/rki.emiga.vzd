@@ -27,7 +27,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.10"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.13"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -42,8 +42,8 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Standort"
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
@@ -91,8 +91,8 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
 //* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
-* identifier[BSNR].system 1..1 MS
-* identifier[BSNR].value 1..1 MS
+* identifier[BSNR].system MS
+* identifier[BSNR].value MS
 * identifier[BSNR].period 0..1 MS
 
 * identifier[demisParticipantId] only Identifier

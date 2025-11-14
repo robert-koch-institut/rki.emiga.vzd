@@ -32,7 +32,7 @@ dependencies:
   rki.emiga.common: 1.2.0-alpha.13-snapshots
   rki.emiga.orgv: 1.1.1-snapshots
 #  rki.demis.ars: 1.0.0-alpha.1-snapshots
-#  kbv.basis: 1.7.0-snapshots
+  kbv.basis: 1.4.0-snapshots
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
