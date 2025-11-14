@@ -3,7 +3,7 @@ InstanceOf: EmigaPractitioner
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#internal
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner|2.0.0-alpha.13"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner|2.0.0-alpha.14"
 * active = true
 * name.family = "Baronin von Baldrichshausen"
 * name.family.extension[0].url = "http://fhir.de/StructureDefinition/humanname-namenszusatz"
