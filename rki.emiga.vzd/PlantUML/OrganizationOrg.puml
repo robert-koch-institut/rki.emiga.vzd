@@ -1,0 +1,23 @@
+@startuml
+title AffectedPerson (Profile of Patient) - Class Diagram
+
+class EmigaOrganization{
+}
+
+class EmigaLocation{
+}
+
+class EmigaPractitioner{
+}
+
+class EmigaPractitionerRole{
+}
+
+EmigaOrganization ..> EmigaOrganization: partOf
+EmigaLocation --> EmigaOrganization: managingOrganization
+EmigaLocation ..> EmigaLocation : partOf
+EmigaPractitionerRole --> EmigaPractitioner: Reference
+EmigaPractitionerRole --> EmigaOrganization : Reference
+EmigaPractitionerRole --> EmigaLocation: Reference
+
+@enduml

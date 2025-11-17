@@ -1,0 +1,53 @@
+@startuml
+title EmigaOrganization (Profile of Organization) - Class Diagram
+
+' Main Class
+class EmigaOrganization{
+<b>+</b> id: string [0..1]
+-- Meta --
+<b>+</b> meta.versionID: id [0..1] 
+<b>+</b> meta.lastUpdated: instant[0..1] 
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.security:visibility.display: string [0..1]
+<b>+</b> meta.security:responsibility.display: string [1..*]
+<b>+</b> meta.tag:relevance.display: string [1..*] 
+<b>+</b> meta.tag:orgvBundleId.display: string [1..*] 
+<b>+</b> meta.tag:orgvBundleVersion.display: string [1..*] 
+-- Identifiers --
+<b>+</b> identifier:emigaOrgvId: IdentifierEmigaOrgvId [0..1] 
+<b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [1..1] 
+<b>+</b> identifier:IKNR.value: string [0..1] 
+<b>+</b> identifier:BSNR.value: string [0..1] 
+<b>+</b> identifier:LANR.value: string [0..1] 
+<b>+</b> identifier:demisLaboratoryId.value: string [0..1] 
+<b>+</b> identifier:demisParticipantId.value: string [0..1] 
+<b>+</b> identifier:telematikID.value: string [0..1] 
+-- Organization Info --
+<b>+</b> extension:organizationPeriod: Extension(Period) [0..1]
+<b>+</b> active: boolean [1..1]
+<b>+</b> type:emigaOrganizationType.coding.display: string [1..1]
+<b>+</b> name: string [1..1]
+<b>+</b> alias: string [0..1]
+<b>+</b> partOf: Reference(Organization) [0..1]
+-- Kommunikation --
+<b>+</b> telecom:Email.value: string [0..*]
+<b>+</b> telecom:Phone.value: string [0..*]
+<b>+</b> telecom:Url.value: string [0..*]
+<b>+</b> telecom:Fax.value: string [0..*]
+<b>+</b> address.extension:Stadtteil: string [0..1]
+<b>+</b> address.type: code [0..1]
+<b>+</b> address.type: code [0..1]
+<b>+</b> address.text: string [0..1]
+<b>+</b> address.line.extension:Strasse: string [0..1]
+<b>+</b> address.line.extension:Hausnummer: string [0..1]
+<b>+</b> address.line.extension:Adresszusatz: string [0..1]
+<b>+</b> address.line.extension:Postfach: string [0..1]
+<b>+</b> address.city: string [0..1]
+<b>+</b> address.state: string [0..1]
+<b>+</b> address.postalCode: string [0..1]
+<b>+</b> address.country: string [0..1]
+<b>+</b> address.period.start: dateTime [0..1]
++<b>+</b> address.period.end: dateTime [0..1]
+}
+
+@enduml
