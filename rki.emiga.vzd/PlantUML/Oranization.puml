@@ -47,7 +47,7 @@ class EmigaOrganization{
 <b>+</b> address.postalCode: string [0..1]
 <b>+</b> address.country: string [0..1]
 <b>+</b> address.period.start: dateTime [0..1]
-+<b>+</b> address.period.end: dateTime [0..1]
+<b>+</b> address.period.end: dateTime [0..1]
 }
 
 @enduml
