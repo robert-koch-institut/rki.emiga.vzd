@@ -14,6 +14,9 @@ Description: "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis."
 * extension[inekVersionPeriod].extension[version].valueInteger = 1
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2019-08-01"
+* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
+* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-987654"
 * identifier[emigaOrgvId].type = $v2-0203#XX
 * identifier[emigaOrgvId].system = $EmigaOrgvId
 * identifier[emigaOrgvId].value = "0123456789"
