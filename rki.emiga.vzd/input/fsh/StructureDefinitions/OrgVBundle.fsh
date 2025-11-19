@@ -12,7 +12,7 @@ Description: "To Do"
 * insert ProfileResourceCommon
 * insert ProfileMetaProfileTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.14"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.15"
 
 * type = #collection
 
