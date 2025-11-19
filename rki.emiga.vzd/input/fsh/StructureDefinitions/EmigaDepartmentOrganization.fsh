@@ -4,8 +4,8 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.0.0"
-* ^date = "2024-03-12"
+* ^version = "1.1.0"
+* ^date = "2025-11-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -35,8 +35,8 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
     emigaOrgvId 0..1 MS and
@@ -57,12 +57,15 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
 * identifier[emigaOrgvFileNumber].system 1.. MS
 * identifier[emigaOrgvFileNumber].value 1.. MS
+
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
 * identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
+
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
 * identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+
 * identifier[Abteilungsidentifikator] ^comment = "Motivation: Für IDs, die Krankhausintern spezifischen Fachabteilungen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung."
 * identifier[Abteilungsidentifikator] ^patternIdentifier.type = $sct#225746001
 * identifier[Abteilungsidentifikator].system 1.. MS
@@ -92,10 +95,10 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
 * type 1.. MS
-  * ^slicing.discriminator.type = #exists
-  * ^slicing.discriminator.path = "coding"
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "coding.code"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by existence"
+  * ^slicing.description = "slicing organization type by coding.code"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS and 
   organizationType 1..1 MS and
