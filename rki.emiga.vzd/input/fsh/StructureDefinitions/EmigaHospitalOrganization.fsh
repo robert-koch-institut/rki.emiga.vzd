@@ -4,8 +4,8 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "TODO"
 
-* ^version = "0.1.0"
-* ^date = "2025-06-18"
+* ^version = "0.2.0"
+* ^date = "2025-11-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -15,7 +15,7 @@ Description: "TODO"
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.14"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.15"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -40,15 +40,14 @@ Description: "TODO"
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and
-    emigaOrgvFileNumber 0..1 MS and
+    emigaOrgvFileNumber 1..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
-    organisationseinheitenID 0..1 MS and 
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS
 
@@ -66,20 +65,15 @@ Description: "TODO"
 
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"
-//* identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
+* identifier[IKNR] ^patternIdentifier.system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].system 1.. MS
 * identifier[IKNR].value 1.. MS
 
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
-//* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].system 1..1 MS
 * identifier[BSNR].value 1..1 MS
-
-* identifier[organisationseinheitenID] ^comment = "Kommentar von Isik Basis: Motivation: Für IDs, die Krankhausintern spezifischen Organisationseinheiten wie Abteilungen oder Stationen vergeben werden, ist diese Identifier zu nutzen - analog zu Slice Abteilungsidentifikator in https://simplifier.net/medizininformatikinitiative-modulstrukturdaten/mii_pr_struktur_abteilung. Da auch Stationen im Identifier-System inkludiert werden könnten, sollte hier das Identifier generisch Organisationseinheiten abbilden und nicht Abteilungen allein."
-* identifier[organisationseinheitenID] ^patternIdentifier.type = $sct#43741000
-* identifier[organisationseinheitenID].system 1.. MS
-* identifier[organisationseinheitenID].value 1.. MS
 
 * identifier[demisParticipantId] only Identifier
 * identifier[demisParticipantId] ^short = "DEMIS-Teilnehmer-Nummer"
@@ -105,20 +99,17 @@ Description: "TODO"
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
 * type 1.. MS
-  * ^slicing.discriminator.type = #exists
-  * ^slicing.discriminator.path = "coding"
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "coding.code"
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization type by existence"
   * ^slicing.ordered = false
-* type contains emigaOrganizationType 0..1 MS and fachbereich 0..1 MS
+* type contains emigaOrganizationType 1..1 MS and fachbereich 0..1 MS
     //einrichtungsArt 0..1 MS and
     //erweiterterFachabteilungsschluessel 0..1 MS and
     //fachbereich 0..1 MS
-    
-
 * type[emigaOrganizationType] from HospitalOrganizationType (required)
-//  * ^patternCodeableConcept.coding.system = $HospitalOrganizationType
-
+//* ^patternCodeableConcept.coding.code = #hospital
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.system = $DemisOrgType
 * type[emigaOrganizationType].coding.display = "Krankenhaus"

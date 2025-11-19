@@ -4,7 +4,7 @@ Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
-
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.15"
 * active = true
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
 * identifier[emigaOrgvId].type = $v2-0203#XX
