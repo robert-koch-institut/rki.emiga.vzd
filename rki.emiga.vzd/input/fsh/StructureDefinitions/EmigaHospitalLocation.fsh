@@ -4,8 +4,8 @@ Id: EmigaHospitalLocation
 Title: "Krankenhaus - Standort"
 Description: "TO DO"
 //
-* ^version = "0.1.0"
-* ^date = "2025-05-26"
+* ^version = "0.2.0"
+* ^date = "2025-11-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -41,12 +41,12 @@ Description: "TO DO"
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Standort"
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and 
-    emigaOrgvFileNumber 1..1 MS and
+    emigaOrgvFileNumber 0..1 MS and
    standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    IKNR 0..1 MS and
@@ -89,7 +89,7 @@ Description: "TO DO"
 
 * identifier[BSNR] only $identifier-bsnr
 * identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
-//* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
+* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].system MS
 * identifier[BSNR].value MS
 
@@ -158,10 +158,10 @@ Description: "TO DO"
 // Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * type MS
 * type ^short = "Standortstyp für Standorte ausserhalb von InEK-Szenarien"
-  * ^slicing.discriminator.type = #exists
-  * ^slicing.discriminator.path = "coding"
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "coding.code"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by existence"
+  * ^slicing.description = "slicing organization type by coding.code"
   * ^slicing.ordered = false
 * type contains fachbereich 0..1 MS
 
