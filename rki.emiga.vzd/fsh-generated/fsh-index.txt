@@ -29,7 +29,7 @@ Organization-44588964.json                                44588964              
 Organization-44588980.json                                44588980                         Instance    Examples\Organization-44588980.fsh                                 2 - 36
 Organization-44588981.json                                44588981                         Instance    Examples\Organization-44588981.fsh                                 2 - 33
 Organization-EpiWarnOrganization.json                     EpiWarnOrganization              Instance    Examples\OrganizationEpiWarn.fsh                                   1 - 33
-Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 30
+Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 33
 Organization-LaborOrganization.json                       LaborOrganization                Instance    Examples\LaborOrganization.fsh                                     1 - 42
 Practitioner-44588966.json                                44588966                         Instance    Examples\Practitioner-44588966.fsh                                 1 - 17
 Practitioner-44588968.json                                44588968                         Instance    Examples\Practitioner-44588968.fsh                                 1 - 23
@@ -40,14 +40,14 @@ PractitionerRole-44588969.json                            44588969              
 PractitionerRole-44588971.json                            44588971                         Instance    Examples\PractitionerRole-44588971.fsh                             1 - 10
 PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRole          Instance    Examples\PractitionerRoleEpiWarn.fsh                               1 - 13
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 17
-StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 215
+StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 218
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 194
 StructureDefinition-EmigaHospitalFacilityLocation.json    EmigaHospitalFacilityLocation    Profile     StructureDefinitions\EmigaHospitalFacilityLocation.fsh             1 - 277
 StructureDefinition-EmigaHospitalLocation.json            EmigaHospitalLocation            Profile     StructureDefinitions\EmigaHospitalLocation.fsh                     1 - 301
-StructureDefinition-EmigaHospitalOrganization.json        EmigaHospitalOrganization        Profile     StructureDefinitions\EmigaHospitalOrganization.fsh                 1 - 228
+StructureDefinition-EmigaHospitalOrganization.json        EmigaHospitalOrganization        Profile     StructureDefinitions\EmigaHospitalOrganization.fsh                 1 - 219
 StructureDefinition-EmigaHospitalRoomLocation.json        EmigaHospitalRoomLocation        Profile     StructureDefinitions\EmigaHospitalRoomLocation.fsh                 1 - 246
-StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 228
-StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 230
+StructureDefinition-EmigaLocation.json                    EmigaLocation                    Profile     StructureDefinitions\EmigaLocation.fsh                             1 - 229
+StructureDefinition-EmigaOrganization.json                EmigaOrganization                Profile     StructureDefinitions\EmigaOrganization.fsh                         1 - 232
 StructureDefinition-EmigaPractitioner.json                EmigaPractitioner                Profile     StructureDefinitions\EmigaPractitioner.fsh                         1 - 92
 StructureDefinition-EmigaPractitionerRole.json            EmigaPractitionerRole            Profile     StructureDefinitions\EmigaPractitionerRole.fsh                     1 - 92
 StructureDefinition-EmigaPublicHealthOrganization.json    EmigaPublicHealthOrganization    Profile     StructureDefinitions\EmigaPublicHealthOrganization.fsh             1 - 165
