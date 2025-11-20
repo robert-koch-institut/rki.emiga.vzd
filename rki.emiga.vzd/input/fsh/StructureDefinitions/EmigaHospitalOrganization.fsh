@@ -99,10 +99,10 @@ Description: "TODO"
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
 * type 1.. MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "coding.code"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by existence"
+  * ^slicing.description = "slicing organization type by pattern"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 1..1 MS and fachbereich 0..1 MS
     //einrichtungsArt 0..1 MS and

@@ -155,10 +155,10 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * type MS
 //* type ^short = "Einrichtungstyp nach InEK"
 * type 1.. MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "coding.code"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by coding.code"
+  * ^slicing.description = "slicing organization type by pattern"
   * ^slicing.ordered = false
 * type contains inekFacilityType 0..1 MS and
                 stationstyp 0..1 MS and

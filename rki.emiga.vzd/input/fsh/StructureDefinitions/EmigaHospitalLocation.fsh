@@ -158,10 +158,10 @@ Description: "TO DO"
 // Begründung: Die Funktionen sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
 * type MS
 * type ^short = "Standortstyp für Standorte ausserhalb von InEK-Szenarien"
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "coding.code"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by coding.code"
+  * ^slicing.description = "slicing organization type by pattern"
   * ^slicing.ordered = false
 * type contains fachbereich 0..1 MS
 
