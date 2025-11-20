@@ -13,7 +13,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.15"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.16"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
