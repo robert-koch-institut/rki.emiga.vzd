@@ -15,7 +15,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.15"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.16"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -121,11 +121,11 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
 * type ^short = "Organizationsart"
 * type ^definition = "Art der Organization"
-* type 0..1 MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "coding.code"
+* type 1.. MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by system"
+  * ^slicing.description = "slicing organization type by pattern"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 1.. MS //and
    // einrichtungsArt 0..1 MS and

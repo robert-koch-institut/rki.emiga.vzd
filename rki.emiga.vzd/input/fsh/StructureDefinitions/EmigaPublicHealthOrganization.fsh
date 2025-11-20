@@ -13,7 +13,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 
 * insert ProfileMetaProfileTags
 * insert MetaTagOrgVBundle
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|2.0.0-alpha.15"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|2.0.0-alpha.16"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -62,10 +62,10 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 // In einer ersten Version beschränken wir uns auf die Organisationstypen, die für die EMIGA Anwendungsfälle benötigt werden. Später können wir hier über Slicing weitere Organisationstypen (DEMIS, gematik, usw.) abbilden.
 
 * type 1.. MS
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "coding.code"
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^slicing.description = "slicing organization type by coding.code"
+  * ^slicing.description = "slicing organization type by pattern"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS
 * type[emigaOrganizationType] from PublicHealthOrganizationType (required)
