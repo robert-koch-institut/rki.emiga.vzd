@@ -45,7 +45,7 @@ Description: "TODO"
 * identifier ^slicing.rules = #open
 * identifier contains
    emigaOrgvId 0..1 MS and
-    emigaOrgvFileNumber 1..1 MS and
+    emigaOrgvFileNumber 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     demisParticipantId 0..1 MS and
