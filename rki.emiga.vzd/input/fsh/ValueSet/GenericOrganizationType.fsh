@@ -3,8 +3,8 @@ Id: GenericOrganizationType
 Title: "Organisationstyp (Werteliste)"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.1.0"
-* ^date = "2025-10-27"
+* ^version = "1.1.1"
+* ^date = "2025-11-24"
 
 * $DemisOrgType#medFacility "Medizinische Einrichtung"
 * $DemisOrgType#outpatSurgery "Einrichtung für ambulantes Operieren"
@@ -17,7 +17,7 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer generischen Or
 * $DemisOrgType#psycFacility "Psychotherapeutische Praxis"
 * $DemisOrgType#othMedPractice "Sonstige Heilberufepraxis"
 * $DemisOrgType#medFacPHA "Medizinische Einrichtung des ÖGDs"
-* $DemisOrgType#emResServ "emResServ"
+* $DemisOrgType#emResServ "Rettungsdienst"
 * $DemisOrgType#civDisFacility "Einrichtungen des Zivil- und Katastrophenschutzes"
 * $DemisOrgType#othMedFacility "Sonstige medizinische Einrichtung"
 
