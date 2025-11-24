@@ -18,7 +18,7 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer generischen Or
 * $DemisOrgType#othMedPractice "Sonstige Heilberufepraxis"
 * $DemisOrgType#medFacPHA "Medizinische Einrichtung des ÖGDs"
 * $DemisOrgType#emResServ "emResServ"
-* $DemisOrgType#civDisFacility "Einrichtungen des Zivil- und Katastrophenschutzes	"
+* $DemisOrgType#civDisFacility "Einrichtungen des Zivil- und Katastrophenschutzes"
 * $DemisOrgType#othMedFacility "Sonstige medizinische Einrichtung"
 
 * $DemisOrgType#childCareFacility "Gemeinschaftseinrichtung"
