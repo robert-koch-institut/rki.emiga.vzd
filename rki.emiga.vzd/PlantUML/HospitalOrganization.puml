@@ -1,10 +1,11 @@
 @startuml
-title EmigaOrganization (Profile of Organization) - Class Diagram
+title EmigaHospitalOrganization (Profile of Organization) - Class Diagram
 
 ' Main Class
-class EmigaOrganization{
+class EmigaHospitalOrganization{
 <b>+</b> id: string [0..1]
 ' TODO die anderen IDs lassen wir weg?
+
 -- Meta --
 ' TODO lassen wir extension weg?
 <b>+</b> meta.lastUpdated: instant [0..1] 
@@ -18,25 +19,28 @@ class EmigaOrganization{
 <b>+</b> meta.tag:orgvBundleId.display: string [0..1] 
 <b>+</b> meta.tag:orgvBundleVersion.display: string [0..1] 
 <b>+</b> meta.tag:relevance.display: string [0..1] 
+
 -- Identifiers --
 ' TODO welche Kardinalitäten sind hier richtig? die von value oder die von dem übergeordneten Objekt?
 <b>+</b> identifier:BSNR.value: string [0..1] 
-<b>+</b> identifier:demisLaboratoryId.value: string [0..1] 
 <b>+</b> identifier:demisParticipantId.value: string [0..1] 
 <b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [1..1] 
 <b>+</b> identifier:emigaOrgvId: IdentifierEmigaOrgvId [0..1] 
 <b>+</b> identifier:IKNR.value: string [0..1] 
-<b>+</b> identifier:LANR.value: string [0..1] 
 <b>+</b> identifier:telematikID.value: string [0..1] 
+
 -- Organization Information --
 <b>+</b> active: boolean [1..1]
 <b>+</b> alias: string [0..1]
-<b>+</b> extension:organizationPeriod: Extension(Period) [0..1]
+<b>+</b> extension:inekVersionPeriod: Extension(Complex) [0..1]
 <b>+</b> language: code [0..1] 
 <b>+</b> name: string [1..1]
 <b>+</b> partOf: Reference(Organization) [0..1]
 ' TODO type hat  1..*, emigaOrganizationType.coding.display hat 0..1 -> was wollen wir anzeigen?
 <b>+</b> type:emigaOrganizationType.coding.display: string [0..1]
+<b>+</b> type:fachbereich.coding.display: string [0..1]
+
+
 -- Communication --
 <b>+</b> address.city: string [0..1]
 <b>+</b> address.country: string [0..1]
