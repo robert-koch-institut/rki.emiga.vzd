@@ -1,0 +1,1 @@
+ Coronavirus-Krankheit-2019 (COVID-19)-spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.

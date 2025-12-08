@@ -1,0 +1,2 @@
+# {{page-title}} 
+Im vorliegenden Abschnitt werden die in Form von FHIR [StructureDefinitions](http://www.hl7.org/FHIR/structuredefinition.html) erstellten Ressourcenprofile vorgestellt. Diese bilden das "Rückgrat" des Implementierungsleitfadens und geben den groben inhaltlichen und strukturellen Rahmen der Meldungen gemäß §6 Absatz 1 vor. Darüber hinaus sind sie u.a. Grundlage der durch die DEMIS-Infrastruktur durchgeführten Meldungsvalidierung. Meldungen deren Inhalte nicht den definierten Profilen entsprechen, werden durch die DEMIS-Infrastruktur abgelehnt.

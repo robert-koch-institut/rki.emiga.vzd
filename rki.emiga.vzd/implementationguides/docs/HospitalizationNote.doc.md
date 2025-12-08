@@ -1,0 +1,1 @@
+Über diese Erweiterung kann die meldepflichtige Person weitere textuelle Hinweise zur Hospitalisierung gegenüber den empfangenden Gesundheitsämtern kommunizieren. Derzeit wird sie ausschließlich innerhalb der [Hospitalization](https://simplifier.net/rki.demis.disease/~resources?canonical=https://demis.rki.de/fhir/structuredefinition/hospitalization)-Ressource genutzt. 
