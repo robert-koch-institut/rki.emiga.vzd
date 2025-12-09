@@ -1,1 +1,0 @@
-Fragen, die meldetatbestandsübergreifend von Interesse sind, werden in diesem allgemeinen Fragebogen abgebildet. Dieser Fragebogen ist für sämtliche Meldungen gemäß §6 Absatz 1, 2 IfSG auszufüllen und somit als spezifische QuestionnaireResponse integraler Bestandteil einer jeden Meldung.
