@@ -21,12 +21,12 @@ class EmigaOrganization{
 <b>+</b> meta.tag:relevance: Coding [0..*]
 -- Identifiers --
 <b>+</b> identifier:BSNR: IdentifierBsnr [0..1] 
-<b>+</b> identifier:demisLaboratoryId.value: Identifier [0..1]
+<b>+</b> identifier:demisLaboratoryId: Identifier [0..1]
 <b>+</b> identifier:demisParticipantId: Identifier [0..1]
-<b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [1..1]
+<b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [0..1]
 <b>+</b> identifier:emigaOrgvId: IdentifierEmigaOrgvId [0..1]
 <b>+</b> identifier:IKNR: IdentifierIknr [0..1]
-<b>+</b> identifier:LANR.value: IdentifierLanr [0..1]
+<b>+</b> identifier:LANR: IdentifierLanr [0..1]
 <b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
 -- Communication --
 <b>+</b> address.city: string [0..1]
