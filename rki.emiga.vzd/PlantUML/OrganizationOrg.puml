@@ -15,11 +15,23 @@ class EmigaPractitioner{
 class EmigaPractitionerRole{
 }
 
-EmigaOrganization ..> EmigaOrganization: partOf
-EmigaLocation --> EmigaOrganization: managingOrganization
-EmigaLocation ..> EmigaLocation : partOf
-EmigaPractitionerRole --> EmigaPractitioner: Reference
-EmigaPractitionerRole --> EmigaOrganization : Reference
-EmigaPractitionerRole --> EmigaLocation: Reference
+EmigaOrganization ..> EmigaOrganization
+note on link: partOf
+
+EmigaLocation --> EmigaOrganization
+note on link: managingOrganization
+
+EmigaLocation ..> EmigaLocation
+note on link: partOf
+
+EmigaPractitionerRole --> EmigaPractitioner
+note on link: Reference
+
+EmigaPractitionerRole --> EmigaOrganization
+note on link: Reference
+
+EmigaPractitionerRole --> EmigaLocation
+note on link: Reference
+
 
 @enduml
