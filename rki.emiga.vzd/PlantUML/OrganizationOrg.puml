@@ -1,7 +1,6 @@
 @startuml
-skinparam linetype ortho
 
-title AffectedPerson (Profile of Patient) - Class Diagram
+title EmigaOrganization (Profile of Organization) - Class Diagram
 
 class EmigaOrganization{
 }
@@ -16,22 +15,12 @@ class EmigaPractitionerRole{
 }
 
 EmigaOrganization ..> EmigaOrganization
-note on link: partOf
-
 EmigaLocation --> EmigaOrganization
-note on link: managingOrganization
-
 EmigaLocation ..> EmigaLocation
-note on link: partOf
 
 EmigaPractitionerRole --> EmigaPractitioner
-note on link: Reference
-
 EmigaPractitionerRole --> EmigaOrganization
-note on link: Reference
-
 EmigaPractitionerRole --> EmigaLocation
-note on link: Reference
 
 
 @enduml
