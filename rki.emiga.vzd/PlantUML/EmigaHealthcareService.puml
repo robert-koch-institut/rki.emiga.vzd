@@ -1,0 +1,40 @@
+@startuml
+skinparam linetype ortho
+
+title EmigaHealthcareService (Profile of HealthcareService) - Class Diagram
+
+' Main Class
+class EmigaHealthcareService{
+-- General Information --
+<b>+</b> active: boolean [1..1]
+<b>+</b> category:emigaHealthcareServiceCategory: Codinig [0..1]
+<b>+</b> comment: string [0..1]
+<b>+</b> extraDetails: markdown [0..1
+<b>+</b> location: Reference(EmigaLocation) [0..*]
+<b>+</b> name: string [1..1]]
+<b>+</b> providedBy: Reference(Organization) [1..1]
+<b>+</b> specialty.emigaHealthcareServiceSpecialty: Coding [0..1]
+<b>+</b> type.emigaHealthcareServiceType: Coding [0..1]
+-- Meta --
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.security:responsibility: Coding [0..1]
+<b>+</b> meta.security:visibility: Coding [0..1]
+<b>+</b> meta.tag:orgvBundleId: Coding [0..1]
+<b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
+<b>+</b> meta.tag:relevance: Coding [0..*]
+-- Availability --
+<b>+</b> availableTime.daysOfWeek: code [0..*]
+<b>+</b> availableTime.allDay: boolean [0..1]
+<b>+</b> availableTime.availableStartTime: time [0..1]
+<b>+</b> availableTime.availableEndTime: time [0..1]
+<b>+</b> availableTime.extension:dutyHoursAvailability: Coding [0..1]
+<b>+</b> availabilityExceptions: string [0..1]
+<b>+</b> notAvailable.during: Period [0..1]
+-- Communication --
+<b>+</b> telecom:Email: ContactPoint [0..*]
+<b>+</b> telecom:Fax: ContactPoint [0..*]
+<b>+</b> telecom:Phone: ContactPoint [0..*]
+<b>+</b> telecom:Url: ContactPoint [0..*]
+}
+
+@enduml
