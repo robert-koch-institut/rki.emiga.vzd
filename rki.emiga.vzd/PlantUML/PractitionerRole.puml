@@ -1,0 +1,24 @@
+@startuml
+skinparam linetype ortho
+ 
+title EmigaPractitionerRole (Profile of PractitionerRole) - Class Diagram
+ 
+' Main Class
+class EmigaPractitionerRole{
+-- Personal Information --
+<b>+</b> active: boolean [1..1]
+<b>+</b> code:emigaPractitionerRole: CodeableConcept [0..*]
+<b>+</b> healthcareService: Reference(EmigaHealthcareService) [0..*]
+<b>+</b> location: Reference(EmigaLocation) [0..1]
+<b>+</b> organization: Reference(EmigaOrganization | EmigaPublicHealthOrganization) [1..1]
+<b>+</b> practitioner: Reference(EmigaPractitioner) [1..1]
+-- Meta --
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.security:responsibility: Coding [0..1]
+<b>+</b> meta.security:visibility: Coding [0..1]
+<b>+</b> meta.tag:orgvBundleId: Coding [0..1]
+<b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
+<b>+</b> meta.tag:relevance: Coding [0..*]
+}
+ 
+@enduml
