@@ -15,10 +15,10 @@ class EmigaHospitalFacilityLocation{
 <b>+</b> partOf: Reference(EmigaHospitalLocation) [0..1]
 <b>+</b> physicalType: CodeableConcept [0..1]
 <b>+</b> status: code [1..1]
+<b>+</b> type: CodeableConcept [1..*]
 <b>+</b> type:fachbereich: CodeableConcept [0..1]
 <b>+</b> type:inekFacilityType: CodeableConcept [0..1]
 <b>+</b> type:stationstyp: CodeableConcept [0..1]
-
 -- Meta --
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
@@ -26,8 +26,8 @@ class EmigaHospitalFacilityLocation{
 <b>+</b> meta.tag:orgvBundleId: Coding [0..1]
 <b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
-
 -- Identifiers --
+<b>+</b> identifier: Identifier [1..*] 
 <b>+</b> identifier:BSNR: IdentifierBsnr [0..1] 
 <b>+</b> identifier:demisParticipantId: Identifier [0..1]
 <b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [0..1]
@@ -35,7 +35,6 @@ class EmigaHospitalFacilityLocation{
 <b>+</b> identifier:abrechnungs-IKNR: IdentifierIknr [0..1]
 <b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
 <b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
-
 -- Communication --
 <b>+</b> address.city: string [0..1]
 <b>+</b> address.extension:Stadtteil: string [0..1]

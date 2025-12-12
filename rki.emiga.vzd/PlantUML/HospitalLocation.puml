@@ -17,7 +17,6 @@ class EmigaHospitalLocation{
 <b>+</b> physicalType: CodeableConcept [0..1]
 <b>+</b> status: code [1..1]
 <b>+</b> type:fachbereich: CodeableConcept [0..1]
-
 -- Meta --
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
@@ -25,8 +24,8 @@ class EmigaHospitalLocation{
 <b>+</b> meta.tag:orgvBundleId: Coding [0..1]
 <b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
-
 -- Identifiers --
+<b>+</b> identifier: Identifier [1..*] 
 <b>+</b> identifier:BSNR: IdentifierBsnr [0..1] 
 <b>+</b> identifier:demisParticipantId: Identifier [0..1]
 <b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [0..1]
@@ -35,7 +34,6 @@ class EmigaHospitalLocation{
 <b>+</b> identifier:standortId: Identifier [0..1]
 <b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
 <b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
-
 -- Communication --
 <b>+</b> address.city: string [0..1]
 <b>+</b> address.extension:municipalityKey: Coding [0..1]

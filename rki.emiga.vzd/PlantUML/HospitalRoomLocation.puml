@@ -23,6 +23,7 @@ class EmigaHospitalRoomLocation{
 <b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
 -- Identifiers --
+<b>+</b> identifier: Identifier [1..*] 
 <b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [0..1]
 <b>+</b> identifier:emigaOrgvId: IdentifierEmigaOrgvId [0..1]
 <b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
