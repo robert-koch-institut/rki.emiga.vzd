@@ -37,6 +37,7 @@ class EmigaHospitalRoomLocation{
 <b>+</b> address.postalCode: string [0..1]
 <b>+</b> address.state: string [0..1]
 <b>+</b> address.type: code [0..1]
+<b>+</b> position: BackbonElement [0..1]
 <b>+</b> position.latitude: decimal [1..1]
 <b>+</b> position.longitude: decimal [1..1]
 <b>+</b> telecom: ContactPoint [0..*]
