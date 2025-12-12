@@ -1,0 +1,20 @@
+- name: Index
+  filename: guide-index-codesystems.guide.md
+  - name: Art/Typ Organisation
+  filename: guide-art-typ-organisation.guide.md
+  - name: Dienstleister Dienstzeiten
+  filename: guide-dienstleister-dienstzeiten.guide.md
+  - name: Dienstleister Fachspezialisierung
+  filename: guide-dienstleister-fachspezialisierung.guide.md
+  - name: Dienstleister Kategorien
+  filename: guide-dienstleister-kategorien.guide.md
+  - name: InEK Einrichtungstyp
+  filename: guide-inek-einrichtungstyp.guide.md
+  - name: Organisations-Bundle-ID
+  filename: guide-organisations-bundle-id.guide.md
+  - name: Organisations-Bundle-Version
+  filename: guide-organisations-bundle-version.guide.md
+  - name: Practitioner Role
+  filename: guide-practitioner-role.guide.md
+  - name: Zuständigkeit
+  filename: guide-zustaendigkeit.guide.md
