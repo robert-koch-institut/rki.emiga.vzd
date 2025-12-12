@@ -9,9 +9,9 @@ class EmigaHospitalLocation{
 class EmigaHospitalRoomLocation{
 }
 
-EmigaHospitalOrganization --> EmigaHospitalOrganization
+EmigaHospitalOrganization ..> EmigaHospitalOrganization
 EmigaHospitalLocation --> EmigaHospitalOrganization
-EmigaHospitalLocation --> EmigaHospitalLocation
+EmigaHospitalLocation ..> EmigaHospitalLocation
 EmigaHospitalRoomLocation --> EmigaHospitalOrganization
 EmigaHospitalRoomLocation --> EmigaHospitalLocation
 
