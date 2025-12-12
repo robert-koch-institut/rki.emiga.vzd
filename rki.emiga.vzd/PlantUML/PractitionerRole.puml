@@ -5,7 +5,7 @@ title EmigaPractitionerRole (Profile of PractitionerRole) - Class Diagram
  
 ' Main Class
 class EmigaPractitionerRole{
--- Personal Information --
+-- Practitioner Information --
 <b>+</b> active: boolean [1..1]
 <b>+</b> code:emigaPractitionerRole: CodeableConcept [0..*]
 <b>+</b> healthcareService: Reference(EmigaHealthcareService) [0..*]
