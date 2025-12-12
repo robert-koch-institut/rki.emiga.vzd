@@ -1,18 +1,20 @@
 @startuml
 skinparam linetype ortho
 
-title EmigaHospitalOrganization (Profile of Organization) - Class Diagram
+title EmigaHospitalRoomLocation (Profile of Organization) - Class Diagram
 
 ' Main Class
-class EmigaHospitalOrganization{
+class EmigaHospitalRoomLocation{
 -- Organization Information --
-<b>+</b> active: boolean [1..1]
 <b>+</b> alias: string [0..*]
-<b>+</b> extension:inekVersionPeriod: Complex [0..1]
+<b>+</b> description: string [0..1]
+<b>+</b> managingOrganization: Reference(EmigaHospitalOrganization) [0..1]
+<b>+</b> mode: code [1..1]
 <b>+</b> name: string [1..1]
-<b>+</b> partOf: Reference(Organization) [0..1]
-<b>+</b> type:emigaOrganizationType: CodeableConcept [1..1]
-<b>+</b> type:fachbereich: CodeableConcept [0..1]
+<b>+</b> partOf: Reference(EmigaHospitalLocation) [0..1]
+<b>+</b> physicalType: CodeableConcept [0..1]
+<b>+</b> status: code [1..1]
+<b>+</b> type: CodeableConcept [0..*]
 -- Meta --
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
@@ -22,12 +24,9 @@ class EmigaHospitalOrganization{
 <b>+</b> meta.tag:relevance: Coding [0..*]
 -- Identifiers --
 <b>+</b> identifier: Identifier [1..*] 
-<b>+</b> identifier:BSNR: IdentifierBsnr [0..1] 
-<b>+</b> identifier:demisParticipantId: Identifier [0..1]
 <b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [0..1]
 <b>+</b> identifier:emigaOrgvId: IdentifierEmigaOrgvId [0..1]
-<b>+</b> identifier:IKNR: IdentifierIknr [0..1]
-<b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
+<b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
 -- Communication --
 <b>+</b> address.city: string [0..1]
 <b>+</b> address.extension:Stadtteil: string [0..1]
@@ -37,10 +36,11 @@ class EmigaHospitalOrganization{
 <b>+</b> address.line.extension:Strasse: string [0..1]
 <b>+</b> address.postalCode: string [0..1]
 <b>+</b> address.state: string [0..1]
-<b>+</b> telecom:Email: ContactPoint [0..*]
-<b>+</b> telecom:Fax: ContactPoint [0..*]
-<b>+</b> telecom:Phone: ContactPoint [0..*]
-<b>+</b> telecom:Url: ContactPoint [0..*]
+<b>+</b> address.type: code [0..1]
+<b>+</b> position: BackbonElement [0..1]
+<b>+</b> position.latitude: decimal [1..1]
+<b>+</b> position.longitude: decimal [1..1]
+<b>+</b> telecom: ContactPoint [0..*]
 }
 
 @enduml
