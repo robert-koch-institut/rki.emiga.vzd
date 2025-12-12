@@ -511,6 +511,30 @@
       },
       {
         "reference": {
+          "reference": "Location/Location-maximal"
+        },
+        "name": "Location-maximal",
+        "description": "Beispielstandort für EMIGA maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/Location-minimal"
+        },
+        "name": "Location-minimal",
+        "description": "Beispielstandort für EMIGA minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/Location-typical"
+        },
+        "name": "Location-typical",
+        "description": "Dienststelle Musterstraße des Gesundheitsamts Stadt XYZ",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/OrgVBundleId"
         },
         "name": "Organisations-Bundle-ID",
@@ -540,6 +564,27 @@
         "name": "Organisationstyp (Werteliste)",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization-maximal"
+        },
+        "name": "Organization-maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization-minimal"
+        },
+        "name": "Organization-minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization-typical"
+        },
+        "name": "Organization-typical",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
@@ -588,6 +633,48 @@
         "name": "Practitioner Role",
         "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/Practitioner-maximal"
+        },
+        "name": "Practitioner-maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/Practitioner-minimal"
+        },
+        "name": "Practitioner-minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/Practitioner-typical"
+        },
+        "name": "Practitioner-typical",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole-maximal"
+        },
+        "name": "PractitionerRole-maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole-minimal"
+        },
+        "name": "PractitionerRole-minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole-typical"
+        },
+        "name": "PractitionerRole-typical",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {
