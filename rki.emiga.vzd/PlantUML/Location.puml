@@ -6,18 +6,13 @@ title EmigaLocation (Profile of Location) - Class Diagram
 ' Main Class
 class EmigaLocation{
 -- Location Information --
-<b>+</b> alias: string [0..*]
+<b>+</b> alias: string [0..1]
 <b>+</b> description: string [0..1]
-<b>+</b> extension:inekPostalAddress: AddressDeBasis [0..1]
-<b>+</b> extension:inekVersionPeriod: Complex [0..*]
 <b>+</b> managingOrganization: Reference(Organization) [0..1]
 <b>+</b> mode: code [1..1]
-<b>+</b> name: string [1..1]
+<b>+</b> name: string [0..1]
 <b>+</b> partOf: Reference(Location) [0..1]
-<b>+</b> physicalType: CodeableConcept [0..1]
-<b>+</b> status: code [1..1]
-<b>+</b> type:fachbereich: CodeableConcept [0..1]
-
+<b>+</b> status: code [0..1]
 -- Meta --
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
@@ -25,7 +20,6 @@ class EmigaLocation{
 <b>+</b> meta.tag:orgvBundleId: Coding [0..1]
 <b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
-
 -- Identifiers --
 <b>+</b> identifier:BSNR: IdentifierBsnr [0..1] 
 <b>+</b> identifier:demisLaboratoryId: Identifier [0..1]
@@ -35,11 +29,9 @@ class EmigaLocation{
 <b>+</b> identifier:IKNR: IdentifierIknr [0..1]
 <b>+</b> identifier:LANR: IdentifierLanr [0..1]
 <b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
-
 -- Communication --
 <b>+</b> address.city: string [0..1]
 <b>+</b> address.extension:municipalityKey: Coding [0..1]
-<b>+</b> address.extension:Stadtteil: string [0..1]
 <b>+</b> address.line.extension:Adresszusatz: string [0..1]
 <b>+</b> address.line.extension:Hausnummer: string [0..1]
 <b>+</b> address.line.extension:Postfach: string [0..1]
