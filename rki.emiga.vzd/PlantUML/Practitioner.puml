@@ -6,7 +6,7 @@ title EmigaPractitioner (Profile of Practitioner) - Class Diagram
 ' Main Class
 class EmigaPractitioner{
 -- Personal Information --
-<b>+</b> alias: string [0..1]
+<b>+</b> active: boolean [1..1]
 <b>+</b> name.family: string [1..1]
 <b>+</b> name.given: string [1..*]
 <b>+</b> name.prefix: string [0..*]
