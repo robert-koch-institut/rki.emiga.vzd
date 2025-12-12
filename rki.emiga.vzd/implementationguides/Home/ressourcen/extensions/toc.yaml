@@ -1,0 +1,12 @@
+- name: Index
+  filename: guide-index-extensions.guide.md
+- name: Erreichbarkeit Dienstzeiten
+  filename: guide-erreichbarkeit-dienstzeiten.guide.md
+- name: IneK Postal Address
+  filename: guide-inek-postal-address.guide.md
+- name: IneK Version Period
+  filename: guide-inek-version-period.guide.md
+- name: UTM Coordinates (ETRS89)
+  filename: guide-utm-coordinates.guide.md
+- name: Zuständigkeit ÖGD-Stellen
+  filename: guide-zustaendigkeit-oegd-stellen.guide.md
