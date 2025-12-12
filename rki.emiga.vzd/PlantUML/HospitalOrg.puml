@@ -1,0 +1,18 @@
+@startuml
+
+title EmigaHospitalOrganization (Profile of Organization) - Class Diagram
+
+class EmigaHospitalOrganization{
+}
+class EmigaHospitalLocation{
+}
+class EmigaHospitalRoomLocation{
+}
+
+EmigaHospitalOrganization --> EmigaHospitalOrganization
+EmigaHospitalLocation --> EmigaHospitalOrganization
+EmigaHospitalLocation --> EmigaHospitalLocation
+EmigaHospitalRoomLocation --> EmigaHospitalOrganization
+EmigaHospitalRoomLocation --> EmigaHospitalLocation
+
+@enduml
