@@ -262,6 +262,30 @@
       },
       {
         "reference": {
+          "reference": "HealthcareService/healthcareservice-maximal-01"
+        },
+        "name": "EmigaHealthcareServiceMaximal",
+        "description": "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaubten Elemente befüllt)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/EmigaHealthcareServiceMinimal"
+        },
+        "name": "EmigaHealthcareServiceMinimal",
+        "description": "Minimale Instanz einer EMIGA-Dienstleistung",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/EmigaHealthcareServiceTypical"
+        },
+        "name": "EmigaHealthcareServiceTypical",
+        "description": "Typische Instanz einer EMIGA-Dienstleistung",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
           "reference": "HealthcareService/EpiWarnHealthcareService"
         },
         "name": "EpiWarnHealthcareService",

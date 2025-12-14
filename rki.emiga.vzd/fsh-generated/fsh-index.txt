@@ -9,9 +9,12 @@ CodeSystem-OrganizationType.json                          OrganizationType      
 CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 24
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  3 - 24
 HealthcareService-44588972.json                           44588972                         Instance    Examples\HealthcareService-44588971.fsh                            1 - 16
-HealthcareService-44588973.json                           44588973                         Instance    Examples\HealthcareService-44588973.fsh                            1 - 31
+HealthcareService-44588973.json                           44588973                         Instance    Examples\HealthcareService-44588973.fsh                            1 - 28
+HealthcareService-EmigaHealthcareServiceMinimal.json      EmigaHealthcareServiceMinimal    Instance    Examples\HealthcareService-minimal.fsh                             1 - 63
+HealthcareService-EmigaHealthcareServiceTypical.json      EmigaHealthcareServiceTypical    Instance    Examples\HealthcareService-typical.fsh                             1 - 66
 HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareService         Instance    Examples\EpiWarnHealthcareService.fsh                              1 - 34
 HealthcareService-EpiWarnHealthcareServiceInvTest.json    EpiWarnHealthcareServiceInvTest  Instance    Examples\EpiWarnHealthcareServiceInvTest.fsh                       1 - 36
+HealthcareService-healthcareservice-maximal-01.json       EmigaHealthcareServiceMaximal    Instance    Examples\HealthcareService-maximal.fsh                             1 - 116
 Location-44588965.json                                    44588965                         Instance    Examples\Location-44588965.fsh                                     1 - 20
 Location-EpiWarnLocation.json                             EpiWarnLocation                  Instance    Examples\LocationEpiWarn.fsh                                       1 - 21
 Location-HospitalRoomLocation.json                        HospitalRoomLocation             Instance    Examples\HospitalRoomLocation.fsh                                  1 - 56
