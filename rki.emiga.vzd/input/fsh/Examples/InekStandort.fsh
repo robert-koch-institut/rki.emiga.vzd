@@ -1,4 +1,4 @@
-Instance: IneKStandort
+Instance: IneKStandort  
 InstanceOf: EmigaHospitalLocation
 Usage: #example
 Title: "InEK Standort Beispiel"

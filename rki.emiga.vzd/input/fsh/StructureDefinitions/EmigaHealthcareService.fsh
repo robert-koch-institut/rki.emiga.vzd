@@ -23,7 +23,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'External identifiers for this item' - 0..* - Identifier
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * identifier 0..0
-
+  
 // 'Whether this HealthcareService record is in active use' - 0..1 - boolean
 // Wir wollen den Status von angebotenen Dienstleistungen klar unterscheiden können. Entsprechend machen wir das Element verpflichtend.
 * active 1..1 MS

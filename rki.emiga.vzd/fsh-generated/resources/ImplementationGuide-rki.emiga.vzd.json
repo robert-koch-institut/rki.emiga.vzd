@@ -286,6 +286,54 @@
       },
       {
         "reference": {
+          "reference": "Location/EmigaHospitalLocationMaximal"
+        },
+        "name": "EmigaHospitalLocationMaximal",
+        "description": "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/EmigaHospitalLocationMinimal"
+        },
+        "name": "EmigaHospitalLocationMinimal",
+        "description": "Minimale Instanz eines Krankenhaus-Standorts (EMIGA)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/EmigaHospitalLocationTypical"
+        },
+        "name": "EmigaHospitalLocationTypical",
+        "description": "Typische Instanz eines Krankenhaus-Standorts (EMIGA)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EmigaPublicHealthOrganizationMaximal"
+        },
+        "name": "EmigaPublicHealthOrganizationMaximal",
+        "description": "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EmigaPublicHealthOrganizationMinimal"
+        },
+        "name": "EmigaPublicHealthOrganizationMinimal",
+        "description": "Minimale Instanz einer ÖGD Organisation (EMIGA v1.1.0)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EmigaPublicHealthOrganizationTypical"
+        },
+        "name": "EmigaPublicHealthOrganizationTypical",
+        "description": "Typische Instanz einer ÖGD Organisation (EMIGA v1.1.0)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
           "reference": "HealthcareService/EpiWarnHealthcareService"
         },
         "name": "EpiWarnHealthcareService",
