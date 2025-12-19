@@ -1,5 +1,6 @@
 @startuml
-title AffectedPerson (Profile of Patient) - Class Diagram
+
+title EmigaOrganization (Profile of Organization) - Class Diagram
 
 class EmigaOrganization{
 }
@@ -13,11 +14,13 @@ class EmigaPractitioner{
 class EmigaPractitionerRole{
 }
 
-EmigaOrganization ..> EmigaOrganization: partOf
-EmigaLocation --> EmigaOrganization: managingOrganization
-EmigaLocation ..> EmigaLocation : partOf
-EmigaPractitionerRole --> EmigaPractitioner: Reference
-EmigaPractitionerRole --> EmigaOrganization : Reference
-EmigaPractitionerRole --> EmigaLocation: Reference
+EmigaOrganization ..> EmigaOrganization
+EmigaLocation --> EmigaOrganization
+EmigaLocation ..> EmigaLocation
+
+EmigaPractitionerRole --> EmigaPractitioner
+EmigaPractitionerRole --> EmigaOrganization
+EmigaPractitionerRole --> EmigaLocation
+
 
 @enduml

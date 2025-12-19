@@ -1,0 +1,55 @@
+@startuml
+skinparam linetype ortho
+
+title EmigaHospitalFacilityLocation (Profile of Location) - Class Diagram
+
+' Main Class
+class EmigaHospitalFacilityLocation{
+-- Location Information --
+<b>+</b> alias: string [0..*]
+<b>+</b> description: string [0..1]
+<b>+</b> extension:inekVersionPeriod: Complex [0..*]
+<b>+</b> managingOrganization: Reference(EmigaHospitalOrganization) [0..1]
+<b>+</b> mode: code [1..1]
+<b>+</b> name: string [1..1]
+<b>+</b> partOf: Reference(EmigaHospitalLocation) [0..1]
+<b>+</b> physicalType: CodeableConcept [0..1]
+<b>+</b> status: code [1..1]
+<b>+</b> type: CodeableConcept [1..*]
+<b>+</b> type:fachbereich: CodeableConcept [0..1]
+<b>+</b> type:inekFacilityType: CodeableConcept [0..1]
+<b>+</b> type:stationstyp: CodeableConcept [0..1]
+-- Meta --
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.security:responsibility: Coding [0..1]
+<b>+</b> meta.security:visibility: Coding [0..1]
+<b>+</b> meta.tag:orgvBundleId: Coding [0..1]
+<b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
+<b>+</b> meta.tag:relevance: Coding [0..*]
+-- Identifiers --
+<b>+</b> identifier: Identifier [1..*] 
+<b>+</b> identifier:BSNR: IdentifierBsnr [0..1] 
+<b>+</b> identifier:demisParticipantId: Identifier [0..1]
+<b>+</b> identifier:emigaOrgvFileNumber: IdentifierEmigaOrgvFileNumber [0..1]
+<b>+</b> identifier:emigaOrgvId: IdentifierEmigaOrgvId [0..1]
+<b>+</b> identifier:abrechnungs-IKNR: IdentifierIknr [0..1]
+<b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
+<b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
+-- Communication --
+<b>+</b> address.city: string [0..1]
+<b>+</b> address.extension:Stadtteil: string [0..1]
+<b>+</b> address.line.extension:Adresszusatz: string [0..1]
+<b>+</b> address.line.extension:Hausnummer: string [0..1]
+<b>+</b> address.line.extension:Postfach: string [0..1]
+<b>+</b> address.line.extension:Strasse: string [0..1]
+<b>+</b> address.postalCode: string [0..1]
+<b>+</b> address.state: string [0..1]
+<b>+</b> address.type: code [1..1]
+<b>+</b> position: BackbonElement [0..1]
+<b>+</b> position.extension:utmCoordinates: Complex [0..*]
+<b>+</b> position.latitude: decimal [1..1]
+<b>+</b> position.longitude: decimal [1..1]
+<b>+</b> telecom: ContactPoint [0..*]
+}
+
+@enduml
