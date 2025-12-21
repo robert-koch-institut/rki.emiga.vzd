@@ -90,5 +90,5 @@ Description: "Typische Instanz eines Krankenhaus-Standorts (EMIGA)"
   "http://fhir.de/sid/arge-ik/iknr"
 * managingOrganization.identifier.value = "260551132"
 
-/* -------- partOf -------- */
-* partOf = Reference(EmigaHospitalLocation/campus-warendorf)
+/* -------- partOf (MS) -------- */
+* partOf = Reference(EmigaHospitalLocation/parent-location)

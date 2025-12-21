@@ -48,7 +48,6 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * physicalType.coding.code = #si
 * physicalType.coding.display = "Site"
 
-
 * position.latitude = 51.960420529706
 * position.longitude = 8.002352893336
 * position.extension[UTMCoordinates].extension[UTM_Zone].valueString = "32U"
