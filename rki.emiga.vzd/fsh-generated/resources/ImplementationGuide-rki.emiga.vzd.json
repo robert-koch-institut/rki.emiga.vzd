@@ -2,8 +2,9 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0-alpha.18",
   "name": "rkiemigavzd",
+  "title": "RKI EMIGA VZD Implementation Guide",
   "status": "draft",
   "publisher": "Robert Koch Institut",
   "contact": [
@@ -17,6 +18,7 @@
       ]
     }
   ],
+  "description": "FHIR Implementation Guide for the RKI EMIGA Healthcare Provider Directory (Verzeichnisdienst)",
   "packageId": "rki.emiga.vzd",
   "fhirVersion": [
     "4.0.1"

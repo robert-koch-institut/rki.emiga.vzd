@@ -1,0 +1,136 @@
+{
+  "resourceType": "ValueSet",
+  "id": "HealthcareServiceType",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType",
+  "version": "1.0.0",
+  "name": "HealthcareServiceType",
+  "title": "Dienstleistungstyp (Werteliste)",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-06",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren.",
+  "compose": {
+    "include": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "concept": [ {
+        "code": "70",
+        "display": "Crisis Counselling",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Krisenberatung"
+        } ]
+      }, {
+        "code": "76",
+        "display": "Health Counselling",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Gesundheitsberatung"
+        } ]
+      }, {
+        "code": "117",
+        "display": "Emergeny Medical",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Notfallmedizin"
+        } ]
+      }, {
+        "code": "314",
+        "display": "Dentistry",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Zahnmedizin"
+        } ]
+      }, {
+        "code": "423",
+        "display": "Psychiatric Support",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Psychiatrische Betreuung"
+        } ]
+      }, {
+        "code": "538",
+        "display": "Telephone Counselling",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Telefonberatung"
+        } ]
+      }, {
+        "code": "539",
+        "display": "Telephone Help Line",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Telefon-Hotline"
+        } ]
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-06T00:00:00+01:00",
+    "contains": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "117",
+      "display": "Emergency Medical"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "314",
+      "display": "Dentistry"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "423",
+      "display": "Psychiatric Support"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "539",
+      "display": "Telephone Help Line"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "538",
+      "display": "Telephone Counselling"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "70",
+      "display": "Crisis Counselling"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/service-type",
+      "code": "76",
+      "display": "Health Counselling"
+    } ]
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-01-07T14:10:13Z",
+    "component" : {
+      "name" : "DEMIS ProfileLoader",
+      "version" : "9.4.0",
+      "externalReferences" : [
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/robert-koch-institut/demis-profile-loader"
+        }
+      ]
+    }
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.18",
+      "authors" : [
+        {
+          "name" : "Robert Koch Institut"
+        }
+      ],
+      "name" : "rki.emiga.vzd",
+      "version" : "2.0.0-alpha.18",
+      "description" : "FHIR Implementation Guide for the RKI EMIGA Healthcare Provider Directory (Verzeichnisdienst)",
+      "scope" : "required",
+      "purl" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.18",
+      "properties" : [
+        {
+          "name" : "canonical",
+          "value" : "https://emiga.rki.de/fhir/vzd"
+        },
+        {
+          "name" : "type",
+          "value" : "Conformance"
+        },
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        }
+      ],
+      "tags" : [
+        "root-component"
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/kbv.basis@1.4.0",
+      "authors" : [
+        {
+          "name" : "kassenaerztlichebundesvereinigung"
+        }
+      ],
+      "name" : "kbv.basis",
+      "version" : "1.4.0",
+      "description" : "KBV-Basis-Profile V 1.4.0",
+      "scope" : "required",
+      "purl" : "pkg:npm/kbv.basis@1.4.0",
+      "properties" : [
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/rki.demis.common@2.0.0",
+      "authors" : [
+        {
+          "name" : "Robert Koch-Institut"
+        }
+      ],
+      "name" : "rki.demis.common",
+      "version" : "2.0.0",
+      "description" : "Das DEMIS Common Package definiert das Datenmodell der Basismeldeinhalte.",
+      "scope" : "required",
+      "purl" : "pkg:npm/rki.demis.common@2.0.0",
+      "properties" : [
+        {
+          "name" : "canonical",
+          "value" : "https://demis.rki.de/fhir/common"
+        },
+        {
+          "name" : "jurisdiction",
+          "value" : "urn:iso:std:iso:3166#DE"
+        },
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        },
+        {
+          "name" : "url",
+          "value" : "https://simplifier.net/guide/rki.demis.common"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+      "authors" : [
+        {
+          "name" : "Konstantinos Voulgaris"
+        }
+      ],
+      "name" : "rki.emiga.common",
+      "version" : "1.2.0-alpha.16",
+      "description" : "Diese Version ist noch nicht produktiv.",
+      "scope" : "required",
+      "purl" : "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+      "properties" : [
+        {
+          "name" : "jurisdiction",
+          "value" : "urn:iso:std:iso:3166#DE"
+        },
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/de.basisprofil.r4@1.4.0",
+      "authors" : [
+        {
+          "name" : "stefanlang1"
+        }
+      ],
+      "name" : "de.basisprofil.r4",
+      "version" : "1.4.0",
+      "description" : "Projekt Basisprofilierung R4 (HL7 Deutschland e.V.)",
+      "scope" : "required",
+      "purl" : "pkg:npm/de.basisprofil.r4@1.4.0",
+      "properties" : [
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/rki.emiga.orgv@1.1.1",
+      "authors" : [
+        {
+          "name" : "Robert Koch-Institut"
+        }
+      ],
+      "name" : "rki.emiga.orgv",
+      "version" : "1.1.1",
+      "description" : "EMIGA Organizationsverzeichnis MVP Version",
+      "scope" : "required",
+      "purl" : "pkg:npm/rki.emiga.orgv@1.1.1",
+      "properties" : [
+        {
+          "name" : "jurisdiction",
+          "value" : "urn:iso:std:iso:3166#DE"
+        },
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/rki.demis.disease@2.0.0",
+      "authors" : [
+        {
+          "name" : "Robert Koch-Institut"
+        }
+      ],
+      "name" : "rki.demis.disease",
+      "version" : "2.0.0",
+      "description" : "Beinhaltet die in DEMIS für die Umsetzung der Arztmeldung genutzten Informationsmodellartefakte",
+      "scope" : "required",
+      "purl" : "pkg:npm/rki.demis.disease@2.0.0",
+      "properties" : [
+        {
+          "name" : "canonical",
+          "value" : "https://demis.rki.de/fhir/demis"
+        },
+        {
+          "name" : "jurisdiction",
+          "value" : "urn:iso:std:iso:3166#DE"
+        },
+        {
+          "name" : "fhirVersions",
+          "value" : "4.0.1"
+        },
+        {
+          "name" : "url",
+          "value" : "https://simplifier.net/guide/rki.demis.disease"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:npm/hl7.fhir.r4.core@4.0.1",
+      "authors" : [
+        {
+          "name" : "HL7 Inc"
+        }
+      ],
+      "name" : "hl7.fhir.r4.core",
+      "version" : "4.0.1",
+      "description" : "Definitions (API, structures and terminologies) for the R4 version of the FHIR standard",
+      "scope" : "required",
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "CC0-1.0"
+          }
+        }
+      ],
+      "purl" : "pkg:npm/hl7.fhir.r4.core@4.0.1",
+      "properties" : [
+        {
+          "name" : "canonical",
+          "value" : "http://hl7.org/fhir"
+        },
+        {
+          "name" : "type",
+          "value" : "Core"
+        },
+        {
+          "name" : "url",
+          "value" : "http://hl7.org/fhir/R4"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.18",
+      "dependsOn" : [
+        "pkg:npm/kbv.basis@1.4.0",
+        "pkg:npm/rki.demis.common@2.0.0",
+        "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+        "pkg:npm/de.basisprofil.r4@1.4.0",
+        "pkg:npm/rki.emiga.orgv@1.1.1"
+      ]
+    },
+    {
+      "ref" : "pkg:npm/kbv.basis@1.4.0",
+      "dependsOn" : [
+        "pkg:npm/de.basisprofil.r4@1.4.0",
+        "pkg:npm/hl7.fhir.r4.core@4.0.1"
+      ]
+    },
+    {
+      "ref" : "pkg:npm/rki.demis.common@2.0.0",
+      "dependsOn" : [
+        "pkg:npm/hl7.fhir.r4.core@4.0.1",
+        "pkg:npm/de.basisprofil.r4@1.4.0"
+      ]
+    },
+    {
+      "ref" : "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+      "dependsOn" : [
+        "pkg:npm/hl7.fhir.r4.core@4.0.1",
+        "pkg:npm/de.basisprofil.r4@1.4.0",
+        "pkg:npm/rki.demis.common@2.0.0",
+        "pkg:npm/rki.demis.disease@2.0.0"
+      ]
+    },
+    {
+      "ref" : "pkg:npm/de.basisprofil.r4@1.4.0",
+      "dependsOn" : [
+        "pkg:npm/hl7.fhir.r4.core@4.0.1"
+      ]
+    },
+    {
+      "ref" : "pkg:npm/rki.emiga.orgv@1.1.1",
+      "dependsOn" : [
+        "pkg:npm/hl7.fhir.r4.core@4.0.1",
+        "pkg:npm/rki.demis.common@2.0.0",
+        "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+        "pkg:npm/de.basisprofil.r4@1.4.0"
+      ]
+    },
+    {
+      "ref" : "pkg:npm/rki.demis.disease@2.0.0",
+      "dependsOn" : [
+        "pkg:npm/rki.demis.common@2.0.0"
+      ]
+    }
+  ]
+}
