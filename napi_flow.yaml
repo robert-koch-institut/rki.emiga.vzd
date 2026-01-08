@@ -1,4 +1,3 @@
-
 --- !<NAPI_PROFILE_GENERATION>
 name: "flow_vzd_local"
 description: "generates FHIR profiles for NAPI consumption"
@@ -9,7 +8,9 @@ profileSets:
   localCopyLocation: null
   reference: "feature/profile-loader"
   skipSanityCheckValidation: false
-  ignoredSanityChecks: []
+  ignoredSanityChecks: 
+  - name: MatchingNameAndIdCheck
+    reasoning: "IDs are not matching the names as per NAPI naming conventions."
   resourceBaseUrl: null
   skipFhirSchemaValidation: false
   skipExampleValidation: false
