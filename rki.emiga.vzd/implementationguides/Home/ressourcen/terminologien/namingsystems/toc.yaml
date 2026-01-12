@@ -1,0 +1,10 @@
+- name: Index
+  filename: guide-index-namingssystems.guide.md
+- name: CodeSite-ID
+  filename: guide-codesite-id.guide.md
+- name: EMIGA-Organisationsverzeichnis-Aktenzeichen
+  filename: guide-emiga-organisationsverzeichnis-aktenzeichen.guide.md
+- name: EMIGA-Organisationsverzeichnis-ID
+  filename: guide-emiga-organisationsverzeichnis-id.guide.md
+- name: IneK-ID
+  filename: guide-inek-id.guide.md

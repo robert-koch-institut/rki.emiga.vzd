@@ -1,0 +1,32 @@
+- name: Index
+  filename: guide-index-valuesets.guide.md
+- name: Addresse Typ
+  filename: guide-addresse-typ.guide.md
+- name: Art/Typ Dienstleistung
+  filename: guide-art-typ-dienstleistung.guide.md
+- name: Art/Typ Krankenhaus
+  filename: guide-art-typ-krankenhaus.guide.md
+- name: Art/Typ öffentlicher Gesundheitsdienst
+  filename: guide-art-typ-oeffentlicher-gesundheitsdienst.guide.md
+- name: Art/Typ Organisation
+  filename: guide-art-typ-organisation.guide.md
+- name: Dienstleister Dienstzeiten
+  filename: guide-dienstleister-dienstzeiten.guide.md
+- name: Dienstleister Fachspezialisierung
+  filename: guide-dienstleister-fachspezialisierung.guide.md
+- name: Dienstleister Kategorie
+  filename: guide-dienstleister-kategorie.guide.md
+- name: Fachbereich
+  filename: guide-fachbereich.guide.md
+- name: Generische Organisation
+  filename: guide-generische-organisation.guide.md
+- name: IneK Einrichtungstyp
+  filename: guide-inek-einrichtungstyp.guide.md
+- name: Organisations-Bundle-ID
+  filename: guide-organisations-bundle-id.guide.md
+- name: Organisations-Bundle-Version
+  filename: guide-organisations-bundle-version.guide.md
+- name: Practitioner Role
+  filename: guide-practitioner-role.guide.md
+- name: Zuständigkeit
+  filename: guide-zustaendigkeit.guide.md

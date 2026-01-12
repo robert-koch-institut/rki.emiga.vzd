@@ -1,0 +1,32 @@
+- name: Index
+  filename: guide-index-structuredefinitions.guide.md
+  - name: Bereich / Standort
+  filename: guide-bereich-standort.guide.md
+  - name: Dienstleistung
+  filename: guide-dienstleistung.guide.md
+  - name: Fachabteilung
+  filename: guide-fachabteilung.guide.md
+  - name: Identifier-Profil CodeSiteId
+  filename: guide-identifier-profil-codesiteid.guide.md
+  - name: Identifier-Profil EmigaOrgvId
+  filename: guide-identifier-profil-emigaorgvid.guide.md
+  - name: Identifier-Profil Orgv Aktenzeichen
+  filename: guide-identifier-profil-orgv-aktenzeichen.guide.md
+  - name: Krankenhaus
+  filename: guide-krankenhaus.guide.md
+  - name: Krankenhaus - Einrichtungsstandort
+  filename: guide-krankenhaus-einrichtungsstandort.guide.md
+  - name: Krankenhaus - Raum
+  filename: guide-krankenhaus-raum.guide.md
+  - name: Krankenhaus - Standort
+  filename: guide-krankenhaus-standort.guide.md
+  - name: ÖGD Organisation
+  filename: guide-oegd-organisation.guide.md
+  - name: Organisation
+  filename: guide-organisation.guide.md
+  - name: Organisationsverzeichnis Bundle
+  filename: guide-organisationsverzeichnis-bundle.guide.md
+  - name: Practitioner
+  filename: guide-practitioner.guide.md
+  - name: Practitioner Role
+  filename: guide-practitioner-role.guide.md
