@@ -7,14 +7,14 @@ title EmigaHealthcareService (Profile of HealthcareService) - Class Diagram
 class EmigaHealthcareService{
 -- General Information --
 <b>+</b> active: boolean [1..1]
-<b>+</b> category:emigaHealthcareServiceCategory: Codinig [0..1]
+<b>+</b> category:emigaHealthcareServiceCategory: CodeableConcept [0..1]
 <b>+</b> comment: string [0..1]
-<b>+</b> extraDetails: markdown [0..1
+<b>+</b> extraDetails: markdown [0..1]
 <b>+</b> location: Reference(EmigaLocation) [0..*]
 <b>+</b> name: string [1..1]]
 <b>+</b> providedBy: Reference(Organization) [1..1]
-<b>+</b> specialty.emigaHealthcareServiceSpecialty: Coding [0..1]
-<b>+</b> type.emigaHealthcareServiceType: Coding [0..1]
+<b>+</b> specialty.emigaHealthcareServiceSpecialty: CodeableConcept [0..1]
+<b>+</b> type.emigaHealthcareServiceType: CodeableConcept [0..1]
 -- Meta --
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
