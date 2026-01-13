@@ -1,4 +1,3 @@
-@startuml
 skinparam linetype ortho
 
 title EmigaOrganization (Profile of Organization) - Class Diagram
@@ -42,5 +41,3 @@ class EmigaOrganization{
 <b>+</b> telecom:Phone: ContactPoint [0..*]
 <b>+</b> telecom:Url: ContactPoint [0..*]
 }
-
-@enduml

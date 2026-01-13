@@ -1,4 +1,3 @@
-@startuml
 skinparam linetype ortho
  
 title EmigaPractitioner (Profile of Practitioner) - Class Diagram
@@ -22,5 +21,3 @@ class EmigaPractitioner{
 <b>+</b> telecom:Fax: ContactPoint [0..*]
 <b>+</b> telecom:Phone: ContactPoint [0..*]
 }
- 
-@enduml
