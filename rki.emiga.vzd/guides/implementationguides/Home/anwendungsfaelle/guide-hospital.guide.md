@@ -2,36 +2,16 @@
 Im Folgenden werden UML-Diagramme für Krankenhäuser dargestellt, die die für dieses Modul relevanten Anwendungsfälle in komprimierter Form abbilden. Der Schwerpunkt liegt auf den zentralen Use Cases und den dafür erforderlichen Funktionen, um eine klare und gut nachvollziehbare Übersicht zu gewährleisten.
 
 ## Überblick
-<plantuml>
-@startuml
-!include ../../../../PlantUML/HospitalOrg.puml
-@enduml
-</plantuml>
+{{render:guides/implementationguides/PlantUML/PNGs/HospitalOrg.png}}
 
 ## Krankenhaus
-<plantuml>
-@startuml
-!include ../../../../PlantUML/HospitalOrganization.puml
-@enduml
-</plantuml>
+{{render:guides/implementationguides/PlantUML/PNGs/HospitalOrganization.png}}
 
 ## Krankenhaus - Standort
-<plantuml>
-@startuml
-!include ../../../../PlantUML/HospitalLocation.puml
-@enduml
-</plantuml>
+{{render:guides/implementationguides/PlantUML/PNGs/HospitalLocation.png}}
 
 ## Krankenhaus - Einrichtungsstandort
-<plantuml>
-@startuml
-!include ../../../../PlantUML/HospitalFacilityLocation.puml
-@enduml
-</plantuml>
+{{render:guides/implementationguides/PlantUML/PNGs/HospitalFacilityLocation.png}}
 
 ## Krankenhaus - Raum
-<plantuml>
-@startuml
-!include ../../../../PlantUML/HospitalRoomLocation.puml
-@enduml
-</plantuml>
+{{render:guides/implementationguides/PlantUML/PNGs/HospitalRoomLocation.png}}
