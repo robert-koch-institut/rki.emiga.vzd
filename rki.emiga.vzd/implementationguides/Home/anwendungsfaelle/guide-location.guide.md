@@ -1,5 +1,5 @@
 ## {{page-title}}
-Im Folgenden werden UML-Diagramme für Bereiche / Standorte dargestellt, die die für dieses Modul relevanten Anwendungsfälle in komprimierter Form abbilden. Der Schwerpunkt liegt auf den zentralen Use Cases und den dafür erforderlichen Funktionen, um eine klare und gut nachvollziehbare Übersicht zu gewährleisten.
+Im Folgenden wird ein UML-Diagramm für Bereich / Standort dargestellt, das die für dieses Modul relevanten Anwendungsfälle in komprimierter Form abbildet. Der Schwerpunkt liegt auf den zentralen Use Cases und den dafür erforderlichen Funktionen, um eine klare und gut nachvollziehbare Übersicht zu gewährleisten.
 
 ## Bereich / Standort
 <plantuml>
