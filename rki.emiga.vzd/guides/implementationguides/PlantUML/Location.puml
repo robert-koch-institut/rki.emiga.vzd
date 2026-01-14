@@ -11,7 +11,7 @@ class EmigaLocation{
 <b>+</b> mode: code [1..1]
 <b>+</b> name: string [0..1]
 <b>+</b> partOf: Reference(Location) [0..1]
-<b>+</b> status: code [0..1]
+<b>+</b> status: code [0..1]>
 -- Meta --
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
