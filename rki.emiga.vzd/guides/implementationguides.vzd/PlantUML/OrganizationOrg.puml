@@ -1,0 +1,24 @@
+@startuml
+title EmigaOrganization (Profile of Organization) - Class Diagram
+
+class EmigaOrganization{
+}
+
+class EmigaLocation{
+}
+
+class EmigaPractitioner{
+}
+
+class EmigaPractitionerRole{
+}
+
+EmigaOrganization ..> EmigaOrganization
+EmigaLocation --> EmigaOrganization
+EmigaLocation ..> EmigaLocation
+
+EmigaPractitionerRole --> EmigaPractitioner
+EmigaPractitionerRole --> EmigaOrganization
+EmigaPractitionerRole --> EmigaLocation
+
+@enduml
