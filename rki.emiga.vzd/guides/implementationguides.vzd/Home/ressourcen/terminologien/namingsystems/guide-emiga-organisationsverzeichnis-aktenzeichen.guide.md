@@ -3,7 +3,7 @@ topic: EmigaOrgvFileNumber
 canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber
 ---
 
-## {{page-title}}
+# {{page-title}}
 ## Beschreibung
 EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifier.
 <br>&nbsp;<br>

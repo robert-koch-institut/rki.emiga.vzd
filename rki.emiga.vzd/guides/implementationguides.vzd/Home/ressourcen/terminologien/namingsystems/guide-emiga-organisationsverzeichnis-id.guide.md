@@ -3,7 +3,7 @@ topic: EmigaOrgvId
 canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
 ---
 
-## {{page-title}}
+# {{page-title}}
 ## Beschreibung
 EMIGA Organizationsverzeichnis ID to be used in Identifier.
 <br>&nbsp;<br>
