@@ -1,5 +1,5 @@
 - name: Index
-  filename: guide-index-structuredefinitions.guide.md
+  filename: Index.page.md
 - name: Bereich / Standort
   filename: guide-bereich-standort.guide.md
 - name: Dienstleistung
