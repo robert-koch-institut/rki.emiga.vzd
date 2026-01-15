@@ -1,3 +1,4 @@
+@startuml
 skinparam linetype ortho
 
 title EmigaHospitalLocation (Profile of Location) - Class Diagram
@@ -50,3 +51,5 @@ class EmigaHospitalLocation{
 <b>+</b> position.longitude: decimal [1..1]
 <b>+</b> telecom: ContactPoint [0..*]
 }
+
+@enduml

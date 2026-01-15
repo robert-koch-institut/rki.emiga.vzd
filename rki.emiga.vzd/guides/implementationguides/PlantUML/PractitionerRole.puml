@@ -1,3 +1,4 @@
+@startuml
 skinparam linetype ortho
  
 title EmigaPractitionerRole (Profile of PractitionerRole) - Class Diagram
@@ -19,3 +20,5 @@ class EmigaPractitionerRole{
 <b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
 }
+
+@enduml

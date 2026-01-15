@@ -1,3 +1,4 @@
+@startuml
 skinparam linetype ortho
 
 title EmigaLocation (Profile of Location) - Class Diagram
@@ -41,3 +42,5 @@ class EmigaLocation{
 <b>+</b> position.latitude: decimal [1..1]
 <b>+</b> position.longitude: decimal [1..1]
 }
+
+@enduml
