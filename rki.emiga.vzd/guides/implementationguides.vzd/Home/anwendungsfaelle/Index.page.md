@@ -21,6 +21,6 @@ Dieser Abschnitt bietet eine Übersicht über alle in diesem Implementierungslei
    Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie.
 
 4. **Krankenhaus**  
-  TODO
+   Krankenhäuser sind medizinische Einrichtungen, in denen Patientinnen und Patienten stationär und/oder ambulant behandelt werden. Im Kontext von EMIGA werden Krankenhäuser als eigenständige Organisationseinheiten mit eindeutigen Kennungen (z. B. IK, internen IDs) geführt, die im Melde- und Kommunikationsprozess mit den Gesundheitsämtern eine zentrale Rolle spielen. Dazu gehören u. a. die Übermittlung meldepflichtiger Daten, Rückfragen der Behörden sowie die Koordination weiterer Maßnahmen.
 
 

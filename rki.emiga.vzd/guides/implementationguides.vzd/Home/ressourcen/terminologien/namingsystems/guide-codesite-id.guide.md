@@ -5,7 +5,7 @@ canonical: https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
 
 # {{page-title}}
 ## Beschreibung
-CodeSite ID to be used in Identifier.
+CodeSite ID für die Verwendung in Identifier.
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">

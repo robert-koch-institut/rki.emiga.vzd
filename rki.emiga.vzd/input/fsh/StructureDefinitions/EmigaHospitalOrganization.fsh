@@ -2,7 +2,7 @@ Profile: EmigaHospitalOrganization
 Parent: Organization
 Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
-Description: "TODO"
+Description: "Profil zur Abbildung eines Krankenhaus im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
 * ^version = "0.2.0"
 * ^date = "2025-11-18"

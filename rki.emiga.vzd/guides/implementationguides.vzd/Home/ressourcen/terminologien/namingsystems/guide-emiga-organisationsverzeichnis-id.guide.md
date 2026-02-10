@@ -5,7 +5,7 @@ canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
 
 # {{page-title}}
 ## Beschreibung
-EMIGA Organizationsverzeichnis ID to be used in Identifier.
+EMIGA Organizationsverzeichnis ID für die Verwendung in Identifier.
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
