@@ -112,7 +112,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[organizationType] = $hl7-organization-type#dept
-//* type[organizationType] ^definition = "TODO: Ein beschreibung über den feste Kode dept schreiben"
+* type[organizationType] ^definition = "Kennzeichnung, dass es sich bei dieser Organisation um eine Abteilung (department) innerhalb einer übergeordneten Organisation handelt. Der feste Code „dept“ aus dem HL7-OrganizationType-CodeSystem wird verwendet, um Fachabteilungen als organisatorische Untereinheiten eindeutig zu klassifizieren."
   //* ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 //* type[ErweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)

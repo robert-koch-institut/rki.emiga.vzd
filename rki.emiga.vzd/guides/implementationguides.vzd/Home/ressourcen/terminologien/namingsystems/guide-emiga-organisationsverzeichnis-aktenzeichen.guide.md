@@ -5,7 +5,7 @@ canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber
 
 # {{page-title}}
 ## Beschreibung
-EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifier.
+EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifier.
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">

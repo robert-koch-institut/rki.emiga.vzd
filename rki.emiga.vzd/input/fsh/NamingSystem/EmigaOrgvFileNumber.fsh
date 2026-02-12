@@ -1,7 +1,7 @@
 Instance: EmigaOrgvFileNumber
 InstanceOf: NamingSystem
 Title: "EMIGA Organizationsverzeichnis Aktenzeichen"
-Description: "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+Description: "EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifiers"
 Usage: #definition
 * publisher = "Robert Koch-Institut"
 * date = "2025-07-25"
