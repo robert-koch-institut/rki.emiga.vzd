@@ -404,7 +404,7 @@
         "reference": {
           "reference": "StructureDefinition/InekPostalAddress"
         },
-        "name": "IneK Postal Address",
+        "name": "IneK Postalische Addresse",
         "description": "Information about the postal address of a site/location from IneK.",
         "exampleBoolean": false
       },

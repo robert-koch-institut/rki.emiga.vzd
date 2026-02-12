@@ -1,10 +1,10 @@
 Extension: InekPostalAddress
 Id: InekPostalAddress
-Title: "IneK Postal Address"
+Title: "IneK Postalische Addresse"
 Description: "Information about the postal address of a site/location from IneK."
-* ^url = "https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress"
-* ^version = "0.1.0"
-* ^date = "2025-07-11"
+* ^url = "https://emiga.rki.de/fhir/vzd/StructureDefinition/InekPostalAddress"
+* ^version = "0.2.0"
+* ^date = "2026-02-12"
 
 * insert MetadataProfile
 
