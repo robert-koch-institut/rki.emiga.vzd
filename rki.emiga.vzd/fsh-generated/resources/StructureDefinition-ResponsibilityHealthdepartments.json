@@ -1,12 +1,13 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ResponsibilityHealthdepartments",
-  "url": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments",
-  "version": "1.0.0",
+  "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/ResponsibilityHealthdepartments",
+  "version": "2.0.0",
   "name": "ResponsibilityHealthdepartments",
   "title": "Zuständigkeit der ÖGD-Stellen",
   "status": "active",
   "experimental": false,
+  "date": "2026-02-12",
   "publisher": "Robert Koch-Institut",
   "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
   "fhirVersion": "4.0.1",
@@ -154,7 +155,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
+        "fixedUri": "https://emiga.rki.de/fhir/vzd/StructureDefinition/ResponsibilityHealthdepartments"
       },
       {
         "id": "Extension.value[x]",

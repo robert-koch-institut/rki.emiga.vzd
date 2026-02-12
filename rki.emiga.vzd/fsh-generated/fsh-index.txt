@@ -54,7 +54,7 @@ StructureDefinition-EmigaPublicHealthOrganization.json    EmigaPublicHealthOrgan
 StructureDefinition-IdentifierCodeSiteId.json             IdentifierCodeSiteId             Profile     StructureDefinitions\IdentifierCodeSiteId.fsh                      1 - 12
 StructureDefinition-IdentifierEmigaOrgvFileNumber.json    IdentifierEmigaOrgvFileNumber    Profile     StructureDefinitions\IdentifierEmigaOrgvFileNumber.fsh             1 - 12
 StructureDefinition-IdentifierEmigaOrgvId.json            IdentifierEmigaOrgvId            Profile     StructureDefinitions\IdentifierEmigaOrgvId.fsh                     1 - 12
-StructureDefinition-IneKVersionPeriod.json                IneKVersionPeriod                Extension   StructureDefinitions\ExtensionIneKVersionPeriod.fsh                1 - 30
+StructureDefinition-IneKVersionPeriod.json                IneKVersionPeriod                Extension   StructureDefinitions\ExtensionIneKVersionPeriod.fsh                1 - 31
 StructureDefinition-InekPostalAddress.json                InekPostalAddress                Extension   StructureDefinitions\ExtensionInekPostalAddress.fsh                1 - 18
 StructureDefinition-OrgVBundle.json                       OrgVBundle                       Profile     StructureDefinitions\OrgVBundle.fsh                                3 - 22
 StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthdepartments  Extension   StructureDefinitions\ExtensionResponsibilityHealthdepartments.fsh  2 - 34
