@@ -2,15 +2,16 @@ Extension: IneKVersionPeriod
 Id: IneKVersionPeriod
 Title: "IneK Version Period"
 Description: "Information about the version and validity period of a site/location from IneK."
-* ^url = "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod"
+* ^url = "https://emiga.rki.de/fhir/vzd/StructureDefinition/IneKVersionPeriod"
 * ^version = "0.1.0"
 * ^date = "2025-06-17"
 
 * insert MetadataProfile
 
-* ^context.type = #element
-* ^context.expression = "Location" // or another resource if needed
-* ^context.expression = "Organization" // if used in Organization context
+* ^context[0].type = #element
+* ^context[0].expression = "Organization"
+* ^context[1].type = #element
+* ^context[1].expression = "Location"
 
 * extension contains
     version 0..1 and
