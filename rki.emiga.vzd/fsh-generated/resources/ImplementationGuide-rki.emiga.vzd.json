@@ -405,7 +405,7 @@
           "reference": "StructureDefinition/InekPostalAddress"
         },
         "name": "IneK Postalische Addresse",
-        "description": "Information about the postal address of a site/location from IneK.",
+        "description": "Hier wird die postalische Addresse für die Standorte die aus der InEK Krankenhausverzeichnis stammen, definiert.",
         "exampleBoolean": false
       },
       {
