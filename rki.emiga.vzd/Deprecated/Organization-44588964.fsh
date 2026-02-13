@@ -1,5 +1,5 @@
 //Example for Version 1.0.0 BaseOrganization (alt)
-Instance: 44588964
+Instance: Organization44588964
 InstanceOf: EmigaPublicHealthOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
