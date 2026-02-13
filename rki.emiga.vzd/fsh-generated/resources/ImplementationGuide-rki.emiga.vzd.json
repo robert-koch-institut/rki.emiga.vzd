@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.6.0-ballot2",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -45,12 +45,6 @@
       "version": "1.1.1",
       "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
       "id": "rki_emiga_orgv"
-    },
-    {
-      "packageId": "kbv.basis",
-      "version": "1.4.0",
-      "uri": "http://fhir.org/packages/kbv.basis/ImplementationGuide/kbv.basis",
-      "id": "kbv_basis"
     }
   ],
   "definition": {
@@ -177,7 +171,7 @@
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
-        "description": "CodeSite ID to be used in Identifiers",
+        "description": "CodeSite für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -249,7 +243,7 @@
           "reference": "NamingSystem/EmigaOrgvFileNumber"
         },
         "name": "EMIGA Organizationsverzeichnis Aktenzeichen",
-        "description": "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers",
+        "description": "EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -257,7 +251,7 @@
           "reference": "NamingSystem/EmigaOrgvId"
         },
         "name": "EMIGA Organizationsverzeichnis ID",
-        "description": "EMIGA Organizationsverzeichnis ID to be used in Identifiers",
+        "description": "EMIGA Organizationsverzeichnis ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -325,7 +319,7 @@
           "reference": "ValueSet/Fachbereich"
         },
         "name": "Fachbereich (Werteliste)",
-        "description": "TODO",
+        "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen.",
         "exampleBoolean": false
       },
       {
@@ -373,7 +367,7 @@
           "reference": "NamingSystem/IneKFileHeaderId"
         },
         "name": "IneK DateiKopf",
-        "description": "TODO",
+        "description": "Dieses NamingSystem beschreibt das Identifikationssystem für die Kennung des Header von IneK-Dateien. Es definiert die formale Identität des verwendeten Identifikators und dient der eindeutigen Referenzierung und Wiederverwendung dieses Identifikationssystems in FHIR-Ressourcen.",
         "exampleBoolean": false
       },
       {
@@ -453,7 +447,7 @@
           "reference": "StructureDefinition/EmigaHospitalOrganization"
         },
         "name": "Krankenhaus",
-        "description": "TODO",
+        "description": "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen.",
         "exampleBoolean": false
       },
       {
@@ -469,7 +463,7 @@
           "reference": "StructureDefinition/EmigaHospitalRoomLocation"
         },
         "name": "Krankenhaus - Raum",
-        "description": "TO DO",
+        "description": "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten.",
         "exampleBoolean": false
       },
       {
@@ -477,7 +471,7 @@
           "reference": "StructureDefinition/EmigaHospitalLocation"
         },
         "name": "Krankenhaus - Standort",
-        "description": "TO DO",
+        "description": "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen.",
         "exampleBoolean": false
       },
       {
@@ -554,7 +548,7 @@
           "reference": "StructureDefinition/OrgVBundle"
         },
         "name": "Organizationsverzeichnis Bundle",
-        "description": "To Do",
+        "description": "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Organisationsverzeichnisses.",
         "exampleBoolean": false
       },
       {
