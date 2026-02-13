@@ -56,7 +56,7 @@ Description: "Beispiel eines Standorts, der eine Station in einem Krankenhaus be
 //* address.state = "Niedersachsen"
 
 //* address.country = "DE"
-* managingOrganization.reference = "Organization/InekKrankenhaus"
+* managingOrganization.reference = "Organization/InekKrankenhausOrganization"
 * managingOrganization.identifier.system = $identifier-iknr
 * managingOrganization.identifier.value = "260551132"
 //* managingOrganization.identifier.extension[version].valueInteger = 1
