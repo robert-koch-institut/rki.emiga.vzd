@@ -67,7 +67,7 @@ Tests for all FHIR profile definitions including:
 - EmigaHospitalFacilityLocation
 - EmigaHospitalRoomLocation
 - OrgVBundle
-- Plus a search query to get all StructureDefinitions
+- With a search query to get all StructureDefinitions
 
 ### 2. **CodeSystems** - 8 requests
 Tests for terminology code systems:
@@ -78,7 +78,7 @@ Tests for terminology code systems:
 - OrganizationType
 - PractitionerRole
 - responsibilityType
-- Plus a search query
+- With a search query
 
 ### 3. **ValueSets** - 4 requests
 Tests for value set resources with a search query
@@ -90,7 +90,7 @@ Tests for example Organization instances:
 - LaborOrganization
 - Organization44588980
 - Organization44588981
-- Plus a search query
+- With a search query
 
 ### 5. **Practitioners (Examples)** - 4 requests
 Tests for example Practitioner instances with search
@@ -104,7 +104,7 @@ Tests for example Location instances:
 - HospitalRoomLocation
 - InekEinricthung01
 - LaborLocation
-- Plus a search query
+- With a search query
 
 ### 8. **HealthcareServices (Examples)** - 4 requests
 Tests for example HealthcareService instances with search
