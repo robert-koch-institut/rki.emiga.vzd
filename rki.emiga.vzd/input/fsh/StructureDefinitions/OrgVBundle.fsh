@@ -12,7 +12,7 @@ Description: "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab
 * insert ProfileResourceCommon
 * insert ProfileMetaProfileTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.19"
 
 * type = #collection
 
