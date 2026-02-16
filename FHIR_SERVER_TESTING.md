@@ -107,10 +107,10 @@ Tests for example Location instances:
 - With a search query
 
 ### 8. **HealthcareServices (Examples)** - 4 requests
-Tests for example HealthcareService instances with search
+Tests for example HealthcareService instances with search query
 
 ### 9. **NamingSystems** - 4 requests
-Tests for NamingSystem resources with search
+Tests for NamingSystem resources with search query
 
 ### 10. **ImplementationGuide** - 1 request
 Tests for the main ImplementationGuide resource
