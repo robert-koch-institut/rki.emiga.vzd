@@ -1,7 +1,7 @@
 {
   "resourceType": "NamingSystem",
   "id": "CodeSiteId",
-  "description": "CodeSite für die Verwendung in Identifiers",
+  "description": "CodeSite ID für die Verwendung in Identifiers",
   "uniqueId": [
     {
       "type": "uri",

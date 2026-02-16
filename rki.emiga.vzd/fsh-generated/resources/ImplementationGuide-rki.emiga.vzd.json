@@ -86,7 +86,7 @@
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
-        "description": "CodeSite für die Verwendung in Identifiers",
+        "description": "CodeSite ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
