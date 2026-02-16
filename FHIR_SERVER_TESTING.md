@@ -93,10 +93,10 @@ Tests for example Organization instances:
 - With a search query
 
 ### 5. **Practitioners (Examples)** - 4 requests
-Tests for example Practitioner instances with search
+Tests for example Practitioner instances with search query
 
 ### 6. **PractitionerRoles (Examples)** - 4 requests
-Tests for example PractitionerRole instances with search
+Tests for example PractitionerRole instances with search query
 
 ### 7. **Locations (Examples)** - 5 requests
 Tests for example Location instances:
