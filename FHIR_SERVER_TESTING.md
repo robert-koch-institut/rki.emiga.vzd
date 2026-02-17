@@ -41,6 +41,7 @@ This directory contains Postman collection and environment files to test if your
 Make sure to select the **RKI EMIGA VZD - FHIR Server Environment** from the environment dropdown (top right corner of Postman).
 
 ### Optional: Add Authentication
+# TODO is this not basic auth as the username needs to be provided as well as the password? @Kostas
 If your FHIR server requires authentication:
 1. Go to the environment settings
 2. Enable the `auth_token` variable
