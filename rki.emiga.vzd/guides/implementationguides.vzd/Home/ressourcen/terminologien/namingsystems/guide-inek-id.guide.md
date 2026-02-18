@@ -5,8 +5,11 @@ canonical: https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
 
 # {{page-title}}
 ## Beschreibung
-IneK ID für die Verwendung in Identifier.
-<br>&nbsp;<br>
+<fql output="inline" headers="false">
+from NamingSystem
+where uniqueId.where(value = %canonical).exists()
+select description
+</fql>
 
 <div id="rendered-codesystem">
     {{render:https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId}}
