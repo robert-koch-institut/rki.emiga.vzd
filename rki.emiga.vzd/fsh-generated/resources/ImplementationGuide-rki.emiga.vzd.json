@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.6.0-ballot2",
+      "version": "1.5.4",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -361,7 +361,7 @@
           "reference": "StructureDefinition/IneKVersionPeriod"
         },
         "name": "IneK Version Period",
-        "description": "Information about the version and validity period of a site/location from IneK.",
+        "description": "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses.",
         "exampleBoolean": false
       },
       {
