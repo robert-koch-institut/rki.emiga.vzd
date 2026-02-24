@@ -34,7 +34,6 @@ Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $IneKFileHeaderId = https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 Alias: $BaseLocation = https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation
-Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/StructureDefinition/DutyHoursAvailability
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
 Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $Fachbereich = https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich
