@@ -66,7 +66,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.ordered = false
 * type contains emigaHealthcareServiceType 0..1 MS
 * type[emigaHealthcareServiceType] from $ServiceTypeVS (extensible)
-  * ^patternCodeableConcept.coding.system = $ServiceTypeCS
+  * ^patternCodeableConcept.coding.system = $ServiceType
   * insert StrictCodableConcept
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept

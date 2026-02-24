@@ -1,3 +1,5 @@
+// rki.emiga.case
+Alias: $county = https://emiga.rki.de/fhir/case/ValueSet/CountyVS
 
 // rki.emiga.common
 Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
@@ -45,6 +47,11 @@ Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId
 Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
 Alias: $responsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
 
+//DEMIS
+Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
+Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/DemisParticipantId
+Alias: $Stationstyp = https://demis.rki.de/fhir/ars/ValueSet/stationstyp
+
 // deutsches Basisprofil
 Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
@@ -62,21 +69,13 @@ Alias: $OrganizationPeriod = http://hl7.org/fhir/StructureDefinition/organizatio
 Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
 Alias: $HL7DesignationUse = http://terminology.hl7.org/CodeSystem/designation-usage
 Alias: $locationPhysicalType = http://terminology.hl7.org/CodeSystem/location-physical-type
-Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type #TODO duplicate
-Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type #TODO duplicate
-Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type #TODO duplicate
-Alias: $ServiceTypeCS = http://terminology.hl7.org/CodeSystem/service-type #TODO duplicate
+Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type
+Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $nullflavour = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
 // SNOMED
 Alias: $sct = http://snomed.info/sct
-
-//DEMIS
-Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
-Alias: $identifier-demisParticipantId = https://demis.rki.de/fhir/NamingSystem/DemisParticipantId
-Alias: $Stationstyp = https://demis.rki.de/fhir/ars/ValueSet/stationstyp
-Alias: $county = https://demis.rki.de/fhir/ValueSet/county #TODO Hint on website: "This resource is retired. You should not reference this resource anymore." ??
 
 //IHE De
 Alias: $IHEFachrichtungen = http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen
