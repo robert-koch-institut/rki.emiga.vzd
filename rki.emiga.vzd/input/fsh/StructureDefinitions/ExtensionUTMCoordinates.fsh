@@ -2,9 +2,9 @@ Extension: UTMCoordinates
 Id: UTMCoordinates
 Title: "UTM Coordinates (ETRS89)"
 Description: "Representiert die UTM-Koordinaten (ETRS89) einer Einrichtung."
-* ^url = "https://emiga.rki.de/fhir/vzd/StructureDefinition/UTMCoordinates"
-* ^version = "0.2.0"
-* ^date = "2025-02-12"
+* ^url = "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates"
+* ^version = "0.3.0"
+* ^date = "2026-02-24"
 
 * ^context.type = #element
 * ^context.expression = "Location.position"

@@ -14,7 +14,7 @@ Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/Relevance
 Alias: $locationPhysicalType = http://terminology.hl7.org/CodeSystem/location-physical-type
 Alias: $identifier-standortnummer = http://fhir.de/StructureDefinition/identifier-standortnummer
 Alias: $HealthcareServiceSpecialtyCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty
-Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/StructureDefinition/DutyHoursAvailability
+Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
 Alias: $dutyHoursCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours
 Alias: $dutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours
 Alias: $county = https://demis.rki.de/fhir/ValueSet/county
@@ -37,7 +37,7 @@ Alias: $EmigaOrgvId = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
-Alias: $ResponsibilityHealthdepartments = https://emiga.rki.de/fhir/vzd/StructureDefinition/ResponsibilityHealthdepartments
+Alias: $ResponsibilityHealthdepartments = https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments
 Alias: $sct = http://snomed.info/sct
 
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
@@ -57,11 +57,11 @@ Alias: $IneKFacilityTypeCS = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacili
 Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
 
 Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
-Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/StructureDefinition/IneKVersionPeriod
-Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/StructureDefinition/UTMCoordinates
+Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod
+Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates
 
 
-Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/StructureDefinition/InekPostalAddress
+Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress
 
 Alias: $BundleIdCS = https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId
 Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
