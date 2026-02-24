@@ -72,7 +72,7 @@ Alias: $locationPhysicalType = http://terminology.hl7.org/CodeSystem/location-ph
 Alias: $hl7-organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $nullflavour = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $nullflavorCS = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
 // SNOMED
 Alias: $sct = http://snomed.info/sct
