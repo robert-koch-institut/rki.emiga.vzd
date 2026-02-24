@@ -361,7 +361,7 @@
           "reference": "StructureDefinition/IneKVersionPeriod"
         },
         "name": "IneK Version Period",
-        "description": "Informationen über die Version und Gültigkeitsdauer eines Standorts von IneK Krankenhausverzeichnis.",
+        "description": "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses.",
         "exampleBoolean": false
       },
       {
