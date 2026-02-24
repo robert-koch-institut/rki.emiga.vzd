@@ -242,7 +242,6 @@ Description: "Die Url muss valide sein."
 
 //* expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
 /*
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error
