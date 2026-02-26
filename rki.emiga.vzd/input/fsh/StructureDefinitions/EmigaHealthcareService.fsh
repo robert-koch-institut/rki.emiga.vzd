@@ -173,7 +173,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
 * availableTime MS
 * availableTime obeys ORGV-Service-Opening-Time
-* availableTime.extension contains $dutyHoursEx named dutyHoursAvailability 0..1 MS
+* availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
 
 * availableTime.daysOfWeek MS
 * availableTime.allDay MS

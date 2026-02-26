@@ -14,7 +14,7 @@ Context: Organization, Location, Practitioner
 * extension contains
     geographicRegion 1..* and
     ResponsibilityType 1..*
-* extension[geographicRegion].value[x] from $county (required)
+* extension[geographicRegion].value[x] from $County (required)
 * extension[geographicRegion].value[x] ^binding.description = "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
 * extension[geographicRegion].value[x] only Coding
   * insert StrictCoding
