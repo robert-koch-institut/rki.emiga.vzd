@@ -1,6 +1,6 @@
 ---
-topic: IneKFacilityType
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
+topic: IneKFacilityTypeVS
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS}}
 </div>
 
 <style>
