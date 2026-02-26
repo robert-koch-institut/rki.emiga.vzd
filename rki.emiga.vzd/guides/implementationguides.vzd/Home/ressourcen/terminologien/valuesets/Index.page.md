@@ -21,7 +21,7 @@ Die ValueSets sind Sammlungen von Codes aus den oben genannten CodeSystems und d
 | Dienstleister Fachspezialisierung (HealthcareServiceSpecialty) | Enthält Spezialisierungen von Dienstleistungen wie Infektionsschutz oder Hygienekontrolle. |
 | Dienstleister Kategorie (HealthcareServiceCategory) | Kategorien von Gesundheitsdienstleistungen, z.B. Beratung oder Vorsorge. |
 | FachbereichVS (FachbereichVS) | Kategorie von Fachbereichen, z.B. Pharmakologie oder Rechtsmedizin. |
-| Generische Organisation (GenericOrganizationType) | Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren. |
+| Generische Organisation (GenericOrganizationTypeVS) | Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren. |
 | IneK Einrichtungstyp (IneKFacilityType) | Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus dem IneK Standortverzeichnis charakterisieren. |
 | Organisations-Bundle-ID (OrgVBundleId) | Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen. |
 | Organisations-Bundle-Version (OrgVBundleVersion) | Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen. |

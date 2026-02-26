@@ -1,6 +1,6 @@
 ﻿**fix:** Display Value for code emResSurv  
-ValueSet/GenericOrganizationType.json  
+ValueSet/GenericOrganizationTypeVS.json  
 **fix:** Typo in VS  
-ValueSet/GenericOrganizationType.json  
+ValueSet/GenericOrganizationTypeVS.json  
 **feat:** OrgVFileNumber identifier to optional  
 StructureDefinitions/EmigaHospitalOrganization.json  

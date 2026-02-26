@@ -11,7 +11,7 @@ StructureDefinitions/EmigaHospitalOrganization.json
 StructureDefinitions/EmigaLocation.json  
 StructureDefinitions/EmigaOrganization.json  
 **feat:** Remove designations from VS  
-ValueSet/GenericOrganizationType.json  
+ValueSet/GenericOrganizationTypeVS.json  
 **feat:** Add English language Designations  
 CodeSystem/OrganizationType.json  
 **feat:** Update Dependencies  
@@ -21,7 +21,7 @@ StructureDefinitions/EmigaLocation.json
 **feat:** Loosen .type element cardinality to optional (0..1) to match requirements  
 StructureDefinitions/EmigaOrganization.json  
 **fix:** Remove level information and definitions from VS, add CodeSystem on codes  
-ValueSet/GenericOrganizationType.json  
+ValueSet/GenericOrganizationTypeVS.json  
 **fix:** Add CodeSystem for codes in VS  
 ValueSet/OrganizationType.json  
 **fix:** Remove Duplicate conept: sonstige Einrichtung, iterate CS version  
@@ -29,7 +29,7 @@ CodeSystem/OrganizationType.json
 **feat:**  new valuesets and extended codesystem for EINR/ORG  
 CodeSystem/OrganizationType.json  
 StructureDefinitions/EmigaHospitalOrganization.json  
-ValueSet/GenericOrganizationType.json  
+ValueSet/GenericOrganizationTypeVS.json  
 ValueSet/HospitalOrganizationType.json  
 ValueSet/OrganizationType.json  
 NamingSystem/EmigaOrgvId.json  
