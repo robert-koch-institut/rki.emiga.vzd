@@ -1,7 +1,7 @@
 Instance: CodeSiteId
 InstanceOf: NamingSystem
 Title: "CodeSite ID"
-Description: "CodeSite ID to be used in Identifiers"
+Description: "CodeSite ID für die Verwendung in Identifiers"
 Usage: #definition
 * publisher = "Robert Koch-Institut"
 * date = "2024-03-19"

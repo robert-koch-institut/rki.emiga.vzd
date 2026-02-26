@@ -15,7 +15,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.19"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -253,7 +253,6 @@ Description: "Die Url muss valide sein."
 * severity = #error
 * expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
 
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error

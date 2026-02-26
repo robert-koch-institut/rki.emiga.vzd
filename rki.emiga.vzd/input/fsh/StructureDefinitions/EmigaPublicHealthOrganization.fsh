@@ -13,7 +13,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 
 * insert ProfileMetaProfileTags
 * insert MetaTagOrgVBundle
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|2.0.0-alpha.19"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -187,7 +187,6 @@ Description: "Die Url muss valide sein."
 * severity = #error
 * expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
 
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error

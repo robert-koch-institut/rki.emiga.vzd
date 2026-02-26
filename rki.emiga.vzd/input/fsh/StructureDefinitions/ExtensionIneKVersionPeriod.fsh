@@ -1,16 +1,17 @@
 Extension: IneKVersionPeriod
 Id: IneKVersionPeriod
 Title: "IneK Version Period"
-Description: "Information about the version and validity period of a site/location from IneK."
+Description: "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses."
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod"
-* ^version = "0.1.0"
-* ^date = "2025-06-17"
+* ^version = "0.2.0"
+* ^date = "2026-02-24"
 
 * insert MetadataProfile
 
-* ^context.type = #element
-* ^context.expression = "Location" // or another resource if needed
-* ^context.expression = "Organization" // if used in Organization context
+* ^context[0].type = #element
+* ^context[0].expression = "Organization"
+* ^context[1].type = #element
+* ^context[1].expression = "Location"
 
 * extension contains
     version 0..1 and
@@ -18,15 +19,15 @@ Description: "Information about the version and validity period of a site/locati
     lastChange 0..1
     //validUntil 0..1
 
-* extension[version] ^short = "Version number of the site from the IneK source"
+* extension[version] ^short = "Versionsnummer des Datensatzes"
 * extension[version].valueInteger 1..1 MS
 //* extension[version].valueString ^maxLength = 9
 
-* extension[validPeriod] ^short = "First day of validity (YYYY-MM-DD, between 1900-01-01 and 2999-12-31)"
+* extension[validPeriod] ^short = "Erster Gültigkeitstag (YYYY-MM-DD, zwischen 1900-01-01 und 2999-12-31)"
 * extension[validPeriod].valuePeriod 0..1 MS
 * extension[validPeriod].valuePeriod.start 0..1 MS
 
-* extension[lastChange] ^short = "Last change date of the site from the IneK source"
+* extension[lastChange] ^short = "Letztes Änderungsdatum des Standort-Datensatzes"
 * extension[lastChange].valueDate 0..1 MS
 
 

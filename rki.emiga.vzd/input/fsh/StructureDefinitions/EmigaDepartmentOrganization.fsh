@@ -13,7 +13,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.19"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -112,7 +112,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[organizationType] = $hl7-organization-type#dept
-//* type[organizationType] ^definition = "TODO: Ein beschreibung über den feste Kode dept schreiben"
+* type[organizationType] ^definition = "Kennzeichnung, dass es sich bei dieser Organisation um eine Abteilung (department) innerhalb einer übergeordneten Organisation handelt. Der feste Code „dept“ aus dem HL7-OrganizationType-CodeSystem wird verwendet, um Fachabteilungen als organisatorische Untereinheiten eindeutig zu klassifizieren."
   //* ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 //* type[ErweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
@@ -239,7 +239,6 @@ Description: "Die Url muss valide sein."
 * severity = #error
 * expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
 
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error

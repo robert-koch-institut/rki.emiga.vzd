@@ -1,7 +1,7 @@
 Instance: IneKFileHeaderId
 InstanceOf: NamingSystem
 Title: "IneK DateiKopf"
-Description: "TODO"
+Description: "Dieses NamingSystem beschreibt das Identifikationssystem für die Kennung des Header von IneK-Dateien. Es definiert die formale Identität des verwendeten Identifikators und dient der eindeutigen Referenzierung und Wiederverwendung dieses Identifikationssystems in FHIR-Ressourcen."
 Usage: #definition
 * publisher = "Robert Koch-Institut"
 * date = "2024-05-13"

@@ -2,7 +2,7 @@ Profile: EmigaHospitalRoomLocation
 Parent: Location
 Id: EmigaHospitalRoomLocation
 Title: "Krankenhaus - Raum"
-Description: "TO DO"
+Description: "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten."
 //
 * ^version = "0.1.0"
 * ^date = "2025-07-02"
@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation|2.0.0-alpha.19"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt

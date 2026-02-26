@@ -2,7 +2,7 @@ Profile: EmigaHospitalLocation
 Parent: Location
 Id: EmigaHospitalLocation
 Title: "Krankenhaus - Standort"
-Description: "TO DO"
+Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 //
 * ^version = "0.2.0"
 * ^date = "2025-11-18"
@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.19"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
