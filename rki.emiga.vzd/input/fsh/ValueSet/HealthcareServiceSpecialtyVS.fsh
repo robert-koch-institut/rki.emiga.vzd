@@ -5,7 +5,7 @@ Id: HealthcareServiceSpecialtyVS
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-12-27"
-* include codes from system HealthcareServiceSpecialtyVS
+* include codes from system HealthcareServiceSpecialty
 
 * $nullflavorCS#OTH "other"
 * $nullflavorCS#OTH ^designation[0].use = $HL7DesignationUse#display
