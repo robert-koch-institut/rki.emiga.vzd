@@ -82,7 +82,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.description = "slicing healthcare service specialty by system"
   * ^slicing.ordered = false
 * specialty contains emigaHealthcareServiceSpecialty 0..1 MS
-* specialty[emigaHealthcareServiceSpecialty] from HealthcareServiceSpecialty (required)
+* specialty[emigaHealthcareServiceSpecialty] from HealthcareServiceSpecialtyVS (required)
   * ^patternCodeableConcept.coding.system = $HealthcareServiceSpecialtyCS
   * insert StrictCodableConcept 
 
