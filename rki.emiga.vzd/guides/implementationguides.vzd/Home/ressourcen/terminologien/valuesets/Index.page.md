@@ -15,7 +15,7 @@ Die ValueSets sind Sammlungen von Codes aus den oben genannten CodeSystems und d
 | Addresse Typ (AddressTypePhysicalBothVS) | Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben. |
 | Art/Typ Dienstleistung (HealthcareServiceTypeVS) | Definiert spezifische Dienstleistungsarten für den ÖGD. |
 | Art/Typ Krankenhaus (HospitalOrganizationTypeVS) | Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.|
-| Art/Typ öffentlicher Gesundheitsdienst (PublicHealthOrganizationType) | Enthält die für den ÖGD relevanten Organisationstypen. |
+| Art/Typ öffentlicher Gesundheitsdienst (PublicHealthOrganizationTypeVS) | Enthält die für den ÖGD relevanten Organisationstypen. |
 | Art/Typ Organisation (OrganizationTypeVS) | Sammlung von Codes zur Beschreibung verschiedener Organisationstypen im Gesundheitswesen. |
 | Dienstleister Dienstzeiten (HealthcareDutyHours) | Sammlung von Codes zur Definition der Verfügbarkeit von Dienstleistungen.|
 | Dienstleister Fachspezialisierung (HealthcareServiceSpecialtyVS) | Enthält Spezialisierungen von Dienstleistungen wie Infektionsschutz oder Hygienekontrolle. |

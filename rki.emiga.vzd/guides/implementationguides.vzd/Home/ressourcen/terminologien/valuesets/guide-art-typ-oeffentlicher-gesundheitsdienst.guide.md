@@ -1,6 +1,6 @@
 ---
-topic: PublicHealthOrganizationType
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationType
+topic: PublicHealthOrganizationTypeVS
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationTypeVS
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationType}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationTypeVS}}
 </div>
 
 <style>
