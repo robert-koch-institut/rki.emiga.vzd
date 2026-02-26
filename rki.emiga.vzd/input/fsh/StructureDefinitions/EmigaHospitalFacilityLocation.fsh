@@ -175,7 +175,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * type[stationstyp].coding.system 1..1 MS
 * type[stationstyp].coding.display MS
 
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from $FachbereichVS (required)
 //* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS

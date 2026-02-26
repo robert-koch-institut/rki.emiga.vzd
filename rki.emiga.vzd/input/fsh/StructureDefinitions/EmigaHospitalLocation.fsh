@@ -165,8 +165,8 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
   * ^slicing.ordered = false
 * type contains fachbereich 0..1 MS
 
-* type[fachbereich] from Fachbereich (required)
-//* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
+* type[fachbereich] from FachbereichVS (required)
+//* type[fachbereich] ^patternCodeableConcept.coding.system = $FachbereichVS
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
 * type[fachbereich].coding.display MS
