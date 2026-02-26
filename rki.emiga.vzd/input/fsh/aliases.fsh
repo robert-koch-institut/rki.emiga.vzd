@@ -20,7 +20,7 @@ Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/Organization
 Alias: $BundleIdCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId
 Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleVersion
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
-Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
+Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType
 Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
 Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
 Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress
@@ -38,14 +38,14 @@ Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition
 Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $FachbereichVS = https://emiga.rki.de/fhir/vzd/ValueSet/FachbereichVS
 Alias: $GenericOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationTypeVS
-Alias: $dutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours
+Alias: $dutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHoursVS
 Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceTypeVS
 Alias: $HospitalOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationTypeVS
 Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationTypeVS
-Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId
-Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
-Alias: $responsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
+Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleIdVS
+Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersionVS
+Alias: $ResponsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityType
 
 //DEMIS
 Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
