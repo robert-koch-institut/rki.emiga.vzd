@@ -12,7 +12,7 @@ Die ValueSets sind Sammlungen von Codes aus den oben genannten CodeSystems und d
 
 | **ValueSet**                               | **Beschreibung**                                                                                       |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Addresse Typ (AddressTypePhysicalBoth) | Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben. |
+| Addresse Typ (AddressTypePhysicalBothVS) | Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben. |
 | Art/Typ Dienstleistung (HealthcareServiceType) | Definiert spezifische Dienstleistungsarten für den ÖGD. |
 | Art/Typ Krankenhaus (HospitalOrganizationType) | Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.|
 | Art/Typ öffentlicher Gesundheitsdienst (PublicHealthOrganizationType) | Enthält die für den ÖGD relevanten Organisationstypen. |

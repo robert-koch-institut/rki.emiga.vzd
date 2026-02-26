@@ -185,7 +185,7 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 * address ^comment = "Besuchbare Anschrift des Standortes"
 * address 0..1 MS
 * address.type 1..1 MS
-* address.type from AddressTypePhysicalBoth (required)
+* address.type from AddressTypePhysicalBothVS (required)
 * address.type ^short = "Addressen-Typ"
 * address.type ^definition = "Kennzeichnet den physische Addressen-Typ, z.B. ob es sich um  eine Besuchsadresse handelt oder eine Postanschrift und eine Besuchsadresse."
 * address.type.value MS

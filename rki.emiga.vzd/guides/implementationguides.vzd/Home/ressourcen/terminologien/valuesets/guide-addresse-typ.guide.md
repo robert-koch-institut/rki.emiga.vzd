@@ -1,6 +1,6 @@
 ---
-topic: AddressTypePhysicalBoth
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBoth
+topic: AddressTypePhysicalBothVS
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBothVS
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBoth}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBothVS}}
 </div>
 
 <style>
