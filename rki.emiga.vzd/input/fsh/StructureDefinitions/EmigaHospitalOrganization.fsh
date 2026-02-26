@@ -108,7 +108,7 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
     //einrichtungsArt 0..1 MS and
     //erweiterterFachabteilungsschluessel 0..1 MS and
     //fachbereich 0..1 MS
-* type[emigaOrganizationType] from HospitalOrganizationType (required)
+* type[emigaOrganizationType] from HospitalOrganizationTypeVS (required)
 //* ^patternCodeableConcept.coding.code = #hospital
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.system = $DemisOrgType

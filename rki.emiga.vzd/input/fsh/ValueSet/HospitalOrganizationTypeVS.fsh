@@ -1,5 +1,5 @@
-ValueSet: HospitalOrganizationType
-Id: HospitalOrganizationType
+ValueSet: HospitalOrganizationTypeVS
+Id: HospitalOrganizationTypeVS
 Title: "Krankenhaus-Organisationstyp (Werteliste)"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
