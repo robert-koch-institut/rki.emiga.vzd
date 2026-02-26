@@ -1,5 +1,5 @@
 // rki.emiga.case
-Alias: $County = https://emiga.rki.de/fhir/case/ValueSet/CountyVS
+Alias: $CountyVS = https://emiga.rki.de/fhir/case/ValueSet/CountyVS
 
 // rki.emiga.common
 Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
@@ -44,7 +44,7 @@ Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacility
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationTypeVS
 Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleIdVS
 Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersionVS
-Alias: $ResponsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS
+Alias: $ResponsibilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS
 
 //DEMIS
 Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
