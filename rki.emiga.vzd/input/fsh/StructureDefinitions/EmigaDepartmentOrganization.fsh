@@ -118,7 +118,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 //* type[ErweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
 //  * insert StrictCodableConcept
 //* type[ErweiterterFachabteilungsschluessel] ^comment = "Motivation: Das ValueSet muss bindend sein, damit Systemübergreifend der Fachabteilungstyp einheitlich kodiert werden kann. \n  \n  Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from $FachbereichVS (required)
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
 * type[fachbereich].coding.display MS

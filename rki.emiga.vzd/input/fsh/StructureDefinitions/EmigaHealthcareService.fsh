@@ -46,7 +46,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.description = "slicing healthcare service category by system"
   * ^slicing.ordered = false
 * category contains emigaHealthcareServiceCategory 0..1 MS
-* category[emigaHealthcareServiceCategory] from HealthcareServiceCategory (required)
+* category[emigaHealthcareServiceCategory] from HealthcareServiceCategoryVS (required)
   * ^patternCodeableConcept.coding.system = $HealthcareServiceCategory
   * insert StrictCodableConcept
 
@@ -82,7 +82,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.description = "slicing healthcare service specialty by system"
   * ^slicing.ordered = false
 * specialty contains emigaHealthcareServiceSpecialty 0..1 MS
-* specialty[emigaHealthcareServiceSpecialty] from HealthcareServiceSpecialty (required)
+* specialty[emigaHealthcareServiceSpecialty] from HealthcareServiceSpecialtyVS (required)
   * ^patternCodeableConcept.coding.system = $HealthcareServiceSpecialtyCS
   * insert StrictCodableConcept 
 
@@ -173,7 +173,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
 * availableTime MS
 * availableTime obeys ORGV-Service-Opening-Time
-* availableTime.extension contains $dutyHoursEx named dutyHoursAvailability 0..1 MS
+* availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
 
 * availableTime.daysOfWeek MS
 * availableTime.allDay MS

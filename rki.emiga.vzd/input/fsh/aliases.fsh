@@ -1,27 +1,27 @@
 // rki.emiga.case
-Alias: $county = https://emiga.rki.de/fhir/case/ValueSet/CountyVS
+Alias: $CountyVS = https://emiga.rki.de/fhir/case/ValueSet/CountyVS
 
 // rki.emiga.common
 Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
 Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
 Alias: $ResourceResponsibility = https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility
 Alias: $ResourceVisibilityType = https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType
-Alias: $ConceptDesignationUseVS = https://emiga.rki.de/fhir/common/ValueSet/ConceptDesignationUse
-Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/Relevance
-Alias: $ResourceResponsibilityVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility
-Alias: $ResourceVisibilityTypeVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType
+Alias: $ConceptDesignationUseVS = https://emiga.rki.de/fhir/common/ValueSet/ConceptDesignationUseVS
+Alias: $RelevanceVS = https://emiga.rki.de/fhir/common/ValueSet/RelevanceVS
+Alias: $ResourceResponsibilityVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibilityVS
+Alias: $ResourceVisibilityTypeVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityTypeVS
 
 // rki.emiga.vzd
 Alias: $HealthcareServiceCategory = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory
-Alias: $dutyHoursCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours
+Alias: $DutyHoursCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours
 Alias: $HealthcareServiceSpecialtyCS = https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty
 Alias: $IneKFacilityTypeCS = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType
 Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType
 Alias: $BundleIdCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId
 Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleVersion
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
-Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
-Alias: $dutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
+Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType
+Alias: $DutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
 Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
 Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress
 Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod
@@ -35,17 +35,16 @@ Alias: $IneKFileHeaderId = https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
 Alias: $BaseLocation = https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
-Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
-Alias: $Fachbereich = https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich
-Alias: $GenericOrganizationType = https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType
-Alias: $dutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours
-Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType
-Alias: $HospitalOrganizationType = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType
-Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
-Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType
-Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId
-Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
-Alias: $responsibilityType = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
+Alias: $FachbereichVS = https://emiga.rki.de/fhir/vzd/ValueSet/FachbereichVS
+Alias: $GenericOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationTypeVS
+Alias: $DutyHoursVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHoursVS
+Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceTypeVS
+Alias: $HospitalOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationTypeVS
+Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS
+Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationTypeVS
+Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleIdVS
+Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersionVS
+Alias: $ResponsibilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS
 
 //DEMIS
 Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType

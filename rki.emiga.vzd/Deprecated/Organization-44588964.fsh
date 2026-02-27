@@ -13,8 +13,8 @@ Usage: #example
 * extension.extension[0].url = "geographicRegion"
 * extension.extension[=].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
 * extension.extension[=].valueCoding.code = #11005711
-* extension.extension[+].url = "responsibilityType"
-* extension.extension[=].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+* extension.extension[+].url = "ResponsibilityType"
+* extension.extension[=].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType"
 * extension.extension[=].valueCoding.code = #all
 * type[emigaOrganizationType] = $OrganizationType#ga
 * name = "Stadt XYZ - Gesundheitsamt"

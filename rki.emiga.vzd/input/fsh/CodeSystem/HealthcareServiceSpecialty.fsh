@@ -7,7 +7,7 @@ Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte
 * ^date = "2025-03-03"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialtyVS"
 
 * #crisisMngmnt "Krisenmanagement"
 * #crisisMngmnt ^designation[0].language = #en-US

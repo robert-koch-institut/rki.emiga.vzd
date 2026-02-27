@@ -1,6 +1,6 @@
 ---
-topic: PractitionerRole
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole
+topic: PractitionerRoleVS
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRoleVS
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRoleVS}}
 </div>
 
 <style>

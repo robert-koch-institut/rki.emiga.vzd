@@ -1,6 +1,6 @@
-ValueSet: HealthcareServiceType
-Id: HealthcareServiceType
-Title: "Dienstleistungstyp (Werteliste)"
+ValueSet: HealthcareServiceTypeVS
+Id: HealthcareServiceTypeVS
+Title: "Dienstleistungstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.0.0"
@@ -40,5 +40,3 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung
 * $serviceType#539 ^designation[0].language = #de-DE
 * $serviceType#539 ^designation[=].use = $HL7DesignationUse#display
 * $serviceType#539 ^designation[=].value = "Telefon-Hotline"
-
-
