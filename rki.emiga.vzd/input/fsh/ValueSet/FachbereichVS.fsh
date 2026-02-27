@@ -1,6 +1,6 @@
 ValueSet: FachbereichVS
 Id: FachbereichVS
-Title: "FachbereichVS (Werteliste)"
+Title: "FachbereichVS"
 Description: "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen."
 * insert MetadataTerminology
 * ^version = "0.1.0"

@@ -1,6 +1,6 @@
 ValueSet: HealthcareServiceDutyHoursVS
 Id: HealthcareServiceDutyHoursVS
-Title: "Dienstzeiten (Werteliste)"
+Title: "Dienstzeiten"
 Description: "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen"
 * insert MetadataTerminology
 * ^version = "1.0.0"

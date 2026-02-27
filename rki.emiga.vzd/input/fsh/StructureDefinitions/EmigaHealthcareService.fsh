@@ -46,7 +46,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.description = "slicing healthcare service category by system"
   * ^slicing.ordered = false
 * category contains emigaHealthcareServiceCategory 0..1 MS
-* category[emigaHealthcareServiceCategory] from HealthcareServiceCategory (required)
+* category[emigaHealthcareServiceCategory] from HealthcareServiceCategoryVS (required)
   * ^patternCodeableConcept.coding.system = $HealthcareServiceCategory
   * insert StrictCodableConcept
 

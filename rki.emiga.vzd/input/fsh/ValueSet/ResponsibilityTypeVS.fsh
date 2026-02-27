@@ -1,6 +1,6 @@
 ValueSet: ResponsibilityTypeVS
 Id: ResponsibilityTypeVS
-Title: "Art der Zuständigkeit OEGD (Werteliste)"
+Title: "Art der Zuständigkeit OEGD"
 Description: "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden."
 * insert MetadataTerminology
 

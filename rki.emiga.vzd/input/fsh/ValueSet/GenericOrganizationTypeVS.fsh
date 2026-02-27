@@ -1,6 +1,6 @@
 ValueSet: GenericOrganizationTypeVS
 Id: GenericOrganizationTypeVS
-Title: "Organisationstyp (Werteliste)"
+Title: "Organisationstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.1.1"

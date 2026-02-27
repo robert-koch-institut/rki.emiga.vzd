@@ -1,6 +1,6 @@
 ValueSet: IneKFacilityTypeVS
 Id: IneKFacilityTypeVS
-Title: "IneK Einrichtungstyp (Werteliste)"
+Title: "IneK Einrichtungstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren."
 
 * ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS"
