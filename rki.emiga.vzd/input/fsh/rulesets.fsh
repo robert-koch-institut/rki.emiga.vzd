@@ -93,7 +93,7 @@ RuleSet: ProfileMetaProfileTags
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
-* meta.profile contains emigaprofile 0..* MS
+* meta.profile contains emigaprofile 1..* MS
 
 
 
