@@ -1,6 +1,6 @@
 ---
 topic: OrgVBundleId
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId
+canonical: https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
 ---
 
 # {{page-title}}

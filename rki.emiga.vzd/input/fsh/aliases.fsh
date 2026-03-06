@@ -42,7 +42,7 @@ Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareService
 Alias: $HospitalOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationTypeVS
 Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationTypeVS
-Alias: $BundleIdVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleIdVS
+Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
 Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersionVS
 Alias: $ResponsibilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS
 
