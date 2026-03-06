@@ -4,8 +4,8 @@ Alias: $CountyVS = https://emiga.rki.de/fhir/case/ValueSet/County
 // rki.emiga.common
 Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
 Alias: $ConceptDesignationUseVS = https://emiga.rki.de/fhir/common/ValueSet/ConceptDesignationUse
-Alias: $ResourceResponsibilityVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility
 Alias: $ResourceVisibilityType = https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType
+Alias: $ResourceResponsibilityVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility
 Alias: $ResourceResponsibility = https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility
 Alias: $ResourceVisibilityTypeVS = https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType
 Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
