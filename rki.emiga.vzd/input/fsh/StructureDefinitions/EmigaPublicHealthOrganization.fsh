@@ -55,12 +55,12 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 //* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
 * identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^definition = "Identifier für EmigaOrgvId"
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1.. MS
 * identifier[emigaOrgvId].value 1.. MS
 * identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^definition = "Identifier für EMIGA Organizationsverzeichnis Aktenzeichen"
 * identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
 * identifier[emigaOrgvFileNumber].system 1.. MS
 * identifier[emigaOrgvFileNumber].value 1.. MS
