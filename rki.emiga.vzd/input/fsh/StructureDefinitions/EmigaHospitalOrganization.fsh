@@ -108,7 +108,7 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
     //einrichtungsArt 0..1 MS and
     //erweiterterFachabteilungsschluessel 0..1 MS and
     //fachbereich 0..1 MS
-* type[emigaOrganizationType] from HospitalOrganizationTypeVS (required)
+* type[emigaOrganizationType] from HospitalOrganizationType (required)
 //* ^patternCodeableConcept.coding.code = #hospital
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.system = $DemisOrgType
@@ -120,10 +120,10 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
 //* type[erweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
  // * insert StrictCodableConcept
 //* type[fachbereich] from $IHEXDSpracticeSettingCode (required)
-* type[fachbereich] from FachbereichVS (required)
+* type[fachbereich] from Fachbereich (required)
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
-//* type[fachbereich].coding.system from FachbereichVS
+//* type[fachbereich].coding.system from Fachbereich
 * type[fachbereich].coding.display MS
 //* type[fachbereich] ^patternCodeableConcept.coding.system = $FachbereichVS
 

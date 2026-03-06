@@ -1,6 +1,6 @@
 ---
-topic: OrgVBundleIdVS
-canonical: https://emiga.rki.de/fhir/ValueSet/vzd/OrgVBundleIdVS
+topic: OrgVBundleId
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/ValueSet/vzd/OrgVBundleIdVS}}
+    {{render:https://emiga.rki.de/fhir/ValueSet/OrgVBundleId}}
 </div>
 
 <style>

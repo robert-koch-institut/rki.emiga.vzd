@@ -1,6 +1,6 @@
 ---
-topic: HospitalOrganizationTypeVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationTypeVS
+topic: HospitalOrganizationType
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationTypeVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType}}
 </div>
 
 <style>

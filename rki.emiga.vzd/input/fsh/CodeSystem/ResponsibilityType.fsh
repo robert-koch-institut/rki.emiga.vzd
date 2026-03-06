@@ -1,4 +1,4 @@
-CodeSystem: responsibilityType
+CodeSystem: ResponsibilityType
 Id: responsibilityType
 Title: "Art der Zustaendigkeit OEGD"
 Description: "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden"
