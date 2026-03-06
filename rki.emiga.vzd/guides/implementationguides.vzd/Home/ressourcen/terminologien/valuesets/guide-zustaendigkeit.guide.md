@@ -1,6 +1,6 @@
 ---
-topic: ResponsibilityTypeVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS
+topic: ResponsibilityType
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityType
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityType}}
 </div>
 
 <style>

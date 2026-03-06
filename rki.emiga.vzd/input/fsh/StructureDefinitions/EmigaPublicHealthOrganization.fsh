@@ -68,7 +68,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
   * ^slicing.description = "slicing organization type by pattern"
   * ^slicing.ordered = false
 * type contains emigaOrganizationType 0..1 MS
-* type[emigaOrganizationType] from PublicHealthOrganizationTypeVS (required)
+* type[emigaOrganizationType] from PublicHealthOrganizationType (required)
   * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
  

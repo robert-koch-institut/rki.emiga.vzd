@@ -1,8 +1,8 @@
-ValueSet: OrgVBundleVersionVS
-Id: OrgVBundleVersionVS
+ValueSet: OrgVBundleVersion
+Id: OrgVBundleVersion
 Title: "Relevanz"
 Description: "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen."
-* ^url = "https://emiga.rki.de/fhir/ValueSet/vzd/OrgVBundleVersionVS"
+* ^url = "https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion"
 * insert MetadataTerminology
 * ^version = "0.1.0"
 * ^date = "2025-06-10"

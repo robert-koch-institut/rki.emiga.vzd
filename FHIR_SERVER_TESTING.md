@@ -77,7 +77,7 @@ Tests for terminology code systems:
 - IneKFacilityType
 - OrganizationType
 - PractitionerRole
-- ResponsibilityType
+- responsibilityType
 - With a search query
 
 ### 3. **ValueSets** - 4 requests

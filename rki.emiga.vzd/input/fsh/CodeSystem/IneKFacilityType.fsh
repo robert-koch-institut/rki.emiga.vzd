@@ -14,7 +14,7 @@ Description: "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um
 * ^contact.telecom.value = "https://rki.de"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityTypeVS"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType"
 
 * #00 "Stationäre Behandlung"
 * #01 "reserviert"

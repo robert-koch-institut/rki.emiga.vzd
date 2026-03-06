@@ -13,7 +13,7 @@ Context: Organization, Location, Practitioner
 * . 1..
 * extension contains
     geographicRegion 1..* and
-    ResponsibilityType 1..*
+    responsibilityType 1..*
 * extension[geographicRegion].value[x] from $CountyVS (required)
 * extension[geographicRegion].value[x] ^binding.description = "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
 * extension[geographicRegion].value[x] only Coding
@@ -23,12 +23,12 @@ Context: Organization, Location, Practitioner
 * extension[geographicRegion].value[x].code 1..
 * extension[geographicRegion].value[x].display MS
 
-* extension[ResponsibilityType].value[x] from $ResponsibilityTypeVS (required)
-* extension[ResponsibilityType].value[x] ^binding.description = "Über das ValueSet kann die Art der Zuständigkeit einer ÖGD-Stelle ausgewählt werden."
-* extension[ResponsibilityType].value[x] only Coding
+* extension[responsibilityType].value[x] from $ResponsibilityTypeVS (required)
+* extension[responsibilityType].value[x] ^binding.description = "Über das ValueSet kann die Art der Zuständigkeit einer ÖGD-Stelle ausgewählt werden."
+* extension[responsibilityType].value[x] only Coding
   * insert StrictCoding
-//* extension[ResponsibilityType].value[x] ^patternCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType"
-* extension[ResponsibilityType].value[x].system 1..
-* extension[ResponsibilityType].value[x].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType"
-* extension[ResponsibilityType].value[x].code 1..
-* extension[ResponsibilityType].value[x].display MS
+//* extension[responsibilityType].value[x] ^patternCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+* extension[responsibilityType].value[x].system 1..
+* extension[responsibilityType].value[x].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+* extension[responsibilityType].value[x].code 1..
+* extension[responsibilityType].value[x].display MS

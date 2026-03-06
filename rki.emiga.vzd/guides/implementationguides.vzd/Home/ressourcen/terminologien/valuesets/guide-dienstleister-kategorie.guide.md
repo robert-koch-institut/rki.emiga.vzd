@@ -1,6 +1,6 @@
 ---
-topic: HealthcareServiceCategoryVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategoryVS
+topic: HealthcareServiceCategory
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategoryVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory}}
 </div>
 
 <style>
