@@ -1,5 +1,5 @@
-ValueSet: HealthcareServiceTypeVS
-Id: HealthcareServiceTypeVS
+ValueSet: HealthcareServiceType
+Id: HealthcareServiceType
 Title: "Dienstleistungstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren."
 * insert MetadataTerminology
