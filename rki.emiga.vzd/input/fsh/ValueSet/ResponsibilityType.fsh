@@ -1,4 +1,4 @@
-ValueSet: responsibilityType
+ValueSet: ResponsibilityType
 Id: responsibilityType
 Title: "Art der Zuständigkeit OEGD"
 Description: "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden."
