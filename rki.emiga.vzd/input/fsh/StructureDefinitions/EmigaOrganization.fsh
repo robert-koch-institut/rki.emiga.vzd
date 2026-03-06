@@ -130,7 +130,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 * type contains emigaOrganizationType 1.. MS //and
    // einrichtungsArt 0..1 MS and
    // erweiterterFachabteilungsschluessel 0..1 MS
-* type[emigaOrganizationType] from GenericOrganizationTypeVS (required)
+* type[emigaOrganizationType] from GenericOrganizationType (required)
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 //* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
