@@ -9,7 +9,7 @@ Description: "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte
 * ^date = "2024-12-18"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHoursVS"
+* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours"
 
 * #duringServiceHours "Während der Dienstzeit"
 * #outsideServiceHours "Ausserhalb der Dienstzeit"

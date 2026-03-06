@@ -1,6 +1,6 @@
 ---
-topic: HealthcareServiceDutyHoursVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHoursVS
+topic: HealthcareServiceDutyHours
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHoursVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours}}
 </div>
 
 <style>

@@ -1,5 +1,5 @@
-ValueSet: OrganizationTypeVS
-Id: OrganizationTypeVS
+ValueSet: OrganizationType
+Id: OrganizationType
 Title: "Organisationstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology

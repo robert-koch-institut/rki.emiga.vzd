@@ -1,6 +1,6 @@
 ---
-topic: GenericOrganizationTypeVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationTypeVS
+topic: GenericOrganizationType
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationTypeVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType}}
 </div>
 
 <style>

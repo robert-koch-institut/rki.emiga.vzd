@@ -1,6 +1,6 @@
 ---
-topic: HealthcareServiceSpecialtyVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialtyVS
+topic: HealthcareServiceSpecialty
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialtyVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty}}
 </div>
 
 <style>

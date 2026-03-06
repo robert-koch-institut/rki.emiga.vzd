@@ -1,6 +1,6 @@
 ---
-topic: FachbereichVS
-canonical: https://emiga.rki.de/fhir/vzd/ValueSet/FachbereichVS
+topic: Fachbereich
+canonical: https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich
 ---
 
 # {{page-title}}
@@ -16,7 +16,7 @@ select
 <br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/FachbereichVS}}
+    {{render:https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich}}
 </div>
 
 <style>

@@ -9,4 +9,4 @@ Description: "Die Kodiersystematik Organisations-Bundle-ID definiert Konzepte, d
 * ^date = "2025-06-10"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleIdVS"
+* ^valueSet = "https://emiga.rki.de/fhir/ValueSet/OrgVBundleId"
