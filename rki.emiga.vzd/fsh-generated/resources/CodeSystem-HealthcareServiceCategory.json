@@ -34,6 +34,6 @@
   "version": "1.0.0",
   "date": "2024-03-19",
   "caseSensitive": true,
-  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory",
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategoryVS",
   "count": 2
 }

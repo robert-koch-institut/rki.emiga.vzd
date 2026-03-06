@@ -71,7 +71,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://demis.rki.de/fhir/ValueSet/county",
+          "valueSet": "https://emiga.rki.de/fhir/case/ValueSet/CountyVS",
           "description": "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
         }
       },
@@ -99,24 +99,24 @@
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:responsibilityType",
+        "id": "Extension.extension:ResponsibilityType",
         "path": "Extension.extension",
-        "sliceName": "responsibilityType",
+        "sliceName": "ResponsibilityType",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Extension.extension:responsibilityType.extension",
+        "id": "Extension.extension:ResponsibilityType.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:responsibilityType.url",
+        "id": "Extension.extension:ResponsibilityType.url",
         "path": "Extension.extension.url",
-        "fixedUri": "responsibilityType"
+        "fixedUri": "ResponsibilityType"
       },
       {
-        "id": "Extension.extension:responsibilityType.value[x]",
+        "id": "Extension.extension:ResponsibilityType.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
@@ -125,30 +125,30 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+          "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/ResponsibilityTypeVS",
           "description": "Über das ValueSet kann die Art der Zuständigkeit einer ÖGD-Stelle ausgewählt werden."
         }
       },
       {
-        "id": "Extension.extension:responsibilityType.value[x].system",
+        "id": "Extension.extension:ResponsibilityType.value[x].system",
         "path": "Extension.extension.value[x].system",
         "min": 1,
-        "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+        "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType",
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:responsibilityType.value[x].version",
+        "id": "Extension.extension:ResponsibilityType.value[x].version",
         "path": "Extension.extension.value[x].version",
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:responsibilityType.value[x].code",
+        "id": "Extension.extension:ResponsibilityType.value[x].code",
         "path": "Extension.extension.value[x].code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Extension.extension:responsibilityType.value[x].display",
+        "id": "Extension.extension:ResponsibilityType.value[x].display",
         "path": "Extension.extension.value[x].display",
         "mustSupport": true
       },

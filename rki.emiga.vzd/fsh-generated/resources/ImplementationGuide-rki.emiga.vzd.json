@@ -51,15 +51,15 @@
     "resource": [
       {
         "reference": {
-          "reference": "ValueSet/AddressTypePhysicalBoth"
+          "reference": "ValueSet/AddressTypePhysicalBothVS"
         },
-        "name": "Addressentyp  (Werteliste)",
+        "name": "Addressentyp",
         "description": "Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CodeSystem/responsibilityType"
+          "reference": "CodeSystem/ResponsibilityType"
         },
         "name": "Art der Zustaendigkeit OEGD",
         "description": "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden",
@@ -67,9 +67,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/responsibilityType"
+          "reference": "ValueSet/ResponsibilityTypeVS"
         },
-        "name": "Art der Zuständigkeit OEGD (Werteliste)",
+        "name": "Art der Zuständigkeit OEGD",
         "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
         "exampleBoolean": false
       },
@@ -107,18 +107,26 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceCategory"
+          "reference": "ValueSet/HealthcareServiceCategoryVS"
         },
-        "name": "Dienstleistungskategorien (Werteliste)",
+        "name": "Dienstleistungskategorien",
         "description": "Werteliste mit Konzepten, die die Kategorie einer Dienstleistung näher beschreiben.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceType"
+          "reference": "ValueSet/HealthcareServiceTypeVS"
         },
-        "name": "Dienstleistungstyp (Werteliste)",
+        "name": "Dienstleistungstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceDutyHoursVS"
+        },
+        "name": "Dienstzeiten",
+        "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
         "exampleBoolean": false
       },
       {
@@ -127,14 +135,6 @@
         },
         "name": "Dienstzeiten",
         "description": "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/HealthcareServiceDutyHours"
-        },
-        "name": "Dienstzeiten (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
         "exampleBoolean": false
       },
       {
@@ -231,10 +231,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Fachbereich"
+          "reference": "ValueSet/FachbereichVS"
         },
-        "name": "Fachbereich (Werteliste)",
+        "name": "FachbereichVS",
         "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceSpecialtyVS"
+        },
+        "name": "Fachspezialisierung",
+        "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
         "exampleBoolean": false
       },
       {
@@ -243,14 +251,6 @@
         },
         "name": "Fachspezialisierung",
         "description": "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/HealthcareServiceSpecialty"
-        },
-        "name": "Fachspezialisierung (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
         "exampleBoolean": false
       },
       {
@@ -302,18 +302,18 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/IneKFacilityType"
+          "reference": "ValueSet/IneKFacilityTypeVS"
         },
         "name": "IneK Einrichtungstyp",
-        "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die Verwaltung und Publikation der IneK Einrichtungstypen erfolgt durch das Institut für das Entgeltsystem im Krankenhaus (InEK GmbH). ",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/IneKFacilityType"
+          "reference": "CodeSystem/IneKFacilityType"
         },
-        "name": "IneK Einrichtungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren.",
+        "name": "IneK Einrichtungstyp",
+        "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die Verwaltung und Publikation der IneK Einrichtungstypen erfolgt durch das Institut für das Entgeltsystem im Krankenhaus (InEK GmbH). ",
         "exampleBoolean": false
       },
       {
@@ -406,9 +406,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HospitalOrganizationType"
+          "reference": "ValueSet/HospitalOrganizationTypeVS"
         },
-        "name": "Krankenhaus-Organisationstyp (Werteliste)",
+        "name": "Krankenhaus-Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
       },
@@ -458,17 +458,17 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/GenericOrganizationType"
+          "reference": "ValueSet/GenericOrganizationTypeVS"
         },
-        "name": "Organisationstyp (Werteliste)",
+        "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/OrganizationType"
+          "reference": "ValueSet/OrganizationTypeVS"
         },
-        "name": "Organisationstyp (Werteliste)",
+        "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
       },
@@ -504,18 +504,18 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/PractitionerRole"
+          "reference": "ValueSet/PractitionerRoleVS"
         },
         "name": "Personenrolle",
-        "description": "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die die Rolle, die eine Person (Practitioner) innerhalb einer Organisation einnehmen/wahrnehmen kann.",
+        "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/PractitionerRole"
+          "reference": "CodeSystem/PractitionerRole"
         },
-        "name": "Personenrolle (Werteliste)",
-        "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
+        "name": "Personenrolle",
+        "description": "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die die Rolle, die eine Person (Practitioner) innerhalb einer Organisation einnehmen/wahrnehmen kann.",
         "exampleBoolean": false
       },
       {
@@ -564,17 +564,17 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OrgVBundleId"
+          "reference": "ValueSet/OrgVBundleIdVS"
         },
-        "name": "Relevanz (Werteliste)",
+        "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/OrgVBundleVersion"
+          "reference": "ValueSet/OrgVBundleVersionVS"
         },
-        "name": "Relevanz (Werteliste)",
+        "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
         "exampleBoolean": false
       },
@@ -604,7 +604,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PublicHealthOrganizationType"
+          "reference": "ValueSet/PublicHealthOrganizationTypeVS"
         },
         "name": "ÖGD Organizationen",
         "description": "Werteliste mit Konzepten, die die Arten einer Organisation des öffentlichen Gesundheitsdienstes näher beschreiben.",

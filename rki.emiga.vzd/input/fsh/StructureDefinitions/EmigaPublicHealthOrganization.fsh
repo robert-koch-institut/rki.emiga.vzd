@@ -39,8 +39,11 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by pattern"
   * ^slicing.ordered = false
-* identifier contains codeSiteId 1..1 MS and
-          telematikID 0..1 MS
+* identifier contains 
+    codeSiteId 1..1 MS and
+    telematikID 0..1 MS and
+    emigaOrgvId 0..1 MS and
+    emigaOrgvFileNumber 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
@@ -51,6 +54,16 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 //* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
+* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
+* identifier[emigaOrgvId].system 1.. MS
+* identifier[emigaOrgvId].value 1.. MS
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
