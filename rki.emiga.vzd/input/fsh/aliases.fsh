@@ -45,7 +45,6 @@ Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $IHEXDSpracticeSettingCode = http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode
 Alias: $HL7DesignationUse = http://terminology.hl7.org/CodeSystem/designation-usage
 Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType
-Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
 Alias: $OrganizationPeriod = http://hl7.org/fhir/StructureDefinition/organization-period
 Alias: $nullflavorCS = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $IneKFacilityTypeCS = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType
@@ -70,6 +69,7 @@ Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-
 
 // HL7
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $serviceType = http://terminology.hl7.org/CodeSystem/service-type
 
 //DEMIS
 Alias: $DemisOrgType = https://demis.rki.de/fhir/CodeSystem/organizationType
