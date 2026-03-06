@@ -78,6 +78,6 @@
   "version": "2.1.0",
   "date": "2024-12-18",
   "caseSensitive": true,
-  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRoleVS",
   "count": 13
 }
