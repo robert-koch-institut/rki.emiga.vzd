@@ -4,8 +4,8 @@ Id: EmigaLocation
 Title: "EMIGA Bereich / Standort"
 Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
 //
-* ^version = "1.3.0"
-* ^date = "2025-11-18"
+* ^version = "1.3.1"
+* ^date = "2026-03-06"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -14,7 +14,7 @@ Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Or
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt

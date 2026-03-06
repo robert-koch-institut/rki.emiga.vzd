@@ -4,8 +4,8 @@ Id: EmigaPractitioner
 Title: "Practitioner"
 Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie."
 
-* ^version = "1.0.0"
-* ^date = "2024-03-18"
+* ^version = "1.0.1"
+* ^date = "2026-03-06"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -13,7 +13,7 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 * insert ProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

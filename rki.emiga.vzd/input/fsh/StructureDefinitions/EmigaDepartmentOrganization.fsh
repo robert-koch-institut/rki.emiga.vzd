@@ -4,8 +4,8 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.1.0"
-* ^date = "2025-11-18"
+* ^version = "1.1.1"
+* ^date = "2026-03-06"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -13,7 +13,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * insert ProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
