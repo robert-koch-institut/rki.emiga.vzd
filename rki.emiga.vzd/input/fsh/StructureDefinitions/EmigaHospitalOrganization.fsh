@@ -4,13 +4,13 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
-* ^version = "0.2.1"
-* ^date = "2026-03-06"
+* ^version = "0.3.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 //* insert ProfileMetaProfileTags
 

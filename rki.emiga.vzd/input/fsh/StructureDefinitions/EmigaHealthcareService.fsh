@@ -4,13 +4,13 @@ Id: EmigaHealthcareService
 Title: "Dienstleistung"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
 
-* ^version = "1.0.1"
-* ^date = "2026-03-06"
+* ^version = "1.1.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 
