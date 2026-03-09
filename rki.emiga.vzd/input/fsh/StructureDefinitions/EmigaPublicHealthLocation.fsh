@@ -35,7 +35,7 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
    emigaOrgvId 0..1 MS and
    emigaOrgvFileNumber 0..1 MS and
    telematikID 0..1 MS
-    telematikID 0..1 MS
+
 
 * identifier[emigaOrgvId] only IdentifierEmigaOrgvId
 * identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID zur Nutzung im Identifier-Element"

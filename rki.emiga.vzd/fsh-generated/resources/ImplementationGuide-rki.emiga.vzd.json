@@ -613,7 +613,7 @@
           "reference": "StructureDefinition/EmigaPublicHealthLocation"
         },
         "name": "ÖGD Fachbereich / Standort",
-        "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "description": "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet.",
         "exampleBoolean": false
       },
       {
