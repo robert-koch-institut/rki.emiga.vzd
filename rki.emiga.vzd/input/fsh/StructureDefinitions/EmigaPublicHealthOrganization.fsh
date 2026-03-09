@@ -4,7 +4,7 @@ Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organisation"
 Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
 
-* ^version = "1.2.1"
+* ^version = "1.2.0"
 * ^date = "2026-03-09"
 * insert MetadataProfile
 * insert ProfileResourceCommon

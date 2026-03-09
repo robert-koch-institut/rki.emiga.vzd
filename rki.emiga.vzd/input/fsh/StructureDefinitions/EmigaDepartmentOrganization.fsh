@@ -4,7 +4,7 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.2.1"
+* ^version = "1.2.0"
 * ^date = "2026-03-09"
 
 * insert MetadataProfile
