@@ -20,6 +20,8 @@
   filename: guide-krankenhaus-raum.guide.md
 - name: Krankenhaus - Standort
   filename: guide-krankenhaus-standort.guide.md
+- name: ÖGD Fachbereich / Standort
+  filename: guide-oegd-fachbereich-standort.guide.md
 - name: ÖGD Organisation
   filename: guide-oegd-organisation.guide.md
 - name: Organisation

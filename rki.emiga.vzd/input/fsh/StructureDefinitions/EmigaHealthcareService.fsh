@@ -4,8 +4,8 @@ Id: EmigaHealthcareService
 Title: "Dienstleistung"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
 
-* ^version = "1.0.0"
-* ^date = "2024-03-18"
+* ^version = "1.0.1"
+* ^date = "2026-03-06"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -14,7 +14,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt

@@ -51,7 +51,7 @@
     "resource": [
       {
         "reference": {
-          "reference": "ValueSet/AddressTypePhysicalBothVS"
+          "reference": "ValueSet/AddressTypePhysicalBoth"
         },
         "name": "Addressentyp",
         "description": "Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben.",
@@ -59,7 +59,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/ResponsibilityType"
+          "reference": "CodeSystem/responsibilityType"
         },
         "name": "Art der Zustaendigkeit OEGD",
         "description": "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden",
@@ -67,7 +67,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ResponsibilityTypeVS"
+          "reference": "ValueSet/responsibilityType"
         },
         "name": "Art der Zuständigkeit OEGD",
         "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
@@ -107,7 +107,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceCategoryVS"
+          "reference": "ValueSet/HealthcareServiceCategory"
         },
         "name": "Dienstleistungskategorien",
         "description": "Werteliste mit Konzepten, die die Kategorie einer Dienstleistung näher beschreiben.",
@@ -115,7 +115,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceTypeVS"
+          "reference": "ValueSet/HealthcareServiceType"
         },
         "name": "Dienstleistungstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren.",
@@ -123,7 +123,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceDutyHoursVS"
+          "reference": "ValueSet/HealthcareServiceDutyHours"
         },
         "name": "Dienstzeiten",
         "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
@@ -231,15 +231,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/FachbereichVS"
+          "reference": "ValueSet/Fachbereich"
         },
-        "name": "FachbereichVS",
+        "name": "Fachbereich",
         "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceSpecialtyVS"
+          "reference": "ValueSet/HealthcareServiceSpecialty"
         },
         "name": "Fachspezialisierung",
         "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
@@ -302,7 +302,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/IneKFacilityTypeVS"
+          "reference": "ValueSet/IneKFacilityType"
         },
         "name": "IneK Einrichtungstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren.",
@@ -406,7 +406,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HospitalOrganizationTypeVS"
+          "reference": "ValueSet/HospitalOrganizationType"
         },
         "name": "Krankenhaus-Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.",
@@ -458,7 +458,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/GenericOrganizationTypeVS"
+          "reference": "ValueSet/GenericOrganizationType"
         },
         "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren.",
@@ -466,7 +466,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OrganizationTypeVS"
+          "reference": "ValueSet/OrganizationType"
         },
         "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
@@ -504,7 +504,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PractitionerRoleVS"
+          "reference": "ValueSet/PractitionerRole"
         },
         "name": "Personenrolle",
         "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
@@ -564,7 +564,21 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OrgVBundleIdVS"
+          "reference": "Organization/PublicHealth001"
+        },
+        "name": "PublicHealth001",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Location/PublicHealthLocation001"
+        },
+        "name": "PublicHealthLocation001",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/OrgVBundleId"
         },
         "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
@@ -572,7 +586,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OrgVBundleVersionVS"
+          "reference": "ValueSet/OrgVBundleVersion"
         },
         "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
@@ -596,6 +610,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EmigaPublicHealthLocation"
+        },
+        "name": "ÖGD Fachbereich / Standort",
+        "description": "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaPublicHealthOrganization"
         },
         "name": "ÖGD Organisation",
@@ -604,7 +626,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PublicHealthOrganizationTypeVS"
+          "reference": "ValueSet/PublicHealthOrganizationType"
         },
         "name": "ÖGD Organizationen",
         "description": "Werteliste mit Konzepten, die die Arten einer Organisation des öffentlichen Gesundheitsdienstes näher beschreiben.",

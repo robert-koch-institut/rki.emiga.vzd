@@ -1,5 +1,5 @@
-// Example for the new Version 1.1.0
-Instance: Organization44588980
+// Example for the new Version 2.0.0-alpha.21
+Instance: PublicHealth001
 InstanceOf: EmigaPublicHealthOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
@@ -12,25 +12,26 @@ Usage: #example
 * extension.url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
 * extension.extension[0].url = "geographicRegion"
 * extension.extension[=].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
-* extension.extension[=].valueCoding.code = #11005711
+* extension.extension[=].valueCoding.code = #21000109
 * extension.extension[+].url = "responsibilityType"
 * extension.extension[=].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * extension.extension[=].valueCoding.code = #all
-* type[emigaOrganizationType] = $OrganizationType#ga
-* name = "Stadt XYZ - Gesundheitsamt"
+* type[emigaOrganizationType] = $OrganizationType#rki
+* name = "Robert Koch - Institut"
 * telecom[Email].system = #email
 * telecom[Email].value = "test@example.org"
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "0123 4567890"
+* telecom[Phone].value = "030 18754 0"
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "0123 4567899"
+* telecom[Fax].value = "030 18754 2328"
 * address.type = #postal
-* address.line = "Test Straße 21"
+* address.line = "Seestraße 10"
 * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[=].valueString = "Test Straße"
+* address.line.extension[=].valueString = "Seestraße"
 * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[=].valueString = "21"
-* address.city = "Teststadt"
+* address.line.extension[=].valueString = "10"
+* address.city = "Berlin"
 * address.state = "DE-BB"
-* address.postalCode = "12345"
+* address.postalCode = "13353"
 * address.country = "DE"
+
