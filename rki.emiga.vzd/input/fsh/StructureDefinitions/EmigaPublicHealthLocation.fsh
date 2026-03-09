@@ -24,9 +24,7 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: Wir öffnen die Identifikation des Standortes, um diesen eindeutiger zuordnen zu können
 
-//* identifier 0..*
-//* identifier.system 1..1  MS
-//* identifier.value 1..1  MS
+
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der den Bereich / Standort eindeutig identifiziert"
 * identifier MS
@@ -44,7 +42,7 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
 * identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
 * identifier[emigaOrgvId].system 1..1 MS
 * identifier[emigaOrgvId].value 1..1 MS
-//* identifier[emigaOrgvId].value 
+
 
 * identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
 * identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen zur Nutzung im Identifier-Element"
@@ -63,8 +61,8 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
 // Update 27.10.25 Status wird auf "optional" gesetzt, um bestehende Standorte ohne Statusangabe weiterhin nutzen zu können.
 * status 0..1 MS
 * status ^short = "Status"
-* status ^definition = "Aktivitätsstatus des Standortes"
-* status ^comment = "Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe"
+* status ^definition = "Aktivitätsstatus"
+* status ^comment = "Aktivitätsstatus des Standortes."
 
 // 'The operational status of the location (typically only for a bed/room)' - 0..1 - Coding
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -81,7 +79,7 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
 // Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen
 * alias 0..1 MS
 * alias ^short = "Kürzel"
-* alias ^definition = "Alternativ oder Kurzname"
+* alias ^definition = "Alternativ- oder Kurzname"
 * alias obeys validString
 * alias ^comment = "Begründung: Es kann sinnvoll sein, Standorte unter verschiedenen Namen zu suchen"
 
