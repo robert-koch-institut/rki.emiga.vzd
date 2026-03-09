@@ -50,6 +50,7 @@ Alias: $HospitalOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/Hosp
 Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType
 Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
+Alias: $OrgvResourceVisibilityTypeVS = https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS
 Alias: $ResponsibilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
 
 Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
