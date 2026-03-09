@@ -39,12 +39,6 @@
       "version": "1.2.0-alpha.20",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
-    },
-    {
-      "packageId": "rki.emiga.orgv",
-      "version": "1.1.1",
-      "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
-      "id": "rki_emiga_orgv"
     }
   ],
   "definition": {
@@ -590,6 +584,14 @@
         },
         "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ORGVResourceVisibilityTypeVS"
+        },
+        "name": "Ressourcensichtbarkeit",
+        "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung der Sichtbarkeit von Ressourcen im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung der Sichtbarkeit von Ressourcen in organisatorischen und fachlichen Prozessen.",
         "exampleBoolean": false
       },
       {

@@ -4,13 +4,13 @@ Id: EmigaHospitalRoomLocation
 Title: "Krankenhaus - Raum"
 Description: "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten."
 //
-* ^version = "0.1.1"
-* ^date = "2026-03-06"
+* ^version = "0.2.1"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 

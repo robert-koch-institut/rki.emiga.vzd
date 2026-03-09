@@ -2,7 +2,7 @@
 Instance: PublicHealth001
 InstanceOf: EmigaPublicHealthOrganization
 Usage: #example
-* meta.security[visibility] = $ResourceVisibilityType#public
+* meta.security[visibility] = $ResourceVisibilityType#public "öffentlich"
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 * identifier[codeSiteId].type = $v2-0203#PRN

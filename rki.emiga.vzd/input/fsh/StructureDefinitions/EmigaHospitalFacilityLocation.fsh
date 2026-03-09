@@ -4,13 +4,13 @@ Id: EmigaHospitalFacilityLocation
 Title: "Krankenhaus - Einrichtungsstandort"
 Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab"
 //
-* ^version = "0.2.1"
-* ^date = "2026-03-06"
+* ^version = "0.3.1"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 

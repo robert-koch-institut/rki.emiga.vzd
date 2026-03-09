@@ -4,13 +4,13 @@ Id: EmigaPractitionerRole
 Title: "Practitioner Role"
 Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
 //
-* ^version = "1.0.1"
-* ^date = "2026-03-06"
+* ^version = "1.1.1"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole" 
 * insert ProfileMetaTags

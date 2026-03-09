@@ -68,6 +68,7 @@ ValueSet-HealthcareServiceSpecialty.json                  HealthcareServiceSpeci
 ValueSet-HealthcareServiceType.json                       HealthcareServiceType            ValueSet    ValueSet\HealthcareServiceType.fsh                                 1 - 42
 ValueSet-HospitalOrganizationType.json                    HospitalOrganizationType         ValueSet    ValueSet\HospitalOrganizationType.fsh                              1 - 13
 ValueSet-IneKFacilityType.json                            IneKFacilityType                 ValueSet    ValueSet\IneKFacilityType.fsh                                      1 - 17
+ValueSet-ORGVResourceVisibilityTypeVS.json                ORGVResourceVisibilityTypeVS     ValueSet    ValueSet\ORGVResourceVisibilityTypeVS.fsh                          1 - 13
 ValueSet-OrgVBundleId.json                                OrgVBundleId                     ValueSet    ValueSet\OrgVBundleId.fsh                                          1 - 10
 ValueSet-OrgVBundleVersion.json                           OrgVBundleVersion                ValueSet    ValueSet\OrgVBundleVersion.fsh                                     1 - 10
 ValueSet-OrganizationType.json                            OrganizationType                 ValueSet    ValueSet\OrganizationType.fsh                                      1 - 127

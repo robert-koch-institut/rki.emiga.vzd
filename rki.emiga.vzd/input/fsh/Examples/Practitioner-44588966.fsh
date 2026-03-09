@@ -1,7 +1,7 @@
 Instance: Practitioner44588966
 InstanceOf: EmigaPractitioner
 Usage: #example
-* meta.security[visibility]  = $ResourceVisibilityType#internal
+* meta.security[visibility]  = $ResourceVisibilityType#inAgency	"Eigene ÖGD-Stelle"
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 * active = true
