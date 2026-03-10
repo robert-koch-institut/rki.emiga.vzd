@@ -14,6 +14,6 @@ Context: HealthcareService.availableTime
 * value[x].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
 * value[x].system 1..1 MS
 * value[x].code 1..1 MS
-* value[x] from $dutyHoursVS (required)
+* value[x] from $DutyHoursVS (required)
 
 

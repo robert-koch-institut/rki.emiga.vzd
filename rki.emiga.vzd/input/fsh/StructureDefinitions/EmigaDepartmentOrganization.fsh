@@ -4,16 +4,16 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.1.0"
-* ^date = "2025-11-18"
+* ^version = "1.2.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -118,7 +118,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 //* type[ErweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
 //  * insert StrictCodableConcept
 //* type[ErweiterterFachabteilungsschluessel] ^comment = "Motivation: Das ValueSet muss bindend sein, damit Systemübergreifend der Fachabteilungstyp einheitlich kodiert werden kann. \n  \n  Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from $FachbereichVS (required)
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
 * type[fachbereich].coding.display MS

@@ -1,5 +1,5 @@
 ValueSet: AddressTypePhysicalBoth
-Title: "Addressentyp  (Werteliste)"
+Title: "Addressentyp"
 Description: "Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben."
 Id: AddressTypePhysicalBoth
 * insert MetadataTerminology

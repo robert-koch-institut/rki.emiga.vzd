@@ -71,7 +71,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://demis.rki.de/fhir/ValueSet/county",
+          "valueSet": "https://emiga.rki.de/fhir/case/ValueSet/County",
           "description": "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
         }
       },

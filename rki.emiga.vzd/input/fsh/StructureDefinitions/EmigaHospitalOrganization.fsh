@@ -4,18 +4,18 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
-* ^version = "0.2.0"
-* ^date = "2025-11-18"
+* ^version = "0.3.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -125,7 +125,7 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
 * type[fachbereich].coding.system 1..1 MS
 //* type[fachbereich].coding.system from Fachbereich
 * type[fachbereich].coding.display MS
-//* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
+//* type[fachbereich] ^patternCodeableConcept.coding.system = $FachbereichVS
 
 // 'Name used for the organization' - 0..1 - string
 // Der Name der Organisation ist für uns ein Pflichtfeld

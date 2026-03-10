@@ -1,9 +1,9 @@
 Instance: Practitioner44588970
 InstanceOf: EmigaPractitioner
 Usage: #example
-* meta.security[visibility] = $ResourceVisibilityType#internal
+* meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService	"ÖGD-weit"
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner|2.0.0-alpha.19"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 * active = true
 * name.family = "Hahn"
 * name.given = "Wilhelm"

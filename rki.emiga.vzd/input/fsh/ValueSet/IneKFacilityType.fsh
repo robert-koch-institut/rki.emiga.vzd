@@ -1,6 +1,6 @@
 ValueSet: IneKFacilityType
 Id: IneKFacilityType
-Title: "IneK Einrichtungstyp (Werteliste)"
+Title: "IneK Einrichtungstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren."
 
 * ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType"
@@ -14,6 +14,5 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung au
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://rki.de"
 
-//* include codes from system $IneKFacilityType
 * include codes from system $IneKFacilityTypeCS
 

@@ -10,15 +10,3 @@ Description: "Die Kodiersystematik Organisations-Bundle-Version definiert Konzep
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion"
-
-
-
-ValueSet: OrgVBundleVersion
-Id: OrgVBundleVersion
-Title: "Relevanz (Werteliste)"
-Description: "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen."
-* ^url = "https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion"
-* insert MetadataTerminology
-* ^version = "0.1.0"
-* ^date = "2025-06-10"
-* include codes from system OrgVBundleVersion
