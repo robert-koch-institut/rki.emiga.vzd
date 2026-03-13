@@ -150,6 +150,38 @@ If all resources have been uploaded successfully to your FHIR server:
 - Search queries should return Bundle resources with matching entries
 - The CapabilityStatement should indicate support for the resource types
 
+## Environment Health Gate (Post-Deploy, 2-3 Minutes)
+
+Run this gate after every deployment or environment rebuild to detect validator/terminology drift early.
+
+### Prerequisites
+- Import:
+  - `FHIR_Conformance_Probe_Collection.postman_collection.json`
+  - `FHIR_Conformance_Probe.postman_environment.json`
+- Set `fhir_base_url` to the target environment.
+
+### Gate Steps
+1. Run request **1. Server Metadata**
+   - Pass: `200 OK`, response is `CapabilityStatement`.
+2. Run request **2. Get EmigaHospitalOrganization by canonical+version**
+   - Pass: Profile exists and asserts:
+     - `Organization.type:emigaOrganizationType.coding.system` = `https://demis.rki.de/fhir/CodeSystem/organizationType`
+     - `Organization.type:emigaOrganizationType.coding.code` = `hospital`
+3. Run request **4. Expand HospitalOrganizationType ValueSet**
+   - Pass: `200 OK` and expansion includes `system=https://demis.rki.de/fhir/CodeSystem/organizationType`, `code=hospital`.
+4. Run request **5. Transaction with known-good Organization payload**
+   - Pass: `2xx` and no `error`/`fatal` `OperationOutcome` issues.
+
+### Gate Outcome
+- **PASS**: Environment is ready for payload validation and integration tests.
+- **FAIL**: Stop rollout and resolve server state before functional testing.
+
+### If Gate Fails
+- Restart all app instances/pods in the environment.
+- Verify all nodes have consistent app/config versions.
+- Re-run artifact installation and then re-run this gate.
+- If needed, rebuild database/search state and repeat installation.
+
 ## Troubleshooting
 
 ### All requests return 404
