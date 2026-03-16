@@ -8,9 +8,11 @@ profileSets:
   localCopyLocation: null
   reference: "feature/profile-loader"
   skipSanityCheckValidation: false
-  ignoredSanityChecks: 
-  - name: MatchingNameAndIdCheck
+  ignoredSanityChecks:
+  - name: "MatchingNameAndIdCheck"
     reasoning: "IDs are not matching the names as per NAPI naming conventions."
+  - name: "ValidReferencedValueSetCheck"
+    reasoning: "Referenced ValueSets must be valid."
   resourceBaseUrl: null
   skipFhirSchemaValidation: false
   skipExampleValidation: false

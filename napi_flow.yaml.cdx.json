@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-01-07T14:10:13Z",
+    "timestamp" : "2026-03-16T07:17:35Z",
     "component" : {
       "name" : "DEMIS ProfileLoader",
       "version" : "9.4.0",
@@ -18,17 +18,17 @@
   "components" : [
     {
       "type" : "library",
-      "bom-ref" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.18",
+      "bom-ref" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.19",
       "authors" : [
         {
           "name" : "Robert Koch Institut"
         }
       ],
       "name" : "rki.emiga.vzd",
-      "version" : "2.0.0-alpha.18",
+      "version" : "2.0.0-alpha.19",
       "description" : "FHIR Implementation Guide for the RKI EMIGA Healthcare Provider Directory (Verzeichnisdienst)",
       "scope" : "required",
-      "purl" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.18",
+      "purl" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.19",
       "properties" : [
         {
           "name" : "canonical",
@@ -45,26 +45,6 @@
       ],
       "tags" : [
         "root-component"
-      ]
-    },
-    {
-      "type" : "library",
-      "bom-ref" : "pkg:npm/kbv.basis@1.4.0",
-      "authors" : [
-        {
-          "name" : "kassenaerztlichebundesvereinigung"
-        }
-      ],
-      "name" : "kbv.basis",
-      "version" : "1.4.0",
-      "description" : "KBV-Basis-Profile V 1.4.0",
-      "scope" : "required",
-      "purl" : "pkg:npm/kbv.basis@1.4.0",
-      "properties" : [
-        {
-          "name" : "fhirVersions",
-          "value" : "4.0.1"
-        }
       ]
     },
     {
@@ -101,17 +81,17 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+      "bom-ref" : "pkg:npm/rki.emiga.common@1.2.0-alpha.20",
       "authors" : [
         {
           "name" : "Konstantinos Voulgaris"
         }
       ],
       "name" : "rki.emiga.common",
-      "version" : "1.2.0-alpha.16",
+      "version" : "1.2.0-alpha.20",
       "description" : "Diese Version ist noch nicht produktiv.",
       "scope" : "required",
-      "purl" : "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+      "purl" : "pkg:npm/rki.emiga.common@1.2.0-alpha.20",
       "properties" : [
         {
           "name" : "jurisdiction",
@@ -125,37 +105,17 @@
     },
     {
       "type" : "library",
-      "bom-ref" : "pkg:npm/de.basisprofil.r4@1.4.0",
+      "bom-ref" : "pkg:npm/de.basisprofil.r4@1.5.4",
       "authors" : [
         {
-          "name" : "stefanlang1"
+          "name" : "HL7 Deutschland e.V."
         }
       ],
       "name" : "de.basisprofil.r4",
-      "version" : "1.4.0",
+      "version" : "1.5.4",
       "description" : "Projekt Basisprofilierung R4 (HL7 Deutschland e.V.)",
       "scope" : "required",
-      "purl" : "pkg:npm/de.basisprofil.r4@1.4.0",
-      "properties" : [
-        {
-          "name" : "fhirVersions",
-          "value" : "4.0.1"
-        }
-      ]
-    },
-    {
-      "type" : "library",
-      "bom-ref" : "pkg:npm/rki.emiga.orgv@1.1.1",
-      "authors" : [
-        {
-          "name" : "Robert Koch-Institut"
-        }
-      ],
-      "name" : "rki.emiga.orgv",
-      "version" : "1.1.1",
-      "description" : "EMIGA Organizationsverzeichnis MVP Version",
-      "scope" : "required",
-      "purl" : "pkg:npm/rki.emiga.orgv@1.1.1",
+      "purl" : "pkg:npm/de.basisprofil.r4@1.5.4",
       "properties" : [
         {
           "name" : "jurisdiction",
@@ -237,51 +197,33 @@
   ],
   "dependencies" : [
     {
-      "ref" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.18",
+      "ref" : "pkg:npm/rki.emiga.vzd@2.0.0-alpha.19",
       "dependsOn" : [
-        "pkg:npm/kbv.basis@1.4.0",
         "pkg:npm/rki.demis.common@2.0.0",
-        "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
-        "pkg:npm/de.basisprofil.r4@1.4.0",
-        "pkg:npm/rki.emiga.orgv@1.1.1"
-      ]
-    },
-    {
-      "ref" : "pkg:npm/kbv.basis@1.4.0",
-      "dependsOn" : [
-        "pkg:npm/de.basisprofil.r4@1.4.0",
-        "pkg:npm/hl7.fhir.r4.core@4.0.1"
+        "pkg:npm/rki.emiga.common@1.2.0-alpha.20",
+        "pkg:npm/de.basisprofil.r4@1.5.4"
       ]
     },
     {
       "ref" : "pkg:npm/rki.demis.common@2.0.0",
       "dependsOn" : [
         "pkg:npm/hl7.fhir.r4.core@4.0.1",
-        "pkg:npm/de.basisprofil.r4@1.4.0"
+        "pkg:npm/de.basisprofil.r4@1.5.4"
       ]
     },
     {
-      "ref" : "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
+      "ref" : "pkg:npm/rki.emiga.common@1.2.0-alpha.20",
       "dependsOn" : [
         "pkg:npm/hl7.fhir.r4.core@4.0.1",
-        "pkg:npm/de.basisprofil.r4@1.4.0",
+        "pkg:npm/de.basisprofil.r4@1.5.4",
         "pkg:npm/rki.demis.common@2.0.0",
         "pkg:npm/rki.demis.disease@2.0.0"
       ]
     },
     {
-      "ref" : "pkg:npm/de.basisprofil.r4@1.4.0",
+      "ref" : "pkg:npm/de.basisprofil.r4@1.5.4",
       "dependsOn" : [
         "pkg:npm/hl7.fhir.r4.core@4.0.1"
-      ]
-    },
-    {
-      "ref" : "pkg:npm/rki.emiga.orgv@1.1.1",
-      "dependsOn" : [
-        "pkg:npm/hl7.fhir.r4.core@4.0.1",
-        "pkg:npm/rki.demis.common@2.0.0",
-        "pkg:npm/rki.emiga.common@1.2.0-alpha.16",
-        "pkg:npm/de.basisprofil.r4@1.4.0"
       ]
     },
     {

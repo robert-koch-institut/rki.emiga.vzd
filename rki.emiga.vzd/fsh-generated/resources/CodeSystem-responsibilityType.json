@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "ResponsibilityType",
+  "name": "responsibilityType",
   "id": "responsibilityType",
   "title": "Art der Zustaendigkeit OEGD",
   "description": "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden",
@@ -35,7 +35,8 @@
       ]
     }
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "date": "2026-03-16",
   "caseSensitive": true,
   "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
   "count": 3

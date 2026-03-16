@@ -6,6 +6,28 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 617
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
+      } ]
+    },
+    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType' exists, but can't be loaded, so it can't be checked for validity",
+    "location": [ "CodeSystem.valueSet", "Line[1] Col[617]" ],
+    "expression": [ "CodeSystem.valueSet" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 940
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
