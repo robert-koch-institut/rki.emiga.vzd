@@ -1,0 +1,312 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 869
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[0].designation[0].use", "Line[1] Col[869]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[0].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1073
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[1].designation[0].use", "Line[1] Col[1073]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[1].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1288
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[2].designation[0].use", "Line[1] Col[1288]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[2].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1498
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[3].designation[0].use", "Line[1] Col[1498]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[3].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1713
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[4].designation[0].use", "Line[1] Col[1713]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[4].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1952
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[5].designation[0].use", "Line[1] Col[1952]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[5].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 2185
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[6].designation[0].use", "Line[1] Col[2185]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[6].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 2404
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[7].designation[0].use", "Line[1] Col[2404]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[7].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 2627
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[8].designation[0].use", "Line[1] Col[2627]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[8].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 2837
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[9].designation[0].use", "Line[1] Col[2837]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[9].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3038
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[10].designation[0].use", "Line[1] Col[3038]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[10].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3228
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[11].designation[0].use", "Line[1] Col[3228]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[11].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 3411
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_NoValid_13"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_NoValid_13"
+      } ]
+    },
+    "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
+    "location": [ "ValueSet.compose.include[1].concept[12].designation[0].use", "Line[1] Col[3411]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[12].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 19017
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "ValueSet", "Line[1] Col[19017]" ],
+    "expression": [ "ValueSet" ]
+  } ]
+}

@@ -6,8 +6,8 @@
 id: rki.emiga.vzd
 canonical: https://emiga.rki.de/fhir/vzd
 name: rki.emiga.vzd
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: RKI EMIGA VZD Implementation Guide
+description: FHIR Implementation Guide for the RKI EMIGA Healthcare Provider Directory (Verzeichnisdienst)
 status: draft # draft | active | retired | unknown
 
 version: 2.0.0-alpha.19

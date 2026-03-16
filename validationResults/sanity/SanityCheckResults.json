@@ -1,0 +1,355 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [ {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck ValidVersionedReferenceValueSetToCodeSystem (because prerequisite MatchingNameAndIdCheck is skipped)"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidReferencedValueSetCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidReferencedValueSetCheck for resources https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType and resource https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType: The CodeSystem is not completely included into the referenced ValueSet."
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidReferencedValueSetCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidReferencedValueSetCheck for resources https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId and resource -no specifier-: Could not find any ValueSet with url 'https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId'."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck MatchingNameAndIdCheck (because it is filtered out)"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfCountCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfCountCheck for resource https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId: Field 'count' in (non supplement) CodeSystem is null."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'MatchingCountAndConceptsCheck' for source https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId, because prerequisite check 'ExistenceOfCountCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'FieldsExistencyCheck' for source https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId, because prerequisite check 'ExistenceOfCountCheck' failed"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfConceptCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfConceptCheck for resource https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId: Field 'concept' in CodeSystem is null or empty."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'NoDuplicatedCodeInCodeSystemCheck' for source https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId, because prerequisite check 'ExistenceOfConceptCheck' failed"
+  }, {
+    "severity": "warning",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ShareableCodeSystemCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ShareableCodeSystemCheck for resource https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId: Failed expression 'CodeSystem.concept.exists()'"
+  }, {
+    "severity": "warning",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ShareableCodeSystemCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ShareableCodeSystemCheck for resource https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId: Failed expression 'CodeSystem.concept.code.exists()'"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfCountCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfCountCheck for resource https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion: Field 'count' in (non supplement) CodeSystem is null."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'MatchingCountAndConceptsCheck' for source https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion, because prerequisite check 'ExistenceOfCountCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'FieldsExistencyCheck' for source https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion, because prerequisite check 'ExistenceOfCountCheck' failed"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfConceptCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfConceptCheck for resource https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion: Field 'concept' in CodeSystem is null or empty."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'NoDuplicatedCodeInCodeSystemCheck' for source https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion, because prerequisite check 'ExistenceOfConceptCheck' failed"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion: The url has to comply with 'https://emiga.rki.de/fhir/vzd//[FHIR_TYPE]/[ID]' but looks like 'https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion'"
+  }, {
+    "severity": "warning",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ShareableCodeSystemCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ShareableCodeSystemCheck for resource https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion: Failed expression 'CodeSystem.concept.exists()'"
+  }, {
+    "severity": "warning",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ShareableCodeSystemCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ShareableCodeSystemCheck for resource https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion: Failed expression 'CodeSystem.concept.code.exists()'"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_MatchingVersionAndIdCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in MatchingVersionAndIdCheck for resource https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole: 'id' has to end with the major version number '-2'."
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfDateCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfDateCheck for resource https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType: Provided date is null."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'PlausibilityOfDateCheck' for source https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'ConstrainDateResolutionCheck' for source https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'FieldsExistencyCheck' for source https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability: The URL \"https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability\"contains the wrong fhir type. Expected is \"StructureDefinition\""
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress: The URL \"https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress\"contains the wrong fhir type. Expected is \"StructureDefinition\""
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod: The URL \"https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod\"contains the wrong fhir type. Expected is \"StructureDefinition\""
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfDateCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfDateCheck for resource https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments: Provided date is null."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'PlausibilityOfDateCheck' for source https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'ConstrainDateResolutionCheck' for source https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'FieldsExistencyCheck' for source https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments: The URL \"https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments\"contains the wrong fhir type. Expected is \"StructureDefinition\""
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates: The URL \"https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates\"contains the wrong fhir type. Expected is \"StructureDefinition\""
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/ValueSet/OrgVBundleId: The url has to comply with 'https://emiga.rki.de/fhir/vzd//[FHIR_TYPE]/[ID]' but looks like 'https://emiga.rki.de/fhir/ValueSet/OrgVBundleId'"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ValidUrlPatternCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ValidUrlPatternCheck for resource https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion: The url has to comply with 'https://emiga.rki.de/fhir/vzd//[FHIR_TYPE]/[ID]' but looks like 'https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion'"
+  }, {
+    "severity": "error",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SanityCheck_ExistenceOfDateCheck"
+      } ]
+    },
+    "diagnostics": "Sanity error in ExistenceOfDateCheck for resource https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType: Provided date is null."
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'PlausibilityOfDateCheck' for source https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'ConstrainDateResolutionCheck' for source https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType, because prerequisite check 'ExistenceOfDateCheck' failed"
+  }, {
+    "severity": "information",
+    "details": {
+      "coding": [ {
+        "system": "https://demis.rki.de/fhir/CodeSystem/SanityCheckSkip",
+        "code": "SkippedSanityCheck"
+      } ]
+    },
+    "diagnostics": "Skipping SanityCheck 'FieldsExistencyCheck' for source https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType, because prerequisite check 'ExistenceOfDateCheck' failed"
+  } ]
+}

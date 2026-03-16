@@ -1,0 +1,996 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UTMCoordinates",
+  "url": "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates",
+  "version": "0.1.0",
+  "name": "UTMCoordinates",
+  "title": "UTM Coordinates (ETRS89)",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-06-17",
+  "publisher": "Robert Koch-Institut",
+  "description": "Representiert die UTM-Koordinaten (ETRS89) einer Einrichtung.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [ {
+    "type": "element",
+    "expression": "Location.position"
+  } ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "snapshot": {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString": "4.0.1"
+    } ],
+    "element": [ {
+      "id": "Extension",
+      "path": "Extension",
+      "short": "UTM Coordinates (ETRS89)",
+      "definition": "Representiert die UTM-Koordinaten (ETRS89) einer Einrichtung.",
+      "min": 0,
+      "max": "*",
+      "base": {
+        "path": "Extension",
+        "min": 0,
+        "max": "*"
+      },
+      "condition": [ "ele-1" ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "isModifier": false
+    }, {
+      "id": "Extension.id",
+      "path": "Extension.id",
+      "representation": [ "xmlAttr" ],
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min": 0,
+      "max": "1",
+      "base": {
+        "path": "Element.id",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "string"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "n/a"
+      } ]
+    }, {
+      "id": "Extension.extension",
+      "path": "Extension.extension",
+      "slicing": {
+        "discriminator": [ {
+          "type": "value",
+          "path": "url"
+        } ],
+        "description": "Extensions are always sliced by (at least) url",
+        "rules": "open"
+      },
+      "short": "Extension",
+      "definition": "An Extension",
+      "min": 3,
+      "max": "*",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Easting_X",
+      "path": "Extension.extension",
+      "sliceName": "UTM_Easting_X",
+      "short": "GeoreferenzZone X-Wert der UTM Koordinate (ETRS89) der Einrichtung",
+      "definition": "An Extension",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.id",
+      "path": "Extension.extension.id",
+      "representation": [ "xmlAttr" ],
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min": 0,
+      "max": "1",
+      "base": {
+        "path": "Element.id",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "string"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "n/a"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.extension",
+      "path": "Extension.extension.extension",
+      "slicing": {
+        "discriminator": [ {
+          "type": "value",
+          "path": "url"
+        } ],
+        "description": "Extensions are always sliced by (at least) url",
+        "rules": "open"
+      },
+      "short": "Extension",
+      "definition": "An Extension",
+      "min": 0,
+      "max": "0",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.url",
+      "path": "Extension.extension.url",
+      "representation": [ "xmlAttr" ],
+      "short": "identifies the meaning of the extension",
+      "definition": "Source of the definition for the extension code - a logical name or a URL.",
+      "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "uri"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "fixedUri": "UTM_Easting_X",
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.value[x]",
+      "path": "Extension.extension.value[x]",
+      "slicing": {
+        "discriminator": [ {
+          "type": "type",
+          "path": "$this"
+        } ],
+        "ordered": false,
+        "rules": "closed"
+      },
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "decimal"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.value[x]:valueDecimal",
+      "path": "Extension.extension.value[x]",
+      "sliceName": "valueDecimal",
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "decimal"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y",
+      "path": "Extension.extension",
+      "sliceName": "UTM_Northing_Y",
+      "short": "GeoreferenzZone Y-Wert der UTM Koordinate (ETRS89) der Einrichtung",
+      "definition": "An Extension",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.id",
+      "path": "Extension.extension.id",
+      "representation": [ "xmlAttr" ],
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min": 0,
+      "max": "1",
+      "base": {
+        "path": "Element.id",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "string"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "n/a"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.extension",
+      "path": "Extension.extension.extension",
+      "slicing": {
+        "discriminator": [ {
+          "type": "value",
+          "path": "url"
+        } ],
+        "description": "Extensions are always sliced by (at least) url",
+        "rules": "open"
+      },
+      "short": "Extension",
+      "definition": "An Extension",
+      "min": 0,
+      "max": "0",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.url",
+      "path": "Extension.extension.url",
+      "representation": [ "xmlAttr" ],
+      "short": "identifies the meaning of the extension",
+      "definition": "Source of the definition for the extension code - a logical name or a URL.",
+      "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "uri"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "fixedUri": "UTM_Northing_Y",
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.value[x]",
+      "path": "Extension.extension.value[x]",
+      "slicing": {
+        "discriminator": [ {
+          "type": "type",
+          "path": "$this"
+        } ],
+        "ordered": false,
+        "rules": "closed"
+      },
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "decimal"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.value[x]:valueDecimal",
+      "path": "Extension.extension.value[x]",
+      "sliceName": "valueDecimal",
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "decimal"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Zone",
+      "path": "Extension.extension",
+      "sliceName": "UTM_Zone",
+      "short": "GeoreferenzZone Zone",
+      "definition": "An Extension",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Zone.id",
+      "path": "Extension.extension.id",
+      "representation": [ "xmlAttr" ],
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min": 0,
+      "max": "1",
+      "base": {
+        "path": "Element.id",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "string"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "n/a"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Zone.extension",
+      "path": "Extension.extension.extension",
+      "slicing": {
+        "discriminator": [ {
+          "type": "value",
+          "path": "url"
+        } ],
+        "description": "Extensions are always sliced by (at least) url",
+        "rules": "open"
+      },
+      "short": "Extension",
+      "definition": "An Extension",
+      "min": 0,
+      "max": "0",
+      "base": {
+        "path": "Element.extension",
+        "min": 0,
+        "max": "*"
+      },
+      "type": [ {
+        "code": "Extension"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      }, {
+        "key": "ext-1",
+        "severity": "error",
+        "human": "Must have either extensions or value[x], not both",
+        "expression": "extension.exists() != value.exists()",
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+      } ],
+      "isModifier": false,
+      "isSummary": false
+    }, {
+      "id": "Extension.extension:UTM_Zone.url",
+      "path": "Extension.extension.url",
+      "representation": [ "xmlAttr" ],
+      "short": "identifies the meaning of the extension",
+      "definition": "Source of the definition for the extension code - a logical name or a URL.",
+      "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "uri"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "fixedUri": "UTM_Zone",
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Zone.value[x]",
+      "path": "Extension.extension.value[x]",
+      "slicing": {
+        "discriminator": [ {
+          "type": "type",
+          "path": "$this"
+        } ],
+        "ordered": false,
+        "rules": "closed"
+      },
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "string"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Zone.value[x]:valueString",
+      "path": "Extension.extension.value[x]",
+      "sliceName": "valueString",
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "string"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.url",
+      "path": "Extension.url",
+      "representation": [ "xmlAttr" ],
+      "short": "identifies the meaning of the extension",
+      "definition": "Source of the definition for the extension code - a logical name or a URL.",
+      "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+      "min": 1,
+      "max": "1",
+      "base": {
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1"
+      },
+      "type": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl": "uri"
+        } ],
+        "code": "http://hl7.org/fhirpath/System.String"
+      } ],
+      "fixedUri": "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates",
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    }, {
+      "id": "Extension.value[x]",
+      "path": "Extension.value[x]",
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+      "min": 0,
+      "max": "0",
+      "base": {
+        "path": "Extension.value[x]",
+        "min": 0,
+        "max": "1"
+      },
+      "type": [ {
+        "code": "base64Binary"
+      }, {
+        "code": "boolean"
+      }, {
+        "code": "canonical"
+      }, {
+        "code": "code"
+      }, {
+        "code": "date"
+      }, {
+        "code": "dateTime"
+      }, {
+        "code": "decimal"
+      }, {
+        "code": "id"
+      }, {
+        "code": "instant"
+      }, {
+        "code": "integer"
+      }, {
+        "code": "markdown"
+      }, {
+        "code": "oid"
+      }, {
+        "code": "positiveInt"
+      }, {
+        "code": "string"
+      }, {
+        "code": "time"
+      }, {
+        "code": "unsignedInt"
+      }, {
+        "code": "uri"
+      }, {
+        "code": "url"
+      }, {
+        "code": "uuid"
+      }, {
+        "code": "Address"
+      }, {
+        "code": "Age"
+      }, {
+        "code": "Annotation"
+      }, {
+        "code": "Attachment"
+      }, {
+        "code": "CodeableConcept"
+      }, {
+        "code": "Coding"
+      }, {
+        "code": "ContactPoint"
+      }, {
+        "code": "Count"
+      }, {
+        "code": "Distance"
+      }, {
+        "code": "Duration"
+      }, {
+        "code": "HumanName"
+      }, {
+        "code": "Identifier"
+      }, {
+        "code": "Money"
+      }, {
+        "code": "Period"
+      }, {
+        "code": "Quantity"
+      }, {
+        "code": "Range"
+      }, {
+        "code": "Ratio"
+      }, {
+        "code": "Reference"
+      }, {
+        "code": "SampledData"
+      }, {
+        "code": "Signature"
+      }, {
+        "code": "Timing"
+      }, {
+        "code": "ContactDetail"
+      }, {
+        "code": "Contributor"
+      }, {
+        "code": "DataRequirement"
+      }, {
+        "code": "Expression"
+      }, {
+        "code": "ParameterDefinition"
+      }, {
+        "code": "RelatedArtifact"
+      }, {
+        "code": "TriggerDefinition"
+      }, {
+        "code": "UsageContext"
+      }, {
+        "code": "Dosage"
+      }, {
+        "code": "Meta"
+      } ],
+      "constraint": [ {
+        "key": "ele-1",
+        "severity": "error",
+        "human": "All FHIR elements must have a @value or children",
+        "expression": "hasValue() or (children().count() > id.count())",
+        "xpath": "@value|f:*|h:div",
+        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+      } ],
+      "isModifier": false,
+      "isSummary": false,
+      "mapping": [ {
+        "identity": "rim",
+        "map": "N/A"
+      } ]
+    } ]
+  },
+  "differential": {
+    "element": [ {
+      "id": "Extension",
+      "path": "Extension",
+      "short": "UTM Coordinates (ETRS89)",
+      "definition": "Representiert die UTM-Koordinaten (ETRS89) einer Einrichtung."
+    }, {
+      "id": "Extension.extension",
+      "path": "Extension.extension",
+      "min": 3
+    }, {
+      "id": "Extension.extension:UTM_Easting_X",
+      "path": "Extension.extension",
+      "sliceName": "UTM_Easting_X",
+      "short": "GeoreferenzZone X-Wert der UTM Koordinate (ETRS89) der Einrichtung",
+      "min": 1,
+      "max": "1",
+      "mustSupport": true
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.extension",
+      "path": "Extension.extension.extension",
+      "max": "0"
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.url",
+      "path": "Extension.extension.url",
+      "fixedUri": "UTM_Easting_X"
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.value[x]",
+      "path": "Extension.extension.value[x]",
+      "slicing": {
+        "discriminator": [ {
+          "type": "type",
+          "path": "$this"
+        } ],
+        "ordered": false,
+        "rules": "open"
+      },
+      "min": 1
+    }, {
+      "id": "Extension.extension:UTM_Easting_X.value[x]:valueDecimal",
+      "path": "Extension.extension.value[x]",
+      "sliceName": "valueDecimal",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "decimal"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y",
+      "path": "Extension.extension",
+      "sliceName": "UTM_Northing_Y",
+      "short": "GeoreferenzZone Y-Wert der UTM Koordinate (ETRS89) der Einrichtung",
+      "min": 1,
+      "max": "1",
+      "mustSupport": true
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.extension",
+      "path": "Extension.extension.extension",
+      "max": "0"
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.url",
+      "path": "Extension.extension.url",
+      "fixedUri": "UTM_Northing_Y"
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.value[x]",
+      "path": "Extension.extension.value[x]",
+      "slicing": {
+        "discriminator": [ {
+          "type": "type",
+          "path": "$this"
+        } ],
+        "ordered": false,
+        "rules": "open"
+      },
+      "min": 1
+    }, {
+      "id": "Extension.extension:UTM_Northing_Y.value[x]:valueDecimal",
+      "path": "Extension.extension.value[x]",
+      "sliceName": "valueDecimal",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "decimal"
+      } ]
+    }, {
+      "id": "Extension.extension:UTM_Zone",
+      "path": "Extension.extension",
+      "sliceName": "UTM_Zone",
+      "short": "GeoreferenzZone Zone",
+      "min": 1,
+      "max": "1",
+      "mustSupport": true
+    }, {
+      "id": "Extension.extension:UTM_Zone.extension",
+      "path": "Extension.extension.extension",
+      "max": "0"
+    }, {
+      "id": "Extension.extension:UTM_Zone.url",
+      "path": "Extension.extension.url",
+      "fixedUri": "UTM_Zone"
+    }, {
+      "id": "Extension.extension:UTM_Zone.value[x]",
+      "path": "Extension.extension.value[x]",
+      "slicing": {
+        "discriminator": [ {
+          "type": "type",
+          "path": "$this"
+        } ],
+        "ordered": false,
+        "rules": "open"
+      },
+      "min": 1
+    }, {
+      "id": "Extension.extension:UTM_Zone.value[x]:valueString",
+      "path": "Extension.extension.value[x]",
+      "sliceName": "valueString",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "string"
+      } ]
+    }, {
+      "id": "Extension.url",
+      "path": "Extension.url",
+      "fixedUri": "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates"
+    }, {
+      "id": "Extension.value[x]",
+      "path": "Extension.value[x]",
+      "max": "0"
+    } ]
+  }
+}

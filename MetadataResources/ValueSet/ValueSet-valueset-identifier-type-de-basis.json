@@ -1,0 +1,159 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-identifier-type-de-basis",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ]
+  },
+  "url": "http://fhir.de/ValueSet/identifier-type-de-basis",
+  "version": "1.4.0",
+  "name": "IdentifierTypeDeBasis",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-02-17",
+  "publisher": "HL7 Deutschland e.V. (Technisches Komitee FHIR)",
+  "contact": [ {
+    "telecom": [ {
+      "system": "other",
+      "value": "http://hl7.de/technische-komitees/fhir/"
+    } ]
+  } ],
+  "description": "ValueSet zur Codierung des Identifier-Typs",
+  "copyright": "HL7 Deutschland e.V.",
+  "compose": {
+    "include": [ {
+      "valueSet": [ "http://hl7.org/fhir/ValueSet/identifier-type" ]
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "concept": [ {
+        "code": "XX",
+        "display": "Organisations-ID"
+      }, {
+        "code": "BSNR",
+        "display": "Betriebsstätten-Nummer"
+      }, {
+        "code": "LANR",
+        "display": "Lebenslange Arztnummer"
+      }, {
+        "code": "RI",
+        "display": "Resource identifier"
+      }, {
+        "code": "DN",
+        "display": "Doctor number"
+      } ]
+    }, {
+      "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2021-02-17T00:00:00+01:00",
+    "contains": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "MCN",
+      "display": "Microchip Number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "RI",
+      "display": "Resource identifier"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "PLAC",
+      "display": "Placer Identifier"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "BSNR",
+      "display": "Primary physician office number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "NIIP",
+      "display": "National Insurance Payor Identifier (Payor)"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "EN",
+      "display": "Employer number"
+    }, {
+      "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+      "code": "GKV",
+      "display": "Gesetzliche Krankenversicherung"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "DL",
+      "display": "Driver's license number"
+    }, {
+      "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+      "code": "KZVA",
+      "display": "KZVAbrechnungsnummer"
+    }, {
+      "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+      "code": "PKV",
+      "display": "Private Krankenversicherung"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "BRN",
+      "display": "Breed Registry Number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "XX",
+      "display": "Organization identifier"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "MD",
+      "display": "Medical License number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "SNO",
+      "display": "Serial Number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "PPN",
+      "display": "Passport number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "DR",
+      "display": "Donor Registration Number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "JHN",
+      "display": "Jurisdictional health number (Canada)"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "SB",
+      "display": "Social Beneficiary Identifier"
+    }, {
+      "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+      "code": "ZANR",
+      "display": "Zahnarztnummer"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "DN",
+      "display": "Doctor number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "PRN",
+      "display": "Provider number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "TAX",
+      "display": "Tax ID number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "MR",
+      "display": "Medical record number"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "FILL",
+      "display": "Filler Identifier"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "UDI",
+      "display": "Universal Device Identifier"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "ACSN",
+      "display": "Accession ID"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "LANR",
+      "display": "Lifelong physician number"
+    } ]
+  }
+}

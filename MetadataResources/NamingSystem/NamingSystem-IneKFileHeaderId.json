@@ -1,0 +1,14 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "IneKFileHeaderId",
+  "name": "IneKFileHeaderId",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2024-05-13",
+  "publisher": "Robert Koch-Institut",
+  "description": "TODO",
+  "uniqueId": [ {
+    "type": "uri",
+    "value": "https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId"
+  } ]
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "HealthcareServiceCategory",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory",
+  "version": "1.0.0",
+  "name": "HealthcareServiceCategory",
+  "title": "Dienstleistungskategorien (Werteliste)",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-03-19",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Werteliste mit Konzepten, die die Kategorie einer Dienstleistung näher beschreiben.",
+  "compose": {
+    "include": [ {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory"
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-03-19T00:00:00+01:00",
+    "contains": [ {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory",
+      "code": "preventiveExamination",
+      "display": "Vorsorgeangebot"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory",
+      "code": "consultation",
+      "display": "Beratungsangebot"
+    } ]
+  }
+}

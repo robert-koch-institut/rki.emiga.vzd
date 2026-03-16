@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "responsibilityType",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+  "version": "1.0.0",
+  "name": "ResponsibilityType",
+  "title": "Art der Zustaendigkeit OEGD",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Die Kodiersystematik 'Art der Zustaendigkeit' definiert die Arten der Zuständigkeit, die im ÖGD genutzt werden",
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+  "content": "complete",
+  "count": 3,
+  "concept": [ {
+    "code": "all",
+    "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger"
+  }, {
+    "code": "TB",
+    "display": "zuständig nur für Tuberkulose"
+  }, {
+    "code": "all-exceptTB",
+    "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger außer Tuberkulose"
+  } ]
+}

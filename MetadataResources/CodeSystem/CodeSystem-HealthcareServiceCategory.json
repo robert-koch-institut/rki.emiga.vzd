@@ -1,0 +1,32 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "HealthcareServiceCategory",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory",
+  "version": "1.0.0",
+  "name": "HealthcareServiceCategory",
+  "title": "Dienstleistungskategorie",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-03-19",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Die Kodiersystematik 'HealthcareServiceCategory' definiert Konzepte, die die Kategorie, in welche eine angebotene Dienstleistung einsortiert werden kann, näher beschreiben.",
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory",
+  "content": "complete",
+  "count": 2,
+  "concept": [ {
+    "code": "consultation",
+    "display": "Beratungsangebot"
+  }, {
+    "code": "preventiveExamination",
+    "display": "Vorsorgeangebot"
+  } ]
+}
