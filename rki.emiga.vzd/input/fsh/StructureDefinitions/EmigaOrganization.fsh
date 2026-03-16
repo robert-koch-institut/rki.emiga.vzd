@@ -4,18 +4,18 @@ Id: EmigaOrganization
 Title: "EMIGA Organization"
 Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
-* ^version = "1.2.0"
-* ^date = "2025-11-18"
+* ^version = "1.3.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 //* insert ProfileMetaProfileTags
 
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -253,7 +253,6 @@ Description: "Die Url muss valide sein."
 * severity = #error
 * expression = "$this.matches('^(https?://)?[a-zA-Z0-9]+([\\\\.-][a-zA-Z0-9]+)*\\\\.[a-zA-Z]{2,6}(/[a-zA-Z0-9._~-]*)*/?$')"
 
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error

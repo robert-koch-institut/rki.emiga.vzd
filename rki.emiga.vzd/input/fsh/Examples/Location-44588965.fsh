@@ -1,9 +1,9 @@
-Instance: 44588965
+Instance: Location44588965
 InstanceOf: EmigaLocation
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
 * status = #active
 * name = "Stadt XYZ - FB 9 / Dienste"
 * mode = #instance
@@ -17,4 +17,4 @@ Usage: #example
 * address.state = "DE-BB"
 * address.postalCode = "12345"
 * address.country = "DE"
-* managingOrganization = Reference(44588964)
+* managingOrganization = Reference(Organization44588981)

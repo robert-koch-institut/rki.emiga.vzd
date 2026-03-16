@@ -2,11 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ResponsibilityHealthdepartments",
   "url": "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": "ResponsibilityHealthdepartments",
   "title": "Zuständigkeit der ÖGD-Stellen",
   "status": "active",
   "experimental": false,
+  "date": "2026-02-12",
   "publisher": "Robert Koch-Institut",
   "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
   "fhirVersion": "4.0.1",
@@ -70,7 +71,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://demis.rki.de/fhir/ValueSet/county",
+          "valueSet": "https://emiga.rki.de/fhir/case/ValueSet/County",
           "description": "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
         }
       },

@@ -4,16 +4,16 @@ Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organisation"
 Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
 
-* ^version = "1.1.0"
-* ^date = "2025-11-18"
+* ^version = "1.2.0"
+* ^date = "2026-03-09"
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 
 * insert ProfileMetaProfileTags
 * insert MetaTagOrgVBundle
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -39,8 +39,11 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
   * ^slicing.rules = #open
   * ^slicing.description = "slicing organization identifier by pattern"
   * ^slicing.ordered = false
-* identifier contains codeSiteId 1..1 MS and
-          telematikID 0..1 MS
+* identifier contains 
+    codeSiteId 1..1 MS and
+    telematikID 0..1 MS and
+    emigaOrgvId 0..1 MS and
+    emigaOrgvFileNumber 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
@@ -51,6 +54,16 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 //* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
+* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
+* identifier[emigaOrgvId] ^definition = "Identifier für EmigaOrgvId"
+* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
+* identifier[emigaOrgvId].system 1.. MS
+* identifier[emigaOrgvId].value 1.. MS
+* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
+* identifier[emigaOrgvFileNumber] ^definition = "Identifier für EMIGA Organizationsverzeichnis Aktenzeichen"
+* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+* identifier[emigaOrgvFileNumber].system 1.. MS
+* identifier[emigaOrgvFileNumber].value 1.. MS
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
@@ -187,7 +200,6 @@ Description: "Die Url muss valide sein."
 * severity = #error
 * expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
 
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error

@@ -4,17 +4,17 @@ Id: EmigaHealthcareService
 Title: "Dienstleistung"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
 
-* ^version = "1.0.0"
-* ^date = "2024-03-18"
+* ^version = "1.1.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -66,7 +66,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
   * ^slicing.ordered = false
 * type contains emigaHealthcareServiceType 0..1 MS
 * type[emigaHealthcareServiceType] from $ServiceTypeVS (extensible)
-  * ^patternCodeableConcept.coding.system = $ServiceTypeCS
+  * ^patternCodeableConcept.coding.system = $serviceType
   * insert StrictCodableConcept
 
 // 'Specialties handled by the HealthcareService' - 0..* - CodeableConcept
@@ -173,7 +173,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
 * availableTime MS
 * availableTime obeys ORGV-Service-Opening-Time
-* availableTime.extension contains $dutyHoursEx named dutyHoursAvailability 0..1 MS
+* availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
 
 * availableTime.daysOfWeek MS
 * availableTime.allDay MS

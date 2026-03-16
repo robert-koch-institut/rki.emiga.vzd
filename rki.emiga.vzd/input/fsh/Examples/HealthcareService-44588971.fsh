@@ -1,13 +1,13 @@
-Instance: 44588972
+Instance: HealthcareService44588971
 InstanceOf: EmigaHealthcareService
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 * active = true
-* providedBy = Reference(44588964)
+* providedBy = Reference(Organization44588981)
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#preventiveExamination
-* location = Reference(44588965)
+* location = Reference(Location44588965)
 * name = "Kinder- und Jugendgesundheitsdienst"
 * comment = "diverse Angebote, u.a. auch Impfungen, zahnärztliche Untersuchung ..."
 * telecom[Email].system = #email

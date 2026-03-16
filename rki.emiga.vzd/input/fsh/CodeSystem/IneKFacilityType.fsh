@@ -2,7 +2,6 @@ CodeSystem: IneKFacilityType
 Id: IneKFacilityType
 Title: "IneK Einrichtungstyp"
 Description: "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die Verwaltung und Publikation der IneK Einrichtungstypen erfolgt durch das Institut für das Entgeltsystem im Krankenhaus (InEK GmbH). "
-
 * ^url = "https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType"
 * ^version = "0.1.0"
 * ^date = "2025-06-18"

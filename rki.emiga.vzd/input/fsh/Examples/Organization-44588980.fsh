@@ -1,10 +1,10 @@
 // Example for the new Version 1.1.0
-Instance: 44588980
+Instance: Organization44588980
 InstanceOf: EmigaPublicHealthOrganization
 Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 * identifier[codeSiteId].type = $v2-0203#PRN
 * identifier[codeSiteId].system = $CodeSiteId
 * identifier[codeSiteId].value = "1."

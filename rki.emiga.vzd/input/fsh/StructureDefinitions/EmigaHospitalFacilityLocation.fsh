@@ -4,13 +4,13 @@ Id: EmigaHospitalFacilityLocation
 Title: "Krankenhaus - Einrichtungsstandort"
 Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab"
 //
-* ^version = "0.2.0"
-* ^date = "2025-11-18"
+* ^version = "0.3.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
@@ -27,7 +27,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.18"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -175,7 +175,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * type[stationstyp].coding.system 1..1 MS
 * type[stationstyp].coding.display MS
 
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from $FachbereichVS (required)
 //* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS

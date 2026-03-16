@@ -5,6 +5,7 @@ Id: PublicHealthOrganizationType
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-11-25"
+
 * $OrganizationType#ga "Gesundheitsamt"
 * $OrganizationType#ga ^designation.language = #de-DE
 * $OrganizationType#ga ^designation.use = $ConceptDesignationUse#abbreviation

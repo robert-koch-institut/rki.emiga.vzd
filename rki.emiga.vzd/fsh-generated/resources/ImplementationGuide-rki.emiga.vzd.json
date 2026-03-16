@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "rki.emiga.vzd",
   "url": "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
-  "version": "2.0.0-alpha.18",
+  "version": "2.0.0-alpha.19",
   "name": "rkiemigavzd",
   "title": "RKI EMIGA VZD Implementation Guide",
   "status": "draft",
@@ -26,7 +26,7 @@
   "dependsOn": [
     {
       "packageId": "de.basisprofil.r4",
-      "version": "1.4.0",
+      "version": "1.5.4",
       "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
       "id": "de_basisprofil_r4"
     },
@@ -38,115 +38,18 @@
     },
     {
       "packageId": "rki.emiga.common",
-      "version": "1.2.0-alpha.16",
+      "version": "1.2.0-alpha.20",
       "uri": "http://fhir.org/packages/rki.emiga.common/ImplementationGuide/rki.emiga.common",
       "id": "rki_emiga_common"
-    },
-    {
-      "packageId": "rki.emiga.orgv",
-      "version": "1.1.1",
-      "uri": "http://fhir.org/packages/rki.emiga.orgv/ImplementationGuide/rki.emiga.orgv",
-      "id": "rki_emiga_orgv"
-    },
-    {
-      "packageId": "kbv.basis",
-      "version": "1.4.0",
-      "uri": "http://fhir.org/packages/kbv.basis/ImplementationGuide/kbv.basis",
-      "id": "kbv_basis"
     }
   ],
   "definition": {
     "resource": [
       {
         "reference": {
-          "reference": "Organization/44588964"
-        },
-        "name": "44588964",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
-      },
-      {
-        "reference": {
-          "reference": "Location/44588965"
-        },
-        "name": "44588965",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
-      },
-      {
-        "reference": {
-          "reference": "Practitioner/44588966"
-        },
-        "name": "44588966",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
-      },
-      {
-        "reference": {
-          "reference": "PractitionerRole/44588967"
-        },
-        "name": "44588967",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
-      },
-      {
-        "reference": {
-          "reference": "Practitioner/44588968"
-        },
-        "name": "44588968",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
-      },
-      {
-        "reference": {
-          "reference": "PractitionerRole/44588969"
-        },
-        "name": "44588969",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
-      },
-      {
-        "reference": {
-          "reference": "Practitioner/44588970"
-        },
-        "name": "44588970",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
-      },
-      {
-        "reference": {
-          "reference": "PractitionerRole/44588971"
-        },
-        "name": "44588971",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
-      },
-      {
-        "reference": {
-          "reference": "HealthcareService/44588972"
-        },
-        "name": "44588972",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
-      },
-      {
-        "reference": {
-          "reference": "HealthcareService/44588973"
-        },
-        "name": "44588973",
-        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
-      },
-      {
-        "reference": {
-          "reference": "Organization/44588980"
-        },
-        "name": "44588980",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
-      },
-      {
-        "reference": {
-          "reference": "Organization/44588981"
-        },
-        "name": "44588981",
-        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/AddressTypePhysicalBoth"
         },
-        "name": "Addressentyp  (Werteliste)",
+        "name": "Addressentyp",
         "description": "Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben.",
         "exampleBoolean": false
       },
@@ -162,7 +65,7 @@
         "reference": {
           "reference": "ValueSet/responsibilityType"
         },
-        "name": "Art der Zuständigkeit OEGD (Werteliste)",
+        "name": "Art der Zuständigkeit OEGD",
         "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
         "exampleBoolean": false
       },
@@ -179,7 +82,7 @@
           "reference": "NamingSystem/CodeSiteId"
         },
         "name": "CodeSite ID",
-        "description": "CodeSite ID to be used in Identifiers",
+        "description": "CodeSite ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -202,7 +105,7 @@
         "reference": {
           "reference": "ValueSet/HealthcareServiceCategory"
         },
-        "name": "Dienstleistungskategorien (Werteliste)",
+        "name": "Dienstleistungskategorien",
         "description": "Werteliste mit Konzepten, die die Kategorie einer Dienstleistung näher beschreiben.",
         "exampleBoolean": false
       },
@@ -210,8 +113,16 @@
         "reference": {
           "reference": "ValueSet/HealthcareServiceType"
         },
-        "name": "Dienstleistungstyp (Werteliste)",
+        "name": "Dienstleistungstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceDutyHours"
+        },
+        "name": "Dienstzeiten",
+        "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
         "exampleBoolean": false
       },
       {
@@ -220,14 +131,6 @@
         },
         "name": "Dienstzeiten",
         "description": "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/HealthcareServiceDutyHours"
-        },
-        "name": "Dienstzeiten (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
         "exampleBoolean": false
       },
       {
@@ -251,7 +154,7 @@
           "reference": "NamingSystem/EmigaOrgvFileNumber"
         },
         "name": "EMIGA Organizationsverzeichnis Aktenzeichen",
-        "description": "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers",
+        "description": "EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -259,7 +162,7 @@
           "reference": "NamingSystem/EmigaOrgvId"
         },
         "name": "EMIGA Organizationsverzeichnis ID",
-        "description": "EMIGA Organizationsverzeichnis ID to be used in Identifiers",
+        "description": "EMIGA Organizationsverzeichnis ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -326,8 +229,16 @@
         "reference": {
           "reference": "ValueSet/Fachbereich"
         },
-        "name": "Fachbereich (Werteliste)",
-        "description": "TODO",
+        "name": "Fachbereich",
+        "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HealthcareServiceSpecialty"
+        },
+        "name": "Fachspezialisierung",
+        "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
         "exampleBoolean": false
       },
       {
@@ -340,11 +251,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/HealthcareServiceSpecialty"
+          "reference": "HealthcareService/HealthcareService44588971"
         },
-        "name": "Fachspezialisierung (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben.",
-        "exampleBoolean": false
+        "name": "HealthcareService44588971",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/HealthcareService44588973"
+        },
+        "name": "HealthcareService44588973",
+        "description": "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
       },
       {
         "reference": {
@@ -375,7 +293,15 @@
           "reference": "NamingSystem/IneKFileHeaderId"
         },
         "name": "IneK DateiKopf",
-        "description": "TODO",
+        "description": "Dieses NamingSystem beschreibt das Identifikationssystem für die Kennung des Header von IneK-Dateien. Es definiert die formale Identität des verwendeten Identifikators und dient der eindeutigen Referenzierung und Wiederverwendung dieses Identifikationssystems in FHIR-Ressourcen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/IneKFacilityType"
+        },
+        "name": "IneK Einrichtungstyp",
+        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren.",
         "exampleBoolean": false
       },
       {
@@ -384,14 +310,6 @@
         },
         "name": "IneK Einrichtungstyp",
         "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die Verwaltung und Publikation der IneK Einrichtungstypen erfolgt durch das Institut für das Entgeltsystem im Krankenhaus (InEK GmbH). ",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/IneKFacilityType"
-        },
-        "name": "IneK Einrichtungstyp (Werteliste)",
-        "description": "Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus IneK Standortverzeichnis charakterisieren.",
         "exampleBoolean": false
       },
       {
@@ -406,8 +324,8 @@
         "reference": {
           "reference": "StructureDefinition/InekPostalAddress"
         },
-        "name": "IneK Postal Address",
-        "description": "Information about the postal address of a site/location from IneK.",
+        "name": "IneK Postalische Addresse",
+        "description": "Hier wird die postalische Addresse für die Standorte die aus der InEK Krankenhausverzeichnis stammen, definiert.",
         "exampleBoolean": false
       },
       {
@@ -439,7 +357,7 @@
           "reference": "StructureDefinition/IneKVersionPeriod"
         },
         "name": "IneK Version Period",
-        "description": "Information about the version and validity period of a site/location from IneK.",
+        "description": "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses.",
         "exampleBoolean": false
       },
       {
@@ -455,7 +373,7 @@
           "reference": "StructureDefinition/EmigaHospitalOrganization"
         },
         "name": "Krankenhaus",
-        "description": "TODO",
+        "description": "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen.",
         "exampleBoolean": false
       },
       {
@@ -471,7 +389,7 @@
           "reference": "StructureDefinition/EmigaHospitalRoomLocation"
         },
         "name": "Krankenhaus - Raum",
-        "description": "TO DO",
+        "description": "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten.",
         "exampleBoolean": false
       },
       {
@@ -479,14 +397,14 @@
           "reference": "StructureDefinition/EmigaHospitalLocation"
         },
         "name": "Krankenhaus - Standort",
-        "description": "TO DO",
+        "description": "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/HospitalOrganizationType"
         },
-        "name": "Krankenhaus-Organisationstyp (Werteliste)",
+        "name": "Krankenhaus-Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
       },
@@ -513,6 +431,13 @@
       },
       {
         "reference": {
+          "reference": "Location/Location44588965"
+        },
+        "name": "Location44588965",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/OrgVBundleId"
         },
         "name": "Organisations-Bundle-ID",
@@ -531,7 +456,7 @@
         "reference": {
           "reference": "ValueSet/GenericOrganizationType"
         },
-        "name": "Organisationstyp (Werteliste)",
+        "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
       },
@@ -539,9 +464,23 @@
         "reference": {
           "reference": "ValueSet/OrganizationType"
         },
-        "name": "Organisationstyp (Werteliste)",
+        "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization44588980"
+        },
+        "name": "Organization44588980",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization44588981"
+        },
+        "name": "Organization44588981",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
@@ -556,7 +495,15 @@
           "reference": "StructureDefinition/OrgVBundle"
         },
         "name": "Organizationsverzeichnis Bundle",
-        "description": "To Do",
+        "description": "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Organisationsverzeichnisses.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PractitionerRole"
+        },
+        "name": "Personenrolle",
+        "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
         "exampleBoolean": false
       },
       {
@@ -565,14 +512,6 @@
         },
         "name": "Personenrolle",
         "description": "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die die Rolle, die eine Person (Practitioner) innerhalb einer Organisation einnehmen/wahrnehmen kann.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/PractitionerRole"
-        },
-        "name": "Personenrolle (Werteliste)",
-        "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
         "exampleBoolean": false
       },
       {
@@ -593,9 +532,51 @@
       },
       {
         "reference": {
+          "reference": "Practitioner/Practitioner44588966"
+        },
+        "name": "Practitioner44588966",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/Practitioner44588967"
+        },
+        "name": "Practitioner44588967",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/Practitioner44588970"
+        },
+        "name": "Practitioner44588970",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole44588971"
+        },
+        "name": "PractitionerRole44588971",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "Organization/PublicHealth001"
+        },
+        "name": "PublicHealth001",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Location/PublicHealthLocation001"
+        },
+        "name": "PublicHealthLocation001",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/OrgVBundleId"
         },
-        "name": "Relevanz (Werteliste)",
+        "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
         "exampleBoolean": false
       },
@@ -603,8 +584,16 @@
         "reference": {
           "reference": "ValueSet/OrgVBundleVersion"
         },
-        "name": "Relevanz (Werteliste)",
+        "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ORGVResourceVisibilityTypeVS"
+        },
+        "name": "Ressourcensichtbarkeit",
+        "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung der Sichtbarkeit von Ressourcen im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung der Sichtbarkeit von Ressourcen in organisatorischen und fachlichen Prozessen.",
         "exampleBoolean": false
       },
       {
@@ -621,6 +610,14 @@
         },
         "name": "Zuständigkeit der ÖGD-Stellen",
         "description": "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EmigaPublicHealthLocation"
+        },
+        "name": "ÖGD Fachbereich / Standort",
+        "description": "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet.",
         "exampleBoolean": false
       },
       {
