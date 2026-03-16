@@ -1,9 +1,9 @@
-ValueSet: ResponsibilityType
+ValueSet: responsibilityType
 Id: responsibilityType
 Title: "Art der Zuständigkeit OEGD"
 Description: "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden."
 * insert MetadataTerminology
-
+* ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType"
 * ^version = "1.0.0"
 
 * ^expansion.timestamp = "2024-07-23T00:00:00+01:00"

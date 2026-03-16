@@ -5,7 +5,7 @@ Id: PractitionerRole
 * insert MetadataTerminology
 * ^version = "1.1.0"
 * ^date = "2024-03-19"
-
+* ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole"
 * include codes from system PractitionerRole
 
 * $nullflavorCS#OTH "other"
