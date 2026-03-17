@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Validation Issue Overview</title>
+    <title>Profile Loader Report</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="_res/css/style.css">
   </head>
   <body>
-    <h1>Validation report overview</h1>
+    <h1>Profile Loader Report</h1>
     <div>
-      Total validation time: <span>0:00:13.524</span><br/>
-      Total concept count: <span>73</span><br/>
+      Total validation time: <span>0:07:21.495</span><br/>
       <div>
-      <script src="js/table_severity_filter.js"></script>
+      <script src="_res/js/table_severity_filter.js"></script>
       Minimum severity shown:
-      <select id="severity_filter" onchange="filter_table_by_severity(&quot;resource_table&quot;)">
+      <select id="severity_filter" data-table-id="reports_table" onchange="filter_table_by_severity(this.getAttribute('data-table-id'))">
         <option value="info" selected="true">Info</option>
         <option value="warning">Warning</option>
         <option value="error">Error</option>
@@ -21,52 +20,52 @@
       </select>
     </div>
       <div class="fullwidth">
-      <script src="js/table_text_filter.js"></script>
-      <input id="text_filter_input"  class="halfwidth" onkeyup="filter_table_by_input(&quot;resource_table&quot;)" placeholder="Filter text ..."></input>
+      <script src="_res/js/table_text_filter.js"></script>
+      <input id="text_filter_input"  class="halfwidth" data-table-id="reports_table" onkeyup="filter_table_by_input(this.getAttribute('data-table-id'))" placeholder="Filter text ..."></input>
     </div>
     </div>
-    <table id="resource_table">
-      <caption>Table of validated resources</caption>
+    <table id="reports_table">
+      <caption>Table of validation reports</caption>
       <thead>
         <tr>
-          <th>Resource</th>
-          <th>Resource type</th>
-          <th>Concept count</th>
+          <th>Report Name</th>
           <th>Validation time</th>
           <th>Issues</th>
         </tr>
       </thead>
       <tbody>
         <tr class="error">
-          <td><a href="SanityCheck-SanityChecks.html">SanityChecks</a></td>
-          <td>SanityCheck</td>
-          <td></td>
-          <td>0:00:00.135</td>
+          <td><a href="sanityChecks/SanityCheck-SanityChecks.html">Sanity Check Results</a></td>
+          <td>0:00:00.192</td>
           <td>
             
               <span>
-                <img src="icons/info.svg"
+                <img src="_res/icons/info.svg"
                      class="material-icons" alt="info icon"/>
-                info: 5
+                info: 14
               </span><br/>
             
               <span>
-                <img src="icons/error.svg"
+                <img src="_res/icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+              <span>
+                <img src="_res/icons/error.svg"
                      class="material-icons" alt="error icon"/>
-                error: 8
+                error: 5
               </span><br/>
             
           </td>
         </tr>
         <tr class="info">
-          <td><a href="Expansion-Expansions.html">Expansions</a></td>
-          <td>Expansion</td>
-          <td></td>
-          <td>0:00:00.390</td>
+          <td><a href="expansions/Expansion-Expansions.html">Expansion Results</a></td>
+          <td>0:00:00.185</td>
           <td>
             
               <span>
-                <img src="icons/info.svg"
+                <img src="_res/icons/info.svg"
                      class="material-icons" alt="info icon"/>
                 info: 1
               </span><br/>
@@ -74,121 +73,70 @@
           </td>
         </tr>
         <tr class="error">
-          <td><a href="Treeshaking-TreeshakingResults.html">TreeshakingResults</a></td>
-          <td>Treeshaking</td>
-          <td></td>
-          <td>0:00:06.199</td>
+          <td><a href="treeshaking/Treeshaking-TreeshakingResults.html">Treeshaking Results</a></td>
+          <td>0:00:08.794</td>
           <td>
             
               <span>
-                <img src="icons/error.svg"
+                <img src="_res/icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+              <span>
+                <img src="_res/icons/error.svg"
                      class="material-icons" alt="error icon"/>
                 error: 8
               </span><br/>
             
           </td>
         </tr>
-        <tr class="warning">
-          <td><a href="CodeSystem-HealthcareServiceCategory.html">HealthcareServiceCategory</a></td>
-          <td>CodeSystem</td>
-          <td>2</td>
-          <td>0:00:01.602</td>
+        <tr class="error">
+          <td><a href="schemaValidations/overview.html">Schema Validations</a></td>
+          <td>0:01:09.715</td>
           <td>
             
               <span>
-                <img src="icons/warning.svg"
+                <img src="_res/icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 76
+              </span><br/>
+            
+              <span>
+                <img src="_res/icons/warning.svg"
                      class="material-icons" alt="warning icon"/>
-                warn: 2
+                warn: 330
+              </span><br/>
+            
+              <span>
+                <img src="_res/icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 29
               </span><br/>
             
           </td>
         </tr>
-        <tr class="warning">
-          <td><a href="CodeSystem-OrganizationType.html">OrganizationType</a></td>
-          <td>CodeSystem</td>
-          <td>55</td>
-          <td>0:00:00.759</td>
+        <tr class="error">
+          <td><a href="exampleValidations/overview.html">Example Validations</a></td>
+          <td>0:00:04.013</td>
           <td>
             
               <span>
-                <img src="icons/warning.svg"
-                     class="material-icons" alt="warning icon"/>
-                warn: 57
+                <img src="_res/icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 104
               </span><br/>
             
-          </td>
-        </tr>
-        <tr class="warning">
-          <td><a href="CodeSystem-PractitionerRole.html">PractitionerRole</a></td>
-          <td>CodeSystem</td>
-          <td>13</td>
-          <td>0:00:01.551</td>
-          <td>
-            
               <span>
-                <img src="icons/warning.svg"
+                <img src="_res/icons/warning.svg"
                      class="material-icons" alt="warning icon"/>
-                warn: 2
+                warn: 52
               </span><br/>
             
-          </td>
-        </tr>
-        <tr class="warning">
-          <td><a href="CodeSystem-responsibilityType.html">responsibilityType</a></td>
-          <td>CodeSystem</td>
-          <td>3</td>
-          <td>0:00:00.029</td>
-          <td>
-            
               <span>
-                <img src="icons/warning.svg"
-                     class="material-icons" alt="warning icon"/>
-                warn: 2
-              </span><br/>
-            
-          </td>
-        </tr>
-        <tr class="warning">
-          <td><a href="NamingSystem-NamingSystem-CodeSiteId.html">NamingSystem-CodeSiteId</a></td>
-          <td>NamingSystem</td>
-          <td></td>
-          <td>0:00:00.075</td>
-          <td>
-            
-              <span>
-                <img src="icons/warning.svg"
-                     class="material-icons" alt="warning icon"/>
-                warn: 1
-              </span><br/>
-            
-          </td>
-        </tr>
-        <tr class="warning">
-          <td><a href="StructureDefinition-IdentifierCodeSiteId.html">IdentifierCodeSiteId</a></td>
-          <td>StructureDefinition</td>
-          <td></td>
-          <td>0:00:00.213</td>
-          <td>
-            
-              <span>
-                <img src="icons/warning.svg"
-                     class="material-icons" alt="warning icon"/>
-                warn: 1
-              </span><br/>
-            
-          </td>
-        </tr>
-        <tr class="warning">
-          <td><a href="StructureDefinition-ResponsibilityHealthdepartments.html">ResponsibilityHealthdepartments</a></td>
-          <td>StructureDefinition</td>
-          <td></td>
-          <td>0:00:02.568</td>
-          <td>
-            
-              <span>
-                <img src="icons/warning.svg"
-                     class="material-icons" alt="warning icon"/>
-                warn: 5
+                <img src="_res/icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 11
               </span><br/>
             
           </td>

@@ -797,10 +797,9 @@
       ]
     }
   ],
-  "version": "1.2.0",
-  "date": "2025-10-27",
+  "version": "1.2.1",
+  "date": "2026-03-17",
   "caseSensitive": true,
-  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType",
   "hierarchyMeaning": "is-a",
   "count": 55
 }

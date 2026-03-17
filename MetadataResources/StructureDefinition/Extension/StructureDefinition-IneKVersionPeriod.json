@@ -2,20 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "IneKVersionPeriod",
   "url": "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "IneKVersionPeriod",
   "title": "IneK Version Period",
   "status": "active",
   "experimental": false,
-  "date": "2025-06-17",
+  "date": "2026-02-24",
   "publisher": "Robert Koch-Institut",
-  "description": "Information about the version and validity period of a site/location from IneK.",
+  "description": "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [ {
     "type": "element",
     "expression": "Organization"
+  }, {
+    "type": "element",
+    "expression": "Location"
   } ],
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
@@ -29,7 +32,7 @@
       "id": "Extension",
       "path": "Extension",
       "short": "IneK Version Period",
-      "definition": "Information about the version and validity period of a site/location from IneK.",
+      "definition": "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses.",
       "min": 0,
       "max": "*",
       "base": {
@@ -130,7 +133,7 @@
       "id": "Extension.extension:version",
       "path": "Extension.extension",
       "sliceName": "version",
-      "short": "Version number of the site from the IneK source",
+      "short": "Versionsnummer des Datensatzes",
       "definition": "An Extension",
       "min": 0,
       "max": "1",
@@ -325,7 +328,7 @@
       "id": "Extension.extension:validPeriod",
       "path": "Extension.extension",
       "sliceName": "validPeriod",
-      "short": "First day of validity (YYYY-MM-DD, between 1900-01-01 and 2999-12-31)",
+      "short": "Erster Gültigkeitstag (YYYY-MM-DD, zwischen 1900-01-01 und 2999-12-31)",
       "definition": "An Extension",
       "min": 0,
       "max": "1",
@@ -760,7 +763,7 @@
       "id": "Extension.extension:lastChange",
       "path": "Extension.extension",
       "sliceName": "lastChange",
-      "short": "Last change date of the site from the IneK source",
+      "short": "Letztes Änderungsdatum des Standort-Datensatzes",
       "definition": "An Extension",
       "min": 0,
       "max": "1",
@@ -1211,12 +1214,12 @@
       "id": "Extension",
       "path": "Extension",
       "short": "IneK Version Period",
-      "definition": "Information about the version and validity period of a site/location from IneK."
+      "definition": "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses."
     }, {
       "id": "Extension.extension:version",
       "path": "Extension.extension",
       "sliceName": "version",
-      "short": "Version number of the site from the IneK source",
+      "short": "Versionsnummer des Datensatzes",
       "min": 0,
       "max": "1"
     }, {
@@ -1253,7 +1256,7 @@
       "id": "Extension.extension:validPeriod",
       "path": "Extension.extension",
       "sliceName": "validPeriod",
-      "short": "First day of validity (YYYY-MM-DD, between 1900-01-01 and 2999-12-31)",
+      "short": "Erster Gültigkeitstag (YYYY-MM-DD, zwischen 1900-01-01 und 2999-12-31)",
       "min": 0,
       "max": "1"
     }, {
@@ -1293,7 +1296,7 @@
       "id": "Extension.extension:lastChange",
       "path": "Extension.extension",
       "sliceName": "lastChange",
-      "short": "Last change date of the site from the IneK source",
+      "short": "Letztes Änderungsdatum des Standort-Datensatzes",
       "min": 0,
       "max": "1"
     }, {

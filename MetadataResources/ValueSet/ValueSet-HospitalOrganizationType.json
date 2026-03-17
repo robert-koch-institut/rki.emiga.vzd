@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType",
   "version": "1.0.0",
   "name": "HospitalOrganizationType",
-  "title": "Krankenhaus-Organisationstyp (Werteliste)",
+  "title": "Krankenhaus-Organisationstyp",
   "status": "active",
   "experimental": false,
   "date": "2025-10-27",

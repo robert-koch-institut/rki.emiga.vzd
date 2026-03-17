@@ -1,0 +1,74 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 264
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+    "location": [ "Location.meta.security[0]", "Line[1] Col[264]" ],
+    "expression": [ "Location.meta.security[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 356
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility",
+    "location": [ "Location.meta.security[1]", "Line[1] Col[356]" ],
+    "expression": [ "Location.meta.security[1]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 724
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "TERMINOLOGY_TX_HINT"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "TERMINOLOGY_TX_HINT"
+      } ]
+    },
+    "diagnostics": "Code was validated against existing expansion of ValueSet: http://fhir.de/ValueSet/iso/bundeslaender",
+    "location": [ "Location.address.state", "Line[1] Col[724]" ],
+    "expression": [ "Location.address.state" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 830
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Location", "Line[1] Col[830]" ],
+    "expression": [ "Location" ]
+  } ]
+}

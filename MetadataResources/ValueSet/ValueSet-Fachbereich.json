@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich",
   "version": "0.1.0",
   "name": "Fachbereich",
-  "title": "Fachbereich (Werteliste)",
+  "title": "Fachbereich",
   "status": "active",
   "experimental": false,
   "date": "2025-08-01",
@@ -17,11 +17,12 @@
       "value": "https://rki.de"
     } ]
   } ],
-  "description": "TODO",
+  "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen.",
   "compose": {
     "include": [ {
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
     }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
       "concept": [ {
         "code": "ANAE",
         "display": "Anästhesiologie"
@@ -40,8 +41,7 @@
       }, {
         "code": "ALLG",
         "display": "Allgemeinmedizin"
-      } ],
-      "valueSet": [ "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode" ]
+      } ]
     } ]
   },
   "expansion": {
@@ -70,6 +70,14 @@
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
       "code": "3200",
       "display": "Nuklearmedizin"
+    }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+      "code": "ANAE",
+      "display": "Anästhesiologie"
+    }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+      "code": "PHAR",
+      "display": "Pharmakologie"
     }, {
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
       "code": "3160",
@@ -271,6 +279,10 @@
       "code": "0109",
       "display": "Innere Medizin/Schwerpunkt Rheumatologie"
     }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+      "code": "TRAN",
+      "display": "Transfusionsmedizin"
+    }, {
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
       "code": "2928",
       "display": "Allgemeine Psychiatrie/Schwerpunkt Neurologie"
@@ -455,6 +467,10 @@
       "code": "3350",
       "display": "Strahlenheilkunde/Schwerpunkt Radiologie"
     }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+      "code": "REHA",
+      "display": "Physikalische und Rehabilitative Medizin"
+    }, {
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
       "code": "2309",
       "display": "Orthopädie/Schwerpunkt Rheumatologie"
@@ -550,6 +566,14 @@
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
       "code": "2050",
       "display": "Thoraxchirurgie/Schwerpunkt Herzchirurgie Intensivmedizin"
+    }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+      "code": "ALLG",
+      "display": "Allgemeinmedizin"
+    }, {
+      "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+      "code": "RECH",
+      "display": "Rechtsmedizin"
     }, {
       "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
       "code": "1800",

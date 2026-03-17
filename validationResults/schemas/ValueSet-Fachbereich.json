@@ -6,29 +6,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 884
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "http://hl7.org/fhir/StructureDefinition/ValueSet#vsd-2"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "http://hl7.org/fhir/StructureDefinition/ValueSet#vsd-2"
-      } ]
-    },
-    "diagnostics": "Constraint failed: vsd-2: 'A value set with concepts or filters SHALL include a system'",
-    "location": [ "ValueSet.compose.include[1]", "Line[1] Col[884]" ],
-    "expression": [ "ValueSet.compose.include[1]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 22497
+      "valueInteger": 23435
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -42,7 +20,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "ValueSet", "Line[1] Col[22497]" ],
+    "location": [ "ValueSet", "Line[1] Col[23435]" ],
     "expression": [ "ValueSet" ]
   }, {
     "extension": [ {
@@ -50,12 +28,166 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 884
+      "valueInteger": 787
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_CS_CONTENT"
     } ],
-    "severity": "warning",
+    "severity": "information",
     "code": "processing",
-    "diagnostics": "No System specified, so Concepts and Filters can't be checked",
-    "location": [ "ValueSet.compose.include[1]", "Line[1] Col[884]" ],
-    "expression": [ "ValueSet.compose.include[1]" ]
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_CS_CONTENT"
+      } ]
+    },
+    "diagnostics": "The value set references CodeSystem 'http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert' which has status 'fragment'",
+    "location": [ "ValueSet.compose.include[0]", "Line[1] Col[787]" ],
+    "expression": [ "ValueSet.compose.include[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 906
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+      } ]
+    },
+    "diagnostics": "The code 'ANAE' is not valid in the system http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#ANAE')",
+    "location": [ "ValueSet.compose.include[1].concept[0]", "Line[1] Col[906]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 906
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#ANAE'",
+    "location": [ "ValueSet.compose.include[1].concept[0]", "Line[1] Col[906]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 948
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+      } ]
+    },
+    "diagnostics": "The code 'PHAR' is not valid in the system http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#PHAR')",
+    "location": [ "ValueSet.compose.include[1].concept[1]", "Line[1] Col[948]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[1]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1017
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+      } ]
+    },
+    "diagnostics": "The code 'REHA' is not valid in the system http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#REHA')",
+    "location": [ "ValueSet.compose.include[1].concept[2]", "Line[1] Col[1017]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[2]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1059
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+      } ]
+    },
+    "diagnostics": "The code 'RECH' is not valid in the system http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#RECH')",
+    "location": [ "ValueSet.compose.include[1].concept[3]", "Line[1] Col[1059]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[3]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1107
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+      } ]
+    },
+    "diagnostics": "The code 'TRAN' is not valid in the system http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#TRAN')",
+    "location": [ "ValueSet.compose.include[1].concept[4]", "Line[1] Col[1107]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[4]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1152
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "VALUESET_INCLUDE_INVALID_CONCEPT_CODE"
+      } ]
+    },
+    "diagnostics": "The code 'ALLG' is not valid in the system http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (CodeSystem is unknown and can't be validated: http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode for 'http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode#ALLG')",
+    "location": [ "ValueSet.compose.include[1].concept[5]", "Line[1] Col[1152]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[5]" ]
   } ]
 }

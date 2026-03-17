@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "EmigaLocation",
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "name": "EmigaLocation",
   "title": "EMIGA Bereich / Standort",
   "status": "active",
   "experimental": false,
-  "date": "2025-11-18",
+  "date": "2026-03-09",
   "publisher": "Robert Koch-Institut",
   "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
   "fhirVersion": "4.0.1",
@@ -296,7 +296,7 @@
       "short": "Profiles this resource claims to conform to",
       "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
       "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-      "min": 0,
+      "min": 1,
       "max": "*",
       "base": {
         "path": "Meta.profile",
@@ -325,7 +325,7 @@
       "short": "Profiles this resource claims to conform to",
       "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
       "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-      "min": 0,
+      "min": 1,
       "max": "*",
       "base": {
         "path": "Meta.profile",
@@ -336,7 +336,7 @@
         "code": "canonical",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/StructureDefinition" ]
       } ],
-      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|2.0.0-alpha.18",
+      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation",
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -423,7 +423,7 @@
       "isSummary": true,
       "binding": {
         "strength": "required",
-        "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        "valueSet": "https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS"
       }
     }, {
       "id": "Location.meta.security:visibility.id",
@@ -1437,7 +1437,7 @@
       "type": [ {
         "code": "uri"
       } ],
-      "patternUri": "https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId",
+      "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId",
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2266,19 +2266,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:IKNR.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.extension",
       "slicing": {
         "discriminator": [ {
@@ -2302,7 +2297,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2315,15 +2309,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:IKNR.use",
@@ -2342,7 +2335,6 @@
       "type": [ {
         "code": "code"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2364,9 +2356,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "N/A"
       }, {
@@ -2396,7 +2385,6 @@
           "code": "XX"
         } ]
       },
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2405,6 +2393,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -2416,18 +2405,6 @@
         "valueSet": "http://fhir.de/ValueSet/identifier-type-de-basis"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CE/CNE/CWE"
-      }, {
-        "identity": "rim",
-        "map": "CD"
-      }, {
-        "identity": "orim",
-        "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-      }, {
         "identity": "v2",
         "map": "CX.5"
       }, {
@@ -2456,7 +2433,6 @@
         "label": "General",
         "valueUri": "http://www.acme.com/identifiers/patient"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2466,11 +2442,9 @@
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.4 / EI-2-4"
       }, {
@@ -2500,7 +2474,6 @@
         "label": "General",
         "valueString": "123456"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2511,16 +2484,14 @@
       }, {
         "key": "ik-1",
         "severity": "warning",
-        "human": "Eine IK muss 8- (ohne Prüfziffer) oder 9-stellig (mit Prüfziffer) sein",
-        "expression": "matches('[0-9]{8,9}')",
+        "human": "Eine IK muss eine numerische 9-stellige Zeichenkette (mit Prüfziffer) sein",
+        "expression": "matches('^[0-9]{9}$')",
         "source": "http://fhir.de/StructureDefinition/identifier-iknr"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.1 / EI.1"
       }, {
@@ -2535,7 +2506,6 @@
       "path": "Location.identifier.period",
       "short": "Time period when id is/was valid for use",
       "definition": "Time period during which identifier is/was valid for use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min": 0,
       "max": "1",
       "base": {
@@ -2546,7 +2516,6 @@
       "type": [ {
         "code": "Period"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2554,26 +2523,11 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "CX.7 + CX.8"
       }, {
@@ -2600,7 +2554,6 @@
         "code": "Reference",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization" ]
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2608,22 +2561,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ref-1",
-        "severity": "error",
-        "human": "SHALL have a contained resource if a local reference is provided",
-        "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
-        "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
-      }, {
         "identity": "v2",
         "map": "CX.4 / (CX.4,CX.9,CX.10)"
       }, {
@@ -2692,19 +2633,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:BSNR.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.extension",
       "slicing": {
         "discriminator": [ {
@@ -2728,7 +2664,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2741,15 +2676,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:BSNR.use",
@@ -2769,7 +2703,6 @@
         "code": "code"
       } ],
       "fixedCode": "official",
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2791,9 +2724,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "N/A"
       }, {
@@ -2823,7 +2753,6 @@
           "code": "BSNR"
         } ]
       },
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2832,6 +2761,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -2843,18 +2773,6 @@
         "valueSet": "http://fhir.de/ValueSet/identifier-type-de-basis"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CE/CNE/CWE"
-      }, {
-        "identity": "rim",
-        "map": "CD"
-      }, {
-        "identity": "orim",
-        "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-      }, {
         "identity": "v2",
         "map": "CX.5"
       }, {
@@ -2883,7 +2801,6 @@
         "label": "General",
         "valueUri": "http://www.acme.com/identifiers/patient"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2893,11 +2810,9 @@
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.4 / EI-2-4"
       }, {
@@ -2927,7 +2842,6 @@
         "label": "General",
         "valueString": "123456"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2940,14 +2854,12 @@
         "severity": "warning",
         "human": "Eine BSNR muss 9-stellig numerisch sein",
         "expression": "matches('^[0-9]{9}$')",
-        "source": "http://fhir.de/StructureDefinition/identifier-iknr"
+        "source": "http://fhir.de/StructureDefinition/identifier-bsnr"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.1 / EI.1"
       }, {
@@ -2962,7 +2874,6 @@
       "path": "Location.identifier.period",
       "short": "Time period when id is/was valid for use",
       "definition": "Time period during which identifier is/was valid for use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min": 0,
       "max": "1",
       "base": {
@@ -2973,7 +2884,6 @@
       "type": [ {
         "code": "Period"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -2981,25 +2891,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "CX.7 + CX.8"
       }, {
@@ -3026,7 +2921,6 @@
         "code": "Reference",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization" ]
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3034,22 +2928,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ref-1",
-        "severity": "error",
-        "human": "SHALL have a contained resource if a local reference is provided",
-        "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
-        "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
-      }, {
         "identity": "v2",
         "map": "CX.4 / (CX.4,CX.9,CX.10)"
       }, {
@@ -3079,19 +2961,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:BSNR.assigner.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.assigner.extension",
       "slicing": {
         "discriminator": [ {
@@ -3115,7 +2992,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3128,15 +3004,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:BSNR.assigner.reference",
@@ -3154,7 +3029,7 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1", "ref-1" ],
+      "condition": [ "ref-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3163,11 +3038,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -3187,7 +3060,6 @@
       "type": [ {
         "code": "uri"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3196,6 +3068,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -3207,9 +3080,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -3229,7 +3099,6 @@
       "type": [ {
         "code": "Identifier"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3238,20 +3107,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CX / EI (occasionally, more often EI maps to a resource id or a URL)"
-      }, {
-        "identity": "rim",
-        "map": "II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]"
-      }, {
-        "identity": "servd",
-        "map": "Identifier"
-      }, {
         "identity": "rim",
         "map": ".identifier"
       } ]
@@ -3275,19 +3133,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:BSNR.assigner.identifier.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.assigner.identifier.extension",
       "slicing": {
         "discriminator": [ {
@@ -3311,7 +3164,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3324,15 +3176,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:BSNR.assigner.identifier.use",
@@ -3351,7 +3202,6 @@
       "type": [ {
         "code": "code"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3373,9 +3223,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "N/A"
       }, {
@@ -3399,7 +3246,6 @@
       "type": [ {
         "code": "CodeableConcept"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3408,6 +3254,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -3419,18 +3266,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-type"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CE/CNE/CWE"
-      }, {
-        "identity": "rim",
-        "map": "CD"
-      }, {
-        "identity": "orim",
-        "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-      }, {
         "identity": "v2",
         "map": "CX.5"
       }, {
@@ -3459,7 +3294,6 @@
         "label": "General",
         "valueUri": "http://www.acme.com/identifiers/patient"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3468,11 +3302,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.4 / EI-2-4"
       }, {
@@ -3502,7 +3334,6 @@
         "label": "General",
         "valueString": "123456"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3513,15 +3344,13 @@
       }, {
         "key": "bsnr-1",
         "severity": "warning",
-        "human": "Eine BSNR muss neunstellig numerisch sein",
-        "expression": "matches('[0-9]{9}')",
+        "human": "Eine BSNR muss 9-stellig numerisch sein",
+        "expression": "matches('^[0-9]{9}$')",
         "source": "http://fhir.de/StructureDefinition/identifier-bsnr"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.1 / EI.1"
       }, {
@@ -3536,7 +3365,6 @@
       "path": "Location.identifier.assigner.identifier.period",
       "short": "Time period when id is/was valid for use",
       "definition": "Time period during which identifier is/was valid for use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min": 0,
       "max": "1",
       "base": {
@@ -3547,7 +3375,6 @@
       "type": [ {
         "code": "Period"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3555,25 +3382,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "CX.7 + CX.8"
       }, {
@@ -3600,7 +3412,6 @@
         "code": "Reference",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization" ]
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3608,22 +3419,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ref-1",
-        "severity": "error",
-        "human": "SHALL have a contained resource if a local reference is provided",
-        "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
-        "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
-      }, {
         "identity": "v2",
         "map": "CX.4 / (CX.4,CX.9,CX.10)"
       }, {
@@ -3653,7 +3452,6 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3662,11 +3460,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -3729,19 +3525,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:LANR.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.extension",
       "slicing": {
         "discriminator": [ {
@@ -3765,7 +3556,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3778,15 +3568,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:LANR.use",
@@ -3806,7 +3595,6 @@
         "code": "code"
       } ],
       "fixedCode": "official",
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3828,9 +3616,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "N/A"
       }, {
@@ -3860,7 +3645,6 @@
           "code": "LANR"
         } ]
       },
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3869,6 +3653,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -3880,18 +3665,6 @@
         "valueSet": "http://fhir.de/ValueSet/identifier-type-de-basis"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CE/CNE/CWE"
-      }, {
-        "identity": "rim",
-        "map": "CD"
-      }, {
-        "identity": "orim",
-        "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-      }, {
         "identity": "v2",
         "map": "CX.5"
       }, {
@@ -3920,7 +3693,6 @@
         "label": "General",
         "valueUri": "http://www.acme.com/identifiers/patient"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3930,11 +3702,9 @@
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.4 / EI-2-4"
       }, {
@@ -3964,7 +3734,6 @@
         "label": "General",
         "valueString": "123456"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3976,15 +3745,13 @@
         "key": "lanr-1",
         "severity": "warning",
         "human": "Eine LANR muss neunstellig numerisch sein",
-        "expression": "matches('[0-9]{9}')",
+        "expression": "matches('^[0-9]{9}$')",
         "source": "http://fhir.de/StructureDefinition/identifier-lanr"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.1 / EI.1"
       }, {
@@ -3999,7 +3766,6 @@
       "path": "Location.identifier.period",
       "short": "Time period when id is/was valid for use",
       "definition": "Time period during which identifier is/was valid for use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min": 0,
       "max": "1",
       "base": {
@@ -4010,7 +3776,6 @@
       "type": [ {
         "code": "Period"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4018,25 +3783,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "CX.7 + CX.8"
       }, {
@@ -4063,7 +3813,6 @@
         "code": "Reference",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization" ]
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4071,22 +3820,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ref-1",
-        "severity": "error",
-        "human": "SHALL have a contained resource if a local reference is provided",
-        "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
-        "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
-      }, {
         "identity": "v2",
         "map": "CX.4 / (CX.4,CX.9,CX.10)"
       }, {
@@ -4116,19 +3853,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:LANR.assigner.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.assigner.extension",
       "slicing": {
         "discriminator": [ {
@@ -4152,7 +3884,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4165,15 +3896,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:LANR.assigner.reference",
@@ -4191,7 +3921,7 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1", "ref-1" ],
+      "condition": [ "ref-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4200,11 +3930,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -4224,7 +3952,6 @@
       "type": [ {
         "code": "uri"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4233,6 +3960,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -4244,9 +3972,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -4266,7 +3991,6 @@
       "type": [ {
         "code": "Identifier"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4275,20 +3999,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CX / EI (occasionally, more often EI maps to a resource id or a URL)"
-      }, {
-        "identity": "rim",
-        "map": "II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]"
-      }, {
-        "identity": "servd",
-        "map": "Identifier"
-      }, {
         "identity": "rim",
         "map": ".identifier"
       } ]
@@ -4312,19 +4025,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:LANR.assigner.identifier.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.assigner.identifier.extension",
       "slicing": {
         "discriminator": [ {
@@ -4348,7 +4056,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4361,15 +4068,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:LANR.assigner.identifier.use",
@@ -4388,7 +4094,6 @@
       "type": [ {
         "code": "code"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4410,9 +4115,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "N/A"
       }, {
@@ -4436,7 +4138,6 @@
       "type": [ {
         "code": "CodeableConcept"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4445,6 +4146,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -4456,18 +4158,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-type"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CE/CNE/CWE"
-      }, {
-        "identity": "rim",
-        "map": "CD"
-      }, {
-        "identity": "orim",
-        "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-      }, {
         "identity": "v2",
         "map": "CX.5"
       }, {
@@ -4496,7 +4186,6 @@
         "label": "General",
         "valueUri": "http://www.acme.com/identifiers/patient"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4505,11 +4194,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.4 / EI-2-4"
       }, {
@@ -4539,7 +4226,6 @@
         "label": "General",
         "valueString": "123456"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4548,11 +4234,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.1 / EI.1"
       }, {
@@ -4567,7 +4251,6 @@
       "path": "Location.identifier.assigner.identifier.period",
       "short": "Time period when id is/was valid for use",
       "definition": "Time period during which identifier is/was valid for use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min": 0,
       "max": "1",
       "base": {
@@ -4578,7 +4261,6 @@
       "type": [ {
         "code": "Period"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4586,25 +4268,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "CX.7 + CX.8"
       }, {
@@ -4631,7 +4298,6 @@
         "code": "Reference",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization" ]
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4639,22 +4305,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ref-1",
-        "severity": "error",
-        "human": "SHALL have a contained resource if a local reference is provided",
-        "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
-        "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
-      }, {
         "identity": "v2",
         "map": "CX.4 / (CX.4,CX.9,CX.10)"
       }, {
@@ -4684,7 +4338,6 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -4693,11 +4346,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -5465,19 +5116,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.identifier:telematikID.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.identifier.extension",
       "slicing": {
         "discriminator": [ {
@@ -5501,7 +5147,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5514,15 +5159,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.identifier:telematikID.use",
@@ -5541,7 +5185,6 @@
       "type": [ {
         "code": "code"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5563,9 +5206,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "N/A"
       }, {
@@ -5595,7 +5235,6 @@
           "code": "PRN"
         } ]
       },
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5604,6 +5243,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -5615,18 +5255,6 @@
         "valueSet": "http://fhir.de/ValueSet/identifier-type-de-basis"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "CE/CNE/CWE"
-      }, {
-        "identity": "rim",
-        "map": "CD"
-      }, {
-        "identity": "orim",
-        "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-      }, {
         "identity": "v2",
         "map": "CX.5"
       }, {
@@ -5655,7 +5283,6 @@
         "label": "General",
         "valueUri": "http://www.acme.com/identifiers/patient"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5665,11 +5292,9 @@
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.4 / EI-2-4"
       }, {
@@ -5699,7 +5324,6 @@
         "label": "General",
         "valueString": "123456"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5709,11 +5333,9 @@
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "CX.1 / EI.1"
       }, {
@@ -5728,7 +5350,6 @@
       "path": "Location.identifier.period",
       "short": "Time period when id is/was valid for use",
       "definition": "Time period during which identifier is/was valid for use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min": 0,
       "max": "1",
       "base": {
@@ -5739,7 +5360,6 @@
       "type": [ {
         "code": "Period"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5747,25 +5367,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "CX.7 + CX.8"
       }, {
@@ -5792,7 +5397,6 @@
         "code": "Reference",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/Organization" ]
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -5800,22 +5404,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ref-1",
-        "severity": "error",
-        "human": "SHALL have a contained resource if a local reference is provided",
-        "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
-        "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "The target of a resource reference is a RIM entry point (Act, Role, or Entity)"
-      }, {
         "identity": "v2",
         "map": "CX.4 / (CX.4,CX.9,CX.10)"
       }, {
@@ -6187,19 +5779,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Location.address.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.address.extension",
       "slicing": {
         "discriminator": [ {
@@ -6223,7 +5810,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -6236,15 +5822,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Location.address.extension:Stadtteil",
@@ -6277,9 +5862,11 @@
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
         "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
       "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "ADXP[partType=PRE]"
@@ -6435,7 +6022,6 @@
         "label": "General",
         "valueCode": "home"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -6457,9 +6043,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/address-use|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.7"
       }, {
@@ -6489,7 +6072,6 @@
         "label": "General",
         "valueCode": "both"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -6498,6 +6080,7 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "extension": [ {
@@ -6509,9 +6092,6 @@
         "valueSet": "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.18"
       }, {
@@ -6520,9 +6100,6 @@
       }, {
         "identity": "vcard",
         "map": "address type parameter"
-      }, {
-        "identity": "BDT",
-        "map": "1202 (1=physical, 2=postal)"
       } ]
     }, {
       "id": "Location.address.text",
@@ -6545,7 +6122,6 @@
         "label": "General",
         "valueString": "137 Nowhere Street, Erewhon 9132"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -6554,11 +6130,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6"
       }, {
@@ -6573,7 +6147,6 @@
       "path": "Location.address.line",
       "short": "Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung",
       "definition": "Diese Komponente kann Straßennamen, Hausnummer, Appartmentnummer, Postfach, c/o sowie weitere Zustellungshinweise enthalten. Die Informationen können in mehrere line-Komponenten aufgeteilt werden.\r\nBei Verwendung der Extensions, um Straße, Hausnnummer und Postleitzahl strukturiert zu übermitteln, müssen diese Informationen stets vollständig auch in der line-Komponente, die sie erweitern, enthalten sein, um es Systemen, die diese Extensions nicht verwenden zu ermöglichen, auf diese Informationen zugreifen zu können.",
-      "comment": "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "min": 0,
       "max": "3",
       "base": {
@@ -6601,7 +6174,6 @@
           } ]
         }
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -6610,11 +6182,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)"
       }, {
@@ -6626,19 +6196,13 @@
       }, {
         "identity": "servd",
         "map": "./StreetAddress (newline delimitted)"
-      }, {
-        "identity": "KVDT",
-        "map": "3107 + 3109 + 3115 oder 3123"
-      }, {
-        "identity": "BDT",
-        "map": "3107 + 3109 + 3115 oder 3123"
       } ]
     }, {
       "id": "Location.address.line.id",
       "path": "Location.address.line.id",
       "representation": [ "xmlAttr" ],
-      "short": "Unique id for inter-element referencing",
-      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "short": "xml:id (or equivalent in JSON)",
+      "definition": "unique id for the element within a resource (for internal references)",
       "min": 0,
       "max": "1",
       "base": {
@@ -6653,30 +6217,21 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
-      "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      } ]
+      "isModifier": false,
+      "isSummary": false
     }, {
       "id": "Location.address.line.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Location.address.line.extension",
       "slicing": {
         "discriminator": [ {
           "type": "value",
           "path": "url"
         } ],
-        "description": "Extensions are always sliced by (at least) url",
+        "ordered": false,
         "rules": "open"
       },
       "short": "Additional content defined by implementations",
-      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
       "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
       "alias": [ "extensions", "user content" ],
       "min": 0,
@@ -6689,7 +6244,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -6703,15 +6257,10 @@
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
         "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
-      "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
-      } ]
+      "isModifier": false,
+      "isSummary": false
     }, {
       "id": "Location.address.line.extension:Strasse",
       "path": "Location.address.line.extension",
@@ -6743,9 +6292,11 @@
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
         "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
       "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "ADXP[partType=STR]"
@@ -6911,9 +6462,11 @@
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
         "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
       "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "ADXP[partType=BNR]"
@@ -7079,9 +6632,11 @@
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
         "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
       "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "ADXP[partType=ADL]"
@@ -7247,9 +6802,11 @@
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
         "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
       "mustSupport": true,
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "ADXP[partType=POB]"
@@ -7389,7 +6946,7 @@
       "path": "Location.address.line.value",
       "representation": [ "xmlAttr" ],
       "short": "Primitive value for string",
-      "definition": "Primitive value for string",
+      "definition": "The actual value",
       "min": 0,
       "max": "1",
       "base": {
@@ -7407,13 +6964,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
-      "maxLength": 1048576
+      "maxLength": 1048576,
+      "isModifier": false,
+      "isSummary": false
     }, {
       "id": "Location.address.city",
       "path": "Location.address.city",
       "short": "Name of city, town etc.",
       "definition": "The name of the city, town, suburb, village or other community or delivery center.",
-      "comment": "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "alias": [ "Municpality" ],
       "min": 0,
       "max": "1",
@@ -7429,7 +6987,6 @@
         "label": "General",
         "valueString": "Erewhon"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -7445,11 +7002,9 @@
         "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.3"
       }, {
@@ -7461,12 +7016,6 @@
       }, {
         "identity": "servd",
         "map": "./Jurisdiction"
-      }, {
-        "identity": "BDT",
-        "map": "3113 oder 3122 (Postfach)"
-      }, {
-        "identity": "KVDT",
-        "map": "3113 oder 3122 (Postfach)"
       } ]
     }, {
       "id": "Location.address.district",
@@ -7489,7 +7038,6 @@
         "label": "General",
         "valueString": "Madison"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -7498,11 +7046,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.9"
       }, {
@@ -7514,7 +7060,6 @@
       "path": "Location.address.state",
       "short": "Bundesland",
       "definition": "Name (oder Kürzel) des Bundeslandes.",
-      "comment": "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "alias": [ "Province", "Territory" ],
       "min": 0,
       "max": "1",
@@ -7526,7 +7071,6 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -7536,15 +7080,13 @@
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "strength": "preferred",
         "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.4"
       }, {
@@ -7562,7 +7104,6 @@
       "path": "Location.address.postalCode",
       "short": "Postleitzahl",
       "definition": "Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen",
-      "comment": "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "alias": [ "Zip" ],
       "min": 0,
       "max": "1",
@@ -7578,7 +7119,6 @@
         "label": "General",
         "valueString": "9132"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -7594,11 +7134,9 @@
         "source": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
       } ],
       "mustSupport": true,
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.5"
       }, {
@@ -7610,12 +7148,6 @@
       }, {
         "identity": "servd",
         "map": "./PostalIdentificationCode"
-      }, {
-        "identity": "BDT",
-        "map": "3112 oder 3121 (Postfach)"
-      }, {
-        "identity": "KVDT",
-        "map": "3112 oder 3121 (Postfach)"
       } ]
     }, {
       "id": "Location.address.country",
@@ -7633,7 +7165,6 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -7642,15 +7173,13 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "binding": {
         "strength": "preferred",
         "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
       },
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "v2",
         "map": "XAD.6"
       }, {
@@ -7662,19 +7191,12 @@
       }, {
         "identity": "servd",
         "map": "./Country"
-      }, {
-        "identity": "BDT",
-        "map": "3114 oder 3124 (Postfach), abweichendes CodeSystem"
-      }, {
-        "identity": "KVDT",
-        "map": "3114 oder 3124 (Postfach), abweichendes CodeSystem"
       } ]
     }, {
       "id": "Location.address.period",
       "path": "Location.address.period",
       "short": "Time period when address was/is in use",
       "definition": "Time period when address was/is in use.",
-      "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "requirements": "Allows addresses to be placed in historical context.",
       "min": 0,
       "max": "1",
@@ -7693,7 +7215,6 @@
           "end": "2010-07-01"
         }
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -7701,25 +7222,10 @@
         "expression": "hasValue() or (children().count() > id.count())",
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "per-1",
-        "severity": "error",
-        "human": "If present, start SHALL have a lower value than end",
-        "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
+      "isModifier": false,
       "isSummary": true,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR"
-      }, {
-        "identity": "rim",
-        "map": "IVL<TS>[lowClosed=\"true\" and highClosed=\"true\"] or URG<TS>[lowClosed=\"true\" and highClosed=\"true\"]"
-      }, {
         "identity": "v2",
         "map": "XAD.12 / XAD.13 + XAD.14"
       }, {
@@ -7728,164 +7234,6 @@
       }, {
         "identity": "servd",
         "map": "./StartDate and ./EndDate"
-      } ]
-    }, {
-      "id": "Location.address.period.id",
-      "path": "Location.address.period.id",
-      "representation": [ "xmlAttr" ],
-      "short": "Unique id for inter-element referencing",
-      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-      "min": 0,
-      "max": "1",
-      "base": {
-        "path": "Element.id",
-        "min": 0,
-        "max": "1"
-      },
-      "type": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-          "valueUrl": "string"
-        } ],
-        "code": "http://hl7.org/fhirpath/System.String"
-      } ],
-      "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      } ]
-    }, {
-      "id": "Location.address.period.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
-      "path": "Location.address.period.extension",
-      "slicing": {
-        "discriminator": [ {
-          "type": "value",
-          "path": "url"
-        } ],
-        "description": "Extensions are always sliced by (at least) url",
-        "rules": "open"
-      },
-      "short": "Additional content defined by implementations",
-      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias": [ "extensions", "user content" ],
-      "min": 0,
-      "max": "*",
-      "base": {
-        "path": "Element.extension",
-        "min": 0,
-        "max": "*"
-      },
-      "type": [ {
-        "code": "Extension"
-      } ],
-      "condition": [ "ele-1" ],
-      "constraint": [ {
-        "key": "ele-1",
-        "severity": "error",
-        "human": "All FHIR elements must have a @value or children",
-        "expression": "hasValue() or (children().count() > id.count())",
-        "xpath": "@value|f:*|h:div",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      }, {
-        "key": "ext-1",
-        "severity": "error",
-        "human": "Must have either extensions or value[x], not both",
-        "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      } ],
-      "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
-      } ]
-    }, {
-      "id": "Location.address.period.start",
-      "path": "Location.address.period.start",
-      "short": "Starting time with inclusive boundary",
-      "definition": "The start of the period. The boundary is inclusive.",
-      "comment": "If the low element is missing, the meaning is that the low boundary is not known.",
-      "min": 0,
-      "max": "1",
-      "base": {
-        "path": "Period.start",
-        "min": 0,
-        "max": "1"
-      },
-      "type": [ {
-        "code": "dateTime"
-      } ],
-      "condition": [ "ele-1", "per-1" ],
-      "constraint": [ {
-        "key": "ele-1",
-        "severity": "error",
-        "human": "All FHIR elements must have a @value or children",
-        "expression": "hasValue() or (children().count() > id.count())",
-        "xpath": "@value|f:*|h:div",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      } ],
-      "isSummary": true,
-      "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR.1"
-      }, {
-        "identity": "rim",
-        "map": "./low"
-      }, {
-        "identity": "BDT",
-        "map": "8226"
-      } ]
-    }, {
-      "id": "Location.address.period.end",
-      "path": "Location.address.period.end",
-      "short": "End time with inclusive boundary, if not ongoing",
-      "definition": "The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.",
-      "comment": "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.",
-      "min": 0,
-      "max": "1",
-      "base": {
-        "path": "Period.end",
-        "min": 0,
-        "max": "1"
-      },
-      "type": [ {
-        "code": "dateTime"
-      } ],
-      "meaningWhenMissing": "If the end of the period is missing, it means that the period is ongoing",
-      "condition": [ "ele-1", "per-1" ],
-      "constraint": [ {
-        "key": "ele-1",
-        "severity": "error",
-        "human": "All FHIR elements must have a @value or children",
-        "expression": "hasValue() or (children().count() > id.count())",
-        "xpath": "@value|f:*|h:div",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-      } ],
-      "isSummary": true,
-      "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
-        "identity": "v2",
-        "map": "DR.2"
-      }, {
-        "identity": "rim",
-        "map": "./high"
-      }, {
-        "identity": "BDT",
-        "map": "8227"
       } ]
     }, {
       "id": "Location.physicalType",
@@ -8562,14 +7910,15 @@
         } ],
         "rules": "open"
       },
+      "min": 1,
       "mustSupport": true
     }, {
       "id": "Location.meta.profile:emigaprofile",
       "path": "Location.meta.profile",
       "sliceName": "emigaprofile",
-      "min": 0,
+      "min": 1,
       "max": "*",
-      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|2.0.0-alpha.18",
+      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation",
       "mustSupport": true
     }, {
       "id": "Location.meta.security",
@@ -8594,7 +7943,7 @@
       "mustSupport": true,
       "binding": {
         "strength": "required",
-        "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        "valueSet": "https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS"
       }
     }, {
       "id": "Location.meta.security:visibility.system",
@@ -8681,7 +8030,7 @@
       "id": "Location.meta.tag:orgvBundleId.system",
       "path": "Location.meta.tag.system",
       "min": 1,
-      "patternUri": "https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId",
+      "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId",
       "mustSupport": true
     }, {
       "id": "Location.meta.tag:orgvBundleId.code",

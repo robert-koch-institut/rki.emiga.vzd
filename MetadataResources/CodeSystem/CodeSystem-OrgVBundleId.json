@@ -3,12 +3,12 @@
   "id": "OrgVBundleId",
   "language": "de-DE",
   "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "OrgVBundleId",
   "title": "Organisations-Bundle-ID",
   "status": "active",
   "experimental": false,
-  "date": "2025-06-10",
+  "date": "2026-03-09",
   "publisher": "Robert Koch-Institut",
   "contact": [ {
     "name": "Robert Koch-Institut",
@@ -19,6 +19,6 @@
   } ],
   "description": "Die Kodiersystematik Organisations-Bundle-ID definiert Konzepte, die den Organisations-Bundle kennzeichnen.",
   "caseSensitive": true,
-  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleId",
+  "valueSet": "https://emiga.rki.de/fhir/ValueSet/OrgVBundleId",
   "content": "complete"
 }

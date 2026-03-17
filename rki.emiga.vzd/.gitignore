@@ -7,3 +7,5 @@ Thumbs.db
 /output
 /temp
 /template
+/validationResults
+/.vscode

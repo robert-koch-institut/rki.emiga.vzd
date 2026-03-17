@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty",
   "version": "1.0.0",
   "name": "HealthcareServiceSpecialty",
-  "title": "Fachspezialisierung (Werteliste)",
+  "title": "Fachspezialisierung",
   "status": "active",
   "experimental": false,
   "date": "2024-12-27",

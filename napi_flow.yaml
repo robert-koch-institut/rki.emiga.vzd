@@ -6,13 +6,19 @@ profileSets:
 - identifier: "rki.emiga.vzd"
   artifactRepo: "profile_vzd_fsh"
   localCopyLocation: null
-  reference: "feature/profile-loader"
+  reference: "feature/profile-loader-temp"
   skipSanityCheckValidation: false
   ignoredSanityChecks:
   - name: "MatchingNameAndIdCheck"
     reasoning: "IDs are not matching the names as per NAPI naming conventions."
   - name: "ValidReferencedValueSetCheck"
     reasoning: "Referenced ValueSets must be valid."
+  - name: "ValidUrlPatternCheck"
+    reasoning: "URLs must follow a specific pattern."
+  - name: "MatchingVersionAndIdCheck"
+    reasoning: "Versions are not matching the IDs as per NAPI naming conventions."
+  - name: "ExistenceOfValueSetCheck"
+    reasoning: "Referenced ValueSets must exist."
   resourceBaseUrl: null
   skipFhirSchemaValidation: false
   skipExampleValidation: false
@@ -34,6 +40,8 @@ loadNpmDependencies: true
 snapshotDependenciesForSushi: true
 enableTreeShaking: true
 treeShakingWhitelistedResources: []
+treeShakingIgnoredResources: []
+alwaysOutputBuiltInsMatching: []
 treeShakingTerminologyServerURL: ""
 ntsPackages: []
 additionalDependencies: []

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validation Report for Location-Location44588965</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Validation Report for Location-Location44588965</h1>
+    <div>
+      <script src="js/table_severity_filter.js"></script>
+      Minimum severity shown:
+      <select id="severity_filter" data-table-id="issue_table" onchange="filter_table_by_severity(this.getAttribute('data-table-id'))">
+        <option value="info" selected="true">Info</option>
+        <option value="warning">Warning</option>
+        <option value="error">Error</option>
+        <option value="fatal">Fatal</option>
+      </select>
+    </div>
+    <div class="fullwidth">
+      <script src="js/table_text_filter.js"></script>
+      <input id="text_filter_input"  class="halfwidth" data-table-id="issue_table" onkeyup="filter_table_by_input(this.getAttribute('data-table-id'))" placeholder="Filter text ..."></input>
+    </div>
+    <div><div><!--<h1>Operation Outcome</h1>--><!--<select name="color"><option th:each="sevOpt : ${T(de.fraunhofer.fokus.espri.ntsvalidator.Testing).values()}"                th:value="${sevOpt}" th:text="${sevOpt}"></option></select>--><table id="issue_table"><thead><tr><th>Severity</th><th>Code</th><th>Detail</th><th>Location</th><th>Diagnostics</th></tr></thead><!--<tr th:each="issue, iterStat : ${resource.issue}" th:class="${iterStat.even}? 'even' : 'odd'">--><tbody><tr class="info"><td><div><div class="severity-icons"><img src="icons/info.svg" class="material-icons info" alt="info icon"/><span>Information</span></div></div></td><!--<td th:text="${issue.severityElement.value.display}"></td>--><td>PROCESSING</td><td><div></div></td><td>[Location.meta.security[0], Line[1] Col[245]]</td><td>Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS</td></tr><tr class="info"><td><div><div class="severity-icons"><img src="icons/info.svg" class="material-icons info" alt="info icon"/><span>Information</span></div></div></td><!--<td th:text="${issue.severityElement.value.display}"></td>--><td>PROCESSING</td><td><div></div></td><td>[Location.meta.security[1], Line[1] Col[337]]</td><td>Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility</td></tr><tr class="info"><td><div><div class="severity-icons"><img src="icons/info.svg" class="material-icons info" alt="info icon"/><span>Information</span></div></div></td><!--<td th:text="${issue.severityElement.value.display}"></td>--><td>PROCESSING</td><td><div><div><a href="http://hl7.org/fhir/java-core-messageId">http://hl7.org/fhir/java-core-messageId</a><br/><span>TERMINOLOGY_TX_HINT</span></div></div></td><td>[Location.address.state, Line[1] Col[725]]</td><td>Code was validated against existing expansion of ValueSet: http://fhir.de/ValueSet/iso/bundeslaender</td></tr><tr class="warning"><td><div><div class="severity-icons"><img src="icons/warning.svg" class="material-icons warning" alt="warning icon"/><span>Warning</span></div></div></td><!--<td th:text="${issue.severityElement.value.display}"></td>--><td>PROCESSING</td><td><div><div><a href="http://hl7.org/fhir/java-core-messageId">http://hl7.org/fhir/java-core-messageId</a><br/><span>http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6</span></div></div></td><td>[Location, Line[1] Col[836]]</td><td>Constraint failed: dom-6: &apos;A resource should have narrative for robust management&apos; (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr></tbody></table></div></div>
+  </body>
+</html>

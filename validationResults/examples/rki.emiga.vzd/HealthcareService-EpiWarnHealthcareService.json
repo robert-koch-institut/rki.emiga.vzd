@@ -6,43 +6,12 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 177
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
+      "valueInteger": 271
     } ],
-    "severity": "warning",
+    "severity": "information",
     "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.18' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "HealthcareService.meta.profile[0]", "Line[1] Col[177]" ],
-    "expression": [ "HealthcareService.meta.profile[0]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 286
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_TX_NoValid_13"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_TX_NoValid_13"
-      } ]
-    },
-    "diagnostics": "The Coding provided (https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType#public) was not found in the value set 'SecurityLabels' (http://hl7.org/fhir/ValueSet/security-labels|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType#public' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/security-labels')",
-    "location": [ "HealthcareService.meta.security[0]", "Line[1] Col[286]" ],
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+    "location": [ "HealthcareService.meta.security[0]", "Line[1] Col[271]" ],
     "expression": [ "HealthcareService.meta.security[0]" ]
   }, {
     "extension": [ {
@@ -50,21 +19,12 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 378
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_TX_NoValid_13"
+      "valueInteger": 363
     } ],
-    "severity": "warning",
+    "severity": "information",
     "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_TX_NoValid_13"
-      } ]
-    },
-    "diagnostics": "The Coding provided (https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility#1.) was not found in the value set 'SecurityLabels' (http://hl7.org/fhir/ValueSet/security-labels|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility#1.' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/security-labels')",
-    "location": [ "HealthcareService.meta.security[1]", "Line[1] Col[378]" ],
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility",
+    "location": [ "HealthcareService.meta.security[1]", "Line[1] Col[363]" ],
     "expression": [ "HealthcareService.meta.security[1]" ]
   }, {
     "extension": [ {
@@ -72,7 +32,72 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1547
+      "valueInteger": 507
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/Relevance",
+    "location": [ "HealthcareService.meta.tag[0]", "Line[1] Col[507]" ],
+    "expression": [ "HealthcareService.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 741
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory",
+    "location": [ "HealthcareService.category[0]", "Line[1] Col[741]" ],
+    "expression": [ "HealthcareService.category[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 874
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType",
+    "location": [ "HealthcareService.type[0]", "Line[1] Col[874]" ],
+    "expression": [ "HealthcareService.type[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1074
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty",
+    "location": [ "HealthcareService.specialty[0]", "Line[1] Col[1074]" ],
+    "expression": [ "HealthcareService.specialty[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1527
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours",
+    "location": [ "HealthcareService.availableTime[0].extension[0].value.ofType(Coding)", "Line[1] Col[1527]" ],
+    "expression": [ "HealthcareService.availableTime[0].extension[0].value.ofType(Coding)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1532
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -86,50 +111,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "HealthcareService", "Line[1] Col[1547]" ],
+    "location": [ "HealthcareService", "Line[1] Col[1532]" ],
     "expression": [ "HealthcareService" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1547
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
-      } ]
-    },
-    "diagnostics": "Profile reference 'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.18' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
-    "location": [ "HealthcareService.meta.profile[0]", "Line[1] Col[1547]" ],
-    "expression": [ "HealthcareService.meta.profile[0]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 0
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 0
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Validation_VAL_Profile_Unknown"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Validation_VAL_Profile_Unknown"
-      } ]
-    },
-    "diagnostics": "Invalid profile. Failed to retrieve profile with url=https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.18",
-    "location": [ "Line[0] Col[0]" ]
   } ]
 }

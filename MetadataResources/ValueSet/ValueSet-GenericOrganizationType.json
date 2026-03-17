@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType",
   "version": "1.1.1",
   "name": "GenericOrganizationType",
-  "title": "Organisationstyp (Werteliste)",
+  "title": "Organisationstyp",
   "status": "active",
   "experimental": false,
   "date": "2025-11-24",

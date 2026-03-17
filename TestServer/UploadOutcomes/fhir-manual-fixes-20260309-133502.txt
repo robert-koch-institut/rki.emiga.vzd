@@ -1,9 +1,0 @@
-﻿Manual changes required before upload can fully succeed
-Generated: 2026-03-09T13:36:08
-
-1. File: C:\Users\VoulgarisK\.fhir\packages\test.rki.emiga.vzd#2.0.0-alpha.21\package\CodeSystem-OrgVBundleId.json
-   Issue: Server terminology index conflict for CodeSystem version
-   Suggestion: The server already contains a terminology row for codesystem_pid=16 and version=0.1.0. Resolve on server side (clean duplicate terminology entry / reindex terminology for the resource), or upload this CodeSystem with a new version value.
-   Diagnostic: HAPI-0550: HAPI-2223: could not execute batch [Batch entry 0 update trm_codesystem_ver set cs_display=('OrgVBundleId'),codesystem_pid=('16'::int8),cs_version_id=('0.1.0'),partition_id=(NULL),res_id=('1069'::int8) where pid=('253'::int8) was aborted: ERROR: duplicate key value violates unique constraint "idx_codesystem_and_ver"
-  Detail: Key (codesystem_pid, cs_version_id)=(16, 0.1.0) already exists.  Call getNextException to see other errors in the batch.] [update trm_codesystem_ver set cs_display=?,codesystem_pid=?,cs_version_id=?,partition_id=?,res_id=? where pid=?]
-

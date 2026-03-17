@@ -2,11 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "humanname-namenszusatz",
   "url": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
-  "version": "1.4.0",
+  "version": "1.5.4",
   "name": "HumannameNamenszusatz",
   "title": "Extension zur Erfassung der VSDM Namensbestandteile",
   "status": "active",
-  "date": "2020-05-14",
+  "experimental": false,
+  "date": "2025-06-16",
   "publisher": "HL7 Deutschland e.V. (Technisches Komitee FHIR)",
   "contact": [ {
     "telecom": [ {
@@ -14,7 +15,7 @@
       "value": "http://hl7.de/technische-komitees/fhir/"
     } ]
   } ],
-  "description": "Namenszusatz als Bestandteil das Nachnamens, wie in VSDM (Versichertenstammdatenmanagement, \"eGK\") definiert.\r\nBeispiele: Gräfin, Prinz oder Fürst",
+  "description": "Namenszusatz als Bestandteil das Nachnamens, wie in VSDM (Versichertenstammdatenmanagement, \"eGK\") definiert.\nBeispiele: Gräfin, Prinz oder Fürst",
   "copyright": "HL7 Deutschland e.V.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
@@ -39,7 +40,7 @@
       "path": "Extension",
       "short": "Namenszusatz gemäß VSDM (Versichertenstammdatenmanagement, \"eGK\")",
       "definition": "Namenszusatz als Bestandteil das Nachnamens, wie in VSDM (Versichertenstammdatenmanagement, \"eGK\") definiert.\r\nBeispiele: Gräfin, Prinz oder Fürst",
-      "comment": "Die Extension wurde erstellt aufgrund der Anforderung, die auf der eGK vorhandenen Patientenstammdaten in FHIR abbilden zu können. Auf der eGK werden die Namensbestandteile \"Namenszusatz\" und \"Vorsatzwort\" getrennt vom Nachnamen gespeichert. Anhand der Liste der zulässigen Namenszusätze ist deutlich erkennbar, dass es sich hierbei sinngemäß um Adelstitel handelt.\r\nDas Vorsatzwort kann durch die Core-Extension own-prefix (Canonical: http://hl7.org/fhir/StructureDefinition/humanname-own-prefix) abgebildet werden, für den Namenszusatz ergibt sich jedoch die Notwendikeit einer nationalen Extension, da in andern Ländern Adelstitel entweder gar nicht oder als reguläres Namenspräfix erfasst werden.",
+      "comment": "Die Extension wurde erstellt aufgrund der Anforderung, die auf der eGK vorhandenen Patientenstammdaten in FHIR abbilden zu können. Auf der eGK werden die Namensbestandteile \"Namenszusatz\" und \"Vorsatzwort\" getrennt vom Nachnamen gespeichert. Anhand der Liste der zulässigen Namenszusätze ist deutlich erkennbar, dass es sich hierbei sinngemäß um Adelstitel handelt.\r\nDas Vorsatzwort kann durch die Core-Extension own-prefix\t(Canonical: http://hl7.org/fhir/StructureDefinition/humanname-own-prefix) abgebildet werden, für den Namenszusatz ergibt sich jedoch die Notwendikeit einer nationalen Extension, da in andern Ländern Adelstitel entweder gar nicht oder als reguläres Namenspräfix erfasst werden.",
       "min": 0,
       "max": "*",
       "base": {
@@ -60,9 +61,9 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
       } ],
+      "isModifier": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
@@ -90,19 +91,14 @@
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
       } ]
     }, {
       "id": "Extension.extension",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Extension.extension",
       "slicing": {
         "discriminator": [ {
@@ -117,7 +113,7 @@
       "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
       "alias": [ "extensions", "user content" ],
       "min": 0,
-      "max": "*",
+      "max": "0",
       "base": {
         "path": "Element.extension",
         "min": 0,
@@ -126,7 +122,6 @@
       "type": [ {
         "code": "Extension"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -139,15 +134,14 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source": "http://hl7.org/fhir/StructureDefinition/Element"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "n/a"
-      }, {
-        "identity": "rim",
-        "map": "N/A"
       } ]
     }, {
       "id": "Extension.url",
@@ -171,19 +165,14 @@
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
       "fixedUri": "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
         "identity": "rim",
         "map": "N/A"
       } ]
     }, {
       "id": "Extension.value[x]",
-      "extension": [ {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueCode": "normative"
-      }, {
-        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-        "valueCode": "4.0.0"
-      } ],
       "path": "Extension.value[x]",
       "short": "Namenszusatz",
       "definition": "Namenszusatz zum Nachnamen z.B. Gräfin, Prinz oder Fürst",
@@ -197,7 +186,6 @@
       "type": [ {
         "code": "string"
       } ],
-      "condition": [ "ele-1" ],
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -206,10 +194,9 @@
         "xpath": "@value|f:*|h:div",
         "source": "http://hl7.org/fhir/StructureDefinition/Element"
       } ],
+      "isModifier": false,
+      "isSummary": false,
       "mapping": [ {
-        "identity": "rim",
-        "map": "n/a"
-      }, {
         "identity": "rim",
         "map": "N/A"
       } ]
@@ -221,7 +208,11 @@
       "path": "Extension",
       "short": "Namenszusatz gemäß VSDM (Versichertenstammdatenmanagement, \"eGK\")",
       "definition": "Namenszusatz als Bestandteil das Nachnamens, wie in VSDM (Versichertenstammdatenmanagement, \"eGK\") definiert.\r\nBeispiele: Gräfin, Prinz oder Fürst",
-      "comment": "Die Extension wurde erstellt aufgrund der Anforderung, die auf der eGK vorhandenen Patientenstammdaten in FHIR abbilden zu können. Auf der eGK werden die Namensbestandteile \"Namenszusatz\" und \"Vorsatzwort\" getrennt vom Nachnamen gespeichert. Anhand der Liste der zulässigen Namenszusätze ist deutlich erkennbar, dass es sich hierbei sinngemäß um Adelstitel handelt.\r\nDas Vorsatzwort kann durch die Core-Extension own-prefix (Canonical: http://hl7.org/fhir/StructureDefinition/humanname-own-prefix) abgebildet werden, für den Namenszusatz ergibt sich jedoch die Notwendikeit einer nationalen Extension, da in andern Ländern Adelstitel entweder gar nicht oder als reguläres Namenspräfix erfasst werden."
+      "comment": "Die Extension wurde erstellt aufgrund der Anforderung, die auf der eGK vorhandenen Patientenstammdaten in FHIR abbilden zu können. Auf der eGK werden die Namensbestandteile \"Namenszusatz\" und \"Vorsatzwort\" getrennt vom Nachnamen gespeichert. Anhand der Liste der zulässigen Namenszusätze ist deutlich erkennbar, dass es sich hierbei sinngemäß um Adelstitel handelt.\r\nDas Vorsatzwort kann durch die Core-Extension own-prefix\t(Canonical: http://hl7.org/fhir/StructureDefinition/humanname-own-prefix) abgebildet werden, für den Namenszusatz ergibt sich jedoch die Notwendikeit einer nationalen Extension, da in andern Ländern Adelstitel entweder gar nicht oder als reguläres Namenspräfix erfasst werden."
+    }, {
+      "id": "Extension.extension",
+      "path": "Extension.extension",
+      "max": "0"
     }, {
       "id": "Extension.url",
       "path": "Extension.url",

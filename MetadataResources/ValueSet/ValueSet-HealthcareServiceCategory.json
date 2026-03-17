@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory",
   "version": "1.0.0",
   "name": "HealthcareServiceCategory",
-  "title": "Dienstleistungskategorien (Werteliste)",
+  "title": "Dienstleistungskategorien",
   "status": "active",
   "experimental": false,
   "date": "2024-03-19",

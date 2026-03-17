@@ -1,0 +1,52 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ORGVResourceVisibilityTypeVS",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+  "version": "0.1.0",
+  "name": "ORGVResourceVisibilityTypeVS",
+  "title": "Ressourcensichtbarkeit",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-09",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung der Sichtbarkeit von Ressourcen im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung der Sichtbarkeit von Ressourcen in organisatorischen und fachlichen Prozessen.",
+  "compose": {
+    "include": [ {
+      "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+      "concept": [ {
+        "code": "public",
+        "display": "öffentlich"
+      }, {
+        "code": "inPublicHealthService",
+        "display": "ÖGD-weit"
+      }, {
+        "code": "inAgency",
+        "display": "Eigene ÖGD-Stelle"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2026-03-09T00:00:00+01:00",
+    "contains": [ {
+      "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+      "code": "inPublicHealthService",
+      "display": "ÖGD-weit"
+    }, {
+      "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+      "code": "public",
+      "display": "öffentlich"
+    }, {
+      "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+      "code": "inAgency",
+      "display": "Eigene ÖGD-Stelle"
+    } ]
+  }
+}

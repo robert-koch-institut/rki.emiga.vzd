@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schema Validations</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Schema Validations</h1>
+    <div>
+      Total validation time: <span>0:01:09.715</span><br/>
+      Total concept count: <span>118</span><br/>
+      <div>
+      <script src="js/table_severity_filter.js"></script>
+      Minimum severity shown:
+      <select id="severity_filter" data-table-id="resource_table" onchange="filter_table_by_severity(this.getAttribute('data-table-id'))">
+        <option value="info" selected="true">Info</option>
+        <option value="warning">Warning</option>
+        <option value="error">Error</option>
+        <option value="fatal">Fatal</option>
+      </select>
+    </div>
+      <div class="fullwidth">
+      <script src="js/table_text_filter.js"></script>
+      <input id="text_filter_input"  class="halfwidth" data-table-id="resource_table" onkeyup="filter_table_by_input(this.getAttribute('data-table-id'))" placeholder="Filter text ..."></input>
+    </div>
+    </div>
+    <table id="resource_table">
+      <caption>Table of validated resources</caption>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Resource type</th>
+          <th>Concept count</th>
+          <th>Validation time</th>
+          <th>Issues</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="warning">
+          <td><a href="CodeSystem-HealthcareServiceCategory.html">HealthcareServiceCategory</a></td>
+          <td>CodeSystem</td>
+          <td>2</td>
+          <td>0:00:00.051</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="CodeSystem-HealthcareServiceDutyHours.html">HealthcareServiceDutyHours</a></td>
+          <td>CodeSystem</td>
+          <td>3</td>
+          <td>0:00:00.081</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="CodeSystem-HealthcareServiceSpecialty.html">HealthcareServiceSpecialty</a></td>
+          <td>CodeSystem</td>
+          <td>25</td>
+          <td>0:00:00.067</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 51
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="CodeSystem-IneKFacilityType.html">IneKFacilityType</a></td>
+          <td>CodeSystem</td>
+          <td>17</td>
+          <td>0:00:00.027</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="CodeSystem-OrganizationType.html">OrganizationType</a></td>
+          <td>CodeSystem</td>
+          <td>55</td>
+          <td>0:00:00.191</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 107
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="CodeSystem-OrgVBundleId.html">OrgVBundleId</a></td>
+          <td>CodeSystem</td>
+          <td></td>
+          <td>0:00:00.021</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="CodeSystem-OrgVBundleVersion.html">OrgVBundleVersion</a></td>
+          <td>CodeSystem</td>
+          <td></td>
+          <td>0:00:01.879</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="CodeSystem-PractitionerRole.html">PractitionerRole</a></td>
+          <td>CodeSystem</td>
+          <td>13</td>
+          <td>0:00:00.117</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="CodeSystem-responsibilityType.html">responsibilityType</a></td>
+          <td>CodeSystem</td>
+          <td>3</td>
+          <td>0:00:00.032</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="NamingSystem-NamingSystem-CodeSiteId.html">NamingSystem-CodeSiteId</a></td>
+          <td>NamingSystem</td>
+          <td></td>
+          <td>0:00:00.035</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="NamingSystem-NamingSystem-EmigaOrgvFileNumber.html">NamingSystem-EmigaOrgvFileNumber</a></td>
+          <td>NamingSystem</td>
+          <td></td>
+          <td>0:00:00.026</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="NamingSystem-NamingSystem-EmigaOrgvId.html">NamingSystem-EmigaOrgvId</a></td>
+          <td>NamingSystem</td>
+          <td></td>
+          <td>0:00:00.028</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="NamingSystem-NamingSystem-IneKFileHeaderId.html">NamingSystem-IneKFileHeaderId</a></td>
+          <td>NamingSystem</td>
+          <td></td>
+          <td>0:00:00.028</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-DutyHoursAvailability.html">DutyHoursAvailability</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:10.138</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaDepartmentOrganization.html">EmigaDepartmentOrganization</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:01.096</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 12
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaHealthcareService.html">EmigaHealthcareService</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.400</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 9
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 8
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 7
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaHospitalFacilityLocation.html">EmigaHospitalFacilityLocation</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.995</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 4
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-EmigaHospitalLocation.html">EmigaHospitalLocation</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.917</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 5
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-EmigaHospitalOrganization.html">EmigaHospitalOrganization</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:01.085</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 8
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaHospitalRoomLocation.html">EmigaHospitalRoomLocation</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.641</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-EmigaLocation.html">EmigaLocation</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:01.004</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 5
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaOrganization.html">EmigaOrganization</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:07.014</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 8
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-EmigaPractitioner.html">EmigaPractitioner</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.532</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 7
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaPractitionerRole.html">EmigaPractitionerRole</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.573</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 6
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-EmigaPublicHealthLocation.html">EmigaPublicHealthLocation</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.670</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 5
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="StructureDefinition-EmigaPublicHealthOrganization.html">EmigaPublicHealthOrganization</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.718</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 8
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-IdentifierCodeSiteId.html">IdentifierCodeSiteId</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.092</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-IdentifierEmigaOrgvFileNumber.html">IdentifierEmigaOrgvFileNumber</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.144</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-IdentifierEmigaOrgvId.html">IdentifierEmigaOrgvId</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:00.108</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-InekPostalAddress.html">InekPostalAddress</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:06.289</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-IneKVersionPeriod.html">IneKVersionPeriod</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:06.456</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-OrgVBundle.html">OrgVBundle</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:01.040</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 1
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-ResponsibilityHealthdepartments.html">ResponsibilityHealthdepartments</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:13.814</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="StructureDefinition-UTMCoordinates.html">UTMCoordinates</a></td>
+          <td>StructureDefinition</td>
+          <td></td>
+          <td>0:00:09.313</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-AddressTypePhysicalBoth.html">AddressTypePhysicalBoth</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.030</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="ValueSet-Fachbereich.html">Fachbereich</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.893</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 2
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 6
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-GenericOrganizationType.html">GenericOrganizationType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.147</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-HealthcareServiceCategory.html">HealthcareServiceCategory</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.027</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-HealthcareServiceDutyHours.html">HealthcareServiceDutyHours</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.023</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-HealthcareServiceSpecialty.html">HealthcareServiceSpecialty</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.030</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-HealthcareServiceType.html">HealthcareServiceType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.236</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 16
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-HospitalOrganizationType.html">HospitalOrganizationType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.024</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-IneKFacilityType.html">IneKFacilityType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.025</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-OrganizationType.html">OrganizationType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.083</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 27
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-OrgVBundleId.html">OrgVBundleId</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.025</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-OrgVBundleVersion.html">OrgVBundleVersion</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.022</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-ORGVResourceVisibilityTypeVS.html">ORGVResourceVisibilityTypeVS</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:02.104</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-PractitionerRole.html">PractitionerRole</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.273</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-PublicHealthOrganizationType.html">PublicHealthOrganizationType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.073</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 5
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="ValueSet-responsibilityType.html">responsibilityType</a></td>
+          <td>ValueSet</td>
+          <td></td>
+          <td>0:00:00.058</td>
+          <td>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

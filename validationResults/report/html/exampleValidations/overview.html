@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Validations</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Example Validations</h1>
+    <div>
+      Total validation time: <span>0:00:04.013</span><br/>
+      Total concept count: <span>0</span><br/>
+      <div>
+      <script src="js/table_severity_filter.js"></script>
+      Minimum severity shown:
+      <select id="severity_filter" data-table-id="resource_table" onchange="filter_table_by_severity(this.getAttribute('data-table-id'))">
+        <option value="info" selected="true">Info</option>
+        <option value="warning">Warning</option>
+        <option value="error">Error</option>
+        <option value="fatal">Fatal</option>
+      </select>
+    </div>
+      <div class="fullwidth">
+      <script src="js/table_text_filter.js"></script>
+      <input id="text_filter_input"  class="halfwidth" data-table-id="resource_table" onkeyup="filter_table_by_input(this.getAttribute('data-table-id'))" placeholder="Filter text ..."></input>
+    </div>
+    </div>
+    <table id="resource_table">
+      <caption>Table of validated resources</caption>
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Resource type</th>
+          <th>Concept count</th>
+          <th>Validation time</th>
+          <th>Issues</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="warning">
+          <td><a href="HealthcareService-HealthcareService-EpiWarnHealthcareService.html">HealthcareService-EpiWarnHealthcareService</a></td>
+          <td>HealthcareService</td>
+          <td></td>
+          <td>0:00:00.050</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="HealthcareService-HealthcareService-EpiWarnHealthcareServiceInvTest.html">HealthcareService-EpiWarnHealthcareServiceInvTest</a></td>
+          <td>HealthcareService</td>
+          <td></td>
+          <td>0:00:00.052</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 7
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="HealthcareService-HealthcareService-HealthcareService44588971.html">HealthcareService-HealthcareService44588971</a></td>
+          <td>HealthcareService</td>
+          <td></td>
+          <td>0:00:00.097</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="HealthcareService-HealthcareService-HealthcareService44588973.html">HealthcareService-HealthcareService44588973</a></td>
+          <td>HealthcareService</td>
+          <td></td>
+          <td>0:00:00.520</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="Location-Location-EpiWarnLocation.html">Location-EpiWarnLocation</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.253</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Location-Location-HospitalRoomLocation.html">Location-HospitalRoomLocation</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.122</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Location-Location-InekEinricthung01.html">Location-InekEinricthung01</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.067</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Location-Location-InekEinricthung02.html">Location-InekEinricthung02</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.275</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="Location-Location-IneKStandort.html">Location-IneKStandort</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.224</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 6
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="Location-Location-LaborLocation.html">Location-LaborLocation</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.155</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="Location-Location-LaborLocationSub.html">Location-LaborLocationSub</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.060</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Location-Location-Location44588965.html">Location-Location44588965</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.211</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Location-Location-PublicHealthLocation001.html">Location-PublicHealthLocation001</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.069</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Location-Location-Station01.html">Location-Station01</a></td>
+          <td>Location</td>
+          <td></td>
+          <td>0:00:00.047</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 6
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Organization-Organization-EpiWarnOrganization.html">Organization-EpiWarnOrganization</a></td>
+          <td>Organization</td>
+          <td></td>
+          <td>0:00:00.047</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 5
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="error">
+          <td><a href="Organization-Organization-InekKrankenhausOrganization.html">Organization-InekKrankenhausOrganization</a></td>
+          <td>Organization</td>
+          <td></td>
+          <td>0:00:00.234</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/error.svg"
+                     class="material-icons" alt="error icon"/>
+                error: 5
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Organization-Organization-LaborOrganization.html">Organization-LaborOrganization</a></td>
+          <td>Organization</td>
+          <td></td>
+          <td>0:00:00.139</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 5
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Organization-Organization-Organization44588980.html">Organization-Organization44588980</a></td>
+          <td>Organization</td>
+          <td></td>
+          <td>0:00:00.057</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 5
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Organization-Organization-Organization44588981.html">Organization-Organization44588981</a></td>
+          <td>Organization</td>
+          <td></td>
+          <td>0:00:00.087</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 3
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Organization-Organization-PublicHealth001.html">Organization-PublicHealth001</a></td>
+          <td>Organization</td>
+          <td></td>
+          <td>0:00:00.517</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 5
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 2
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Practitioner-Practitioner-EpiWarnPractitioner.html">Practitioner-EpiWarnPractitioner</a></td>
+          <td>Practitioner</td>
+          <td></td>
+          <td>0:00:00.044</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Practitioner-Practitioner-Practitioner44588966.html">Practitioner-Practitioner44588966</a></td>
+          <td>Practitioner</td>
+          <td></td>
+          <td>0:00:00.037</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 2
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="Practitioner-Practitioner-Practitioner44588970.html">Practitioner-Practitioner44588970</a></td>
+          <td>Practitioner</td>
+          <td></td>
+          <td>0:00:00.170</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 2
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="PractitionerRole-PractitionerRole-EpiWarnPractitionerRole.html">PractitionerRole-EpiWarnPractitionerRole</a></td>
+          <td>PractitionerRole</td>
+          <td></td>
+          <td>0:00:00.198</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 4
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="PractitionerRole-PractitionerRole-Practitioner44588967.html">PractitionerRole-Practitioner44588967</a></td>
+          <td>PractitionerRole</td>
+          <td></td>
+          <td>0:00:00.134</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+        <tr class="warning">
+          <td><a href="PractitionerRole-PractitionerRole-PractitionerRole44588971.html">PractitionerRole-PractitionerRole44588971</a></td>
+          <td>PractitionerRole</td>
+          <td></td>
+          <td>0:00:00.143</td>
+          <td>
+            
+              <span>
+                <img src="icons/info.svg"
+                     class="material-icons" alt="info icon"/>
+                info: 3
+              </span><br/>
+            
+              <span>
+                <img src="icons/warning.svg"
+                     class="material-icons" alt="warning icon"/>
+                warn: 1
+              </span><br/>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

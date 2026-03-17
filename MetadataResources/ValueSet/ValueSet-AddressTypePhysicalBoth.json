@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBoth",
   "version": "1.0.0",
   "name": "AddressTypePhysicalBoth",
-  "title": "Addressentyp  (Werteliste)",
+  "title": "Addressentyp",
   "status": "active",
   "experimental": false,
   "date": "2025-07-11",

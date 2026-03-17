@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "EmigaPractitionerRole",
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "EmigaPractitionerRole",
   "title": "Practitioner Role",
   "status": "active",
   "experimental": false,
-  "date": "2024-03-18",
+  "date": "2026-03-09",
   "publisher": "Robert Koch-Institut",
   "description": "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird.",
   "fhirVersion": "4.0.1",
@@ -302,7 +302,7 @@
       "short": "Profiles this resource claims to conform to",
       "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
       "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-      "min": 0,
+      "min": 1,
       "max": "*",
       "base": {
         "path": "Meta.profile",
@@ -331,7 +331,7 @@
       "short": "Profiles this resource claims to conform to",
       "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
       "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-      "min": 0,
+      "min": 1,
       "max": "*",
       "base": {
         "path": "Meta.profile",
@@ -342,7 +342,7 @@
         "code": "canonical",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/StructureDefinition" ]
       } ],
-      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole|2.0.0-alpha.18",
+      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole",
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -429,7 +429,7 @@
       "isSummary": true,
       "binding": {
         "strength": "required",
-        "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        "valueSet": "https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS"
       }
     }, {
       "id": "PractitionerRole.meta.security:visibility.id",
@@ -1443,7 +1443,7 @@
       "type": [ {
         "code": "uri"
       } ],
-      "patternUri": "https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId",
+      "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId",
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -3466,14 +3466,15 @@
         } ],
         "rules": "open"
       },
+      "min": 1,
       "mustSupport": true
     }, {
       "id": "PractitionerRole.meta.profile:emigaprofile",
       "path": "PractitionerRole.meta.profile",
       "sliceName": "emigaprofile",
-      "min": 0,
+      "min": 1,
       "max": "*",
-      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole|2.0.0-alpha.18",
+      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole",
       "mustSupport": true
     }, {
       "id": "PractitionerRole.meta.security",
@@ -3498,7 +3499,7 @@
       "mustSupport": true,
       "binding": {
         "strength": "required",
-        "valueSet": "https://emiga.rki.de/fhir/common/ValueSet/ResourceVisibilityType"
+        "valueSet": "https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS"
       }
     }, {
       "id": "PractitionerRole.meta.security:visibility.system",
@@ -3585,7 +3586,7 @@
       "id": "PractitionerRole.meta.tag:orgvBundleId.system",
       "path": "PractitionerRole.meta.tag.system",
       "min": 1,
-      "patternUri": "https://emiga.rki.de/fhir/CodeSystem/OrgVBundleId",
+      "patternUri": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId",
       "mustSupport": true
     }, {
       "id": "PractitionerRole.meta.tag:orgvBundleId.code",
