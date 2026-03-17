@@ -15,7 +15,7 @@ Usage: #example
 * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
 * address.line.extension[=].valueString = "4"
 * address.city = "Hannover"
-* address.state = "Niedersachsen"
+* address.state = "DE-NI"
 * address.postalCode = "30161"
 * address.country = "DE"
 * managingOrganization = Reference(EpiWarnOrganization)

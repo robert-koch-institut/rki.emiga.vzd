@@ -4,8 +4,8 @@ Id: EmigaOrganization
 Title: "EMIGA Organization"
 Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
-* ^version = "1.3.0"
-* ^date = "2026-03-09"
+* ^version = "1.3.1"
+* ^date = "2026-03-17"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -21,7 +21,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um den Zeitraum der Gültigkeit abzubilden
 * extension MS
-* extension contains $OrganizationPeriod named organizationPeriod 0..*
+* extension contains $OrganizationPeriod named organizationPeriod 0..1
 * extension[organizationPeriod] ^isModifier = false
 * extension[organizationPeriod] ^mustSupport = true
 * extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"

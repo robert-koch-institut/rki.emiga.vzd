@@ -190,16 +190,16 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 * address.type ^definition = "Kennzeichnet den physische Addressen-Typ, z.B. ob es sich um  eine Besuchsadresse handelt oder eine Postanschrift und eine Besuchsadresse."
 * address.type.value MS
 //* address.type ^comment = "Es wird benötigt um den physische Addressen-Typ zu kennzeichnen, z.B. ob es sich um eine Postanschrift oder eine Besuchsadresse handelt."
-* address.extension contains $MunicipalityKey named municipalityKey 0..1 MS
-* address.extension[municipalityKey] ^short = "Gemeindeschlüssel"
-* address.extension[municipalityKey] ^definition = "Amtlicher Gemeindeschlüssel (AGS) der Gemeinde, in der sich der Standort befindet."
-* address.extension[municipalityKey] ^mustSupport = true
-* address.extension[municipalityKey].valueCoding MS
-* address.extension[municipalityKey].valueCoding.system MS
-* address.extension[municipalityKey].valueCoding.code MS
-* address.extension[municipalityKey].valueCoding ^short = "Gemeindeschlüssel"
-* address.extension[municipalityKey].valueCoding ^definition = "Der Gemeindeschlüssel (AGS) ist ein eindeutiger Identifikator für jede Gemeinde in Deutschland."
-* address.extension[municipalityKey].valueCoding ^mustSupport = true
+* address.city.extension contains $MunicipalityKey named municipalityKey 0..1 MS
+* address.city.extension[municipalityKey] ^short = "Gemeindeschlüssel"
+* address.city.extension[municipalityKey] ^definition = "Amtlicher Gemeindeschlüssel (AGS) der Gemeinde, in der sich der Standort befindet."
+* address.city.extension[municipalityKey] ^mustSupport = true
+* address.city.extension[municipalityKey].valueCoding MS
+* address.city.extension[municipalityKey].valueCoding.system MS
+* address.city.extension[municipalityKey].valueCoding.code MS
+* address.city.extension[municipalityKey].valueCoding ^short = "Gemeindeschlüssel"
+* address.city.extension[municipalityKey].valueCoding ^definition = "Der Gemeindeschlüssel (AGS) ist ein eindeutiger Identifikator für jede Gemeinde in Deutschland."
+* address.city.extension[municipalityKey].valueCoding ^mustSupport = true
 * address.extension[Stadtteil] ^mustSupport = true
 * address.extension[Stadtteil].valueString MS
 * address.extension[Stadtteil].valueString obeys validString

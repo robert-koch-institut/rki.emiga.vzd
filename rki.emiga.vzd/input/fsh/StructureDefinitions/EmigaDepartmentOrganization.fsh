@@ -4,8 +4,8 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.2.0"
-* ^date = "2026-03-09"
+* ^version = "1.2.1"
+* ^date = "2026-03-17"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -19,7 +19,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 // Update: extension benuzt um den Zeitraum der Gültigkeit der Organisation abzubilden
 * extension MS
-* extension contains $OrganizationPeriod named organizationPeriod 0..*
+* extension contains $OrganizationPeriod named organizationPeriod 0..1
 * extension[organizationPeriod] ^isModifier = false
 * extension[organizationPeriod] ^mustSupport = true
 * extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"

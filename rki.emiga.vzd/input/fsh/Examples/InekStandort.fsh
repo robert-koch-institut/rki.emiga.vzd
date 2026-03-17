@@ -33,9 +33,9 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * mode = #instance
 * address.type = #both
 * address.line = "Am Krankenhaus 2"
-* address.extension[municipalityKey].url = "http://fhir.de/StructureDefinition/destatis/ags"
-* address.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
-* address.extension[municipalityKey].valueCoding.code = #05570052
+* address.city.extension[municipalityKey].url = "http://fhir.de/StructureDefinition/destatis/ags"
+* address.city.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
+* address.city.extension[municipalityKey].valueCoding.code = #05570052
 
 * address.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
 * address.line.extension[Strasse].valueString = "Am Krankenhaus"
@@ -59,4 +59,4 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 //* address.country = "DE"
 * managingOrganization.identifier.system = $identifier-iknr
 * managingOrganization.identifier.value = "260551132"
-* managingOrganization.identifier.extension[inekVersionPeriod].extension[version].valueInteger = 1
+//* managingOrganization.identifier.extension[inekVersionPeriod].extension[version].valueInteger = 1

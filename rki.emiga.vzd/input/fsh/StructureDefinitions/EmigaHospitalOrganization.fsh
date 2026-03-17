@@ -22,14 +22,7 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
 // Update: extension benuzt um den Zeitraum der Gültigkeit abzubilden
 * extension MS
 * extension contains $IneKVersionPeriod named inekVersionPeriod 0..1 MS
-/*
-* extension contains $OrganizationPeriod named organizationPeriod 0..*
-* extension[organizationPeriod] ^isModifier = false
-* extension[organizationPeriod] ^mustSupport = true
-* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
-* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
-* modifierExtension ..0
-*/
+
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)

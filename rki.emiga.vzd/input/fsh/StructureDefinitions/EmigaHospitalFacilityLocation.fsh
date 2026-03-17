@@ -195,8 +195,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * address.type 0..1 MS
 * address.type ^short = "Addressen-Typ"
 * address.type ^definition = "Kennzeichnet den physische Addressen-Typ"
-* address.type.value MS
-* address.type.value = #physical (exactly)
+* address.type = #physical
 //* address.type ^comment = "Es wird benötigt um den physische Addressen-Typ zu kennzeichnen, z.B. ob es sich um eine Postanschrift oder eine Besuchsadresse handelt."
 
 * address.extension[Stadtteil] ^mustSupport = true

@@ -3,11 +3,12 @@ Id: HealthcareServiceSpecialty
 Title: "Fachspezialisierung"
 Description: "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben"
 * insert MetadataTerminology
-* ^version = "1.1.0"
-* ^date = "2025-03-03"
+* ^version = "1.1.1"
+* ^date = "2026-03-17"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty"
+* ^url = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty"
+//* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty"
 
 * #crisisMngmnt "Krisenmanagement"
 * #crisisMngmnt ^designation[0].language = #en-US

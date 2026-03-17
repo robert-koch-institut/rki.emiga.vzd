@@ -6,7 +6,7 @@ Id: HealthcareServiceSpecialty
 * ^version = "1.0.0"
 * ^date = "2024-12-27"
 
-* include codes from system HealthcareServiceSpecialty
+* include codes from system $HealthcareServiceSpecialtyCS
 
 * $nullflavorCS#OTH "other"
 * $nullflavorCS#OTH ^designation[0].use = $HL7DesignationUse#display

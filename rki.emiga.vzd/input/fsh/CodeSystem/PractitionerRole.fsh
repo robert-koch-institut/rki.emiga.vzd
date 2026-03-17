@@ -7,7 +7,7 @@ Description: "Die Kodiersystematik 'PractitionerRole' definiert Konzepte, die di
 * ^date = "2024-12-18"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole"
+//* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole"
 
 * #headOfDivision "Abteilungsleiter/Abteilungsleiterin"
 * #publicMedicalOfficer "Amtsärztlicher Dienst"

@@ -3,11 +3,11 @@ Id: OrganizationType
 Title: "Organizationstyp"
 Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
 * insert MetadataTerminology
-* ^version = "1.2.0"
-* ^date = "2025-10-27"
+* ^version = "1.2.1"
+* ^date = "2026-03-17"
 * ^caseSensitive = true
 * ^content = #complete
-* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
+//* ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
 * ^hierarchyMeaning = #is-a
 
 * #ga "Gesundheitsamt"

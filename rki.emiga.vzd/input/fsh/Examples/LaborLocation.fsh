@@ -26,7 +26,7 @@ Usage: #example
 * address.line.extension[1].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
 * address.line.extension[1].valueString = "6"
 * address.city = "Hannover"
-* address.state = "Niedersachsen"
+* address.state = "DE-NI"
 * address.postalCode = "30161"
 * address.country = "DE"
 * position.latitude = 52.3755

@@ -6,6 +6,7 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation a
 * ^version = "1.1.1"
 * ^date = "2025-10-27"
 * ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
+
 * include codes from system $DemisOrgType
 
 * $OrganizationType#authority "Behörde"

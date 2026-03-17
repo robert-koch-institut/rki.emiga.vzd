@@ -5,7 +5,7 @@ Title: "ÖGD Organisation"
 Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
 
 * ^version = "1.2.0"
-* ^date = "2026-03-09"
+* ^date = "2026-03-17"
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
@@ -20,7 +20,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 // Update: extension benuzt um die Art derZuständigkeit und den Zeitraum der Gültigkeit abzubilden
 * extension 1.. MS
 //* extension ^definition = "Art der Zuständigkeit"
-* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..* and $OrganizationPeriod named organizationPeriod 0..*
+* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..* and $OrganizationPeriod named organizationPeriod 0..1
 * extension[organizationPeriod] ^isModifier = false
 * extension[organizationPeriod] ^mustSupport = true
 * extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
