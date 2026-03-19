@@ -16,12 +16,12 @@ HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareServi
 HealthcareService-EpiWarnHealthcareServiceInvTest.json    EpiWarnHealthcareServiceInvTest       Instance    Examples\EpiWarnHealthcareServiceInvTest.fsh                       1 - 36
 HealthcareService-healthcareservice-maximal-01.json       EmigaHealthcareServiceMaximal         Instance    Examples\HealthcareService-maximal.fsh                             1 - 116
 Location-44588965.json                                    44588965                              Instance    Examples\Location-44588965.fsh                                     1 - 20
-Location-EmigaHospitalLocationMaximal.json                EmigaHospitalLocationMaximal          Instance    Examples\EmigaHospitalLocation-maximal.fsh                         1 - 118
+Location-EmigaHospitalLocationMaximal.json                EmigaHospitalLocationMaximal          Instance    Examples\EmigaHospitalLocation-maximal.fsh                         1 - 117
 Location-EmigaHospitalLocationMinimal.json                EmigaHospitalLocationMinimal          Instance    Examples\EmigaHospitalLocation-minimal.fsh                         1 - 110
 Location-EmigaHospitalLocationTypical.json                EmigaHospitalLocationTypical          Instance    Examples\EmigaHospitalLocation-typical.fsh                         1 - 94
 Location-EpiWarnLocation.json                             EpiWarnLocation                       Instance    Examples\LocationEpiWarn.fsh                                       1 - 21
 Location-HospitalRoomLocation.json                        HospitalRoomLocation                  Instance    Examples\HospitalRoomLocation.fsh                                  1 - 56
-Location-IneKStandort.json                                IneKStandort                          Instance    Examples\InekStandort.fsh                                          1 - 62
+Location-IneKStandort.json                                IneKStandort                          Instance    Examples\InekStandort.fsh                                          1 - 61
 Location-InekEinricthung01.json                           InekEinricthung01                     Instance    Examples\InekEinrichtung01.fsh                                     1 - 62
 Location-InekEinricthung02.json                           InekEinricthung02                     Instance    Examples\InekEinrichtung02.fsh                                     1 - 66
 Location-LaborLocation.json                               LaborLocation                         Instance    Examples\LaborLocation.fsh                                         1 - 34
