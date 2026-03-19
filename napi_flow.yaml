@@ -13,6 +13,12 @@ profileSets:
     reasoning: "IDs are not matching the names as per NAPI naming conventions."
   - name: "ValidReferencedValueSetCheck"
     reasoning: "Referenced ValueSets must be valid."
+  - name: "ValidUrlPatternCheck"
+    reasoning: "URLs must follow a specific pattern."
+  - name: "MatchingVersionAndIdCheck"
+    reasoning: "Versions are not matching the IDs as per NAPI naming conventions."
+  - name: "ExistenceOfValueSetCheck"
+    reasoning: "Referenced ValueSets must exist."
   resourceBaseUrl: null
   skipFhirSchemaValidation: false
   skipExampleValidation: false
