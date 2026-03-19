@@ -4,8 +4,7 @@ Usage: #example
 Description: "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)"
 
 /* -------- meta -------- */
-* meta.profile[emigaprofile] =
-  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 

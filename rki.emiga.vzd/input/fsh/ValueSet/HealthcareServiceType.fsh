@@ -1,6 +1,6 @@
 ValueSet: HealthcareServiceType
 Id: HealthcareServiceType
-Title: "Dienstleistungstyp (Werteliste)"
+Title: "Dienstleistungstyp"
 Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.0.0"
@@ -16,7 +16,7 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung
 * $serviceType#76 ^designation[=].use = $HL7DesignationUse#display
 * $serviceType#76 ^designation[=].value = "Gesundheitsberatung"
  
-* $serviceType#117 "Emergeny Medical" 
+* $serviceType#117 "Emergency Medical" 
 * $serviceType#117 ^designation[0].language = #de-DE
 * $serviceType#117 ^designation[=].use = $HL7DesignationUse#display
 * $serviceType#117 ^designation[=].value = "Notfallmedizin"
@@ -40,5 +40,3 @@ Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung
 * $serviceType#539 ^designation[0].language = #de-DE
 * $serviceType#539 ^designation[=].use = $HL7DesignationUse#display
 * $serviceType#539 ^designation[=].value = "Telefon-Hotline"
-
-

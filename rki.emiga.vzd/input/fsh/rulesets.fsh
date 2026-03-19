@@ -30,16 +30,36 @@ RuleSet: ProfileDomainResourceCommon
 // Profil-Regeln, die für alle Ressourcen, die sicherheitstechnisch eingestuft werden müssen, gelten
 RuleSet: ProfileSecurityTags
 * meta MS
-  * security MS
+  * security 2.. MS
     * ^slicing.discriminator.type = #value
     * ^slicing.discriminator.path = "system"
     * ^slicing.rules = #open
     * ^slicing.description = "Slicing security attribute by coding system"
     * ^slicing.ordered = false
   * security contains
-      visibility 0..1 MS and
-      responsibility 0..1 MS
+      visibility 1..1 MS and
+      responsibility 1..1 MS
   * security[visibility] from $ResourceVisibilityTypeVS
+    * system 1..1 MS
+    * system = $ResourceVisibilityType
+    * code 1..1 MS
+  * security[responsibility] from $ResourceResponsibilityVS
+    * system 1..1 MS
+    * system = $ResourceResponsibility
+    * code 1..1 MS
+
+RuleSet: ORGVProfileSecurityTags
+* meta MS
+  * security 2.. MS
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "system"
+    * ^slicing.rules = #open
+    * ^slicing.description = "Slicing security attribute by coding system"
+    * ^slicing.ordered = false
+  * security contains
+      visibility 1..1 MS and
+      responsibility 1..1 MS
+  * security[visibility] from $OrgvResourceVisibilityTypeVS
     * system 1..1 MS
     * system = $ResourceVisibilityType
     * code 1..1 MS
@@ -93,7 +113,7 @@ RuleSet: ProfileMetaProfileTags
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
-* meta.profile contains emigaprofile 0..* MS
+* meta.profile contains emigaprofile 1..* MS
 
 
 

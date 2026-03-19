@@ -4,8 +4,8 @@ Title: "Erreichbarkeit Dienstzeiten"
 Description: "Extension zur Abbildung der Erreichbarkeit der Dienstleistungen einer Organisation anhand der Dienstzeiten."
 Context: HealthcareService.availableTime
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability"
-* ^version = "1.0.0"
-* ^date = "2024-12-18"
+* ^version = "2.0.0"
+* ^date = "2024-02-12"
 * insert MetadataProfile
 * . ^short = "Dienstzeiten"
 * . ^definition = "Erreichbarkeit der Dienstleistung anhand der Dienstzeiten"
@@ -14,6 +14,6 @@ Context: HealthcareService.availableTime
 * value[x].system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
 * value[x].system 1..1 MS
 * value[x].code 1..1 MS
-* value[x] from $dutyHoursVS (required)
+* value[x] from $DutyHoursVS (required)
 
 

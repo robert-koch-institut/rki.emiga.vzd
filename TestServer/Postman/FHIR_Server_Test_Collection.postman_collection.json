@@ -1,0 +1,1008 @@
+{
+	"info": {
+		"_postman_id": "rki-emiga-vzd-test",
+		"name": "RKI EMIGA VZD - FHIR Server Tests",
+		"description": "Collection to test if FHIR profiles and examples from rki.emiga.vzd (v2.0.0-alpha.19) are uploaded to the FHIR server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "fhir_base_url",
+			"value": "http://localhost:8080/fhir",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "StructureDefinitions (Profiles)",
+			"item": [
+				{
+					"name": "Get EmigaOrganization Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaPractitioner Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaPractitioner",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaPractitioner"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaPractitionerRole Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaPractitionerRole",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaPractitionerRole"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaLocation Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaLocation"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaHealthcareService Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaHealthcareService",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaHealthcareService"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaHospitalOrganization Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaHospitalOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaHospitalOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaDepartmentOrganization Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaDepartmentOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaDepartmentOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaPublicHealthOrganization Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaPublicHealthOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaPublicHealthOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaHospitalLocation Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaHospitalLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaHospitalLocation"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaHospitalFacilityLocation Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaHospitalFacilityLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaHospitalFacilityLocation"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaHospitalRoomLocation Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/EmigaHospitalRoomLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "EmigaHospitalRoomLocation"]
+						}
+					}
+				},
+				{
+					"name": "Get OrgVBundle Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition/OrgVBundle",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition", "OrgVBundle"]
+						}
+					}
+				},
+				{
+					"name": "Get All StructureDefinitions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/StructureDefinition?url:contains=emiga.rki.de",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["StructureDefinition"],
+							"query": [
+								{
+									"key": "url:contains",
+									"value": "emiga.rki.de"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "CodeSystems",
+			"item": [
+				{
+					"name": "Get HealthcareServiceCategory CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/HealthcareServiceCategory",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "HealthcareServiceCategory"]
+						}
+					}
+				},
+				{
+					"name": "Get HealthcareServiceDutyHours CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/HealthcareServiceDutyHours",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "HealthcareServiceDutyHours"]
+						}
+					}
+				},
+				{
+					"name": "Get HealthcareServiceSpecialty CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/HealthcareServiceSpecialty",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "HealthcareServiceSpecialty"]
+						}
+					}
+				},
+				{
+					"name": "Get IneKFacilityType CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/IneKFacilityType",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "IneKFacilityType"]
+						}
+					}
+				},
+				{
+					"name": "Get OrganizationType CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/OrganizationType",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "OrganizationType"]
+						}
+					}
+				},
+				{
+					"name": "Get PractitionerRole CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/PractitionerRole",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "PractitionerRole"]
+						}
+					}
+				},
+				{
+					"name": "Get responsibilityType CodeSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem/responsibilityType",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem", "responsibilityType"]
+						}
+					}
+				},
+				{
+					"name": "Get All CodeSystems",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/CodeSystem?url:contains=emiga.rki.de",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["CodeSystem"],
+							"query": [
+								{
+									"key": "url:contains",
+									"value": "emiga.rki.de"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "ValueSets",
+			"item": [
+				{
+					"name": "Get OrganizationType ValueSet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/ValueSet/OrganizationType",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["ValueSet", "OrganizationType"]
+						}
+					}
+				},
+				{
+					"name": "Get HealthcareServiceCategory ValueSet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/ValueSet/HealthcareServiceCategory",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["ValueSet", "HealthcareServiceCategory"]
+						}
+					}
+				},
+				{
+					"name": "Get PractitionerRole ValueSet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/ValueSet/PractitionerRole",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["ValueSet", "PractitionerRole"]
+						}
+					}
+				},
+				{
+					"name": "Get All ValueSets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/ValueSet?url:contains=emiga.rki.de",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["ValueSet"],
+							"query": [
+								{
+									"key": "url:contains",
+									"value": "emiga.rki.de"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Organizations (Examples)",
+			"item": [
+				{
+					"name": "Get EpiWarnOrganization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Organization/EpiWarnOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Organization", "EpiWarnOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get InekKrankenhausOrganization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Organization/InekKrankenhausOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Organization", "InekKrankenhausOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get LaborOrganization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Organization/LaborOrganization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Organization", "LaborOrganization"]
+						}
+					}
+				},
+				{
+					"name": "Get Organization44588980",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Organization/Organization44588980",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Organization", "Organization44588980"]
+						}
+					}
+				},
+				{
+					"name": "Get Organization44588981",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Organization/Organization44588981",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Organization", "Organization44588981"]
+						}
+					}
+				},
+				{
+					"name": "Search All Organizations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Organization",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Organization"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Practitioners (Examples)",
+			"item": [
+				{
+					"name": "Get EpiWarnPractitioner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Practitioner/EpiWarnPractitioner",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Practitioner", "EpiWarnPractitioner"]
+						}
+					}
+				},
+				{
+					"name": "Get Practitioner44588966",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Practitioner/Practitioner44588966",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Practitioner", "Practitioner44588966"]
+						}
+					}
+				},
+				{
+					"name": "Get Practitioner44588970",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Practitioner/Practitioner44588970",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Practitioner", "Practitioner44588970"]
+						}
+					}
+				},
+				{
+					"name": "Search All Practitioners",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Practitioner",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Practitioner"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "PractitionerRoles (Examples)",
+			"item": [
+				{
+					"name": "Get EpiWarnPractitionerRole",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/PractitionerRole/EpiWarnPractitionerRole",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["PractitionerRole", "EpiWarnPractitionerRole"]
+						}
+					}
+				},
+				{
+					"name": "Get Practitioner44588967",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/PractitionerRole/Practitioner44588967",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["PractitionerRole", "Practitioner44588967"]
+						}
+					}
+				},
+				{
+					"name": "Get PractitionerRole44588971",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/PractitionerRole/PractitionerRole44588971",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["PractitionerRole", "PractitionerRole44588971"]
+						}
+					}
+				},
+				{
+					"name": "Search All PractitionerRoles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/PractitionerRole",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["PractitionerRole"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Locations (Examples)",
+			"item": [
+				{
+					"name": "Get EpiWarnLocation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Location/EpiWarnLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Location", "EpiWarnLocation"]
+						}
+					}
+				},
+				{
+					"name": "Get HospitalRoomLocation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Location/HospitalRoomLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Location", "HospitalRoomLocation"]
+						}
+					}
+				},
+				{
+					"name": "Get InekEinricthung01",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Location/InekEinricthung01",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Location", "InekEinricthung01"]
+						}
+					}
+				},
+				{
+					"name": "Get LaborLocation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Location/LaborLocation",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Location", "LaborLocation"]
+						}
+					}
+				},
+				{
+					"name": "Search All Locations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/Location",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["Location"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "HealthcareServices (Examples)",
+			"item": [
+				{
+					"name": "Get EpiWarnHealthcareService",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/HealthcareService/EpiWarnHealthcareService",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["HealthcareService", "EpiWarnHealthcareService"]
+						}
+					}
+				},
+				{
+					"name": "Get EpiWarnHealthcareServiceInvTest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/HealthcareService/EpiWarnHealthcareServiceInvTest",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["HealthcareService", "EpiWarnHealthcareServiceInvTest"]
+						}
+					}
+				},
+				{
+					"name": "Get HealthcareService44588971",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/HealthcareService/HealthcareService44588971",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["HealthcareService", "HealthcareService44588971"]
+						}
+					}
+				},
+				{
+					"name": "Search All HealthcareServices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/HealthcareService",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["HealthcareService"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "NamingSystems",
+			"item": [
+				{
+					"name": "Get CodeSiteId NamingSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/NamingSystem/CodeSiteId",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["NamingSystem", "CodeSiteId"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaOrgvFileNumber NamingSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/NamingSystem/EmigaOrgvFileNumber",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["NamingSystem", "EmigaOrgvFileNumber"]
+						}
+					}
+				},
+				{
+					"name": "Get EmigaOrgvId NamingSystem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/NamingSystem/EmigaOrgvId",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["NamingSystem", "EmigaOrgvId"]
+						}
+					}
+				},
+				{
+					"name": "Search All NamingSystems",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/NamingSystem",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["NamingSystem"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "ImplementationGuide",
+			"item": [
+				{
+					"name": "Get Implementation Guide",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/ImplementationGuide/rki.emiga.vzd",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["ImplementationGuide", "rki.emiga.vzd"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Server Metadata",
+			"item": [
+				{
+					"name": "Get CapabilityStatement (metadata)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+json"
+							}
+						],
+						"url": {
+							"raw": "{{fhir_base_url}}/metadata",
+							"host": ["{{fhir_base_url}}"],
+							"path": ["metadata"]
+						}
+					}
+				}
+			]
+		}
+	]
+}

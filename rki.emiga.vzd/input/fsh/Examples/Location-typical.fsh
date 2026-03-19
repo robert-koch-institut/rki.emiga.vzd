@@ -5,7 +5,7 @@ Usage: #example
 // ----------------------------------------------------
 // META   
 // ----------------------------------------------------
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
 
 * meta.security[visibility] = $ResourceVisibilityType#internal
 * meta.security[responsibility] = $ResourceResponsibility#1.

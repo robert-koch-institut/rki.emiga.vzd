@@ -5,7 +5,7 @@ Usage: #example
 // -------------------------------------------------------------------
 // Meta: profile & security tags (typical for EMIGA resources)
 // -------------------------------------------------------------------
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
 * meta.security[visibility] = $ResourceVisibilityType#internal
 * meta.security[responsibility] = $ResourceResponsibility#1.
 

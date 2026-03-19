@@ -4,16 +4,16 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.1.0"
-* ^date = "2025-11-18"
+* ^version = "1.2.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -112,13 +112,13 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 //  * ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 * type[organizationType] = $hl7-organization-type#dept
-//* type[organizationType] ^definition = "TODO: Ein beschreibung über den feste Kode dept schreiben"
+* type[organizationType] ^definition = "Kennzeichnung, dass es sich bei dieser Organisation um eine Abteilung (department) innerhalb einer übergeordneten Organisation handelt. Der feste Code „dept“ aus dem HL7-OrganizationType-CodeSystem wird verwendet, um Fachabteilungen als organisatorische Untereinheiten eindeutig zu klassifizieren."
   //* ^patternCodeableConcept.coding.system = $OrganizationType
   * insert StrictCodableConcept
 //* type[ErweiterterFachabteilungsschluessel] from $Fachabteilungsschluessel-erweitert (required)
 //  * insert StrictCodableConcept
 //* type[ErweiterterFachabteilungsschluessel] ^comment = "Motivation: Das ValueSet muss bindend sein, damit Systemübergreifend der Fachabteilungstyp einheitlich kodiert werden kann. \n  \n  Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."
-* type[fachbereich] from $Fachbereich (required)
+* type[fachbereich] from $FachbereichVS (required)
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
 * type[fachbereich].coding.display MS
@@ -239,7 +239,6 @@ Description: "Die Url muss valide sein."
 * severity = #error
 * expression = "$this.matches('^(https?:\\/\\/)?([\\da-z.-]{1,1000})\\.([a-z.]{2,6})([/\\w.-]{0,999})\\/?$')"
 
-// TODO: Verify need of regex
 Invariant: validFaxNumber
 Description: "Die Faxnummer muss valide sein."
 * severity = #error

@@ -10,7 +10,6 @@ Description: "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die di
 * ^valueSet = "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType"
 * ^hierarchyMeaning = #is-a
 
-
 * #ga "Gesundheitsamt"
 * #ga ^designation[0].language = #de-DE
 * #ga ^designation[=].use = $ConceptDesignationUse#abbreviation

@@ -5,7 +5,7 @@ Usage: #example
 // ----------------------------------------------------
 // Required metadata (ProfileMetaProfileTags)
 // ----------------------------------------------------
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 
 // ----------------------------------------------------
 // MustSupport security tags (ProfileSecurityTags)

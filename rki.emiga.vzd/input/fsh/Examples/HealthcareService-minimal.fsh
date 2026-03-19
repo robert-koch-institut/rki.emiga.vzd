@@ -5,14 +5,14 @@ Description: "Minimale Instanz einer EMIGA-Dienstleistung"
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 * active = true
 
 * providedBy = Reference(EpiWarnOrganization)
 
 * category[emigaHealthcareServiceCategory] = $HealthcareServiceCategory#consultation 
 
-* type[emigaHealthcareServiceType].coding.system = $ServiceTypeCS
+* type[emigaHealthcareServiceType].coding.system = $serviceType
 * type[emigaHealthcareServiceType].coding.code = #538
 * type[emigaHealthcareServiceType].coding.display = "Telephone counselling"
 

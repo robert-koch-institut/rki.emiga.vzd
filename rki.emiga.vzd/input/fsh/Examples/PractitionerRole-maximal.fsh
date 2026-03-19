@@ -16,7 +16,7 @@ Usage: #example
 * meta.source = "https://emiga.rki.de/fhir/vzd"
 
 // Profile slice
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
 
 // Security slices (all MS + fully populated)
 * meta.security[visibility] = $ResourceVisibilityType#internal

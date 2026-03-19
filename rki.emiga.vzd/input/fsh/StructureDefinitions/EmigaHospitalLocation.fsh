@@ -2,15 +2,15 @@ Profile: EmigaHospitalLocation
 Parent: Location
 Id: EmigaHospitalLocation
 Title: "Krankenhaus - Standort"
-Description: "TO DO"
+Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 //
-* ^version = "0.2.0"
-* ^date = "2025-11-18"
+* ^version = "0.3.0"
+* ^date = "2026-03-09"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ProfileSecurityTags
+* insert ORGVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
@@ -27,7 +27,7 @@ Description: "TO DO"
 //* meta.tag[relevance].code = #InEK
 //* meta.tag[relevance].display = "InEK Standortverzeichnis"
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|2.0.0-alpha.16"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
@@ -166,7 +166,7 @@ Description: "TO DO"
 * type contains fachbereich 0..1 MS
 
 * type[fachbereich] from Fachbereich (required)
-//* type[fachbereich] ^patternCodeableConcept.coding.system = $Fachbereich
+//* type[fachbereich] ^patternCodeableConcept.coding.system = $FachbereichVS
 * type[fachbereich].coding.code 1..1 MS
 * type[fachbereich].coding.system 1..1 MS
 * type[fachbereich].coding.display MS
