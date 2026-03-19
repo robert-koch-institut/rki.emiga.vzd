@@ -5,8 +5,8 @@ Title: "Zuständigkeit der ÖGD-Stellen"
 Description: "Extension zur Abbildung der Zuständigkeiten der ÖGD-Stellen anhand des amtlichen Gemeindeschlüssels und der Art der Zuständigkeit."
 Context: Organization, Location, Practitioner
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
-* ^version = "2.0.0"
-* ^date = "2026-02-12"
+* ^version = "2.1.0"
+* ^date = "2026-03-19"
 * insert MetadataProfile
 //* ^status = #draft
 //* ^publisher = "Robert-Koch-Institut"
@@ -14,7 +14,7 @@ Context: Organization, Location, Practitioner
 * extension contains
     geographicRegion 1..* and
     responsibilityType 1..*
-* extension[geographicRegion].value[x] from $CountyVS (required)
+* extension[geographicRegion].value[x] from https://demis.rki.de/fhir/ValueSet/county (required)
 * extension[geographicRegion].value[x] ^binding.description = "Über das ValueSet County können die Landkreise/Stadtkreise ausgewählt werden, für die eine ÖGD-Stelle zuständig ist."
 * extension[geographicRegion].value[x] only Coding
   * insert StrictCoding
