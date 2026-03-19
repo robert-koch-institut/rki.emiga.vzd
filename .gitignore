@@ -1,3 +1,6 @@
 /target
 /.project
 /.fsh-generated
+
+/locations_local.yaml
+/validationResults
