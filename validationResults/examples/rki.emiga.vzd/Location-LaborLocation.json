@@ -6,6 +6,50 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 462
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|1.5.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[462]" ],
+    "expression": [ "Location.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 462
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation|1.5.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[462]" ],
+    "expression": [ "Location.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 242
     } ],
     "severity": "information",
@@ -89,21 +133,21 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1317
+      "valueInteger": 1309
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_PassThrough_TX_Message"
+      "valueString": "TERMINOLOGY_TX_HINT"
     } ],
-    "severity": "error",
+    "severity": "information",
     "code": "processing",
     "details": {
       "coding": [ {
         "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_PassThrough_TX_Message"
+        "code": "TERMINOLOGY_TX_HINT"
       } ]
     },
-    "diagnostics": "Unknown code 'urn:iso:std:iso:3166-2:de#Niedersachsen'",
-    "location": [ "Location.address.state", "Line[1] Col[1317]" ],
+    "diagnostics": "Code was validated against existing expansion of ValueSet: http://fhir.de/ValueSet/iso/bundeslaender",
+    "location": [ "Location.address.state", "Line[1] Col[1309]" ],
     "expression": [ "Location.address.state" ]
   }, {
     "extension": [ {
@@ -111,7 +155,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1475
+      "valueInteger": 1467
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -125,7 +169,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "Location", "Line[1] Col[1475]" ],
+    "location": [ "Location", "Line[1] Col[1467]" ],
     "expression": [ "Location" ]
   } ]
 }

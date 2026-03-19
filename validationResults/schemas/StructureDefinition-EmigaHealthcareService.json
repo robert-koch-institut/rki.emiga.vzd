@@ -6,29 +6,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 56637
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.snapshot.element[44].binding.valueSet", "Line[1] Col[56637]" ],
-    "expression": [ "StructureDefinition.snapshot.element[44].binding.valueSet" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 77715
+      "valueInteger": 60510
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_PassThrough_TX_Message"
@@ -42,15 +20,15 @@
       } ]
     },
     "diagnostics": "Unknown code 'https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory#null'",
-    "location": [ "StructureDefinition.snapshot.element[62].pattern.ofType(CodeableConcept)", "Line[1] Col[77715]" ],
-    "expression": [ "StructureDefinition.snapshot.element[62].pattern.ofType(CodeableConcept)" ]
+    "location": [ "StructureDefinition.snapshot.element[48].pattern.ofType(CodeableConcept)", "Line[1] Col[60510]" ],
+    "expression": [ "StructureDefinition.snapshot.element[48].pattern.ofType(CodeableConcept)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 94120
+      "valueInteger": 76915
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_PassThrough_TX_Message"
@@ -64,15 +42,15 @@
       } ]
     },
     "diagnostics": "Unknown code 'http://terminology.hl7.org/CodeSystem/service-type#null'",
-    "location": [ "StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept)", "Line[1] Col[94120]" ],
-    "expression": [ "StructureDefinition.snapshot.element[75].pattern.ofType(CodeableConcept)" ]
+    "location": [ "StructureDefinition.snapshot.element[61].pattern.ofType(CodeableConcept)", "Line[1] Col[76915]" ],
+    "expression": [ "StructureDefinition.snapshot.element[61].pattern.ofType(CodeableConcept)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 110412
+      "valueInteger": 93207
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_PassThrough_TX_Message"
@@ -86,37 +64,15 @@
       } ]
     },
     "diagnostics": "Unknown code 'https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty#null'",
-    "location": [ "StructureDefinition.snapshot.element[88].pattern.ofType(CodeableConcept)", "Line[1] Col[110412]" ],
-    "expression": [ "StructureDefinition.snapshot.element[88].pattern.ofType(CodeableConcept)" ]
+    "location": [ "StructureDefinition.snapshot.element[74].pattern.ofType(CodeableConcept)", "Line[1] Col[93207]" ],
+    "expression": [ "StructureDefinition.snapshot.element[74].pattern.ofType(CodeableConcept)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 203975
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.differential.element[19].binding.valueSet", "Line[1] Col[203975]" ],
-    "expression": [ "StructureDefinition.differential.element[19].binding.valueSet" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 206070
+      "valueInteger": 187795
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_PassThrough_TX_Message"
@@ -130,15 +86,15 @@
       } ]
     },
     "diagnostics": "Unknown code 'https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory#null'",
-    "location": [ "StructureDefinition.differential.element[32].pattern.ofType(CodeableConcept)", "Line[1] Col[206070]" ],
-    "expression": [ "StructureDefinition.differential.element[32].pattern.ofType(CodeableConcept)" ]
+    "location": [ "StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept)", "Line[1] Col[187795]" ],
+    "expression": [ "StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 207694
+      "valueInteger": 189419
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_PassThrough_TX_Message"
@@ -152,15 +108,15 @@
       } ]
     },
     "diagnostics": "Unknown code 'http://terminology.hl7.org/CodeSystem/service-type#null'",
-    "location": [ "StructureDefinition.differential.element[40].pattern.ofType(CodeableConcept)", "Line[1] Col[207694]" ],
-    "expression": [ "StructureDefinition.differential.element[40].pattern.ofType(CodeableConcept)" ]
+    "location": [ "StructureDefinition.differential.element[34].pattern.ofType(CodeableConcept)", "Line[1] Col[189419]" ],
+    "expression": [ "StructureDefinition.differential.element[34].pattern.ofType(CodeableConcept)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 209283
+      "valueInteger": 191008
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_PassThrough_TX_Message"
@@ -174,15 +130,15 @@
       } ]
     },
     "diagnostics": "Unknown code 'https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty#null'",
-    "location": [ "StructureDefinition.differential.element[48].pattern.ofType(CodeableConcept)", "Line[1] Col[209283]" ],
-    "expression": [ "StructureDefinition.differential.element[48].pattern.ofType(CodeableConcept)" ]
+    "location": [ "StructureDefinition.differential.element[42].pattern.ofType(CodeableConcept)", "Line[1] Col[191008]" ],
+    "expression": [ "StructureDefinition.differential.element[42].pattern.ofType(CodeableConcept)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 216548
+      "valueInteger": 198282
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -196,7 +152,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "StructureDefinition", "Line[1] Col[216548]" ],
+    "location": [ "StructureDefinition", "Line[1] Col[198282]" ],
     "expression": [ "StructureDefinition" ]
   }, {
     "extension": [ {
@@ -204,7 +160,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 202332
+      "valueInteger": 185136
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -218,7 +174,7 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]", "Line[1] Col[202332]" ],
+    "location": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]", "Line[1] Col[185136]" ],
     "expression": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]" ]
   }, {
     "extension": [ {
@@ -226,7 +182,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 205569
+      "valueInteger": 187294
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -240,15 +196,15 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.differential.element[31].slicing.discriminator[0]", "Line[1] Col[205569]" ],
-    "expression": [ "StructureDefinition.differential.element[31].slicing.discriminator[0]" ]
+    "location": [ "StructureDefinition.differential.element[25].slicing.discriminator[0]", "Line[1] Col[187294]" ],
+    "expression": [ "StructureDefinition.differential.element[25].slicing.discriminator[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 207220
+      "valueInteger": 188945
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -262,15 +218,15 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.differential.element[39].slicing.discriminator[0]", "Line[1] Col[207220]" ],
-    "expression": [ "StructureDefinition.differential.element[39].slicing.discriminator[0]" ]
+    "location": [ "StructureDefinition.differential.element[33].slicing.discriminator[0]", "Line[1] Col[188945]" ],
+    "expression": [ "StructureDefinition.differential.element[33].slicing.discriminator[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 208780
+      "valueInteger": 190505
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -284,8 +240,8 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.differential.element[47].slicing.discriminator[0]", "Line[1] Col[208780]" ],
-    "expression": [ "StructureDefinition.differential.element[47].slicing.discriminator[0]" ]
+    "location": [ "StructureDefinition.differential.element[41].slicing.discriminator[0]", "Line[1] Col[190505]" ],
+    "expression": [ "StructureDefinition.differential.element[41].slicing.discriminator[0]" ]
   }, {
     "severity": "information",
     "code": "processing",
@@ -336,7 +292,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 75839
+      "valueInteger": 58634
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -350,15 +306,15 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.snapshot.element[61].slicing.discriminator[0]", "Line[1] Col[75839]" ],
-    "expression": [ "StructureDefinition.snapshot.element[61].slicing.discriminator[0]" ]
+    "location": [ "StructureDefinition.snapshot.element[47].slicing.discriminator[0]", "Line[1] Col[58634]" ],
+    "expression": [ "StructureDefinition.snapshot.element[47].slicing.discriminator[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 92536
+      "valueInteger": 75331
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -372,15 +328,15 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.snapshot.element[74].slicing.discriminator[0]", "Line[1] Col[92536]" ],
-    "expression": [ "StructureDefinition.snapshot.element[74].slicing.discriminator[0]" ]
+    "location": [ "StructureDefinition.snapshot.element[60].slicing.discriminator[0]", "Line[1] Col[75331]" ],
+    "expression": [ "StructureDefinition.snapshot.element[60].slicing.discriminator[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 108841
+      "valueInteger": 91636
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_PATH_SLICING_DEPRECATED"
@@ -394,42 +350,20 @@
       } ]
     },
     "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
-    "location": [ "StructureDefinition.snapshot.element[87].slicing.discriminator[0]", "Line[1] Col[108841]" ],
-    "expression": [ "StructureDefinition.snapshot.element[87].slicing.discriminator[0]" ]
+    "location": [ "StructureDefinition.snapshot.element[73].slicing.discriminator[0]", "Line[1] Col[91636]" ],
+    "expression": [ "StructureDefinition.snapshot.element[73].slicing.discriminator[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 182502
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "ED_INVARIANT_EXPRESSION_ERROR"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "ED_INVARIANT_EXPRESSION_ERROR"
-      } ]
-    },
-    "diagnostics": "Error in constraint 'ORGV-Service-Opening-Time' with expression 'extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and (extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty()))': Error evaluating FHIRPath expression: The name 'valueCoding' is not valid for any of the possible types: [https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability] (@char 165)",
-    "location": [ "StructureDefinition.snapshot.element[151].constraint[1]", "Line[1] Col[182502]" ],
-    "expression": [ "StructureDefinition.snapshot.element[151].constraint[1]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 200149
+      "valueInteger": 182953
     } ],
     "severity": "warning",
     "code": "processing",
     "diagnostics": "The slice 'Email' on path 'HealthcareService.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true",
-    "location": [ "StructureDefinition.snapshot", "Line[1] Col[200149]" ],
+    "location": [ "StructureDefinition.snapshot", "Line[1] Col[182953]" ],
     "expression": [ "StructureDefinition.snapshot" ]
   }, {
     "extension": [ {
@@ -437,12 +371,12 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 200149
+      "valueInteger": 182953
     } ],
     "severity": "warning",
     "code": "processing",
     "diagnostics": "The slice 'Phone' on path 'HealthcareService.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true",
-    "location": [ "StructureDefinition.snapshot", "Line[1] Col[200149]" ],
+    "location": [ "StructureDefinition.snapshot", "Line[1] Col[182953]" ],
     "expression": [ "StructureDefinition.snapshot" ]
   }, {
     "extension": [ {
@@ -450,12 +384,12 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 200149
+      "valueInteger": 182953
     } ],
     "severity": "warning",
     "code": "processing",
     "diagnostics": "The slice 'Url' on path 'HealthcareService.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true",
-    "location": [ "StructureDefinition.snapshot", "Line[1] Col[200149]" ],
+    "location": [ "StructureDefinition.snapshot", "Line[1] Col[182953]" ],
     "expression": [ "StructureDefinition.snapshot" ]
   }, {
     "extension": [ {
@@ -463,12 +397,12 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 200149
+      "valueInteger": 182953
     } ],
     "severity": "warning",
     "code": "processing",
     "diagnostics": "The slice 'Fax' on path 'HealthcareService.telecom' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true",
-    "location": [ "StructureDefinition.snapshot", "Line[1] Col[200149]" ],
+    "location": [ "StructureDefinition.snapshot", "Line[1] Col[182953]" ],
     "expression": [ "StructureDefinition.snapshot" ]
   } ]
 }

@@ -1,0 +1,300 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "HealthcareServiceSpecialty",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty",
+  "version": "1.1.1",
+  "name": "HealthcareServiceSpecialty",
+  "title": "Fachspezialisierung",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-17",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Die Kodiersystematik HealthcareServiceSpecialty definiert Konzepte, die die Fachspezialisierung der Angebotene Dienstleistungen, näher Beschreiben",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 25,
+  "concept": [ {
+    "code": "crisisMngmnt",
+    "display": "Krisenmanagement",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "crisis management"
+    } ]
+  }, {
+    "code": "itAndSoftware",
+    "display": "IT und Softwareprodukte",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "IT and software products"
+    } ]
+  }, {
+    "code": "press",
+    "display": "Presse",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "press"
+    } ]
+  }, {
+    "code": "healthAndComm",
+    "display": "Gesundheitsberichterstattung und -kommunikation",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "health reporting and communication"
+    } ]
+  }, {
+    "code": "trainingAndTeaching",
+    "display": "Training und Lehre",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "training and teaching"
+    } ]
+  }, {
+    "code": "surveillanceReporting",
+    "display": "Surveillance/Meldewesen",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "surveillance/reporting"
+    } ]
+  }, {
+    "code": "infectionProtectionAndEpi",
+    "display": "Infektionsschutz und Infektionsepidemiologie",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "infection protection and epidemiology"
+    } ]
+  }, {
+    "code": "hygieneDrinkingWaterAndEnv",
+    "display": "Hygiene, Trinkwasser und Umwelt",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "hygiene, drinking water and the environment"
+    } ]
+  }, {
+    "code": "igvAirportAndPort",
+    "display": "IGV-benannte Flughäfen und Häfen",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "IGV-designated airports and ports"
+    } ]
+  }, {
+    "code": "labor",
+    "display": "Labor",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "laboratory"
+    } ]
+  }, {
+    "code": "vaccPrevention",
+    "display": "Impfprävention",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "vaccine prevention"
+    } ]
+  }, {
+    "code": "HIVAndSTDs",
+    "display": "HIV- und sexuell-übertragbare Krankheiten",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "HIV and sexually transmitted diseases"
+    } ]
+  }, {
+    "code": "hepatitis",
+    "display": "Hepatitiden",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "hepatitis"
+    } ]
+  }, {
+    "code": "zoonoses",
+    "display": "Zoonosen",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "zoonoses"
+    } ]
+  }, {
+    "code": "foodborneDiseases",
+    "display": "Lebensmittelübertragbare Erkrankungen",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "foodborne diseases"
+    } ]
+  }, {
+    "code": "respDiseases",
+    "display": "Atemwegserkrankungen",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "respiratory diseases such as influenza, tuberculosis, legionellosis"
+    } ]
+  }, {
+    "code": "tuberculosis",
+    "display": "Tuberkulose",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "tuberculosis"
+    } ]
+  }, {
+    "code": "antibioticResistantGerms",
+    "display": "Antibiotikaresistente Erreger",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "antibiotic-resistant pathogen"
+    } ]
+  }, {
+    "code": "childAndYouthHealth",
+    "display": "Kinder- und Jugendgesundheit",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "child and youth health"
+    } ]
+  }, {
+    "code": "socialPsychiatricService",
+    "display": "Sozialpsychiatrischer Dienst",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "social psychiatric service"
+    } ]
+  }, {
+    "code": "preventionAndHealthPromotion",
+    "display": "Prävention und Gesundheitsförderung",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "prevention and health promotion"
+    } ]
+  }, {
+    "code": "medServicesAndCons",
+    "display": "Medizinische Dienste und Sprechstunden",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "medical services and consultations"
+    } ]
+  }, {
+    "code": "dentistry",
+    "display": "Zahnmedizin",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "dentistry"
+    } ]
+  }, {
+    "code": "adminLegalMattersAndDataPrtct",
+    "display": "Verwaltung, Recht und Datenschutz",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "administration, legal matters and data protection"
+    } ]
+  }, {
+    "code": "medEmergencyResponse",
+    "display": "Medizinische Gefahrenabwehr",
+    "designation": [ {
+      "language": "en-US",
+      "use": {
+        "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+        "code": "display"
+      },
+      "value": "medical emergency response"
+    } ]
+  } ]
+}

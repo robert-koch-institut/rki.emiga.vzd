@@ -1,0 +1,100 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PractitionerRole",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
+  "version": "1.1.0",
+  "name": "PractitionerRole",
+  "title": "Personenrolle",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-03-19",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann.",
+  "compose": {
+    "include": [ {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "concept": [ {
+        "code": "OTH",
+        "display": "other",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+            "code": "display"
+          },
+          "value": "Sonstige"
+        } ]
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-03-19T00:00:00+01:00",
+    "contains": [ {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "headOfDivision",
+      "display": "Abteilungsleiter/Abteilungsleiterin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "expertWitness",
+      "display": "Sachverständiger/Sachverständige"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "headOfDepartment",
+      "display": "Fachgebietsleiter/Fachgebietsleiterin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "headOfUnit",
+      "display": "Referatsleiter/Referatsleiterin"
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "code": "OTH",
+      "display": "other"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "personOfContact",
+      "display": "Ansprechperson"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "headofAuthority",
+      "display": "Behördenleiter/Behördenleiterin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "infectionProtectionOfficer",
+      "display": "Infektionsschutzreferent/Infektionsschutzreferentin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "caseOfficer",
+      "display": "Sachbearbeiter/Sachbearbeiterin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "hygieneInspector",
+      "display": "Hygienekontrolleur/Hygienekontrolleurin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "publicMedicalOfficer",
+      "display": "Amtsärztlicher Dienst"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "airPortMedServ",
+      "display": "Hafen- und/oder Flughafen-ärztlicher Dienst"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "headOfSubject",
+      "display": "Sachgebietsleiter/Sachgebietleiterin"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+      "code": "director",
+      "display": "Amtsleiter/Amtsleiterin"
+    } ]
+  }
+}

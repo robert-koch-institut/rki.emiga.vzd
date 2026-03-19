@@ -6,7 +6,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1651
+      "valueInteger": 1582
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -20,23 +20,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "CodeSystem", "Line[1] Col[1651]" ],
-    "expression": [ "CodeSystem" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "CodeSystem_CS_VS_Invalid"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "CodeSystem_CS_VS_Invalid"
-      } ]
-    },
-    "diagnostics": "CodeSystem https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole has an 'all system' value set of https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole, but the value set doesn't have a single include",
-    "location": [ "CodeSystem" ],
+    "location": [ "CodeSystem", "Line[1] Col[1582]" ],
     "expression": [ "CodeSystem" ]
   } ]
 }

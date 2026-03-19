@@ -6,6 +6,50 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 514
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice HealthcareService.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|1.2.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "HealthcareService.meta.tag[0]", "Line[1] Col[514]" ],
+    "expression": [ "HealthcareService.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 514
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice HealthcareService.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService|1.2.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "HealthcareService.meta.tag[0]", "Line[1] Col[514]" ],
+    "expression": [ "HealthcareService.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 278
     } ],
     "severity": "information",
@@ -84,28 +128,6 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1596
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService#ORGV-Service-Opening-Time"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService#ORGV-Service-Opening-Time"
-      } ]
-    },
-    "diagnostics": "Constraint failed: ORGV-Service-Opening-Time: 'If DutyHoursAvailability code is '24/7', then daysOfWeek, availableStartTime, and availableEndTime must not be present.' (defined in https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService)",
-    "location": [ "HealthcareService.availableTime[0]", "Line[1] Col[1596]" ],
-    "expression": [ "HealthcareService.availableTime[0]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 1536
     } ],
     "severity": "information",
@@ -119,7 +141,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1598
+      "valueInteger": 1541
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -133,7 +155,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "HealthcareService", "Line[1] Col[1598]" ],
+    "location": [ "HealthcareService", "Line[1] Col[1541]" ],
     "expression": [ "HealthcareService" ]
   } ]
 }

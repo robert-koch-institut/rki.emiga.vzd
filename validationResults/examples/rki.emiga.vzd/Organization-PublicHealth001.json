@@ -35,17 +35,17 @@
       "valueInteger": 613
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_TX_ValueSet_NotFound"
+      "valueString": "Terminology_TX_NoValid_12"
     } ],
-    "severity": "warning",
+    "severity": "error",
     "code": "processing",
     "details": {
       "coding": [ {
         "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_TX_ValueSet_NotFound"
+        "code": "Terminology_TX_NoValid_12"
       } ]
     },
-    "diagnostics": "ValueSet 'https://emiga.rki.de/fhir/case/ValueSet/County' not found",
+    "diagnostics": "The Coding provided (https://demis.rki.de/fhir/CodeSystem/geographicRegion#21000109) was not found in the value set 'Landkreis' (https://demis.rki.de/fhir/ValueSet/county|1.1.0), and a code is required from this value set.  (error message = Unknown code 'https://demis.rki.de/fhir/CodeSystem/geographicRegion|1.1.0#21000109')",
     "location": [ "Organization.extension[0].extension[0].value.ofType(Coding)", "Line[1] Col[613]" ],
     "expression": [ "Organization.extension[0].extension[0].value.ofType(Coding)" ]
   }, {

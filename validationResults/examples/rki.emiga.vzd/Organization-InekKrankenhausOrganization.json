@@ -6,20 +6,42 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1481
+      "valueInteger": 1347
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Validation_VAL_Profile_MatchMultiple"
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
     } ],
     "severity": "error",
     "code": "processing",
     "details": {
       "coding": [ {
         "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Validation_VAL_Profile_MatchMultiple"
+        "code": "SLICING_CANNOT_BE_EVALUATED"
       } ]
     },
-    "diagnostics": "Profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.3.0, Element matches more than one slice - emigaOrganizationType, fachbereich",
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator ($this) for slice Organization.type:emigaOrganizationType in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.4.0 - the discriminator [$this] does not have fixed value, binding or existence assertions",
+    "location": [ "Organization.type[0]", "Line[1] Col[1347]" ],
+    "expression": [ "Organization.type[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1481
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator ($this) for slice Organization.type:emigaOrganizationType in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.4.0 - the discriminator [$this] does not have fixed value, binding or existence assertions",
     "location": [ "Organization.type[1]", "Line[1] Col[1481]" ],
     "expression": [ "Organization.type[1]" ]
   }, {
@@ -31,19 +53,63 @@
       "valueInteger": 1519
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Validation_VAL_Profile_Maximum"
+      "valueString": "Validation_VAL_Profile_NoCheckMin"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Validation_VAL_Profile_NoCheckMin"
+      } ]
+    },
+    "diagnostics": "Organization.type:emigaOrganizationType: Found 0 matches, but unable to check minimum required (Organization.type) due to lack of slicing validation (from https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.4.0)",
+    "location": [ "Organization", "Line[1] Col[1519]" ],
+    "expression": [ "Organization" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 492
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
     } ],
     "severity": "error",
     "code": "processing",
     "details": {
       "coding": [ {
         "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Validation_VAL_Profile_Maximum"
+        "code": "SLICING_CANNOT_BE_EVALUATED"
       } ]
     },
-    "diagnostics": "Organization.type:emigaOrganizationType: max allowed = 1, but found 2 (from https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.3.0)",
-    "location": [ "Organization", "Line[1] Col[1519]" ],
-    "expression": [ "Organization" ]
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Organization.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Organization.meta.tag[0]", "Line[1] Col[492]" ],
+    "expression": [ "Organization.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 492
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Organization.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Organization.meta.tag[0]", "Line[1] Col[492]" ],
+    "expression": [ "Organization.meta.tag[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
@@ -133,92 +199,13 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1347
+      "valueInteger": 1481
     } ],
     "severity": "information",
     "code": "processing",
-    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType",
-    "location": [ "Organization.type[0]", "Line[1] Col[1347]" ],
-    "expression": [ "Organization.type[0]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1481
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "diagnostics": "Unknown code in fragment CodeSystem 'http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert|1.5.4#0100'",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich",
     "location": [ "Organization.type[1]", "Line[1] Col[1481]" ],
     "expression": [ "Organization.type[1]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1437
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "_DT_Fixed_Wrong"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "_DT_Fixed_Wrong"
-      } ]
-    },
-    "diagnostics": "Value is 'http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert' but is fixed to 'https://demis.rki.de/fhir/CodeSystem/organizationType' in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.3.0#Organization.type:emigaOrganizationType.coding.system",
-    "location": [ "Organization.type[1].coding[0].system", "Line[1] Col[1437]" ],
-    "expression": [ "Organization.type[1].coding[0].system" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1451
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "_DT_Fixed_Wrong"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "_DT_Fixed_Wrong"
-      } ]
-    },
-    "diagnostics": "Value is '0100' but is fixed to 'hospital' in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.3.0#Organization.type:emigaOrganizationType.coding.code",
-    "location": [ "Organization.type[1].coding[0].code", "Line[1] Col[1451]" ],
-    "expression": [ "Organization.type[1].coding[0].code" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1478
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "_DT_Fixed_Wrong"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "_DT_Fixed_Wrong"
-      } ]
-    },
-    "diagnostics": "Value is 'Innere Medizin' but is fixed to 'Krankenhaus' in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization|0.3.0#Organization.type:emigaOrganizationType.coding.display",
-    "location": [ "Organization.type[1].coding[0].display", "Line[1] Col[1478]" ],
-    "expression": [ "Organization.type[1].coding[0].display" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",

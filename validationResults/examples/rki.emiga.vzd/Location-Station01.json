@@ -19,7 +19,7 @@
         "code": "Details_for__matching_against_Profile_"
       } ]
     },
-    "diagnostics": "This element does not match any known slice defined in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.3.0 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'inekFacilityType' (discriminator: $this.coding.where(system = 'https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType').exists())",
+    "diagnostics": "This element does not match any known slice defined in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'inekFacilityType' (discriminator: $this.coding.where(system = 'https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType').exists())",
     "location": [ "Location.type[0]", "Line[1] Col[1032]" ],
     "expression": [ "Location.type[0]" ]
   }, {
@@ -41,7 +41,7 @@
         "code": "Details_for__matching_against_Profile_"
       } ]
     },
-    "diagnostics": "This element does not match any known slice defined in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.3.0 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'stationstyp' (discriminator: ($this memberOf 'https://demis.rki.de/fhir/ars/ValueSet/stationstyp'))",
+    "diagnostics": "This element does not match any known slice defined in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'stationstyp' (discriminator: ($this memberOf 'https://demis.rki.de/fhir/ars/ValueSet/stationstyp'))",
     "location": [ "Location.type[0]", "Line[1] Col[1032]" ],
     "expression": [ "Location.type[0]" ]
   }, {
@@ -63,9 +63,53 @@
         "code": "Details_for__matching_against_Profile_"
       } ]
     },
-    "diagnostics": "This element does not match any known slice defined in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.3.0 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'fachbereich' (discriminator: ($this memberOf 'https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich'))",
+    "diagnostics": "This element does not match any known slice defined in the profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'fachbereich' (discriminator: ($this memberOf 'https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich'))",
     "location": [ "Location.type[0]", "Line[1] Col[1032]" ],
     "expression": [ "Location.type[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 474
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[474]" ],
+    "expression": [ "Location.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 474
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[474]" ],
+    "expression": [ "Location.meta.tag[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",

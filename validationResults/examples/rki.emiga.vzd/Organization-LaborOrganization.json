@@ -6,6 +6,50 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 474
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Organization.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|1.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Organization.meta.tag[0]", "Line[1] Col[474]" ],
+    "expression": [ "Organization.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 474
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Organization.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization|1.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Organization.meta.tag[0]", "Line[1] Col[474]" ],
+    "expression": [ "Organization.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 254
     } ],
     "severity": "information",

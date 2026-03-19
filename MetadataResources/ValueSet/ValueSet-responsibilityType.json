@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "responsibilityType",
+  "language": "de-DE",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+  "version": "1.0.1",
+  "name": "ResponsibilityType",
+  "title": "Art der Zuständigkeit OEGD",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-17",
+  "publisher": "Robert Koch-Institut",
+  "contact": [ {
+    "name": "Robert Koch-Institut",
+    "telecom": [ {
+      "system": "url",
+      "value": "https://rki.de"
+    } ]
+  } ],
+  "description": "Werteliste der Arten der Zuständigkeit, die im ÖGD genutzt werden.",
+  "compose": {
+    "include": [ {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2026-03-17T00:00:00+01:00",
+    "contains": [ {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+      "code": "all",
+      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+      "code": "all-exceptTB",
+      "display": "zuständig für alle meldepflichtigen Infektionskrankheiten und -erreger außer Tuberkulose"
+    }, {
+      "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+      "code": "TB",
+      "display": "zuständig nur für Tuberkulose"
+    } ]
+  }
+}

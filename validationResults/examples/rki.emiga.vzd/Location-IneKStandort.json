@@ -6,6 +6,50 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 467
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[467]" ],
+    "expression": [ "Location.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 467
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SLICING_CANNOT_BE_EVALUATED"
+      } ]
+    },
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[467]" ],
+    "expression": [ "Location.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 249
     } ],
     "severity": "information",
@@ -89,51 +133,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1794
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Details_for__matching_against_Profile_"
-    } ],
-    "severity": "information",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Details_for__matching_against_Profile_"
-      } ]
-    },
-    "diagnostics": "This element does not match any known slice defined in the profile http://fhir.de/StructureDefinition/address-de-basis|1.5.4 (this may not be a problem, but you should check that it's not intended to match a slice) - Does not match slice 'Stadtteil' (discriminator: ('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct' in url))",
-    "location": [ "Location.address.extension[0]", "Line[1] Col[1794]" ],
-    "expression": [ "Location.address.extension[0]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2120
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Extension_EXTP_Context_Wrong"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Extension_EXTP_Context_Wrong"
-      } ]
-    },
-    "diagnostics": "The extension http://fhir.de/StructureDefinition/destatis/ags is not allowed to be used at this point (this element is [Address, Location.address]; allowed for this version = e:Address.city)",
-    "location": [ "Location.address", "Line[1] Col[2120]" ],
-    "expression": [ "Location.address" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2098
+      "valueInteger": 2108
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "TERMINOLOGY_TX_HINT"
@@ -147,7 +147,7 @@
       } ]
     },
     "diagnostics": "Code was validated against existing expansion of ValueSet: http://fhir.de/ValueSet/iso/bundeslaender",
-    "location": [ "Location.address.state", "Line[1] Col[2098]" ],
+    "location": [ "Location.address.state", "Line[1] Col[2108]" ],
     "expression": [ "Location.address.state" ]
   }, {
     "extension": [ {
@@ -155,7 +155,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1809
+      "valueInteger": 1660
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "TERMINOLOGY_TX_HINT"
@@ -169,7 +169,7 @@
       } ]
     },
     "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBoth",
-    "location": [ "Location.address.type", "Line[1] Col[1809]" ],
+    "location": [ "Location.address.type", "Line[1] Col[1660]" ],
     "expression": [ "Location.address.type" ]
   }, {
     "extension": [ {
@@ -177,29 +177,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2796
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Extension_EXTP_Context_Wrong"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Extension_EXTP_Context_Wrong"
-      } ]
-    },
-    "diagnostics": "The extension https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod is not allowed to be used at this point (this element is [Identifier, Location.managingOrganization.identifier, Reference.identifier]; allowed for this version = e:Organization, e:Location)",
-    "location": [ "Location.managingOrganization.identifier", "Line[1] Col[2796]" ],
-    "expression": [ "Location.managingOrganization.identifier" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2798
+      "valueInteger": 2677
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -213,7 +191,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "Location", "Line[1] Col[2798]" ],
+    "location": [ "Location", "Line[1] Col[2677]" ],
     "expression": [ "Location" ]
   } ]
 }

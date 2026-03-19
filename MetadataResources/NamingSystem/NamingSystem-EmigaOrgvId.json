@@ -1,0 +1,14 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "EmigaOrgvId",
+  "name": "EmigaOrgvId",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2024-03-19",
+  "publisher": "Robert Koch-Institut",
+  "description": "EMIGA Organizationsverzeichnis ID für die Verwendung in Identifiers",
+  "uniqueId": [ {
+    "type": "uri",
+    "value": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
+  } ]
+}

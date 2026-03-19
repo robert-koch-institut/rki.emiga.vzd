@@ -33,19 +33,10 @@
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 595
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_TX_ValueSet_NotFound"
     } ],
-    "severity": "warning",
+    "severity": "information",
     "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_TX_ValueSet_NotFound"
-      } ]
-    },
-    "diagnostics": "ValueSet 'https://emiga.rki.de/fhir/case/ValueSet/County' not found",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://demis.rki.de/fhir/ValueSet/county",
     "location": [ "Organization.extension[0].extension[0].value.ofType(Coding)", "Line[1] Col[595]" ],
     "expression": [ "Organization.extension[0].extension[0].value.ofType(Coding)" ]
   }, {
