@@ -5,7 +5,7 @@ keepTempFiles: false
 profileSets:
 - identifier: "rki.emiga.vzd"
   artifactRepo: "profile_vzd_fsh"
-  localCopyLocation: null
+  #localCopyLocation: null
   reference: "feature/profile-loader"
   skipSanityCheckValidation: false
   ignoredSanityChecks:
@@ -40,6 +40,8 @@ loadNpmDependencies: true
 snapshotDependenciesForSushi: true
 enableTreeShaking: true
 treeShakingWhitelistedResources: []
+treeShakingIgnoredResources: []
+alwaysOutputBuiltInsMatching: []
 treeShakingTerminologyServerURL: ""
 ntsPackages: []
 additionalDependencies: []

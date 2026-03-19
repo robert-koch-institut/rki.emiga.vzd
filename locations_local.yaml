@@ -4,11 +4,11 @@ locations:
     type: FILESYSTEM
     environment: PROD
     # local Git repository location:
-    fullPath: P:\source\repos\rki.emiga.vzd
+    fullPath: P:/source/repos/rki.emiga.vzd
 # ------------------------------------------------------------------------
   - name: napi_output_location_vzd
     type: FILESYSTEM
     environment: PROD
     # output folder:
-    fullPath: P:\source\repos\rki.emiga.vzd
+    fullPath: P:/source/repos/rki.emiga.vzd
 # ------------------------------------------------------------------------
