@@ -4,8 +4,8 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
-* ^version = "0.3.0"
-* ^date = "2026-03-09"
+* ^version = "0.4.0"
+* ^date = "2026-03-19"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -108,11 +108,11 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
     //einrichtungsArt 0..1 MS and
     //erweiterterFachabteilungsschluessel 0..1 MS and
     //fachbereich 0..1 MS
-* type[emigaOrganizationType] from HospitalOrganizationType (required)
+//* type[emigaOrganizationType] from HospitalOrganizationType (required)
 //* ^patternCodeableConcept.coding.code = #hospital
-* type[emigaOrganizationType].coding.code = #hospital
-* type[emigaOrganizationType].coding.system = $DemisOrgType
-* type[emigaOrganizationType].coding.display = "Krankenhaus"
+* type[emigaOrganizationType].coding.code = #hospital (exactly)
+* type[emigaOrganizationType].coding.system = $DemisOrgType (exactly)
+* type[emigaOrganizationType].coding.display = "Krankenhaus" (exactly)
   //* insert StrictCodableConcept
 //* type[einrichtungsArt] from $IHEXDShealthcareFacilityTypeCode (required)
 //* type[einrichtungsArt] ^definition = "Die Einrichtungsart wird entsprechend der ISIK Profile genutzt: und dient der Harmonisierung"

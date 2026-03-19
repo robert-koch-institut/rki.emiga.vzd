@@ -80,6 +80,7 @@ RuleSet: ProfileMetaTags
 * meta.tag[relevance].system = $RelevanceCS
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
+/*
 * meta.tag[orgvBundleId] from $BundleIdVS (preferred)
 * meta.tag[orgvBundleId].system 1.. MS
 * meta.tag[orgvBundleId].system = $BundleIdCS
@@ -107,7 +108,7 @@ RuleSet: MetaTagOrgVBundle
 * meta.tag[orgvBundleVersion].system = $BundleVersionCS 
 * meta.tag[orgvBundleVersion].code MS
 * meta.tag[orgvBundleVersion].display MS
-
+*/
 RuleSet: ProfileMetaProfileTags
 * meta.profile MS
 * meta.profile ^slicing.discriminator.type = #value

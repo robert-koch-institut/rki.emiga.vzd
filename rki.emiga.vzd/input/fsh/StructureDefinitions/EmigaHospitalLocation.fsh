@@ -4,8 +4,8 @@ Id: EmigaHospitalLocation
 Title: "Krankenhaus - Standort"
 Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 //
-* ^version = "0.3.0"
-* ^date = "2026-03-09"
+* ^version = "0.4.0"
+* ^date = "2026-03-19"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
