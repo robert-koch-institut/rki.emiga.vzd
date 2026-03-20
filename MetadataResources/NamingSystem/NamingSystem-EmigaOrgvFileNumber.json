@@ -6,7 +6,7 @@
   "kind": "identifier",
   "date": "2025-07-25",
   "publisher": "Robert Koch-Institut",
-  "description": "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers",
+  "description": "EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
   "uniqueId": [ {
     "type": "uri",
     "value": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"

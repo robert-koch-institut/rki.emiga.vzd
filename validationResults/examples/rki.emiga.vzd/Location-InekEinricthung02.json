@@ -6,43 +6,56 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 168
+      "valueInteger": 480
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
     } ],
-    "severity": "warning",
+    "severity": "error",
     "code": "processing",
     "details": {
       "coding": [ {
         "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
+        "code": "SLICING_CANNOT_BE_EVALUATED"
       } ]
     },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.18' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "Location.meta.profile[0]", "Line[1] Col[168]" ],
-    "expression": [ "Location.meta.profile[0]" ]
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleId in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[480]" ],
+    "expression": [ "Location.meta.tag[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 277
+      "valueInteger": 480
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_TX_NoValid_13"
+      "valueString": "SLICING_CANNOT_BE_EVALUATED"
     } ],
-    "severity": "warning",
+    "severity": "error",
     "code": "processing",
     "details": {
       "coding": [ {
         "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_TX_NoValid_13"
+        "code": "SLICING_CANNOT_BE_EVALUATED"
       } ]
     },
-    "diagnostics": "The Coding provided (https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType#public) was not found in the value set 'SecurityLabels' (http://hl7.org/fhir/ValueSet/security-labels|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType#public' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/security-labels')",
-    "location": [ "Location.meta.security[0]", "Line[1] Col[277]" ],
+    "diagnostics": "Slicing cannot be evaluated: Could not match discriminator (system) for slice Location.meta.tag:orgvBundleVersion in profile https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|0.4.0 - the discriminator [system] does not have fixed value, binding or existence assertions",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[480]" ],
+    "expression": [ "Location.meta.tag[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 262
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+    "location": [ "Location.meta.security[0]", "Line[1] Col[262]" ],
     "expression": [ "Location.meta.security[0]" ]
   }, {
     "extension": [ {
@@ -50,21 +63,12 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 369
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Terminology_TX_NoValid_13"
+      "valueInteger": 354
     } ],
-    "severity": "warning",
+    "severity": "information",
     "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Terminology_TX_NoValid_13"
-      } ]
-    },
-    "diagnostics": "The Coding provided (https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility#1.) was not found in the value set 'SecurityLabels' (http://hl7.org/fhir/ValueSet/security-labels|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility#1.' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/security-labels')",
-    "location": [ "Location.meta.security[1]", "Line[1] Col[369]" ],
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility",
+    "location": [ "Location.meta.security[1]", "Line[1] Col[354]" ],
     "expression": [ "Location.meta.security[1]" ]
   }, {
     "extension": [ {
@@ -72,29 +76,20 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2310
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Extension_EXTP_Context_Wrong"
+      "valueInteger": 480
     } ],
-    "severity": "error",
+    "severity": "information",
     "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Extension_EXTP_Context_Wrong"
-      } ]
-    },
-    "diagnostics": "The extension https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod is not allowed to be used at this point (allowed = e:Organization; this element is [Location])",
-    "location": [ "Location", "Line[1] Col[2310]" ],
-    "expression": [ "Location" ]
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/Relevance",
+    "location": [ "Location.meta.tag[0]", "Line[1] Col[480]" ],
+    "expression": [ "Location.meta.tag[0]" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 758
+      "valueInteger": 743
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_TX_NoValid_2_CC"
@@ -108,7 +103,7 @@
       } ]
     },
     "diagnostics": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v2-0203#XX)",
-    "location": [ "Location.identifier[0].type", "Line[1] Col[758]" ],
+    "location": [ "Location.identifier[0].type", "Line[1] Col[743]" ],
     "expression": [ "Location.identifier[0].type" ]
   }, {
     "extension": [ {
@@ -116,7 +111,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 926
+      "valueInteger": 911
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_TX_NoValid_2_CC"
@@ -130,7 +125,7 @@
       } ]
     },
     "diagnostics": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v2-0203#XX)",
-    "location": [ "Location.identifier[1].type", "Line[1] Col[926]" ],
+    "location": [ "Location.identifier[1].type", "Line[1] Col[911]" ],
     "expression": [ "Location.identifier[1].type" ]
   }, {
     "extension": [ {
@@ -138,7 +133,20 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1545
+      "valueInteger": 1530
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType",
+    "location": [ "Location.type[0]", "Line[1] Col[1530]" ],
+    "expression": [ "Location.type[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1530
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_TX_NoValid_2_CC"
@@ -152,7 +160,7 @@
       } ]
     },
     "diagnostics": "None of the codings provided are in the value set 'V3 Value SetServiceDeliveryLocationRoleType' (http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|2014-03-26), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType#00)",
-    "location": [ "Location.type[0]", "Line[1] Col[1545]" ],
+    "location": [ "Location.type[0]", "Line[1] Col[1530]" ],
     "expression": [ "Location.type[0]" ]
   }, {
     "extension": [ {
@@ -160,7 +168,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2310
+      "valueInteger": 2307
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -174,50 +182,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "Location", "Line[1] Col[2310]" ],
+    "location": [ "Location", "Line[1] Col[2307]" ],
     "expression": [ "Location" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2310
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
-      } ]
-    },
-    "diagnostics": "Profile reference 'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.18' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
-    "location": [ "Location.meta.profile[0]", "Line[1] Col[2310]" ],
-    "expression": [ "Location.meta.profile[0]" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 0
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 0
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "Validation_VAL_Profile_Unknown"
-    } ],
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "Validation_VAL_Profile_Unknown"
-      } ]
-    },
-    "diagnostics": "Invalid profile. Failed to retrieve profile with url=https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation|2.0.0-alpha.18",
-    "location": [ "Line[0] Col[0]" ]
   } ]
 }

@@ -3,10 +3,10 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2026-03-16T07:17:35Z",
+    "timestamp" : "2026-03-19T15:02:37Z",
     "component" : {
       "name" : "DEMIS ProfileLoader",
-      "version" : "9.4.0",
+      "version" : "11.0.0",
       "externalReferences" : [
         {
           "type" : "vcs",
@@ -36,7 +36,7 @@
         },
         {
           "name" : "type",
-          "value" : "Conformance"
+          "value" : "IG"
         },
         {
           "name" : "fhirVersions",
@@ -201,7 +201,8 @@
       "dependsOn" : [
         "pkg:npm/rki.demis.common@2.0.0",
         "pkg:npm/rki.emiga.common@1.2.0-alpha.20",
-        "pkg:npm/de.basisprofil.r4@1.5.4"
+        "pkg:npm/de.basisprofil.r4@1.5.4",
+        "pkg:npm/hl7.fhir.r4.core@4.0.1"
       ]
     },
     {

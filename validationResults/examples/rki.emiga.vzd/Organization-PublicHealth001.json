@@ -1,0 +1,122 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 287
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+    "location": [ "Organization.meta.security[0]", "Line[1] Col[287]" ],
+    "expression": [ "Organization.meta.security[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 379
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility",
+    "location": [ "Organization.meta.security[1]", "Line[1] Col[379]" ],
+    "expression": [ "Organization.meta.security[1]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 613
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_TX_ValueSet_NotFound"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_TX_ValueSet_NotFound"
+      } ]
+    },
+    "diagnostics": "ValueSet 'https://emiga.rki.de/fhir/case/ValueSet/County' not found",
+    "location": [ "Organization.extension[0].extension[0].value.ofType(Coding)", "Line[1] Col[613]" ],
+    "expression": [ "Organization.extension[0].extension[0].value.ofType(Coding)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 742
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+    "location": [ "Organization.extension[0].extension[1].value.ofType(Coding)", "Line[1] Col[742]" ],
+    "expression": [ "Organization.extension[0].extension[1].value.ofType(Coding)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1043
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationType",
+    "location": [ "Organization.type[0]", "Line[1] Col[1043]" ],
+    "expression": [ "Organization.type[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1523
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "TERMINOLOGY_TX_HINT"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "TERMINOLOGY_TX_HINT"
+      } ]
+    },
+    "diagnostics": "Code was validated against existing expansion of ValueSet: http://fhir.de/ValueSet/iso/bundeslaender",
+    "location": [ "Organization.address[0].state", "Line[1] Col[1523]" ],
+    "expression": [ "Organization.address[0].state" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1562
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "Organization", "Line[1] Col[1562]" ],
+    "expression": [ "Organization" ]
+  } ]
+}

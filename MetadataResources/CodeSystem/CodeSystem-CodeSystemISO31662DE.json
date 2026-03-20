@@ -1,17 +1,20 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystemISO31662DE",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ]
+  },
   "url": "urn:iso:std:iso:3166-2:de",
-  "version": "1.4.0",
+  "version": "1.5.4",
   "name": "CodeSystemISO31662DE",
   "title": "ISO-3166-2:de-Laendercodes",
   "status": "active",
   "experimental": false,
-  "date": "2021-02-17",
+  "date": "2025-06-16",
   "publisher": "HL7 Deutschland e.V. (Technisches Komitee FHIR)",
   "contact": [ {
     "telecom": [ {
-      "system": "other",
+      "system": "url",
       "value": "http://hl7.de/technische-komitees/fhir/"
     } ]
   } ],
@@ -20,6 +23,7 @@
   "caseSensitive": true,
   "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender",
   "content": "complete",
+  "count": 16,
   "concept": [ {
     "code": "DE-BW",
     "display": "Baden-Württemberg"

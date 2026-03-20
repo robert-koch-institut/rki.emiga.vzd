@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/ValueSet/OrgVBundleId",
   "version": "0.1.0",
   "name": "OrgVBundleId",
-  "title": "Relevanz (Werteliste)",
+  "title": "Relevanz",
   "status": "active",
   "experimental": false,
   "date": "2025-06-10",

@@ -6,28 +6,6 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 666
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "CodeSystem.valueSet", "Line[1] Col[666]" ],
-    "expression": [ "CodeSystem.valueSet" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
       "valueInteger": 1651
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
@@ -43,6 +21,22 @@
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
     "location": [ "CodeSystem", "Line[1] Col[1651]" ],
+    "expression": [ "CodeSystem" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "CodeSystem_CS_VS_Invalid"
+    } ],
+    "severity": "error",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "CodeSystem_CS_VS_Invalid"
+      } ]
+    },
+    "diagnostics": "CodeSystem https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole has an 'all system' value set of https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole, but the value set doesn't have a single include",
+    "location": [ "CodeSystem" ],
     "expression": [ "CodeSystem" ]
   } ]
 }

@@ -1,0 +1,136 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 152697
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "StructureDefinition", "Line[1] Col[152697]" ],
+    "expression": [ "StructureDefinition" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 142424
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_PATH_SLICING_DEPRECATED"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_PATH_SLICING_DEPRECATED"
+      } ]
+    },
+    "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
+    "location": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]", "Line[1] Col[142424]" ],
+    "expression": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 143794
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_PATH_SLICING_DEPRECATED"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_PATH_SLICING_DEPRECATED"
+      } ]
+    },
+    "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
+    "location": [ "StructureDefinition.differential.element[22].slicing.discriminator[0]", "Line[1] Col[143794]" ],
+    "expression": [ "StructureDefinition.differential.element[22].slicing.discriminator[0]" ]
+  }, {
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)",
+    "location": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ],
+    "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_VALUE_TYPE_REPEAT_WARNING_DOTNET"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_VALUE_TYPE_REPEAT_WARNING_DOTNET"
+      } ]
+    },
+    "diagnostics": "The repeating element has a pattern value for a primitive type. The DotNet validator will not apply this to all the repeats - this is an error",
+    "location": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ],
+    "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 34185
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_PATH_SLICING_DEPRECATED"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_PATH_SLICING_DEPRECATED"
+      } ]
+    },
+    "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
+    "location": [ "StructureDefinition.snapshot.element[27].slicing.discriminator[0]", "Line[1] Col[34185]" ],
+    "expression": [ "StructureDefinition.snapshot.element[27].slicing.discriminator[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 55092
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_PATH_SLICING_DEPRECATED"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_PATH_SLICING_DEPRECATED"
+      } ]
+    },
+    "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
+    "location": [ "StructureDefinition.snapshot.element[44].slicing.discriminator[0]", "Line[1] Col[55092]" ],
+    "expression": [ "StructureDefinition.snapshot.element[44].slicing.discriminator[0]" ]
+  } ]
+}

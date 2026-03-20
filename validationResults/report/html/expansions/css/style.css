@@ -1,0 +1,88 @@
+.fullwidth {
+    width: 100%;
+}
+
+.halfwidth {
+    width: 50%;
+}
+
+input {
+  border: 2px solid #a6a3ab;
+}
+
+table {
+    border: 3px solid #a6a3ab;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+td{
+  border: 2px solid #a6a3ab;
+}
+
+
+th {
+    background-color: #d8dbdf;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 3px solid #a6a3ab;
+}
+
+th,td {
+    padding: 15px;
+    text-align: left;
+}
+
+tr.fatal{
+    background-color: #e3c4d6;
+}
+
+tr.error{
+    background-color: #f4c6c6;
+}
+
+tr.warning{
+    background-color: #f6f3b9;
+}
+
+tr.info{
+    background-color: #c6e1f4;
+}
+
+i {
+position: relative;
+top: 5px;
+}
+
+i.fatal{
+    color: #eb33ff;
+}
+
+i.error{
+    color: #ff5733;
+}
+
+i.warning{
+   color: #ffbd33;
+}
+
+i.info{
+    color: #3380ff;
+}
+
+div .severity-icons {
+    display: inline-block;
+    white-space: nowrap;
+}
+.resource-name-headline {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.material-icons {
+  margin-bottom: -5px;
+  width: 20px;
+}

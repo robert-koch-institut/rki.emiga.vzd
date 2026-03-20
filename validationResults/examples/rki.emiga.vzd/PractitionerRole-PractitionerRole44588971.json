@@ -1,0 +1,65 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [ {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 305
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+    "location": [ "PractitionerRole.meta.security[0]", "Line[1] Col[305]" ],
+    "expression": [ "PractitionerRole.meta.security[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 397
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/common/ValueSet/ResourceResponsibility",
+    "location": [ "PractitionerRole.meta.security[1]", "Line[1] Col[397]" ],
+    "expression": [ "PractitionerRole.meta.security[1]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 665
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "Code was validated against existing expansion of ValueSet: https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
+    "location": [ "PractitionerRole.code[0]", "Line[1] Col[665]" ],
+    "expression": [ "PractitionerRole.code[0]" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 667
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+      } ]
+    },
+    "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+    "location": [ "PractitionerRole", "Line[1] Col[667]" ],
+    "expression": [ "PractitionerRole" ]
+  } ]
+}

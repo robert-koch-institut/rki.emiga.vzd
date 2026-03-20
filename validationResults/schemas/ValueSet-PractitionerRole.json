@@ -6,7 +6,29 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 859
+      "valueInteger": 846
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "Terminology_PassThrough_TX_Message"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "Terminology_PassThrough_TX_Message"
+      } ]
+    },
+    "diagnostics": "CodeSystem is unknown and can't be validated: http://terminology.hl7.org/CodeSystem/designation-usage for 'http://terminology.hl7.org/CodeSystem/designation-usage#display'",
+    "location": [ "ValueSet.compose.include[1].concept[0].designation[0].use", "Line[1] Col[846]" ],
+    "expression": [ "ValueSet.compose.include[1].concept[0].designation[0].use" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 846
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "Terminology_TX_NoValid_13"
@@ -20,7 +42,7 @@
       } ]
     },
     "diagnostics": "The Coding provided (http://terminology.hl7.org/CodeSystem/designation-usage#display) was not found in the value set 'Designation Use' (http://hl7.org/fhir/ValueSet/designation-use|4.0.1), and a code should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable).  (error message = Unknown code 'http://terminology.hl7.org/CodeSystem/designation-usage#display' for in-memory expansion of ValueSet 'http://hl7.org/fhir/ValueSet/designation-use')",
-    "location": [ "ValueSet.compose.include[1].concept[0].designation[0].use", "Line[1] Col[859]" ],
+    "location": [ "ValueSet.compose.include[1].concept[0].designation[0].use", "Line[1] Col[846]" ],
     "expression": [ "ValueSet.compose.include[1].concept[0].designation[0].use" ]
   }, {
     "extension": [ {
@@ -28,7 +50,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 2886
+      "valueInteger": 2873
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -42,7 +64,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "ValueSet", "Line[1] Col[2886]" ],
+    "location": [ "ValueSet", "Line[1] Col[2873]" ],
     "expression": [ "ValueSet" ]
   } ]
 }

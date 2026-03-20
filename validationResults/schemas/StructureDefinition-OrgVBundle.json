@@ -6,51 +6,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 13159
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.18' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)", "Line[1] Col[13159]" ],
-    "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 70353
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.18' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.differential.element[1].pattern.ofType(canonical)", "Line[1] Col[70353]" ],
-    "expression": [ "StructureDefinition.differential.element[1].pattern.ofType(canonical)" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 70748
+      "valueInteger": 70997
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -64,8 +20,14 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "StructureDefinition", "Line[1] Col[70748]" ],
+    "location": [ "StructureDefinition", "Line[1] Col[70997]" ],
     "expression": [ "StructureDefinition" ]
+  }, {
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)",
+    "location": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ],
+    "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",

@@ -6,7 +6,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 1146
+      "valueInteger": 1133
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -20,7 +20,29 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "ValueSet", "Line[1] Col[1146]" ],
+    "location": [ "ValueSet", "Line[1] Col[1133]" ],
+    "expression": [ "ValueSet" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 1133
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "http://hl7.org/fhir/StructureDefinition/ValueSet#vsd-0"
+    } ],
+    "severity": "warning",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "http://hl7.org/fhir/StructureDefinition/ValueSet#vsd-0"
+      } ]
+    },
+    "diagnostics": "Constraint failed: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'",
+    "location": [ "ValueSet", "Line[1] Col[1133]" ],
     "expression": [ "ValueSet" ]
   } ]
 }

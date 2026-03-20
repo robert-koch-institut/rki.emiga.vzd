@@ -2,14 +2,14 @@
   "resourceType": "StructureDefinition",
   "id": "OrgVBundle",
   "url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "OrgVBundle",
   "title": "Organizationsverzeichnis Bundle",
   "status": "active",
   "experimental": false,
-  "date": "2025-06-10",
+  "date": "2026-03-06",
   "publisher": "Robert Koch-Institut",
-  "description": "To Do",
+  "description": "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Organisationsverzeichnisses.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -322,7 +322,7 @@
       "short": "Profiles this resource claims to conform to",
       "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
       "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-      "min": 0,
+      "min": 1,
       "max": "*",
       "base": {
         "path": "Meta.profile",
@@ -351,7 +351,7 @@
       "short": "Profiles this resource claims to conform to",
       "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
       "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-      "min": 0,
+      "min": 1,
       "max": "*",
       "base": {
         "path": "Meta.profile",
@@ -362,7 +362,7 @@
         "code": "canonical",
         "targetProfile": [ "http://hl7.org/fhir/StructureDefinition/StructureDefinition" ]
       } ],
-      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.18",
+      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle",
       "constraint": [ {
         "key": "ele-1",
         "severity": "error",
@@ -1806,14 +1806,15 @@
         } ],
         "rules": "open"
       },
+      "min": 1,
       "mustSupport": true
     }, {
       "id": "Bundle.meta.profile:emigaprofile",
       "path": "Bundle.meta.profile",
       "sliceName": "emigaprofile",
-      "min": 0,
+      "min": 1,
       "max": "*",
-      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle|2.0.0-alpha.18",
+      "patternCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle",
       "mustSupport": true
     }, {
       "id": "Bundle.implicitRules",

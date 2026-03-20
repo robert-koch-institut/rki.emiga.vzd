@@ -5,7 +5,7 @@
   "url": "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType",
   "version": "0.1.0",
   "name": "IneKFacilityType",
-  "title": "IneK Einrichtungstyp (Werteliste)",
+  "title": "IneK Einrichtungstyp",
   "status": "active",
   "experimental": false,
   "date": "2025-06-18",

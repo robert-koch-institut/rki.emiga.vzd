@@ -6,95 +6,7 @@
       "valueInteger": 1
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 12673
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation|2.0.0-alpha.18' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)", "Line[1] Col[12673]" ],
-    "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 55737
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.snapshot.element[44].binding.valueSet", "Line[1] Col[55737]" ],
-    "expression": [ "StructureDefinition.snapshot.element[44].binding.valueSet" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 193099
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation|2.0.0-alpha.18' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.differential.element[2].pattern.ofType(canonical)", "Line[1] Col[193099]" ],
-    "expression": [ "StructureDefinition.differential.element[2].pattern.ofType(canonical)" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 196091
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-      "valueString": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-    } ],
-    "severity": "warning",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "http://hl7.org/fhir/java-core-messageId",
-        "code": "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE_NC"
-      } ]
-    },
-    "diagnostics": "Canonical URL 'https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion' exists, but can't be loaded, so it can't be checked for validity",
-    "location": [ "StructureDefinition.differential.element[19].binding.valueSet", "Line[1] Col[196091]" ],
-    "expression": [ "StructureDefinition.differential.element[19].binding.valueSet" ]
-  }, {
-    "extension": [ {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
-      "valueInteger": 1
-    }, {
-      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
-      "valueInteger": 206451
+      "valueInteger": 179585
     }, {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
@@ -108,7 +20,7 @@
       } ]
     },
     "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
-    "location": [ "StructureDefinition", "Line[1] Col[206451]" ],
+    "location": [ "StructureDefinition", "Line[1] Col[179585]" ],
     "expression": [ "StructureDefinition" ]
   }, {
     "severity": "error",
@@ -116,6 +28,34 @@
     "diagnostics": "The fixed value has type 'code' which is not valid (valid type: [string])",
     "location": [ "StructureDefinition" ],
     "expression": [ "StructureDefinition" ]
+  }, {
+    "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 168715
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_PATH_SLICING_DEPRECATED"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_PATH_SLICING_DEPRECATED"
+      } ]
+    },
+    "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
+    "location": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]", "Line[1] Col[168715]" ],
+    "expression": [ "StructureDefinition.differential.element[10].slicing.discriminator[0]" ]
+  }, {
+    "severity": "information",
+    "code": "processing",
+    "diagnostics": "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)",
+    "location": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ],
+    "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
   }, {
     "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
@@ -134,6 +74,28 @@
     "expression": [ "StructureDefinition.snapshot.element[9].pattern.ofType(canonical)" ]
   }, {
     "extension": [ {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+      "valueInteger": 1
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+      "valueInteger": 34310
+    }, {
+      "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString": "SD_PATH_SLICING_DEPRECATED"
+    } ],
+    "severity": "information",
+    "code": "processing",
+    "details": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/java-core-messageId",
+        "code": "SD_PATH_SLICING_DEPRECATED"
+      } ]
+    },
+    "diagnostics": "The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)",
+    "location": [ "StructureDefinition.snapshot.element[27].slicing.discriminator[0]", "Line[1] Col[34310]" ],
+    "expression": [ "StructureDefinition.snapshot.element[27].slicing.discriminator[0]" ]
+  }, {
+    "extension": [ {
       "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
       "valueString": "SD_VALUE_TYPE_IILEGAL"
     } ],
@@ -146,7 +108,7 @@
       } ]
     },
     "diagnostics": "The element Location.address.type.value has a fixed of type code, which is not in the list of allowed types ([string])",
-    "location": [ "StructureDefinition.snapshot.element[90].fixed.ofType(code)" ],
-    "expression": [ "StructureDefinition.snapshot.element[90].fixed.ofType(code)" ]
+    "location": [ "StructureDefinition.snapshot.element[76].fixed.ofType(code)" ],
+    "expression": [ "StructureDefinition.snapshot.element[76].fixed.ofType(code)" ]
   } ]
 }
