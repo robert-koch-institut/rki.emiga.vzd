@@ -5,7 +5,7 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 
 /* -------- meta -------- */
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
-* meta.security[visibility] = $ResourceVisibilityType#public
+* meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 /* -------- extensions (all slices, multiple where realistic) -------- */

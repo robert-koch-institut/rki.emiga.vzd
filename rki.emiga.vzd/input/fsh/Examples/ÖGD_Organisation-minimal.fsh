@@ -4,7 +4,7 @@ Usage: #example
 Description: "Minimale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
-* meta.security[visibility] = $ResourceVisibilityType#public
+* meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 /* -------- extensions (1.. MS) -------- */
