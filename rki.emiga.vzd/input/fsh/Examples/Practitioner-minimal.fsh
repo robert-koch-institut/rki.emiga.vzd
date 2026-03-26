@@ -10,7 +10,7 @@ Usage: #example
 // ----------------------------------------------------
 // MustSupport security tags (ProfileSecurityTags)
 // ----------------------------------------------------
-* meta.security[visibility] = $ResourceVisibilityType#internal
+* meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 // ----------------------------------------------------

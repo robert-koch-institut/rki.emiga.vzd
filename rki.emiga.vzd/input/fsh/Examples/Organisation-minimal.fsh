@@ -7,7 +7,7 @@ Usage: #example
 // ----------------------------------------------------
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 
-* meta.security[visibility] = $ResourceVisibilityType#internal
+* meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 // (meta.tag slices also MS but we do NOT include them because you explicitly
