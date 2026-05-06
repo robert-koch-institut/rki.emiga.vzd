@@ -11,8 +11,8 @@ Usage: #example
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 * meta.tag[relevance].system = $RelevanceCS
-* meta.tag[relevance].code = #primary
-* meta.tag[relevance].display = "Primärer Datensatz"
+* meta.tag[relevance].code = #UserCreated
+* meta.tag[relevance].display = "Durch OEGD angelegt"
 
 * meta.tag[orgvBundleId].system = $BundleIdCS
 * meta.tag[orgvBundleId].code = #orgv-bundle-001
@@ -54,8 +54,8 @@ Usage: #example
 * telecom[Email].use = #work
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-30-1234567"
+* telecom[Phone].value = "+49 30 1234567"
 * telecom[Phone].use = #work
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-30-7654321"
+* telecom[Fax].value = "+49 30 7654321"

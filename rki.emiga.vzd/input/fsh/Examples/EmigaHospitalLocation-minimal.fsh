@@ -71,7 +71,7 @@ Description: "Minimale Instanz eines Krankenhaus-Standorts (EMIGA)"
 
 /* -------- telecom (MS) -------- */
 * telecom.system = #phone
-* telecom.value = "+49-251-123456"
+* telecom.value = "+49 251 123456"
 
 /* -------- address (0..1 MS) -------- */
 * address.type = #both

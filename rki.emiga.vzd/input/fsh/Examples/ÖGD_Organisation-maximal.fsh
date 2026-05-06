@@ -9,13 +9,9 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 /* -------- extensions (all slices, multiple where realistic) -------- */
-/* ResponsibilityHealthdepartments: both sub-extensions populated */
-* extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.system =
-  "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
+* extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
 * extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.code = #11005711
-
-* extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.system =
-  "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+* extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.code = #all
 
 /* OrganizationPeriod: full period */
@@ -28,7 +24,6 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * identifier[codeSiteId].type = $v2-0203#PRN
 * identifier[codeSiteId].system = $CodeSiteId
 * identifier[codeSiteId].value = "1."
-* identifier[codeSiteId].assigner.display = "EMIGA VZD"
 
 /* telematikID slice */
 * identifier[telematikID].use = #official
@@ -59,13 +54,13 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * telecom[Email].value = "info@gesundheitsamt.de"
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-511-1234567"
+* telecom[Phone].value = "+49 511 1234567"
 
 * telecom[Url].system = #url
 * telecom[Url].value = "https://www.gesundheitsamt.de"
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-511-1234568"
+* telecom[Fax].value = "+49 511 1234568"
 
 /* -------- address -------- */
 /* Address 0 */

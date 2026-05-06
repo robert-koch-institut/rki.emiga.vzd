@@ -16,7 +16,7 @@ Description: "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaub
 /* -------------------- category (sliced, open) -------------------- */
 * category[emigaHealthcareServiceCategory].coding.system = $HealthcareServiceCategory
 * category[emigaHealthcareServiceCategory].coding.code = #consultation
-* category[emigaHealthcareServiceCategory].coding.display = "Consultation"
+* category[emigaHealthcareServiceCategory].coding.display = "Beratungsangebot"
 
 * category[+].coding.system = "http://snomed.info/sct"
 * category[=].coding.code = #409063005
@@ -56,7 +56,7 @@ Description: "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaub
 * telecom[Email].period.start = "2024-01-01"
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-511-9876543"
+* telecom[Phone].value = "+49 511 9876543"
 * telecom[Phone].use = #work
 * telecom[Phone].rank = 1
 * telecom[Phone].period.start = "2024-01-01"
@@ -68,7 +68,7 @@ Description: "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaub
 * telecom[Url].period.start = "2024-01-01"
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-511-9876544"
+* telecom[Fax].value = "+49 511 9876544"
 * telecom[Fax].use = #work
 * telecom[Fax].rank = 1
 * telecom[Fax].period.start = "2024-01-01"

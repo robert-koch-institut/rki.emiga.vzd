@@ -62,10 +62,10 @@ Usage: #example
 * telecom[Email][1].value = "a.mueller@gesundheitsamt.de"
 
 * telecom[Phone][0].system = #phone
-* telecom[Phone][0].value = "+49-30-1234567"
+* telecom[Phone][0].value = "+49 30 1234567"
 
 * telecom[Phone][1].system = #phone
-* telecom[Phone][1].value = "+49-30-9876543"
+* telecom[Phone][1].value = "+49 30 9876543"
 
 * telecom[Fax][0].system = #fax
-* telecom[Fax][0].value = "+49-30-7654321"
+* telecom[Fax][0].value = "+49 30 7654321"

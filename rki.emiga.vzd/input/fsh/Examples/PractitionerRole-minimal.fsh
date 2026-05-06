@@ -19,7 +19,7 @@ Usage: #example
 // MustSupport sliced element: code
 // ---------------------------
 * code[emigaPractitionerRole] = $PractitionerRole#publicMedicalOfficer
-* code[emigaPractitionerRole].coding.display = "Public Medical Officer"
+* code[emigaPractitionerRole].coding.display = "Amtsärztlicher Dienst"
 
 // ---------------------------
 // 0..1 MS element

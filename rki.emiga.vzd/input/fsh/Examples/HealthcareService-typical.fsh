@@ -34,13 +34,13 @@ Description: "Typische Instanz einer EMIGA-Dienstleistung"
 * telecom[Email].value = "infektionsschutz@gesundheitsamt.de"
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-511-9876543"
+* telecom[Phone].value = "+49 511 9876543"
 
 * telecom[Url].system = #url
 * telecom[Url].value = "https://www.gesundheitsamt.de/infektionsschutz"
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-511-9876544"
+* telecom[Fax].value = "+49 511 9876544"
 
 /* -------- availability -------- */
 * availableTime.daysOfWeek[0] = #mon

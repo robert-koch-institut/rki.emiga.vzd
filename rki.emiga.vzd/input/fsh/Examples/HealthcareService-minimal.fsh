@@ -33,13 +33,13 @@ Description: "Minimale Instanz einer EMIGA-Dienstleistung"
 * telecom[Email].value = "kontakt@gesundheitsamt.de"
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-511-1234567"
+* telecom[Phone].value = "+49 511 1234567"
 
 * telecom[Url].system = #url
 * telecom[Url].value = "https://www.gesundheitsamt.de"
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-511-1234568"
+* telecom[Fax].value = "+49 511 1234568"
 
 
 

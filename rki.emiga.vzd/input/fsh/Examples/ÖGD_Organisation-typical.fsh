@@ -9,9 +9,10 @@ Description: "Typische Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 /* -------- extensions -------- */
-* extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.system =
-  "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
+* extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.code = #all
+* extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
+* extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.code = #11011004
 
 * extension[organizationPeriod].valuePeriod.start = "2015-01-01"
 * extension[organizationPeriod].valuePeriod.end = "2035-12-31"
@@ -41,13 +42,13 @@ Description: "Typische Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * telecom[Email].value = "info@gesundheitsamt.de"
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-511-1234567"
+* telecom[Phone].value = "+49 511 1234567"
 
 * telecom[Url].system = #url
 * telecom[Url].value = "https://www.gesundheitsamt.de"
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-511-1234568"
+* telecom[Fax].value = "+49 511 1234568"
 
 /* -------- address -------- */
 * address[0].line = "Musterstraße 1"

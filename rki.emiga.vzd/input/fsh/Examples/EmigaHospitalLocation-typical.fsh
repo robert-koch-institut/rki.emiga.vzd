@@ -59,7 +59,7 @@ Description: "Typische Instanz eines Krankenhaus-Standorts (EMIGA)"
 
 /* -------- telecom -------- */
 * telecom.system = #phone
-* telecom.value = "+49-251-123456"
+* telecom.value = "+49 251 123456"
 
 /* -------- address -------- */
 * address.type = #both

@@ -8,9 +8,10 @@ Description: "Minimale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
 /* -------- extensions (1.. MS) -------- */
-* extension[responsibilityHealthdepartments].extension[0].url = "responsibilityType"
 * extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType"
 * extension[responsibilityHealthdepartments].extension[responsibilityType].valueCoding.code = #all
+* extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.system = "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
+* extension[responsibilityHealthdepartments].extension[geographicRegion].valueCoding.code = #11005711
 
 /* -------- identifier (1.. MS, slice codeSiteId 1..1 MS) -------- */
 * identifier[codeSiteId].system = $CodeSiteId
@@ -35,13 +36,13 @@ Description: "Minimale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * telecom[Email].value = "info@gesundheitsamt.de"
 
 * telecom[Phone].system = #phone
-* telecom[Phone].value = "+49-511-1234567"
+* telecom[Phone].value = "+49 511 1234567"
 
 * telecom[Url].system = #url
 * telecom[Url].value = "https://www.gesundheitsamt.de"
 
 * telecom[Fax].system = #fax
-* telecom[Fax].value = "+49-511-1234568"
+* telecom[Fax].value = "+49 511 1234568"
 
 
 /* -------- address (0..* MS → must be present) -------- */
