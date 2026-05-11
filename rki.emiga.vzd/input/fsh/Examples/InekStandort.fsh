@@ -56,6 +56,3 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 //* address.state = "Niedersachsen"
 * address.postalCode = "48231"
 //* address.country = "DE"
-* managingOrganization.identifier.system = $identifier-iknr
-* managingOrganization.identifier.value = "260551132"
-* managingOrganization.identifier.extension[inekVersionPeriod].extension[version].valueInteger = 1

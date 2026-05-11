@@ -4,7 +4,6 @@ Usage: #example
 Description: "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaubten Elemente befüllt)"
 
 /* -------------------- Resource / Meta -------------------- */
-* id = "healthcareservice-maximal-01"
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.

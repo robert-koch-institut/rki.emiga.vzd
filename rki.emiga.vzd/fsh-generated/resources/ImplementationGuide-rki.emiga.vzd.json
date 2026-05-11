@@ -165,7 +165,7 @@
       },
       {
         "reference": {
-          "reference": "HealthcareService/healthcareservice-maximal-01"
+          "reference": "HealthcareService/EmigaHealthcareServiceMaximal"
         },
         "name": "EmigaHealthcareServiceMaximal",
         "description": "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaubten Elemente befüllt)",

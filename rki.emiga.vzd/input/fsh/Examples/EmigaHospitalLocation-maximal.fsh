@@ -107,10 +107,4 @@ Description: "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)"
 * position.extension[utmCoordinates].extension[UTM_Easting_X].valueDecimal = 431451
 * position.extension[utmCoordinates].extension[UTM_Northing_Y].valueDecimal = 5757106
 
-/* -------- managingOrganization -------- */
-* managingOrganization.reference = "Organization/JosephsHospital"
-* managingOrganization.identifier.system = "http://fhir.de/sid/arge-ik/iknr"
-* managingOrganization.identifier.value = "260551132"
 
-/* -------- partOf (MS) -------- */
-* partOf = Reference(EmigaHospitalLocation/parent-location)
