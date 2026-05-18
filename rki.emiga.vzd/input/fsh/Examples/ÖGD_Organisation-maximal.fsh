@@ -69,9 +69,9 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * address[0].line.extension[Strasse].valueString = "Musterstraße"
 * address[0].line.extension[Hausnummer].valueString = "1"
 * address[0].line.extension[Adresszusatz].valueString = "Gebäude A"
-* address[0].line.extension[Postfach].valueString = "Postfach 123"
 
 * address[0].extension[Stadtteil].valueString = "Zentrum"
+* address[0].line[+] = "Zentrum"
 * address[0].city = "Musterstadt"
 * address[0].state = "DE-BB"
 * address[0].postalCode = "12345"
@@ -81,11 +81,11 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * address[=].line.extension[Strasse].valueString = "Beispielweg"
 * address[=].line.extension[Hausnummer].valueString = "10"
 * address[=].line.extension[Adresszusatz].valueString = "2. OG"
-* address[=].line.extension[Postfach].valueString = "Postfach 456"
 * address[=].extension[Stadtteil].valueString = "Nord"
+* address[=].line[+] = "Nord"
 * address[=].city = "Musterstadt"
 * address[=].state = "DE-BB"
 * address[=].postalCode = "12345"
 
 /* -------- hierarchy -------- */
-* partOf = Reference(Organization/Organisation-maximal)
+* partOf = Reference(Organization/Organization-maximal)

@@ -20,7 +20,7 @@ Description: "Minimale Instanz einer EMIGA-Dienstleistung"
 * specialty[emigaHealthcareServiceSpecialty].coding.code = #infectionProtectionAndEpi
 * specialty[emigaHealthcareServiceSpecialty].coding.display = "Infektionsschutz und Infektionsepidemiologie"
 
-* location = Reference(EmigaLocation/Location-minimal)
+* location = Reference(Location/Location-minimal)
 
 * name = "test_dienst"
 

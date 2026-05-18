@@ -88,18 +88,17 @@ Usage: #example
 * address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
 * address.extension[Stadtteil].valueString = "Musterbezirk"
 
-* address.line = "Musterstraße 12"
-* address.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[Strasse].valueString = "Musterstraße"
+* address.line[0] = "Musterstraße 12"
+* address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
+* address.line[0].extension[Strasse].valueString = "Musterstraße"
 
-* address.line.extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[Hausnummer].valueString = "12"
+* address.line[0].extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
+* address.line[0].extension[Hausnummer].valueString = "12"
 
-* address.line.extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
-* address.line.extension[Adresszusatz].valueString = "EG"
+* address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
+* address.line[0].extension[Adresszusatz].valueString = "EG"
+* address.line[1] = "Musterbezirk"
 
-* address.line.extension[Postfach].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox"
-* address.line.extension[Postfach].valueString = "Postfach 100"
 
 // ----------------------------------------------------
 // POSITION (0..1 MS)
@@ -113,6 +112,6 @@ Usage: #example
 * managingOrganization = Reference(Organization/Organization-minimal)
 
 // ----------------------------------------------------
-// PART OF (0..1 MS)
+// PART OF (0..1 MS) (optional in minimal, required in typical)
 // ----------------------------------------------------
-* partOf = Reference(Location/ParentLocation-minimal) // Part Of: Refer OrganizationOrg.puml 
+// * partOf = Reference(Location/Location-typical) 

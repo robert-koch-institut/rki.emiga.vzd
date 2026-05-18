@@ -40,7 +40,7 @@ Description: "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaub
 * specialty[=].coding.display = "Infectious disease specialty (qualifier value)"
 
 /* -------------------- location (0..* MS) -------------------- */
-* location[0] = Reference(EmigaLocation/Location-maximal)
+* location[0] = Reference(Location/Location-maximal)
 
 /* -------------------- name/comment/extraDetails (MS) -------------------- */
 * name = "Telefonische Beratung Infektionsschutz"

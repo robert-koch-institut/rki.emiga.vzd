@@ -90,9 +90,8 @@ Usage: #example
 
 * address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
 * address.line[0].extension[Adresszusatz].valueString = "Haus A, EG"
+* address.line[1] = "Musterbezirk"
 
-* address.line[0].extension[Postfach].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox"
-* address.line[0].extension[Postfach].valueString = "Postfach 100"
 
 // ----------------------------------------------------
 // POSITION (0..1 MS) — longitude, latitude, altitude
@@ -107,5 +106,5 @@ Usage: #example
 * managingOrganization = Reference(Organization/Organization-maximal)
 * managingOrganization.display = "Gesundheitsamt Stadt XYZ"
 
-* partOf = Reference(Location/Location-parent)
+* partOf = Reference(Location/Location-minimal)
 * partOf.display = "Hauptstandort Stadt XYZ"

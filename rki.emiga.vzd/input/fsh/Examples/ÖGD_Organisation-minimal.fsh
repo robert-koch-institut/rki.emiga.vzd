@@ -44,17 +44,15 @@ Description: "Minimale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * telecom[Fax].system = #fax
 * telecom[Fax].value = "+49 511 1234568"
 
-
 /* -------- address (0..* MS → must be present) -------- */
 * address[0].line = "Musterstraße 1"
-
 * address[0].line.extension[Strasse].valueString = "Musterstraße"
 * address[0].line.extension[Hausnummer].valueString = "1"
-* address[0].line.extension[Adresszusatz].valueString = "Gebäude A"
-* address[0].line.extension[Postfach].valueString = "Postfach 123"
 
+* address[0].line.extension[Adresszusatz].valueString = "Gebäude A"
 * address[0].extension[Stadtteil].valueString = "Zentrum"
 
+* address[0].line[1] = "Zentrum"
 * address[0].city = "Musterstadt"
 * address[0].state = "DE-BB"
 * address[0].postalCode = "12345"

@@ -21,7 +21,7 @@ Description: "Typische Instanz einer EMIGA-Dienstleistung"
 * specialty[emigaHealthcareServiceSpecialty].coding.code = #infectionProtectionAndEpi
 * specialty[emigaHealthcareServiceSpecialty].coding.display = "Infektionsschutz und Infektionsepidemiologie"
 
-* location = Reference(EmigaLocation/Location-typical)
+* location = Reference(Location/Location-typical)
 
 * name = "test_dienst"
 

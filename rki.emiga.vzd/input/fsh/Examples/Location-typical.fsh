@@ -71,21 +71,22 @@ Usage: #example
 * address.country = "DE"
 
 // Typical: include street information
-* address.line = "Musterstraße 12"
+* address.line[0] = "Musterstraße 12"
 
 // MS extensions for address
 * address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
 * address.extension[Stadtteil].valueString = "Musterbezirk"
 
-* address.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[Strasse].valueString = "Musterstraße"
+* address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
+* address.line[0].extension[Strasse].valueString = "Musterstraße"
 
-* address.line.extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[Hausnummer].valueString = "12"
+* address.line[0].extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
+* address.line[0].extension[Hausnummer].valueString = "12"
 
 // Typical: include one optional address addition
-* address.line.extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
-* address.line.extension[Adresszusatz].valueString = "EG"
+* address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
+* address.line[0].extension[Adresszusatz].valueString = "EG"
+* address.line[1] = "Musterbezirk"
 
 // ----------------------------------------------------
 // POSITION — typical (longitude, latitude only)
@@ -99,5 +100,5 @@ Usage: #example
 * managingOrganization = Reference(Organization/Organization-typical)
 * managingOrganization.display = "Gesundheitsamt Stadt XYZ"
 
-* partOf = Reference(Location/Location-parent-typical)
+* partOf = Reference(Location/Location-minimal)
 * partOf.display = "Hauptstandort Stadt XYZ"

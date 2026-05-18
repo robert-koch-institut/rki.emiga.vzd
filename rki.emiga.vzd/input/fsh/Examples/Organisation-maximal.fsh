@@ -85,36 +85,21 @@ Usage: #example
 // ----------------------------------------------------
 // ADDRESS — full MS structure (0..1 MS)
 // ----------------------------------------------------
-* address.use = #work
-* address.type = #postal
-* address.text = "Musterstraße 12, 10115 Musterstadt"
-* address.city = "Musterstadt"
-* address.state = "DE-BE"
-* address.postalCode = "10115"
-* address.country = "DE"
+/* -------- address -------- */
+* address[0].line[0] = "Musterstraße 1"
+* address[0].line[0].extension[Strasse].valueString = "Musterstraße"
+* address[0].line[0].extension[Hausnummer].valueString = "1"
+* address[0].line[0].extension[Adresszusatz].valueString = "Gebäude A"
+* address[0].extension[Stadtteil].valueString = "Zentrum"
+* address[0].line[1] = "Zentrum"
+* address[0].city = "Musterstadt"
+* address[0].state = "DE-BB"
+* address[0].postalCode = "12345"
 
-// Stadtteil
-* address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
-* address.extension[Stadtteil].valueString = "Regierungsviertel"
-
-// Address line + extensions
-* address.line[0] = "Musterstraße 12"
-
-* address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line[0].extension[Strasse].valueString = "Musterstraße"
-
-* address.line[0].extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line[0].extension[Hausnummer].valueString = "12"
-
-* address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
-* address.line[0].extension[Adresszusatz].valueString = "Haus A, EG"
-
-* address.line[0].extension[Postfach].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox"
-* address.line[0].extension[Postfach].valueString = "Postfach 100"
 
 // ----------------------------------------------------
 // PART OF — 0..1 MS
 // ----------------------------------------------------
-* partOf = Reference(Organization/Organization-parent-maximal)
+* partOf = Reference(Organization/Organization-minimal)
 * partOf.display = "Übergeordnete Organisation"
 

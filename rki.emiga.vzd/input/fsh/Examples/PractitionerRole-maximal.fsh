@@ -43,27 +43,27 @@ Usage: #example
 * practitioner = Reference(Practitioner/Practitioner-maximal)
 * practitioner.display = "Dr. med. Anna Müller"
 
-* organization = Reference(Organization/Organization-maximal)
+* organization = Reference(Organization/EmigaPublicHealthOrganizationMaximal)
 * organization.display = "Gesundheitsamt Berlin-Mitte"
 
 // ----------------------------------------------------
 // Role code (sliced, StrictCodableConcept, all MS sub-elements)
 // ----------------------------------------------------
-* code[emigaPractitionerRole] = $PractitionerRole#publicMedicalOfficer "Public Medical Officer"
+* code[emigaPractitionerRole] = $PractitionerRole#publicMedicalOfficer
+* code[emigaPractitionerRole].coding.display = "Amtsärztlicher Dienst"
 * code[emigaPractitionerRole].coding.version = "2024"
 // text is 0..0 via StrictCodableConcept → not present
 
 // ----------------------------------------------------
 // Location (0..1 MS)
 // ----------------------------------------------------
-* location = Reference(Location/Location-berlin-office)
+* location = Reference(Location/Location-maximal)
 * location.display = "Dienstsitz Berlin-Mitte"
 
 // ----------------------------------------------------
-// HealthcareService (0..* MS) – show multiple entries in maximal
+// HealthcareService (0..* MS) – showing multiple entries in maximal as example, but typically only one entry would be included. 
 // ----------------------------------------------------
-* healthcareService[0] = Reference(HealthcareService/HealthcareService-infection-control)
-* healthcareService[0].display = "Infektionsschutz-Beratung"
-
-* healthcareService[1] = Reference(HealthcareService/HealthcareService-epidemiology-advice)
-* healthcareService[1].display = "Epidemiologische Beratung"
+* healthcareService[0] = Reference(HealthcareService/EmigaHealthcareServiceTypical)
+* healthcareService[0].display = "Telefonische Beratung Infektionsschutz"
+* healthcareService[1] = Reference(HealthcareService/EmigaHealthcareServiceMaximal)
+* healthcareService[1].display = "Telefonische Beratung Infektionsschutz"

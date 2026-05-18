@@ -13,7 +13,7 @@ Usage: #example
 // ---------------------------
 * active = true
 * practitioner = Reference(Practitioner/Practitioner-minimal)
-* organization = Reference(Organization/Organization-minimal)
+* organization = Reference(Organization/EmigaPublicHealthOrganizationMinimal)
 
 // ---------------------------
 // MustSupport sliced element: code
@@ -29,4 +29,4 @@ Usage: #example
 // ---------------------------
 // 0..* MS element (include once)
 // ---------------------------
-* healthcareService[0] = Reference(HealthcareService/HealthcareService-minimal)
+* healthcareService[0] = Reference(HealthcareService/EmigaHealthcareServiceMinimal)

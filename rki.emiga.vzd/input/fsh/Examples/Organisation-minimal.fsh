@@ -93,22 +93,17 @@ Usage: #example
 // Required MS extensions
 * address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
 * address.extension[Stadtteil].valueString = "Zentrum"
+* address.line[0] = "Musterstraße 12"
+* address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
+* address.line[0].extension[Strasse].valueString = "Musterstraße"
+* address.line[0].extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
+* address.line[0].extension[Hausnummer].valueString = "12"
+* address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
+* address.line[0].extension[Adresszusatz].valueString = "EG"
+* address.line[1] = "Zentrum"
 
-* address.line = "Musterstraße 12"
-
-* address.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[Strasse].valueString = "Musterstraße"
-
-* address.line.extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[Hausnummer].valueString = "12"
-
-* address.line.extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
-* address.line.extension[Adresszusatz].valueString = "EG"
-
-* address.line.extension[Postfach].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox"
-* address.line.extension[Postfach].valueString = "Postfach 100"
 
 // ----------------------------------------------------
-// PART OF — 0..1 MS
+// PART OF — 0..1 MS (optional in minimal, but we include it here to show how to reference the minimal Organization as parent)
 // ----------------------------------------------------
-* partOf = Reference(Organization/Organization-parent)
+// * partOf = Reference(Organization/Organization-minimal)

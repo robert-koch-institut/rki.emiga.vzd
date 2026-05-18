@@ -14,21 +14,21 @@ Usage: #example
 // -------------------------------------------------------------------
 * active = true
 
-* practitioner = Reference(EmigaPractitioner/Practitioner-12345)
-* organization = Reference(EmigaOrganization/Organization-RKI)
+* practitioner = Reference(Practitioner/Practitioner-typical)
+* organization = Reference(Organization/EmigaPublicHealthOrganizationTypical)
 
 // -------------------------------------------------------------------
 // Role code (sliced, MS, bound to PractitionerRole)
 // -------------------------------------------------------------------
 * code[emigaPractitionerRole] = $PractitionerRole#publicMedicalOfficer
-* code[emigaPractitionerRole].coding.display = "Public Medical Officer"
+* code[emigaPractitionerRole].coding.display = "Amtsärztlicher Dienst"
 
 // ---------------------------
 // 0..1 MS element
 // ---------------------------
 * location = Reference(Location/Location-typical)
 
-// ---------------------------
+// ---------------------------------
 // 0..* MS element (include once)
-// ---------------------------
-* healthcareService[0] = Reference(HealthcareService/HealthcareService-typical)
+// ---------------------------------
+* healthcareService[0] = Reference(HealthcareService/EmigaHealthcareServiceTypical)
