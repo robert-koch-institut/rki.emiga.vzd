@@ -79,15 +79,17 @@ Description: "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)"
 
 /* -------- address -------- */
 * address.type = #both
-* address.line = "Am Krankenhaus 2"
-* address.line.extension[Strasse].valueString = "Am Krankenhaus"
-* address.line.extension[Hausnummer].valueString = "2"
-* address.line.extension[Adresszusatz].valueString = "Gebäude A"
-* address.line.extension[Postfach].valueString = "Postfach 100"
+* address.line[0] = "Am Krankenhaus 2"
+* address.line[0].extension[Strasse].valueString = "Am Krankenhaus"
+* address.line[0].extension[Hausnummer].valueString = "2"
+* address.line[0].extension[Adresszusatz].valueString = "Gebäude A"
+* address.line[1] = "Postfach 100"
+* address.line[1].extension[Postfach].valueString = "Postfach 100"
 * address.extension[municipalityKey].valueCoding.system =
   "http://fhir.de/sid/destatis/ags"
 * address.extension[municipalityKey].valueCoding.code = #05570052
 * address.extension[Stadtteil].valueString = "Innenstadt"
+* address.line[2] = "Innenstadt"
 * address.city = "Warendorf"
 * address.state = "DE-NW"
 * address.postalCode = "48231"
@@ -106,5 +108,3 @@ Description: "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)"
 * position.extension[utmCoordinates].extension[UTM_Zone].valueString = "32U"
 * position.extension[utmCoordinates].extension[UTM_Easting_X].valueDecimal = 431451
 * position.extension[utmCoordinates].extension[UTM_Northing_Y].valueDecimal = 5757106
-
-

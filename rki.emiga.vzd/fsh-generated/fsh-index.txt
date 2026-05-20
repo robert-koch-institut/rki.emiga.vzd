@@ -15,9 +15,9 @@ HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareServi
 HealthcareService-EpiWarnHealthcareServiceInvTest.json    EpiWarnHealthcareServiceInvTest       Instance    Examples\EpiWarnHealthcareServiceInvTest.fsh                       1 - 29
 HealthcareService-HealthcareService44588971.json          HealthcareService44588971             Instance    Examples\HealthcareService-44588971.fsh                            1 - 16
 HealthcareService-HealthcareService44588973.json          HealthcareService44588973             Instance    Examples\HealthcareService-44588973.fsh                            1 - 28
-Location-EmigaHospitalLocationMaximal.json                EmigaHospitalLocationMaximal          Instance    Examples\EmigaHospitalLocation-maximal.fsh                         1 - 108
-Location-EmigaHospitalLocationMinimal.json                EmigaHospitalLocationMinimal          Instance    Examples\EmigaHospitalLocation-minimal.fsh                         1 - 103
-Location-EmigaHospitalLocationTypical.json                EmigaHospitalLocationTypical          Instance    Examples\EmigaHospitalLocation-typical.fsh                         1 - 68
+Location-EmigaHospitalLocationMaximal.json                EmigaHospitalLocationMaximal          Instance    Examples\EmigaHospitalLocation-maximal.fsh                         1 - 110
+Location-EmigaHospitalLocationMinimal.json                EmigaHospitalLocationMinimal          Instance    Examples\EmigaHospitalLocation-minimal.fsh                         1 - 87
+Location-EmigaHospitalLocationTypical.json                EmigaHospitalLocationTypical          Instance    Examples\EmigaHospitalLocation-typical.fsh                         1 - 69
 Location-EpiWarnLocation.json                             EpiWarnLocation                       Instance    Examples\LocationEpiWarn.fsh                                       1 - 21
 Location-HospitalRoomLocation.json                        HospitalRoomLocation                  Instance    Examples\HospitalRoomLocation.fsh                                  1 - 56
 Location-IneKStandort.json                                IneKStandort                          Instance    Examples\InekStandort.fsh                                          1 - 57

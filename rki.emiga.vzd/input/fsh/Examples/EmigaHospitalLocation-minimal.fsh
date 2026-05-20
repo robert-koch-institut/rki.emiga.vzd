@@ -73,23 +73,7 @@ Description: "Minimale Instanz eines Krankenhaus-Standorts (EMIGA)"
 * telecom.system = #phone
 * telecom.value = "+49 251 123456"
 
-/* -------- address (0..1 MS) -------- */
-* address.type = #both
-* address.line = "Am Krankenhaus 2"
-
-* address.line.extension[Strasse].valueString = "Am Krankenhaus"
-* address.line.extension[Hausnummer].valueString = "2"
-* address.line.extension[Adresszusatz].valueString = "Haupteingang"
-* address.line.extension[Postfach].valueString = "Postfach 100"
-
-* address.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
-* address.extension[municipalityKey].valueCoding.code = #05570052
-* address.extension[Stadtteil].valueString = "Innenstadt"
-
-* address.city = "Warendorf"
-* address.state = "DE-NW"
-* address.postalCode = "48231"
-
+ 
 /* -------- physicalType (MS) -------- */
 * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
 * physicalType.coding.code = #si
@@ -101,5 +85,3 @@ Description: "Minimale Instanz eines Krankenhaus-Standorts (EMIGA)"
 * position.extension[utmCoordinates].extension[UTM_Zone].valueString = "32U"
 * position.extension[utmCoordinates].extension[UTM_Easting_X].valueDecimal = 431451
 * position.extension[utmCoordinates].extension[UTM_Northing_Y].valueDecimal = 5757106
-
-
