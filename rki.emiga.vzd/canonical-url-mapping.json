@@ -1,0 +1,424 @@
+﻿{
+    "generatedFrom":  "fsh-generated/resources",
+    "oldPackageId":  "rki.emiga.vzd",
+    "newPackageId":  "rki.emiga.einr",
+    "rules":  {
+                  "ValueSet":  "https://emiga.rki.de/fhir/vzd/ValueSet/{id} or https://emiga.rki.de/fhir/ValueSet/{id} -> https://emiga.rki.de/fhir/einr/ValueSet/{id}",
+                  "CodeSystem":  "https://emiga.rki.de/fhir/vzd/CodeSystem/{id} or https://emiga.rki.de/fhir/CodeSystem/{id} -> https://emiga.rki.de/fhir/CodeSystem/{lowerFirst(id)}",
+                  "Extension":  "https://emiga.rki.de/fhir/vzd/Extension/{id} -> https://emiga.rki.de/fhir/einr/StructureDefinition/{id}",
+                  "StructureDefinition":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/{id} -> https://emiga.rki.de/fhir/einr/StructureDefinition/{id}",
+                  "NamingSystemIdentifier":  "https://emiga.rki.de/fhir/vzd/sid/{id} -> https://emiga.rki.de/fhir/einr/sid/{id}",
+                  "ImplementationGuide":  "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd -> https://emiga.rki.de/fhir/einr/ImplementationGuide/rki.emiga.einr"
+              },
+    "mappings":  [
+                     {
+                         "file":  "CodeSystem-HealthcareServiceCategory.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "HealthcareServiceCategory",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/healthcareServiceCategory"
+                     },
+                     {
+                         "file":  "CodeSystem-HealthcareServiceDutyHours.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "HealthcareServiceDutyHours",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/healthcareServiceDutyHours"
+                     },
+                     {
+                         "file":  "CodeSystem-HealthcareServiceSpecialty.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "HealthcareServiceSpecialty",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/healthcareServiceSpecialty"
+                     },
+                     {
+                         "file":  "CodeSystem-IneKFacilityType.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "IneKFacilityType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/ineKFacilityType"
+                     },
+                     {
+                         "file":  "CodeSystem-OrganizationType.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "OrganizationType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/organizationType"
+                     },
+                     {
+                         "file":  "CodeSystem-OrgVBundleId.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "OrgVBundleId",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/orgVBundleId"
+                     },
+                     {
+                         "file":  "CodeSystem-OrgVBundleVersion.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "OrgVBundleVersion",
+                         "old":  "https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/orgVBundleVersion"
+                     },
+                     {
+                         "file":  "CodeSystem-PractitionerRole.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "PractitionerRole",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/practitionerRole"
+                     },
+                     {
+                         "file":  "CodeSystem-responsibilityType.json",
+                         "resourceType":  "CodeSystem",
+                         "kind":  "CodeSystem",
+                         "id":  "responsibilityType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType",
+                         "new":  "https://emiga.rki.de/fhir/CodeSystem/responsibilityType"
+                     },
+                     {
+                         "file":  "ImplementationGuide-rki.emiga.vzd.json",
+                         "resourceType":  "ImplementationGuide",
+                         "kind":  "ImplementationGuide",
+                         "id":  "rki.emiga.vzd",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ImplementationGuide/rki.emiga.vzd",
+                         "new":  "https://emiga.rki.de/fhir/einr/ImplementationGuide/rki.emiga.einr"
+                     },
+                     {
+                         "file":  "NamingSystem-CodeSiteId.json",
+                         "resourceType":  "NamingSystem",
+                         "kind":  "IdentifierSystem",
+                         "id":  "CodeSiteId",
+                         "old":  "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId",
+                         "new":  "https://emiga.rki.de/fhir/einr/sid/CodeSiteId"
+                     },
+                     {
+                         "file":  "NamingSystem-EmigaOrgvFileNumber.json",
+                         "resourceType":  "NamingSystem",
+                         "kind":  "IdentifierSystem",
+                         "id":  "EmigaOrgvFileNumber",
+                         "old":  "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber",
+                         "new":  "https://emiga.rki.de/fhir/einr/sid/EmigaOrgvFileNumber"
+                     },
+                     {
+                         "file":  "NamingSystem-EmigaOrgvId.json",
+                         "resourceType":  "NamingSystem",
+                         "kind":  "IdentifierSystem",
+                         "id":  "EmigaOrgvId",
+                         "old":  "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId",
+                         "new":  "https://emiga.rki.de/fhir/einr/sid/EmigaOrgvId"
+                     },
+                     {
+                         "file":  "NamingSystem-IneKFileHeaderId.json",
+                         "resourceType":  "NamingSystem",
+                         "kind":  "IdentifierSystem",
+                         "id":  "IneKFileHeaderId",
+                         "old":  "https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId",
+                         "new":  "https://emiga.rki.de/fhir/einr/sid/IneKFileHeaderId"
+                     },
+                     {
+                         "file":  "StructureDefinition-DutyHoursAvailability.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "Extension",
+                         "id":  "DutyHoursAvailability",
+                         "old":  "https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/DutyHoursAvailability"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaDepartmentOrganization.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaDepartmentOrganization",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaDepartmentOrganization"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaHealthcareService.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaHealthcareService",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaHealthcareService"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaHospitalFacilityLocation.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaHospitalFacilityLocation",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaHospitalFacilityLocation"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaHospitalLocation.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaHospitalLocation",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaHospitalLocation"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaHospitalOrganization.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaHospitalOrganization",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaHospitalOrganization"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaHospitalRoomLocation.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaHospitalRoomLocation",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaHospitalRoomLocation"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaLocation.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaLocation",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaLocation"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaOrganization.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaOrganization",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaOrganization"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaPractitioner.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaPractitioner",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaPractitioner"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaPractitionerRole.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaPractitionerRole",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaPractitionerRole"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaPublicHealthLocation.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaPublicHealthLocation",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaPublicHealthLocation"
+                     },
+                     {
+                         "file":  "StructureDefinition-EmigaPublicHealthOrganization.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "EmigaPublicHealthOrganization",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/EmigaPublicHealthOrganization"
+                     },
+                     {
+                         "file":  "StructureDefinition-IdentifierCodeSiteId.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "IdentifierCodeSiteId",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/IdentifierCodeSiteId"
+                     },
+                     {
+                         "file":  "StructureDefinition-IdentifierEmigaOrgvFileNumber.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "IdentifierEmigaOrgvFileNumber",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaOrgvFileNumber",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/IdentifierEmigaOrgvFileNumber"
+                     },
+                     {
+                         "file":  "StructureDefinition-IdentifierEmigaOrgvId.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "IdentifierEmigaOrgvId",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaOrgvId",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/IdentifierEmigaOrgvId"
+                     },
+                     {
+                         "file":  "StructureDefinition-InekPostalAddress.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "Extension",
+                         "id":  "InekPostalAddress",
+                         "old":  "https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/InekPostalAddress"
+                     },
+                     {
+                         "file":  "StructureDefinition-IneKVersionPeriod.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "Extension",
+                         "id":  "IneKVersionPeriod",
+                         "old":  "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/IneKVersionPeriod"
+                     },
+                     {
+                         "file":  "StructureDefinition-OrgVBundle.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "StructureDefinition",
+                         "id":  "OrgVBundle",
+                         "old":  "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/OrgVBundle"
+                     },
+                     {
+                         "file":  "StructureDefinition-ResponsibilityHealthdepartments.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "Extension",
+                         "id":  "ResponsibilityHealthdepartments",
+                         "old":  "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/ResponsibilityHealthdepartments"
+                     },
+                     {
+                         "file":  "StructureDefinition-UTMCoordinates.json",
+                         "resourceType":  "StructureDefinition",
+                         "kind":  "Extension",
+                         "id":  "UTMCoordinates",
+                         "old":  "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates",
+                         "new":  "https://emiga.rki.de/fhir/einr/StructureDefinition/UTMCoordinates"
+                     },
+                     {
+                         "file":  "ValueSet-AddressTypePhysicalBoth.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "AddressTypePhysicalBoth",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBoth",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/AddressTypePhysicalBoth"
+                     },
+                     {
+                         "file":  "ValueSet-Fachbereich.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "Fachbereich",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/Fachbereich"
+                     },
+                     {
+                         "file":  "ValueSet-GenericOrganizationType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "GenericOrganizationType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/GenericOrganizationType"
+                     },
+                     {
+                         "file":  "ValueSet-HealthcareServiceCategory.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "HealthcareServiceCategory",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceCategory",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/HealthcareServiceCategory"
+                     },
+                     {
+                         "file":  "ValueSet-HealthcareServiceDutyHours.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "HealthcareServiceDutyHours",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/HealthcareServiceDutyHours"
+                     },
+                     {
+                         "file":  "ValueSet-HealthcareServiceSpecialty.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "HealthcareServiceSpecialty",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceSpecialty",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/HealthcareServiceSpecialty"
+                     },
+                     {
+                         "file":  "ValueSet-HealthcareServiceType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "HealthcareServiceType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/HealthcareServiceType"
+                     },
+                     {
+                         "file":  "ValueSet-HospitalOrganizationType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "HospitalOrganizationType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/HospitalOrganizationType"
+                     },
+                     {
+                         "file":  "ValueSet-IneKFacilityType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "IneKFacilityType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/IneKFacilityType"
+                     },
+                     {
+                         "file":  "ValueSet-OrganizationType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "OrganizationType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/OrganizationType"
+                     },
+                     {
+                         "file":  "ValueSet-OrgVBundleId.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "OrgVBundleId",
+                         "old":  "https://emiga.rki.de/fhir/ValueSet/OrgVBundleId",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/OrgVBundleId"
+                     },
+                     {
+                         "file":  "ValueSet-OrgVBundleVersion.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "OrgVBundleVersion",
+                         "old":  "https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/OrgVBundleVersion"
+                     },
+                     {
+                         "file":  "ValueSet-ORGVResourceVisibilityTypeVS.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "ORGVResourceVisibilityTypeVS",
+                         "old":  "https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/ORGVResourceVisibilityTypeVS"
+                     },
+                     {
+                         "file":  "ValueSet-PractitionerRole.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "PractitionerRole",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/PractitionerRole",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/PractitionerRole"
+                     },
+                     {
+                         "file":  "ValueSet-PublicHealthOrganizationType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "PublicHealthOrganizationType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/PublicHealthOrganizationType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/PublicHealthOrganizationType"
+                     },
+                     {
+                         "file":  "ValueSet-responsibilityType.json",
+                         "resourceType":  "ValueSet",
+                         "kind":  "ValueSet",
+                         "id":  "responsibilityType",
+                         "old":  "https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType",
+                         "new":  "https://emiga.rki.de/fhir/einr/ValueSet/responsibilityType"
+                     }
+                 ]
+}
+
