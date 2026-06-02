@@ -493,7 +493,7 @@
           "reference": "StructureDefinition/OrgVBundle"
         },
         "name": "Organizationsverzeichnis Bundle",
-        "description": "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Organisationsverzeichnisses.",
+        "description": "Dieses Bundle bildet Informationen zum Einrichtungsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Einrichtungsverzeichnisses.",
         "exampleBoolean": false
       },
       {

@@ -13,6 +13,6 @@ Dieser Abschnitt beschreibt die **NamingSystems**, die zur eindeutigen Identifik
 | **NamingSystem**                               | **Beschreibung**                                                                                       |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | CodeSite-ID (CodeSiteId) | CodeSite-ID für die Verwendung in Identifikatoren. |
-| EMIGA-Organisationsverzeichnis-Aktenzeichen (EmigaOrgvFileNumber) | EMIGA-Organisationsverzeichnis-Aktenzeichen zur Verwendung in Identifikatoren. |
-| EMIGA-Organisationsverzeichnis-ID (EmigaOrgvId) | EMIGA-Organisationsverzeichnis-ID zur Verwendung in Identifikatoren. |
+| EMIGA-Einrichtungsverzeichnis-Aktenzeichen (EmigaOrgvFileNumber) | EMIGA-Einrichtungsverzeichnis-Aktenzeichen zur Verwendung in Identifikatoren. |
+| EMIGA-Einrichtungsverzeichnis-ID (EmigaOrgvId) | EMIGA-Einrichtungsverzeichnis-ID zur Verwendung in Identifikatoren. |
 | IneK-ID (IneKFileHeaderId) | Identifikator. |

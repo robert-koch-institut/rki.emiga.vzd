@@ -12,7 +12,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * insert ORGVProfileSecurityTags
 
 * insert ProfileMetaProfileTags
-* insert MetaTagOrgVBundle
+* insert MetaTagEinrVBundle
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension

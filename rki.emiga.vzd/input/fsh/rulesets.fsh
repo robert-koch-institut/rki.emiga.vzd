@@ -91,7 +91,7 @@ RuleSet: ProfileMetaTags
 * meta.tag[orgvBundleVersion].code MS
 * meta.tag[orgvBundleVersion].display MS
 
-RuleSet: MetaTagOrgVBundle
+RuleSet: MetaTagEinrVBundle
 * meta.tag MS
 * meta.tag ^slicing.discriminator.type = #pattern
 * meta.tag ^slicing.discriminator.path = "system"
