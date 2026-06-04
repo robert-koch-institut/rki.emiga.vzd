@@ -1,0 +1,13 @@
+Instance: EpiWarnPractitionerRole
+InstanceOf: EmigaPractitionerRoleR6
+Usage: #example
+* meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService	"ÖGD-weit"
+* meta.security[responsibility] = $ResourceResponsibility#1.
+* meta.tag[relevance] = $RelevanceCS#IfsgKoordVwV "Paragraf 2 IfSG-Koordinierungs-VwV"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRoleR6"
+* active = true
+* practitioner = Reference(EpiWarnPractitioner)
+* organization = Reference(EpiWarnOrganization)
+* location = Reference(EpiWarnLocation)
+* healthcareService = Reference(EpiWarnHealthcareService)
+* code[emigaPractitionerRole] = $PractitionerRole#personOfContact "Ansprechperson"
