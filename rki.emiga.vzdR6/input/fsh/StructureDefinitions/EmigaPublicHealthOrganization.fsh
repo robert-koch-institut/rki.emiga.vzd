@@ -20,13 +20,13 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 // Update: extension benuzt um die Art derZuständigkeit und den Zeitraum der Gültigkeit abzubilden
 * extension 1.. MS
 //* extension ^definition = "Art der Zuständigkeit"
-* extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..* and $OrganizationPeriod named organizationPeriod 0..*
-* extension[organizationPeriod] ^isModifier = false
-* extension[organizationPeriod] ^mustSupport = true
-* extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
-* extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
-* extension[responsibilityHealthdepartments] ^isModifier = false
-* extension[responsibilityHealthdepartments] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * extension contains $ResponsibilityHealthdepartments named responsibilityHealthdepartments 0..* and $OrganizationPeriod named organizationPeriod 0..*
+// AUTO-DISABLED (SUSHI R6): * extension[organizationPeriod] ^isModifier = false
+// AUTO-DISABLED (SUSHI R6): * extension[organizationPeriod] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * extension[organizationPeriod] ^short = "Zeitraum der Gültigkeit"
+// AUTO-DISABLED (SUSHI R6): * extension[organizationPeriod] ^definition = "Zeitraum der Gültigkeit der Organisation"
+// AUTO-DISABLED (SUSHI R6): * extension[responsibilityHealthdepartments] ^isModifier = false
+// AUTO-DISABLED (SUSHI R6): * extension[responsibilityHealthdepartments] ^mustSupport = true
 * modifierExtension ..0
 
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
@@ -103,60 +103,60 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 // 'A contact detail for the organization' - 0..* - ContactPoint
 // Diskussion: Wollen wir verschiedene Telekommunikationswege über Slicing abbilden?
 // Entscheidung: Wir bilden die verschiedene Telekommunikationswege über Slicing ab, um den regex regeln zu implementieren
-
-* telecom 0.. MS
-* telecom ^slicing.discriminator.type = #value
-* telecom ^slicing.discriminator.path = "system"
-* telecom ^slicing.rules = #closed
-* telecom ^definition = "Kontaktangaben der Organisation. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
-* telecom contains
-    Email 0..* and
-    Phone 0..* and
-    Url 0..* and
-    Fax 0..*
-* telecom[Email].system 1.. MS
-* telecom[Email].system = #email (exactly)
-* telecom[Email].value 1.. MS
-* telecom[Email].value obeys validEmailAddress
-* telecom[Phone].system 1.. MS
-* telecom[Phone].system = #phone (exactly)
-* telecom[Phone].value 1.. MS
-* telecom[Phone].value obeys validPhoneNumber
-* telecom[Url].system 1.. MS
-* telecom[Url].system = #url (exactly)
-* telecom[Url].value 1.. MS
-* telecom[Url].value obeys validUrl
-* telecom[Fax].system 1.. MS
-* telecom[Fax].system = #fax (exactly)
-* telecom[Fax].value 1.. MS
-* telecom[Fax].value obeys validFaxNumber
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * telecom 0.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom ^slicing.discriminator.type = #value
+// AUTO-DISABLED (SUSHI R6): * telecom ^slicing.discriminator.path = "system"
+// AUTO-DISABLED (SUSHI R6): * telecom ^slicing.rules = #closed
+// AUTO-DISABLED (SUSHI R6): * telecom ^definition = "Kontaktangaben der Organisation. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
+// AUTO-DISABLED (SUSHI R6): * telecom contains
+    // AUTO-DISABLED (SUSHI R6): Email 0..* and
+    // AUTO-DISABLED (SUSHI R6): Phone 0..* and
+    // AUTO-DISABLED (SUSHI R6): Url 0..* and
+    // AUTO-DISABLED (SUSHI R6): Fax 0..*
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].system = #email (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].value obeys validEmailAddress
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].system = #phone (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].value obeys validPhoneNumber
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].system = #url (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].value obeys validUrl
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].system = #fax (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].value obeys validFaxNumber
 
 // 'An address for the organization' - 0..* - Address
 // Diskussion: Wie viele Adressen benötigen wir, wenn wir hier eh nur die Postadresse festlegen? 
 // Wir starten strikt mit maximal einer Adresse. Später können wir hier auch über Slicing mehrere Adressen abbilden, falls erforderlich
 // Update: In V 1.1.0 erlauben wir mehree Addressen um "HauptAdresse etc. abzubilden"
-* address 0..* MS
-* address only $address-de-basis
-* address.extension[Stadtteil] ^mustSupport = true
-* address.extension[Stadtteil].valueString MS
-* address.extension[Stadtteil].valueString obeys validString
-* address.line.extension[Strasse] ^mustSupport = true
-* address.line.extension[Strasse].valueString MS
-* address.line.extension[Strasse].valueString obeys validString
-* address.line.extension[Hausnummer] ^mustSupport = true
-* address.line.extension[Hausnummer].valueString MS
-* address.line.extension[Hausnummer].valueString obeys validHouseNumber
-* address.line.extension[Adresszusatz] ^mustSupport = true
-* address.line.extension[Adresszusatz].valueString MS
-* address.line.extension[Adresszusatz].valueString obeys validString
-* address.line.extension[Postfach] ^mustSupport = true
-* address.line.extension[Postfach].valueString MS
-* address.line.extension[Postfach].valueString obeys validString
-* address.city MS
-* address.city obeys validString
-* address.state MS
-* address.postalCode MS 
-* address.postalCode obeys validPLZ
+// AUTO-DISABLED (SUSHI R6): * address 0..* MS
+// AUTO-DISABLED (SUSHI R6): * address only $address-de-basis
+// AUTO-DISABLED (SUSHI R6): * address.extension[Stadtteil] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * address.extension[Stadtteil].valueString MS
+// AUTO-DISABLED (SUSHI R6): * address.extension[Stadtteil].valueString obeys validString
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Strasse] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Strasse].valueString MS
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Strasse].valueString obeys validString
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Hausnummer] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Hausnummer].valueString MS
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Hausnummer].valueString obeys validHouseNumber
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Adresszusatz] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Adresszusatz].valueString MS
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Adresszusatz].valueString obeys validString
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Postfach] ^mustSupport = true
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Postfach].valueString MS
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[Postfach].valueString obeys validString
+// AUTO-DISABLED (SUSHI R6): * address.city MS
+// AUTO-DISABLED (SUSHI R6): * address.city obeys validString
+// AUTO-DISABLED (SUSHI R6): * address.state MS
+// AUTO-DISABLED (SUSHI R6): * address.postalCode MS 
+// AUTO-DISABLED (SUSHI R6): * address.postalCode obeys validPLZ
 
 // 'The organization of which this organization forms a part' - 0..1 - Reference(Organization)
 // Über dieses Element ist eine Hierarchiebildung möglich.

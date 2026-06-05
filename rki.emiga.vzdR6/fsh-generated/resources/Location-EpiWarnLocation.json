@@ -1,0 +1,56 @@
+{
+  "resourceType": "Location",
+  "id": "EpiWarnLocation",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "tag": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/Relevance",
+        "code": "IfsgKoordVwV",
+        "display": "Paragraf 2 IfSG-Koordinierungs-VwV"
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocationR6"
+    ]
+  },
+  "address": {
+    "line": [
+      "Uhlandstraße 4"
+    ],
+    "_line": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString": "Uhlandstraße"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString": "4"
+          }
+        ]
+      }
+    ],
+    "type": "physical",
+    "city": "Hannover",
+    "state": "Niedersachsen",
+    "postalCode": "30161",
+    "country": "DE"
+  },
+  "mode": "instance",
+  "status": "active",
+  "name": "Umweltbezogene Risikobewertung",
+  "managingOrganization": {
+    "reference": "Organization/EpiWarnOrganization"
+  }
+}

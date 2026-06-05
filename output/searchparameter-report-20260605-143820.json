@@ -1,0 +1,1382 @@
+{
+  "generated": "2026-06-05T14:38:20.060Z",
+  "totalRemovedMatches": 55,
+  "affectedCapabilityStatements": 1,
+  "matches": [
+    {
+      "removedSearchParameter": {
+        "id": "CarePlan-activity-code",
+        "name": "activity-code",
+        "code": "activity-code",
+        "url": "http://hl7.org/fhir/SearchParameter/CarePlan-activity-code",
+        "base": [
+          "CarePlan"
+        ],
+        "type": "token",
+        "description": "Detail type of activity"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "CarePlan",
+      "searchParameter": {
+        "name": "activity-code",
+        "definition": "http://hl7.org/fhir/SearchParameter/CarePlan-activity-code"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "CarePlan-activity-date",
+        "name": "activity-date",
+        "code": "activity-date",
+        "url": "http://hl7.org/fhir/SearchParameter/CarePlan-activity-date",
+        "base": [
+          "CarePlan"
+        ],
+        "type": "date",
+        "description": "Specified date occurs within period specified by CarePlan.activity.detail.scheduled[x]"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "CarePlan",
+      "searchParameter": {
+        "name": "activity-date",
+        "definition": "http://hl7.org/fhir/SearchParameter/CarePlan-activity-date"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Group-actual",
+        "name": "actual",
+        "code": "actual",
+        "url": "http://hl7.org/fhir/SearchParameter/Group-actual",
+        "base": [
+          "Group"
+        ],
+        "type": "token",
+        "description": "Descriptive or actual"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Group",
+      "searchParameter": {
+        "name": "actual",
+        "definition": "http://hl7.org/fhir/SearchParameter/Group-actual"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AuditEvent-agent-name",
+        "name": "agent-name",
+        "code": "agent-name",
+        "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-name",
+        "base": [
+          "AuditEvent"
+        ],
+        "type": "string",
+        "description": "Human friendly name for the agent"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AuditEvent",
+      "searchParameter": {
+        "name": "agent-name",
+        "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-name"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AuditEvent-altid",
+        "name": "altid",
+        "code": "altid",
+        "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-altid",
+        "base": [
+          "AuditEvent"
+        ],
+        "type": "token",
+        "description": "Alternative User identity"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AuditEvent",
+      "searchParameter": {
+        "name": "altid",
+        "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-altid"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ClinicalImpression-assessor",
+        "name": "assessor",
+        "code": "assessor",
+        "url": "http://hl7.org/fhir/SearchParameter/ClinicalImpression-assessor",
+        "base": [
+          "ClinicalImpression"
+        ],
+        "type": "reference",
+        "description": "The clinician performing the assessment"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ClinicalImpression",
+      "searchParameter": {
+        "name": "assessor",
+        "definition": "http://hl7.org/fhir/SearchParameter/ClinicalImpression-assessor"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "DocumentReference-authenticator",
+        "name": "authenticator",
+        "code": "authenticator",
+        "url": "http://hl7.org/fhir/SearchParameter/DocumentReference-authenticator",
+        "base": [
+          "DocumentReference"
+        ],
+        "type": "reference",
+        "description": "Who/what authenticated the document"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "DocumentReference",
+      "searchParameter": {
+        "name": "authenticator",
+        "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-authenticator"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ImagingStudy-basedon",
+        "name": "basedon",
+        "code": "basedon",
+        "url": "http://hl7.org/fhir/SearchParameter/ImagingStudy-basedon",
+        "base": [
+          "ImagingStudy"
+        ],
+        "type": "reference",
+        "description": "The order for the image"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ImagingStudy",
+      "searchParameter": {
+        "name": "basedon",
+        "definition": "http://hl7.org/fhir/SearchParameter/ImagingStudy-basedon"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-chromosome",
+        "name": "chromosome",
+        "code": "chromosome",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "token",
+        "description": "Chromosome number of the reference sequence"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "chromosome",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-chromosome-variant-coordinate",
+        "name": "chromosome-variant-coordinate",
+        "code": "chromosome-variant-coordinate",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome-variant-coordinate",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "composite",
+        "description": "Search parameter by chromosome and variant coordinate. This will refer to part of a locus or part of a gene where search region will be represented in 1-based system. Since the coordinateSystem can either be 0-based or 1-based, this search query will include the result of both coordinateSystem that contains the equivalent segment of the gene or whole genome sequence. For example, a search for sequence can be represented as `chromosome-variant-coordinate=1$lt345$gt123`, this means it will search for the MolecularSequence resource with variants on chromosome 1 and with position >123 and <345, where in 1-based system resource, all strings within region 1:124-344 will be revealed, while in 0-based system resource, all strings within region 1:123-344 will be revealed. You may want to check detail about 0-based v.s. 1-based above."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "chromosome-variant-coordinate",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome-variant-coordinate"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-chromosome-window-coordinate",
+        "name": "chromosome-window-coordinate",
+        "code": "chromosome-window-coordinate",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome-window-coordinate",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "composite",
+        "description": "Search parameter by chromosome and window. This will refer to part of a locus or part of a gene where search region will be represented in 1-based system. Since the coordinateSystem can either be 0-based or 1-based, this search query will include the result of both coordinateSystem that contains the equivalent segment of the gene or whole genome sequence. For example, a search for sequence can be represented as `chromosome-window-coordinate=1$lt345$gt123`, this means it will search for the MolecularSequence resource with a window on chromosome 1 and with position >123 and <345, where in 1-based system resource, all strings within region 1:124-344 will be revealed, while in 0-based system resource, all strings within region 1:123-344 will be revealed. You may want to check detail about 0-based v.s. 1-based above."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "chromosome-window-coordinate",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-chromosome-window-coordinate"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "DiagnosticReport-conclusion",
+        "name": "conclusion",
+        "code": "conclusion",
+        "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
+        "base": [
+          "DiagnosticReport"
+        ],
+        "type": "token",
+        "description": "A coded conclusion (interpretation/impression) on the report"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "DiagnosticReport",
+      "searchParameter": {
+        "name": "conclusion",
+        "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Composition-confidentiality",
+        "name": "confidentiality",
+        "code": "confidentiality",
+        "url": "http://hl7.org/fhir/SearchParameter/Composition-confidentiality",
+        "base": [
+          "Composition"
+        ],
+        "type": "token",
+        "description": "As defined by affinity domain"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Composition",
+      "searchParameter": {
+        "name": "confidentiality",
+        "definition": "http://hl7.org/fhir/SearchParameter/Composition-confidentiality"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Consent-consentor",
+        "name": "consentor",
+        "code": "consentor",
+        "url": "http://hl7.org/fhir/SearchParameter/Consent-consentor",
+        "base": [
+          "Consent"
+        ],
+        "type": "reference",
+        "description": "Who is agreeing to the policy and rules"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Consent",
+      "searchParameter": {
+        "name": "consentor",
+        "definition": "http://hl7.org/fhir/SearchParameter/Consent-consentor"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Specimen-container-id",
+        "name": "container-id",
+        "code": "container-id",
+        "url": "http://hl7.org/fhir/SearchParameter/Specimen-container-id",
+        "base": [
+          "Specimen"
+        ],
+        "type": "token",
+        "description": "The unique identifier associated with the specimen container"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Specimen",
+      "searchParameter": {
+        "name": "container-id",
+        "definition": "http://hl7.org/fhir/SearchParameter/Specimen-container-id"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Substance-container-identifier",
+        "name": "container-identifier",
+        "code": "container-identifier",
+        "url": "http://hl7.org/fhir/SearchParameter/Substance-container-identifier",
+        "base": [
+          "Substance"
+        ],
+        "type": "token",
+        "description": "Identifier of the package/container"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Substance",
+      "searchParameter": {
+        "name": "container-identifier",
+        "definition": "http://hl7.org/fhir/SearchParameter/Substance-container-identifier"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MedicinalProductAuthorization-country",
+        "name": "country",
+        "code": "country",
+        "url": "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-country",
+        "base": [
+          "MedicinalProductAuthorization"
+        ],
+        "type": "token",
+        "description": "The country in which the marketing authorization has been granted"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MedicinalProductAuthorization",
+      "searchParameter": {
+        "name": "country",
+        "definition": "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-country"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Subscription-criteria",
+        "name": "criteria",
+        "code": "criteria",
+        "url": "http://hl7.org/fhir/SearchParameter/Subscription-criteria",
+        "base": [
+          "Subscription"
+        ],
+        "type": "string",
+        "description": "The search rules used to determine when to send a notification"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Subscription",
+      "searchParameter": {
+        "name": "criteria",
+        "definition": "http://hl7.org/fhir/SearchParameter/Subscription-criteria"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ConceptMap-dependson",
+        "name": "dependson",
+        "code": "dependson",
+        "url": "http://hl7.org/fhir/SearchParameter/ConceptMap-dependson",
+        "base": [
+          "ConceptMap"
+        ],
+        "type": "uri",
+        "description": "Reference to property mapping depends on"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ConceptMap",
+      "searchParameter": {
+        "name": "dependson",
+        "definition": "http://hl7.org/fhir/SearchParameter/ConceptMap-dependson"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MessageHeader-destination-uri",
+        "name": "destination-uri",
+        "code": "destination-uri",
+        "url": "http://hl7.org/fhir/SearchParameter/MessageHeader-destination-uri",
+        "base": [
+          "MessageHeader"
+        ],
+        "type": "uri",
+        "description": "Actual destination address or id"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MessageHeader",
+      "searchParameter": {
+        "name": "destination-uri",
+        "definition": "http://hl7.org/fhir/SearchParameter/MessageHeader-destination-uri"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Encounter-diagnosis",
+        "name": "diagnosis",
+        "code": "diagnosis",
+        "url": "http://hl7.org/fhir/SearchParameter/Encounter-diagnosis",
+        "base": [
+          "Encounter"
+        ],
+        "type": "reference",
+        "description": "The diagnosis or procedure relevant to the encounter"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Encounter",
+      "searchParameter": {
+        "name": "diagnosis",
+        "definition": "http://hl7.org/fhir/SearchParameter/Encounter-diagnosis"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MedicationAdministration-effective-time",
+        "name": "effective-time",
+        "code": "effective-time",
+        "url": "http://hl7.org/fhir/SearchParameter/MedicationAdministration-effective-time",
+        "base": [
+          "MedicationAdministration"
+        ],
+        "type": "date",
+        "description": "Date administration happened (or did not happen)"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MedicationAdministration",
+      "searchParameter": {
+        "name": "effective-time",
+        "definition": "http://hl7.org/fhir/SearchParameter/MedicationAdministration-effective-time"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AuditEvent-entity-name",
+        "name": "entity-name",
+        "code": "entity-name",
+        "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-name",
+        "base": [
+          "AuditEvent"
+        ],
+        "type": "string",
+        "description": "Descriptor for entity"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AuditEvent",
+      "searchParameter": {
+        "name": "entity-name",
+        "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-name"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AuditEvent-entity-type",
+        "name": "entity-type",
+        "code": "entity-type",
+        "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-type",
+        "base": [
+          "AuditEvent"
+        ],
+        "type": "token",
+        "description": "Type of entity involved"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AuditEvent",
+      "searchParameter": {
+        "name": "entity-type",
+        "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-type"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ResearchSubject-individual",
+        "name": "individual",
+        "code": "individual",
+        "url": "http://hl7.org/fhir/SearchParameter/ResearchSubject-individual",
+        "base": [
+          "ResearchSubject"
+        ],
+        "type": "reference",
+        "description": "Who is part of study"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ResearchSubject",
+      "searchParameter": {
+        "name": "individual",
+        "definition": "http://hl7.org/fhir/SearchParameter/ResearchSubject-individual"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ImagingStudy-interpreter",
+        "name": "interpreter",
+        "code": "interpreter",
+        "url": "http://hl7.org/fhir/SearchParameter/ImagingStudy-interpreter",
+        "base": [
+          "ImagingStudy"
+        ],
+        "type": "reference",
+        "description": "Who interpreted the images"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ImagingStudy",
+      "searchParameter": {
+        "name": "interpreter",
+        "definition": "http://hl7.org/fhir/SearchParameter/ImagingStudy-interpreter"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ClinicalImpression-investigation",
+        "name": "investigation",
+        "code": "investigation",
+        "url": "http://hl7.org/fhir/SearchParameter/ClinicalImpression-investigation",
+        "base": [
+          "ClinicalImpression"
+        ],
+        "type": "reference",
+        "description": "Record of a specific investigation"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ClinicalImpression",
+      "searchParameter": {
+        "name": "investigation",
+        "definition": "http://hl7.org/fhir/SearchParameter/ClinicalImpression-investigation"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AllergyIntolerance-last-date",
+        "name": "last-date",
+        "code": "last-date",
+        "url": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date",
+        "base": [
+          "AllergyIntolerance"
+        ],
+        "type": "date",
+        "description": "Date(/time) of last known occurrence of a reaction"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AllergyIntolerance",
+      "searchParameter": {
+        "name": "last-date",
+        "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AllergyIntolerance-onset",
+        "name": "onset",
+        "code": "onset",
+        "url": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset",
+        "base": [
+          "AllergyIntolerance"
+        ],
+        "type": "date",
+        "description": "Date(/time) when manifestations showed"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AllergyIntolerance",
+      "searchParameter": {
+        "name": "onset",
+        "definition": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ConceptMap-other",
+        "name": "other",
+        "code": "other",
+        "url": "http://hl7.org/fhir/SearchParameter/ConceptMap-other",
+        "base": [
+          "ConceptMap"
+        ],
+        "type": "reference",
+        "description": "canonical reference to an additional ConceptMap to use for mapping if the source concept is unmapped"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ConceptMap",
+      "searchParameter": {
+        "name": "other",
+        "definition": "http://hl7.org/fhir/SearchParameter/ConceptMap-other"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Coverage-payor",
+        "name": "payor",
+        "code": "payor",
+        "url": "http://hl7.org/fhir/SearchParameter/Coverage-payor",
+        "base": [
+          "Coverage"
+        ],
+        "type": "reference",
+        "description": "The identity of the insurer or party paying for services"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Coverage",
+      "searchParameter": {
+        "name": "payor",
+        "definition": "http://hl7.org/fhir/SearchParameter/Coverage-payor"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ResearchStudy-principalinvestigator",
+        "name": "principalinvestigator",
+        "code": "principalinvestigator",
+        "url": "http://hl7.org/fhir/SearchParameter/ResearchStudy-principalinvestigator",
+        "base": [
+          "ResearchStudy"
+        ],
+        "type": "reference",
+        "description": "Researcher who oversees multiple aspects of the study"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ResearchStudy",
+      "searchParameter": {
+        "name": "principalinvestigator",
+        "definition": "http://hl7.org/fhir/SearchParameter/ResearchStudy-principalinvestigator"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ImagingStudy-reason",
+        "name": "reason",
+        "code": "reason",
+        "url": "http://hl7.org/fhir/SearchParameter/ImagingStudy-reason",
+        "base": [
+          "ImagingStudy"
+        ],
+        "type": "token",
+        "description": "The reason for the study"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ImagingStudy",
+      "searchParameter": {
+        "name": "reason",
+        "definition": "http://hl7.org/fhir/SearchParameter/ImagingStudy-reason"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-referenceseqid",
+        "name": "referenceseqid",
+        "code": "referenceseqid",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-referenceseqid",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "token",
+        "description": "Reference Sequence of the sequence"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "referenceseqid",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-referenceseqid"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-referenceseqid-variant-coordinate",
+        "name": "referenceseqid-variant-coordinate",
+        "code": "referenceseqid-variant-coordinate",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-referenceseqid-variant-coordinate",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "composite",
+        "description": "Search parameter by reference sequence and variant coordinate. This will refer to part of a locus or part of a gene where search region will be represented in 1-based system. Since the coordinateSystem can either be 0-based or 1-based, this search query will include the result of both coordinateSystem that contains the equivalent segment of the gene or whole genome sequence. For example, a search for sequence can be represented as `referenceSeqId-variant-coordinate=NC_000001.11$lt345$gt123`, this means it will search for the MolecularSequence resource with variants on NC_000001.11 and with position >123 and <345, where in 1-based system resource, all strings within region NC_000001.11:124-344 will be revealed, while in 0-based system resource, all strings within region NC_000001.11:123-344 will be revealed. You may want to check detail about 0-based v.s. 1-based above."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "referenceseqid-variant-coordinate",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-referenceseqid-variant-coordinate"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-referenceseqid-window-coordinate",
+        "name": "referenceseqid-window-coordinate",
+        "code": "referenceseqid-window-coordinate",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-referenceseqid-window-coordinate",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "composite",
+        "description": "Search parameter by reference sequence and window. This will refer to part of a locus or part of a gene where search region will be represented in 1-based system. Since the coordinateSystem can either be 0-based or 1-based, this search query will include the result of both coordinateSystem that contains the equivalent segment of the gene or whole genome sequence. For example, a search for sequence can be represented as `referenceSeqId-window-coordinate=NC_000001.11$lt345$gt123`, this means it will search for the MolecularSequence resource with a window on NC_000001.11 and with position >123 and <345, where in 1-based system resource, all strings within region NC_000001.11:124-344 will be revealed, while in 0-based system resource, all strings within region NC_000001.11:123-344 will be revealed. You may want to check detail about 0-based v.s. 1-based above."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "referenceseqid-window-coordinate",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-referenceseqid-window-coordinate"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Composition-related-id",
+        "name": "related-id",
+        "code": "related-id",
+        "url": "http://hl7.org/fhir/SearchParameter/Composition-related-id",
+        "base": [
+          "Composition"
+        ],
+        "type": "token",
+        "description": "Target of the relationship"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Composition",
+      "searchParameter": {
+        "name": "related-id",
+        "definition": "http://hl7.org/fhir/SearchParameter/Composition-related-id"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "DocumentManifest-related-id",
+        "name": "related-id",
+        "code": "related-id",
+        "url": "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-id",
+        "base": [
+          "DocumentManifest"
+        ],
+        "type": "token",
+        "description": "Identifiers of things that are related"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "DocumentManifest",
+      "searchParameter": {
+        "name": "related-id",
+        "definition": "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-id"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Composition-related-ref",
+        "name": "related-ref",
+        "code": "related-ref",
+        "url": "http://hl7.org/fhir/SearchParameter/Composition-related-ref",
+        "base": [
+          "Composition"
+        ],
+        "type": "reference",
+        "description": "Target of the relationship"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Composition",
+      "searchParameter": {
+        "name": "related-ref",
+        "definition": "http://hl7.org/fhir/SearchParameter/Composition-related-ref"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "DocumentManifest-related-ref",
+        "name": "related-ref",
+        "code": "related-ref",
+        "url": "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-ref",
+        "base": [
+          "DocumentManifest"
+        ],
+        "type": "reference",
+        "description": "Related Resource"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "DocumentManifest",
+      "searchParameter": {
+        "name": "related-ref",
+        "definition": "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-ref"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "AdverseEvent-resultingcondition",
+        "name": "resultingcondition",
+        "code": "resultingcondition",
+        "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-resultingcondition",
+        "base": [
+          "AdverseEvent"
+        ],
+        "type": "reference",
+        "description": "Effect on the subject due to this event"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "AdverseEvent",
+      "searchParameter": {
+        "name": "resultingcondition",
+        "definition": "http://hl7.org/fhir/SearchParameter/AdverseEvent-resultingcondition"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Consent-scope",
+        "name": "scope",
+        "code": "scope",
+        "url": "http://hl7.org/fhir/SearchParameter/Consent-scope",
+        "base": [
+          "Consent"
+        ],
+        "type": "token",
+        "description": "Which of the four areas this resource covers (extensible)"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Consent",
+      "searchParameter": {
+        "name": "scope",
+        "definition": "http://hl7.org/fhir/SearchParameter/Consent-scope"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ConceptMap-source-system",
+        "name": "source-system",
+        "code": "source-system",
+        "url": "http://hl7.org/fhir/SearchParameter/ConceptMap-source-system",
+        "base": [
+          "ConceptMap"
+        ],
+        "type": "uri",
+        "description": "Source system where concepts to be mapped are defined"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ConceptMap",
+      "searchParameter": {
+        "name": "source-system",
+        "definition": "http://hl7.org/fhir/SearchParameter/ConceptMap-source-system"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ConceptMap-source-uri",
+        "name": "source-uri",
+        "code": "source-uri",
+        "url": "http://hl7.org/fhir/SearchParameter/ConceptMap-source-uri",
+        "base": [
+          "ConceptMap"
+        ],
+        "type": "reference",
+        "description": "The source value set that contains the concepts that are being mapped"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ConceptMap",
+      "searchParameter": {
+        "name": "source-uri",
+        "definition": "http://hl7.org/fhir/SearchParameter/ConceptMap-source-uri"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MessageHeader-source-uri",
+        "name": "source-uri",
+        "code": "source-uri",
+        "url": "http://hl7.org/fhir/SearchParameter/MessageHeader-source-uri",
+        "base": [
+          "MessageHeader"
+        ],
+        "type": "uri",
+        "description": "Actual message source address or id"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MessageHeader",
+      "searchParameter": {
+        "name": "source-uri",
+        "definition": "http://hl7.org/fhir/SearchParameter/MessageHeader-source-uri"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ResearchStudy-sponsor",
+        "name": "sponsor",
+        "code": "sponsor",
+        "url": "http://hl7.org/fhir/SearchParameter/ResearchStudy-sponsor",
+        "base": [
+          "ResearchStudy"
+        ],
+        "type": "reference",
+        "description": "Organization that initiates and is legally responsible for the study"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ResearchStudy",
+      "searchParameter": {
+        "name": "sponsor",
+        "definition": "http://hl7.org/fhir/SearchParameter/ResearchStudy-sponsor"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Substance-substance-reference",
+        "name": "substance-reference",
+        "code": "substance-reference",
+        "url": "http://hl7.org/fhir/SearchParameter/Substance-substance-reference",
+        "base": [
+          "Substance"
+        ],
+        "type": "reference",
+        "description": "A component of the substance"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Substance",
+      "searchParameter": {
+        "name": "substance-reference",
+        "definition": "http://hl7.org/fhir/SearchParameter/Substance-substance-reference"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ConceptMap-target-system",
+        "name": "target-system",
+        "code": "target-system",
+        "url": "http://hl7.org/fhir/SearchParameter/ConceptMap-target-system",
+        "base": [
+          "ConceptMap"
+        ],
+        "type": "uri",
+        "description": "Target system that the concepts are to be mapped to"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ConceptMap",
+      "searchParameter": {
+        "name": "target-system",
+        "definition": "http://hl7.org/fhir/SearchParameter/ConceptMap-target-system"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "ConceptMap-target-uri",
+        "name": "target-uri",
+        "code": "target-uri",
+        "url": "http://hl7.org/fhir/SearchParameter/ConceptMap-target-uri",
+        "base": [
+          "ConceptMap"
+        ],
+        "type": "reference",
+        "description": "The target value set which provides context for the mappings"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "ConceptMap",
+      "searchParameter": {
+        "name": "target-uri",
+        "definition": "http://hl7.org/fhir/SearchParameter/ConceptMap-target-uri"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Device-udi-carrier",
+        "name": "udi-carrier",
+        "code": "udi-carrier",
+        "url": "http://hl7.org/fhir/SearchParameter/Device-udi-carrier",
+        "base": [
+          "Device"
+        ],
+        "type": "string",
+        "description": "UDI Barcode (RFID or other technology) string in *HRF* format."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Device",
+      "searchParameter": {
+        "name": "udi-carrier",
+        "definition": "http://hl7.org/fhir/SearchParameter/Device-udi-carrier"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-variant-end",
+        "name": "variant-end",
+        "code": "variant-end",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-variant-end",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "number",
+        "description": "End position (0-based exclusive, which menas the acid at this position will not be included, 1-based inclusive, which means the acid at this position will be included) of the variant."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "variant-end",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-variant-end"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-variant-start",
+        "name": "variant-start",
+        "code": "variant-start",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-variant-start",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "number",
+        "description": "Start position (0-based inclusive, 1-based inclusive, that means the nucleic acid or amino acid at this position will be included) of the variant."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "variant-start",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-variant-start"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "Media-view",
+        "name": "view",
+        "code": "view",
+        "url": "http://hl7.org/fhir/SearchParameter/Media-view",
+        "base": [
+          "Media"
+        ],
+        "type": "token",
+        "description": "Imaging view, e.g. Lateral or Antero-posterior"
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "Media",
+      "searchParameter": {
+        "name": "view",
+        "definition": "http://hl7.org/fhir/SearchParameter/Media-view"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-window-end",
+        "name": "window-end",
+        "code": "window-end",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-window-end",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "number",
+        "description": "End position (0-based exclusive, which menas the acid at this position will not be included, 1-based inclusive, which means the acid at this position will be included) of the reference sequence."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "window-end",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-window-end"
+      },
+      "matchedBy": "definition"
+    },
+    {
+      "removedSearchParameter": {
+        "id": "MolecularSequence-window-start",
+        "name": "window-start",
+        "code": "window-start",
+        "url": "http://hl7.org/fhir/SearchParameter/MolecularSequence-window-start",
+        "base": [
+          "MolecularSequence"
+        ],
+        "type": "number",
+        "description": "Start position (0-based inclusive, 1-based inclusive, that means the nucleic acid or amino acid at this position will be included) of the reference sequence."
+      },
+      "capabilityStatement": {
+        "id": "77a80724-53d3-436e-94ab-33d020cbb63a",
+        "url": "",
+        "name": "RestServer",
+        "sourceFile": "CapabilityStatement\\20251217_CapabilityStatement.json"
+      },
+      "resourceType": "MolecularSequence",
+      "searchParameter": {
+        "name": "window-start",
+        "definition": "http://hl7.org/fhir/SearchParameter/MolecularSequence-window-start"
+      },
+      "matchedBy": "definition"
+    }
+  ]
+}

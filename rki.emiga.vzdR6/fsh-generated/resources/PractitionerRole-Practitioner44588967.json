@@ -1,0 +1,37 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Practitioner44588967",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "inPublicHealthService",
+        "display": "ÖGD-weit"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRoleR6"
+    ]
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+          "code": "personOfContact"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "practitioner": {
+    "reference": "Practitioner/Practitioner44588966"
+  },
+  "organization": {
+    "reference": "Organization/Organization44588981"
+  }
+}

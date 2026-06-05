@@ -1,0 +1,439 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "GenericOrganizationType",
+  "id": "GenericOrganizationType",
+  "title": "Organisationstyp",
+  "description": "Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren.",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/GenericOrganizationType",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.1.1",
+  "date": "2025-11-24",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "concept": [
+          {
+            "code": "medFacility",
+            "display": "Medizinische Einrichtung"
+          },
+          {
+            "code": "outpatSurgery",
+            "display": "Einrichtung für ambulantes Operieren"
+          },
+          {
+            "code": "prevCareRehab",
+            "display": "Vorsorge- oder Reha-Einrichtung"
+          },
+          {
+            "code": "dialysisFacility",
+            "display": "Dialyseeinrichtung"
+          },
+          {
+            "code": "dayHospital",
+            "display": "Tagesklinik"
+          },
+          {
+            "code": "maternity",
+            "display": "Entbindungseinrichtung"
+          },
+          {
+            "code": "physicianOffice",
+            "display": "Arztpraxis"
+          },
+          {
+            "code": "dentalSurgery",
+            "display": "Zahnarztpraxis"
+          },
+          {
+            "code": "psycFacility",
+            "display": "Psychotherapeutische Praxis"
+          },
+          {
+            "code": "othMedPractice",
+            "display": "Sonstige Heilberufepraxis"
+          },
+          {
+            "code": "medFacPHA",
+            "display": "Medizinische Einrichtung des ÖGDs"
+          },
+          {
+            "code": "emResServ",
+            "display": "Rettungsdienst"
+          },
+          {
+            "code": "civDisFacility",
+            "display": "Einrichtungen des Zivil- und Katastrophenschutzes"
+          },
+          {
+            "code": "othMedFacility",
+            "display": "Sonstige medizinische Einrichtung"
+          },
+          {
+            "code": "childCareFacility",
+            "display": "Gemeinschaftseinrichtung"
+          },
+          {
+            "code": "kindergarten",
+            "display": "Kindertageseinrichtung (z. B. Kita)"
+          },
+          {
+            "code": "childDayNursery",
+            "display": "Kindertagespflege"
+          },
+          {
+            "code": "school",
+            "display": "Schule"
+          },
+          {
+            "code": "childHome",
+            "display": "Kinderheim o.ä."
+          },
+          {
+            "code": "holidayCamp",
+            "display": "Ferienlager"
+          },
+          {
+            "code": "childDayCare",
+            "display": "Kinderhort"
+          },
+          {
+            "code": "othEdFac",
+            "display": "sonstige Ausbildungseinrichtung"
+          },
+          {
+            "code": "othChildCareFac",
+            "display": "Sonstige Kinderbetreuungseinrichtung"
+          },
+          {
+            "code": "housingFacility",
+            "display": "Gemeinschaftsunterkunft"
+          },
+          {
+            "code": "homelessShelter",
+            "display": "Obdachlosenunterkunft"
+          },
+          {
+            "code": "migrantAccom",
+            "display": "Migrantenunterkunft"
+          },
+          {
+            "code": "prison",
+            "display": "Justizvollzugsanstalt"
+          },
+          {
+            "code": "othMassAccom",
+            "display": "Sonstige Massenunterkunft"
+          },
+          {
+            "code": "nursingHome",
+            "display": "voll- oder teilstationäre Einrichtung und besondere Wohnform zur Betreuung und Unterbringung"
+          },
+          {
+            "code": "elderlyCareHome",
+            "display": "Einrichtung zur Betreuung/Unterbringung älterer Menschen"
+          },
+          {
+            "code": "disabledCareHome",
+            "display": "Einrichtung zur Betreuung/Unterbringung behinderter Menschen"
+          },
+          {
+            "code": "assistedCareHome",
+            "display": "Einrichtung zur Betreuung/Unterbringung pflegebedürftiger Menschen"
+          },
+          {
+            "code": "outpatICServ",
+            "display": "Ambulanter Intensivpflegedienst"
+          },
+          {
+            "code": "othOutpatCareS",
+            "display": "Sonstiger ambulanter Pflegedienst"
+          },
+          {
+            "code": "othBloodRiskFac",
+            "display": "Sonstige Einrichtung mit Blutübertragungsrisiko"
+          },
+          {
+            "code": "othHygRelFacility",
+            "display": "Sonstige hygienerelevante Einrichtung"
+          },
+          {
+            "code": "othAccom",
+            "display": "Andere Unterkunft"
+          },
+          {
+            "code": "hotel",
+            "display": "Hotel o.ä."
+          },
+          {
+            "code": "holidayHome",
+            "display": "Ferienwohnung"
+          },
+          {
+            "code": "camping",
+            "display": "Campingplatz o.ä."
+          },
+          {
+            "code": "ship",
+            "display": "Schiff o.ä."
+          },
+          {
+            "code": "foodEstablmt",
+            "display": "Lebensmittelbetrieb"
+          },
+          {
+            "code": "laboratory",
+            "display": "Erregerdiagnostische Untersuchungsstelle"
+          },
+          {
+            "code": "publicHealthLab",
+            "display": "Medizinaluntersuchungsamt"
+          },
+          {
+            "code": "refLab",
+            "display": "Einrichtung der Spezialdiagnostik"
+          },
+          {
+            "code": "hospitalLab",
+            "display": "Krankenhauslabor"
+          },
+          {
+            "code": "pathology",
+            "display": "Pathologisch-anatomische Einrichtung"
+          },
+          {
+            "code": "othPublicLab",
+            "display": "Sonstige öffentliche Untersuchungsstelle"
+          },
+          {
+            "code": "othPrivatLab",
+            "display": "Sonstige private Untersuchungsstelle"
+          }
+        ]
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+        "concept": [
+          {
+            "code": "authority",
+            "display": "Behörde"
+          },
+          {
+            "code": "sepFedAut",
+            "display": "Oberste Bundesbehörde"
+          },
+          {
+            "code": "hiFedAut",
+            "display": "Bundesoberbehörde"
+          },
+          {
+            "code": "fedInsti",
+            "display": "Bundesanstalt"
+          },
+          {
+            "code": "supFedStaAut",
+            "display": "Oberste Landesbehörde"
+          },
+          {
+            "code": "otherAutFed",
+            "display": "Sonstige Behörde auf Bundesebene"
+          },
+          {
+            "code": "otherAutState",
+            "display": "Sonstige Behörde auf Landesebene"
+          },
+          {
+            "code": "intOrg",
+            "display": "Internationale Organisation"
+          },
+          {
+            "code": "resFacility",
+            "display": "Forschungseinrichtung"
+          },
+          {
+            "code": "otherOrg",
+            "display": "sonstige Einrichtung"
+          },
+          {
+            "code": "transport",
+            "display": "Transport"
+          },
+          {
+            "code": "airport",
+            "display": "Flughafen"
+          },
+          {
+            "code": "harbor",
+            "display": "Hafen"
+          },
+          {
+            "code": "barracks",
+            "display": "Kaserne"
+          },
+          {
+            "code": "carWash",
+            "display": "Autowaschanlage"
+          },
+          {
+            "code": "cemetery",
+            "display": "Friedhof"
+          },
+          {
+            "code": "coolingTowers",
+            "display": "Kühltürme"
+          },
+          {
+            "code": "crematorium",
+            "display": "Krematorium"
+          },
+          {
+            "code": "deportationDetCenter",
+            "display": "Abschiebehaftanstalt"
+          },
+          {
+            "code": "detentionCenter",
+            "display": "Untersuchungshaftanstalt"
+          },
+          {
+            "code": "evaporativeCoolingSystem",
+            "display": "Verdunstungskühlanlage"
+          },
+          {
+            "code": "fullInpatientCareNursingFacility",
+            "display": "Pflege- und Betreuungseinrichtung, Vollstationäre Pflegeeinrichtung"
+          },
+          {
+            "code": "funeralHome",
+            "display": "Bestattungsunternehmen"
+          },
+          {
+            "code": "funeralServiceEstab",
+            "display": "Einrichtung des Bestattungswesens"
+          },
+          {
+            "code": "gym",
+            "display": "Fitnessstudio"
+          },
+          {
+            "code": "healthInsurance",
+            "display": "Krankenkasse"
+          },
+          {
+            "code": "initialReceptionCenter",
+            "display": "Erstaufnahmeeinrichtung"
+          },
+          {
+            "code": "inpatientHospice",
+            "display": "Stationäres Hospiz"
+          },
+          {
+            "code": "inpatientIntegrationAssistance",
+            "display": "Stationäre Eingliederungshilfe"
+          },
+          {
+            "code": "juvenileDetentionCenter",
+            "display": "Jugendstrafanstalt"
+          },
+          {
+            "code": "majorEvent",
+            "display": "Großveranstaltung"
+          },
+          {
+            "code": "nightclub",
+            "display": "Diskothek"
+          },
+          {
+            "code": "pharmacy",
+            "display": "Apotheke"
+          },
+          {
+            "code": "professionalSchool",
+            "display": "Berufsschule"
+          },
+          {
+            "code": "prostitutionIndustryEstab",
+            "display": "Einrichtung des Prostitutionsgewerbes"
+          },
+          {
+            "code": "publicHealthServiceEstab",
+            "display": "Einrichtung des öffentlichen Gesundheitsdienstes"
+          },
+          {
+            "code": "publicHealthSystemEstab",
+            "display": "Einrichtung des öffentlichen Gesundheitswesens"
+          },
+          {
+            "code": "retirementHomeWithoutService",
+            "display": "Altenwohnheim"
+          },
+          {
+            "code": "retirementHomeWithService",
+            "display": "Altenheim"
+          },
+          {
+            "code": "saunaWellnessFacility",
+            "display": "Sauna- und Wellnessanlage"
+          },
+          {
+            "code": "sea",
+            "display": "Sonstige Einrichtung mit relevanter Wasser Aerosolierung"
+          },
+          {
+            "code": "sewageTreatmentPlant",
+            "display": "Kläranlage"
+          },
+          {
+            "code": "sportsLeisureRecreationFacility",
+            "display": "Sport- Freizeit- und Erholungsanlage"
+          },
+          {
+            "code": "substituteImprisonmentPenalInstitution",
+            "display": "Vollzugsanstalt für Ersatzfreiheitsstrafe"
+          },
+          {
+            "code": "swimmingBathingArea",
+            "display": "Schwimm- und Badestelle"
+          },
+          {
+            "code": "tanningSalon",
+            "display": "Sonnenstudio"
+          },
+          {
+            "code": "testCenter",
+            "display": "Teststelle"
+          },
+          {
+            "code": "university",
+            "display": "Hochschule"
+          },
+          {
+            "code": "wasteDisposalFacility",
+            "display": "Abfallbeseitigungsanlage"
+          },
+          {
+            "code": "womenShelter",
+            "display": "Frauenhaus"
+          },
+          {
+            "code": "workplace",
+            "display": "Arbeitsstätte"
+          }
+        ]
+      }
+    ]
+  }
+}

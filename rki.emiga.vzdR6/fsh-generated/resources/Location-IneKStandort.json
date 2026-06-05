@@ -1,0 +1,177 @@
+{
+  "resourceType": "Location",
+  "id": "IneKStandort",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "tag": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/Relevance",
+        "code": "InEK",
+        "display": "InEK Standortverzeichnis"
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocationR6"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "version",
+          "valueInteger": 3
+        },
+        {
+          "valuePeriod": {
+            "start": "2019-01-01"
+          },
+          "url": "validPeriod"
+        },
+        {
+          "url": "lastChange",
+          "valueDate": "2024-03-06"
+        }
+      ],
+      "url": "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod"
+    },
+    {
+      "valueAddress": {
+        "line": [
+          "Am Krankenhaus 2"
+        ],
+        "_line": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                "valueString": "Am Krankenhaus"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                "valueString": "2"
+              }
+            ]
+          }
+        ],
+        "type": "postal",
+        "city": "Warendorf",
+        "postalCode": "48231"
+      },
+      "url": "https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId",
+      "value": "0123456789"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber",
+      "value": "OrgvFileNumber-987654123"
+    },
+    {
+      "system": "https://demis.rki.de/fhir/NamingSystem/InekStandortId",
+      "value": "771077"
+    }
+  ],
+  "address": {
+    "line": [
+      "Am Krankenhaus 2"
+    ],
+    "_line": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString": "Am Krankenhaus"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString": "2"
+          }
+        ]
+      }
+    ],
+    "extension": [
+      {
+        "valueCoding": {
+          "system": "http://fhir.de/sid/destatis/ags",
+          "code": "05570052"
+        },
+        "url": "http://fhir.de/StructureDefinition/destatis/ags"
+      }
+    ],
+    "type": "both",
+    "city": "Warendorf",
+    "state": "DE-NW",
+    "postalCode": "48231"
+  },
+  "position": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "UTM_Zone",
+            "valueString": "32U"
+          },
+          {
+            "url": "UTM_Easting_X",
+            "valueDecimal": 431451
+          },
+          {
+            "url": "UTM_Northing_Y",
+            "valueDecimal": 5757106
+          }
+        ],
+        "url": "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates"
+      }
+    ],
+    "latitude": 51.960420529706,
+    "longitude": 8.002352893336
+  },
+  "managingOrganization": {
+    "identifier": {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "version",
+              "valueInteger": 1
+            }
+          ],
+          "url": "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod"
+        }
+      ],
+      "system": "http://fhir.de/StructureDefinition/identifier-iknr",
+      "value": "260551132"
+    }
+  },
+  "mode": "instance",
+  "status": "active",
+  "name": "Josephs-Hospital Warendorf"
+}

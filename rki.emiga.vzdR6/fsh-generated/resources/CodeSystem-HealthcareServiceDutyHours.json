@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "HealthcareServiceDutyHours",
+  "id": "HealthcareServiceDutyHours",
+  "title": "Dienstzeiten",
+  "description": "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen.",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours",
+  "concept": [
+    {
+      "code": "duringServiceHours",
+      "display": "Während der Dienstzeit"
+    },
+    {
+      "code": "outsideServiceHours",
+      "display": "Ausserhalb der Dienstzeit"
+    },
+    {
+      "code": "24/7",
+      "display": "24/7"
+    }
+  ],
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-12-18",
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours",
+  "count": 3
+}

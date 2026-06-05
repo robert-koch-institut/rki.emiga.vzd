@@ -1,0 +1,102 @@
+{
+  "resourceType": "Organization",
+  "id": "InekKrankenhausOrganization",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "tag": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/Relevance",
+        "code": "InEK",
+        "display": "Aus Krankenhausverzeichnis"
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganizationR6"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "version",
+          "valueInteger": 1
+        },
+        {
+          "valuePeriod": {
+            "start": "2019-01-01"
+          },
+          "url": "validPeriod"
+        },
+        {
+          "url": "lastChange",
+          "valueDate": "2019-08-01"
+        }
+      ],
+      "url": "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber",
+      "value": "OrgvFileNumber-987654"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId",
+      "value": "0123456789"
+    },
+    {
+      "period": {
+        "start": "2019-01-01"
+      },
+      "system": "http://fhir.de/sid/arge-ik/iknr",
+      "value": "260551132"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+          "code": "hospital",
+          "display": "Krankenhaus"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
+          "code": "0100",
+          "display": "Innere Medizin"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "name": "Josephs-Hospital Warendorf"
+}

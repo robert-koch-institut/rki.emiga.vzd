@@ -16,21 +16,21 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 
 * name = "Test_Invariant"
 * comment = "diverse Angebote, Präventionsberatung"
-
-* telecom[Email].system = #email
-* telecom[Email].value = "testinvMS@NI.de"
-* telecom[Phone].system = #phone
-* telecom[Phone].value = "54548797999"
-
-* availableTime.daysOfWeek[0] = #mon
-* availableTime.daysOfWeek[+] = #tue
-* availableTime.daysOfWeek[+] = #wed
-* availableTime.daysOfWeek[+] = #thu
-* availableTime.daysOfWeek[+] = #fri
-* availableTime.daysOfWeek[+] = #sat
-* availableTime.daysOfWeek[+] = #sun
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].system = #email
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].value = "testinvMS@NI.de"
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].system = #phone
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].value = "54548797999"
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[0] = #mon
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[+] = #tue
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[+] = #wed
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[+] = #thu
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[+] = #fri
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[+] = #sat
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek[+] = #sun
 //* availableTime.allDay = true
-
-* availableTime.extension[dutyHoursAvailability].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
-* availableTime.extension[dutyHoursAvailability].valueCoding.code = #24/7 
-* availableTime.extension[dutyHoursAvailability].valueCoding.display = "24/7"
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * availableTime.extension[dutyHoursAvailability].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
+// AUTO-DISABLED (SUSHI R6): * availableTime.extension[dutyHoursAvailability].valueCoding.code = #24/7 
+// AUTO-DISABLED (SUSHI R6): * availableTime.extension[dutyHoursAvailability].valueCoding.display = "24/7"

@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HospitalOrganizationType",
+  "id": "HospitalOrganizationType",
+  "title": "Krankenhaus-Organisationstyp",
+  "description": "Werteliste mit Konzepten, die die Art/den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD grob charakterisieren.",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2025-10-27",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "concept": [
+          {
+            "code": "hospital",
+            "display": "Krankenhaus",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Hospital"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

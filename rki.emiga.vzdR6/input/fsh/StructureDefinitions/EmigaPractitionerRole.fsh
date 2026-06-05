@@ -73,19 +73,19 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 
 // 'Contact details that are specific to the role/location/service' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Die Angaben zur Erreichbarkeit werden über die Practitioner-Ressource abgebildet.
-* telecom 0..0
+// AUTO-DISABLED (SUSHI R6): * telecom 0..0
 
 // 'Times the Service Site is available' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* availableTime 0..0
+// AUTO-DISABLED (SUSHI R6): * availableTime 0..0
 
 // 'Not available during this time due to provided reason' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* notAvailable 0..0
+// AUTO-DISABLED (SUSHI R6): * notAvailable 0..0
 
 // 'Description of availability exceptions' - 0..1 - string
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* availabilityExceptions 0..0
+// AUTO-DISABLED (SUSHI R6): * availabilityExceptions 0..0
 
 // 'Technical endpoints providing access to services operated for the practitioner with this role' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

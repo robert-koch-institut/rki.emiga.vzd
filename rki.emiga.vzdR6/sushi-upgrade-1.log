@@ -15,6 +15,1514 @@ warn  Failed to load automatically-provided hl7.fhir.uv.extensions.r5#latest
 info  Loaded de.basisprofil.r4#1.5.4 with 168 resources
 info  Loaded rki.demis.common#2.0.0 with 50 resources
 info  Loaded rki.emiga.common#1.2.0-alpha.20 with 49 resources
-info  Loaded hl7.fhir.r6.core#6.0.0-ballot3 with 0 resources
+info  Loaded hl7.fhir.r6.core#6.0.0-ballot3 with 3113 resources
 info  Loaded virtual package sushi-local#LOCAL with 0 resources
-error Valid StructureDefinition resource not found. The FHIR package in your local cache may be corrupt. Local FHIR cache can be found at <home-directory>/.fhir/packages. For more information, see https://wiki.hl7.org/FHIR_Package_Cache#Location.
+info  Converting FSH to FHIR resources...
+error Cannot create organizationPeriod extension; unable to locate extension definition for: http://hl7.org/fhir/StructureDefinition/organization-period.
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 22
+error No element found at path extension[organizationPeriod] for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 22
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 23
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 24
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 25
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 26
+error No element found at path telecom for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 146 - 147
+error No element found at path telecom for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 146 - 147
+error No element found at path telecom for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 148
+error No element found at path telecom for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 149
+error No element found at path telecom for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 150
+error No element found at path telecom for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 151
+error No element found at path telecom for ContainsRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 152 - 156
+error No element found at path telecom[Email] for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 152 - 156
+error No element found at path telecom[Phone] for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 152 - 156
+error No element found at path telecom[Url] for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 152 - 156
+error No element found at path telecom[Fax] for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 152 - 156
+error No element found at path telecom[Email].system for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 157
+error No element found at path telecom[Email].system for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 157
+error No element found at path telecom[Email].system for AssignmentRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 158
+error No element found at path telecom[Email].value for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 159
+error No element found at path telecom[Email].value for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 159
+error No element found at path telecom[Email].value for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 160
+error No element found at path telecom[Phone].system for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 161
+error No element found at path telecom[Phone].system for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 161
+error No element found at path telecom[Phone].system for AssignmentRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 162
+error No element found at path telecom[Phone].value for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 163
+error No element found at path telecom[Phone].value for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 163
+error No element found at path telecom[Phone].value for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 164
+error No element found at path telecom[Url].system for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 165
+error No element found at path telecom[Url].system for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 165
+error No element found at path telecom[Url].system for AssignmentRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 166
+error No element found at path telecom[Url].value for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 167
+error No element found at path telecom[Url].value for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 167
+error No element found at path telecom[Url].value for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 168
+error No element found at path telecom[Fax].system for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 169
+error No element found at path telecom[Fax].system for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 169
+error No element found at path telecom[Fax].system for AssignmentRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 170
+error No element found at path telecom[Fax].value for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 171
+error No element found at path telecom[Fax].value for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 171
+error No element found at path telecom[Fax].value for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 172
+error No element found at path address for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 178
+error No element found at path address for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 178
+error No element found at path address for OnlyRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 179
+error No element found at path address.extension[Stadtteil] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 180
+error No element found at path address.extension[Stadtteil].valueString for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 181
+error No element found at path address.extension[Stadtteil].valueString for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 182
+error No element found at path address.line.extension[Strasse] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 183
+error No element found at path address.line.extension[Strasse].valueString for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 184
+error No element found at path address.line.extension[Strasse].valueString for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 185
+error No element found at path address.line.extension[Hausnummer] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 186
+error No element found at path address.line.extension[Hausnummer].valueString for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 187
+error No element found at path address.line.extension[Hausnummer].valueString for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 188
+error No element found at path address.line.extension[Adresszusatz] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 189
+error No element found at path address.line.extension[Adresszusatz].valueString for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 190
+error No element found at path address.line.extension[Adresszusatz].valueString for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 191
+error No element found at path address.line.extension[Postfach] for CaretValueRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 192
+error No element found at path address.line.extension[Postfach].valueString for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 193
+error No element found at path address.line.extension[Postfach].valueString for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 194
+error No element found at path address.city for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 195
+error No element found at path address.city for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 196
+error No element found at path address.state for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 197
+error No element found at path address.postalCode for FlagRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 198
+error No element found at path address.postalCode for ObeysRule in EmigaDepartmentOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaDepartmentOrganization.fsh
+  Line: 199
+error No element found at path address.extension[Stadtteil].extension for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+error No element found at path address.line.extension[Strasse].extension for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+error No element found at path address.line.extension[Hausnummer].extension for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+error No element found at path address.line.extension[Adresszusatz].extension for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+error No element found at path address.line.extension[Postfach].extension for CardRule in EmigaDepartmentOrganizationR6, skipping rule
+error No element found at path telecom for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 112
+error No element found at path telecom for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 112
+error No element found at path telecom for CaretValueRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 113
+error No element found at path telecom for CaretValueRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 114
+error No element found at path telecom for CaretValueRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 115
+error No element found at path telecom for CaretValueRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 116
+error No element found at path telecom for ContainsRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 117 - 121
+error No element found at path telecom[Email] for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 117 - 121
+error No element found at path telecom[Phone] for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 117 - 121
+error No element found at path telecom[Url] for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 117 - 121
+error No element found at path telecom[Fax] for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 117 - 121
+error No element found at path telecom[Email].system for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 122
+error No element found at path telecom[Email].system for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 122
+error No element found at path telecom[Email].system for AssignmentRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 123
+error No element found at path telecom[Email].value for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 124
+error No element found at path telecom[Email].value for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 124
+error No element found at path telecom[Email].value for ObeysRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 125
+error No element found at path telecom[Phone].system for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 126
+error No element found at path telecom[Phone].system for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 126
+error No element found at path telecom[Phone].system for AssignmentRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 127
+error No element found at path telecom[Phone].value for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 128
+error No element found at path telecom[Phone].value for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 128
+error No element found at path telecom[Phone].value for ObeysRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 129
+error No element found at path telecom[Url].system for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 130
+error No element found at path telecom[Url].system for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 130
+error No element found at path telecom[Url].system for AssignmentRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 131
+error No element found at path telecom[Url].value for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 132
+error No element found at path telecom[Url].value for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 132
+error No element found at path telecom[Url].value for ObeysRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 133
+error No element found at path telecom[Fax].system for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 134
+error No element found at path telecom[Fax].system for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 134
+error No element found at path telecom[Fax].system for AssignmentRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 135
+error No element found at path telecom[Fax].value for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 136
+error No element found at path telecom[Fax].value for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 136
+error No element found at path telecom[Fax].value for ObeysRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 137
+error No element found at path availableTime for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 174
+error No element found at path availableTime for ObeysRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 175
+error No element found at path availableTime.extension for ContainsRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 176
+error No element found at path availableTime.extension[dutyHoursAvailability] for CardRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 176
+error No element found at path availableTime.extension[dutyHoursAvailability] for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 176
+error No element found at path availableTime.daysOfWeek for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 177 - 178
+error No element found at path availableTime.allDay for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 179
+error No element found at path availableTime.availableStartTime for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 180
+error No element found at path availableTime.availableEndTime for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 181
+error No element found at path notAvailable for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 185
+error No element found at path availabilityExceptions for FlagRule in EmigaHealthcareServiceR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHealthcareService.fsh
+  Line: 190
+error No element found at path telecom for FlagRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 187
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox but could not find it and instead will try to use Extension
+error No element found at path physicalType for FlagRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 226 - 227
+error No element found at path physicalType.coding.system for CardRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 228
+error No element found at path physicalType.coding.system for FlagRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 228
+error No element found at path physicalType.coding.system for AssignmentRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 229
+error No element found at path physicalType.coding.version for FlagRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 230
+error No element found at path physicalType.coding.code for CardRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 231
+error No element found at path physicalType.coding.code for FlagRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 231
+error No element found at path physicalType.coding.code for AssignmentRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 232
+error No element found at path physicalType.coding.display for FlagRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 233
+error No element found at path physicalType.coding.display for AssignmentRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 234
+error No element found at path availabilityExceptions for CardRule in EmigaHospitalFacilityLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalFacilityLocation.fsh
+  Line: 273
+error No element found at path telecom for FlagRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 179
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox but could not find it and instead will try to use Extension
+error No element found at path physicalType for FlagRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 252
+error No element found at path physicalType.coding.system for CardRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 253
+error No element found at path physicalType.coding.system for FlagRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 253
+error No element found at path physicalType.coding.system for AssignmentRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 254
+error No element found at path physicalType.coding.version for FlagRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 255
+error No element found at path physicalType.coding.code for CardRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 256
+error No element found at path physicalType.coding.code for FlagRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 256
+error No element found at path physicalType.coding.code for AssignmentRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 257
+error No element found at path physicalType.coding.display for FlagRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 258
+error No element found at path physicalType.coding.display for AssignmentRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 259
+error No element found at path availabilityExceptions for CardRule in EmigaHospitalLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalLocation.fsh
+  Line: 297
+error No element found at path telecom for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 147 - 148
+error No element found at path telecom for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 147 - 148
+error No element found at path telecom for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 149
+error No element found at path telecom for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 150
+error No element found at path telecom for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 151
+error No element found at path telecom for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 152
+error No element found at path telecom for ContainsRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 153 - 157
+error No element found at path telecom[Email] for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 153 - 157
+error No element found at path telecom[Phone] for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 153 - 157
+error No element found at path telecom[Url] for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 153 - 157
+error No element found at path telecom[Fax] for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 153 - 157
+error No element found at path telecom[Email].system for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 158
+error No element found at path telecom[Email].system for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 158
+error No element found at path telecom[Email].system for AssignmentRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 159
+error No element found at path telecom[Email].value for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 160
+error No element found at path telecom[Email].value for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 160
+error No element found at path telecom[Email].value for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 161
+error No element found at path telecom[Phone].system for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 162
+error No element found at path telecom[Phone].system for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 162
+error No element found at path telecom[Phone].system for AssignmentRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 163
+error No element found at path telecom[Phone].value for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 164
+error No element found at path telecom[Phone].value for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 164
+error No element found at path telecom[Phone].value for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 165
+error No element found at path telecom[Url].system for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 166
+error No element found at path telecom[Url].system for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 166
+error No element found at path telecom[Url].system for AssignmentRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 167
+error No element found at path telecom[Url].value for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 168
+error No element found at path telecom[Url].value for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 168
+error No element found at path telecom[Url].value for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 169
+error No element found at path telecom[Fax].system for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 170
+error No element found at path telecom[Fax].system for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 170
+error No element found at path telecom[Fax].system for AssignmentRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 171
+error No element found at path telecom[Fax].value for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 172
+error No element found at path telecom[Fax].value for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 172
+error No element found at path telecom[Fax].value for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 173
+error No element found at path address for CardRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 178 - 179
+error No element found at path address for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 178 - 179
+error No element found at path address for OnlyRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 180
+error No element found at path address.extension[Stadtteil] for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 181
+error No element found at path address.extension[Stadtteil].valueString for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 182
+error No element found at path address.extension[Stadtteil].valueString for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 183
+error No element found at path address.line.extension[Strasse] for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 184
+error No element found at path address.line.extension[Strasse].valueString for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 185
+error No element found at path address.line.extension[Strasse].valueString for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 186
+error No element found at path address.line.extension[Hausnummer] for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 187
+error No element found at path address.line.extension[Hausnummer].valueString for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 188
+error No element found at path address.line.extension[Hausnummer].valueString for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 189
+error No element found at path address.line.extension[Adresszusatz] for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 190
+error No element found at path address.line.extension[Adresszusatz].valueString for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 191
+error No element found at path address.line.extension[Adresszusatz].valueString for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 192
+error No element found at path address.line.extension[Postfach] for CaretValueRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 193
+error No element found at path address.line.extension[Postfach].valueString for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 194
+error No element found at path address.line.extension[Postfach].valueString for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 195
+error No element found at path address.city for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 196
+error No element found at path address.city for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 197
+error No element found at path address.state for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 198
+error No element found at path address.postalCode for FlagRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 199
+error No element found at path address.postalCode for ObeysRule in EmigaHospitalOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalOrganization.fsh
+  Line: 200
+error No element found at path address.extension[Stadtteil].extension for CardRule in EmigaHospitalOrganizationR6, skipping rule
+error No element found at path address.line.extension[Strasse].extension for CardRule in EmigaHospitalOrganizationR6, skipping rule
+error No element found at path address.line.extension[Hausnummer].extension for CardRule in EmigaHospitalOrganizationR6, skipping rule
+error No element found at path address.line.extension[Adresszusatz].extension for CardRule in EmigaHospitalOrganizationR6, skipping rule
+error No element found at path address.line.extension[Postfach].extension for CardRule in EmigaHospitalOrganizationR6, skipping rule
+error No element found at path telecom for FlagRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 156
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox but could not find it and instead will try to use Extension
+error No element found at path physicalType for FlagRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 195 - 196
+error No element found at path physicalType.coding.system for CardRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 197
+error No element found at path physicalType.coding.system for FlagRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 197
+error No element found at path physicalType.coding.system for AssignmentRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 198
+error No element found at path physicalType.coding.version for FlagRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 199
+error No element found at path physicalType.coding.code for CardRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 200
+error No element found at path physicalType.coding.code for FlagRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 200
+error No element found at path physicalType.coding.code for AssignmentRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 201
+error No element found at path physicalType.coding.display for FlagRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 202
+error No element found at path physicalType.coding.display for AssignmentRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 203
+error No element found at path availabilityExceptions for CardRule in EmigaHospitalRoomLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaHospitalRoomLocation.fsh
+  Line: 242
+error No element found at path telecom for CardRule in EmigaLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaLocation.fsh
+  Line: 154
+error No element found at path telecom for CaretValueRule in EmigaLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaLocation.fsh
+  Line: 155
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox but could not find it and instead will try to use Extension
+error No element found at path physicalType for CardRule in EmigaLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaLocation.fsh
+  Line: 186
+error No element found at path physicalType for CaretValueRule in EmigaLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaLocation.fsh
+  Line: 187
+error No element found at path availabilityExceptions for CardRule in EmigaLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaLocation.fsh
+  Line: 223
+error No element found at path availabilityExceptions for CaretValueRule in EmigaLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaLocation.fsh
+  Line: 224
+error Cannot create organizationPeriod extension; unable to locate extension definition for: http://hl7.org/fhir/StructureDefinition/organization-period.
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 24
+error No element found at path extension[organizationPeriod] for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 24
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 25
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 26
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 27
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 28
+error No element found at path telecom for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 160 - 161
+error No element found at path telecom for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 160 - 161
+error No element found at path telecom for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 162
+error No element found at path telecom for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 163
+error No element found at path telecom for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 164
+error No element found at path telecom for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 165
+error No element found at path telecom for ContainsRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 166 - 170
+error No element found at path telecom[Email] for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 166 - 170
+error No element found at path telecom[Phone] for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 166 - 170
+error No element found at path telecom[Url] for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 166 - 170
+error No element found at path telecom[Fax] for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 166 - 170
+error No element found at path telecom[Email].system for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 171
+error No element found at path telecom[Email].system for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 171
+error No element found at path telecom[Email].system for AssignmentRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 172
+error No element found at path telecom[Email].value for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 173
+error No element found at path telecom[Email].value for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 173
+error No element found at path telecom[Email].value for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 174
+error No element found at path telecom[Phone].system for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 175
+error No element found at path telecom[Phone].system for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 175
+error No element found at path telecom[Phone].system for AssignmentRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 176
+error No element found at path telecom[Phone].value for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 177
+error No element found at path telecom[Phone].value for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 177
+error No element found at path telecom[Phone].value for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 178
+error No element found at path telecom[Url].system for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 179
+error No element found at path telecom[Url].system for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 179
+error No element found at path telecom[Url].system for AssignmentRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 180
+error No element found at path telecom[Url].value for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 181
+error No element found at path telecom[Url].value for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 181
+error No element found at path telecom[Url].value for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 182
+error No element found at path telecom[Fax].system for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 183
+error No element found at path telecom[Fax].system for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 183
+error No element found at path telecom[Fax].system for AssignmentRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 184
+error No element found at path telecom[Fax].value for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 185
+error No element found at path telecom[Fax].value for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 185
+error No element found at path telecom[Fax].value for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 186
+error No element found at path address for CardRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 191 - 192
+error No element found at path address for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 191 - 192
+error No element found at path address for OnlyRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 193
+error No element found at path address.extension[Stadtteil] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 194
+error No element found at path address.extension[Stadtteil].valueString for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 195
+error No element found at path address.extension[Stadtteil].valueString for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 196
+error No element found at path address.line.extension[Strasse] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 197
+error No element found at path address.line.extension[Strasse].valueString for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 198
+error No element found at path address.line.extension[Strasse].valueString for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 199
+error No element found at path address.line.extension[Hausnummer] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 200
+error No element found at path address.line.extension[Hausnummer].valueString for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 201
+error No element found at path address.line.extension[Hausnummer].valueString for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 202
+error No element found at path address.line.extension[Adresszusatz] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 203
+error No element found at path address.line.extension[Adresszusatz].valueString for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 204
+error No element found at path address.line.extension[Adresszusatz].valueString for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 205
+error No element found at path address.line.extension[Postfach] for CaretValueRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 206
+error No element found at path address.line.extension[Postfach].valueString for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 207
+error No element found at path address.line.extension[Postfach].valueString for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 208
+error No element found at path address.city for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 209
+error No element found at path address.city for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 210
+error No element found at path address.state for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 211
+error No element found at path address.postalCode for FlagRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 212
+error No element found at path address.postalCode for ObeysRule in EmigaOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaOrganization.fsh
+  Line: 213
+error No element found at path address.extension[Stadtteil].extension for CardRule in EmigaOrganizationR6, skipping rule
+error No element found at path address.line.extension[Strasse].extension for CardRule in EmigaOrganizationR6, skipping rule
+error No element found at path address.line.extension[Hausnummer].extension for CardRule in EmigaOrganizationR6, skipping rule
+error No element found at path address.line.extension[Adresszusatz].extension for CardRule in EmigaOrganizationR6, skipping rule
+error No element found at path address.line.extension[Postfach].extension for CardRule in EmigaOrganizationR6, skipping rule
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/humanname-own-name but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/humanname-own-prefix but could not find it and instead will try to use Extension
+error No element found at path telecom for CardRule in EmigaPractitionerRoleR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPractitionerRole.fsh
+  Line: 76
+error No element found at path availableTime for CardRule in EmigaPractitionerRoleR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPractitionerRole.fsh
+  Line: 80
+error No element found at path notAvailable for CardRule in EmigaPractitionerRoleR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPractitionerRole.fsh
+  Line: 84
+error No element found at path availabilityExceptions for CardRule in EmigaPractitionerRoleR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPractitionerRole.fsh
+  Line: 88
+error No element found at path telecom for CardRule in EmigaPublicHealthLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthLocation.fsh
+  Line: 109
+error No element found at path telecom for CaretValueRule in EmigaPublicHealthLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthLocation.fsh
+  Line: 110
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox but could not find it and instead will try to use Extension
+error No element found at path physicalType for CardRule in EmigaPublicHealthLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthLocation.fsh
+  Line: 141
+error No element found at path physicalType for CaretValueRule in EmigaPublicHealthLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthLocation.fsh
+  Line: 142
+error No element found at path availabilityExceptions for CardRule in EmigaPublicHealthLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthLocation.fsh
+  Line: 178
+error No element found at path availabilityExceptions for CaretValueRule in EmigaPublicHealthLocationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthLocation.fsh
+  Line: 179
+error Cannot create organizationPeriod extension; unable to locate extension definition for: http://hl7.org/fhir/StructureDefinition/organization-period.
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 23
+error No element found at path extension[organizationPeriod] for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 23
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 24
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 25
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 26
+error No element found at path extension[organizationPeriod] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 27
+error No element found at path telecom for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 106 - 107
+error No element found at path telecom for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 106 - 107
+error No element found at path telecom for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 108
+error No element found at path telecom for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 109
+error No element found at path telecom for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 110
+error No element found at path telecom for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 111
+error No element found at path telecom for ContainsRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 112 - 116
+error No element found at path telecom[Email] for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 112 - 116
+error No element found at path telecom[Phone] for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 112 - 116
+error No element found at path telecom[Url] for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 112 - 116
+error No element found at path telecom[Fax] for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 112 - 116
+error No element found at path telecom[Email].system for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 117
+error No element found at path telecom[Email].system for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 117
+error No element found at path telecom[Email].system for AssignmentRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 118
+error No element found at path telecom[Email].value for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 119
+error No element found at path telecom[Email].value for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 119
+error No element found at path telecom[Email].value for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 120
+error No element found at path telecom[Phone].system for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 121
+error No element found at path telecom[Phone].system for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 121
+error No element found at path telecom[Phone].system for AssignmentRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 122
+error No element found at path telecom[Phone].value for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 123
+error No element found at path telecom[Phone].value for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 123
+error No element found at path telecom[Phone].value for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 124
+error No element found at path telecom[Url].system for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 125
+error No element found at path telecom[Url].system for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 125
+error No element found at path telecom[Url].system for AssignmentRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 126
+error No element found at path telecom[Url].value for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 127
+error No element found at path telecom[Url].value for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 127
+error No element found at path telecom[Url].value for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 128
+error No element found at path telecom[Fax].system for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 129
+error No element found at path telecom[Fax].system for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 129
+error No element found at path telecom[Fax].system for AssignmentRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 130
+error No element found at path telecom[Fax].value for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 131
+error No element found at path telecom[Fax].value for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 131
+error No element found at path telecom[Fax].value for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 132
+error No element found at path address for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 138
+error No element found at path address for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 138
+error No element found at path address for OnlyRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 139
+error No element found at path address.extension[Stadtteil] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 140
+error No element found at path address.extension[Stadtteil].valueString for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 141
+error No element found at path address.extension[Stadtteil].valueString for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 142
+error No element found at path address.line.extension[Strasse] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 143
+error No element found at path address.line.extension[Strasse].valueString for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 144
+error No element found at path address.line.extension[Strasse].valueString for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 145
+error No element found at path address.line.extension[Hausnummer] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 146
+error No element found at path address.line.extension[Hausnummer].valueString for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 147
+error No element found at path address.line.extension[Hausnummer].valueString for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 148
+error No element found at path address.line.extension[Adresszusatz] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 149
+error No element found at path address.line.extension[Adresszusatz].valueString for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 150
+error No element found at path address.line.extension[Adresszusatz].valueString for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 151
+error No element found at path address.line.extension[Postfach] for CaretValueRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 152
+error No element found at path address.line.extension[Postfach].valueString for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 153
+error No element found at path address.line.extension[Postfach].valueString for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 154
+error No element found at path address.city for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 155
+error No element found at path address.city for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 156
+error No element found at path address.state for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 157
+error No element found at path address.postalCode for FlagRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 158
+error No element found at path address.postalCode for ObeysRule in EmigaPublicHealthOrganizationR6, skipping rule
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\EmigaPublicHealthOrganization.fsh
+  Line: 159
+error No element found at path address.extension[Stadtteil].extension for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+error No element found at path address.line.extension[Strasse].extension for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+error No element found at path address.line.extension[Hausnummer].extension for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+error No element found at path address.line.extension[Adresszusatz].extension for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+error No element found at path address.line.extension[Postfach].extension for CardRule in EmigaPublicHealthOrganizationR6, skipping rule
+error Could not find element availableTime on resource HealthcareService to use as extension context.
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh
+  Line: 5
+info  Converted 21 FHIR StructureDefinitions.
+info  Converted 9 FHIR CodeSystems.
+info  Converted 16 FHIR ValueSets.
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 18
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 19
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 20
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 21
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 32
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.code
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 33
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.display
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareService.fsh
+  Line: 34
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 19 - 20
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 21
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 22
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 23
+error The element or path you referenced does not exist: availableTime.daysOfWeek
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 24 - 25
+error The element or path you referenced does not exist: availableTime.daysOfWeek[1]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 26
+error The element or path you referenced does not exist: availableTime.daysOfWeek[2]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 27
+error The element or path you referenced does not exist: availableTime.daysOfWeek[3]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 28
+error The element or path you referenced does not exist: availableTime.daysOfWeek[4]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 29
+error The element or path you referenced does not exist: availableTime.daysOfWeek[5]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 30
+error The element or path you referenced does not exist: availableTime.daysOfWeek[6]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 31
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 33 - 34
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.code
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 35
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.display
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\EpiWarnHealthcareServiceInvTest.fsh
+  Line: 36
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588971.fsh
+  Line: 13
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588971.fsh
+  Line: 14
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588971.fsh
+  Line: 15
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588971.fsh
+  Line: 16
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 15
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 16
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 17
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 18
+error The element or path you referenced does not exist: availableTime.daysOfWeek
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 19 - 20
+error The element or path you referenced does not exist: availableTime.daysOfWeek[1]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 21
+error The element or path you referenced does not exist: availableTime.daysOfWeek[2]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 22
+error The element or path you referenced does not exist: availableTime.daysOfWeek[3]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 23
+error The element or path you referenced does not exist: availableTime.daysOfWeek[4]
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 24
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 25
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.code
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 26
+error The element or path you referenced does not exist: availableTime.extension[dutyHoursAvailability].valueCoding.display
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 27
+error The element or path you referenced does not exist: availableTime.allDay
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HealthcareService-44588973.fsh
+  Line: 31
+error The element or path you referenced does not exist: physicalType.coding.system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HospitalRoomLocation.fsh
+  Line: 46 - 47
+error The element or path you referenced does not exist: physicalType.coding.code
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HospitalRoomLocation.fsh
+  Line: 48
+error The element or path you referenced does not exist: physicalType.coding.display
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\HospitalRoomLocation.fsh
+  Line: 49
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName but could not find it and instead will try to use Extension
+warn  SUSHI tried to find profile http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber but could not find it and instead will try to use Extension
+error The element or path you referenced does not exist: physicalType.coding.system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\InekStandort.fsh
+  Line: 46 - 47
+error The element or path you referenced does not exist: physicalType.coding.code
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\InekStandort.fsh
+  Line: 48
+error The element or path you referenced does not exist: physicalType.coding.display
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\InekStandort.fsh
+  Line: 49
+error The element or path you referenced does not exist: extension[organizationPeriod].valuePeriod.start
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 20 - 21
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 27
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 28
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 29
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 30
+error The element or path you referenced does not exist: telecom[Fax].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 31
+error The element or path you referenced does not exist: telecom[Fax].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 32
+error The element or path you referenced does not exist: address.type
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 33
+error The element or path you referenced does not exist: address.line
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 34
+error The element or path you referenced does not exist: address.line.extension.url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 35
+error The element or path you referenced does not exist: address.line.extension.valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 36
+error The element or path you referenced does not exist: address.line.extension[1].url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 37
+error The element or path you referenced does not exist: address.line.extension[1].valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 38
+error The element or path you referenced does not exist: address.city
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 39
+error The element or path you referenced does not exist: address.state
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 40
+error The element or path you referenced does not exist: address.postalCode
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 41
+error The element or path you referenced does not exist: address.country
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\LaborOrganization.fsh
+  Line: 42
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 21
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 22
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 23
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 24
+error The element or path you referenced does not exist: telecom[Fax].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 25
+error The element or path you referenced does not exist: telecom[Fax].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 26
+error The element or path you referenced does not exist: address.type
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 27
+error The element or path you referenced does not exist: address.line
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 28
+error The element or path you referenced does not exist: address.line.extension.url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 29
+error The element or path you referenced does not exist: address.line.extension.valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 30
+error The element or path you referenced does not exist: address.line.extension[1].url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 31
+error The element or path you referenced does not exist: address.line.extension[1].valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 32
+error The element or path you referenced does not exist: address.city
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 33
+error The element or path you referenced does not exist: address.state
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 34
+error The element or path you referenced does not exist: address.postalCode
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 35
+error The element or path you referenced does not exist: address.country
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588980.fsh
+  Line: 36
+error The element or path you referenced does not exist: extension[organizationPeriod].valuePeriod.start
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 15
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 18
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 19
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 20
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 21
+error The element or path you referenced does not exist: telecom[Fax].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 22
+error The element or path you referenced does not exist: telecom[Fax].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 23
+error The element or path you referenced does not exist: address.type
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 24
+error The element or path you referenced does not exist: address.line
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 25
+error The element or path you referenced does not exist: address.line.extension.url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 26
+error The element or path you referenced does not exist: address.line.extension.valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 27
+error The element or path you referenced does not exist: address.line.extension[1].url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 28
+error The element or path you referenced does not exist: address.line.extension[1].valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 29
+error The element or path you referenced does not exist: address.city
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 30
+error The element or path you referenced does not exist: address.state
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 31
+error The element or path you referenced does not exist: address.postalCode
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 32
+error The element or path you referenced does not exist: address.country
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-44588981.fsh
+  Line: 33
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 21
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 22
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 23
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 24
+error The element or path you referenced does not exist: telecom[Fax].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 25
+error The element or path you referenced does not exist: telecom[Fax].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 26
+error The element or path you referenced does not exist: address.type
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 27
+error The element or path you referenced does not exist: address.line
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 28
+error The element or path you referenced does not exist: address.line.extension.url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 29
+error The element or path you referenced does not exist: address.line.extension.valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 30
+error The element or path you referenced does not exist: address.line.extension[1].url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 31
+error The element or path you referenced does not exist: address.line.extension[1].valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 32
+error The element or path you referenced does not exist: address.city
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 33
+error The element or path you referenced does not exist: address.state
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 34
+error The element or path you referenced does not exist: address.postalCode
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 35
+error The element or path you referenced does not exist: address.country
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\Organization-PublicHealth001.fsh
+  Line: 36
+error The element or path you referenced does not exist: extension[organizationPeriod].valuePeriod.start
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 9
+error The element or path you referenced does not exist: telecom[Email].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 18
+error The element or path you referenced does not exist: telecom[Email].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 19
+error The element or path you referenced does not exist: telecom[Phone].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 20
+error The element or path you referenced does not exist: telecom[Phone].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 21
+error The element or path you referenced does not exist: telecom[Fax].system
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 22
+error The element or path you referenced does not exist: telecom[Fax].value
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 23
+error The element or path you referenced does not exist: address.type
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 24
+error The element or path you referenced does not exist: address.line
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 25
+error The element or path you referenced does not exist: address.line.extension.url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 26
+error The element or path you referenced does not exist: address.line.extension.valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 27
+error The element or path you referenced does not exist: address.line.extension[1].url
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 28
+error The element or path you referenced does not exist: address.line.extension[1].valueString
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 29
+error The element or path you referenced does not exist: address.city
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 30
+error The element or path you referenced does not exist: address.state
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 31
+error The element or path you referenced does not exist: address.postalCode
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 32
+error The element or path you referenced does not exist: address.country
+  File: P:\source\repos\rki.emiga.vzd\rki.emiga.vzdR6\input\fsh\Examples\OrganizationEpiWarn.fsh
+  Line: 33
+info  Converted 30 FHIR instances.
+info  Exporting FHIR resources as JSON...
+info  Exported 76 FHIR resources as JSON.
+info  Assembling Implementation Guide sources...
+info  Generated ImplementationGuide-rki.emiga.vzd.json
+info  Assembled Implementation Guide sources; ready for IG Publisher.
+info  The sample-ig located at https://github.com/FHIR/sample-ig contains scripts useful for downloading and running the IG Publisher.
+
+========================= SUSHI RESULTS ===========================
+|  -------------------------------------------------------------  |
+| |    Profiles   |  Extensions  |   Logicals   |   Resources   | |
+| |-------------------------------------------------------------| |
+| |      16       |      5       |      0       |       0       | |
+|  -------------------------------------------------------------  |
+|  -------------------------------------------------------------  |
+| |      ValueSets     |    CodeSystems    |     Instances      | |
+| |-------------------------------------------------------------| |
+| |         16         |         9         |         30         | |
+|  -------------------------------------------------------------  |
+|                                                                 |
+===================================================================
+| You whaley need to turn this around.  496 Errors    34 Warnings |
+===================================================================
+|    You are using SUSHI version 3.16.5, but the latest stable    |
+| release is version 3.19.0. To install the latest release, run:  |
+|                    npm install -g fsh-sushi                     |
+===================================================================
+

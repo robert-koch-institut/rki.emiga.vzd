@@ -1,0 +1,40 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "HealthcareService44588971",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareServiceR6"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory",
+          "code": "preventiveExamination"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/Location44588965"
+    }
+  ],
+  "active": true,
+  "providedBy": {
+    "reference": "Organization/Organization44588981"
+  },
+  "name": "Kinder- und Jugendgesundheitsdienst",
+  "comment": "diverse Angebote, u.a. auch Impfungen, zahnärztliche Untersuchung ..."
+}

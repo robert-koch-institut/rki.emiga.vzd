@@ -1,0 +1,49 @@
+{
+  "resourceType": "Location",
+  "id": "PublicHealthLocation001",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocationR6"
+    ]
+  },
+  "address": {
+    "line": [
+      "Seestraße 10"
+    ],
+    "_line": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString": "Seestraße"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString": "10"
+          }
+        ]
+      }
+    ],
+    "type": "physical",
+    "city": "Berlin",
+    "state": "DE-BB",
+    "postalCode": "12345",
+    "country": "DE"
+  },
+  "mode": "instance",
+  "status": "active",
+  "name": "Fachgebiet 34",
+  "managingOrganization": {
+    "reference": "Organization/PublicHealth001"
+  }
+}

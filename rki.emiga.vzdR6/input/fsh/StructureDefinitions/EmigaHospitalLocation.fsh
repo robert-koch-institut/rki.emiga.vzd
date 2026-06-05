@@ -176,7 +176,7 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
-* telecom MS
+// AUTO-DISABLED (SUSHI R6): * telecom MS
 //* telecom ^comment = "Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Physical location' - 0..1 - Address
@@ -249,14 +249,14 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 
 // 'Physical form of the location' - 0..1 - code
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* physicalType MS
-* physicalType.coding.system 1..1 MS
-* physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
-* physicalType.coding.version MS
-* physicalType.coding.code 1..1 MS
-* physicalType.coding.code = #si
-* physicalType.coding.display MS
-* physicalType.coding.display = "Site"
+// AUTO-DISABLED (SUSHI R6): * physicalType MS
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.system 1..1 MS
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.version MS
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.code 1..1 MS
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.code = #si
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.display MS
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.display = "Site"
 
 // 'The absolute geographic location' - 0..1 - BackboneElement
 // Begründung: Perspektivisch hilfreich, wenn Standorte in Karten dargestellt werden sollen und eine Ableitung über die Adresse nicht möglich oder inkorrekt ist
@@ -294,7 +294,7 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 // 'Description of availability exceptions' - 0..1 - string
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
-* availabilityExceptions 0..0
+// AUTO-DISABLED (SUSHI R6): * availabilityExceptions 0..0
 
 // 'Technical endpoints providing access to services operated for the location' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

@@ -43,10 +43,10 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * address.line.extension[Hausnummer].valueString = "2"
 * address.city = "Warendorf"
 * address.state = "DE-NW"
-
-* physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
-* physicalType.coding.code = #si
-* physicalType.coding.display = "Site"
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.code = #si
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.display = "Site"
 
 
 * position.latitude = 51.960420529706

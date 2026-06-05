@@ -1,0 +1,18 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "CodeSiteId",
+  "url": "https://emiga.rki.de/fhir/vzd/NamingSystem/CodeSiteId",
+  "title": "CodeSite ID",
+  "description": "CodeSite ID für die Verwendung in Identifiers",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "https://emiga.rki.de/fhir/vzd/sid/CodeSiteId"
+    }
+  ],
+  "publisher": "Robert Koch-Institut",
+  "date": "2024-03-19",
+  "name": "CodeSiteId",
+  "status": "active",
+  "kind": "identifier"
+}

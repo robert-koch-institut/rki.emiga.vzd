@@ -151,8 +151,8 @@ Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Or
 // 'Contact details of the location' - 0..* - ContactPoint
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
-* telecom 0..0
-* telecom ^comment = "Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
+// AUTO-DISABLED (SUSHI R6): * telecom 0..0
+// AUTO-DISABLED (SUSHI R6): * telecom ^comment = "Begründung: Die Kontaktdaten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Physical location' - 0..1 - Address
 // Besuchbare Anschrift des Standortes
@@ -183,8 +183,8 @@ Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Or
 
 // 'Physical form of the location' - 0..1 - code
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-* physicalType 0..0
-* physicalType ^comment = "Wird für die EMIGA generische Bereiche / Standorte derzeit nicht benötigt."
+// AUTO-DISABLED (SUSHI R6): * physicalType 0..0
+// AUTO-DISABLED (SUSHI R6): * physicalType ^comment = "Wird für die EMIGA generische Bereiche / Standorte derzeit nicht benötigt."
 
 // 'The absolute geographic location' - 0..1 - BackboneElement
 // Begründung: Perspektivisch hilfreich, wenn Standorte in Karten dargestellt werden sollen und eine Ableitung über die Adresse nicht möglich oder inkorrekt ist
@@ -220,8 +220,8 @@ Description: "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Or
 // 'Description of availability exceptions' - 0..1 - string
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden.
-* availabilityExceptions 0..0
-* availabilityExceptions ^comment = "Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
+// AUTO-DISABLED (SUSHI R6): * availabilityExceptions 0..0
+// AUTO-DISABLED (SUSHI R6): * availabilityExceptions ^comment = "Begründung: Die Öffnungszeiten sind in der Regel nicht für die Standorte relevant, sondern für die Dienstleistungen, die an den Standorten erbracht werden."
 
 // 'Technical endpoints providing access to services operated for the location' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

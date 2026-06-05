@@ -1,0 +1,610 @@
+[
+  {
+    "outputFile": "CodeSystem-HealthcareServiceCategory.json",
+    "fshName": "HealthcareServiceCategory",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\HealthcareServiceCategory.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-HealthcareServiceDutyHours.json",
+    "fshName": "HealthcareServiceDutyHours",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\HealthcareServiceDutyHours.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-HealthcareServiceSpecialty.json",
+    "fshName": "HealthcareServiceSpecialty",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\HealthcareServiceSpecialty.fsh",
+    "startLine": 1,
+    "endLine": 181
+  },
+  {
+    "outputFile": "CodeSystem-IneKFacilityType.json",
+    "fshName": "IneKFacilityType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\IneKFacilityType.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
+    "outputFile": "CodeSystem-OrgVBundleId.json",
+    "fshName": "OrgVBundleId",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\OrgVBundleId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-OrgVBundleVersion.json",
+    "fshName": "OrgVBundleVersion",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\OrgVBundleVersion.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-OrganizationType.json",
+    "fshName": "OrganizationType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\OrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 334
+  },
+  {
+    "outputFile": "CodeSystem-PractitionerRole.json",
+    "fshName": "PractitionerRole",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\PractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "CodeSystem-responsibilityType.json",
+    "fshName": "ResponsibilityType",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem\\ResponsibilityType.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "HealthcareService-EpiWarnHealthcareService.json",
+    "fshName": "EpiWarnHealthcareService",
+    "fshType": "Instance",
+    "fshFile": "Examples\\EpiWarnHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "HealthcareService-EpiWarnHealthcareServiceInvTest.json",
+    "fshName": "EpiWarnHealthcareServiceInvTest",
+    "fshType": "Instance",
+    "fshFile": "Examples\\EpiWarnHealthcareServiceInvTest.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "HealthcareService-HealthcareService44588971.json",
+    "fshName": "HealthcareService44588971",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HealthcareService-44588971.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "HealthcareService-HealthcareService44588973.json",
+    "fshName": "HealthcareService44588973",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HealthcareService-44588973.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "Location-EpiWarnLocation.json",
+    "fshName": "EpiWarnLocation",
+    "fshType": "Instance",
+    "fshFile": "Examples\\LocationEpiWarn.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Location-HospitalRoomLocation.json",
+    "fshName": "HospitalRoomLocation",
+    "fshType": "Instance",
+    "fshFile": "Examples\\HospitalRoomLocation.fsh",
+    "startLine": 1,
+    "endLine": 56
+  },
+  {
+    "outputFile": "Location-IneKStandort.json",
+    "fshName": "IneKStandort",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekStandort.fsh",
+    "startLine": 1,
+    "endLine": 62
+  },
+  {
+    "outputFile": "Location-InekEinricthung01.json",
+    "fshName": "InekEinricthung01",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekEinrichtung01.fsh",
+    "startLine": 1,
+    "endLine": 62
+  },
+  {
+    "outputFile": "Location-InekEinricthung02.json",
+    "fshName": "InekEinricthung02",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekEinrichtung02.fsh",
+    "startLine": 1,
+    "endLine": 66
+  },
+  {
+    "outputFile": "Location-LaborLocation.json",
+    "fshName": "LaborLocation",
+    "fshType": "Instance",
+    "fshFile": "Examples\\LaborLocation.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "Location-LaborLocationSub.json",
+    "fshName": "LaborLocationSub",
+    "fshType": "Instance",
+    "fshFile": "Examples\\LaborLocationSub.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
+    "outputFile": "Location-Location44588965.json",
+    "fshName": "Location44588965",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Location-44588965.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Location-PublicHealthLocation001.json",
+    "fshName": "PublicHealthLocation001",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Location-PublicHealth001.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Location-Station01.json",
+    "fshName": "Station01",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Station01.fsh",
+    "startLine": 1,
+    "endLine": 61
+  },
+  {
+    "outputFile": "NamingSystem-CodeSiteId.json",
+    "fshName": "CodeSiteId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\CodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "NamingSystem-EmigaOrgvFileNumber.json",
+    "fshName": "EmigaOrgvFileNumber",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\EmigaOrgvFileNumber.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "NamingSystem-EmigaOrgvId.json",
+    "fshName": "EmigaOrgvId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\EmigaOrgvId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "NamingSystem-IneKFileHeaderId.json",
+    "fshName": "IneKFileHeaderId",
+    "fshType": "Instance",
+    "fshFile": "NamingSystem\\IneKFileHeaderId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Organization-EpiWarnOrganization.json",
+    "fshName": "EpiWarnOrganization",
+    "fshType": "Instance",
+    "fshFile": "Examples\\OrganizationEpiWarn.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Organization-InekKrankenhausOrganization.json",
+    "fshName": "InekKrankenhausOrganization",
+    "fshType": "Instance",
+    "fshFile": "Examples\\InekKrankenhaus.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "Organization-LaborOrganization.json",
+    "fshName": "LaborOrganization",
+    "fshType": "Instance",
+    "fshFile": "Examples\\LaborOrganization.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "Organization-Organization44588980.json",
+    "fshName": "Organization44588980",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588980.fsh",
+    "startLine": 2,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Organization-Organization44588981.json",
+    "fshName": "Organization44588981",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-44588981.fsh",
+    "startLine": 2,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Organization-PublicHealth001.json",
+    "fshName": "PublicHealth001",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Organization-PublicHealth001.fsh",
+    "startLine": 2,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Practitioner-EpiWarnPractitioner.json",
+    "fshName": "EpiWarnPractitioner",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerEpiWarn.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Practitioner-Practitioner44588966.json",
+    "fshName": "Practitioner44588966",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Practitioner-44588966.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Practitioner-Practitioner44588970.json",
+    "fshName": "Practitioner44588970",
+    "fshType": "Instance",
+    "fshFile": "Examples\\Practitioner-44588970.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "PractitionerRole-EpiWarnPractitionerRole.json",
+    "fshName": "EpiWarnPractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRoleEpiWarn.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "PractitionerRole-Practitioner44588967.json",
+    "fshName": "Practitioner44588967",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRole-44588967.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "PractitionerRole-PractitionerRole44588971.json",
+    "fshName": "PractitionerRole44588971",
+    "fshType": "Instance",
+    "fshFile": "Examples\\PractitionerRole-44588971.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-DutyHoursAvailability.json",
+    "fshName": "DutyHoursAvailability",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionDutyHoursOpeningTimes.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaDepartmentOrganizationR6.json",
+    "fshName": "EmigaDepartmentOrganizationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaDepartmentOrganization.fsh",
+    "startLine": 1,
+    "endLine": 218
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHealthcareServiceR6.json",
+    "fshName": "EmigaHealthcareServiceR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 194
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHospitalFacilityLocationR6.json",
+    "fshName": "EmigaHospitalFacilityLocationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalFacilityLocation.fsh",
+    "startLine": 1,
+    "endLine": 277
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHospitalLocationR6.json",
+    "fshName": "EmigaHospitalLocationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalLocation.fsh",
+    "startLine": 1,
+    "endLine": 301
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHospitalOrganizationR6.json",
+    "fshName": "EmigaHospitalOrganizationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalOrganization.fsh",
+    "startLine": 1,
+    "endLine": 219
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaHospitalRoomLocationR6.json",
+    "fshName": "EmigaHospitalRoomLocationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaHospitalRoomLocation.fsh",
+    "startLine": 1,
+    "endLine": 246
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaLocationR6.json",
+    "fshName": "EmigaLocationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaLocation.fsh",
+    "startLine": 1,
+    "endLine": 229
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaOrganizationR6.json",
+    "fshName": "EmigaOrganizationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaOrganization.fsh",
+    "startLine": 1,
+    "endLine": 232
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPractitionerR6.json",
+    "fshName": "EmigaPractitionerR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPractitioner.fsh",
+    "startLine": 1,
+    "endLine": 92
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPractitionerRoleR6.json",
+    "fshName": "EmigaPractitionerRoleR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 92
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPublicHealthLocationR6.json",
+    "fshName": "EmigaPublicHealthLocationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPublicHealthLocation.fsh",
+    "startLine": 1,
+    "endLine": 184
+  },
+  {
+    "outputFile": "StructureDefinition-EmigaPublicHealthOrganizationR6.json",
+    "fshName": "EmigaPublicHealthOrganizationR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\EmigaPublicHealthOrganization.fsh",
+    "startLine": 1,
+    "endLine": 178
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierCodeSiteIdR6.json",
+    "fshName": "IdentifierCodeSiteIdR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierCodeSiteId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierEmigaOrgvFileNumberR6.json",
+    "fshName": "IdentifierEmigaOrgvFileNumberR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierEmigaOrgvFileNumber.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IdentifierEmigaOrgvIdR6.json",
+    "fshName": "IdentifierEmigaOrgvIdR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\IdentifierEmigaOrgvId.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-IneKVersionPeriod.json",
+    "fshName": "IneKVersionPeriod",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionIneKVersionPeriod.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-InekPostalAddress.json",
+    "fshName": "InekPostalAddress",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionInekPostalAddress.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-OrgVBundleR6.json",
+    "fshName": "OrgVBundleR6",
+    "fshType": "Profile",
+    "fshFile": "StructureDefinitions\\OrgVBundle.fsh",
+    "startLine": 3,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-ResponsibilityHealthdepartments.json",
+    "fshName": "ResponsibilityHealthdepartments",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionResponsibilityHealthdepartments.fsh",
+    "startLine": 2,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-UTMCoordinates.json",
+    "fshName": "UTMCoordinates",
+    "fshType": "Extension",
+    "fshFile": "StructureDefinitions\\ExtensionUTMCoordinates.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "ValueSet-AddressTypePhysicalBoth.json",
+    "fshName": "AddressTypePhysicalBoth",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\AddressTypePhysicalBoth.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "ValueSet-Fachbereich.json",
+    "fshName": "Fachbereich",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\Fachbereich.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "ValueSet-GenericOrganizationType.json",
+    "fshName": "GenericOrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\GenericOrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 207
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceCategory.json",
+    "fshName": "HealthcareServiceCategory",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HealthcareServiceCategory.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceDutyHours.json",
+    "fshName": "HealthcareServiceDutyHours",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HealthcareServiceDutyHours.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceSpecialty.json",
+    "fshName": "HealthcareServiceSpecialty",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HealthcareServiceSpecialty.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-HealthcareServiceType.json",
+    "fshName": "HealthcareServiceType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HealthcareServiceType.fsh",
+    "startLine": 1,
+    "endLine": 42
+  },
+  {
+    "outputFile": "ValueSet-HospitalOrganizationType.json",
+    "fshName": "HospitalOrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\HospitalOrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-IneKFacilityType.json",
+    "fshName": "IneKFacilityType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\IneKFacilityType.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "ValueSet-ORGVResourceVisibilityTypeVS.json",
+    "fshName": "ORGVResourceVisibilityTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\ORGVResourceVisibilityTypeVS.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-OrgVBundleId.json",
+    "fshName": "OrgVBundleId",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\OrgVBundleId.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "ValueSet-OrgVBundleVersion.json",
+    "fshName": "OrgVBundleVersion",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\OrgVBundleVersion.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "ValueSet-OrganizationType.json",
+    "fshName": "OrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\OrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 127
+  },
+  {
+    "outputFile": "ValueSet-PractitionerRole.json",
+    "fshName": "PractitionerRole",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\PractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-PublicHealthOrganizationType.json",
+    "fshName": "PublicHealthOrganizationType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\PublicHealthOrganizationType.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "ValueSet-responsibilityType.json",
+    "fshName": "ResponsibilityType",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet\\ResponsibilityType.fsh",
+    "startLine": 1,
+    "endLine": 19
+  }
+]

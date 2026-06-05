@@ -43,10 +43,10 @@ Description: "Beispiel eines Raums in einer Krankenhaus."
 * address.city = "EineStadt"
 //* address.state = "DE-NW"
 * address.postalCode = "99999"
-
-* physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
-* physicalType.coding.code = #ro
-* physicalType.coding.display = "Room"
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.code = #ro
+// AUTO-DISABLED (SUSHI R6): * physicalType.coding.display = "Room"
 
 //* address.state = "Niedersachsen"
 

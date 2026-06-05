@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "AddressTypePhysicalBoth",
+  "id": "AddressTypePhysicalBoth",
+  "title": "Addressentyp",
+  "description": "Werteliste mit Konzepten, die die Typ einer Addresse näher beschreiben.",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/AddressTypePhysicalBoth",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2025-07-11",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/address-type",
+        "concept": [
+          {
+            "code": "physical",
+            "display": "Physical"
+          },
+          {
+            "code": "both",
+            "display": "Postal & Physical"
+          }
+        ]
+      }
+    ]
+  }
+}

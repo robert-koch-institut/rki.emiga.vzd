@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HealthcareServiceDutyHours",
+  "id": "HealthcareServiceDutyHours",
+  "title": "Dienstzeiten",
+  "description": "Werteliste mit Konzepten, die die Verfügbarkeit von Dienstleistungen darstellen",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareServiceDutyHours",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-12-18",
+  "compose": {
+    "include": [
+      {
+        "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
+      }
+    ]
+  }
+}

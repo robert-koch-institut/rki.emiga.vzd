@@ -18,20 +18,20 @@ Usage: #example
 * extension.extension[=].valueCoding.code = #all
 * type[emigaOrganizationType] = $OrganizationType#rki
 * name = "Robert Koch - Institut"
-* telecom[Email].system = #email
-* telecom[Email].value = "test@example.org"
-* telecom[Phone].system = #phone
-* telecom[Phone].value = "030 18754 0"
-* telecom[Fax].system = #fax
-* telecom[Fax].value = "030 18754 2328"
-* address.type = #postal
-* address.line = "Seestraße 10"
-* address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
-* address.line.extension[=].valueString = "Seestraße"
-* address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
-* address.line.extension[=].valueString = "10"
-* address.city = "Berlin"
-* address.state = "DE-BB"
-* address.postalCode = "13353"
-* address.country = "DE"
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].system = #email
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].value = "test@example.org"
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].system = #phone
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].value = "030 18754 0"
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].system = #fax
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].value = "030 18754 2328"
+// AUTO-DISABLED (SUSHI R6): * address.type = #postal
+// AUTO-DISABLED (SUSHI R6): * address.line = "Seestraße 10"
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[=].valueString = "Seestraße"
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
+// AUTO-DISABLED (SUSHI R6): * address.line.extension[=].valueString = "10"
+// AUTO-DISABLED (SUSHI R6): * address.city = "Berlin"
+// AUTO-DISABLED (SUSHI R6): * address.state = "DE-BB"
+// AUTO-DISABLED (SUSHI R6): * address.postalCode = "13353"
+// AUTO-DISABLED (SUSHI R6): * address.country = "DE"
 

@@ -109,32 +109,32 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * photo 0..0
 
 // 'Contacts related to the healthcare service' - 0..* - ContactPoint
-* telecom 0.. MS
-* telecom ^slicing.discriminator.type = #value
-* telecom ^slicing.discriminator.path = "system"
-* telecom ^slicing.rules = #closed
-* telecom ^definition = "Kontaktangaben der Dienstleistung. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
-* telecom contains
-    Email 0..* and
-    Phone 0..* and
-    Url 0..* and
-    Fax 0..*
-* telecom[Email].system 1.. MS
-* telecom[Email].system = #email (exactly)
-* telecom[Email].value 1.. MS
-* telecom[Email].value obeys validEmailAddress
-* telecom[Phone].system 1.. MS
-* telecom[Phone].system = #phone (exactly)
-* telecom[Phone].value 1.. MS
-* telecom[Phone].value obeys validPhoneNumber
-* telecom[Url].system 1.. MS
-* telecom[Url].system = #url (exactly)
-* telecom[Url].value 1.. MS
-* telecom[Url].value obeys validUrl
-* telecom[Fax].system 1.. MS
-* telecom[Fax].system = #fax (exactly)
-* telecom[Fax].value 1.. MS
-* telecom[Fax].value obeys validFaxNumber
+// AUTO-DISABLED (SUSHI R6): * telecom 0.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom ^slicing.discriminator.type = #value
+// AUTO-DISABLED (SUSHI R6): * telecom ^slicing.discriminator.path = "system"
+// AUTO-DISABLED (SUSHI R6): * telecom ^slicing.rules = #closed
+// AUTO-DISABLED (SUSHI R6): * telecom ^definition = "Kontaktangaben der Dienstleistung. Telefonnummern, E-Mailadressen, Urls und Faxnummern können angegeben werden."
+// AUTO-DISABLED (SUSHI R6): * telecom contains
+    // AUTO-DISABLED (SUSHI R6): Email 0..* and
+    // AUTO-DISABLED (SUSHI R6): Phone 0..* and
+    // AUTO-DISABLED (SUSHI R6): Url 0..* and
+    // AUTO-DISABLED (SUSHI R6): Fax 0..*
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].system = #email (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Email].value obeys validEmailAddress
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].system = #phone (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Phone].value obeys validPhoneNumber
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].system = #url (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Url].value obeys validUrl
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].system 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].system = #fax (exactly)
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].value 1.. MS
+// AUTO-DISABLED (SUSHI R6): * telecom[Fax].value obeys validFaxNumber
 
 // 'Location(s) service is intended for/available to' - 0..* - Reference(Location)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
@@ -171,23 +171,23 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'Times the Service Site is available' - 0..* - BackboneElement
 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
-* availableTime MS
-* availableTime obeys ORGV-Service-Opening-Time
-* availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
-
-* availableTime.daysOfWeek MS
-* availableTime.allDay MS
-* availableTime.availableStartTime MS
-* availableTime.availableEndTime MS
+// AUTO-DISABLED (SUSHI R6): * availableTime MS
+// AUTO-DISABLED (SUSHI R6): * availableTime obeys ORGV-Service-Opening-Time
+// AUTO-DISABLED (SUSHI R6): * availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * availableTime.daysOfWeek MS
+// AUTO-DISABLED (SUSHI R6): * availableTime.allDay MS
+// AUTO-DISABLED (SUSHI R6): * availableTime.availableStartTime MS
+// AUTO-DISABLED (SUSHI R6): * availableTime.availableEndTime MS
 // 'Not available during this time due to provided reason' - 0..* - BackboneElement
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Update: Wird benötigt
-* notAvailable MS
+// AUTO-DISABLED (SUSHI R6): * notAvailable MS
 
 // 'Description of availability exceptions' - 0..1 - string
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 // Update: Wird benötigt
-* availabilityExceptions MS
+// AUTO-DISABLED (SUSHI R6): * availabilityExceptions MS
 
 // 'Technical endpoints providing access to services operated for the healthcare service' - 0..* - Reference(Endpoint)
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.

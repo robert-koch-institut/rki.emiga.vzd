@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Fachbereich",
+  "id": "Fachbereich",
+  "title": "Fachbereich",
+  "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche) im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen.",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "0.1.0",
+  "date": "2025-08-01",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"
+      },
+      {
+        "system": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+        "concept": [
+          {
+            "code": "ANAE",
+            "display": "Anästhesiologie"
+          },
+          {
+            "code": "PHAR",
+            "display": "Pharmakologie"
+          },
+          {
+            "code": "REHA",
+            "display": "Physikalische und Rehabilitative Medizin"
+          },
+          {
+            "code": "RECH",
+            "display": "Rechtsmedizin"
+          },
+          {
+            "code": "TRAN",
+            "display": "Transfusionsmedizin"
+          },
+          {
+            "code": "ALLG",
+            "display": "Allgemeinmedizin"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "EpiWarnHealthcareServiceInvTest",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "tag": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/Relevance",
+        "code": "IfsgKoordVwV",
+        "display": "Paragraf 2 IfSG-Koordinierungs-VwV"
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareServiceR6"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceCategory",
+          "code": "consultation",
+          "display": "Beratungsangebot"
+        }
+      ]
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "infectionProtectionAndEpi",
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceSpecialty",
+          "display": "Infektionsschutz und Infektionsepidemiologie"
+        }
+      ]
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "538",
+          "system": "http://terminology.hl7.org/CodeSystem/service-type",
+          "display": "Telephone Counselling"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/EpiWarnLocation"
+    }
+  ],
+  "active": true,
+  "providedBy": {
+    "reference": "Organization/EpiWarnOrganization"
+  },
+  "name": "Test_Invariant",
+  "comment": "diverse Angebote, Präventionsberatung"
+}

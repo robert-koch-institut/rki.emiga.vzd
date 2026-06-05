@@ -1,0 +1,1187 @@
+{
+  "generated": "2026-06-05T14:38:19.431Z",
+  "profilesWithDifferences": 13,
+  "totalFindings": 74,
+  "commonBindings": [
+    {
+      "type": "strength-and-valueset-change",
+      "path": "language",
+      "isMustSupport": false,
+      "r4Strength": "preferred",
+      "r6Strength": "required",
+      "r4ValueSet": "http://hl7.org/fhir/ValueSet/languages",
+      "r6ValueSet": "http://hl7.org/fhir/ValueSet/all-languages|6.0.0-ballot3"
+    }
+  ],
+  "profiles": [
+    {
+      "profileName": "EmigaDepartmentOrganizationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganizationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.state",
+          "isMustSupport": true,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.system",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointSystem"
+              }
+            ],
+            "strength": "required",
+            "description": "Telecommunications form for contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.country",
+          "isMustSupport": false,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.type",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressType"
+              }
+            ],
+            "strength": "required",
+            "description": "The type of an address (physical / postal).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressUse"
+              }
+            ],
+            "strength": "required",
+            "description": "The use of an address.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-use|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.contact.purpose",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPartyType"
+              }
+            ],
+            "strength": "extensible",
+            "description": "The purpose for which you would contact a contact party.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contactentity-type"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.code",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Qualification"
+              }
+            ],
+            "strength": "example",
+            "description": "Specific qualification the organization has to provide a service."
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.status",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "QualificationStatus"
+              }
+            ],
+            "strength": "preferred",
+            "description": "Status of the Qualification",
+            "valueSet": "http://hl7.org/fhir/ValueSet/qualification-status"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointUse"
+              }
+            ],
+            "strength": "required",
+            "description": "Use of contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaHealthcareServiceR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareServiceR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "HealthcareService.availableTime.daysOfWeek",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "HealthcareService.telecom.system",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointSystem"
+              }
+            ],
+            "strength": "required",
+            "description": "Telecommunications form for contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+          }
+        },
+        {
+          "type": "valueset-change",
+          "path": "HealthcareService.characteristic",
+          "isMustSupport": false,
+          "r6ValueSet": "http://hl7.org/fhir/ValueSet/service-mode",
+          "r4Strength": "example",
+          "r6Strength": "example"
+        },
+        {
+          "type": "strength-and-valueset-change",
+          "path": "HealthcareService.communication",
+          "isMustSupport": false,
+          "r4Strength": "preferred",
+          "r6Strength": "required",
+          "r4ValueSet": "http://hl7.org/fhir/ValueSet/languages",
+          "r6ValueSet": "http://hl7.org/fhir/ValueSet/all-languages|6.0.0-ballot3"
+        },
+        {
+          "type": "valueset-change",
+          "path": "HealthcareService.eligibility.code",
+          "isMustSupport": false,
+          "r6ValueSet": "http://hl7.org/fhir/ValueSet/eligibility",
+          "r4Strength": "example",
+          "r6Strength": "example"
+        },
+        {
+          "type": "removed-binding",
+          "path": "HealthcareService.telecom.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointUse"
+              }
+            ],
+            "strength": "required",
+            "description": "Use of contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaHospitalFacilityLocationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Location.physicalType",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "PhysicalType"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.characteristic",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationCharacteristic"
+              }
+            ],
+            "strength": "example",
+            "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibiliy).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-characteristic"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.form",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationForm"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-form"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.hoursOfOperation.daysOfWeek",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaHospitalLocationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Location.physicalType",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "PhysicalType"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.characteristic",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationCharacteristic"
+              }
+            ],
+            "strength": "example",
+            "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibiliy).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-characteristic"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.form",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationForm"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-form"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.hoursOfOperation.daysOfWeek",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaHospitalOrganizationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganizationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.state",
+          "isMustSupport": true,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.system",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointSystem"
+              }
+            ],
+            "strength": "required",
+            "description": "Telecommunications form for contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.country",
+          "isMustSupport": false,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.type",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressType"
+              }
+            ],
+            "strength": "required",
+            "description": "The type of an address (physical / postal).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressUse"
+              }
+            ],
+            "strength": "required",
+            "description": "The use of an address.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-use|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.contact.purpose",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPartyType"
+              }
+            ],
+            "strength": "extensible",
+            "description": "The purpose for which you would contact a contact party.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contactentity-type"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.code",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Qualification"
+              }
+            ],
+            "strength": "example",
+            "description": "Specific qualification the organization has to provide a service."
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.status",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "QualificationStatus"
+              }
+            ],
+            "strength": "preferred",
+            "description": "Status of the Qualification",
+            "valueSet": "http://hl7.org/fhir/ValueSet/qualification-status"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointUse"
+              }
+            ],
+            "strength": "required",
+            "description": "Use of contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaHospitalRoomLocationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Location.physicalType",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "PhysicalType"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        },
+        {
+          "type": "strength-and-valueset-change",
+          "path": "Location.type",
+          "isMustSupport": true,
+          "r4Strength": "extensible",
+          "r6Strength": "preferred",
+          "r4ValueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+          "r6ValueSet": "http://terminology.hl7.org/ValueSet/service-type"
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.characteristic",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationCharacteristic"
+              }
+            ],
+            "strength": "example",
+            "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibiliy).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-characteristic"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.form",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationForm"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-form"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.hoursOfOperation.daysOfWeek",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaLocationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocationR6",
+      "findings": [
+        {
+          "type": "new-binding",
+          "path": "Location.characteristic",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationCharacteristic"
+              }
+            ],
+            "strength": "example",
+            "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibiliy).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-characteristic"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.form",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationForm"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-form"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.hoursOfOperation.daysOfWeek",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.physicalType",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "PhysicalType"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        },
+        {
+          "type": "strength-and-valueset-change",
+          "path": "Location.type",
+          "isMustSupport": false,
+          "r4Strength": "extensible",
+          "r6Strength": "preferred",
+          "r4ValueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+          "r6ValueSet": "http://terminology.hl7.org/ValueSet/service-type"
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaOrganizationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganizationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.state",
+          "isMustSupport": true,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.system",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointSystem"
+              }
+            ],
+            "strength": "required",
+            "description": "Telecommunications form for contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.country",
+          "isMustSupport": false,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.type",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressType"
+              }
+            ],
+            "strength": "required",
+            "description": "The type of an address (physical / postal).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressUse"
+              }
+            ],
+            "strength": "required",
+            "description": "The use of an address.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-use|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.contact.purpose",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPartyType"
+              }
+            ],
+            "strength": "extensible",
+            "description": "The purpose for which you would contact a contact party.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contactentity-type"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.code",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Qualification"
+              }
+            ],
+            "strength": "example",
+            "description": "Specific qualification the organization has to provide a service."
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.status",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "QualificationStatus"
+              }
+            ],
+            "strength": "preferred",
+            "description": "Status of the Qualification",
+            "valueSet": "http://hl7.org/fhir/ValueSet/qualification-status"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointUse"
+              }
+            ],
+            "strength": "required",
+            "description": "Use of contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaPractitionerR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Practitioner.communication",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+                "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Language"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+                "valueBoolean": true
+              }
+            ],
+            "strength": "preferred",
+            "description": "A human language.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Practitioner.communication.language",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Language"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+                "valueBoolean": true
+              }
+            ],
+            "strength": "required",
+            "description": "IETF language tag for a human language",
+            "valueSet": "http://hl7.org/fhir/ValueSet/all-languages|6.0.0-ballot3",
+            "additional": [
+              {
+                "purpose": "starter",
+                "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+              }
+            ]
+          }
+        },
+        {
+          "type": "valueset-change",
+          "path": "Practitioner.qualification.code",
+          "isMustSupport": false,
+          "r4ValueSet": "http://terminology.hl7.org/ValueSet/v2-2.7-0360",
+          "r6ValueSet": "http://terminology.hl7.org/ValueSet/v2-0360",
+          "r4Strength": "example",
+          "r6Strength": "example"
+        },
+        {
+          "type": "new-binding",
+          "path": "Practitioner.qualification.status",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "QualificationStatus"
+              }
+            ],
+            "strength": "preferred",
+            "description": "Status of the Qualification",
+            "valueSet": "http://hl7.org/fhir/ValueSet/qualification-status"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaPractitionerRoleR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRoleR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "PractitionerRole.availableTime.daysOfWeek",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "PractitionerRole.characteristic",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ServiceCharacteristic"
+              }
+            ],
+            "strength": "example",
+            "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibility).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/service-mode"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "PractitionerRole.communication",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Language"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+                "valueBoolean": true
+              }
+            ],
+            "strength": "required",
+            "description": "IETF language tag for a human language",
+            "valueSet": "http://hl7.org/fhir/ValueSet/all-languages|6.0.0-ballot3",
+            "additional": [
+              {
+                "purpose": "starter",
+                "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaPublicHealthLocationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocationR6",
+      "findings": [
+        {
+          "type": "new-binding",
+          "path": "Location.characteristic",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationCharacteristic"
+              }
+            ],
+            "strength": "example",
+            "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibiliy).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-characteristic"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Location.form",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "LocationForm"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-form"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.hoursOfOperation.daysOfWeek",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "DaysOfWeek"
+              }
+            ],
+            "strength": "required",
+            "description": "The days of the week.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Location.physicalType",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "PhysicalType"
+              }
+            ],
+            "strength": "example",
+            "description": "Physical form of the location.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        },
+        {
+          "type": "strength-and-valueset-change",
+          "path": "Location.type",
+          "isMustSupport": false,
+          "r4Strength": "extensible",
+          "r6Strength": "preferred",
+          "r4ValueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+          "r6ValueSet": "http://terminology.hl7.org/ValueSet/service-type"
+        }
+      ]
+    },
+    {
+      "profileName": "EmigaPublicHealthOrganizationR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganizationR6",
+      "findings": [
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.state",
+          "isMustSupport": true,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.system",
+          "isMustSupport": true,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointSystem"
+              }
+            ],
+            "strength": "required",
+            "description": "Telecommunications form for contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.country",
+          "isMustSupport": false,
+          "r4Binding": {
+            "strength": "preferred",
+            "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.type",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressType"
+              }
+            ],
+            "strength": "required",
+            "description": "The type of an address (physical / postal).",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-type|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.address.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "AddressUse"
+              }
+            ],
+            "strength": "required",
+            "description": "The use of an address.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/address-use|4.0.1"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.contact.purpose",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPartyType"
+              }
+            ],
+            "strength": "extensible",
+            "description": "The purpose for which you would contact a contact party.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contactentity-type"
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.code",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "Qualification"
+              }
+            ],
+            "strength": "example",
+            "description": "Specific qualification the organization has to provide a service."
+          }
+        },
+        {
+          "type": "new-binding",
+          "path": "Organization.qualification.status",
+          "isMustSupport": false,
+          "r6Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "QualificationStatus"
+              }
+            ],
+            "strength": "preferred",
+            "description": "Status of the Qualification",
+            "valueSet": "http://hl7.org/fhir/ValueSet/qualification-status"
+          }
+        },
+        {
+          "type": "removed-binding",
+          "path": "Organization.telecom.use",
+          "isMustSupport": false,
+          "r4Binding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                "valueString": "ContactPointUse"
+              }
+            ],
+            "strength": "required",
+            "description": "Use of contact point.",
+            "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1"
+          }
+        }
+      ]
+    },
+    {
+      "profileName": "OrgVBundleR6",
+      "r4Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle",
+      "r6Url": "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundleR6",
+      "findings": [
+        {
+          "type": "new-binding",
+          "path": "Bundle.link.relation",
+          "isMustSupport": false,
+          "r6Binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/iana-link-relations|6.0.0-ballot3"
+          }
+        }
+      ]
+    }
+  ]
+}

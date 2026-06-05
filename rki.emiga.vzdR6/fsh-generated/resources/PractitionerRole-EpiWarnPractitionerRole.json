@@ -1,0 +1,55 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "EpiWarnPractitionerRole",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "inPublicHealthService",
+        "display": "ÖGD-weit"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "tag": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/Relevance",
+        "code": "IfsgKoordVwV",
+        "display": "Paragraf 2 IfSG-Koordinierungs-VwV"
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRoleR6"
+    ]
+  },
+  "location": [
+    {
+      "reference": "Location/EpiWarnLocation"
+    }
+  ],
+  "healthcareService": [
+    {
+      "reference": "HealthcareService/EpiWarnHealthcareService"
+    }
+  ],
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole",
+          "code": "personOfContact",
+          "display": "Ansprechperson"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "practitioner": {
+    "reference": "Practitioner/EpiWarnPractitioner"
+  },
+  "organization": {
+    "reference": "Organization/EpiWarnOrganization"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "resourceType": "Organization",
+  "id": "Organization44588981",
+  "meta": {
+    "security": [
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceVisibilityType",
+        "code": "public"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility",
+        "code": "1."
+      }
+    ],
+    "profile": [
+      "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganizationR6"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId",
+      "value": "OrgvID-012345"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "XX",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber",
+      "value": "OrgvFileNumber-987654"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "sepFedAut",
+          "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "name": "Stadt XYZ - Oberstebundesbehörde"
+}

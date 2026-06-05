@@ -1,0 +1,99 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "IneKFacilityType",
+  "id": "IneKFacilityType",
+  "title": "IneK Einrichtungstyp",
+  "description": "Die Kodiersystematik 'IneK Einrichtungstyp' ist ein CodeSystem, um die IneK Einrichtungstypen in der FHIR Terminologie zu referenzieren. Die Verwaltung und Publikation der IneK Einrichtungstypen erfolgt durch das Institut für das Entgeltsystem im Krankenhaus (InEK GmbH). ",
+  "url": "https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType",
+  "concept": [
+    {
+      "code": "00",
+      "display": "Stationäre Behandlung"
+    },
+    {
+      "code": "01",
+      "display": "reserviert"
+    },
+    {
+      "code": "02",
+      "display": "Behandlung nach § 116b Abs. 2 SGB V (ASV)"
+    },
+    {
+      "code": "03",
+      "display": "Behandlung nach § 116b Abs. 8 SGB V"
+    },
+    {
+      "code": "04",
+      "display": "Behandlung nach § 117 SGB V (HSA)"
+    },
+    {
+      "code": "05",
+      "display": "Behandlung nach § 118 Abs. 1 SGB V (PIA)"
+    },
+    {
+      "code": "06",
+      "display": "Behandlung nach § 118 Abs. 2 SGB V (PIA)"
+    },
+    {
+      "code": "07",
+      "display": "Behandlung nach § 118 Abs. 3 SGB V (PsIA)"
+    },
+    {
+      "code": "08",
+      "display": "Behandlung nach § 118 Abs. 4 SGB V (PIA)"
+    },
+    {
+      "code": "09",
+      "display": "Behandlung nach § 118a SGB V (GIA)"
+    },
+    {
+      "code": "10",
+      "display": "Behandlung nach § 119 SGB V (SPZ)"
+    },
+    {
+      "code": "11",
+      "display": "Behandlung nach § 119c SGB V (Medizinische Behandlungszentren)"
+    },
+    {
+      "code": "12",
+      "display": "Kinderspezialambulanz nach § 120 Abs. 1a SGB V"
+    },
+    {
+      "code": "13",
+      "display": "Notfallambulanz"
+    },
+    {
+      "code": "14",
+      "display": "Zentrale Notaufnahme (ZNA)"
+    },
+    {
+      "code": "15",
+      "display": "Zentrale Notaufnahme (ZNA) Erwachsene"
+    },
+    {
+      "code": "16",
+      "display": "Zentrale Notaufnahme (ZNA) Kinder u. Jugendliche"
+    }
+  ],
+  "version": "0.1.0",
+  "date": "2025-06-18",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Institut für das Entgeltsystem im Krankenhaus (InEK GmbH)",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "valueSet": "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType",
+  "count": 17
+}

@@ -1,0 +1,18 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "EmigaOrgvFileNumber",
+  "url": "https://emiga.rki.de/fhir/vzd/NamingSystem/EmigaOrgvFileNumber",
+  "title": "EMIGA Organizationsverzeichnis Aktenzeichen",
+  "description": "EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
+    }
+  ],
+  "publisher": "Robert Koch-Institut",
+  "date": "2025-07-25",
+  "name": "EmigaOrgvFileNumber",
+  "status": "active",
+  "kind": "identifier"
+}

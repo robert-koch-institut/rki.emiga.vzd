@@ -1,0 +1,371 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "OrganizationType",
+  "id": "OrganizationType",
+  "title": "Organisationstyp",
+  "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
+  "url": "https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType",
+  "language": "de-DE",
+  "experimental": false,
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "version": "1.1.1",
+  "date": "2025-10-27",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType"
+      },
+      {
+        "system": "https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType",
+        "concept": [
+          {
+            "code": "authority",
+            "display": "Behörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Authority"
+              }
+            ]
+          },
+          {
+            "code": "sepFedAut",
+            "display": "Oberste Bundesbehörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Supreme federal authority"
+              }
+            ]
+          },
+          {
+            "code": "hiFedAut",
+            "display": "Bundesoberbehörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Higher federal authority"
+              }
+            ]
+          },
+          {
+            "code": "fedInsti",
+            "display": "Bundesanstalt",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Federal Institute"
+              }
+            ]
+          },
+          {
+            "code": "supFedStaAut",
+            "display": "Oberste Landesbehörde",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Supreme Federal State authority"
+              }
+            ]
+          },
+          {
+            "code": "otherAutFed",
+            "display": "Sonstige Behörde auf Bundesebene",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Other authority federal"
+              }
+            ]
+          },
+          {
+            "code": "otherAutState",
+            "display": "Sonstige Behörde auf Landesebene",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Other authority state"
+              }
+            ]
+          },
+          {
+            "code": "intOrg",
+            "display": "Internationale Organisation",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "International Organization"
+              }
+            ]
+          },
+          {
+            "code": "resFacility",
+            "display": "Forschungseinrichtung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Research Facility"
+              }
+            ]
+          },
+          {
+            "code": "otherOrg",
+            "display": "sonstige Einrichtung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "other Organization"
+              }
+            ]
+          },
+          {
+            "code": "transport",
+            "display": "Transport",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Transport"
+              }
+            ]
+          },
+          {
+            "code": "airport",
+            "display": "Flughafen",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Airport"
+              }
+            ]
+          },
+          {
+            "code": "harbor",
+            "display": "Hafen",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://terminology.hl7.org/CodeSystem/designation-usage",
+                  "code": "display"
+                },
+                "value": "Harbor"
+              }
+            ]
+          },
+          {
+            "code": "barracks",
+            "display": "Kaserne"
+          },
+          {
+            "code": "carWash",
+            "display": "Autowaschanlage"
+          },
+          {
+            "code": "cemetery",
+            "display": "Friedhof"
+          },
+          {
+            "code": "coolingTowers",
+            "display": "Kühltürme"
+          },
+          {
+            "code": "crematorium",
+            "display": "Krematorium"
+          },
+          {
+            "code": "deportationDetCenter",
+            "display": "Abschiebehaftanstalt"
+          },
+          {
+            "code": "detentionCenter",
+            "display": "Untersuchungshaftanstalt"
+          },
+          {
+            "code": "evaporativeCoolingSystem",
+            "display": "Verdunstungskühlanlage"
+          },
+          {
+            "code": "fullInpatientCareNursingFacility",
+            "display": "Pflege- und Betreuungseinrichtung, Vollstationäre Pflegeeinrichtung"
+          },
+          {
+            "code": "funeralHome",
+            "display": "Bestattungsunternehmen"
+          },
+          {
+            "code": "funeralServiceEstab",
+            "display": "Einrichtung des Bestattungswesens"
+          },
+          {
+            "code": "gym",
+            "display": "Fitnessstudio"
+          },
+          {
+            "code": "healthInsurance",
+            "display": "Krankenkasse"
+          },
+          {
+            "code": "initialReceptionCenter",
+            "display": "Erstaufnahmeeinrichtung"
+          },
+          {
+            "code": "inpatientHospice",
+            "display": "Stationäres Hospiz"
+          },
+          {
+            "code": "inpatientIntegrationAssistance",
+            "display": "Stationäre Eingliederungshilfe"
+          },
+          {
+            "code": "juvenileDetentionCenter",
+            "display": "Jugendstrafanstalt"
+          },
+          {
+            "code": "majorEvent",
+            "display": "Großveranstaltung"
+          },
+          {
+            "code": "nightclub",
+            "display": "Diskothek"
+          },
+          {
+            "code": "pharmacy",
+            "display": "Apotheke"
+          },
+          {
+            "code": "professionalSchool",
+            "display": "Berufsschule"
+          },
+          {
+            "code": "prostitutionIndustryEstab",
+            "display": "Einrichtung des Prostitutionsgewerbes"
+          },
+          {
+            "code": "publicHealthServiceEstab",
+            "display": "Einrichtung des öffentlichen Gesundheitsdienstes"
+          },
+          {
+            "code": "publicHealthSystemEstab",
+            "display": "Einrichtung des öffentlichen Gesundheitswesens"
+          },
+          {
+            "code": "retirementHomeWithoutService",
+            "display": "Altenwohnheim"
+          },
+          {
+            "code": "retirementHomeWithService",
+            "display": "Altenheim"
+          },
+          {
+            "code": "saunaWellnessFacility",
+            "display": "Sauna- und Wellnessanlage"
+          },
+          {
+            "code": "sea",
+            "display": "Sonstige Einrichtung mit relevanter Wasser Aerosolierung"
+          },
+          {
+            "code": "sewageTreatmentPlant",
+            "display": "Kläranlage"
+          },
+          {
+            "code": "sportsLeisureRecreationFacility",
+            "display": "Sport- Freizeit- und Erholungsanlage"
+          },
+          {
+            "code": "substituteImprisonmentPenalInstitution",
+            "display": "Vollzugsanstalt für Ersatzfreiheitsstrafe"
+          },
+          {
+            "code": "swimmingBathingArea",
+            "display": "Schwimm- und Badestelle"
+          },
+          {
+            "code": "tanningSalon",
+            "display": "Sonnenstudio"
+          },
+          {
+            "code": "testCenter",
+            "display": "Teststelle"
+          },
+          {
+            "code": "university",
+            "display": "Hochschule"
+          },
+          {
+            "code": "wasteDisposalFacility",
+            "display": "Abfallbeseitigungsanlage"
+          },
+          {
+            "code": "womenShelter",
+            "display": "Frauenhaus"
+          },
+          {
+            "code": "workplace",
+            "display": "Arbeitsstätte"
+          }
+        ]
+      }
+    ]
+  }
+}
