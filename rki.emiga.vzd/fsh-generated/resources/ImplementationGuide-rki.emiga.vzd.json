@@ -165,6 +165,78 @@
       },
       {
         "reference": {
+          "reference": "HealthcareService/EmigaHealthcareServiceMaximal"
+        },
+        "name": "EmigaHealthcareServiceMaximal",
+        "description": "Maximale Instanz einer EMIGA-Dienstleistung (alle im Profil erlaubten Elemente befüllt)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/EmigaHealthcareServiceMinimal"
+        },
+        "name": "EmigaHealthcareServiceMinimal",
+        "description": "Minimale Instanz einer EMIGA-Dienstleistung",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "HealthcareService/EmigaHealthcareServiceTypical"
+        },
+        "name": "EmigaHealthcareServiceTypical",
+        "description": "Typische Instanz einer EMIGA-Dienstleistung",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
+      },
+      {
+        "reference": {
+          "reference": "Location/EmigaHospitalLocationMaximal"
+        },
+        "name": "EmigaHospitalLocationMaximal",
+        "description": "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/EmigaHospitalLocationMinimal"
+        },
+        "name": "EmigaHospitalLocationMinimal",
+        "description": "Minimale Instanz eines Krankenhaus-Standorts (EMIGA)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/EmigaHospitalLocationTypical"
+        },
+        "name": "EmigaHospitalLocationTypical",
+        "description": "Typische Instanz eines Krankenhaus-Standorts (EMIGA)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EmigaPublicHealthOrganizationMaximal"
+        },
+        "name": "EmigaPublicHealthOrganizationMaximal",
+        "description": "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EmigaPublicHealthOrganizationMinimal"
+        },
+        "name": "EmigaPublicHealthOrganizationMinimal",
+        "description": "Minimale Instanz einer ÖGD Organisation (EMIGA v1.1.0)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/EmigaPublicHealthOrganizationTypical"
+        },
+        "name": "EmigaPublicHealthOrganizationTypical",
+        "description": "Typische Instanz einer ÖGD Organisation (EMIGA v1.1.0)",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+      },
+      {
+        "reference": {
           "reference": "HealthcareService/EpiWarnHealthcareService"
         },
         "name": "EpiWarnHealthcareService",
@@ -429,6 +501,30 @@
       },
       {
         "reference": {
+          "reference": "Location/Location-maximal"
+        },
+        "name": "Location-maximal",
+        "description": "Beispielstandort für EMIGA maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/Location-minimal"
+        },
+        "name": "Location-minimal",
+        "description": "Beispielstandort für EMIGA minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
+          "reference": "Location/Location-typical"
+        },
+        "name": "Location-typical",
+        "description": "Dienststelle Musterstraße des Gesundheitsamts Stadt XYZ",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
+      },
+      {
+        "reference": {
           "reference": "Location/Location44588965"
         },
         "name": "Location44588965",
@@ -465,6 +561,27 @@
         "name": "Organisationstyp",
         "description": "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization-maximal"
+        },
+        "name": "Organization-maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization-minimal"
+        },
+        "name": "Organization-minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/Organization-typical"
+        },
+        "name": "Organization-typical",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
       },
       {
         "reference": {
@@ -530,6 +647,27 @@
       },
       {
         "reference": {
+          "reference": "Practitioner/Practitioner-maximal"
+        },
+        "name": "Practitioner-maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/Practitioner-minimal"
+        },
+        "name": "Practitioner-minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/Practitioner-typical"
+        },
+        "name": "Practitioner-typical",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
           "reference": "Practitioner/Practitioner44588966"
         },
         "name": "Practitioner44588966",
@@ -548,6 +686,27 @@
         },
         "name": "Practitioner44588970",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole-maximal"
+        },
+        "name": "PractitionerRole-maximal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole-minimal"
+        },
+        "name": "PractitionerRole-minimal",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/PractitionerRole-typical"
+        },
+        "name": "PractitionerRole-typical",
+        "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
       },
       {
         "reference": {

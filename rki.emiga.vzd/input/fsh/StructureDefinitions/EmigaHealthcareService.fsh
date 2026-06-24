@@ -23,7 +23,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'External identifiers for this item' - 0..* - Identifier
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * identifier 0..0
-
+  
 // 'Whether this HealthcareService record is in active use' - 0..1 - boolean
 // Wir wollen den Status von angebotenen Dienstleistungen klar unterscheiden können. Entsprechend machen wir das Element verpflichtend.
 * active 1..1 MS
@@ -198,5 +198,5 @@ Description: "If DutyHoursAvailability code is '24/7', then daysOfWeek, availabl
 * severity = #error
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
-* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and (extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty()))"
+* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() implies (extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').value.ofType(Coding).code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty()))"
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"

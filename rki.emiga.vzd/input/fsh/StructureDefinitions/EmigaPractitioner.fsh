@@ -40,7 +40,6 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 * name.given obeys validString
 * name.prefix MS
 
-
 // 'A contact detail for the practitioner (that apply to all roles)' - 0..* - ContactPoint
 // We slice the telecom element to apply the regex rules
 

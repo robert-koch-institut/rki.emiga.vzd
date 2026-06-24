@@ -13,7 +13,7 @@ Usage: #example
 * identifier[emigaOrgvFileNumber].type = $v2-0203#XX
 * identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
 * identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-9876543210"
-* type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"
+* type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörde"
 * name = "Zentrum für Gesundheits- und Infektionsschutz"
 * telecom[Email].system = #email
 * telecom[Email].value = "test@example.org"
