@@ -11,12 +11,12 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 //* extension[InekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 //* extension[ineKVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
-* identifier[emigaOrgvId].type = $v2-0203#XX
-* identifier[emigaOrgvId].system = $EmigaOrgvId
-* identifier[emigaOrgvId].value = "7654345"
-* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
-* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-1239854"
+* identifier[emigaEinrVId].type = $v2-0203#XX
+* identifier[emigaEinrVId].system = $EmigaEinrVId
+* identifier[emigaEinrVId].value = "7654345"
+* identifier[emigaEinrVFileNumber].type = $v2-0203#XX
+* identifier[emigaEinrVFileNumber].system = $EmigaEinrVFileNumber
+* identifier[emigaEinrVFileNumber].value = "EinrVFileNumber-1239854"
 * identifier[standortnummer-dkg].system = "http://fhir.de/sid/dkgev/standortnummer"
 * identifier[standortnummer-dkg].value = "771077000"
 

@@ -20,8 +20,8 @@ Alias: $HealthcareServiceSpecialtyCS = https://emiga.rki.de/fhir/vzd/CodeSystem/
 Alias: $IneKFacilityTypeCS = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType
 Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
-Alias: $BundleIdCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleId
-Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/OrgVBundleVersion
+Alias: $BundleIdCS = https://emiga.rki.de/fhir/vzd/CodeSystem/EinrVBundleId
+Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/EinrVBundleVersion
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
 
 Alias: $DutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
@@ -32,8 +32,8 @@ Alias: $ResponsibilityHealthdepartments = https://emiga.rki.de/fhir/vzd/Extensio
 Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates
 
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
-Alias: $EmigaOrgvFileNumber = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber
-Alias: $EmigaOrgvId = https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
+Alias: $EmigaEinrVFileNumber = https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber
+Alias: $EmigaEinrVId = https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId
 Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $IneKFileHeaderId = https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
@@ -49,11 +49,11 @@ Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareService
 Alias: $HospitalOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType
 Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType
-Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrgVBundleVersion
-Alias: $OrgvResourceVisibilityTypeVS = https://emiga.rki.de/fhir/ValueSet/ORGVResourceVisibilityTypeVS
+Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/EinrVBundleVersion
+Alias: $EinrVResourceVisibilityTypeVS = https://emiga.rki.de/fhir/ValueSet/EinrVResourceVisibilityTypeVS
 Alias: $ResponsibilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
 
-Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/OrgVBundleId
+Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/EinrVBundleId
 
 
 // Basis Profil

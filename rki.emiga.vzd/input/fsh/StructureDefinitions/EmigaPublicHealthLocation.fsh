@@ -10,7 +10,7 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
@@ -32,23 +32,23 @@ Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erb
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-   emigaOrgvId 0..1 MS and
-   emigaOrgvFileNumber 0..1 MS and
+   emigaEinrVId 0..1 MS and
+   emigaEinrVFileNumber 0..1 MS and
    telematikID 0..1 MS
 
 
-* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID zur Nutzung im Identifier-Element"
-* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].system 1..1 MS
-* identifier[emigaOrgvId].value 1..1 MS
+* identifier[emigaEinrVId] only IdentifierEmigaEinrVId
+* identifier[emigaEinrVId] ^definition = "EMIGA Organizationsverzeichnis ID zur Nutzung im Identifier-Element"
+* identifier[emigaEinrVId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId"
+* identifier[emigaEinrVId].system 1..1 MS
+* identifier[emigaEinrVId].value 1..1 MS
 
 
-* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen zur Nutzung im Identifier-Element"
-* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].system 1.. MS
-* identifier[emigaOrgvFileNumber].value 1.. MS
+* identifier[emigaEinrVFileNumber] only IdentifierEmigaEinrVFileNumber
+* identifier[emigaEinrVFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen zur Nutzung im Identifier-Element"
+* identifier[emigaEinrVFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber"
+* identifier[emigaEinrVFileNumber].system 1.. MS
+* identifier[emigaEinrVFileNumber].value 1.. MS
 
 
 * identifier[telematikID] only $identifier-telematik-id

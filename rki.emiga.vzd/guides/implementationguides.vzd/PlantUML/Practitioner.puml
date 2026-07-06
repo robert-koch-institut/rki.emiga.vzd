@@ -14,8 +14,8 @@ class EmigaPractitioner{
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
 <b>+</b> meta.security:visibility: Coding [0..1]
-<b>+</b> meta.tag:orgvBundleId: Coding [0..1]
-<b>+</b> meta.tag:orgvBundleVersion: Coding [0..1]
+<b>+</b> meta.tag:einrvBundleId: Coding [0..1]
+<b>+</b> meta.tag:einrvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
 -- Communication --
 <b>+</b> telecom:Email: ContactPoint [0..*]
