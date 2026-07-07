@@ -216,13 +216,26 @@ function Send-FhirResource {
             Accept        = 'application/fhir+json'
         }
 
+        $bundleType = $null
+        if ($resourceType -eq 'Bundle' -and $resource.PSObject.Properties.Match('type').Count -gt 0 -and $resource.type) {
+            $bundleType = $resource.type.ToString().ToLowerInvariant()
+        }
+
         $method = 'Put'
         $url = "$ServerUrl/$resourceType/$resourceId"
         $action = 'Upload'
         $message = 'Uploaded'
         $httpStatus = 200
 
-        if (-not $resourceId) {
+        # FHIR transaction/batch bundles must be posted to the base URL.
+        if ($resourceType -eq 'Bundle' -and ($bundleType -eq 'transaction' -or $bundleType -eq 'batch')) {
+            $method = 'Post'
+            $url = "{0}/" -f $ServerUrl.TrimEnd('/')
+            $action = 'UploadBundleOperation'
+            $message = "Uploaded $bundleType bundle to base endpoint"
+            $httpStatus = 200
+        }
+        elseif (-not $resourceId) {
             if ($UsePostWhenIdMissing) {
                 $method = 'Post'
                 $url = "$ServerUrl/$resourceType"
@@ -246,6 +259,7 @@ function Send-FhirResource {
             }
         }
 
+        Write-Host "  Request: $method $url" -ForegroundColor DarkGray
         $response = Invoke-RestMethod -Uri $url -Method $method -Body $content -Headers $headers -ContentType 'application/fhir+json; charset=utf-8' -ErrorAction Stop
         $operationOutcome = Get-OperationOutcomeSummary -BodyObject $response
 
@@ -314,6 +328,8 @@ function Send-FhirResource {
         $operationOutcome = Get-OperationOutcomeSummary -RawBody $rawBody
         $errorMessage = if ($null -ne $exception -and -not [string]::IsNullOrWhiteSpace($exception.Message)) { $exception.Message } else { 'Unknown error' }
 
+        Write-Host "  Failed: $ResourcePath - $errorMessage" -ForegroundColor Red
+
         return [pscustomobject]@{
             Timestamp        = $now
             FilePath         = $ResourcePath
@@ -326,16 +342,6 @@ function Send-FhirResource {
             OperationOutcome = $operationOutcome
         }
     }
-}
-
-function Write-UploadFailureMessage {
-    [CmdletBinding()]
-    param(
-        [Parameter(Mandatory = $true)]
-        [object]$Outcome
-    )
-
-    Write-Host "  Failed: $($Outcome.FilePath) - $($Outcome.Message)" -ForegroundColor Red
 }
 
 function Get-ResourceIndex {
@@ -450,21 +456,6 @@ function Get-ManualFixRecommendations {
                     Diagnostic  = $diag
                     Suggestion  = $suggestion
                 })
-                continue
-            }
-
-            if ($diag -match 'duplicate key value violates unique constraint "idx_codesystem_and_ver"' -and $diag -match 'Key \(codesystem_pid, cs_version_id\)=\((?<pid>\d+),\s*(?<ver>[^\)]+)\)') {
-                $key = "$($entry.FilePath)|TERM_DUPLICATE_CS_VER|$($matches['pid'])|$($matches['ver'])"
-                if (-not $seen.Add($key)) {
-                    continue
-                }
-
-                $recommendations.Add([pscustomobject]@{
-                    FilePath   = $entry.FilePath
-                    Issue      = 'Server terminology index conflict for CodeSystem version'
-                    Diagnostic = $diag
-                    Suggestion = "The server already contains a terminology row for codesystem_pid=$($matches['pid']) and version=$($matches['ver']). Resolve on server side (clean duplicate terminology entry / reindex terminology for the resource), or upload this CodeSystem with a new version value."
-                })
             }
         }
     }
@@ -550,11 +541,7 @@ if ($FilePath) {
         Write-Host "Skipping example file (use -IncludeExamples): $FilePath" -ForegroundColor Yellow
     }
     else {
-        $singleOutcome = Send-FhirResource -ResourcePath $FilePath -ServerUrl $FhirServerUrl -User $Username -Pass $Password -IsDryRun $DryRun.IsPresent -IsValidate $Validate.IsPresent -UsePostWhenIdMissing $PostWhenIdMissing.IsPresent
-        if (-not $singleOutcome.Success) {
-            Write-UploadFailureMessage -Outcome $singleOutcome
-        }
-        $outcomes.Add($singleOutcome)
+        $outcomes.Add((Send-FhirResource -ResourcePath $FilePath -ServerUrl $FhirServerUrl -User $Username -Pass $Password -IsDryRun $DryRun.IsPresent -IsValidate $Validate.IsPresent -UsePostWhenIdMissing $PostWhenIdMissing.IsPresent))
     }
 }
 else {
@@ -590,13 +577,8 @@ else {
             $result = Send-FhirResource -ResourcePath $file.FullName -ServerUrl $FhirServerUrl -User $Username -Pass $Password -IsDryRun $DryRun.IsPresent -IsValidate $Validate.IsPresent -UsePostWhenIdMissing $PostWhenIdMissing.IsPresent
 
             if ($maxPasses -gt 1 -and -not $result.Success -and (Test-IsRetryableMissingReference -Outcome $result) -and $pass -lt $maxPasses) {
-                Write-Host "  Deferred for retry: $($result.FilePath) - $($result.Message)" -ForegroundColor Yellow
                 $nextPending += $file
                 continue
-            }
-
-            if (-not $result.Success) {
-                Write-UploadFailureMessage -Outcome $result
             }
 
             if ($result.Success) {
@@ -609,9 +591,6 @@ else {
         if (@($nextPending).Count -gt 0 -and $passSucceeded -eq 0) {
             foreach ($file in $nextPending) {
                 $result = Send-FhirResource -ResourcePath $file.FullName -ServerUrl $FhirServerUrl -User $Username -Pass $Password -IsDryRun $DryRun.IsPresent -IsValidate $Validate.IsPresent -UsePostWhenIdMissing $PostWhenIdMissing.IsPresent
-                if (-not $result.Success) {
-                    Write-UploadFailureMessage -Outcome $result
-                }
                 $outcomes.Add($result)
             }
             $pendingFiles = @()
