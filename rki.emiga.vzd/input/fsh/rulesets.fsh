@@ -74,8 +74,6 @@ RuleSet: ProfileMetaTags
 * meta.tag ^slicing.discriminator.path = "system"
 * meta.tag ^slicing.rules = #open
 * meta.tag contains relevance 0..* MS 
-//and 
- //   orgvBundleId 0..1 MS and orgvBundleVersion 0..1 MS
 * meta.tag[relevance] from $RelevanceVS (required)
 * meta.tag[relevance].system 1.. MS
 * meta.tag[relevance].system = $RelevanceCS
