@@ -6,9 +6,9 @@ rki.emiga.vzd/Deprecated/OrganizationType.fsh
 rki.emiga.vzd/input/fsh/StructureDefinitions/EmigaPublicHealthOrganization.fsh  
 **feat:** Remove unused CS and VS, adjust rulesets accordingly  
 Deprecated/OrgVBundle.fsh  
-Deprecated/OrgVBundleId copy.fsh  
+Deprecated/OrgVBundleIdVS.fsh  
 Deprecated/OrgVBundleId.fsh  
-Deprecated/OrgVBundleVersion copy.fsh  
+Deprecated/OrgVBundleVersionVS.fsh  
 Deprecated/OrgVBundleVersion.fsh  
 CodeSystem-HealthcareServiceCategory.json  
 CodeSystem-OrganizationType.json  
