@@ -81,18 +81,7 @@ RuleSet: ProfileMetaTags
 * meta.tag[relevance].system = $RelevanceCS
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
-/*
-* meta.tag[orgvBundleId] from $BundleIdVS (preferred)
-* meta.tag[orgvBundleId].system 1.. MS
-* meta.tag[orgvBundleId].system = $BundleIdCS
-* meta.tag[orgvBundleId].code MS 
-* meta.tag[orgvBundleId].display MS
-* meta.tag[orgvBundleVersion] from $BundleVersionVS (preferred)
-* meta.tag[orgvBundleVersion].system 1.. MS
-* meta.tag[orgvBundleVersion].system = $BundleVersionCS 
-* meta.tag[orgvBundleVersion].code MS
-* meta.tag[orgvBundleVersion].display MS
-*/
+
 
 RuleSet: MetaTagOrgVBundle
 * meta.tag MS
