@@ -5,8 +5,8 @@ Description: "Die Kodiersystematik Einrichtungsverzeichnis-Bundle-Version defini
 
 * ^url = "https://emiga.rki.de/fhir/CodeSystem/EinrVBundleVersion"
 * insert MetadataTerminology
-* ^version = "0.1.0"
-* ^date = "2025-06-10"
+* ^version = "0.2.0"
+* ^date = "2026-07-07"
 * ^caseSensitive = true
 * ^content = #complete
 * ^valueSet = "https://emiga.rki.de/fhir/ValueSet/EinrVBundleVersion"

@@ -4,7 +4,7 @@ Title: "EMIGA Einrichtungsverzeichnis ID"
 Description: "EMIGA Einrichtungsverzeichnis ID für die Verwendung in Identifiers"
 Usage: #definition
 * publisher = "Robert Koch-Institut"
-* date = "2024-03-19"
+* date = "2026-07-07"
 * name = "EmigaEinrVId"
 * status = #active
 * kind = #identifier

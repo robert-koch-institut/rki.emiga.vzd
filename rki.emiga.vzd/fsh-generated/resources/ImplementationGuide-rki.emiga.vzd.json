@@ -133,6 +133,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/EinrVBundle"
+        },
+        "name": "Einrichtungsverzeichnis Bundle",
+        "description": "Dieses Bundle bildet Informationen zum Einrichtungsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Einrichtungsverzeichnisses.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/EinrVBundleId"
+        },
+        "name": "Einrichtungsverzeichnis-Bundle-ID",
+        "description": "Die Kodiersystematik Einrichtungsverzeichnis-Bundle-ID definiert Konzepte, die den Einrichtungsverzeichnis-Bundle kennzeichnen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/EinrVBundleVersion"
+        },
+        "name": "Einrichtungsverzeichnis-Bundle-Version",
+        "description": "Die Kodiersystematik Einrichtungsverzeichnis-Bundle-Version definiert Konzepte, die den Einrichtungsverzeichnis-Bundle Version kennzeichnen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaLocation"
         },
         "name": "EMIGA Bereich / Standort",
@@ -141,26 +165,26 @@
       },
       {
         "reference": {
+          "reference": "NamingSystem/EmigaEinrVFileNumber"
+        },
+        "name": "EMIGA Einrichtungsverzeichnis Aktenzeichen",
+        "description": "EMIGA Einrichtungsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/EmigaEinrVId"
+        },
+        "name": "EMIGA Einrichtungsverzeichnis ID",
+        "description": "EMIGA Einrichtungsverzeichnis ID für die Verwendung in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/EmigaOrganization"
         },
         "name": "EMIGA Organization",
         "description": "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/EmigaOrgvFileNumber"
-        },
-        "name": "EMIGA Organizationsverzeichnis Aktenzeichen",
-        "description": "EMIGA Organizationsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/EmigaOrgvId"
-        },
-        "name": "EMIGA Organizationsverzeichnis ID",
-        "description": "EMIGA Organizationsverzeichnis ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -272,18 +296,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/IdentifierEmigaOrgvId"
+          "reference": "StructureDefinition/IdentifierEmigaEinrVFileNumber"
         },
-        "name": "Identifier-Profil EmigaOrgvId",
-        "description": "Identifier Profil für EmigaOrgvId",
+        "name": "Identifier-Profil EinrV Aktenzeichen",
+        "description": "Identifier Profil für EMIGA Einrichtungsverzeichnis Aktenzeichen",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/IdentifierEmigaOrgvFileNumber"
+          "reference": "StructureDefinition/IdentifierEmigaEinrVId"
         },
-        "name": "Identifier-Profil Orgv Aktenzeichen",
-        "description": "Identifier Profil für EMIGA Organizationsverzeichnis Aktenzeichen",
+        "name": "Identifier-Profil EmigaEinrVId",
+        "description": "Identifier Profil für EmigaEinrVId",
         "exampleBoolean": false
       },
       {
@@ -436,22 +460,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/OrgVBundleId"
-        },
-        "name": "Organisations-Bundle-ID",
-        "description": "Die Kodiersystematik Organisations-Bundle-ID definiert Konzepte, die den Organisations-Bundle kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/OrgVBundleVersion"
-        },
-        "name": "Organisations-Bundle-Version",
-        "description": "Die Kodiersystematik Organisations-Bundle-Version definiert Konzepte, die den Organisations-Bundle Version kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/GenericOrganizationType"
         },
         "name": "Organisationstyp",
@@ -486,14 +494,6 @@
         },
         "name": "Organizationstyp",
         "description": "Die Kodiersystematik 'OrganizationType' definiert Konzepte, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/OrgVBundle"
-        },
-        "name": "Organizationsverzeichnis Bundle",
-        "description": "Dieses Bundle bildet Informationen zum Einrichtungsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Einrichtungsverzeichnisses.",
         "exampleBoolean": false
       },
       {
@@ -572,7 +572,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OrgVBundleId"
+          "reference": "ValueSet/EinrVBundleId"
         },
         "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
@@ -580,7 +580,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/OrgVBundleVersion"
+          "reference": "ValueSet/EinrVBundleVersion"
         },
         "name": "Relevanz",
         "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
@@ -588,7 +588,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ORGVResourceVisibilityTypeVS"
+          "reference": "ValueSet/EinrVResourceVisibilityTypeVS"
         },
         "name": "Ressourcensichtbarkeit",
         "description": "Dieses ValueSet enthält die zulässigen Codes zur Abbildung der Sichtbarkeit von Ressourcen im Kontext von EMIGA. Es dient der einheitlichen und strukturierten Kennzeichnung der Sichtbarkeit von Ressourcen in organisatorischen und fachlichen Prozessen.",
