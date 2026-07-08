@@ -10,7 +10,7 @@ Description: "Definiert einen bestimmten Satz von Attributen, die einem Practiti
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole" 
 * insert ProfileMetaTags

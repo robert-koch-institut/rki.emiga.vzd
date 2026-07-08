@@ -66,7 +66,7 @@ Tests for all FHIR profile definitions including:
 - EmigaHospitalLocation
 - EmigaHospitalFacilityLocation
 - EmigaHospitalRoomLocation
-- OrgVBundle
+- EinrVBundle
 - With a search query to get all StructureDefinitions
 
 ### 2. **CodeSystems** - 8 requests

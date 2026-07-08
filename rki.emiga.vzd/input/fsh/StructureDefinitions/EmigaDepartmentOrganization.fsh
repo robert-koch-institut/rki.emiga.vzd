@@ -10,7 +10,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
@@ -29,7 +29,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 // 'Identifies this organization across multiple systems' - 0..* - Identifier
 // Logischer Identifier der Organisation
 // Wir gestalten das Slicing bewusst offen, um später weitere Identifier-Typen abbilden zu können (z.B. DEMIS-ID, gematik-ID, usw.)
-// Update zu v2: Wir  nutzen Slicing um die verschiedenen Identifier-Typen zu unterscheiden. Addiert gematik-ID und emigaOrgvId
+// Update zu v2: Wir  nutzen Slicing um die verschiedenen Identifier-Typen zu unterscheiden. Addiert gematik-ID und emigaEinrVId
 // Discussion: Soll identifier pflicht sein 1..1?
 * identifier 1..* MS
 * identifier ^short = "Logischer Identifier"
@@ -39,24 +39,24 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-    emigaOrgvId 0..1 MS and
-    emigaOrgvFileNumber 0..1 MS and
+    emigaEinrVId 0..1 MS and
+    emigaEinrVFileNumber 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     Abteilungsidentifikator 0..1 MS and
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS 
 
-* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
-* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].system 1.. MS
-* identifier[emigaOrgvId].value 1.. MS
-* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
-* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].system 1.. MS
-* identifier[emigaOrgvFileNumber].value 1.. MS
+* identifier[emigaEinrVId] only IdentifierEmigaEinrVId
+* identifier[emigaEinrVId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
+* identifier[emigaEinrVId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId"
+* identifier[emigaEinrVId].system 1.. MS
+* identifier[emigaEinrVId].value 1.. MS
+* identifier[emigaEinrVFileNumber] only IdentifierEmigaEinrVFileNumber
+* identifier[emigaEinrVFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
+* identifier[emigaEinrVFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber"
+* identifier[emigaEinrVFileNumber].system 1.. MS
+* identifier[emigaEinrVFileNumber].value 1.. MS
 
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"

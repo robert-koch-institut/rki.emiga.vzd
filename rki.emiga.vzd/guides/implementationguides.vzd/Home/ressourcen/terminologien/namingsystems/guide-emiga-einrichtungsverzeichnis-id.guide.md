@@ -1,6 +1,6 @@
 ---
-topic: EmigaOrgvFileNumber
-canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber
+topic: EmigaEinrVId
+canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId
 ---
 
 # {{page-title}}
@@ -12,7 +12,7 @@ select description
 </fql>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber}}
+    {{render:https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId}}
 </div>
 
 <style>

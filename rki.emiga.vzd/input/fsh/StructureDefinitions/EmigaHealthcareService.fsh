@@ -10,7 +10,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 
@@ -172,7 +172,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
 * availableTime MS
-* availableTime obeys ORGV-Service-Opening-Time
+* availableTime obeys EinrV-Service-Opening-Time
 * availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
 
 * availableTime.daysOfWeek MS
@@ -193,7 +193,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * endpoint 0..0
 
-Invariant: ORGV-Service-Opening-Time
+Invariant: EinrV-Service-Opening-Time
 Description: "If DutyHoursAvailability code is '24/7', then daysOfWeek, availableStartTime, and availableEndTime must not be present."
 * severity = #error
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
