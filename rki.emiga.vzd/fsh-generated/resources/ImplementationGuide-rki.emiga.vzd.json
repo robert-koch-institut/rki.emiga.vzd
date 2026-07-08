@@ -133,8 +133,6 @@
       },
       {
         "reference": {
-<<<<<<< HEAD
-=======
           "reference": "StructureDefinition/EinrVBundle"
         },
         "name": "Einrichtungsverzeichnis Bundle",
@@ -143,11 +141,26 @@
       },
       {
         "reference": {
->>>>>>> origin/development
           "reference": "StructureDefinition/EmigaLocation"
         },
         "name": "EMIGA Bereich / Standort",
         "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/EmigaEinrVFileNumber"
+        },
+        "name": "EMIGA Einrichtungsverzeichnis Aktenzeichen",
+        "description": "EMIGA Einrichtungsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/EmigaEinrVId"
+        },
+        "name": "EMIGA Einrichtungsverzeichnis ID",
+        "description": "EMIGA Einrichtungsverzeichnis ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
