@@ -141,22 +141,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/EinrVBundleId"
-        },
-        "name": "Einrichtungsverzeichnis-Bundle-ID",
-        "description": "Die Kodiersystematik Einrichtungsverzeichnis-Bundle-ID definiert Konzepte, die den Einrichtungsverzeichnis-Bundle kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/EinrVBundleVersion"
-        },
-        "name": "Einrichtungsverzeichnis-Bundle-Version",
-        "description": "Die Kodiersystematik Einrichtungsverzeichnis-Bundle-Version definiert Konzepte, die den Einrichtungsverzeichnis-Bundle Version kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/EmigaLocation"
         },
         "name": "EMIGA Bereich / Standort",
@@ -561,22 +545,6 @@
         },
         "name": "PublicHealthLocation001",
         "exampleCanonical": "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EinrVBundleId"
-        },
-        "name": "Relevanz",
-        "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/EinrVBundleVersion"
-        },
-        "name": "Relevanz",
-        "description": "Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen.",
-        "exampleBoolean": false
       },
       {
         "reference": {
