@@ -5,7 +5,6 @@ CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCateg
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 181
 CodeSystem-IneKFacilityType.json                          IneKFacilityType                 CodeSystem  CodeSystem\IneKFacilityType.fsh                                    1 - 35
-CodeSystem-OrganizationType.json                          OrganizationType                 CodeSystem  CodeSystem\OrganizationType.fsh                                    1 - 334
 CodeSystem-PractitionerRole.json                          PractitionerRole                 CodeSystem  CodeSystem\PractitionerRole.fsh                                    1 - 24
 CodeSystem-responsibilityType.json                        ResponsibilityType               CodeSystem  CodeSystem\ResponsibilityType.fsh                                  1 - 13
 HealthcareService-EpiWarnHealthcareService.json           EpiWarnHealthcareService         Instance    Examples\EpiWarnHealthcareService.fsh                              1 - 34
