@@ -7,10 +7,10 @@ Usage: #example
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 * active = true
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
-* identifier[EmigaID].type = $v2-0203#XX
+
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "EinrVID-0123456789"
-* identifier[EmigaFileNumber].type = $v2-0203#XX
+
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
 * identifier[EmigaFileNumber].value = "EinrVFileNumber-9876543210"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"

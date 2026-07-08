@@ -7,10 +7,9 @@ Usage: #example
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#UserCreated "Durch OEGD angelegt"
 
-* identifier[EmigaID].type = $v2-0203#XX
+
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "LAB-BEREICH-012345"
-* identifier[EmigaFileNumber].type = $v2-0203#XX
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
 * identifier[EmigaFileNumber].value = "LAB-BEREICH-987654"
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"

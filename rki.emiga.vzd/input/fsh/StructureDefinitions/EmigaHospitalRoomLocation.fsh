@@ -78,7 +78,6 @@ Description: "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext vo
 
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
-*/
 * status 1..1 MS
 * status ^short = "Status"
 * status ^definition = "Aktivitätsstatus des Standortes"

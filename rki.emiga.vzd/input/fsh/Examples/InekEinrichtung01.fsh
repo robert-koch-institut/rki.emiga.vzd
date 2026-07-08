@@ -11,10 +11,8 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 //* extension[InekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 //* extension[ineKVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
-* identifier[EmigaID].type = $v2-0203#XX
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "9876543210"
-* identifier[EmigaFileNumber].type = $v2-0203#XX
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
 * identifier[EmigaFileNumber].value = "EinrVFileNumber-9854"
 
