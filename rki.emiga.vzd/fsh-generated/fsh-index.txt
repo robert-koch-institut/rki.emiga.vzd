@@ -1,6 +1,4 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
-CodeSystem-EinrVBundleId.json                             EinrVBundleId                    CodeSystem  CodeSystem\EinrVBundleId.fsh                                       1 - 12
-CodeSystem-EinrVBundleVersion.json                        EinrVBundleVersion               CodeSystem  CodeSystem\EinrVBundleVersion.fsh                                  1 - 12
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 181
@@ -22,8 +20,6 @@ Location-Location44588965.json                            Location44588965      
 Location-PublicHealthLocation001.json                     PublicHealthLocation001          Instance    Examples\Location-PublicHealth001.fsh                              1 - 20
 Location-Station01.json                                   Station01                        Instance    Examples\Station01.fsh                                             1 - 61
 NamingSystem-CodeSiteId.json                              CodeSiteId                       Instance    NamingSystem\CodeSiteId.fsh                                        1 - 12
-NamingSystem-EmigaEinrVFileNumber.json                    EmigaEinrVFileNumber             Instance    NamingSystem\EmigaEinrVFileNumber.fsh                              1 - 12
-NamingSystem-EmigaEinrVId.json                            EmigaEinrVId                     Instance    NamingSystem\EmigaEinrVId.fsh                                      1 - 12
 NamingSystem-IneKFileHeaderId.json                        IneKFileHeaderId                 Instance    NamingSystem\IneKFileHeaderId.fsh                                  1 - 12
 Organization-EpiWarnOrganization.json                     EpiWarnOrganization              Instance    Examples\OrganizationEpiWarn.fsh                                   1 - 33
 Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 33
@@ -38,8 +34,7 @@ PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRol
 PractitionerRole-Practitioner44588967.json                Practitioner44588967             Instance    Examples\PractitionerRole-44588967.fsh                             1 - 10
 PractitionerRole-PractitionerRole44588971.json            PractitionerRole44588971         Instance    Examples\PractitionerRole-44588971.fsh                             1 - 10
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 17
-StructureDefinition-EinrVBundle.json                      EinrVBundle                      Profile     StructureDefinitions\EinrVBundle.fsh                               3 - 22
-StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 218
+StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 239
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 194
 StructureDefinition-EmigaHospitalFacilityLocation.json    EmigaHospitalFacilityLocation    Profile     StructureDefinitions\EmigaHospitalFacilityLocation.fsh             1 - 277
 StructureDefinition-EmigaHospitalLocation.json            EmigaHospitalLocation            Profile     StructureDefinitions\EmigaHospitalLocation.fsh                     1 - 301
@@ -59,8 +54,6 @@ StructureDefinition-InekPostalAddress.json                InekPostalAddress     
 StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthdepartments  Extension   StructureDefinitions\ExtensionResponsibilityHealthdepartments.fsh  2 - 34
 StructureDefinition-UTMCoordinates.json                   UTMCoordinates                   Extension   StructureDefinitions\ExtensionUTMCoordinates.fsh                   1 - 26
 ValueSet-AddressTypePhysicalBoth.json                     AddressTypePhysicalBoth          ValueSet    ValueSet\AddressTypePhysicalBoth.fsh                               1 - 12
-ValueSet-EinrVBundleId.json                               EinrVBundleId                    ValueSet    ValueSet\EinrVBundleId.fsh                                         1 - 10
-ValueSet-EinrVBundleVersion.json                          EinrVBundleVersion               ValueSet    ValueSet\EinrVBundleVersion.fsh                                    1 - 10
 ValueSet-EinrVResourceVisibilityTypeVS.json               EinrVResourceVisibilityTypeVS    ValueSet    ValueSet\EinrVResourceVisibilityTypeVS.fsh                         1 - 13
 ValueSet-Fachbereich.json                                 Fachbereich                      ValueSet    ValueSet\Fachbereich.fsh                                           1 - 18
 ValueSet-GenericOrganizationType.json                     GenericOrganizationType          ValueSet    ValueSet\GenericOrganizationType.fsh                               1 - 207
