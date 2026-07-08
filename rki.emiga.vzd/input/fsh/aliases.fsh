@@ -3,6 +3,8 @@ Alias: $CountyVS = https://emiga.rki.de/fhir/case/ValueSet/County
 
 
 // rki.emiga.common
+Alias: $EmigaFileNumber = https://emiga.rki.de/fhir/sid/EmigaFileNumber
+Alias: $EmigaID = https://emiga.rki.de/fhir/sid/EmigaID
 Alias: $ConceptDesignationUse = https://emiga.rki.de/fhir/common/CodeSystem/ConceptDesignationUse
 Alias: $RelevanceCS = https://emiga.rki.de/fhir/common/CodeSystem/Relevance
 Alias: $ResourceResponsibility = https://emiga.rki.de/fhir/common/CodeSystem/ResourceResponsibility

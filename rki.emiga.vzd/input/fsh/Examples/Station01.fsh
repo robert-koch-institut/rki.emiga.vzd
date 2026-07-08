@@ -11,12 +11,12 @@ Description: "Beispiel eines Standorts, der eine Station in einem Krankenhaus be
 //* extension[InekVersionPeriod].extension[version].valueInteger = 3
 //* extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 //* extension[ineKVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
-* identifier[emigaEinrVId].type = $v2-0203#XX
-* identifier[emigaEinrVId].system = $EmigaEinrVId
-* identifier[emigaEinrVId].value = "9876543210"
-* identifier[emigaEinrVFileNumber].type = $v2-0203#XX
-* identifier[emigaEinrVFileNumber].system = $EmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber].value = "EinrVFileNumber-987123654"
+* identifier[EmigaID].type = $v2-0203#XX
+* identifier[EmigaID].system = $EmigaID
+* identifier[EmigaID].value = "9876543210"
+* identifier[EmigaFileNumber].type = $v2-0203#XX
+* identifier[EmigaFileNumber].system = $EmigaFileNumber
+* identifier[EmigaFileNumber].value = "EinrVFileNumber-987123654"
 //* identifier[standortnummer-dkg].system = "http://fhir.de/sid/dkgev/standortnummer"
 //* identifier[standortnummer-dkg].value = "771077015"
 

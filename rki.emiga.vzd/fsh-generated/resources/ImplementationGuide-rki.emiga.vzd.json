@@ -133,34 +133,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/EinrVBundle"
-        },
-        "name": "Einrichtungsverzeichnis Bundle",
-        "description": "Dieses Bundle bildet Informationen zum Einrichtungsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Einrichtungsverzeichnisses.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/EmigaLocation"
         },
         "name": "EMIGA Bereich / Standort",
         "description": "Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/EmigaEinrVFileNumber"
-        },
-        "name": "EMIGA Einrichtungsverzeichnis Aktenzeichen",
-        "description": "EMIGA Einrichtungsverzeichnis Aktenzeichen für die Verwendung in Identifiers",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "NamingSystem/EmigaEinrVId"
-        },
-        "name": "EMIGA Einrichtungsverzeichnis ID",
-        "description": "EMIGA Einrichtungsverzeichnis ID für die Verwendung in Identifiers",
         "exampleBoolean": false
       },
       {
@@ -276,22 +252,6 @@
         },
         "name": "Identifier-Profil CodeSiteId",
         "description": "Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IdentifierEmigaEinrVFileNumber"
-        },
-        "name": "Identifier-Profil EinrV Aktenzeichen",
-        "description": "Identifier Profil für EMIGA Einrichtungsverzeichnis Aktenzeichen",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/IdentifierEmigaEinrVId"
-        },
-        "name": "Identifier-Profil EmigaEinrVId",
-        "description": "Identifier Profil für EmigaEinrVId",
         "exampleBoolean": false
       },
       {
