@@ -1,6 +1,4 @@
 Output File                                               Name                             Type        FSH File                                                           Lines
-CodeSystem-EinrVBundleId.json                             EinrVBundleId                    CodeSystem  CodeSystem\EinrVBundleId.fsh                                       1 - 12
-CodeSystem-EinrVBundleVersion.json                        EinrVBundleVersion               CodeSystem  CodeSystem\EinrVBundleVersion.fsh                                  1 - 12
 CodeSystem-HealthcareServiceCategory.json                 HealthcareServiceCategory        CodeSystem  CodeSystem\HealthcareServiceCategory.fsh                           1 - 12
 CodeSystem-HealthcareServiceDutyHours.json                HealthcareServiceDutyHours       CodeSystem  CodeSystem\HealthcareServiceDutyHours.fsh                          1 - 16
 CodeSystem-HealthcareServiceSpecialty.json                HealthcareServiceSpecialty       CodeSystem  CodeSystem\HealthcareServiceSpecialty.fsh                          1 - 181
@@ -59,8 +57,6 @@ StructureDefinition-InekPostalAddress.json                InekPostalAddress     
 StructureDefinition-ResponsibilityHealthdepartments.json  ResponsibilityHealthdepartments  Extension   StructureDefinitions\ExtensionResponsibilityHealthdepartments.fsh  2 - 34
 StructureDefinition-UTMCoordinates.json                   UTMCoordinates                   Extension   StructureDefinitions\ExtensionUTMCoordinates.fsh                   1 - 26
 ValueSet-AddressTypePhysicalBoth.json                     AddressTypePhysicalBoth          ValueSet    ValueSet\AddressTypePhysicalBoth.fsh                               1 - 12
-ValueSet-EinrVBundleId.json                               EinrVBundleId                    ValueSet    ValueSet\EinrVBundleId.fsh                                         1 - 10
-ValueSet-EinrVBundleVersion.json                          EinrVBundleVersion               ValueSet    ValueSet\EinrVBundleVersion.fsh                                    1 - 10
 ValueSet-EinrVResourceVisibilityTypeVS.json               EinrVResourceVisibilityTypeVS    ValueSet    ValueSet\EinrVResourceVisibilityTypeVS.fsh                         1 - 13
 ValueSet-Fachbereich.json                                 Fachbereich                      ValueSet    ValueSet\Fachbereich.fsh                                           1 - 18
 ValueSet-GenericOrganizationType.json                     GenericOrganizationType          ValueSet    ValueSet\GenericOrganizationType.fsh                               1 - 207
