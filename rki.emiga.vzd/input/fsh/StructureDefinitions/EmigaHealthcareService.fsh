@@ -196,7 +196,9 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 Invariant: EinrV-Service-Opening-Time
 Description: "If DutyHoursAvailability code is '24/7', then daysOfWeek, availableStartTime, and availableEndTime must not be present."
 * severity = #error
+
+* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').where(valueCoding.code = '24/7').exists().not() or (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
-* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and (extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty()))"
+//* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and (extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty()))"
 //* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"
