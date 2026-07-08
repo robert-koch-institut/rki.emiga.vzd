@@ -1,8 +1,8 @@
 // File: IneKBundle.fsh
 
-Profile: OrgVBundle
+Profile: EinrVBundle
 Parent: Bundle
-Id: OrgVBundle
+Id: EinrVBundle
 Title: "Organizationsverzeichnis Bundle"
 Description: "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab. Es dient der strukturierten Zusammenführung und gemeinsamen Übertragung von Organisationen und zugehörigen Ressourcen (z. B. Standorte, Kontakte, Klassifikationen) im Rahmen eines Organisationsverzeichnisses."
 * ^version = "0.1.1"
@@ -12,7 +12,7 @@ Description: "Dieses Bundle bildet Informationen zum Organisationsverzeichnis ab
 * insert ProfileResourceCommon
 * insert ProfileMetaProfileTags
 
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EinrVBundle"
 
 * type = #collection
 

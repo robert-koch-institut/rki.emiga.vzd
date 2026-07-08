@@ -8,10 +8,10 @@
   filename: guide-fachabteilung.guide.md
 - name: Identifier-Profil CodeSiteId
   filename: guide-identifier-profil-codesiteid.guide.md
-- name: Identifier-Profil EmigaOrgvId
-  filename: guide-identifier-profil-emigaorgvid.guide.md
-- name: Identifier-Profil Orgv Aktenzeichen
-  filename: guide-identifier-profil-orgv-aktenzeichen.guide.md
+- name: Identifier-Profil EmigaEinrVId
+  filename: guide-identifier-profil-emigaeinrvid.guide.md
+- name: Identifier-Profil EinrV Aktenzeichen
+  filename: guide-identifier-profil-einrv-aktenzeichen.guide.md
 - name: Krankenhaus
   filename: guide-krankenhaus.guide.md
 - name: Krankenhaus - Einrichtungsstandort
@@ -26,8 +26,8 @@
   filename: guide-oegd-organisation.guide.md
 - name: Organisation
   filename: guide-organisation.guide.md
-- name: Organisationsverzeichnis Bundle
-  filename: guide-organisationsverzeichnis-bundle.guide.md
+- name: Einrichtungsverzeichnis Bundle
+  filename: guide-einrichtungsverzeichnis-bundle.guide.md
 - name: Practitioner
   filename: guide-practitioner.guide.md
 - name: Practitioner Role

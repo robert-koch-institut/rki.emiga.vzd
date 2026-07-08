@@ -10,10 +10,10 @@
   filename: guide-dienstleister-kategorien.guide.md
 - name: InEK Einrichtungstyp
   filename: guide-inek-einrichtungstyp.guide.md
-- name: Organisations-Bundle-ID
-  filename: guide-organisations-bundle-id.guide.md
-- name: Organisations-Bundle-Version
-  filename: guide-organisations-bundle-version.guide.md
+- name: Einrichtungsverzeichnis-Bundle-ID
+  filename: guide-einrichtungsverzeichnis-bundle-id.guide.md
+- name: Einrichtungsverzeichnis-Bundle-Version
+  filename: guide-einrichtungsverzeichnis-bundle-version.guide.md
 - name: Practitioner Role
   filename: guide-practitioner-role.guide.md
 - name: Zuständigkeit

@@ -1,6 +1,6 @@
 # {{page-title}}
 
-Diese Seite verlinkt Inhalte, die den Lesern/Leserinnen dieses Implementierungsleitfadens weiterführende Informationen zum EMIGA Organisationsverzeichnis (Verzeichnisdienst) bereitstellen. 
+Diese Seite verlinkt Inhalte, die den Lesern/Leserinnen dieses Implementierungsleitfadens weiterführende Informationen zum EMIGA Einrichtungsverzeichnis (Verzeichnisdienst) bereitstellen. 
 <br>&nbsp;<br>
 
 

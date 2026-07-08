@@ -1,6 +1,6 @@
 ---
-topic: OrgVBundle
-canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle
+topic: EinrVBundle
+canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/EinrVBundle
 ---
 
 # {{page-title}}
