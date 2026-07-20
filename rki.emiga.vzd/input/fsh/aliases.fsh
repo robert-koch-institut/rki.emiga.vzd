@@ -32,16 +32,11 @@ Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAd
 Alias: $IneKVersionPeriod = https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod
 Alias: $ResponsibilityHealthdepartments = https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments
 Alias: $UTMCoordinates = https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates
-
 Alias: $CodeSiteId = https://emiga.rki.de/fhir/vzd/sid/CodeSiteId
-Alias: $EmigaEinrVFileNumber = https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber
-Alias: $EmigaEinrVId = https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId
 Alias: $IfsgKoordVwVId = https://emiga.rki.de/fhir/vzd/sid/IfsgKoordVwVId
 Alias: $IneKFileHeaderId = https://emiga.rki.de/fhir/vzd/sid/IneKFileHeaderId
 Alias: $TransmittingSiteId = https://emiga.rki.de/fhir/vzd/sid/TransmittingSiteId
-
 Alias: $IdentifierCodeSiteId = https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierCodeSiteId
-
 Alias: $AuthorityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/AuthorityType
 Alias: $BaseLocation = https://emiga.rki.de/fhir/vzd/StructureDefinition/BaseLocation
 Alias: $FachbereichVS = https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich
@@ -60,7 +55,6 @@ Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/EinrVBundleId
 
 // Basis Profil
 Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
-
 Alias: $address-de-basis = http://fhir.de/StructureDefinition/address-de-basis
 Alias: $MunicipalityKey = http://fhir.de/StructureDefinition/destatis/ags
 Alias: $humanname-de-basis = http://fhir.de/StructureDefinition/humanname-de-basis
@@ -69,7 +63,6 @@ Alias: $identifier-bsnr = http://fhir.de/StructureDefinition/identifier-bsnr
 Alias: $identifier-lanr = http://fhir.de/StructureDefinition/identifier-lanr
 Alias: $identifier-standortnummer = http://fhir.de/StructureDefinition/identifier-standortnummer
 Alias: $identifier-telematik-id = http://fhir.de/StructureDefinition/identifier-telematik-id
-
 Alias: $Fachabteilungsschluessel-erweitert = http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert
 
 

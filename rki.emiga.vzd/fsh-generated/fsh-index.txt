@@ -18,10 +18,10 @@ Location-LaborLocation.json                               LaborLocation         
 Location-LaborLocationSub.json                            LaborLocationSub                 Instance    Examples\LaborLocationSub.fsh                                      1 - 34
 Location-Location44588965.json                            Location44588965                 Instance    Examples\Location-44588965.fsh                                     1 - 20
 Location-PublicHealthLocation001.json                     PublicHealthLocation001          Instance    Examples\Location-PublicHealth001.fsh                              1 - 20
-Location-Station01.json                                   Station01                        Instance    Examples\Station01.fsh                                             1 - 61
+Location-Station01.json                                   Station01                        Instance    Examples\Station01.fsh                                             1 - 30
 NamingSystem-CodeSiteId.json                              CodeSiteId                       Instance    NamingSystem\CodeSiteId.fsh                                        1 - 12
 NamingSystem-IneKFileHeaderId.json                        IneKFileHeaderId                 Instance    NamingSystem\IneKFileHeaderId.fsh                                  1 - 12
-Organization-EpiWarnOrganization.json                     EpiWarnOrganization              Instance    Examples\OrganizationEpiWarn.fsh                                   1 - 33
+Organization-EpiWarnOrganization.json                     EpiWarnOrganization              Instance    Examples\OrganizationEpiWarn.fsh                                   1 - 31
 Organization-InekKrankenhausOrganization.json             InekKrankenhausOrganization      Instance    Examples\InekKrankenhaus.fsh                                       1 - 31
 Organization-LaborOrganization.json                       LaborOrganization                Instance    Examples\LaborOrganization.fsh                                     1 - 41
 Organization-Organization44588980.json                    Organization44588980             Instance    Examples\Organization-44588980.fsh                                 2 - 36
@@ -34,7 +34,7 @@ PractitionerRole-EpiWarnPractitionerRole.json             EpiWarnPractitionerRol
 PractitionerRole-Practitioner44588967.json                Practitioner44588967             Instance    Examples\PractitionerRole-44588967.fsh                             1 - 10
 PractitionerRole-PractitionerRole44588971.json            PractitionerRole44588971         Instance    Examples\PractitionerRole-44588971.fsh                             1 - 10
 StructureDefinition-DutyHoursAvailability.json            DutyHoursAvailability            Extension   StructureDefinitions\ExtensionDutyHoursOpeningTimes.fsh            1 - 17
-StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 239
+StructureDefinition-EmigaDepartmentOrganization.json      EmigaDepartmentOrganization      Profile     StructureDefinitions\EmigaDepartmentOrganization.fsh               1 - 190
 StructureDefinition-EmigaHealthcareService.json           EmigaHealthcareService           Profile     StructureDefinitions\EmigaHealthcareService.fsh                    1 - 194
 StructureDefinition-EmigaHospitalFacilityLocation.json    EmigaHospitalFacilityLocation    Profile     StructureDefinitions\EmigaHospitalFacilityLocation.fsh             1 - 275
 StructureDefinition-EmigaHospitalLocation.json            EmigaHospitalLocation            Profile     StructureDefinitions\EmigaHospitalLocation.fsh                     1 - 294

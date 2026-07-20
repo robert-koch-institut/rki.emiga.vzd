@@ -7,7 +7,7 @@ Usage: #example
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 
 * identifier[EmigaID].system = $EmigaID
-* identifier[EmigaID].value = "EinrVID-012345"
+* identifier[EmigaID].value = "[Organisation][1.][2026]-[87654321]"
 
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
 * identifier[EmigaFileNumber].value = "EinrVFileNumber-987654"

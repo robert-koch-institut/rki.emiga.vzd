@@ -22,7 +22,7 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "0123456789"
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
-* identifier[EmigaFileNumber].value = "EinrVFileNumber-987654123"
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[87654321]"
 * identifier[standortId].system = "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
 * identifier[standortId].value = "771077"
 * status = #active

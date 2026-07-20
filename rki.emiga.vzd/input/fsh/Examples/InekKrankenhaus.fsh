@@ -15,7 +15,7 @@ Description: "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis."
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2019-08-01"
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
-* identifier[EmigaFileNumber].value = "EinrVFileNumber-987654"
+* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[12345678]"
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "0123456789"
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"

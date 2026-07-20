@@ -14,7 +14,7 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "9876543210"
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
-* identifier[EmigaFileNumber].value = "EinrVFileNumber-9854"
+* identifier[EmigaFileNumber].value = "[Einrichtung][1.][2026]-[12345678]"
 
 * identifier[standortnummer-dkg].system = "http://fhir.de/sid/dkgev/standortnummer"
 * identifier[standortnummer-dkg].value = "771077015"

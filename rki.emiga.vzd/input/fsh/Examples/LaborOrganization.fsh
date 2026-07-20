@@ -11,7 +11,7 @@ Usage: #example
 * identifier[EmigaID].system = $EmigaID
 * identifier[EmigaID].value = "LAB-012345"
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
-* identifier[EmigaFileNumber].value = "LAB-987654"
+* identifier[EmigaFileNumber].value = "[Labor][1.][2026]-[87654321]"
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "123456789"
 
