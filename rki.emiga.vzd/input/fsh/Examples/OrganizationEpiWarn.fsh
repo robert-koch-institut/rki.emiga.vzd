@@ -8,9 +8,9 @@ Usage: #example
 * active = true
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
 * identifier[EmigaID].system = $EmigaID
-* identifier[EmigaID].value = "[Organisation][1.][2026]-[12345678]"
+* identifier[EmigaID].value = "123456789"
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
-* identifier[EmigaFileNumber].value = "EinrVFileNumber-9876543210"
+* identifier[EmigaFileNumber].value = "[Organisation][1.][2026]-[12345678]"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"
 * name = "Zentrum für Gesundheits- und Infektionsschutz"
 * telecom[Email].system = #email
