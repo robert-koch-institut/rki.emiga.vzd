@@ -1,6 +1,6 @@
 ---
-topic: IdentifierEmigaEinrVId
-canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaEinrVId
+topic: IdentifierEmigaID
+canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaID
 ---
 
 # {{page-title}}

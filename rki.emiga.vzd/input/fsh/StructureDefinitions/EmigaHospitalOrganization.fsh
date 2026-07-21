@@ -36,7 +36,7 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
 
 
 //Identifiers harmonisiert mit IsiK und MII. Die Demis und telematikID Werden diskutiert
-//Update v2: Demis und telematikID und emigaEinrVId hinzugefügt
+//Update v2: Demis und telematikID und emigaID hinzugefügt
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier 1..* MS
