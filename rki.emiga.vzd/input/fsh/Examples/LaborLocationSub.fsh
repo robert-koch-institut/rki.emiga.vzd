@@ -7,12 +7,11 @@ Usage: #example
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.tag[relevance] = $RelevanceCS#UserCreated "Durch OEGD angelegt"
 
-* identifier[emigaEinrVId].type = $v2-0203#XX
-* identifier[emigaEinrVId].system = $EmigaEinrVId
-* identifier[emigaEinrVId].value = "LAB-SUB-BEREICH-012345"
-* identifier[emigaEinrVFileNumber].type = $v2-0203#XX
-* identifier[emigaEinrVFileNumber].system = $EmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber].value = "LAB-SUB-BEREICH-987654"
+
+* identifier[EmigaID].system = $EmigaID
+* identifier[EmigaID].value = "LAB-SUB-BEREICH-012345"
+* identifier[EmigaFileNumber].system = $EmigaFileNumber
+* identifier[EmigaFileNumber].value = "[Labor][1.][2026]-[87654321]"
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "123456789"
 

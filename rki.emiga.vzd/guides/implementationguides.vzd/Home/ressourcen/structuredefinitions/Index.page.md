@@ -17,8 +17,8 @@ Dieser Abschnitt bietet eine Übersicht über die in diesem Implementierungsleit
 | Dienstleistung (EmigaHealthcareService)         | Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle. |
 | Fachabteilung (EmigaDepartmentOrganization)    | Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort).   |
 | RKI Kennung (IdentifierCodeSiteId)              | Identifier-Profil für die vom RKI vergebene Kennung des Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.). |
-| Einrichtungsverzeichnis Id (IdentifierEmigaEinrVId) | Identifier Profil für EmigaEinrVId.  |
-|Einrichtungsverzeichnis Aktenzeichen (IdentifierEmigaEinrVFileNumber) | Identifier Profil für EMIGA Einrichtungsverzeichnis Aktenzeichen. |
+| Einrichtungsverzeichnis Id (IdentifierEmigaID) | Identifier Profil für EmigaID.  |
+|Einrichtungsverzeichnis Aktenzeichen (IdentifierEmigaFileNumber) | Identifier Profil für EMIGA Einrichtungsverzeichnis Aktenzeichen. |
 | Krankenhaus (EmigaHospitalOrganization) | Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. |
 | Krankenhaus - Einrichtungsstandort (EmigaHospitalFacilityLocation) | Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab. |
 | Krankenhaus - Raum (EmigaHospitalRoomLocation) | Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen.|

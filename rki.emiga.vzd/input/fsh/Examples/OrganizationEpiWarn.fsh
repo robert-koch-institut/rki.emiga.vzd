@@ -7,12 +7,10 @@ Usage: #example
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 * active = true
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
-* identifier[emigaEinrVId].type = $v2-0203#XX
-* identifier[emigaEinrVId].system = $EmigaEinrVId
-* identifier[emigaEinrVId].value = "EinrVID-0123456789"
-* identifier[emigaEinrVFileNumber].type = $v2-0203#XX
-* identifier[emigaEinrVFileNumber].system = $EmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber].value = "EinrVFileNumber-9876543210"
+* identifier[EmigaID].system = $EmigaID
+* identifier[EmigaID].value = "123456789"
+* identifier[EmigaFileNumber].system = $EmigaFileNumber
+* identifier[EmigaFileNumber].value = "[Organisation][1.][2026]-[12345678]"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörden"
 * name = "Zentrum für Gesundheits- und Infektionsschutz"
 * telecom[Email].system = #email

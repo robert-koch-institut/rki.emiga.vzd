@@ -4,8 +4,8 @@ Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organisation"
 Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
 
-* ^version = "1.3.0"
-* ^date = "2026-07-03"
+* ^version = "1.4.0"
+* ^date = "2026-07-08"
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
@@ -42,8 +42,8 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier contains 
     codeSiteId 1..1 MS and
     telematikID 0..1 MS and
-    emigaEinrVId 0..1 MS and
-    emigaEinrVFileNumber 0..1 MS
+    EmigaID 0..1 MS and
+    EmigaFileNumber 0..1 MS
 * identifier[codeSiteId] only IdentifierCodeSiteId
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
@@ -54,16 +54,24 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
 * identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
 //* identifier[telematikID] ^patternIdentifier.value = "^[1-9][0-9]{0,10}$"
-* identifier[emigaEinrVId] only IdentifierEmigaEinrVId
-* identifier[emigaEinrVId] ^definition = "Identifier für EmigaEinrVId"
-* identifier[emigaEinrVId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId"
-* identifier[emigaEinrVId].system 1.. MS
-* identifier[emigaEinrVId].value 1.. MS
-* identifier[emigaEinrVFileNumber] only IdentifierEmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber] ^definition = "Identifier für EMIGA Organizationsverzeichnis Aktenzeichen"
-* identifier[emigaEinrVFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber"
-* identifier[emigaEinrVFileNumber].system 1.. MS
-* identifier[emigaEinrVFileNumber].value 1.. MS
+* identifier[EmigaID] only IdentifierEmigaID
+* identifier[EmigaID].use 0..1 MS
+* identifier[EmigaID].use = #official (exactly)
+* identifier[EmigaID].system 1..1 MS
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value 1..1 MS
+* identifier[EmigaID].value ^short = "Wert des Identifiers"
+* identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
+
+* identifier[EmigaFileNumber] only IdentifierEmigaFileNumber
+* identifier[EmigaFileNumber].use 0..1 MS
+* identifier[EmigaFileNumber].use = #official (exactly)
+* identifier[EmigaFileNumber].system 1..1 MS
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value 1..1 MS
+* identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
+* identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
+
 
 // 'Whether the organization's record is still in active use' - 0..1 - boolean
 // Der entsprechende Eintrag muss gepflegt werden, um eindeutig feststellen zu können, ob ein Eintrag noch aktiv ist.
