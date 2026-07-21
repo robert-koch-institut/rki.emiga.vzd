@@ -9,7 +9,7 @@ Description: "Beispiel eines Standorts, der eine Station in einem Krankenhaus be
 * meta.tag[relevance] = $RelevanceCS#UserCreated "Durch OEGD angelegt"
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
 * identifier[EmigaID].system = $EmigaID
-* identifier[EmigaID].value = "[Station][1.][2026]-[87654321]"
+* identifier[EmigaID].value = "987654321"
 * identifier[EmigaFileNumber].system = $EmigaFileNumber
 * identifier[EmigaFileNumber].value = "[Station][1.][2026]-[87654321]"
 * status = #active
