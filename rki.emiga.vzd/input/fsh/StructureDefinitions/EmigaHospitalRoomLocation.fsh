@@ -4,8 +4,8 @@ Id: EmigaHospitalRoomLocation
 Title: "Krankenhaus - Raum"
 Description: "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten."
 //
-* ^version = "0.2.0"
-* ^date = "2026-03-09"
+* ^version = "0.3.0"
+* ^date = "2026-07-08"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -46,31 +46,29 @@ Description: "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext vo
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
-   emigaEinrVId 0..1 MS and 
-    emigaEinrVFileNumber 0..1 MS and
+   EmigaID 0..1 MS and 
+    EmigaFileNumber 0..1 MS and
    standortnummer-dkg 0..1 MS 
    
+* identifier[EmigaID] only IdentifierEmigaID
+* identifier[EmigaID].use 0..1 MS
+* identifier[EmigaID].use = #official (exactly)
+* identifier[EmigaID].system 1..1 MS
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value 1..1 MS
+* identifier[EmigaID].value ^short = "Wert des Identifiers"
+* identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
+
+* identifier[EmigaFileNumber] only IdentifierEmigaFileNumber
+* identifier[EmigaFileNumber].use 0..1 MS
+* identifier[EmigaFileNumber].use = #official (exactly)
+* identifier[EmigaFileNumber].system 1..1 MS
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value 1..1 MS
+* identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
+* identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
     
 
-* identifier[emigaEinrVId] only IdentifierEmigaEinrVId
-* identifier[emigaEinrVId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
-* identifier[emigaEinrVId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId"
-* identifier[emigaEinrVId].system 1.. MS
-* identifier[emigaEinrVId].value 1.. MS
-
-* identifier[emigaEinrVFileNumber] only IdentifierEmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
-* identifier[emigaEinrVFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber"
-* identifier[emigaEinrVFileNumber].system 1.. MS
-* identifier[emigaEinrVFileNumber].value 1.. MS
-/*
-* identifier[standortId] only Identifier
-* identifier[standortId] ^short = "Standort-Id"
-* identifier[standortId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
-* identifier[standortId] ^definition = "Die InEK Standort-Id dient der eindeutigen Identifizierung von Krankenhausstandorten. Die entsprechenden Krankenhausstandorte werden im InEK Standortverzeichnis verwaltet. Die Vergabe der eindeutigen 6-stelligen Standort-Id erfolgt durch das Institut für das Entgeltsystem im Krankenhaus GmbH (InEK)."
-* identifier[standortId].system 1.. MS
-* identifier[standortId].value 1.. MS
-*/
 * identifier[standortnummer-dkg] only $identifier-standortnummer
 * identifier[standortnummer-dkg] ^comment = "Motivation : Entsprechend der Festlegung der DKG laut Basisprofile-DE 1.5.0 (https://simplifier.net/packages/de.basisprofil.r4/) "
 * identifier[standortnummer-dkg] ^patternIdentifier.system = "http://fhir.de/sid/dkgev/standortnummer"
@@ -78,22 +76,8 @@ Description: "Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext vo
 * identifier[standortnummer-dkg].value 1.. MS
 
 
-//* identifier[BSNR] only $identifier-bsnr
-//* identifier[BSNR] ^definition = "Jede Betriebsstätte und jede Nebenbetriebsstätte nach den Definitionen des Bundesmantelvertrages-Ärzte erhalten jeweils eine Betriebsstättennummer. Die Betriebsstättennummer ist neunstellig. Die ersten beiden Ziffern stellen den KV-Landes- oder Bezirksstellenschlüssel gemäß Anlage 1 (Richtlinie der Kassenärztlichen Bundesvereinigung nach § 75 Absatz 7SGB V zur Vergabe der Arzt-, Betriebsstätten- sowie der Praxisnetznummern) dar (Ziffern 1-2). Die Ziffern drei bis neun werden von der KV vergeben (Ziffern 3-9). Dabei sind die Ziffern drei bis sieben so zu wählen, dass anhand der ersten sieben Stellen die Betriebsstätte eindeutig zu identifizieren ist."
-//* identifier[BSNR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
-//* identifier[BSNR].period 0..1 MS
-
-
-
-/*
-* identifier[telematikID] only $identifier-telematik-id
-* identifier[telematikID] ^comment = "Anschluß GA in TI s.gematik.de/sektoren/oegd"
-* identifier[telematikID] ^patternIdentifier.system = "https://gematik.de/fhir/sid/telematik-id"
-* identifier[telematikID].system 1.. MS
-* identifier[telematikID].value 1.. MS
 // 'active | suspended | inactive' - 0..1 - code
 // Wir wollen des Status zwingend unterscheiden können und verlangen daher dessen Angabe
-*/
 * status 1..1 MS
 * status ^short = "Status"
 * status ^definition = "Aktivitätsstatus des Standortes"

@@ -4,8 +4,8 @@ Id: EmigaOrganization
 Title: "EMIGA Organization"
 Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
-* ^version = "1.3.0"
-* ^date = "2026-03-09"
+* ^version = "1.4.0"
+* ^date = "2026-07-08"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -34,7 +34,7 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 
 
 //Identifiers harmonisiert mit IsiK und MII. Die Demis und telematikID Werden diskutiert
-//Update v2: Demis und telematikID und emigaEinrVId hinzugefügt
+//Update v2: Demis und telematikID und EmigaID hinzugefügt
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier MS
@@ -42,8 +42,8 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-   emigaEinrVId 0..1 MS and
-   emigaEinrVFileNumber 0..1 MS and
+   EmigaID 0..1 MS and
+   EmigaFileNumber 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     LANR 0..1 MS and
@@ -52,17 +52,24 @@ Description: "Unter der EMIGA Organization werden alle Organisationen zusammenge
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS
 
-* identifier[emigaEinrVId] only IdentifierEmigaEinrVId
-* identifier[emigaEinrVId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
-* identifier[emigaEinrVId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVId"
-//* identifier[emigaEinrVId].system 
-//* identifier[emigaEinrVId].value 
+* identifier[EmigaID] only IdentifierEmigaID
+* identifier[EmigaID].use 0..1 MS
+* identifier[EmigaID].use = #official (exactly)
+* identifier[EmigaID].system 1..1 MS
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value 1..1 MS
+* identifier[EmigaID].value ^short = "Wert des Identifiers"
+* identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
 
-* identifier[emigaEinrVFileNumber] only IdentifierEmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
-* identifier[emigaEinrVFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaEinrVFileNumber"
-//* identifier[emigaEinrVFileNumber].system 1.. MS
-//* identifier[emigaEinrVFileNumber].value 1.. MS
+* identifier[EmigaFileNumber] only IdentifierEmigaFileNumber
+* identifier[EmigaFileNumber].use 0..1 MS
+* identifier[EmigaFileNumber].use = #official (exactly)
+* identifier[EmigaFileNumber].system 1..1 MS
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value 1..1 MS
+* identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
+* identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
+
 
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"

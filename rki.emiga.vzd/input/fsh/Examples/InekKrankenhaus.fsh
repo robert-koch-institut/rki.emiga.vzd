@@ -14,12 +14,10 @@ Description: "Beispiel eines Krankenhauses aus dem InEK Standortverzeichnis."
 * extension[inekVersionPeriod].extension[version].valueInteger = 1
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2019-08-01"
-* identifier[emigaEinrVFileNumber].type = $v2-0203#XX
-* identifier[emigaEinrVFileNumber].system = $EmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber].value = "EinrVFileNumber-987654"
-* identifier[emigaEinrVId].type = $v2-0203#XX
-* identifier[emigaEinrVId].system = $EmigaEinrVId
-* identifier[emigaEinrVId].value = "0123456789"
+* identifier[EmigaFileNumber].system = $EmigaFileNumber
+* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[12345678]"
+* identifier[EmigaID].system = $EmigaID
+* identifier[EmigaID].value = "0123456789"
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "260551132"
 * identifier[IKNR].period.start = "2019-01-01"

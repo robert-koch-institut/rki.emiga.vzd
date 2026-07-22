@@ -24,8 +24,8 @@ class EmigaHospitalRoomLocation{
 <b>+</b> meta.tag:relevance: Coding [0..*]
 -- Identifiers --
 <b>+</b> identifier: Identifier [1..*] 
-<b>+</b> identifier:emigaEinrVFileNumber: IdentifierEmigaEinrVFileNumber [0..1]
-<b>+</b> identifier:emigaEinrVId: IdentifierEmigaEinrVId [0..1]
+<b>+</b> identifier:emigaFileNumber: IdentifierEmigaFileNumber [0..1]
+<b>+</b> identifier:emigaID: IdentifierEmigaID [0..1]
 <b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
 -- Communication --
 <b>+</b> address.city: string [0..1]

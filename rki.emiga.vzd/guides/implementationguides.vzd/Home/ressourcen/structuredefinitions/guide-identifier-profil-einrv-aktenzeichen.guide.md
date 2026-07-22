@@ -1,6 +1,6 @@
 ---
-topic: IdentifierEmigaEinrVFileNumber
-canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaEinrVFileNumber
+topic: IdentifierEmigaFileNumber
+canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaFileNumber
 ---
 
 # {{page-title}}

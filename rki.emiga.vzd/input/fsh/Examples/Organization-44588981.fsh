@@ -5,12 +5,12 @@ Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
-* identifier[emigaEinrVId].type = $v2-0203#XX
-* identifier[emigaEinrVId].system = $EmigaEinrVId
-* identifier[emigaEinrVId].value = "EinrVID-012345"
-* identifier[emigaEinrVFileNumber].type = $v2-0203#XX
-* identifier[emigaEinrVFileNumber].system = $EmigaEinrVFileNumber
-* identifier[emigaEinrVFileNumber].value = "EinrVFileNumber-987654"
+
+* identifier[EmigaID].system = $EmigaID
+* identifier[EmigaID].value = "12345566"
+
+* identifier[EmigaFileNumber].system = $EmigaFileNumber
+* identifier[EmigaFileNumber].value = "[Organisation][1.][2026]-[87654321]"
 * active = true
 * extension[organizationPeriod].valuePeriod.start = "1900-01-01"
 * type[emigaOrganizationType] = $OrganizationType#sepFedAut
