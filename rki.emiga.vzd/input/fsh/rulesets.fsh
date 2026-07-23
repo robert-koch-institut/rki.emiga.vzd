@@ -80,7 +80,7 @@ RuleSet: ProfileMetaTags
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
 
-
+/*
 RuleSet: MetaTagEinrVBundle
 * meta.tag MS
 * meta.tag ^slicing.discriminator.type = #pattern
@@ -97,6 +97,7 @@ RuleSet: MetaTagEinrVBundle
 * meta.tag[einrvBundleVersion].system = $BundleVersionCS 
 * meta.tag[einrvBundleVersion].code MS
 * meta.tag[einrvBundleVersion].display MS
+*/
 
 RuleSet: ProfileMetaProfileTags
 * meta.profile MS
