@@ -80,33 +80,12 @@ RuleSet: ProfileMetaTags
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
 
-/*
-RuleSet: MetaTagEinrVBundle
-* meta.tag MS
-* meta.tag ^slicing.discriminator.type = #pattern
-* meta.tag ^slicing.discriminator.path = "system"
-* meta.tag ^slicing.rules = #open
-* meta.tag contains einrvBundleId 0..1 MS and einrvBundleVersion 0..1 MS
-* meta.tag[einrvBundleId] from $BundleIdVS (preferred)
-* meta.tag[einrvBundleId].system 1.. MS
-* meta.tag[einrvBundleId].system = $BundleIdCS
-* meta.tag[einrvBundleId].code MS 
-* meta.tag[einrvBundleId].display MS
-* meta.tag[einrvBundleVersion] from $BundleVersionVS (preferred)
-* meta.tag[einrvBundleVersion].system 1.. MS
-* meta.tag[einrvBundleVersion].system = $BundleVersionCS 
-* meta.tag[einrvBundleVersion].code MS
-* meta.tag[einrvBundleVersion].display MS
-*/
-
 RuleSet: ProfileMetaProfileTags
 * meta.profile MS
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
 * meta.profile contains emigaprofile 1..1 MS
-
-
 
 // Standardprofil für die strikte Ausgestaltung von CodableConcepts, die lediglich ein Coding-Element zulässt
 RuleSet: StrictCodableConcept
