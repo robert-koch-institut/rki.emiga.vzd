@@ -22,10 +22,7 @@ Alias: $HealthcareServiceSpecialtyCS = https://emiga.rki.de/fhir/vzd/CodeSystem/
 Alias: $IneKFacilityTypeCS = https://emiga.rki.de/fhir/vzd/CodeSystem/IneKFacilityType
 Alias: $OrganizationType = https://emiga.rki.de/fhir/vzd/CodeSystem/OrganizationType
 Alias: $PractitionerRole = https://emiga.rki.de/fhir/vzd/CodeSystem/PractitionerRole
-Alias: $BundleIdCS = https://emiga.rki.de/fhir/vzd/CodeSystem/EinrVBundleId
-Alias: $BundleVersionCS = https://emiga.rki.de/fhir/vzd/CodeSystem/EinrVBundleVersion
 Alias: $Art-der-Zustaendigkeit = https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
-
 Alias: $DutyHoursEx = https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability
 Alias: $IneKFileHeaderMetadata = https://emiga.rki.de/fhir/vzd/Extension/IneKFileHeaderMetadata
 Alias: $InekPostalAddress = https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress
@@ -46,12 +43,8 @@ Alias: $ServiceTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HealthcareService
 Alias: $HospitalOrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/HospitalOrganizationType
 Alias: $IneKFacilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType
 Alias: $OrganizationTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/OrganizationType
-Alias: $BundleVersionVS = https://emiga.rki.de/fhir/vzd/ValueSet/EinrVBundleVersion
 Alias: $EinrVResourceVisibilityTypeVS = https://emiga.rki.de/fhir/ValueSet/EinrVResourceVisibilityTypeVS
 Alias: $ResponsibilityTypeVS = https://emiga.rki.de/fhir/vzd/ValueSet/responsibilityType
-
-Alias: $BundleIdVS = https://emiga.rki.de/fhir/ValueSet/EinrVBundleId
-
 
 // Basis Profil
 Alias: $FachabteilungsschluesselErweitert = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
