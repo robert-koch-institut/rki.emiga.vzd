@@ -1,7 +1,7 @@
 @startuml
 skinparam linetype ortho
 
-title EmigaHospitalLocation (Profile of Location) - Class Diagram
+title EmigaHospitalLocation (Profile of Location)
 
 ' Main Class
 class EmigaHospitalLocation{

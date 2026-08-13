@@ -1,7 +1,7 @@
 @startuml
 skinparam linetype ortho
  
-title EmigaPractitioner (Profile of Practitioner) - Class Diagram
+title EmigaPractitioner (Profile of Practitioner)
  
 ' Main Class
 class EmigaPractitioner{
