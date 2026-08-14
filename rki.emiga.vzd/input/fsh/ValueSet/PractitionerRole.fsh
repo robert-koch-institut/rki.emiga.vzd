@@ -1,7 +1,7 @@
 ValueSet: PractitionerRole
-Title: "Personenrolle"
-Description: "Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen/wahrnehmen kann."
 Id: PractitionerRole
+Title: "Personenrolle"
+Description: "'PractitionerRole' ist eine Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen bzw. wahrnehmen kann."
 * insert MetadataTerminology
 * ^version = "1.1.0"
 * ^date = "2024-03-19"

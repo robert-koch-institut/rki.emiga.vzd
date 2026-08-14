@@ -2,7 +2,7 @@ Profile: EmigaPublicHealthOrganization
 Parent: Organization
 Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organisation"
-Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
+Description: "Eine 'EmigaPublicHealthOrganization' stellt eine ÖGD Organisation dar, die alle Organisationen zusammenfasst, die EMIGA direkt nutzende ÖDG-Organisationen sind und eine Code-Side-ID besitzen."
 
 * ^version = "1.4.0"
 * ^date = "2026-07-08"

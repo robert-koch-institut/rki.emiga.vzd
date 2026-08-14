@@ -2,8 +2,8 @@ Profile: EmigaHospitalFacilityLocation
 Parent: Location
 Id: EmigaHospitalFacilityLocation
 Title: "Krankenhaus - Einrichtungsstandort"
-Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab"
-//
+Description: "Eine 'EmigaHospitalFacilityLocation' bildet Einrichtungen nach dem InEK Standortverzeichnis oder Stationen eines Krankenhauses ab."
+
 * ^version = "0.4.0"
 * ^date = "2026-07-08"
 

@@ -1,7 +1,7 @@
 ValueSet: HealthcareServiceType
 Id: HealthcareServiceType
 Title: "Dienstleistungstyp"
-Description: "Werteliste mit Konzepten, die die Art/den Typ einer Dienstleistung charakterisieren."
+Description: "'HealthcareServiceType' ist eine Werteliste mit Konzepten, die die Art bzw. den Typ einer Dienstleistung charakterisieren."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2025-01-06"

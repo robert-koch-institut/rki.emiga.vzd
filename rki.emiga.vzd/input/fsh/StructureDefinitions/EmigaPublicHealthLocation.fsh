@@ -2,7 +2,7 @@ Profile: EmigaPublicHealthLocation
 Parent: Location
 Id: EmigaPublicHealthLocation
 Title: "ÖGD Fachbereich / Standort"
-Description: "Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet."
+Description: "Eine 'EmigaPublicHealthLocation' ist ein physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet."
 
 * ^version = "0.3.0"
 * ^date = "2026-07-08"

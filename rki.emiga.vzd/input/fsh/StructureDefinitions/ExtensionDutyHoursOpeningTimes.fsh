@@ -1,11 +1,13 @@
 Extension: DutyHoursAvailability
 Id: DutyHoursAvailability
 Title: "Erreichbarkeit Dienstzeiten"
-Description: "Extension zur Abbildung der Erreichbarkeit der Dienstleistungen einer Organisation anhand der Dienstzeiten."
+Description: "'DutyHoursAvailability' dient der Abbildung der Erreichbarkeit der Dienstleistungen einer Organisation anhand der Dienstzeiten."
 Context: HealthcareService.availableTime
+
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability"
 * ^version = "2.0.0"
 * ^date = "2024-02-12"
+
 * insert MetadataProfile
 * . ^short = "Dienstzeiten"
 * . ^definition = "Erreichbarkeit der Dienstleistung anhand der Dienstzeiten"
@@ -15,5 +17,3 @@ Context: HealthcareService.availableTime
 * value[x].system 1..1 MS
 * value[x].code 1..1 MS
 * value[x] from $DutyHoursVS (required)
-
-

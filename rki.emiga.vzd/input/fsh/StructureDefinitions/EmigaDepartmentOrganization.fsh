@@ -2,10 +2,11 @@ Profile: EmigaDepartmentOrganization
 Parent: Organization
 Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
-Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
+Description: "Eine 'EmigaDepartmentOrganization' ist ein organisatorischer Teil einer Abteilung (nicht der physischen Ort)."
 
 * ^version = "1.3.0"
 * ^date = "2026-07-08"
+
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon

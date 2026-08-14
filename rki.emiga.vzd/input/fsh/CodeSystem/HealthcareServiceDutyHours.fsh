@@ -1,8 +1,7 @@
 CodeSystem: HealthcareServiceDutyHours
 Id: HealthcareServiceDutyHours
-
 Title: "Dienstzeiten"
-Description: "Die Kodiersystematik HealthcareServiceDutyHours definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen."
+Description: "Die Kodiersystematik 'HealthcareServiceDutyHours' definiert Konzepte, die die Verfügbarkeit von Dienstleistungen auf der Grundlage ihrer Dienstzeiten darstellen."
 * ^url = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
 * insert MetadataTerminology
 * ^version = "1.0.0"

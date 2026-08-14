@@ -1,7 +1,7 @@
 ValueSet: HealthcareServiceSpecialty
-Title: "Fachspezialisierung"
-Description: "Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung näher beschreiben."
 Id: HealthcareServiceSpecialty
+Title: "Fachspezialisierung"
+Description: "'HealthcareServiceSpecialty' ist eine Werteliste mit Konzepten, die die Fachspezialisierung einer Dienstleistung beschreiben."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-12-27"

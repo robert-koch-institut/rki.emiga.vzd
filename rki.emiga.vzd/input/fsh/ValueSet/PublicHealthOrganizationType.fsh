@@ -1,7 +1,7 @@
 ValueSet: PublicHealthOrganizationType
-Title: "ÖGD Organizationen"
-Description: "Werteliste mit Konzepten, die die Arten einer Organisation des öffentlichen Gesundheitsdienstes näher beschreiben."
 Id: PublicHealthOrganizationType
+Title: "ÖGD Organizationen"
+Description: "'PublicHealthOrganizationType' ist eine Werteliste mit Konzepten, die die Arten einer Organisation des ÖGD näher beschreiben."
 * insert MetadataTerminology
 * ^version = "1.0.0"
 * ^date = "2024-11-25"
