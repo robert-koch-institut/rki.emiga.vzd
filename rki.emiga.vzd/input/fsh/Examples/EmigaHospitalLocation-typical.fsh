@@ -17,11 +17,11 @@ Description: "Typische Instanz eines Krankenhaus-Standorts (EMIGA)"
 * extension[inekPostalAddress].valueAddress.city = "Warendorf"
 * extension[inekPostalAddress].valueAddress.postalCode = "48231"
 /* -------- identifier -------- */
-* identifier[emigaOrgvId].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].value = "0123456789"
-* identifier[emigaOrgvFileNumber].system =
-  "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].value = "OrgvFile-001"
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value = "0123456789"
+* identifier[EmigaFileNumber].system =
+  "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value = "OrgvFile-001"
 * identifier[standortId].system =
   "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
 * identifier[standortId].value = "771077"

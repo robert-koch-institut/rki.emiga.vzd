@@ -26,11 +26,11 @@ Usage: #example
 // ----------------------------------------------------
 // IDENTIFIERS — one per slice (typical values)
 // ----------------------------------------------------
-* identifier[emigaOrgvId].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].value = "ORGVID-44588965"
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value = "ORGVID-44588965"
 
-* identifier[emigaOrgvFileNumber].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].value = "FILE-44588965"
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value = "FILE-44588965"
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "260300123"

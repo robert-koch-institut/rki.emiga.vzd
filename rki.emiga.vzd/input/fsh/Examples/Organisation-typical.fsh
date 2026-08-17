@@ -20,11 +20,11 @@ Usage: #example
 // IDENTIFIERS — typical subset of the MS slices
 // (EmigaOrgvId + FileNumber + one medical identifier)
 // ----------------------------------------------------
-* identifier[emigaOrgvId].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].value = "ORGVID-123456"
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value = "ORGVID-123456"
 
-* identifier[emigaOrgvFileNumber].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].value = "ORGVFILE-2025"
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value = "ORGVFILE-2025"
 
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "234567890"

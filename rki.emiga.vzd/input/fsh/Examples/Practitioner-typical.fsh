@@ -14,13 +14,7 @@ Usage: #example
 * meta.tag[relevance].code = #UserCreated
 * meta.tag[relevance].display = "Durch OEGD angelegt"
 
-* meta.tag[orgvBundleId].system = $BundleIdCS
-* meta.tag[orgvBundleId].code = #orgv-bundle-001
-* meta.tag[orgvBundleId].display = "OrgV Bundle 001"
 
-* meta.tag[orgvBundleVersion].system = $BundleVersionCS
-* meta.tag[orgvBundleVersion].code = #1.0.0
-* meta.tag[orgvBundleVersion].display = "Bundle Version 1.0.0"
 
 // ----------------------------------------------------
 // CORE ELEMENTS

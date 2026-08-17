@@ -26,13 +26,13 @@ Usage: #example
 // ----------------------------------------------------
 // IDENTIFIERS — all slices populated
 // ----------------------------------------------------
-* identifier[emigaOrgvId].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].value = "ORGVID-123456"
-* identifier[emigaOrgvId].use = #official
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value = "ORGVID-123456"
+* identifier[EmigaID].use = #official
 
-* identifier[emigaOrgvFileNumber].system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].value = "ORGV-FILE-78910"
-* identifier[emigaOrgvFileNumber].use = #secondary
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value = "ORGV-FILE-78910"
+* identifier[EmigaFileNumber].use = #official
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "123456789"
