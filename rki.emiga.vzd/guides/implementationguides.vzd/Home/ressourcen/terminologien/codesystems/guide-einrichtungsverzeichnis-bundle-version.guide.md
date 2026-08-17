@@ -1,6 +1,6 @@
 ---
-topic: OrgVBundleVersion
-canonical: https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion
+topic: EinrVBundleVersion
+canonical: https://emiga.rki.de/fhir/CodeSystem/EinrVBundleVersion
 ---
 
 # {{page-title}}
@@ -28,7 +28,7 @@ select
 
 ### Überblick
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/CodeSystem/OrgVBundleVersion}}
+    {{render:https://emiga.rki.de/fhir/CodeSystem/EinrVBundleVersion}}
 </div>
 
 <style>

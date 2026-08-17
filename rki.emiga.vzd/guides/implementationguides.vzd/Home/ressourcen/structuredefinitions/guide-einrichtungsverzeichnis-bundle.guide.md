@@ -1,6 +1,6 @@
 ---
-topic: IdentifierEmigaOrgvFileNumber
-canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaOrgvFileNumber
+topic: EinrVBundle
+canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/EinrVBundle
 ---
 
 # {{page-title}}

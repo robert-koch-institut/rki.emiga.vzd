@@ -1,22 +1,18 @@
 ---
-topic: OrgVBundleVersion
-canonical: https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion
+topic: EmigaFileNumber
+canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaFileNumber
 ---
 
 # {{page-title}}
 ## Beschreibung
-<fql output= "inline" headers="false">
-from 
-    ValueSet
-where
-    url = %canonical
-select
-    description
+<fql output="inline" headers="false">
+from NamingSystem
+where uniqueId.where(value = %canonical).exists()
+select description
 </fql>
-<br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/ValueSet/OrgVBundleVersion}}
+    {{render:https://emiga.rki.de/fhir/vzd/sid/EmigaFileNumber}}
 </div>
 
 <style>
@@ -60,7 +56,7 @@ select
 </style>
 <br>&nbsp;<br>
 
-## Inhalt
+### Inhalt
 <tabs>
 <tab= title="Darstellung">{{tree, buttons}} </tab>
 <tab title="XML">{{xml}}</tab>
@@ -68,3 +64,5 @@ select
 <tab title="Link">{{link}}</tab>
 </tabs>
 <br>&nbsp;<br>
+
+

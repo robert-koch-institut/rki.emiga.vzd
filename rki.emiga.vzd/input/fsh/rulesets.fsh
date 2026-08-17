@@ -48,7 +48,7 @@ RuleSet: ProfileSecurityTags
     * system = $ResourceResponsibility
     * code 1..1 MS
 
-RuleSet: ORGVProfileSecurityTags
+RuleSet: EinrVProfileSecurityTags
 * meta MS
   * security 2.. MS
     * ^slicing.discriminator.type = #value
@@ -59,7 +59,7 @@ RuleSet: ORGVProfileSecurityTags
   * security contains
       visibility 1..1 MS and
       responsibility 1..1 MS
-  * security[visibility] from $OrgvResourceVisibilityTypeVS
+  * security[visibility] from $EinrVResourceVisibilityTypeVS
     * system 1..1 MS
     * system = $ResourceVisibilityType
     * code 1..1 MS
@@ -73,49 +73,19 @@ RuleSet: ProfileMetaTags
 * meta.tag ^slicing.discriminator.type = #pattern
 * meta.tag ^slicing.discriminator.path = "system"
 * meta.tag ^slicing.rules = #open
-* meta.tag contains relevance 0..* MS and 
-    orgvBundleId 0..1 MS and orgvBundleVersion 0..1 MS
+* meta.tag contains relevance 0..* MS 
 * meta.tag[relevance] from $RelevanceVS (required)
 * meta.tag[relevance].system 1.. MS
 * meta.tag[relevance].system = $RelevanceCS
 * meta.tag[relevance].code 1.. MS
 * meta.tag[relevance].display MS
-* meta.tag[orgvBundleId] from $BundleIdVS (preferred)
-* meta.tag[orgvBundleId].system 1.. MS
-* meta.tag[orgvBundleId].system = $BundleIdCS
-* meta.tag[orgvBundleId].code MS 
-* meta.tag[orgvBundleId].display MS
-* meta.tag[orgvBundleVersion] from $BundleVersionVS (preferred)
-* meta.tag[orgvBundleVersion].system 1.. MS
-* meta.tag[orgvBundleVersion].system = $BundleVersionCS 
-* meta.tag[orgvBundleVersion].code MS
-* meta.tag[orgvBundleVersion].display MS
-
-RuleSet: MetaTagOrgVBundle
-* meta.tag MS
-* meta.tag ^slicing.discriminator.type = #pattern
-* meta.tag ^slicing.discriminator.path = "system"
-* meta.tag ^slicing.rules = #open
-* meta.tag contains orgvBundleId 0..1 MS and orgvBundleVersion 0..1 MS
-* meta.tag[orgvBundleId] from $BundleIdVS (preferred)
-* meta.tag[orgvBundleId].system 1.. MS
-* meta.tag[orgvBundleId].system = $BundleIdCS
-* meta.tag[orgvBundleId].code MS 
-* meta.tag[orgvBundleId].display MS
-* meta.tag[orgvBundleVersion] from $BundleVersionVS (preferred)
-* meta.tag[orgvBundleVersion].system 1.. MS
-* meta.tag[orgvBundleVersion].system = $BundleVersionCS 
-* meta.tag[orgvBundleVersion].code MS
-* meta.tag[orgvBundleVersion].display MS
 
 RuleSet: ProfileMetaProfileTags
 * meta.profile MS
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
-* meta.profile contains emigaprofile 1..* MS
-
-
+* meta.profile contains emigaprofile 1..1 MS
 
 // Standardprofil für die strikte Ausgestaltung von CodableConcepts, die lediglich ein Coding-Element zulässt
 RuleSet: StrictCodableConcept

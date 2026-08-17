@@ -23,8 +23,8 @@ Die ValueSets sind Sammlungen von Codes aus den oben genannten CodeSystems und d
 | Fachbereich (Fachbereich) | Kategorie von Fachbereichen, z.B. Pharmakologie oder Rechtsmedizin. |
 | Generische Organisation (GenericOrganizationType) | Werteliste mit Konzepten, die die Art/den Typ einer generischen Organisation aus Sicht des ÖGD grob charakterisieren. |
 | IneK Einrichtungstyp (IneKFacilityType) | Werteliste mit Konzepten, die die Art/den Typ einer Einrichtung aus dem IneK Standortverzeichnis charakterisieren. |
-| Organisations-Bundle-ID (OrgVBundleId) | Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen. |
-| Organisations-Bundle-Version (OrgVBundleVersion) | Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen. |
+| Einrichtungsverzeichnis-Bundle-ID (EinrVBundleId) | Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen. |
+| Einrichtungsverzeichnis-Bundle-Version (EinrVBundleVersion) | Werteliste mit Konzepten, die die Relevanz der Ressourcen für verschiedene Use Cases kennzeichnen. |
 | Practitioner Role (PractitionerRole) | Enthält Rollenbeschreibungen für Personen im ÖGD, z.B. Leiter/Leiterin, Fachberater\*innen. |
 | Zuständigkeit (ResponsibilityType) | Definiert die Zuständigkeitsarten, die im ÖGD verwendet werden. |
 

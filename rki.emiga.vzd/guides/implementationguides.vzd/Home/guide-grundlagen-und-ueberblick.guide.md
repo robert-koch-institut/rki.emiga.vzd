@@ -27,13 +27,13 @@ Infektionsschutz und Meldewesen unterstützen.
 - **Förderung der Digitalisierung des ÖGD:** EMIGA ist Teil der bundesweiten Zukunftsplattform **ÖGDnet** und bildet das zentrale Modul für Infektionsschutz und Meldewesen.
 <br>&nbsp;<br>
 
-### Organisationsverzeichnis als zentraler Bestandteil
+### Einrichtungsverzeichnis als zentraler Bestandteil
 
-Ein wesentlicher Bestandteil von EMIGA ist das **Organisationsverzeichnis**. Dieses Verzeichnis ermöglicht es, 
+Ein wesentlicher Bestandteil von EMIGA ist das **Einrichtungsverzeichnis**. Dieses Verzeichnis ermöglicht es, 
 Organisationen und Behörden des ÖGD schnell und einfach zu finden. Nutzer können wichtige Informationen 
 wie Kontaktpersonen, Kontaktdaten und Zuständigkeiten einsehen.
 
-Ziel des Organisationsverzeichnisses ist es, die Zusammenarbeit und Kommunikation innerhalb des ÖGD zu 
+Ziel des Einrichtungsverzeichnisses ist es, die Zusammenarbeit und Kommunikation innerhalb des ÖGD zu 
 verbessern, indem relevante Informationen zentral und übersichtlich bereitgestellt werden. Dies trägt dazu bei, 
 Kommunikationswege zu verkürzen und Doppelarbeiten zu vermeiden.
 <br>&nbsp;<br>

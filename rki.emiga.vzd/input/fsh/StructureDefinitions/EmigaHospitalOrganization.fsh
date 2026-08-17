@@ -4,13 +4,13 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
-* ^version = "0.3.0"
-* ^date = "2026-03-09"
+* ^version = "0.4.0"
+* ^date = "2026-07-08"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 //* insert ProfileMetaProfileTags
 
@@ -36,7 +36,7 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
 
 
 //Identifiers harmonisiert mit IsiK und MII. Die Demis und telematikID Werden diskutiert
-//Update v2: Demis und telematikID und emigaOrgvId hinzugefügt
+//Update v2: Demis und telematikID und emigaID hinzugefügt
 * identifier ^short = "Logischer Identifier"
 * identifier ^definition = "Logischer Identifier der Organisation"
 * identifier 1..* MS
@@ -44,24 +44,30 @@ Description: "Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. Es 
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-   emigaOrgvId 0..1 MS and
-    emigaOrgvFileNumber 0..1 MS and
+   EmigaID 0..1 MS and
+    EmigaFileNumber 0..1 MS and
     IKNR 0..1 MS and
     BSNR 0..1 MS and
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS
 
-* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
-* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].system 1.. MS
-* identifier[emigaOrgvId].value 1.. MS
+* identifier[EmigaID] only IdentifierEmigaID
+* identifier[EmigaID].use 0..1 MS
+* identifier[EmigaID].use = #official (exactly)
+* identifier[EmigaID].system 1..1 MS
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value 1..1 MS
+* identifier[EmigaID].value ^short = "Wert des Identifiers"
+* identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
 
-* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
-* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].system 1.. MS
-* identifier[emigaOrgvFileNumber].value 1.. MS
+* identifier[EmigaFileNumber] only IdentifierEmigaFileNumber
+* identifier[EmigaFileNumber].use 0..1 MS
+* identifier[EmigaFileNumber].use = #official (exactly)
+* identifier[EmigaFileNumber].system 1..1 MS
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value 1..1 MS
+* identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
+* identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
 
 * identifier[IKNR] only $identifier-iknr
 * identifier[IKNR] ^definition = "Die ARGE·IK vergibt und pflegt so genannte Institutionskennzeichen (IK). Das sind neunstellige Ziffernfolgen"

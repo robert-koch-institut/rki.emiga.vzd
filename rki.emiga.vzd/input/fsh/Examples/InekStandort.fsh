@@ -19,13 +19,10 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * extension[inekPostalAddress].valueAddress.line.extension[Hausnummer].valueString = "2"
 * extension[inekPostalAddress].valueAddress.city = "Warendorf"
 * extension[inekPostalAddress].valueAddress.postalCode = "48231"
-
-* identifier[emigaOrgvId].type = $v2-0203#XX
-* identifier[emigaOrgvId].system = $EmigaOrgvId
-* identifier[emigaOrgvId].value = "0123456789"
-* identifier[emigaOrgvFileNumber].type = $v2-0203#XX
-* identifier[emigaOrgvFileNumber].system = $EmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber].value = "OrgvFileNumber-987654123"
+* identifier[EmigaID].system = $EmigaID
+* identifier[EmigaID].value = "0123456789"
+* identifier[EmigaFileNumber].system = $EmigaFileNumber
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[87654321]"
 * identifier[standortId].system = "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
 * identifier[standortId].value = "771077"
 * status = #active

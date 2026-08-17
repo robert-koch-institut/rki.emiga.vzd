@@ -1,6 +1,6 @@
 ---
-topic: IdentifierEmigaOrgvId
-canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaOrgvId
+topic: IdentifierEmigaFileNumber
+canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaFileNumber
 ---
 
 # {{page-title}}
@@ -80,7 +80,6 @@ select
 	Feldname: id, Kurzbeschreibung: short, Beschreibung: definition, Hinweise: comment
 </fql>
 <br>&nbsp;<br>
-
 
 
 

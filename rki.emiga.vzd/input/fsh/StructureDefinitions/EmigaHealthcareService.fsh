@@ -4,13 +4,13 @@ Id: EmigaHealthcareService
 Title: "Dienstleistung"
 Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
 
-* ^version = "1.1.0"
-* ^date = "2026-03-09"
+* ^version = "1.1.1"
+* ^date = "2026-07-08"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
 
@@ -23,7 +23,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // 'External identifiers for this item' - 0..* - Identifier
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * identifier 0..0
-  
+
 // 'Whether this HealthcareService record is in active use' - 0..1 - boolean
 // Wir wollen den Status von angebotenen Dienstleistungen klar unterscheiden können. Entsprechend machen wir das Element verpflichtend.
 * active 1..1 MS
@@ -172,7 +172,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 
 // Hier werden entsprehend die Erreichbarkeitsdaten abgebildet
 * availableTime MS
-* availableTime obeys ORGV-Service-Opening-Time
+* availableTime obeys EinrV-Service-Opening-Time
 * availableTime.extension contains $DutyHoursEx named dutyHoursAvailability 0..1 MS
 
 * availableTime.daysOfWeek MS
@@ -193,10 +193,7 @@ Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * endpoint 0..0
 
-Invariant: ORGV-Service-Opening-Time
+Invariant: EinrV-Service-Opening-Time
 Description: "If DutyHoursAvailability code is '24/7', then daysOfWeek, availableStartTime, and availableEndTime must not be present."
 * severity = #error
-//* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
-//* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() and extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').valueCoding.code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"
-* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() implies (extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').value.ofType(Coding).code = '24/7' implies (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty()))"
-//* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').exists() xor (daysOfWeek.exists() and availableStartTime.exists() and availableEndTime.exists())"
+* expression = "extension('https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability').where(valueCoding.code = '24/7').exists().not() or (daysOfWeek.empty() and availableStartTime.empty() and availableEndTime.empty())"

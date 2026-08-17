@@ -1,18 +1,22 @@
 ---
-topic: EmigaOrgvId
-canonical: https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId
+topic: EinrVBundleId
+canonical: https://emiga.rki.de/fhir/ValueSet/EinrVBundleId
 ---
 
 # {{page-title}}
 ## Beschreibung
-<fql output="inline" headers="false">
-from NamingSystem
-where uniqueId.where(value = %canonical).exists()
-select description
+<fql output= "inline" headers="false">
+from 
+    ValueSet
+where
+    url = %canonical
+select
+    description
 </fql>
+<br>&nbsp;<br>
 
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId}}
+    {{render:https://emiga.rki.de/fhir/ValueSet/EinrVBundleId}}
 </div>
 
 <style>
@@ -56,7 +60,7 @@ select description
 </style>
 <br>&nbsp;<br>
 
-### Inhalt
+## Inhalt
 <tabs>
 <tab= title="Darstellung">{{tree, buttons}} </tab>
 <tab title="XML">{{xml}}</tab>
@@ -64,5 +68,3 @@ select description
 <tab title="Link">{{link}}</tab>
 </tabs>
 <br>&nbsp;<br>
-
-

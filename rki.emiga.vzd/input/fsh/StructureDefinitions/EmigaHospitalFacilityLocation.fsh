@@ -4,13 +4,13 @@ Id: EmigaHospitalFacilityLocation
 Title: "Krankenhaus - Einrichtungsstandort"
 Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab"
 //
-* ^version = "0.3.0"
-* ^date = "2026-03-09"
+* ^version = "0.4.0"
+* ^date = "2026-07-08"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
-* insert ORGVProfileSecurityTags
+* insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
 
@@ -46,35 +46,33 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-   emigaOrgvId 0..1 MS and 
-    emigaOrgvFileNumber 0..1 MS and
+   EmigaID 0..1 MS and 
+    EmigaFileNumber 0..1 MS and
    //standortId 0..1 MS and 
    standortnummer-dkg 0..1 MS and
    abrechnungs-IKNR 0..1 MS and
     BSNR 0..1 MS and
     demisParticipantId 0..1 MS and
     telematikID 0..1 MS
-    
 
-* identifier[emigaOrgvId] only IdentifierEmigaOrgvId
-* identifier[emigaOrgvId] ^definition = "EMIGA Organizationsverzeichnis ID to be used in Identifiers"
-* identifier[emigaOrgvId] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvId"
-* identifier[emigaOrgvId].system 1.. MS
-* identifier[emigaOrgvId].value 1.. MS
+* identifier[EmigaID] only IdentifierEmigaID
+* identifier[EmigaID].use 0..1 MS
+* identifier[EmigaID].use = #official (exactly)
+* identifier[EmigaID].system 1..1 MS
+* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID].value 1..1 MS
+* identifier[EmigaID].value ^short = "Wert des Identifiers"
+* identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
 
-* identifier[emigaOrgvFileNumber] only IdentifierEmigaOrgvFileNumber
-* identifier[emigaOrgvFileNumber] ^definition = "EMIGA Organizationsverzeichnis Aktenzeichen to be used in Identifiers"
-* identifier[emigaOrgvFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/vzd/sid/EmigaOrgvFileNumber"
-* identifier[emigaOrgvFileNumber].system 1.. MS
-* identifier[emigaOrgvFileNumber].value 1.. MS
-/*
-* identifier[standortId] only Identifier
-* identifier[standortId] ^short = "Standort-Id"
-* identifier[standortId] ^patternIdentifier.system = "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
-* identifier[standortId] ^definition = "Die InEK Standort-Id dient der eindeutigen Identifizierung von Krankenhausstandorten. Die entsprechenden Krankenhausstandorte werden im InEK Standortverzeichnis verwaltet. Die Vergabe der eindeutigen 6-stelligen Standort-Id erfolgt durch das Institut für das Entgeltsystem im Krankenhaus GmbH (InEK)."
-* identifier[standortId].system 1.. MS
-* identifier[standortId].value 1.. MS
-*/
+* identifier[EmigaFileNumber] only IdentifierEmigaFileNumber
+* identifier[EmigaFileNumber].use 0..1 MS
+* identifier[EmigaFileNumber].use = #official (exactly)
+* identifier[EmigaFileNumber].system 1..1 MS
+* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber].value 1..1 MS
+* identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
+* identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
+
 * identifier[standortnummer-dkg] only $identifier-standortnummer
 * identifier[standortnummer-dkg] ^comment = "Motivation : Entsprechend der Festlegung der DKG laut Basisprofile-DE 1.5.0 (https://simplifier.net/packages/de.basisprofil.r4/) "
 * identifier[standortnummer-dkg] ^patternIdentifier.system = "http://fhir.de/sid/dkgev/standortnummer"

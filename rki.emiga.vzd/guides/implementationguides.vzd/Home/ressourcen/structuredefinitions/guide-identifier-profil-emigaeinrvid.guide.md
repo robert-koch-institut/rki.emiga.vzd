@@ -1,6 +1,6 @@
 ---
-topic: OrgVBundle
-canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle
+topic: IdentifierEmigaID
+canonical: https://emiga.rki.de/fhir/vzd/StructureDefinition/IdentifierEmigaID
 ---
 
 # {{page-title}}
@@ -80,6 +80,7 @@ select
 	Feldname: id, Kurzbeschreibung: short, Beschreibung: definition, Hinweise: comment
 </fql>
 <br>&nbsp;<br>
+
 
 
 
