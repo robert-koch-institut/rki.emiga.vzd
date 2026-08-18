@@ -6,10 +6,11 @@ Description: "'ResponsibilityHealthdepartments' dient der Abbildung der Zuständ
 Context: Organization, Location, Practitioner
 
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/ResponsibilityHealthdepartments"
-* ^version = "2.0.0"
-* ^date = "2026-02-12"
+* ^version = "2.0.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
+
 //* ^status = #draft
 //* ^publisher = "Robert-Koch-Institut"
 * . 1..

@@ -4,8 +4,8 @@ Id: EmigaHospitalRoomLocation
 Title: "Krankenhaus - Raum"
 Description: "Eine 'EmigaHospitalRoomLocation' bildet einen Raum in einem Krankenhaus ab. Dies dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten."
 
-* ^version = "0.3.0"
-* ^date = "2026-07-08"
+* ^version = "0.3.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

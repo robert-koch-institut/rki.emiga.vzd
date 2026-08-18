@@ -4,8 +4,8 @@ Id: EmigaPractitioner
 Title: "Practitioner"
 Description: "'EmigaPractitioner' sind Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen bzw. Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt oder LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. PatientenInnen, Kontaktpersonen, etc. fallen jedoch explizit nicht unter diese Kategorie."
 
-* ^version = "1.1.0"
-* ^date = "2026-03-09"
+* ^version = "1.1.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

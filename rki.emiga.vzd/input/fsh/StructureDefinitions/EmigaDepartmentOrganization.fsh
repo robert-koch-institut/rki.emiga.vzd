@@ -4,8 +4,8 @@ Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
 Description: "Eine 'EmigaDepartmentOrganization' ist ein organisatorischer Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.3.0"
-* ^date = "2026-07-08"
+* ^version = "1.3.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -13,6 +13,7 @@ Description: "Eine 'EmigaDepartmentOrganization' ist ein organisatorischer Teil 
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 * extension MS
 * extension contains $OrganizationPeriod named organizationPeriod 0..*

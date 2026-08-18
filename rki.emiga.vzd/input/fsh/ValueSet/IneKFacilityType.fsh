@@ -3,8 +3,8 @@ Id: IneKFacilityType
 Title: "IneK Einrichtungstyp"
 Description: "'IneKFacilityType' ist eine Werteliste mit Konzepten, die die Art bzw. den Typ einer Einrichtung aus dem IneK Standortverzeichnis charakterisieren."
 * ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/IneKFacilityType"
-* ^version = "0.1.0"
-* ^date = "2025-06-18"
+* ^version = "0.1.1"
+* ^date = "2026-08-18"
 * ^language = #de-DE
 * ^status = #active
 * ^experimental = false

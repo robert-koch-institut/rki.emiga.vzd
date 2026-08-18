@@ -1,10 +1,10 @@
 Instance: CodeSiteId
 InstanceOf: NamingSystem
 Title: "CodeSite ID"
-Description: "Dieses Namingsystem definiert die 'CodeSiteId' für die Verwendung als Identifier."
+Description: "Das NamingSystem 'CodeSiteId' definiert das Identifikationssystem für die CodeSite ID."
 Usage: #definition
 * publisher = "Robert Koch-Institut"
-* date = "2024-03-19"
+* date = "2026-08-18"
 * name = "CodeSiteId"
 * status = #active
 * kind = #identifier

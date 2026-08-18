@@ -2,12 +2,13 @@ ValueSet: Fachbereich
 Id: Fachbereich
 Title: "Fachbereich"
 Description: "Das ValueSet 'Fachbereich' enthält die zulässigen Codes zur Abbildung von Fachbereichen (z. B. Abteilungen, Zuständigkeits- oder Aufgabenbereiche). Es dient der einheitlichen und strukturierten Kennzeichnung fachlicher Zuständigkeiten in organisatorischen und fachlichen Prozessen."
-* insert MetadataTerminology
-* ^version = "0.1.0"
-* ^date = "2025-08-01"
 * ^url = "https://emiga.rki.de/fhir/vzd/ValueSet/Fachbereich"
-//* include codes from system $DemisOrgType
+* ^version = "0.1.1"
+* ^date = "2026-08-18"
 
+* insert MetadataTerminology
+
+//* include codes from system $DemisOrgType
 * include codes from system $FachabteilungsschluesselErweitert
 
 * $IHEXDSpracticeSettingCode#ANAE "Anästhesiologie"

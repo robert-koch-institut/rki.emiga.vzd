@@ -2,9 +2,10 @@ ValueSet: PractitionerRole
 Id: PractitionerRole
 Title: "Personenrolle"
 Description: "'PractitionerRole' ist eine Werteliste mit Konzepten für Rollen, die eine Person innerhalb einer Organisation einnehmen bzw. wahrnehmen kann."
+* ^version = "1.1.1"
+* ^date = "2026-08-18"
+
 * insert MetadataTerminology
-* ^version = "1.1.0"
-* ^date = "2024-03-19"
 
 * include codes from system PractitionerRole
 

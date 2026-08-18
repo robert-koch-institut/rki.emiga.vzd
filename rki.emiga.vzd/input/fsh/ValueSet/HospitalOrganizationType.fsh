@@ -2,9 +2,10 @@ ValueSet: HospitalOrganizationType
 Id: HospitalOrganizationType
 Title: "Krankenhaus-Organisationstyp"
 Description: "'HospitalOrganizationType' ist eine Werteliste mit Konzepten, die die Art bzw. den Typ einer Krankenhaus-Organisation aus Sicht des ÖGD charakterisieren."
+* ^version = "1.0.1"
+* ^date = "2026-08-18"
+
 * insert MetadataTerminology
-* ^version = "1.0.0"
-* ^date = "2025-10-27"
 
 * $DemisOrgType#hospital "Krankenhaus"
 * $DemisOrgType#hospital ^designation[0].language = #en-US

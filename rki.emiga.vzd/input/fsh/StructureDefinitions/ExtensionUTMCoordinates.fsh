@@ -4,13 +4,13 @@ Title: "UTM Coordinates (ETRS89)"
 Description: "'UTMCoordinates' repräsentiert die UTM-Koordinaten (ETRS89) einer Einrichtung."
 
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/UTMCoordinates"
-* ^version = "0.3.0"
-* ^date = "2026-02-24"
+* ^version = "0.3.1"
+* ^date = "2026-08-18"
+
+* insert MetadataProfile
 
 * ^context.type = #element
 * ^context.expression = "Location.position"
-
-* insert MetadataProfile
 
 * extension contains
     UTM_Easting_X 1..1 MS and

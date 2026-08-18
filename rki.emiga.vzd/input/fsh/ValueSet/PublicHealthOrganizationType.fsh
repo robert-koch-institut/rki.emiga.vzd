@@ -2,9 +2,10 @@ ValueSet: PublicHealthOrganizationType
 Id: PublicHealthOrganizationType
 Title: "ÖGD Organizationen"
 Description: "'PublicHealthOrganizationType' ist eine Werteliste mit Konzepten, die die Arten einer Organisation des ÖGD näher beschreiben."
+* ^version = "1.0.1"
+* ^date = "2026-08-18"
+
 * insert MetadataTerminology
-* ^version = "1.0.0"
-* ^date = "2024-11-25"
 
 * $OrganizationType#ga "Gesundheitsamt"
 * $OrganizationType#ga ^designation.language = #de-DE

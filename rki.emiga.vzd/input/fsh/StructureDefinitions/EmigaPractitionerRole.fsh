@@ -4,8 +4,8 @@ Id: EmigaPractitionerRole
 Title: "Practitioner Role"
 Description: "Die 'Practitioner' definiert Attribute, die einem Practitioner zugeordnet werden. Dazu gehören bspw. die Zuordnung zu einer bestimmten Organisation oder die Rolle die von dem 'Practitioner' ausgeübt wird."
 
-* ^version = "1.1.0"
-* ^date = "2026-03-09"
+* ^version = "1.1.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

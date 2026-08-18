@@ -4,8 +4,8 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "Eine 'EmigaHospitalOrganization' dient der Abbildung eines Krankenhauses. Dies dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
-* ^version = "0.4.0"
-* ^date = "2026-07-08"
+* ^version = "0.4.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

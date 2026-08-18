@@ -4,8 +4,8 @@ Id: EmigaHealthcareService
 Title: "Dienstleistung"
 Description: "Ein 'EmigaHealthcareService' ist eine Dienstleistung, die mit dem Gesundheitswesen assoziiert ist, z.B. eine Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle."
 
-* ^version = "1.1.1"
-* ^date = "2026-07-08"
+* ^version = "1.1.2"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

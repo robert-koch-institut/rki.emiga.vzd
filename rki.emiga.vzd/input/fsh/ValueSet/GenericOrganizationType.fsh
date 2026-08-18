@@ -2,9 +2,10 @@ ValueSet: GenericOrganizationType
 Id: GenericOrganizationType
 Title: "Organisationstyp"
 Description: "GenericOrganizationType ist eine Werteliste mit Konzepten, die die Art bzw. den Typ einer generischen Organisation aus Sicht des ÖGD charakterisieren."
+* ^version = "1.1.2"
+* ^date = "2026-08-18"
+
 * insert MetadataTerminology
-* ^version = "1.1.1"
-* ^date = "2025-11-24"
 
 * $DemisOrgType#medFacility "Medizinische Einrichtung"
 * $DemisOrgType#outpatSurgery "Einrichtung für ambulantes Operieren"

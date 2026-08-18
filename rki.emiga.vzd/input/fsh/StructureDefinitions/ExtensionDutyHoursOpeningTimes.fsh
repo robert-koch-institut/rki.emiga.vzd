@@ -5,10 +5,11 @@ Description: "'DutyHoursAvailability' dient der Abbildung der Erreichbarkeit der
 Context: HealthcareService.availableTime
 
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/DutyHoursAvailability"
-* ^version = "2.0.0"
-* ^date = "2024-02-12"
+* ^version = "2.0.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
+
 * . ^short = "Dienstzeiten"
 * . ^definition = "Erreichbarkeit der Dienstleistung anhand der Dienstzeiten"
 * value[x] MS
