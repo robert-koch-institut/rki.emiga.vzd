@@ -2,7 +2,7 @@ Instance: IneKStandort
 InstanceOf: EmigaHospitalLocation
 Usage: #example
 Title: "InEK Standort Beispiel"
-Description: "Ein Beispiel für einen Standort aus dem InEK Standortverzeichnis."
+Description: "Ein Beispiel für einen InEK Krankenhausstandort."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.

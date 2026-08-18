@@ -1,8 +1,8 @@
-Instance: InekEinricthung01
+Instance: InekEinrichtung01
 InstanceOf: EmigaHospitalFacilityLocation
 Usage: #example
 Title: "InEK Standort Beispiel"
-Description: "Ein Beispiel für einen Standort aus dem InEK Standortverzeichnis."
+Description: "Ein Beispiel für einen InEK Einrichtungsstandort."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.

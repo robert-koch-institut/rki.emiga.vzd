@@ -1,7 +1,7 @@
 Extension: InekPostalAddress
 Id: InekPostalAddress
 Title: "IneK Postalische Addresse"
-Description: "Die 'InekPostalAddress' definiert die postalische Addresse für die Standorte die aus der InEK Krankenhausverzeichnis stammen."
+Description: "Die 'InekPostalAddress' definiert die postalische Addresse für die Standorte die aus dem InEK Krankenhausverzeichnis stammen."
 
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/InekPostalAddress"
 * ^version = "0.2.1"
