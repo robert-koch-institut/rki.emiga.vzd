@@ -2,9 +2,5 @@
   filename: Index.page.md
 - name: CodeSite-ID
   filename: guide-codesite-id.guide.md
-- name: EMIGA-Einrichtungsverzeichnis-Aktenzeichen
-  filename: guide-emiga-einrichtungsverzeichnis-aktenzeichen.guide.md
-- name: EMIGA-Einrichtungsverzeichnis-ID
-  filename: guide-emiga-einrichtungsverzeichnis-id.guide.md
 - name: IneK-ID
   filename: guide-inek-id.guide.md
