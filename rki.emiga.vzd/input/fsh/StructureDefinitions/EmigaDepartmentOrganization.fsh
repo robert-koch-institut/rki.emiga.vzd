@@ -186,7 +186,5 @@ Description: "Eine 'EmigaDepartmentOrganization' ist ein organisatorischer Teil 
 * contact 0..0
 * contact ^comment = "Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen"
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
-// Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-// Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
+// Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Sobald wir technische Endpoints abbilden, müssen wir hier eine weitere Profilierung vornehmen.
 * endpoint 0..0
-* endpoint ^comment = "Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen"
