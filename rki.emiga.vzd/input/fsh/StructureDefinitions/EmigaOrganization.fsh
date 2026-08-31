@@ -2,10 +2,10 @@ Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
 Title: "EMIGA Organization"
-Description: "Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen. Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+Description: "Unter der 'EmigaOrganization' werden alle Organisationen zusammengefasst, die nicht EMIGA direkt nutzende ÖDG-Organisationen sind, die eine CodeSite-ID besitzen. Damit werden unter 'EmigaOrganization' sowohl Behörden, Transport-Unternehmen, Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
 
-* ^version = "1.4.0"
-* ^date = "2026-07-08"
+* ^version = "1.4.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

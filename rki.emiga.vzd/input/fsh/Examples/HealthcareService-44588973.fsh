@@ -1,7 +1,7 @@
 Instance: HealthcareService44588973
 InstanceOf: EmigaHealthcareService
 Usage: #example
-Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist" 
+Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist." 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"

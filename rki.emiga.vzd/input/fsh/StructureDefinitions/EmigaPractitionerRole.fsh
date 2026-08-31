@@ -2,10 +2,10 @@ Profile: EmigaPractitionerRole
 Parent: PractitionerRole
 Id: EmigaPractitionerRole
 Title: "Practitioner Role"
-Description: "Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation aber auch die Rolle die wahrgenommen wird."
-//
-* ^version = "1.1.0"
-* ^date = "2026-03-09"
+Description: "'PractitionerRole' definiert Attribute, die einem Practitioner zugeordnet werden. Dazu gehören bspw. die Zuordnung zu einer bestimmten Organisation oder die Rolle, die von dem Profil 'Practitioner' ausgeübt wird."
+
+* ^version = "1.1.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
