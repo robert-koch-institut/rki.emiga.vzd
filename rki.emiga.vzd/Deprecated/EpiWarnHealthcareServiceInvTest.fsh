@@ -22,13 +22,6 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der rund um
 * telecom[Phone].system = #phone
 * telecom[Phone].value = "54548797999"
 
-* availableTime.daysOfWeek[0] = #mon
-* availableTime.daysOfWeek[+] = #tue
-* availableTime.daysOfWeek[+] = #wed
-* availableTime.daysOfWeek[+] = #thu
-* availableTime.daysOfWeek[+] = #fri
-* availableTime.daysOfWeek[+] = #sat
-* availableTime.daysOfWeek[+] = #sun
 //* availableTime.allDay = true
 
 * availableTime.extension[dutyHoursAvailability].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
