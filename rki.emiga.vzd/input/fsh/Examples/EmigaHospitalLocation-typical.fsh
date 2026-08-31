@@ -21,7 +21,7 @@ Description: "Typische Instanz eines Krankenhaus-Standorts (EMIGA)"
 * identifier[EmigaID].value = "0123456789"
 * identifier[EmigaFileNumber].system =
   "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "OrgvFile-001"
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[11223344]"
 * identifier[standortId].system =
   "https://demis.rki.de/fhir/NamingSystem/InekStandortId"
 * identifier[standortId].value = "771077"

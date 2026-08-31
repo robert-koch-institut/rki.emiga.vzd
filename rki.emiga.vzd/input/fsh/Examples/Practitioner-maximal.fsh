@@ -11,19 +11,6 @@ Usage: #example
 * meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
-// MustSupport meta.tag slices
-// * meta.tag[relevance].system = $RelevanceCS
-// * meta.tag[relevance].code = #primary
-// * meta.tag[relevance].display = "Primärer Datensatz"
-
-// * meta.tag[orgvBundleId].system = $BundleIdCS
-// * meta.tag[orgvBundleId].code = #orgv-bundle-001
-// * meta.tag[orgvBundleId].display = "OrgV Bundle 001"
-
-// * meta.tag[orgvBundleVersion].system = $BundleVersionCS
-// * meta.tag[orgvBundleVersion].code = #1.0.0
-// * meta.tag[orgvBundleVersion].display = "Bundle Version 1.0.0"
-
 // ----------------------------------------------------
 // CORE ELEMENTS
 // ----------------------------------------------------

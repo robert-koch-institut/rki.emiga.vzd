@@ -14,8 +14,6 @@ Usage: #example
 * meta.tag[relevance].code = #UserCreated
 * meta.tag[relevance].display = "Durch OEGD angelegt"
 
-
-
 // ----------------------------------------------------
 // CORE ELEMENTS
 // ----------------------------------------------------

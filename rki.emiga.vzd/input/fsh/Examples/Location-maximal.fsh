@@ -31,7 +31,7 @@ Usage: #example
 * identifier[EmigaID].use = #official
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "ORGV-FILE-78910"
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[98765432]"
 * identifier[EmigaFileNumber].use = #official
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"

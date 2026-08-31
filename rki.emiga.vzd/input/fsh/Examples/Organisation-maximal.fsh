@@ -20,11 +20,11 @@ Usage: #example
 // IDENTIFIERS — all slices populated (all MS)
 // ----------------------------------------------------
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
-* identifier[EmigaID].value = "ORGVID-999999"
+* identifier[EmigaID].value = "999999"
 * identifier[EmigaID].use = #official
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "ORGVFILE-2025001"
+* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[24681357]"
 * identifier[EmigaFileNumber].use = #official
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
@@ -55,7 +55,7 @@ Usage: #example
 // ----------------------------------------------------
 // TYPE — emigaOrganizationType slice (1..1 MS)
 // ----------------------------------------------------
-* type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörde"
+* type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
 
 // ----------------------------------------------------
 // NAME — required (1..1 MS)

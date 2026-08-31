@@ -21,10 +21,10 @@ Usage: #example
 // (EmigaOrgvId + FileNumber + one medical identifier)
 // ----------------------------------------------------
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
-* identifier[EmigaID].value = "ORGVID-123456"
+* identifier[EmigaID].value = "123456"
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "ORGVFILE-2025"
+* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[12354768]"
 
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "234567890"
@@ -38,7 +38,7 @@ Usage: #example
 // TYPE — emigaOrganizationType slice (1..1 MS)
 // (Typical: common category “Landesbehörde” or “Gesundheitsamt”)
 // ----------------------------------------------------
-* type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörde"
+* type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
 
 // ----------------------------------------------------
 // NAME — required

@@ -23,10 +23,10 @@ Usage: #example
 // IDENTIFIERS — all slices included once (all MS)
 // ----------------------------------------------------
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
-* identifier[EmigaID].value = "ORGVID-001"
+* identifier[EmigaID].value = "001"
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "ORGVFILE-001"
+* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[14681358]"
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "123456789"
@@ -55,7 +55,7 @@ Usage: #example
 // ----------------------------------------------------
 // TYPE — emigaOrganizationType slice (1..1 MS)
 // ----------------------------------------------------
-* type[emigaOrganizationType] = $OrganizationType#sepFedAut "Oberste Bundesbehörde"
+* type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
 
 // ----------------------------------------------------
 // NAME — required 1..1 MS

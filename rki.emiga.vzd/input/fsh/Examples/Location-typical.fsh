@@ -30,7 +30,7 @@ Usage: #example
 * identifier[EmigaID].value = "ORGVID-44588965"
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "FILE-44588965"
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[12579245]"
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "260300123"
