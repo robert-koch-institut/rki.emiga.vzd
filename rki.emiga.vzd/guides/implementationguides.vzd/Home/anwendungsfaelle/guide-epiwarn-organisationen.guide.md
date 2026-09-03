@@ -6,7 +6,7 @@ Dieser Anwendungsfall beschreibt die Verwaltung von Organisationen und Einrichtu
 
 EpiWarn-Organisationen dienen der eindeutigen Identifikation und Verwaltung von Einrichtungen und Stellen, die an EpiWarn-Prozessen beteiligt sind.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/OEGDOverview.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/OEGDOverview.png}}
 
 EpiWarn-Organisationen werden grundsätzlich über die für Organisationen vorgesehenen EMIGA-Profile abgebildet. Je nach fachlichem Bedarf kann insbesondere `EmigaOrganization` verwendet werden. Handelt es sich bei einer EpiWarn-Organisation um eine direkt nutzende ÖGD-Organisation mit Code-Side-ID, wird `EmigaPublicHealthOrganization` verwendet.
 
@@ -27,9 +27,9 @@ Eine EpiWarn-Organisation wird aus einem zentralen EpiWarn-Verzeichnis übernomm
 ## Beschreibung der Profile
 ### ÖGD-Organisation
 
-Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Organisation ab, die alle Organisationen zusammenfasst, die EMIGA direkt nutzende ÖDG-Organisationen sind und eine CodeSite-ID besitzen.
+Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Organisation ab, die alle Organisationen zusammenfasst, die EMIGA direkt nutzende ÖDG-Organisationen sind und eine CodeSite ID besitzen.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/PublicHealthOrganization.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/PublicHealthOrganization.png}}
 
 Die Code-Side-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Organisationen, die nicht direkt nutzende ÖGD-Organisationen mit Code-Side-ID sind.
 
@@ -37,7 +37,7 @@ Die Code-Side-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `Emiga
 
 Das Profil `EmigaPublicHealthLocation` bildet physische Standorte eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden, ab. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/PublicHealthLocation.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/PublicHealthLocation.png}}
 
 Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaPublicHealthOrganization` zugeordnet werden.
 

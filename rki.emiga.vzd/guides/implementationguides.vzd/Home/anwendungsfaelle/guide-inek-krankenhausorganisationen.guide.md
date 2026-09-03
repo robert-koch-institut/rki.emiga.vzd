@@ -11,7 +11,7 @@ Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorisch
 - `EmigaHospitalFacilityLocation` für Einrichtungsstandorte nach dem InEK-Standortverzeichnis oder für Stationen,
 - `EmigaHospitalRoomLocation` für Räume innerhalb eines Krankenhausstandorts.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalOverview.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/HospitalOverview.png}}
 
 Die Profile unterscheiden zwischen organisatorischen Einheiten und physischen Orten. Eine Klinik oder Fachabteilung ist beispielsweise eine organisatorische Einheit, während ein Krankenhausstandort, eine Station oder ein Raum einen physischen Ort beschreibt.
 
@@ -26,25 +26,25 @@ Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheite
 
 Das Profil `EmigaHospitalOrganization` bildet ein Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. `EmigaHospitalOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalOrganization.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/HospitalOrganization.png}}
 
 ### Krankenhausstandort
 
 Das Profil `EmigaHospitalLocation` bildet einen Standort eines Krankenhauses ab. Dazu gehören beispielsweise ein Hauptstandort, ein Klinikgebäude oder ein weiterer Krankenhausstandort. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. 
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalLocation.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/HospitalLocation.png}}
 
 ### Krankenhauseinrichtungsstandort
 
 Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungen nach dem InEK Standortverzeichnis oder Stationen eines Krankenhauses ab. Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungsstandorte nach dem InEK-Standortverzeichnis oder Stationen eines Krankenhauses ab.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalFacilityLocation.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/HospitalFacilityLocation.png}}
 
 ### Krankenhausraum
 
 Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalRoomLocation.png}}
+{{render:guides/implementationguides.vzd/PlantUML/PNGs/HospitalRoomLocation.png}}
 
 ## Schnittstellenoperationen
 

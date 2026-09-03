@@ -1,6 +1,6 @@
 - name: Index
   filename: Index.page.md
-- name: CodeSite-ID
+- name: CodeSite ID
   filename: guide-codesite-id.guide.md
-- name: IneK-ID
+- name: IneK ID
   filename: guide-inek-id.guide.md
