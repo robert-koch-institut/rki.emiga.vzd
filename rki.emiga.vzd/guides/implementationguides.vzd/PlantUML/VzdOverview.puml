@@ -1,0 +1,42 @@
+@startuml
+title Überblick der EMIGA Vzd Implementierung
+
+class EmigaDepartmentOrganization
+class EmigaHealthcareService
+class EmigaHospitalFacilityLocation
+class EmigaHospitalLocation
+class EmigaHospitalOrganization
+class EmigaHospitalRoomLocation
+class EmigaLocation
+class EmigaOrganization
+class EmigaPractitioner
+class EmigaPractitionerRole
+class EmigaPublicHealthLocation
+class EmigaPublicHealthOrganization
+class IdentifierCodeSiteId
+
+' To Do: was ist mit den Extensions?
+
+EmigaPublicHealthOrganization--> Organization: Teil von (partOf)
+EmigaPublicHealthLocation--> EmigaPublicHealthOrganization : Verwaltende Organisation (managingOrganization)
+EmigaPublicHealthOrganization--> IdentifierCodeSiteId : besitzt
+
+EmigaPractitionerRole--> EmigaOrganization : Organisation, in der die Rolle ausgeübt werden kann
+EmigaPractitionerRole--> EmigaPractitioner : Practitioner, der die für die Organisation definierten Leistungen erbringen kann
+EmigaPractitionerRole--> EmigaHealthcareService : Gesundheitsleistungen, die der Practitioner für die Organisation bzw. deren Standorte erbringt
+
+EmigaOrganization--> Organization: Teil von (partOf)
+EmigaLocation--> Organization : Verwaltende Organisation (managingOrganization)
+
+EmigaHospitalRoomLocation--> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalRoomLocation--> EmigaHospitalLocation: Teil von (partOf)
+EmigaHospitalOrganization--> Organization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalLocation--> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalFacilityLocation--> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalFacilityLocation--> EmigaHospitalLocation: Teil von (partOf)
+
+EmigaHealthcareService--> Organization: bereitgestellt von (providedBy)
+EmigaHealthcareService--> EmigaLocation: Referenzierung der Standorte, an denen die Dienstleistung angeboten wird (location)
+
+EmigaDepartmentOrganization--> Organization: Verwaltende Organisation (managingOrganization)
+@enduml

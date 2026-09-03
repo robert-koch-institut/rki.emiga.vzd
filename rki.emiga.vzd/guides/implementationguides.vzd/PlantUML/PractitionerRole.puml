@@ -1,13 +1,13 @@
 @startuml
 skinparam linetype ortho
  
-title EmigaPractitionerRole (Profile of PractitionerRole) - Class Diagram
+title EmigaPractitionerRole (Profile of PractitionerRole)
  
 ' Main Class
 class EmigaPractitionerRole{
--- Practitioner Information --
+-- Practitioner Role Information --
 <b>+</b> active: boolean [1..1]
-<b>+</b> code:emigaPractitionerRole: CodeableConcept [0..*]
+<b>+</b> code.emigaPractitionerRole: CodeableConcept [0..*]
 <b>+</b> healthcareService: Reference(EmigaHealthcareService) [0..*]
 <b>+</b> location: Reference(EmigaLocation) [0..1]
 <b>+</b> organization: Reference(EmigaOrganization | EmigaPublicHealthOrganization) [1..1]

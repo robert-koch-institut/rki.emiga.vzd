@@ -1,0 +1,36 @@
+@startuml
+title Überblick der Krankenhaus-Organisationen
+
+class EmigaHospitalFacilityLocation{
+Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
+Standortverzeichnis oder Stationen eines Krankenhauses ab 
+}
+class EmigaHospitalLocation{
+Dieses Profil bildet einen Standort eines Krankenhauses im Kontext 
+von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren 
+Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) 
+einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in 
+Melde-, Dokumentations- und Kommunikationsprozessen. 
+}
+class EmigaHospitalOrganization{
+Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. 
+Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses 
+(z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in 
+Melde-, Dokumentations- und Kommunikationsprozessen. 
+}
+class EmigaHospitalRoomLocation{
+Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von 
+EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten 
+innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) 
+einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten. 
+}
+
+' To Do: was ist mit den Extensions?
+
+EmigaHospitalRoomLocation --> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalRoomLocation --> EmigaHospitalLocation: Teil von (partOf)
+EmigaHospitalOrganization --> Organization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalLocation --> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalFacilityLocation --> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
+EmigaHospitalFacilityLocation --> EmigaHospitalLocation: Teil von (partOf)
+@enduml

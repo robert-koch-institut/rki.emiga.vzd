@@ -22,11 +22,9 @@
   filename: guide-generische-organisation.guide.md
 - name: IneK Einrichtungstyp
   filename: guide-inek-einrichtungstyp.guide.md
-- name: Einrichtungsverzeichnis-Bundle-ID
-  filename: guide-einrichtungsverzeichnis-bundle-id.guide.md
-- name: Einrichtungsverzeichnis-Bundle-Version
-  filename: guide-einrichtungsverzeichnis-bundle-version.guide.md
 - name: Practitioner Role
   filename: guide-practitioner-role.guide.md
+- name: Ressourcensichtbarkeit
+  filename: guide-ressourcensichtbarkeit.guide.md
 - name: Zuständigkeit
   filename: guide-zustaendigkeit.guide.md
