@@ -9,6 +9,8 @@
 Dieser Abschnitt bietet eine Übersicht über alle in diesem Implementierungsleitfaden definierten **Anwendungsfälle**, die in Form von UML-Diagrammen dargestellt werden und die für dieses Modul relevanten Anwendungsfälle in komprimierter Form abbilden. Der Schwerpunkt liegt auf den zentralen Use Cases und den dafür erforderlichen Funktionen, um eine klare und gut nachvollziehbare Übersicht zu gewährleisten.
 <br>&nbsp;<br>
 
+{{render:guides/implementationguides.common/PlantUML/PNGs/VzdOverview.png}}
+
 #### Enthaltene Anwendungsfälle:
 
 1. **EpiWarn Organisationen**  

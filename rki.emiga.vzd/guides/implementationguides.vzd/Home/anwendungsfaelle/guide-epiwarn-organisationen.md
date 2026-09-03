@@ -9,7 +9,7 @@ Die allgemeinen fachlichen Regeln zur Entität `Einrichtung`, zum Lebenszyklus, 
 
 ## Überblick
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/VzdOverview.png}}
+{{render:guides/implementationguides.common/PlantUML/PNGs/OEGDOverview.png}}
 
 EpiWarn-Organisationen dienen der eindeutigen Identifikation und Verwaltung von Einrichtungen und Stellen, die an EpiWarn-Prozessen beteiligt sind.
 

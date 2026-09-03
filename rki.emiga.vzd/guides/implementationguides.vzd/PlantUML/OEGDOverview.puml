@@ -1,0 +1,24 @@
+@startuml
+title Überblick der ÖGD Organisationen
+
+
+class EmigaPublicHealthLocation{
+Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. 
+Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten
+eindeutig räumlich verortet.
+}
+class EmigaPublicHealthOrganization{
+Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA
+direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen.
+}
+class IdentifierCodeSiteId{
+Identifier-Profil für die vom RKI vergebene Kennung des Organisationen
+des ÖGDs (Gesundheitsamts, Landesstelle, usw.).
+}
+
+' To Do: was ist mit den Extensions?
+
+EmigaPublicHealthOrganization--> Organization: Teil von (partOf)
+EmigaPublicHealthLocation--> EmigaPublicHealthOrganization : Verwaltende Organisation (managingOrganization)
+EmigaPublicHealthOrganization--> IdentifierCodeSiteId : besitzt
+@enduml

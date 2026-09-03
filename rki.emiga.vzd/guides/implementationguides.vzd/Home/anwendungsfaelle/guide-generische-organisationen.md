@@ -9,7 +9,7 @@ Die allgemeinen fachlichen Regeln zur Entität `Einrichtung`, zum Lebenszyklus, 
 
 ## Überblick
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/VzdOverview.png}}
+{{render:guides/implementationguides.common/PlantUML/PNGs/GenericOrganizationOverview.png}}
 
 Generische Organisationen werden über das Profil `EmigaOrganization` abgebildet. Das Profil umfasst Organisationen, die keine direkt nutzende ÖGD-Organisation mit Code-Side-ID sind.
 

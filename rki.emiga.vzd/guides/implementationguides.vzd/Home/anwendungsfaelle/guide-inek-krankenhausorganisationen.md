@@ -14,13 +14,9 @@ Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorisch
 - `EmigaHospitalOrganization` für das Krankenhaus,
 - `EmigaHospitalLocation` für besuchbare Krankenhausstandorte,
 - `EmigaHospitalFacilityLocation` für Einrichtungsstandorte nach dem InEK-Standortverzeichnis oder für Stationen,
-- `EmigaHospitalRoomLocation` für Räume innerhalb eines Krankenhausstandorts,
-- `EmigaDepartmentOrganization` für organisatorische Teile einer Abteilung,
-- `EmigaPractitioner` für fachlich zugeordnete Personen,
-- `EmigaPractitionerRole` für die Zuordnung einer Person zu einer Organisation und Rolle,
-- `EmigaHealthcareService` für angebotene Gesundheitsleistungen.
+- `EmigaHospitalRoomLocation` für Räume innerhalb eines Krankenhausstandorts.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/VzdOverview.png}}
+{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalOverview.png}}
 
 Die Profile unterscheiden zwischen organisatorischen Einheiten und physischen Orten. Eine Klinik oder Fachabteilung ist beispielsweise eine organisatorische Einheit, während ein Krankenhausstandort, eine Station oder ein Raum einen physischen Ort beschreibt.
 
@@ -140,16 +136,9 @@ Bei der Anzeige muss zwischen Organisation, physischem Standort, Gesundheitsleis
 
 Clients sollen folgende Regeln berücksichtigen:
 
-- `EmigaOrganization` ist für nicht direkt nutzende ÖGD-Organisationen vorgesehen.
-- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Organisationen mit Code-Side-ID vorgesehen.
-- Die Code-Side-ID wird über `IdentifierCodeSiteId` abgebildet.
 - Organisationen und physische Standorte sind getrennte Ressourcen.
 - Physische Standorte werden über `EmigaLocation` oder ein spezialisiertes Standortprofil abgebildet.
 - Die verwaltende Organisation eines Standorts wird über `managingOrganization` referenziert.
-- Gesundheitsleistungen werden über `EmigaHealthcareService` abgebildet.
-- Die anbietende Organisation wird über `providedBy` referenziert.
-- Standorte einer Gesundheitsleistung werden über `location` referenziert.
-- Personen und Rollen werden über `EmigaPractitioner` und `EmigaPractitionerRole` abgebildet.
 - Die Rolle einer Organisation muss im jeweiligen Prozess eindeutig ausgewertet werden.
 - Eine empfangende Organisation ist nicht automatisch die zuständige Organisation.
 - Nur aktive und aktuell gültige Organisationen sollen für neue Prozesse ausgewählt werden.
