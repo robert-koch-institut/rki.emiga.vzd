@@ -1,16 +1,17 @@
 @startuml
 skinparam linetype ortho
 
-title EmigaHospitalRoomLocation (Profile of Organization)
+title EmigaHospitalRoomLocation (Profile of Location)
 
 ' Main Class
 class EmigaHospitalRoomLocation{
--- Organization Information --
+-- Location Information --
 <b>+</b> alias: string [0..*]
 <b>+</b> description: string [0..1]
 <b>+</b> managingOrganization: Reference(EmigaHospitalOrganization) [0..1]
 <b>+</b> mode: code [1..1]
 <b>+</b> name: string [1..1]
+<b>+</b> operationalStatus: Coding [0..1]
 <b>+</b> partOf: Reference(EmigaHospitalLocation) [0..1]
 <b>+</b> physicalType: CodeableConcept [0..1]
 <b>+</b> status: code [1..1]
@@ -19,15 +20,16 @@ class EmigaHospitalRoomLocation{
 <b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
 <b>+</b> meta.security:responsibility: Coding [0..1]
 <b>+</b> meta.security:visibility: Coding [0..1]
-<b>+</b> meta.tag:EinrVBundleId: Coding [0..1]
+<b>+</b> meta.tag:einrvBundleId: Coding [0..1]
 <b>+</b> meta.tag:einrvBundleVersion: Coding [0..1]
 <b>+</b> meta.tag:relevance: Coding [0..*]
 -- Identifiers --
 <b>+</b> identifier: Identifier [1..*] 
-<b>+</b> identifier:emigaFileNumber: IdentifierEmigaFileNumber [0..1]
-<b>+</b> identifier:emigaID: IdentifierEmigaID [0..1]
-<b>+</b> identifier:standortnummer-dkg: IdentifierStandortnummer [0..1]
+<b>+</b> identifier:EmigaFileNumber: IdentifierEmigaFileNumber [0..1]
+<b>+</b> identifier:EmigaID: IdentifierEmigaID [0..1]
+<b>+</b> identifier:standortnummer-dkg: Identifier [0..1]
 -- Communication --
+<b>+</b> address: Address [0..1]
 <b>+</b> address.city: string [0..1]
 <b>+</b> address.extension:Stadtteil: string [0..1]
 <b>+</b> address.line.extension:Adresszusatz: string [0..1]
@@ -37,10 +39,12 @@ class EmigaHospitalRoomLocation{
 <b>+</b> address.postalCode: string [0..1]
 <b>+</b> address.state: string [0..1]
 <b>+</b> address.type: code [0..1]
-<b>+</b> position: BackbonElement [0..1]
-<b>+</b> position.latitude: decimal [1..1]
-<b>+</b> position.longitude: decimal [1..1]
 <b>+</b> telecom: ContactPoint [0..*]
+-- Position --
+<b>+</b> position: BackboneElement [0..1]
+<b>+</b> position.longitude: decimal [0..1]
+<b>+</b> position.latitude: decimal [0..1]
+<b>+</b> position.altitude: decimal [0..1]
 }
 
 @enduml
