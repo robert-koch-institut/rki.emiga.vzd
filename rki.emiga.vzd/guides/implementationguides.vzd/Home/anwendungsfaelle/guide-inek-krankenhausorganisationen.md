@@ -1,11 +1,6 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Organisationen und Standorten im VZD.
-
-Die allgemeinen fachlichen Regeln zur Entität `Einrichtung`, zum Lebenszyklus, zur Zuständigkeit, zur Sichtbarkeit und zur Verknüpfung mit weiteren EMIGA-Entitäten sind in den Grundlagen des VZD beschrieben.
-
-<!-- TODO: Verweis auf die gemeinsame VZD-Grundlagenseite ergänzen. -->
-<!-- TODO: Die noch offenen Extensions der verwendeten Profile ergänzen. -->
+Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Organisationen bzw. Standorten im Verzeichnisdienst (VZD).
 
 ## Überblick
 
@@ -24,53 +19,28 @@ Die Profile unterscheiden zwischen organisatorischen Einheiten und physischen Or
 
 Eine Krankenhausorganisation wird im VZD angelegt oder aus einer führenden Quelle übernommen. Anschließend werden die Organisationsdaten fachlich ergänzt und präzisiert. Dazu gehören insbesondere Name, Identifikatoren, Organisationsart, Zuständigkeiten und hierarchische Beziehungen.
 
-Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet.
+Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet. Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
-{{render:guides/implementationguides.common/PlantUML/PNGs/HospitalOrg.png}}
+## Beschreibung der Profile
+### Krankenhausorganisation
 
-Ansprechpersonen und weitere fachlich zugeordnete Personen werden über `EmigaPractitioner` und `EmigaPractitionerRole` verknüpft. Gesundheitsleistungen werden über `EmigaHealthcareService` beschrieben und können den Organisationen sowie den Standorten zugeordnet werden.
-
-Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
-
-## Krankenhausorganisation
-
-Das Profil `EmigaHospitalOrganization` bildet ein Krankenhaus im Kontext von EMIGA ab. Es enthält insbesondere Stammdaten, Kennziffern, Kontakt- und Adressdaten.
+Das Profil `EmigaHospitalOrganization` bildet ein Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. `EmigaHospitalOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`.
 
 {{render:guides/implementationguides.common/PlantUML/PNGs/HospitalOrganization.png}}
 
-| Element | Bedeutung |
-| --- | --- |
-| `identifier` | Fachliche Identifikatoren des Krankenhauses, beispielsweise Institutionskennzeichen oder weitere Krankenhauskennungen. |
-| `active` | Gibt an, ob das Krankenhaus aktuell betrieben und verwendet werden kann. |
-| `type` | Fachliche Einordnung des Krankenhauses. |
-| `name` | Offizielle Bezeichnung des Krankenhauses. |
-| `alias` | Kurz- oder Alternativbezeichnungen. |
-| `telecom` | Telefonische und elektronische Kontaktdaten. |
-| `address` | Post- oder Hauptanschrift des Krankenhauses. |
-| `managingOrganization` | Übergeordnete Organisation, sofern das Krankenhaus einer übergeordneten Organisation zugeordnet ist. |
-| `location` | Referenzen auf zugehörige Krankenhausstandorte. |
+### Krankenhausstandort
 
-`EmigaHospitalOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`.
-
-## Krankenhausstandorte
-
-Das Profil `EmigaHospitalLocation` bildet einen besuchbaren Standort eines Krankenhauses ab. Dazu gehören beispielsweise ein Hauptstandort, ein Klinikgebäude oder ein weiterer Krankenhausstandort.
+Das Profil `EmigaHospitalLocation` bildet einen Standort eines Krankenhauses ab. Dazu gehören beispielsweise ein Hauptstandort, ein Klinikgebäude oder ein weiterer Krankenhausstandort. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. 
 
 {{render:guides/implementationguides.common/PlantUML/PNGs/HospitalLocation.png}}
 
-| Element | Bedeutung |
-| --- | --- |
-| `identifier` | Kennung des Krankenhausstandorts. |
-| `status` | Status des Standorts. |
-| `name` | Bezeichnung des Standorts. |
-| `address` | Adresse des Standorts. |
-| `position` | Optionale Geokoordinaten. |
-| `managingOrganization` | Referenz auf das verwaltende `EmigaHospitalOrganization`. |
-| `partOf` | Referenz auf einen übergeordneten Standort. |
+### Krankenhauseinrichtungsstandort
 
-Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungsstandorte nach dem InEK-Standortverzeichnis oder Stationen eines Krankenhauses ab.
+Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungen nach dem InEK Standortverzeichnis oder Stationen eines Krankenhauses ab. Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungsstandorte nach dem InEK-Standortverzeichnis oder Stationen eines Krankenhauses ab.
 
 {{render:guides/implementationguides.common/PlantUML/PNGs/HospitalFacilityLocation.png}}
+
+### Krankenhausraum
 
 Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten.
 
@@ -80,61 +50,28 @@ Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab
 
 Der VZD stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
-<!-- TODO: Die verbindlichen Endpunkte und Operationsnamen anhand der VZD- und EpiWarn-Spezifikation prüfen. -->
-
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |
 | `/metadata` | `GET` | Abruf des FHIR-`CapabilityStatement`. | `CapabilityStatement` |
 | `/Organization/$search-organization` | `GET`, `POST` | Suche nach Krankenhaus-Organisationen. | `Bundle` vom Typ `searchset` |
-| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Organisationsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
-| `/Location/$search-location` | `GET`, `POST` | Suche nach Standorten. | `Bundle` vom Typ `searchset` |
-| `/HealthcareService/$search-healthcare-service` | `GET`, `POST` | Suche nach Gesundheitsleistungen. | `Bundle` vom Typ `searchset` |
-| `/PractitionerRole/$search-practitioner-role` | `GET`, `POST` | Suche nach Personen und Rollen. | `Bundle` vom Typ `searchset` |
+| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Krankenhaus-Organisationsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
+| `/Location/$search-location` | `GET`, `POST` | Suche nach Krankenhaus-Standorten. | `Bundle` vom Typ `searchset` |
 | `/Organization/$create-organization` | `POST` | Anlage einer Krankenhaus-Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Organisation. | `OperationOutcome` |
+| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Krankenhaus-Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
+| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Krankenhaus-Organisation. | `OperationOutcome` |
 | `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt.
-
-Physische Standorte, Gesundheitsleistungen, Personen und Rollen werden als eigene Ressourcen angelegt und mit der Organisation verknüpft.
-
-Bei einer Änderung werden insbesondere Identifier, Organisationstyp, fachliche Rolle, Zuständigkeit, Kommunikationsadresse, Gültigkeitszeitraum und Ansprechpersonen geprüft.
-
-Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
-
-<!-- TODO: Festlegen, ob Änderungen versioniert werden und ob eine Historienoperation angeboten wird. -->
+Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
 
 ## Suche und Anzeige
 
-Typische Suchkriterien sind:
-
-- Krankenhaus-Identifier,
-- Code-Side-ID,
-- Name oder Namensbestandteil,
-- Organisationstyp,
-- Krankenhaus-Rolle,
-- meldende Organisation,
-- empfangende Organisation,
-- zuständige Organisation,
-- Ort oder Postleitzahl,
-- Status,
-- Kommunikationsadresse,
-- übergeordnete Organisation,
-- Gesundheitsleistung,
-- Ansprechperson.
-
-Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind.
-
-Bei der Anzeige muss zwischen Organisation, physischem Standort, Gesundheitsleistung und Ansprechperson unterschieden werden.
-
-<!-- TODO: Die unterstützten Suchparameter sowie `_count`, `_offset` und Sortierparameter ergänzen. -->
+Typische Suchkriterien sind Identifier, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
 
 ## Interoperabilitätshinweise
 
-Clients sollen folgende Regeln berücksichtigen:
+Clients sollten folgende Regeln berücksichtigen:
 
 - Organisationen und physische Standorte sind getrennte Ressourcen.
 - Physische Standorte werden über `EmigaLocation` oder ein spezialisiertes Standortprofil abgebildet.

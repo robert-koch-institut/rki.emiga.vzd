@@ -1,0 +1,46 @@
+@startuml
+skinparam linetype ortho
+
+title EmigaPublicHealthOrganization (Profile of Organization)
+
+' Main Class
+class EmigaPublicHealthOrganization{
+-- Organization Information --
+<b>+</b> active: boolean [1..1]
+<b>+</b> name: string [1..1]
+<b>+</b> alias: string [0..*]
+<b>+</b> type: CodeableConcept [1..*]
+<b>+</b> type.emigaOrganizationType: CodeableConcept [0..1]
+<b>+</b> partOf: Reference(Organization) [0..1]
+-- Extensions --
+<b>+</b> extension:responsibilityHealthdepartments: Extension [0..*]
+<b>+</b> extension:organizationPeriod: Extension [0..*]
+-- Meta --
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.security:responsibility: Coding [0..1]
+<b>+</b> meta.security:visibility: Coding [0..1]
+<b>+</b> meta.tag:einrvBundleId: Coding [0..1]
+<b>+</b> meta.tag:einrvBundleVersion: Coding [0..1]
+<b>+</b> meta.tag:relevance: Coding [0..*]
+-- Identifiers --
+<b>+</b> identifier:codeSiteId: IdentifierCodeSiteId [1..1]
+<b>+</b> identifier:telematikID: IdentifierTelematikId [0..1]
+<b>+</b> identifier:EmigaID: IdentifierEmigaID [0..1]
+<b>+</b> identifier:EmigaFileNumber: IdentifierEmigaFileNumber [0..1]
+-- Communication --
+<b>+</b> telecom:Email: ContactPoint [0..*]
+<b>+</b> telecom:Phone: ContactPoint [0..*]
+<b>+</b> telecom:Url: ContactPoint [0..*]
+<b>+</b> telecom:Fax: ContactPoint [0..*]
+<b>+</b> address: Address [0..*]
+<b>+</b> address.extension:Stadtteil: string [0..1]
+<b>+</b> address.line.extension:Strasse: string [0..1]
+<b>+</b> address.line.extension:Hausnummer: string [0..1]
+<b>+</b> address.line.extension:Adresszusatz: string [0..1]
+<b>+</b> address.line.extension:Postfach: string [0..1]
+<b>+</b> address.city: string [0..1]
+<b>+</b> address.state: string [0..1]
+<b>+</b> address.postalCode: string [0..1]
+}
+
+@enduml
