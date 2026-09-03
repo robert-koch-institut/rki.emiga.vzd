@@ -18,7 +18,3 @@ Usage: #example
 * address.postalCode = "12345"
 * address.country = "DE"
 * managingOrganization = Reference(PublicHealth001)
-
-
-
-

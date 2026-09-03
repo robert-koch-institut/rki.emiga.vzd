@@ -1,12 +1,12 @@
-Instance: InekEinricthung01
+Instance: InekEinrichtung01
 InstanceOf: EmigaHospitalFacilityLocation
 Usage: #example
 Title: "InEK Standort Beispiel"
-Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
+Description: "Ein Beispiel für einen InEK Einrichtungsstandort."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
+* meta.tag[relevance] = $RelevanceCS#InEK "Aus Krankenhausverzeichnis"
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
 //* extension[InekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"

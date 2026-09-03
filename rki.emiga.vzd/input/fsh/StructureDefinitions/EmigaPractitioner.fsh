@@ -2,10 +2,10 @@ Profile: EmigaPractitioner
 Parent: Practitioner
 Id: EmigaPractitioner
 Title: "Practitioner"
-Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie."
+Description: "'EmigaPractitioner' sind Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen bzw. Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte, sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt oder LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. PatientenInnen, Kontaktpersonen, etc. fallen jedoch explizit nicht unter diese Kategorie."
 
-* ^version = "1.1.0"
-* ^date = "2026-03-09"
+* ^version = "1.1.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -39,7 +39,6 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 * name.given 1.. MS  
 * name.given obeys validString
 * name.prefix MS
-
 
 // 'A contact detail for the practitioner (that apply to all roles)' - 0..* - ContactPoint
 // We slice the telecom element to apply the regex rules
@@ -90,6 +89,3 @@ Description: "Personen, die im weiteren Sinne einen Bezug zur Erbringung von Lei
 // 'A language the practitioner is able to use in patient communication' - 0..* - CodeableConcept
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
 * communication 0..0
-
-
-

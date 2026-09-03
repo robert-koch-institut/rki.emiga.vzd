@@ -1,10 +1,11 @@
 ValueSet: OrganizationType
 Id: OrganizationType
 Title: "Organisationstyp"
-Description: "Werteliste mit Konzepten, die die Art/den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
+Description: "'OrganizationType' ist eine Werteliste mit Konzepten, die die Art bzw. den Typ einer Organisation aus Sicht des ÖGD grob charakterisieren."
+* ^version = "1.1.2"
+* ^date = "2026-08-18"
+
 * insert MetadataTerminology
-* ^version = "1.1.1"
-* ^date = "2025-10-27"
 
 * include codes from system $DemisOrgType
 

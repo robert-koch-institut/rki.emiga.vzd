@@ -1,7 +1,7 @@
 Instance: HealthcareService44588973
 InstanceOf: EmigaHealthcareService
 Usage: #example
-Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist" 
+Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der während der Dienstzeit verfügbar ist." 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
@@ -25,7 +25,4 @@ Description: "Ein Beispiel für einen telefonischen Beratungsdienst, der währen
 * availableTime.extension[dutyHoursAvailability].valueCoding.system = "https://emiga.rki.de/fhir/vzd/CodeSystem/HealthcareServiceDutyHours"
 * availableTime.extension[dutyHoursAvailability].valueCoding.code = #duringServiceHours
 * availableTime.extension[dutyHoursAvailability].valueCoding.display = "Während der Dienstzeit"
-
-//* availableTime.daysOfWeek[+] = #sat
-//* availableTime.daysOfWeek[+] = #sun
 * availableTime.allDay = false
