@@ -6,9 +6,9 @@ Dieser Anwendungsfall beschreibt die Verwaltung von Organisationen und Einrichtu
 
 EpiWarn-Organisationen dienen der eindeutigen Identifikation und Verwaltung von Einrichtungen und Stellen, die an EpiWarn-Prozessen beteiligt sind.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/OEGDOverview.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/OEGDOverview.svg}}
 
-EpiWarn-Organisationen werden grundsätzlich über die für Organisationen vorgesehenen EMIGA-Profile abgebildet. Je nach fachlichem Bedarf kann insbesondere `EmigaOrganization` verwendet werden. Handelt es sich bei einer EpiWarn-Organisation um eine direkt nutzende ÖGD-Organisation mit Code-Side-ID, wird `EmigaPublicHealthOrganization` verwendet.
+EpiWarn-Organisationen werden grundsätzlich über die für Organisationen vorgesehenen EMIGA-Profile abgebildet. Je nach fachlichem Bedarf kann insbesondere `EmigaOrganization` verwendet werden. Handelt es sich bei einer EpiWarn-Organisation um eine direkt nutzende ÖGD-Organisation mit CodeSide-ID, wird `EmigaPublicHealthOrganization` verwendet.
 
 Eine EpiWarn-Organisation kann beispielsweise folgende Funktionen haben:
 
@@ -29,15 +29,15 @@ Eine EpiWarn-Organisation wird aus einem zentralen EpiWarn-Verzeichnis übernomm
 
 Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Organisation ab, die alle Organisationen zusammenfasst, die EMIGA direkt nutzende ÖDG-Organisationen sind und eine CodeSite ID besitzen.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/PublicHealthOrganization.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/PublicHealthOrganization.svg}}
 
-Die Code-Side-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Organisationen, die nicht direkt nutzende ÖGD-Organisationen mit Code-Side-ID sind.
+Die CodeSide-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Organisationen, die nicht direkt nutzende ÖGD-Organisationen mit CodeSide-ID sind.
 
 ### ÖGD-Standort
 
 Das Profil `EmigaPublicHealthLocation` bildet physische Standorte eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden, ab. Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten eindeutig räumlich verortet.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/PublicHealthLocation.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/PublicHealthLocation.svg}}
 
 Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaPublicHealthOrganization` zugeordnet werden.
 
@@ -62,7 +62,7 @@ Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdat
 
 ## Suche und Anzeige
 
-Typische Suchkriterien sind Identifier, Code-Side-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
+Typische Suchkriterien sind Identifier, CodeSide-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
 
 Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind.
 
@@ -74,8 +74,8 @@ Bei der Anzeige muss zwischen Organisation, physischem Standort, Gesundheitsleis
 
 Clients sollten folgende Regeln berücksichtigen:
 
-- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Organisationen mit Code-Side-ID vorgesehen.
-- Die Code-Side-ID wird über `IdentifierCodeSiteId` abgebildet.
+- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Organisationen mit CodeSide-ID vorgesehen.
+- Die CodeSide-ID wird über `IdentifierCodeSiteId` abgebildet.
 - Organisationen und physische Standorte sind getrennte Ressourcen.
 - Physische Standorte werden über `EmigaPublicHealthLocation` abgebildet.
 - Die verwaltende Organisation eines Standorts wird über `managingOrganization` referenziert.

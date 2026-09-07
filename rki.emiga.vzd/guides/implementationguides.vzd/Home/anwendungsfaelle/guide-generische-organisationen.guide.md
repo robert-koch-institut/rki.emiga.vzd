@@ -6,15 +6,14 @@ Dieser Anwendungsfall beschreibt die Verwaltung generischer Einrichtungen und Or
 
 Generische Organisationen werden über das Profil `EmigaOrganization` abgebildet. 
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/GenericOrganizationOverview.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/GenericOrganizationOverview.svg}}
 
-Das Profil umfasst Organisationen, die keine direkt nutzende ÖGD-Organisation mit Code-Side-ID sind.
+Das Profil umfasst Organisationen, die keine direkt nutzende ÖGD-Organisation und kein Krankenhaus sind und keine CodeSide-ID besitzen.
 
 Dazu gehören beispielsweise:
 
 - Behörden,
 - Transport-Unternehmen,
-- Krankenhäuser,
 - Labore,
 - Arztpraxen,
 - Pflegeeinrichtungen,
@@ -40,15 +39,15 @@ Physische Orte werden über `EmigaLocation` abgebildet. Gesundheitsleistungen we
 
 Das Profil `EmigaOrganization` bildet eine generische Organisation im Kontext von EMIGA ab.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/Organization.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/Organization.svg}}
 
-`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. Eine generische Organisation ist von einer `EmigaPublicHealthOrganization` zu unterscheiden. `EmigaPublicHealthOrganization` beschreibt direkt nutzende ÖGD-Organisationen mit einer Code-Side-ID.
+`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. Eine generische Organisation ist von einer `EmigaPublicHealthOrganization` zu unterscheiden. `EmigaPublicHealthOrganization` beschreibt direkt nutzende ÖGD-Organisationen mit einer CodeSide-ID.
 
 ### Physische Orte
 
 Das Profil `EmigaLocation` beschreibt einen physischen Ort, der besucht werden kann.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/Location.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/Location.svg}}
 
 Ein physischer Ort kann grundsätzlich über Geokoordinaten und in der Regel über eine Straßenadresse beschrieben werden. Eine `EmigaLocation` kann über `managingOrganization` einer Organisation zugeordnet werden.
 
@@ -56,7 +55,7 @@ Ein physischer Ort kann grundsätzlich über Geokoordinaten und in der Regel üb
 
 Das Profil `EmigaDepartmentOrganization` beschreibt einen organisatorischen Teil einer Abteilung, nicht den physischen Ort.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/DepartmentOrganization.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/DepartmentOrganization.svg}}
 
 Eine `EmigaDepartmentOrganization` kann über `managingOrganization` einer Organisation zugeordnet werden.
 
@@ -65,7 +64,7 @@ Eine `EmigaDepartmentOrganization` kann über `managingOrganization` einer Organ
 
 Falls eine Organisation eine gesundheitsbezogene Dienstleistung anbietet, kann diese über `EmigaHealthcareService` abgebildet werden.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/HealthCareService.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/HealthCareService.svg}}
 
 Die Gesundheitsleistung wird über `providedBy` der anbietenden Organisation zugeordnet. Die Standorte, an denen sie angeboten wird, werden über `EmigaLocation` referenziert.
 
@@ -73,8 +72,8 @@ Die Gesundheitsleistung wird über `providedBy` der anbietenden Organisation zug
 
 Organisationen können mit `EmigaPractitioner` und `EmigaPractitionerRole` verknüpft werden.
 
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/Practitioner.png}}
-{{render:guides/implementationguides.vzd/PlantUML/PNGs/PractitionerRole.png}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/Practitioner.svg}}
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/PractitionerRole.svg}}
 
 Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Organisation gesteuert.
 
