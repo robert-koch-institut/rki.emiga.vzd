@@ -8,7 +8,7 @@ Generische Organisationen werden über das Profil `EmigaOrganization` abgebildet
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/GenericOrganizationOverview.svg}}
 
-Das Profil umfasst Organisationen, die keine direkt nutzende ÖGD-Organisation und kein Krankenhaus sind und keine CodeSide-ID besitzen.
+Das Profil umfasst Organisationen, die keine direkt nutzende ÖGD-Organisation und kein Krankenhaus sind und keine CodeSite-ID besitzen.
 
 Dazu gehören beispielsweise:
 
@@ -41,7 +41,7 @@ Das Profil `EmigaOrganization` bildet eine generische Organisation im Kontext vo
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/Organization.svg}}
 
-`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. Eine generische Organisation ist von einer `EmigaPublicHealthOrganization` zu unterscheiden. `EmigaPublicHealthOrganization` beschreibt direkt nutzende ÖGD-Organisationen mit einer CodeSide-ID.
+`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. Eine generische Organisation ist von einer `EmigaPublicHealthOrganization` zu unterscheiden. `EmigaPublicHealthOrganization` beschreibt direkt nutzende ÖGD-Organisationen mit einer CodeSite-ID.
 
 ### Physische Orte
 

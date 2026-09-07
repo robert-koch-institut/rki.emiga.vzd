@@ -3,7 +3,7 @@ title Überblick der ÖGD Organisationen
 
 class EmigaPublicHealthOrganization{
 Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA
-direkt nutzende ÖDG-Organisationen sind, die eine CodeSide-ID besitzen.
+direkt nutzende ÖDG-Organisationen sind, die eine CodeSite-ID besitzen.
 }
 class IdentifierCodeSiteId{
 Identifier-Profil für die vom RKI vergebene Kennung des Organisationen

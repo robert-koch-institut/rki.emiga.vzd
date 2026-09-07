@@ -8,7 +8,7 @@ EpiWarn-Organisationen dienen der eindeutigen Identifikation und Verwaltung von 
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/OEGDOverview.svg}}
 
-EpiWarn-Organisationen werden grundsätzlich über die für Organisationen vorgesehenen EMIGA-Profile abgebildet. Je nach fachlichem Bedarf kann insbesondere `EmigaOrganization` verwendet werden. Handelt es sich bei einer EpiWarn-Organisation um eine direkt nutzende ÖGD-Organisation mit CodeSide-ID, wird `EmigaPublicHealthOrganization` verwendet.
+EpiWarn-Organisationen werden grundsätzlich über die für Organisationen vorgesehenen EMIGA-Profile abgebildet. Je nach fachlichem Bedarf kann insbesondere `EmigaOrganization` verwendet werden. Handelt es sich bei einer EpiWarn-Organisation um eine direkt nutzende ÖGD-Organisation mit CodeSite-ID, wird `EmigaPublicHealthOrganization` verwendet.
 
 Eine EpiWarn-Organisation kann beispielsweise folgende Funktionen haben:
 
@@ -31,7 +31,7 @@ Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Organisation ab, die
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/PublicHealthOrganization.svg}}
 
-Die CodeSide-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Organisationen, die nicht direkt nutzende ÖGD-Organisationen mit CodeSide-ID sind.
+Die CodeSite-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Organisationen, die nicht direkt nutzende ÖGD-Organisationen mit CodeSite-ID sind.
 
 ### ÖGD-Standort
 
@@ -62,20 +62,19 @@ Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdat
 
 ## Suche und Anzeige
 
-Typische Suchkriterien sind Identifier, CodeSide-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
+Typische Suchkriterien sind Identifier, CodeSite-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
 
 Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind.
 
 Bei der Anzeige muss zwischen Organisation, physischem Standort, Gesundheitsleistung und Ansprechperson unterschieden werden.
 
-<!-- TODO: Die unterstützten Suchparameter sowie `_count`, `_offset` und Sortierparameter ergänzen. -->
 
 ## Interoperabilitätshinweise
 
 Clients sollten folgende Regeln berücksichtigen:
 
-- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Organisationen mit CodeSide-ID vorgesehen.
-- Die CodeSide-ID wird über `IdentifierCodeSiteId` abgebildet.
+- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Organisationen mit CodeSite-ID vorgesehen.
+- Die CodeSite-ID wird über `IdentifierCodeSiteId` abgebildet.
 - Organisationen und physische Standorte sind getrennte Ressourcen.
 - Physische Standorte werden über `EmigaPublicHealthLocation` abgebildet.
 - Die verwaltende Organisation eines Standorts wird über `managingOrganization` referenziert.
