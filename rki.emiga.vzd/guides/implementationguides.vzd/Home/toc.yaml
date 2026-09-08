@@ -6,15 +6,15 @@
   filename: guide-grundlagen-und-ueberblick.guide.md
 - name: Anwendungsfälle
   filename: anwendungsfaelle  
-- name: Änderungshistorie
-  filename: guide-aenderungshistorie.guide.md
 - name: Ergänzende Hinweise
   filename: guide-ergaenzende-hinweise.guide.md
+- name: Änderungshistorie
+  filename: guide-aenderungshistorie.guide.md
 - name: Weiterführende Informationen
   filename: guide-weiterfuehrende-informationen.guide.md
-- name: Ressourcen
-  filename: ressourcen
-- name: Implementierungshinweise
-  filename: implementierungshinweise
 - name: Lizenzen
   filename: guide-lizenzen.guide.md  
+- name: Implementierungshinweise
+  filename: implementierungshinweise
+- name: Ressourcen
+  filename: ressourcen
