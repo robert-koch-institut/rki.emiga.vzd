@@ -21,6 +21,40 @@ Eine Krankenhausorganisation wird im VZD angelegt oder aus einer führenden Quel
 
 Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet. Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
+### InEK-Import
+Der **InEK Importer** ist eine eigenständige Komponente des Einrichtungsverzeichnisses und stellt eine **lesende Schnittstelle zum InEK** bereit. Über diese Schnittstelle lädt der InEK Importer regelmäßig eine Datei mit den vom InEK verwalteten Einrichtungsdaten herunter.
+
+Die heruntergeladenen Daten werden mit dem bereits im **EMIGA FHIRStore Server** vorhandenen Datenbestand abgeglichen. Dabei werden Änderungen, beispielsweise neu hinzugekommene oder nicht mehr im InEK-Verzeichnis enthaltene Krankenhäuser, erkannt. Die erkannten Änderungen werden anschließend an den EMIGA FHIRStore Server übergeben und dort in den Datenbestand übernommen.
+
+Im Produktionsbetrieb wird der InEK-Datenbestand **monatlich** aktualisiert. Vor dem Produktivbetrieb ist ein **quartalsweiser Import** ausreichend.
+
+Bei jedem erfolgreichen Import wird eine neue Version der Krankenhaus-Stammdaten erstellt und in der Versionshistorie dokumentiert.
+
+Die aus dem InEK-Verzeichnis importierten Daten sind als **Krankenhaus-Stammdaten** zu verstehen. Sie dürfen von Nutzenden weder bearbeitet noch gelöscht werden. Dadurch wird verhindert, dass manuelle Änderungen bei einer späteren Aktualisierung des InEK-Datenbestands zu Inkonsistenzen führen.
+
+Wird ein Krankenhaus bei einem späteren Import nicht mehr im InEK-Verzeichnis gefunden, wird der entsprechende Datensatz in EMIGA **als inaktiv bzw. „nicht mehr im InEK enthalten“** gekennzeichnet. Der Datensatz wird nicht gelöscht.
+
+Die Krankenhaus-Stammdaten sind für alle EMIGA-Nutzenden einsehbar. Der Zugriff auf diese Daten erfolgt lesend.
+
+### Manuelle Anlage
+Da das InEK-Verzeichnis nicht alle in Deutschland ansässigen Krankenhäuser umfasst, muss zusätzlich die **manuelle Anlage von Krankenhäusern** möglich sein. Dies betrifft beispielsweise Privatkliniken. Darüber hinaus müssen auch **ausländische Krankenhäuser** angelegt werden können. Bei der Erfassung ausländischer Krankenhäuser ist der unterschiedliche Aufbau von Adressdaten zu berücksichtigen.
+
+Krankenhäuser, die nicht im InEK-Verzeichnis enthalten sind, werden entsprechend gekennzeichnet.
+
+Die manuelle Anlage eines Krankenhauses ist ausschließlich Nutzenden mit entsprechenden Bearbeitungsrechten erlaubt. Hierzu zählen insbesondere das RKI, Landesbehörden sowie weitere Nutzende mit den erforderlichen Bearbeitungsrechten.
+
+Die Berechtigungen müssen dabei unabhängig von der örtlichen Zuständigkeit gelten. So muss beispielsweise auch ein Gesundheitsamt die Möglichkeit haben, ein Krankenhaus für einen Landkreis anzulegen, für den es nicht zuständig ist.
+
+Aufgrund dieser übergreifenden Anlageberechtigung ist eine zuverlässige **Doublettenprüfung** erforderlich.
+
+### Doublettenprüfung
+Vor der Anlage eines neuen Krankenhauses muss geprüft werden, ob dieses bereits in EMIGA vorhanden ist.
+
+Als eindeutiges Identifikationsmerkmal für die Doublettenprüfung dient die **Institutionskennzeichen-Nummer (IK-Nummer) der Organisation**. Die IK-Nummer ist daher bei der manuellen Anlage eines Krankenhauses ein **Pflichtfeld**.
+
+Bei der Eingabe der IK-Nummer sollte den Nutzenden ein Hinweis auf eine geeignete Suchmöglichkeit zur Ermittlung der IK-Nummer bereitgestellt werden.
+
+
 ## Beschreibung der Profile
 ### Krankenhausorganisation
 
