@@ -15,8 +15,6 @@ class EmigaPublicHealthLocation
 class EmigaPublicHealthOrganization
 class IdentifierCodeSiteId
 
-' To Do: was ist mit den Extensions?
-
 EmigaPublicHealthOrganization--> Organization: Teil von (partOf)
 EmigaPublicHealthLocation--> EmigaPublicHealthOrganization : Verwaltende Organisation (managingOrganization)
 EmigaPublicHealthOrganization--> IdentifierCodeSiteId : besitzt

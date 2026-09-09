@@ -37,8 +37,6 @@ werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisat
 aber auch die Rolle die wahrgenommen wird.      
 }
 
-' To Do: was ist mit den Extensions?
-
 EmigaPractitionerRole --> EmigaOrganization : Organisation, in der die Rolle ausgeübt werden kann
 EmigaPractitionerRole --> EmigaPractitioner : Practitioner, der die für die Organisation definierten Leistungen erbringen kann
 EmigaPractitionerRole --> EmigaHealthcareService : Gesundheitsleistungen, die der Practitioner für die Organisation bzw. deren Standorte erbringt
