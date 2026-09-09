@@ -87,16 +87,16 @@ Im Folgenden wird ein Beispiel für eine fiktive Dienstleistung dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:HealthcareService-44588972.json}}
+        {{render:HealthcareService-HealthcareService44588971.json}}
     </tab>
     <tab title="XML">      
-        {{xml:HealthcareService-44588972.json}}
+        {{xml:HealthcareService-HealthcareService44588971.json}}
     </tab>
     <tab title="JSON">
-        {{json:HealthcareService-44588972.json}}
+        {{json:HealthcareService-HealthcareService44588971.json}}
     </tab>
     <tab title="Link">
-        {{link:HealthcareService-44588972.json}}
+        {{link:HealthcareService-HealthcareService44588971.json}}
     </tab>
 </tabs>
 

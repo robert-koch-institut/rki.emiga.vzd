@@ -87,16 +87,16 @@ Im Folgenden wird ein Beispiel für einen fiktive Standort dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:Location-44588965.json}}
+        {{render:Location-Location44588965.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Location-44588965.json}}
+        {{xml:Location-Location44588965.json}}
     </tab>
     <tab title="JSON">
-        {{json:Location-44588965.json}}
+        {{json:Location-Location44588965.json}}
     </tab>
     <tab title="Link">
-        {{link:Location-44588965.json}}
+        {{link:Location-Location44588965.json}}
     </tab>
 </tabs>
 
