@@ -16,7 +16,7 @@ Dieser Abschnitt bietet eine Übersicht über alle in diesem Implementierungslei
 
 2. **Terminologien**  
    Beinhaltet **CodeSystems** und **ValueSets**, die zur Standardisierung der Datenerfassung und -auswertung verwendet werden. Diese Terminologien sorgen für eine konsistente und einheitliche Kodierung von Rollen, Organisationsarten, Zuständigkeiten und Verfügbarkeiten.
-   - CodeSystems, z.B. **Rolle (PractitionerRole)**, **Kategorie (HealthcareServiceCategory)** und **Zuständigkeit (ResponsibilityType)**.
+   - CodeSystems, z.B. **Rolle in der Gesundheitsversorgung (PractitionerRole)**, **Kategorie (HealthcareServiceCategory)** und **Zuständigkeit (ResponsibilityType)**.
    - ValueSets zur Auswahl und Validierung der oben genannten Codes.
 
 3. **Extensions**  
