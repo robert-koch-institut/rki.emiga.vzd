@@ -5,4 +5,5 @@ Diese Änderungshistorie dokumentiert alle Anpassungen und Erweiterungen des Imp
 
 | **Version** | **Datum**       | **Autor**          | **Änderungsbeschreibung**                                          |
 |-------------|-----------------|--------------------|--------------------------------------------------------------------|
-| 1.0         | XX.XX.2025      | Michel NEUMANN<br>Dorothea DRESENKAMP<br>Konstantinos VOULGARIS      |   Initiale Erstellung des Implementierungsleitfadens.|
+| 1.0         | 01.01.2025      | Michel NEUMANN<br>Dorothea DRESENKAMP<br>Konstantinos VOULGARIS      |   Initiale Erstellung des Implementierungsleitfadens.|
+| 1.1         | 09.09.2026      | Konstantinos VOULGARIS<br>Lisa Koehler      |   Hinzufügen technischer und fachlicher Beschreibungen.|

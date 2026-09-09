@@ -1,6 +1,6 @@
 ---
-topic: ResponsibilityType
-canonical: https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType
+topic: responsibilityType
+canonical: https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType
 ---
 
 # {{page-title}}
@@ -28,7 +28,7 @@ select
 
 ### Überblick
 <div id="rendered-codesystem">
-    {{render:https://emiga.rki.de/fhir/vzd/CodeSystem/ResponsibilityType}}
+    {{render:https://emiga.rki.de/fhir/vzd/CodeSystem/responsibilityType}}
 </div>
 
 <style>

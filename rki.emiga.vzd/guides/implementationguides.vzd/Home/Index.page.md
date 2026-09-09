@@ -1,4 +1,4 @@
-# Implementierungsleitfaden für EMIGA Organizationsverzeichnis
+# Implementierungsleitfaden für das EMIGA Einrichtungsverzeichnis
 
 
 <a href="https://simplifier.net/rki.emiga.vzd" class="btn btn-default">Zum EMIGA VZD Projekt auf Simplifier</a>

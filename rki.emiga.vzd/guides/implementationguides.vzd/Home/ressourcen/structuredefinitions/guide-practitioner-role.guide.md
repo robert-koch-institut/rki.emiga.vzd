@@ -86,16 +86,16 @@ Im Folgenden wird ein Beispiel für eine Practitioner Role dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:PractitionerRole-44588969.json}}
+        {{render:PractitionerRole-Practitioner44588967.json}}
     </tab>
     <tab title="XML">      
-        {{xml:PractitionerRole-44588969.json}}
+        {{xml:PractitionerRole-Practitioner44588967.json}}
     </tab>
     <tab title="JSON">
-        {{json:PractitionerRole-44588969.json}}
+        {{json:PractitionerRole-Practitioner44588967.json}}
     </tab>
     <tab title="Link">
-        {{link:PractitionerRole-44588969.json}}
+        {{link:PractitionerRole-Practitioner44588967.json}}
     </tab>
 </tabs>
 

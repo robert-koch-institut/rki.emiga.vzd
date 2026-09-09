@@ -86,16 +86,16 @@ Im Folgenden wird ein Beispiel für eine fiktiven ÖGD Organisation dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:Organization-44588980.json}}
+        {{render:Organization-Organization44588980.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Organization-44588980.json}}
+        {{xml:Organization-Organization44588980.json}}
     </tab>
     <tab title="JSON">
-        {{json:Organization-44588980.json}}
+        {{json:Organization-Organization44588980.json}}
     </tab>
     <tab title="Link">
-        {{link:Organization-44588980.json}}
+        {{link:Organization-Organization44588980.json}}
     </tab>
 </tabs>
 

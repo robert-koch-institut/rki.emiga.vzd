@@ -86,16 +86,16 @@ Im Folgenden wird ein Beispiel für eine fiktive Person dargestellt, die im weit
  
 <tabs>
     <tab title="Übersicht">      
-        {{render:Practitioner-44588970.json}}
+        {{render:Practitioner-Practitioner44588970.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Practitioner-44588970.json}}
+        {{xml:Practitioner-Practitioner44588970.json}}
     </tab>
     <tab title="JSON">
-        {{json:Practitioner-44588970.json}}
+        {{json:Practitioner-Practitioner44588970.json}}
     </tab>
     <tab title="Link">
-        {{link:Practitioner-44588970.json}}
+        {{link:Practitioner-Practitioner44588970.json}}
     </tab>
 </tabs>
 

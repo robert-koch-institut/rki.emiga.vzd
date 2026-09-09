@@ -1,7 +1,5 @@
 - name: Index
   filename: Index.page.md
-- name: Art/Typ Organisation
-  filename: guide-art-typ-organisation.guide.md
 - name: Dienstleister Dienstzeiten
   filename: guide-dienstleister-dienstzeiten.guide.md
 - name: Dienstleister Fachspezialisierung
@@ -10,11 +8,7 @@
   filename: guide-dienstleister-kategorien.guide.md
 - name: InEK Einrichtungstyp
   filename: guide-inek-einrichtungstyp.guide.md
-- name: Einrichtungsverzeichnis-Bundle-ID
-  filename: guide-einrichtungsverzeichnis-bundle-id.guide.md
-- name: Einrichtungsverzeichnis-Bundle-Version
-  filename: guide-einrichtungsverzeichnis-bundle-version.guide.md
-- name: Practitioner Role
+- name: Rolle in der Gesundheitsversorgung
   filename: guide-practitioner-role.guide.md
 - name: Zuständigkeit
   filename: guide-zustaendigkeit.guide.md

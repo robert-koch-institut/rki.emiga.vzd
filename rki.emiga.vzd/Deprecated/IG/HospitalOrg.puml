@@ -1,5 +1,5 @@
 @startuml
-title EmigaHospitalOrganization (Profile of Organization) - Class Diagram
+title EmigaHospitalOrganization (Profile of Organization)
 
 class EmigaHospitalOrganization{
 }
