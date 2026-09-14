@@ -2,7 +2,7 @@ Instance: CreateOrganizationBundle
 InstanceOf: Bundle
 Usage: #example
 Title: "Organization Erstellung Transaction Bundle Beispiel"
-Description: "Beispiel transaction bundle zum Erstellen einer Krankenhaus mit ihren beiden Standorten"
+Description: "Beispiel eines Transaction bundle zum Erstellen eines Krankenhauses mit seinen beiden Standorten"
 * type = #transaction
 * timestamp = 2026-09-14T12:00:00Z
 
@@ -68,8 +68,6 @@ Usage: #inline
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.display = "Krankenhaus"
 
-
-
 /* -------- telecom -------- */
 * telecom[Phone].system = #phone
 * telecom[Phone].value = "+49 251 123456"
@@ -87,6 +85,8 @@ Usage: #inline
 * address.city = "Warendorf"
 * address.state = "DE-NW"
 * address.postalCode = "48231"
+
+/* entry[1] -> Josephs-Krankenhaus Standort */
 
 Instance: ExampleEmigaLocation
 InstanceOf: EmigaHospitalLocation
@@ -175,6 +175,7 @@ Usage: #inline
 /* -------- managing organization -------- */
 * managingOrganization.reference = "urn:uuid:hospital-org-12345678"
 
+/*entry[2] -> Josephs-Krankenhaus Station A*/
 
 Instance: ExampleEmigaFacilityLocation
 InstanceOf: EmigaHospitalFacilityLocation

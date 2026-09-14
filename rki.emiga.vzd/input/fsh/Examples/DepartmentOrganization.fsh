@@ -2,23 +2,20 @@ Instance: DepartmentOrganization
 InstanceOf: EmigaDepartmentOrganization
 Usage: #example
 
-// ----------------------------------------------------
+
 // META (profile + security)
-// ----------------------------------------------------
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 * meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
-// ----------------------------------------------------
 // EXTENSION — organizationPeriod (MS, 0..*)
-// ----------------------------------------------------
+
 * extension[organizationPeriod].url = $OrganizationPeriod
 * extension[organizationPeriod].valuePeriod.start = "2000-01-01"
 
-
-// ----------------------------------------------------
 // IDENTIFIERS — all slices populated (all MS)
-// ----------------------------------------------------
+
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value = "7777777"
 * identifier[EmigaID].use = #official
@@ -42,31 +39,26 @@ Usage: #example
 * identifier[telematikID].system = "https://gematik.de/fhir/sid/telematik-id"
 * identifier[telematikID].value = "1-234567890"
 
-// ----------------------------------------------------
 // ACTIVE (1..1 MS)
-// ----------------------------------------------------
+
 * active = true
 
-// ----------------------------------------------------
 // TYPE — emigaOrganizationType slice (1..1 MS)
-// ----------------------------------------------------
+
 * type[organizationType] = $hl7-organization-type#dept
 * type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
 
-// ----------------------------------------------------
+
 // NAME — required (1..1 MS)
-// ----------------------------------------------------
+
 * name = "MusterFachabteilung"
 
-// ----------------------------------------------------
 // ALIAS (0..1 MS)
-// ----------------------------------------------------
+
 * alias = "MFA"
 
-// ----------------------------------------------------
 // TELECOM — all slices included (all MS)
-// ----------------------------------------------------
-* telecom[Email][0].system = #email
+
 * telecom[Email][0].value = "kontakt@musterbund.de"
 
 * telecom[Phone][0].system = #phone
@@ -78,10 +70,8 @@ Usage: #example
 * telecom[Url][0].system = #url
 * telecom[Url][0].value = "https://www.musterbund.de"
 
-// ----------------------------------------------------
 // ADDRESS — full MS structure (0..1 MS)
-// ----------------------------------------------------
-/* -------- address -------- */
+
 * address[0].line[0] = "Musterstraße 1"
 * address[0].line[0].extension[Strasse].valueString = "Musterstraße"
 * address[0].line[0].extension[Hausnummer].valueString = "1"
@@ -92,10 +82,8 @@ Usage: #example
 * address[0].state = "DE-BB"
 * address[0].postalCode = "12345"
 
-
-// ----------------------------------------------------
 // PART OF — 0..1 MS
-// ----------------------------------------------------
+
 * partOf = Reference(Organization/Organization-minimal)
 * partOf.display = "Übergeordnete Organisation"
 
