@@ -2,7 +2,7 @@ Instance: CreateOrganizationBundle
 InstanceOf: Bundle
 Usage: #example
 Title: "Organization Erstellung Transaction Bundle Beispiel"
-Description: "Beispiel eines Transaction bundle zum Erstellen eines Krankenhauses mit seinen beiden Standorten"
+Description: "Beispiel eines Transaction Bundle zum Erstellen eines Krankenhauses mit seinen beiden Standorten"
 * type = #transaction
 * timestamp = 2026-09-14T12:00:00Z
 
@@ -31,17 +31,17 @@ Title: "Josephs-Krankenhaus"
 
 Usage: #inline
 
-/* -------- meta -------- */
+// -------- meta -------- 
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
-/* -------- extensions -------- */
+// -------- extensions -------- 
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2010-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
 
-/* -------- identifier -------- */
+// -------- identifier -------- 
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value = "0123456789"
 * identifier[EmigaID].use = #official
@@ -57,25 +57,25 @@ Usage: #inline
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "197416600"
 
-/* -------- status -------- */
+// -------- status -------- 
 * active = true
 
-/* -------- name / -------- */
+// -------- name / -------- 
 * name = "Josephs-Krankenhaus"
 
-/* -------- type -------- */
+// -------- type -------- 
 * type[emigaOrganizationType].coding.system = $DemisOrgType
 * type[emigaOrganizationType].coding.code = #hospital
 * type[emigaOrganizationType].coding.display = "Krankenhaus"
 
-/* -------- telecom -------- */
+// -------- telecom -------- 
 * telecom[Phone].system = #phone
 * telecom[Phone].value = "+49 251 123456"
 
 * telecom[Email].system = #email
 * telecom[Email].value = "info@josephs-krankenhaus.de"
 
-/* -------- address -------- */
+// -------- address -------- 
 * address.type = #both
 * address.line[0] = "Am Krankenhaus 2"
 * address.line[0].extension[Strasse].valueString = "Am Krankenhaus"
@@ -86,7 +86,7 @@ Usage: #inline
 * address.state = "DE-NW"
 * address.postalCode = "48231"
 
-/* entry[1] -> Josephs-Krankenhaus Standort */
+// entry[1] -> Josephs-Krankenhaus Standort
 
 Instance: ExampleEmigaLocation
 InstanceOf: EmigaHospitalLocation
@@ -94,12 +94,12 @@ Title: "Josephs-Krankenhaus Standort"
 
 Usage: #inline
 
-/* -------- meta -------- */
+// -------- meta -------- 
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
-/* -------- extensions -------- */
+// -------- extensions -------- 
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2010-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
@@ -112,7 +112,7 @@ Usage: #inline
 * extension[inekPostalAddress].valueAddress.state = "DE-NW"
 * extension[inekPostalAddress].valueAddress.postalCode = "48231"
 
-/* -------- identifier -------- */
+// -------- identifier -------- 
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value = "0123456789"
 * identifier[EmigaID].use = #official
@@ -128,26 +128,26 @@ Usage: #inline
 * identifier[IKNR].value = "260551132"
 * identifier[IKNR].period.start = "2010-01-01"
 
-/* -------- status -------- */
+// -------- status -------- 
 * status = #active
 
-/* -------- name / alias -------- */
+// -------- name / alias -------- 
 * name = "Josephs-Krankenhaus Standort"
 
 
-/* -------- mode -------- */
+// -------- mode -------- 
 * mode = #instance
 
-/* -------- type -------- */
+// -------- type -------- 
 * type[fachbereich].coding.system = $IHEXDSpracticeSettingCode
 * type[fachbereich].coding.code = #ALLG
 * type[fachbereich].coding.display = "Allgemeinmedizin"
 
-/* -------- telecom -------- */
+// -------- telecom -------- 
 * telecom.system = #phone
 * telecom.value = "+49 251 123456"
 
-/* -------- address -------- */
+// -------- address -------- 
 * address.type = #both
 * address.line[0] = "Am Krankenhaus 2"
 * address.line[0].extension[Strasse].valueString = "Am Krankenhaus"
@@ -158,12 +158,12 @@ Usage: #inline
 * address.state = "DE-NW"
 * address.postalCode = "48231"
 
-/* -------- physicalType -------- */
+// -------- physicalType -------- 
 * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
 * physicalType.coding.code = #si
 * physicalType.coding.display = "Site"
 
-/* -------- position -------- */
+// -------- position -------- 
 * position.latitude = 51.9604205
 * position.longitude = 8.0023529
 * position.altitude = 56
@@ -172,10 +172,10 @@ Usage: #inline
 * position.extension[utmCoordinates].extension[UTM_Easting_X].valueDecimal = 431451
 * position.extension[utmCoordinates].extension[UTM_Northing_Y].valueDecimal = 5757106
 
-/* -------- managing organization -------- */
+// -------- managing organization -------- 
 * managingOrganization.reference = "urn:uuid:hospital-org-12345678"
 
-/*entry[2] -> Josephs-Krankenhaus Station A*/
+// entry[2] -> Josephs-Krankenhaus Station A
 
 Instance: ExampleEmigaFacilityLocation
 InstanceOf: EmigaHospitalFacilityLocation
@@ -183,17 +183,17 @@ Title: "Josephs-Krankenhaus Station A"
 Description: "Beispiel für einen Einrichtungsstandort innerhalb des Josephs-Krankenhauses."
 Usage: #inline
 
-/* -------- meta -------- */
+// -------- meta -------- 
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
-/* -------- extensions -------- */
+// -------- extensions -------- 
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2010-01-01"
 * extension[inekVersionPeriod].extension[lastChange].valueDate = "2024-03-06"
 
-/* -------- identifier -------- */
+// -------- identifier -------- 
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value = "0123456789-A"
 * identifier[EmigaID].use = #official
@@ -209,21 +209,21 @@ Usage: #inline
 * identifier[abrechnungs-IKNR].value = "260551132"
 * identifier[abrechnungs-IKNR].period.start = "2010-01-01"
 
-/* -------- status -------- */
+// -------- status -------- 
 * status = #active
 
-/* -------- name / alias -------- */
+//-------- name / alias -------- 
 * name = "Station A"
 
-/* -------- mode -------- */
+// -------- mode -------- 
 * mode = #instance
 
-/* -------- type -------- */
+// -------- type -------- 
 * type[inekFacilityType].coding.system = $IneKFacilityTypeCS
 * type[inekFacilityType].coding.code = #00
 * type[inekFacilityType].coding.display = "Stationäre Behandlung"
 
-/* -------- address -------- */
+// -------- address -------- 
 * address.type = #physical
 * address.line[0] = "Am Krankenhaus 2"
 * address.line[0].extension[Strasse].valueString = "Am Krankenhaus"
@@ -234,18 +234,18 @@ Usage: #inline
 * address.state = "DE-NW"
 * address.postalCode = "48231"
 
-/* -------- physicalType -------- */
+// -------- physicalType -------- 
 * physicalType.coding.system = "http://terminology.hl7.org/CodeSystem/location-physical-type"
 * physicalType.coding.code = #wa
 * physicalType.coding.display = "Ward"
 
-/* -------- position -------- */
+// -------- position -------- 
 * position.latitude = 51.9604205
 * position.longitude = 8.0023529
 * position.altitude = 56
 
-/* -------- managing organization -------- */
+// -------- managing organization -------- 
 * managingOrganization.reference = "urn:uuid:hospital-org-12345678"
 
-/* -------- partOf (reference to main location) -------- */
+// -------- partOf (reference to main location) -------- 
 * partOf.reference = "urn:uuid:hospital-location-87654321"
