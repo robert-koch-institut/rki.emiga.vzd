@@ -10,7 +10,7 @@
 
 ## Inhaltsverzeichnis
 
-{{index:children}}
+{{index:root}}
 
 &nbsp;
 
