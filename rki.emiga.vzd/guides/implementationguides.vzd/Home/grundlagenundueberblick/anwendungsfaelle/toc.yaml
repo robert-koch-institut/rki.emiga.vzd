@@ -1,7 +1,7 @@
 - name: Index
   filename: Index.page.md
-- name: EpiWarn-Organisationen
-  filename: guide-epiwarn-organisationen.guide.md
+- name: ÖGD-Organisationen
+  filename: guide-oegd-organisationen.guide.md
 - name: Generische Organisationen
   filename: guide-generische-organisationen.guide.md
 - name: Inek Krankenhausorganisationen

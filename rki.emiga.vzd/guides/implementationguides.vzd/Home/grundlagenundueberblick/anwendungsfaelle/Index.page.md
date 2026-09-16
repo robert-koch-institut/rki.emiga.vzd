@@ -13,7 +13,7 @@ Dieser Abschnitt bietet eine Übersicht über alle in diesem Implementierungslei
 
 #### Enthaltene Anwendungsfälle:
 
-1. **EpiWarn Organisationen**  
+1. **ÖGD Organisationen**  
 EpiWarn Organisationen sind ereignisbasierte Public-Health-Surveillance Systeme für die organisierte und schnelle Erhebung, Analyse, Bewertung sowie Kommunikation von Informationen über Ereignisse, die eine potenzielle Gefahr für die internationale Public Health darstellen.
 
 2. **Generische Organisation**  
