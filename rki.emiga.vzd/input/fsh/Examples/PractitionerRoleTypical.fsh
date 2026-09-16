@@ -1,4 +1,4 @@
-Instance: PractitionerRole-typical
+Instance: PractitionerRoleTypical
 InstanceOf: EmigaPractitionerRole
 Usage: #example
 
@@ -14,7 +14,7 @@ Usage: #example
 // -------------------------------------------------------------------
 * active = true
 
-* practitioner = Reference(Practitioner/Practitioner-typical)
+* practitioner = Reference(Practitioner/PractitioneTypical)
 * organization = Reference(Organization/EmigaPublicHealthOrganizationTypical)
 
 // -------------------------------------------------------------------
@@ -26,7 +26,7 @@ Usage: #example
 // ---------------------------
 // 0..1 MS element
 // ---------------------------
-* location = Reference(Location/Location-typical)
+* location = Reference(Location/LocationTypical)
 
 // ---------------------------------
 // 0..* MS element (include once)

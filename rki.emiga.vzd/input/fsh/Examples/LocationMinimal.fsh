@@ -1,9 +1,9 @@
-Instance: Location-maximal
+Instance: LocationMinimal
 InstanceOf: EmigaLocation
 Usage: #example
 
 // ----------------------------------------------------
-// META (EMIGA profile + security + tags)
+// META (required & MustSupport)
 // ----------------------------------------------------
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
 
@@ -24,23 +24,20 @@ Usage: #example
 // * meta.tag[orgvBundleVersion].display = "Bundle Version 1.0.0"
 
 // ----------------------------------------------------
-// IDENTIFIERS — all slices populated
+// IDENTIFIERS — ALL SLICE MS ELEMENTS (1 per slice)
 // ----------------------------------------------------
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value = "ORGVID-123456"
-* identifier[EmigaID].use = #official
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[98765432]"
-* identifier[EmigaFileNumber].use = #official
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[13579246]"
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "123456789"
 * identifier[IKNR].period.start = "2020-01-01"
-* identifier[IKNR].period.end = "2030-12-31"
 
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
-* identifier[BSNR].value = "234567890"
+* identifier[BSNR].value = "123456789"
 
 * identifier[LANR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR"
 * identifier[LANR].value = "987654321"
@@ -55,32 +52,42 @@ Usage: #example
 * identifier[telematikID].value = "1-234567890"
 
 // ----------------------------------------------------
-// CORE ATTRIBUTES
+// STATUS (0..1 MS → required in minimal)
 // ----------------------------------------------------
 * status = #active
 
-* name = "Stadt XYZ – FB 9 / Standort Musterstraße"
-* alias = "FB9-MSTR"
-* description = "Beispielstandort für EMIGA maximal"
+// ----------------------------------------------------
+// NAME (0..1 MS)
+// ----------------------------------------------------
+* name = "Standort Musterstraße"
 
+// ----------------------------------------------------
+// ALIAS (0..1 MS)
+// ----------------------------------------------------
+* alias = "ST-MSTR"
+
+// ----------------------------------------------------
+// DESCRIPTION (0..1 MS)
+// ----------------------------------------------------
+* description = "Beispielstandort für EMIGA minimal"
+
+// ----------------------------------------------------
+// MODE (1..1 MS, fixed to #instance)
+// ----------------------------------------------------
 * mode = #instance
 
 // ----------------------------------------------------
-// ADDRESS (full, with all EMIGA MS extensions)
+// ADDRESS (0..1 MS) with all MS sub-elements & extensions
 // ----------------------------------------------------
-* address.use = #work
 * address.type = #physical
-* address.text = "Musterstraße 12, 10115 Musterstadt"
 * address.city = "Musterstadt"
 * address.state = "DE-BE"
 * address.postalCode = "10115"
-* address.country = "DE"
 
-// Stadtteil extension
+// MS extensions
 * address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
 * address.extension[Stadtteil].valueString = "Musterbezirk"
 
-// Line + line extensions
 * address.line[0] = "Musterstraße 12"
 * address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
 * address.line[0].extension[Strasse].valueString = "Musterstraße"
@@ -89,22 +96,22 @@ Usage: #example
 * address.line[0].extension[Hausnummer].valueString = "12"
 
 * address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
-* address.line[0].extension[Adresszusatz].valueString = "Haus A, EG"
+* address.line[0].extension[Adresszusatz].valueString = "EG"
 * address.line[1] = "Musterbezirk"
 
 
 // ----------------------------------------------------
-// POSITION (0..1 MS) — longitude, latitude, altitude
+// POSITION (0..1 MS)
 // ----------------------------------------------------
 * position.longitude = 13.4050
 * position.latitude = 52.5200
-* position.altitude = 35.2   // Not included in minimal or typical (completely optional)
 
 // ----------------------------------------------------
-// MANAGING ORGANIZATION & PART-OF
+// MANAGING ORGANIZATION (0..1 MS)
 // ----------------------------------------------------
-* managingOrganization = Reference(Organization/Organization-maximal)
-* managingOrganization.display = "Gesundheitsamt Stadt XYZ"
+* managingOrganization = Reference(Organization/Organization-minimal)
 
-* partOf = Reference(Location/Location-minimal)
-* partOf.display = "Hauptstandort Stadt XYZ"
+// ----------------------------------------------------
+// PART OF (0..1 MS) (optional in minimal, required in typical)
+// ----------------------------------------------------
+// * partOf = Reference(Location/Location-typical) 

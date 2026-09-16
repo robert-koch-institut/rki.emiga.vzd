@@ -1,4 +1,4 @@
-Instance: Practitioner-minimal
+Instance: PractitionerMinimal
 InstanceOf: EmigaPractitioner
 Usage: #example
 
