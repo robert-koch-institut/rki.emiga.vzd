@@ -1,6 +1,6 @@
-// EMIGA VZD Informative CapabilityStatement
-// Source: runtime HAPI CapabilityStatement uploaded 2026-09-16
-// SHALL/MAY classifications below are proposed IG policy.
+// EMIGA VZD normative CapabilityStatement
+// Verified against ref-get-capability-statement_08092026.json
+// Presentation style inspired by ISiK: expectation extensions + documentation/examples.
 
 Alias: $capExpectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 
@@ -12,35 +12,49 @@ Instance: EmigaVzdCapabilityStatementRequirements
 InstanceOf: CapabilityStatement
 Usage: #definition
 * url = "https://emiga.rki.de/fhir/vzd/CapabilityStatement/EmigaVzdRequirements"
-* version = "0.1.0"
+* version = "0.2.0-draft"
 * name = "EmigaVzdRequirements"
-* title = "EMIGA VZD CapabilityStatement - Requirements"
+* title = "CapabilityStatement für EMIGA VZD"
 * status = #draft
 * experimental = true
 * date = "2026-09-16"
 * publisher = "Robert Koch-Institut"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[0] = #application/fhir+json
-* format[1] = #application/fhir+xml
+* format[0] = #application/fhir+xml
+* format[1] = #application/fhir+json
 * description = """
-Dieses CapabilityStatement beschreibt die normativen REST-Anforderungen für EMIGA VZD.
-Es ist vom Typ `requirements`. Die Verbindlichkeit wird analog zu ISiK über die
-CapabilityStatement-Expectation-Extension mit `SHALL` und `MAY` ausgedrückt.
+Dieses CapabilityStatement beschreibt die normativen FHIR-REST-Anforderungen für EMIGA VZD.
+Es ist vom Typ `requirements`. Zur Kennzeichnung der Verbindlichkeit wird die
+CapabilityStatement-Expectation-Extension verwendet.
 
-Die enthaltenen Fähigkeiten wurden aus dem CapabilityStatement der HAPI-FHIR-Referenzinstanz
-abgeleitet. Die Einstufung als SHALL oder MAY ist eine normative Designentscheidung dieses IG
-und muss durch Product Owner und Backend-Team bestätigt werden.
+Die aufgeführten Interaktionen entsprechen den vom geprüften HAPI-FHIR-Referenzserver
+unterstützten Interaktionen und sind in diesem Requirements-CapabilityStatement als `SHALL`
+gekennzeichnet. Suchparameter, Includes, Reverse-Includes und Operationen werden für den
+VZD-spezifischen Anwendungsbereich ausgewiesen.
+"""
+* purpose = """
+Dieses CapabilityStatement definiert die für EMIGA VZD vorgesehenen Server-Fähigkeiten.
+Es dient als normative Grundlage für Implementierung und IG-Dokumentation.
 """
 * rest[0].mode = #server
 
-// -----------------------------------------------------------------------------
-// System-level interactions
-// -----------------------------------------------------------------------------
 * rest[0].interaction[0].code = #transaction
 * insert Expectation(rest[0].interaction[0], SHALL)
+* rest[0].interaction[0].documentation = """
+**Beispiel:**
+`POST [base]`
+
+Der Server unterstützt FHIR-Transaktionen auf Systemebene.
+"""
 * rest[0].interaction[1].code = #history-system
 * insert Expectation(rest[0].interaction[1], MAY)
+* rest[0].interaction[1].documentation = """
+**Beispiel:**
+`GET [base]/_history`
+
+Der Server unterstützt die systemweite Historie.
+"""
 
 * rest[0].operation[0].name = "fetch-org-details"
 * rest[0].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-fetch-org-details"
@@ -68,102 +82,230 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[0], SHALL)
 * rest[0].resource[0].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
 * insert Expectation(rest[0].resource[0].supportedProfile[0], SHALL)
-* rest[0].resource[0].interaction[0].code = #read
+* rest[0].resource[0].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[0].interaction[0], SHALL)
-* rest[0].resource[0].interaction[1].code = #search-type
+* rest[0].resource[0].interaction[0].documentation = """
+Die REST-Interaktion `search-type` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`GET [base]/HealthcareService?_id=123`
+"""
+* rest[0].resource[0].interaction[1].code = #update
 * insert Expectation(rest[0].resource[0].interaction[1], SHALL)
-* rest[0].resource[0].interaction[2].code = #create
+* rest[0].resource[0].interaction[1].documentation = """
+Die REST-Interaktion `update` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`PUT [base]/HealthcareService/123`
+"""
+* rest[0].resource[0].interaction[2].code = #vread
 * insert Expectation(rest[0].resource[0].interaction[2], SHALL)
-* rest[0].resource[0].interaction[3].code = #update
+* rest[0].resource[0].interaction[2].documentation = """
+Die REST-Interaktion `vread` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`GET [base]/HealthcareService/123/_history/1`
+"""
+* rest[0].resource[0].interaction[3].code = #read
 * insert Expectation(rest[0].resource[0].interaction[3], SHALL)
+* rest[0].resource[0].interaction[3].documentation = """
+Die REST-Interaktion `read` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`GET [base]/HealthcareService/123`
+"""
 * rest[0].resource[0].interaction[4].code = #patch
-* insert Expectation(rest[0].resource[0].interaction[4], MAY)
-* rest[0].resource[0].interaction[5].code = #delete
-* insert Expectation(rest[0].resource[0].interaction[5], MAY)
-* rest[0].resource[0].interaction[6].code = #vread
-* insert Expectation(rest[0].resource[0].interaction[6], MAY)
-* rest[0].resource[0].interaction[7].code = #history-instance
-* insert Expectation(rest[0].resource[0].interaction[7], MAY)
-* rest[0].resource[0].interaction[8].code = #history-type
-* insert Expectation(rest[0].resource[0].interaction[8], MAY)
+* insert Expectation(rest[0].resource[0].interaction[4], SHALL)
+* rest[0].resource[0].interaction[4].documentation = """
+Die REST-Interaktion `patch` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`PATCH [base]/HealthcareService/123`
+"""
+* rest[0].resource[0].interaction[5].code = #history-type
+* insert Expectation(rest[0].resource[0].interaction[5], SHALL)
+* rest[0].resource[0].interaction[5].documentation = """
+Die REST-Interaktion `history-type` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`GET [base]/HealthcareService/_history`
+"""
+* rest[0].resource[0].interaction[6].code = #history-instance
+* insert Expectation(rest[0].resource[0].interaction[6], SHALL)
+* rest[0].resource[0].interaction[6].documentation = """
+Die REST-Interaktion `history-instance` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`GET [base]/HealthcareService/123/_history`
+"""
+* rest[0].resource[0].interaction[7].code = #delete
+* insert Expectation(rest[0].resource[0].interaction[7], SHALL)
+* rest[0].resource[0].interaction[7].documentation = """
+Die REST-Interaktion `delete` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`DELETE [base]/HealthcareService/123`
+"""
+* rest[0].resource[0].interaction[8].code = #create
+* insert Expectation(rest[0].resource[0].interaction[8], SHALL)
+* rest[0].resource[0].interaction[8].documentation = """
+Die REST-Interaktion `create` MUSS für `HealthcareService` unterstützt werden.
+**Beispiel:**
+`POST [base]/HealthcareService`
+"""
 * rest[0].resource[0].versioning = #versioned-update
 * rest[0].resource[0].searchParam[0].name = "identifier"
 * rest[0].resource[0].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"
 * rest[0].resource[0].searchParam[0].type = #token
-* rest[0].resource[0].searchParam[0].documentation = "External identifiers for this item"
+* rest[0].resource[0].searchParam[0].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?identifier=https://example.org/fhir/sid/example|12345`
+
+**Anwendungshinweis:**
+External identifiers for this item
+"""
 * insert Expectation(rest[0].resource[0].searchParam[0], SHALL)
 * rest[0].resource[0].searchParam[1].name = "specialty"
 * rest[0].resource[0].searchParam[1].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty"
 * rest[0].resource[0].searchParam[1].type = #token
-* rest[0].resource[0].searchParam[1].documentation = "The specialty of the service provided by this healthcare service"
+* rest[0].resource[0].searchParam[1].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?specialty=<code>`
+
+**Anwendungshinweis:**
+The specialty of the service provided by this healthcare service
+"""
 * insert Expectation(rest[0].resource[0].searchParam[1], MAY)
 * rest[0].resource[0].searchParam[2].name = "service-category"
 * rest[0].resource[0].searchParam[2].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category"
 * rest[0].resource[0].searchParam[2].type = #token
-* rest[0].resource[0].searchParam[2].documentation = "Service Category of the Healthcare Service"
+* rest[0].resource[0].searchParam[2].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?service-category=<code>`
+
+**Anwendungshinweis:**
+Service Category of the Healthcare Service
+"""
 * insert Expectation(rest[0].resource[0].searchParam[2], MAY)
 * rest[0].resource[0].searchParam[3].name = "service-type"
 * rest[0].resource[0].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"
 * rest[0].resource[0].searchParam[3].type = #token
-* rest[0].resource[0].searchParam[3].documentation = "The type of service provided by this healthcare service"
+* rest[0].resource[0].searchParam[3].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?service-type=<code>`
+
+**Anwendungshinweis:**
+The type of service provided by this healthcare service
+"""
 * insert Expectation(rest[0].resource[0].searchParam[3], SHALL)
 * rest[0].resource[0].searchParam[4].name = "active"
 * rest[0].resource[0].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-active"
 * rest[0].resource[0].searchParam[4].type = #token
-* rest[0].resource[0].searchParam[4].documentation = "The Healthcare Service is currently marked as active"
+* rest[0].resource[0].searchParam[4].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?active=true`
+
+**Anwendungshinweis:**
+The Healthcare Service is currently marked as active
+"""
 * insert Expectation(rest[0].resource[0].searchParam[4], SHALL)
 * rest[0].resource[0].searchParam[5].name = "program"
 * rest[0].resource[0].searchParam[5].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-program"
 * rest[0].resource[0].searchParam[5].type = #token
-* rest[0].resource[0].searchParam[5].documentation = "One of the Programs supported by this HealthcareService"
+* rest[0].resource[0].searchParam[5].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?program=<code>`
+
+**Anwendungshinweis:**
+One of the Programs supported by this HealthcareService
+"""
 * insert Expectation(rest[0].resource[0].searchParam[5], MAY)
 * rest[0].resource[0].searchParam[6].name = "characteristic"
 * rest[0].resource[0].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic"
 * rest[0].resource[0].searchParam[6].type = #token
-* rest[0].resource[0].searchParam[6].documentation = "One of the HealthcareService's characteristics"
+* rest[0].resource[0].searchParam[6].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?characteristic=<code>`
+
+**Anwendungshinweis:**
+One of the HealthcareService's characteristics
+"""
 * insert Expectation(rest[0].resource[0].searchParam[6], MAY)
 * rest[0].resource[0].searchParam[7].name = "endpoint"
 * rest[0].resource[0].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-endpoint"
 * rest[0].resource[0].searchParam[7].type = #reference
-* rest[0].resource[0].searchParam[7].documentation = "Technical endpoints providing access to electronic services operated for the healthcare service"
+* rest[0].resource[0].searchParam[7].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?endpoint=Endpoint/123`
+
+**Anwendungshinweis:**
+Technical endpoints providing access to electronic services operated for the healthcare service
+"""
 * insert Expectation(rest[0].resource[0].searchParam[7], MAY)
 * rest[0].resource[0].searchParam[8].name = "coverage-area"
 * rest[0].resource[0].searchParam[8].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-coverage-area"
 * rest[0].resource[0].searchParam[8].type = #reference
-* rest[0].resource[0].searchParam[8].documentation = "Location(s) service is intended for/available to"
+* rest[0].resource[0].searchParam[8].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?coverage-area=Location/123`
+
+**Anwendungshinweis:**
+Location(s) service is intended for/available to
+"""
 * insert Expectation(rest[0].resource[0].searchParam[8], MAY)
 * rest[0].resource[0].searchParam[9].name = "organization"
 * rest[0].resource[0].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-organization"
 * rest[0].resource[0].searchParam[9].type = #reference
-* rest[0].resource[0].searchParam[9].documentation = "The organization that provides this Healthcare Service"
+* rest[0].resource[0].searchParam[9].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?organization=Organization/123`
+
+**Anwendungshinweis:**
+The organization that provides this Healthcare Service
+"""
 * insert Expectation(rest[0].resource[0].searchParam[9], SHALL)
 * rest[0].resource[0].searchParam[10].name = "name"
 * rest[0].resource[0].searchParam[10].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-name"
 * rest[0].resource[0].searchParam[10].type = #string
-* rest[0].resource[0].searchParam[10].documentation = "A portion of the Healthcare service name"
+* rest[0].resource[0].searchParam[10].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?name=Gesundheitsamt`
+
+**Anwendungshinweis:**
+A portion of the Healthcare service name
+"""
 * insert Expectation(rest[0].resource[0].searchParam[10], SHALL)
 * rest[0].resource[0].searchParam[11].name = "location"
 * rest[0].resource[0].searchParam[11].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
 * rest[0].resource[0].searchParam[11].type = #reference
-* rest[0].resource[0].searchParam[11].documentation = "The location of the Healthcare Service"
+* rest[0].resource[0].searchParam[11].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?location=Location/123`
+
+**Anwendungshinweis:**
+The location of the Healthcare Service
+"""
 * insert Expectation(rest[0].resource[0].searchParam[11], SHALL)
 * rest[0].resource[0].searchParam[12].name = "_id"
 * rest[0].resource[0].searchParam[12].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[0].resource[0].searchParam[12].type = #token
-* rest[0].resource[0].searchParam[12].documentation = "Logical id of this artifact"
+* rest[0].resource[0].searchParam[12].documentation = """
+**Beispiel:**
+`GET [base]/HealthcareService?_id=123`
+
+**Anwendungshinweis:**
+Logical id of this artifact
+"""
 * insert Expectation(rest[0].resource[0].searchParam[12], SHALL)
-* rest[0].resource[0].searchInclude[0] = "HealthcareService:location"
-* insert Expectation(rest[0].resource[0].searchInclude[0], SHALL)
-* rest[0].resource[0].searchInclude[1] = "HealthcareService:organization"
-* insert Expectation(rest[0].resource[0].searchInclude[1], SHALL)
+* rest[0].resource[0].searchInclude[0] = "*"
+* insert Expectation(rest[0].resource[0].searchInclude[0], MAY)
+* rest[0].resource[0].searchInclude[1] = "HealthcareService:coverage-area"
+* insert Expectation(rest[0].resource[0].searchInclude[1], MAY)
 * rest[0].resource[0].searchInclude[2] = "HealthcareService:endpoint"
 * insert Expectation(rest[0].resource[0].searchInclude[2], MAY)
-* rest[0].resource[0].searchInclude[3] = "HealthcareService:coverage-area"
-* insert Expectation(rest[0].resource[0].searchInclude[3], MAY)
+* rest[0].resource[0].searchInclude[3] = "HealthcareService:location"
+* insert Expectation(rest[0].resource[0].searchInclude[3], SHALL)
+* rest[0].resource[0].searchInclude[4] = "HealthcareService:organization"
+* insert Expectation(rest[0].resource[0].searchInclude[4], SHALL)
 * rest[0].resource[0].searchRevInclude[0] = "PractitionerRole:service"
 * insert Expectation(rest[0].resource[0].searchRevInclude[0], MAY)
 * rest[0].resource[0].operation[0].name = "validate"
 * rest[0].resource[0].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
+* rest[0].resource[0].operation[0].documentation = """
+Die Operation `$validate` wird von der Referenzimplementierung für `HealthcareService` unterstützt.
+"""
 * insert Expectation(rest[0].resource[0].operation[0], MAY)
 
 // =============================================================================
@@ -181,110 +323,259 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[1].supportedProfile[3], SHALL)
 * rest[0].resource[1].supportedProfile[4] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation"
 * insert Expectation(rest[0].resource[1].supportedProfile[4], SHALL)
-* rest[0].resource[1].interaction[0].code = #read
+* rest[0].resource[1].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[1].interaction[0], SHALL)
-* rest[0].resource[1].interaction[1].code = #search-type
+* rest[0].resource[1].interaction[0].documentation = """
+Die REST-Interaktion `search-type` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`GET [base]/Location?_id=123`
+"""
+* rest[0].resource[1].interaction[1].code = #update
 * insert Expectation(rest[0].resource[1].interaction[1], SHALL)
-* rest[0].resource[1].interaction[2].code = #create
+* rest[0].resource[1].interaction[1].documentation = """
+Die REST-Interaktion `update` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`PUT [base]/Location/123`
+"""
+* rest[0].resource[1].interaction[2].code = #vread
 * insert Expectation(rest[0].resource[1].interaction[2], SHALL)
-* rest[0].resource[1].interaction[3].code = #update
+* rest[0].resource[1].interaction[2].documentation = """
+Die REST-Interaktion `vread` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`GET [base]/Location/123/_history/1`
+"""
+* rest[0].resource[1].interaction[3].code = #read
 * insert Expectation(rest[0].resource[1].interaction[3], SHALL)
+* rest[0].resource[1].interaction[3].documentation = """
+Die REST-Interaktion `read` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`GET [base]/Location/123`
+"""
 * rest[0].resource[1].interaction[4].code = #patch
-* insert Expectation(rest[0].resource[1].interaction[4], MAY)
-* rest[0].resource[1].interaction[5].code = #delete
-* insert Expectation(rest[0].resource[1].interaction[5], MAY)
-* rest[0].resource[1].interaction[6].code = #vread
-* insert Expectation(rest[0].resource[1].interaction[6], MAY)
-* rest[0].resource[1].interaction[7].code = #history-instance
-* insert Expectation(rest[0].resource[1].interaction[7], MAY)
-* rest[0].resource[1].interaction[8].code = #history-type
-* insert Expectation(rest[0].resource[1].interaction[8], MAY)
+* insert Expectation(rest[0].resource[1].interaction[4], SHALL)
+* rest[0].resource[1].interaction[4].documentation = """
+Die REST-Interaktion `patch` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`PATCH [base]/Location/123`
+"""
+* rest[0].resource[1].interaction[5].code = #history-type
+* insert Expectation(rest[0].resource[1].interaction[5], SHALL)
+* rest[0].resource[1].interaction[5].documentation = """
+Die REST-Interaktion `history-type` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`GET [base]/Location/_history`
+"""
+* rest[0].resource[1].interaction[6].code = #history-instance
+* insert Expectation(rest[0].resource[1].interaction[6], SHALL)
+* rest[0].resource[1].interaction[6].documentation = """
+Die REST-Interaktion `history-instance` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`GET [base]/Location/123/_history`
+"""
+* rest[0].resource[1].interaction[7].code = #delete
+* insert Expectation(rest[0].resource[1].interaction[7], SHALL)
+* rest[0].resource[1].interaction[7].documentation = """
+Die REST-Interaktion `delete` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`DELETE [base]/Location/123`
+"""
+* rest[0].resource[1].interaction[8].code = #create
+* insert Expectation(rest[0].resource[1].interaction[8], SHALL)
+* rest[0].resource[1].interaction[8].documentation = """
+Die REST-Interaktion `create` MUSS für `Location` unterstützt werden.
+**Beispiel:**
+`POST [base]/Location`
+"""
 * rest[0].resource[1].versioning = #versioned-update
 * rest[0].resource[1].searchParam[0].name = "identifier"
 * rest[0].resource[1].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
 * rest[0].resource[1].searchParam[0].type = #token
-* rest[0].resource[1].searchParam[0].documentation = "An identifier for the location"
+* rest[0].resource[1].searchParam[0].documentation = """
+**Beispiel:**
+`GET [base]/Location?identifier=https://example.org/fhir/sid/example|12345`
+
+**Anwendungshinweis:**
+An identifier for the location
+"""
 * insert Expectation(rest[0].resource[1].searchParam[0], SHALL)
 * rest[0].resource[1].searchParam[1].name = "partof"
 * rest[0].resource[1].searchParam[1].definition = "http://hl7.org/fhir/SearchParameter/Location-partof"
 * rest[0].resource[1].searchParam[1].type = #reference
-* rest[0].resource[1].searchParam[1].documentation = "A location of which this location is a part"
+* rest[0].resource[1].searchParam[1].documentation = """
+**Beispiel:**
+`GET [base]/Location?partof=Location/123`
+
+**Anwendungshinweis:**
+A location of which this location is a part
+"""
 * insert Expectation(rest[0].resource[1].searchParam[1], SHALL)
 * rest[0].resource[1].searchParam[2].name = "address"
 * rest[0].resource[1].searchParam[2].definition = "http://hl7.org/fhir/SearchParameter/Location-address"
 * rest[0].resource[1].searchParam[2].type = #string
-* rest[0].resource[1].searchParam[2].documentation = "A (part of the) address of the location"
+* rest[0].resource[1].searchParam[2].documentation = """
+**Beispiel:**
+`GET [base]/Location?address=Berlin`
+
+**Anwendungshinweis:**
+A (part of the) address of the location
+"""
 * insert Expectation(rest[0].resource[1].searchParam[2], MAY)
 * rest[0].resource[1].searchParam[3].name = "address-state"
 * rest[0].resource[1].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/Location-address-state"
 * rest[0].resource[1].searchParam[3].type = #string
-* rest[0].resource[1].searchParam[3].documentation = "A state specified in an address"
+* rest[0].resource[1].searchParam[3].documentation = """
+**Beispiel:**
+`GET [base]/Location?address-state=Berlin`
+
+**Anwendungshinweis:**
+A state specified in an address
+"""
 * insert Expectation(rest[0].resource[1].searchParam[3], MAY)
 * rest[0].resource[1].searchParam[4].name = "operational-status"
 * rest[0].resource[1].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/Location-operational-status"
 * rest[0].resource[1].searchParam[4].type = #token
-* rest[0].resource[1].searchParam[4].documentation = "Searches for locations (typically bed/room) that have an operational status (e.g. contaminated, housekeeping)"
+* rest[0].resource[1].searchParam[4].documentation = """
+**Beispiel:**
+`GET [base]/Location?operational-status=<code>`
+
+**Anwendungshinweis:**
+Searches for locations (typically bed/room) that have an operational status (e.g. contaminated, housekeeping)
+"""
 * insert Expectation(rest[0].resource[1].searchParam[4], MAY)
 * rest[0].resource[1].searchParam[5].name = "type"
 * rest[0].resource[1].searchParam[5].definition = "http://hl7.org/fhir/SearchParameter/Location-type"
 * rest[0].resource[1].searchParam[5].type = #token
-* rest[0].resource[1].searchParam[5].documentation = "A code for the type of location"
+* rest[0].resource[1].searchParam[5].documentation = """
+**Beispiel:**
+`GET [base]/Location?type=<code>`
+
+**Anwendungshinweis:**
+A code for the type of location
+"""
 * insert Expectation(rest[0].resource[1].searchParam[5], SHALL)
 * rest[0].resource[1].searchParam[6].name = "address-postalcode"
 * rest[0].resource[1].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/Location-address-postalcode"
 * rest[0].resource[1].searchParam[6].type = #string
-* rest[0].resource[1].searchParam[6].documentation = "A postal code specified in an address"
+* rest[0].resource[1].searchParam[6].documentation = """
+**Beispiel:**
+`GET [base]/Location?address-postalcode=10115`
+
+**Anwendungshinweis:**
+A postal code specified in an address
+"""
 * insert Expectation(rest[0].resource[1].searchParam[6], MAY)
 * rest[0].resource[1].searchParam[7].name = "address-country"
 * rest[0].resource[1].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/Location-address-country"
 * rest[0].resource[1].searchParam[7].type = #string
-* rest[0].resource[1].searchParam[7].documentation = "A country specified in an address"
+* rest[0].resource[1].searchParam[7].documentation = """
+**Beispiel:**
+`GET [base]/Location?address-country=DE`
+
+**Anwendungshinweis:**
+A country specified in an address
+"""
 * insert Expectation(rest[0].resource[1].searchParam[7], MAY)
 * rest[0].resource[1].searchParam[8].name = "endpoint"
 * rest[0].resource[1].searchParam[8].definition = "http://hl7.org/fhir/SearchParameter/Location-endpoint"
 * rest[0].resource[1].searchParam[8].type = #reference
-* rest[0].resource[1].searchParam[8].documentation = "Technical endpoints providing access to services operated for the location"
+* rest[0].resource[1].searchParam[8].documentation = """
+**Beispiel:**
+`GET [base]/Location?endpoint=Endpoint/123`
+
+**Anwendungshinweis:**
+Technical endpoints providing access to services operated for the location
+"""
 * insert Expectation(rest[0].resource[1].searchParam[8], MAY)
 * rest[0].resource[1].searchParam[9].name = "organization"
 * rest[0].resource[1].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/Location-organization"
 * rest[0].resource[1].searchParam[9].type = #reference
-* rest[0].resource[1].searchParam[9].documentation = "Searches for locations that are managed by the provided organization"
+* rest[0].resource[1].searchParam[9].documentation = """
+**Beispiel:**
+`GET [base]/Location?organization=Organization/123`
+
+**Anwendungshinweis:**
+Searches for locations that are managed by the provided organization
+"""
 * insert Expectation(rest[0].resource[1].searchParam[9], SHALL)
 * rest[0].resource[1].searchParam[10].name = "address-use"
 * rest[0].resource[1].searchParam[10].definition = "http://hl7.org/fhir/SearchParameter/Location-address-use"
 * rest[0].resource[1].searchParam[10].type = #token
-* rest[0].resource[1].searchParam[10].documentation = "A use code specified in an address"
+* rest[0].resource[1].searchParam[10].documentation = """
+**Beispiel:**
+`GET [base]/Location?address-use=work`
+
+**Anwendungshinweis:**
+A use code specified in an address
+"""
 * insert Expectation(rest[0].resource[1].searchParam[10], MAY)
 * rest[0].resource[1].searchParam[11].name = "name"
 * rest[0].resource[1].searchParam[11].definition = "http://hl7.org/fhir/SearchParameter/Location-name"
 * rest[0].resource[1].searchParam[11].type = #string
-* rest[0].resource[1].searchParam[11].documentation = "A portion of the location's name or alias"
+* rest[0].resource[1].searchParam[11].documentation = """
+**Beispiel:**
+`GET [base]/Location?name=Gesundheitsamt`
+
+**Anwendungshinweis:**
+A portion of the location's name or alias
+"""
 * insert Expectation(rest[0].resource[1].searchParam[11], SHALL)
 * rest[0].resource[1].searchParam[12].name = "_id"
 * rest[0].resource[1].searchParam[12].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[0].resource[1].searchParam[12].type = #token
-* rest[0].resource[1].searchParam[12].documentation = "Logical id of this artifact"
+* rest[0].resource[1].searchParam[12].documentation = """
+**Beispiel:**
+`GET [base]/Location?_id=123`
+
+**Anwendungshinweis:**
+Logical id of this artifact
+"""
 * insert Expectation(rest[0].resource[1].searchParam[12], SHALL)
 * rest[0].resource[1].searchParam[13].name = "near"
 * rest[0].resource[1].searchParam[13].definition = "http://hl7.org/fhir/SearchParameter/Location-near"
 * rest[0].resource[1].searchParam[13].type = #special
+* rest[0].resource[1].searchParam[13].documentation = """
+**Beispiel:**
+`GET [base]/Location?near=52.5200|13.4050|5|km`
+
+**Anwendungshinweis:**
+Search for locations where the location.position is near to, or within a specified distance of, the provided coordinates expressed as [latitude]|[longitude]|[distance]|[units] (using the WGS84 datum, see notes).
+If the units are omitted, then kms should be assumed. If the distance is omitted, then the server can use its own discretion as to what distances should be considered near (and units are irrelevant)
+
+Servers may search using various techniques that might have differing accuracies, depending on implementation efficiency.
+
+Requires the near-distance parameter to be provided also
+"""
 * insert Expectation(rest[0].resource[1].searchParam[13], MAY)
 * rest[0].resource[1].searchParam[14].name = "address-city"
 * rest[0].resource[1].searchParam[14].definition = "http://hl7.org/fhir/SearchParameter/Location-address-city"
 * rest[0].resource[1].searchParam[14].type = #string
-* rest[0].resource[1].searchParam[14].documentation = "A city specified in an address"
+* rest[0].resource[1].searchParam[14].documentation = """
+**Beispiel:**
+`GET [base]/Location?address-city=Berlin`
+
+**Anwendungshinweis:**
+A city specified in an address
+"""
 * insert Expectation(rest[0].resource[1].searchParam[14], MAY)
 * rest[0].resource[1].searchParam[15].name = "status"
 * rest[0].resource[1].searchParam[15].definition = "http://hl7.org/fhir/SearchParameter/Location-status"
 * rest[0].resource[1].searchParam[15].type = #token
-* rest[0].resource[1].searchParam[15].documentation = "Searches for locations with a specific kind of status"
+* rest[0].resource[1].searchParam[15].documentation = """
+**Beispiel:**
+`GET [base]/Location?status=active`
+
+**Anwendungshinweis:**
+Searches for locations with a specific kind of status
+"""
 * insert Expectation(rest[0].resource[1].searchParam[15], SHALL)
-* rest[0].resource[1].searchInclude[0] = "Location:organization"
-* insert Expectation(rest[0].resource[1].searchInclude[0], SHALL)
-* rest[0].resource[1].searchInclude[1] = "Location:partof"
-* insert Expectation(rest[0].resource[1].searchInclude[1], SHALL)
-* rest[0].resource[1].searchInclude[2] = "Location:endpoint"
-* insert Expectation(rest[0].resource[1].searchInclude[2], MAY)
+* rest[0].resource[1].searchInclude[0] = "*"
+* insert Expectation(rest[0].resource[1].searchInclude[0], MAY)
+* rest[0].resource[1].searchInclude[1] = "Location:endpoint"
+* insert Expectation(rest[0].resource[1].searchInclude[1], MAY)
+* rest[0].resource[1].searchInclude[2] = "Location:organization"
+* insert Expectation(rest[0].resource[1].searchInclude[2], SHALL)
+* rest[0].resource[1].searchInclude[3] = "Location:partof"
+* insert Expectation(rest[0].resource[1].searchInclude[3], SHALL)
 * rest[0].resource[1].searchRevInclude[0] = "HealthcareService:coverage-area"
 * insert Expectation(rest[0].resource[1].searchRevInclude[0], MAY)
 * rest[0].resource[1].searchRevInclude[1] = "HealthcareService:location"
@@ -295,6 +586,9 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[1].searchRevInclude[3], MAY)
 * rest[0].resource[1].operation[0].name = "validate"
 * rest[0].resource[1].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
+* rest[0].resource[1].operation[0].documentation = """
+Die Operation `$validate` wird von der Referenzimplementierung für `Location` unterstützt.
+"""
 * insert Expectation(rest[0].resource[1].operation[0], MAY)
 
 // =============================================================================
@@ -310,99 +604,230 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[2].supportedProfile[2], SHALL)
 * rest[0].resource[2].supportedProfile[3] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 * insert Expectation(rest[0].resource[2].supportedProfile[3], SHALL)
-* rest[0].resource[2].interaction[0].code = #read
+* rest[0].resource[2].interaction[0].code = #update
 * insert Expectation(rest[0].resource[2].interaction[0], SHALL)
-* rest[0].resource[2].interaction[1].code = #search-type
+* rest[0].resource[2].interaction[0].documentation = """
+Die REST-Interaktion `update` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`PUT [base]/Organization/123`
+"""
+* rest[0].resource[2].interaction[1].code = #patch
 * insert Expectation(rest[0].resource[2].interaction[1], SHALL)
-* rest[0].resource[2].interaction[2].code = #create
+* rest[0].resource[2].interaction[1].documentation = """
+Die REST-Interaktion `patch` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`PATCH [base]/Organization/123`
+"""
+* rest[0].resource[2].interaction[2].code = #search-type
 * insert Expectation(rest[0].resource[2].interaction[2], SHALL)
-* rest[0].resource[2].interaction[3].code = #update
+* rest[0].resource[2].interaction[2].documentation = """
+Die REST-Interaktion `search-type` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`GET [base]/Organization?_id=123`
+"""
+* rest[0].resource[2].interaction[3].code = #vread
 * insert Expectation(rest[0].resource[2].interaction[3], SHALL)
-* rest[0].resource[2].interaction[4].code = #patch
-* insert Expectation(rest[0].resource[2].interaction[4], MAY)
-* rest[0].resource[2].interaction[5].code = #delete
-* insert Expectation(rest[0].resource[2].interaction[5], MAY)
-* rest[0].resource[2].interaction[6].code = #vread
-* insert Expectation(rest[0].resource[2].interaction[6], MAY)
-* rest[0].resource[2].interaction[7].code = #history-instance
-* insert Expectation(rest[0].resource[2].interaction[7], MAY)
-* rest[0].resource[2].interaction[8].code = #history-type
-* insert Expectation(rest[0].resource[2].interaction[8], MAY)
+* rest[0].resource[2].interaction[3].documentation = """
+Die REST-Interaktion `vread` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`GET [base]/Organization/123/_history/1`
+"""
+* rest[0].resource[2].interaction[4].code = #read
+* insert Expectation(rest[0].resource[2].interaction[4], SHALL)
+* rest[0].resource[2].interaction[4].documentation = """
+Die REST-Interaktion `read` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`GET [base]/Organization/123`
+"""
+* rest[0].resource[2].interaction[5].code = #history-type
+* insert Expectation(rest[0].resource[2].interaction[5], SHALL)
+* rest[0].resource[2].interaction[5].documentation = """
+Die REST-Interaktion `history-type` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`GET [base]/Organization/_history`
+"""
+* rest[0].resource[2].interaction[6].code = #history-instance
+* insert Expectation(rest[0].resource[2].interaction[6], SHALL)
+* rest[0].resource[2].interaction[6].documentation = """
+Die REST-Interaktion `history-instance` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`GET [base]/Organization/123/_history`
+"""
+* rest[0].resource[2].interaction[7].code = #delete
+* insert Expectation(rest[0].resource[2].interaction[7], SHALL)
+* rest[0].resource[2].interaction[7].documentation = """
+Die REST-Interaktion `delete` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`DELETE [base]/Organization/123`
+"""
+* rest[0].resource[2].interaction[8].code = #create
+* insert Expectation(rest[0].resource[2].interaction[8], SHALL)
+* rest[0].resource[2].interaction[8].documentation = """
+Die REST-Interaktion `create` MUSS für `Organization` unterstützt werden.
+**Beispiel:**
+`POST [base]/Organization`
+"""
 * rest[0].resource[2].versioning = #versioned-update
 * rest[0].resource[2].searchParam[0].name = "identifier"
 * rest[0].resource[2].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Organization-identifier"
 * rest[0].resource[2].searchParam[0].type = #token
-* rest[0].resource[2].searchParam[0].documentation = "Any identifier for the organization (not the accreditation issuer's identifier)"
+* rest[0].resource[2].searchParam[0].documentation = """
+**Beispiel:**
+`GET [base]/Organization?identifier=https://example.org/fhir/sid/example|12345`
+
+**Anwendungshinweis:**
+Any identifier for the organization (not the accreditation issuer's identifier)
+"""
 * insert Expectation(rest[0].resource[2].searchParam[0], SHALL)
 * rest[0].resource[2].searchParam[1].name = "partof"
 * rest[0].resource[2].searchParam[1].definition = "http://hl7.org/fhir/SearchParameter/Organization-partof"
 * rest[0].resource[2].searchParam[1].type = #reference
-* rest[0].resource[2].searchParam[1].documentation = "An organization of which this organization forms a part"
+* rest[0].resource[2].searchParam[1].documentation = """
+**Beispiel:**
+`GET [base]/Organization?partof=Organization/123`
+
+**Anwendungshinweis:**
+An organization of which this organization forms a part
+"""
 * insert Expectation(rest[0].resource[2].searchParam[1], SHALL)
 * rest[0].resource[2].searchParam[2].name = "address"
 * rest[0].resource[2].searchParam[2].definition = "http://hl7.org/fhir/SearchParameter/Organization-address"
 * rest[0].resource[2].searchParam[2].type = #string
-* rest[0].resource[2].searchParam[2].documentation = "A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text"
+* rest[0].resource[2].searchParam[2].documentation = """
+**Beispiel:**
+`GET [base]/Organization?address=Berlin`
+
+**Anwendungshinweis:**
+A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text
+"""
 * insert Expectation(rest[0].resource[2].searchParam[2], MAY)
 * rest[0].resource[2].searchParam[3].name = "address-state"
 * rest[0].resource[2].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-state"
 * rest[0].resource[2].searchParam[3].type = #string
-* rest[0].resource[2].searchParam[3].documentation = "A state specified in an address"
+* rest[0].resource[2].searchParam[3].documentation = """
+**Beispiel:**
+`GET [base]/Organization?address-state=Berlin`
+
+**Anwendungshinweis:**
+A state specified in an address
+"""
 * insert Expectation(rest[0].resource[2].searchParam[3], MAY)
 * rest[0].resource[2].searchParam[4].name = "active"
 * rest[0].resource[2].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/Organization-active"
 * rest[0].resource[2].searchParam[4].type = #token
-* rest[0].resource[2].searchParam[4].documentation = "Is the Organization record active"
+* rest[0].resource[2].searchParam[4].documentation = """
+**Beispiel:**
+`GET [base]/Organization?active=true`
+
+**Anwendungshinweis:**
+Is the Organization record active
+"""
 * insert Expectation(rest[0].resource[2].searchParam[4], SHALL)
 * rest[0].resource[2].searchParam[5].name = "type"
 * rest[0].resource[2].searchParam[5].definition = "http://hl7.org/fhir/SearchParameter/Organization-type"
 * rest[0].resource[2].searchParam[5].type = #token
-* rest[0].resource[2].searchParam[5].documentation = "A code for the type of organization"
+* rest[0].resource[2].searchParam[5].documentation = """
+**Beispiel:**
+`GET [base]/Organization?type=<code>`
+
+**Anwendungshinweis:**
+A code for the type of organization
+"""
 * insert Expectation(rest[0].resource[2].searchParam[5], SHALL)
 * rest[0].resource[2].searchParam[6].name = "address-postalcode"
 * rest[0].resource[2].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-postalcode"
 * rest[0].resource[2].searchParam[6].type = #string
-* rest[0].resource[2].searchParam[6].documentation = "A postal code specified in an address"
+* rest[0].resource[2].searchParam[6].documentation = """
+**Beispiel:**
+`GET [base]/Organization?address-postalcode=10115`
+
+**Anwendungshinweis:**
+A postal code specified in an address
+"""
 * insert Expectation(rest[0].resource[2].searchParam[6], MAY)
 * rest[0].resource[2].searchParam[7].name = "address-country"
 * rest[0].resource[2].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-country"
 * rest[0].resource[2].searchParam[7].type = #string
-* rest[0].resource[2].searchParam[7].documentation = "A country specified in an address"
+* rest[0].resource[2].searchParam[7].documentation = """
+**Beispiel:**
+`GET [base]/Organization?address-country=DE`
+
+**Anwendungshinweis:**
+A country specified in an address
+"""
 * insert Expectation(rest[0].resource[2].searchParam[7], MAY)
 * rest[0].resource[2].searchParam[8].name = "endpoint"
 * rest[0].resource[2].searchParam[8].definition = "http://hl7.org/fhir/SearchParameter/Organization-endpoint"
 * rest[0].resource[2].searchParam[8].type = #reference
-* rest[0].resource[2].searchParam[8].documentation = "Technical endpoints providing access to services operated for the organization"
+* rest[0].resource[2].searchParam[8].documentation = """
+**Beispiel:**
+`GET [base]/Organization?endpoint=Endpoint/123`
+
+**Anwendungshinweis:**
+Technical endpoints providing access to services operated for the organization
+"""
 * insert Expectation(rest[0].resource[2].searchParam[8], MAY)
 * rest[0].resource[2].searchParam[9].name = "phonetic"
 * rest[0].resource[2].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/Organization-phonetic"
 * rest[0].resource[2].searchParam[9].type = #string
-* rest[0].resource[2].searchParam[9].documentation = "A portion of the organization's name using some kind of phonetic matching algorithm"
+* rest[0].resource[2].searchParam[9].documentation = """
+**Beispiel:**
+`GET [base]/Organization?phonetic=Mustermann`
+
+**Anwendungshinweis:**
+A portion of the organization's name using some kind of phonetic matching algorithm
+"""
 * insert Expectation(rest[0].resource[2].searchParam[9], MAY)
 * rest[0].resource[2].searchParam[10].name = "address-use"
 * rest[0].resource[2].searchParam[10].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-use"
 * rest[0].resource[2].searchParam[10].type = #token
-* rest[0].resource[2].searchParam[10].documentation = "A use code specified in an address"
+* rest[0].resource[2].searchParam[10].documentation = """
+**Beispiel:**
+`GET [base]/Organization?address-use=work`
+
+**Anwendungshinweis:**
+A use code specified in an address
+"""
 * insert Expectation(rest[0].resource[2].searchParam[10], MAY)
 * rest[0].resource[2].searchParam[11].name = "name"
 * rest[0].resource[2].searchParam[11].definition = "http://hl7.org/fhir/SearchParameter/Organization-name"
 * rest[0].resource[2].searchParam[11].type = #string
-* rest[0].resource[2].searchParam[11].documentation = "A portion of the organization's name or alias"
+* rest[0].resource[2].searchParam[11].documentation = """
+**Beispiel:**
+`GET [base]/Organization?name=Gesundheitsamt`
+
+**Anwendungshinweis:**
+A portion of the organization's name or alias
+"""
 * insert Expectation(rest[0].resource[2].searchParam[11], SHALL)
 * rest[0].resource[2].searchParam[12].name = "_id"
 * rest[0].resource[2].searchParam[12].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[0].resource[2].searchParam[12].type = #token
-* rest[0].resource[2].searchParam[12].documentation = "Logical id of this artifact"
+* rest[0].resource[2].searchParam[12].documentation = """
+**Beispiel:**
+`GET [base]/Organization?_id=123`
+
+**Anwendungshinweis:**
+Logical id of this artifact
+"""
 * insert Expectation(rest[0].resource[2].searchParam[12], SHALL)
 * rest[0].resource[2].searchParam[13].name = "address-city"
 * rest[0].resource[2].searchParam[13].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-city"
 * rest[0].resource[2].searchParam[13].type = #string
-* rest[0].resource[2].searchParam[13].documentation = "A city specified in an address"
+* rest[0].resource[2].searchParam[13].documentation = """
+**Beispiel:**
+`GET [base]/Organization?address-city=Berlin`
+
+**Anwendungshinweis:**
+A city specified in an address
+"""
 * insert Expectation(rest[0].resource[2].searchParam[13], MAY)
-* rest[0].resource[2].searchInclude[0] = "Organization:partof"
-* insert Expectation(rest[0].resource[2].searchInclude[0], SHALL)
+* rest[0].resource[2].searchInclude[0] = "*"
+* insert Expectation(rest[0].resource[2].searchInclude[0], MAY)
 * rest[0].resource[2].searchInclude[1] = "Organization:endpoint"
 * insert Expectation(rest[0].resource[2].searchInclude[1], MAY)
+* rest[0].resource[2].searchInclude[2] = "Organization:partof"
+* insert Expectation(rest[0].resource[2].searchInclude[2], SHALL)
 * rest[0].resource[2].searchRevInclude[0] = "HealthcareService:organization"
 * insert Expectation(rest[0].resource[2].searchRevInclude[0], MAY)
 * rest[0].resource[2].searchRevInclude[1] = "Location:organization"
@@ -413,12 +838,21 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[2].searchRevInclude[3], MAY)
 * rest[0].resource[2].operation[0].name = "set-active-flag"
 * rest[0].resource[2].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Organization-i-set-active-flag"
+* rest[0].resource[2].operation[0].documentation = """
+Die Operation `$set-active-flag` wird von der Referenzimplementierung für `Organization` unterstützt.
+"""
 * insert Expectation(rest[0].resource[2].operation[0], MAY)
 * rest[0].resource[2].operation[1].name = "duplicate-check"
 * rest[0].resource[2].operation[1].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Organization-t-duplicate-check"
+* rest[0].resource[2].operation[1].documentation = """
+Die Operation `$duplicate-check` wird von der Referenzimplementierung für `Organization` unterstützt.
+"""
 * insert Expectation(rest[0].resource[2].operation[1], MAY)
 * rest[0].resource[2].operation[2].name = "validate"
 * rest[0].resource[2].operation[2].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
+* rest[0].resource[2].operation[2].documentation = """
+Die Operation `$validate` wird von der Referenzimplementierung für `Organization` unterstützt.
+"""
 * insert Expectation(rest[0].resource[2].operation[2], MAY)
 
 // =============================================================================
@@ -428,106 +862,341 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[3], SHALL)
 * rest[0].resource[3].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 * insert Expectation(rest[0].resource[3].supportedProfile[0], SHALL)
-* rest[0].resource[3].interaction[0].code = #read
+* rest[0].resource[3].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[3].interaction[0], SHALL)
-* rest[0].resource[3].interaction[1].code = #search-type
+* rest[0].resource[3].interaction[0].documentation = """
+Die REST-Interaktion `search-type` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`GET [base]/Practitioner?_id=123`
+"""
+* rest[0].resource[3].interaction[1].code = #update
 * insert Expectation(rest[0].resource[3].interaction[1], SHALL)
-* rest[0].resource[3].interaction[2].code = #create
+* rest[0].resource[3].interaction[1].documentation = """
+Die REST-Interaktion `update` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`PUT [base]/Practitioner/123`
+"""
+* rest[0].resource[3].interaction[2].code = #vread
 * insert Expectation(rest[0].resource[3].interaction[2], SHALL)
-* rest[0].resource[3].interaction[3].code = #update
+* rest[0].resource[3].interaction[2].documentation = """
+Die REST-Interaktion `vread` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`GET [base]/Practitioner/123/_history/1`
+"""
+* rest[0].resource[3].interaction[3].code = #read
 * insert Expectation(rest[0].resource[3].interaction[3], SHALL)
+* rest[0].resource[3].interaction[3].documentation = """
+Die REST-Interaktion `read` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`GET [base]/Practitioner/123`
+"""
 * rest[0].resource[3].interaction[4].code = #patch
-* insert Expectation(rest[0].resource[3].interaction[4], MAY)
-* rest[0].resource[3].interaction[5].code = #delete
-* insert Expectation(rest[0].resource[3].interaction[5], MAY)
-* rest[0].resource[3].interaction[6].code = #vread
-* insert Expectation(rest[0].resource[3].interaction[6], MAY)
-* rest[0].resource[3].interaction[7].code = #history-instance
-* insert Expectation(rest[0].resource[3].interaction[7], MAY)
-* rest[0].resource[3].interaction[8].code = #history-type
-* insert Expectation(rest[0].resource[3].interaction[8], MAY)
+* insert Expectation(rest[0].resource[3].interaction[4], SHALL)
+* rest[0].resource[3].interaction[4].documentation = """
+Die REST-Interaktion `patch` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`PATCH [base]/Practitioner/123`
+"""
+* rest[0].resource[3].interaction[5].code = #history-type
+* insert Expectation(rest[0].resource[3].interaction[5], SHALL)
+* rest[0].resource[3].interaction[5].documentation = """
+Die REST-Interaktion `history-type` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`GET [base]/Practitioner/_history`
+"""
+* rest[0].resource[3].interaction[6].code = #history-instance
+* insert Expectation(rest[0].resource[3].interaction[6], SHALL)
+* rest[0].resource[3].interaction[6].documentation = """
+Die REST-Interaktion `history-instance` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`GET [base]/Practitioner/123/_history`
+"""
+* rest[0].resource[3].interaction[7].code = #delete
+* insert Expectation(rest[0].resource[3].interaction[7], SHALL)
+* rest[0].resource[3].interaction[7].documentation = """
+Die REST-Interaktion `delete` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`DELETE [base]/Practitioner/123`
+"""
+* rest[0].resource[3].interaction[8].code = #create
+* insert Expectation(rest[0].resource[3].interaction[8], SHALL)
+* rest[0].resource[3].interaction[8].documentation = """
+Die REST-Interaktion `create` MUSS für `Practitioner` unterstützt werden.
+**Beispiel:**
+`POST [base]/Practitioner`
+"""
 * rest[0].resource[3].versioning = #versioned-update
 * rest[0].resource[3].searchParam[0].name = "address-state"
 * rest[0].resource[3].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/individual-address-state"
 * rest[0].resource[3].searchParam[0].type = #string
+* rest[0].resource[3].searchParam[0].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?address-state=Berlin`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A state specified in an address
+* [Person](person.html): A state specified in an address
+* [Practitioner](practitioner.html): A state specified in an address
+* [RelatedPerson](relatedperson.html): A state specified in an address
+"""
 * insert Expectation(rest[0].resource[3].searchParam[0], MAY)
 * rest[0].resource[3].searchParam[1].name = "gender"
 * rest[0].resource[3].searchParam[1].definition = "http://hl7.org/fhir/SearchParameter/individual-gender"
 * rest[0].resource[3].searchParam[1].type = #token
+* rest[0].resource[3].searchParam[1].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?gender=female`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): Gender of the patient
+* [Person](person.html): The gender of the person
+* [Practitioner](practitioner.html): Gender of the practitioner
+* [RelatedPerson](relatedperson.html): Gender of the related person
+"""
 * insert Expectation(rest[0].resource[3].searchParam[1], MAY)
 * rest[0].resource[3].searchParam[2].name = "address-country"
 * rest[0].resource[3].searchParam[2].definition = "http://hl7.org/fhir/SearchParameter/individual-address-country"
 * rest[0].resource[3].searchParam[2].type = #string
+* rest[0].resource[3].searchParam[2].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?address-country=DE`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A country specified in an address
+* [Person](person.html): A country specified in an address
+* [Practitioner](practitioner.html): A country specified in an address
+* [RelatedPerson](relatedperson.html): A country specified in an address
+"""
 * insert Expectation(rest[0].resource[3].searchParam[2], MAY)
 * rest[0].resource[3].searchParam[3].name = "phonetic"
 * rest[0].resource[3].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/individual-phonetic"
 * rest[0].resource[3].searchParam[3].type = #string
+* rest[0].resource[3].searchParam[3].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?phonetic=Mustermann`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A portion of either family or given name using some kind of phonetic matching algorithm
+* [Person](person.html): A portion of name using some kind of phonetic matching algorithm
+* [Practitioner](practitioner.html): A portion of either family or given name using some kind of phonetic matching algorithm
+* [RelatedPerson](relatedperson.html): A portion of name using some kind of phonetic matching algorithm
+"""
 * insert Expectation(rest[0].resource[3].searchParam[3], MAY)
 * rest[0].resource[3].searchParam[4].name = "telecom"
 * rest[0].resource[3].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/individual-telecom"
 * rest[0].resource[3].searchParam[4].type = #token
+* rest[0].resource[3].searchParam[4].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?telecom=info@example.org`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): The value in any kind of telecom details of the patient
+* [Person](person.html): The value in any kind of contact
+* [Practitioner](practitioner.html): The value in any kind of contact
+* [PractitionerRole](practitionerrole.html): The value in any kind of contact
+* [RelatedPerson](relatedperson.html): The value in any kind of contact
+"""
 * insert Expectation(rest[0].resource[3].searchParam[4], MAY)
 * rest[0].resource[3].searchParam[5].name = "address-city"
 * rest[0].resource[3].searchParam[5].definition = "http://hl7.org/fhir/SearchParameter/individual-address-city"
 * rest[0].resource[3].searchParam[5].type = #string
+* rest[0].resource[3].searchParam[5].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?address-city=Berlin`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A city specified in an address
+* [Person](person.html): A city specified in an address
+* [Practitioner](practitioner.html): A city specified in an address
+* [RelatedPerson](relatedperson.html): A city specified in an address
+"""
 * insert Expectation(rest[0].resource[3].searchParam[5], MAY)
 * rest[0].resource[3].searchParam[6].name = "communication"
 * rest[0].resource[3].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-communication"
 * rest[0].resource[3].searchParam[6].type = #token
-* rest[0].resource[3].searchParam[6].documentation = "One of the languages that the practitioner can communicate with"
+* rest[0].resource[3].searchParam[6].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?communication=de`
+
+**Anwendungshinweis:**
+One of the languages that the practitioner can communicate with
+"""
 * insert Expectation(rest[0].resource[3].searchParam[6], MAY)
 * rest[0].resource[3].searchParam[7].name = "email"
 * rest[0].resource[3].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/individual-email"
 * rest[0].resource[3].searchParam[7].type = #token
+* rest[0].resource[3].searchParam[7].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?email=info@example.org`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A value in an email contact
+* [Person](person.html): A value in an email contact
+* [Practitioner](practitioner.html): A value in an email contact
+* [PractitionerRole](practitionerrole.html): A value in an email contact
+* [RelatedPerson](relatedperson.html): A value in an email contact
+"""
 * insert Expectation(rest[0].resource[3].searchParam[7], MAY)
 * rest[0].resource[3].searchParam[8].name = "given"
 * rest[0].resource[3].searchParam[8].definition = "http://hl7.org/fhir/SearchParameter/individual-given"
 * rest[0].resource[3].searchParam[8].type = #string
+* rest[0].resource[3].searchParam[8].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?given=Erika`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A portion of the given name of the patient
+* [Practitioner](practitioner.html): A portion of the given name
+"""
 * insert Expectation(rest[0].resource[3].searchParam[8], SHALL)
 * rest[0].resource[3].searchParam[9].name = "identifier"
 * rest[0].resource[3].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
 * rest[0].resource[3].searchParam[9].type = #token
-* rest[0].resource[3].searchParam[9].documentation = "A practitioner's Identifier"
+* rest[0].resource[3].searchParam[9].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?identifier=https://example.org/fhir/sid/example|12345`
+
+**Anwendungshinweis:**
+A practitioner's Identifier
+"""
 * insert Expectation(rest[0].resource[3].searchParam[9], SHALL)
 * rest[0].resource[3].searchParam[10].name = "address"
 * rest[0].resource[3].searchParam[10].definition = "http://hl7.org/fhir/SearchParameter/individual-address"
 * rest[0].resource[3].searchParam[10].type = #string
+* rest[0].resource[3].searchParam[10].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?address=Berlin`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text
+* [Person](person.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text
+* [Practitioner](practitioner.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text
+* [RelatedPerson](relatedperson.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text
+"""
 * insert Expectation(rest[0].resource[3].searchParam[10], MAY)
 * rest[0].resource[3].searchParam[11].name = "active"
 * rest[0].resource[3].searchParam[11].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-active"
 * rest[0].resource[3].searchParam[11].type = #token
-* rest[0].resource[3].searchParam[11].documentation = "Whether the practitioner record is active"
+* rest[0].resource[3].searchParam[11].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?active=true`
+
+**Anwendungshinweis:**
+Whether the practitioner record is active
+"""
 * insert Expectation(rest[0].resource[3].searchParam[11], SHALL)
 * rest[0].resource[3].searchParam[12].name = "address-postalcode"
 * rest[0].resource[3].searchParam[12].definition = "http://hl7.org/fhir/SearchParameter/individual-address-postalcode"
 * rest[0].resource[3].searchParam[12].type = #string
+* rest[0].resource[3].searchParam[12].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?address-postalcode=10115`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A postalCode specified in an address
+* [Person](person.html): A postal code specified in an address
+* [Practitioner](practitioner.html): A postalCode specified in an address
+* [RelatedPerson](relatedperson.html): A postal code specified in an address
+"""
 * insert Expectation(rest[0].resource[3].searchParam[12], MAY)
 * rest[0].resource[3].searchParam[13].name = "phone"
 * rest[0].resource[3].searchParam[13].definition = "http://hl7.org/fhir/SearchParameter/individual-phone"
 * rest[0].resource[3].searchParam[13].type = #token
+* rest[0].resource[3].searchParam[13].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?phone=+49-30-123456`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A value in a phone contact
+* [Person](person.html): A value in a phone contact
+* [Practitioner](practitioner.html): A value in a phone contact
+* [PractitionerRole](practitionerrole.html): A value in a phone contact
+* [RelatedPerson](relatedperson.html): A value in a phone contact
+"""
 * insert Expectation(rest[0].resource[3].searchParam[13], MAY)
 * rest[0].resource[3].searchParam[14].name = "address-use"
 * rest[0].resource[3].searchParam[14].definition = "http://hl7.org/fhir/SearchParameter/individual-address-use"
 * rest[0].resource[3].searchParam[14].type = #token
+* rest[0].resource[3].searchParam[14].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?address-use=work`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A use code specified in an address
+* [Person](person.html): A use code specified in an address
+* [Practitioner](practitioner.html): A use code specified in an address
+* [RelatedPerson](relatedperson.html): A use code specified in an address
+"""
 * insert Expectation(rest[0].resource[3].searchParam[14], MAY)
 * rest[0].resource[3].searchParam[15].name = "name"
 * rest[0].resource[3].searchParam[15].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-name"
 * rest[0].resource[3].searchParam[15].type = #string
-* rest[0].resource[3].searchParam[15].documentation = "A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text"
+* rest[0].resource[3].searchParam[15].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?name=Gesundheitsamt`
+
+**Anwendungshinweis:**
+A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text
+"""
 * insert Expectation(rest[0].resource[3].searchParam[15], SHALL)
 * rest[0].resource[3].searchParam[16].name = "_id"
 * rest[0].resource[3].searchParam[16].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[0].resource[3].searchParam[16].type = #token
-* rest[0].resource[3].searchParam[16].documentation = "Logical id of this artifact"
+* rest[0].resource[3].searchParam[16].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?_id=123`
+
+**Anwendungshinweis:**
+Logical id of this artifact
+"""
 * insert Expectation(rest[0].resource[3].searchParam[16], SHALL)
 * rest[0].resource[3].searchParam[17].name = "family"
 * rest[0].resource[3].searchParam[17].definition = "http://hl7.org/fhir/SearchParameter/individual-family"
 * rest[0].resource[3].searchParam[17].type = #string
+* rest[0].resource[3].searchParam[17].documentation = """
+**Beispiel:**
+`GET [base]/Practitioner?family=Mustermann`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A portion of the family name of the patient
+* [Practitioner](practitioner.html): A portion of the family name
+"""
 * insert Expectation(rest[0].resource[3].searchParam[17], SHALL)
+* rest[0].resource[3].searchInclude[0] = "*"
+* insert Expectation(rest[0].resource[3].searchInclude[0], MAY)
 * rest[0].resource[3].searchRevInclude[0] = "PractitionerRole:practitioner"
 * insert Expectation(rest[0].resource[3].searchRevInclude[0], MAY)
 * rest[0].resource[3].operation[0].name = "validate"
 * rest[0].resource[3].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
+* rest[0].resource[3].operation[0].documentation = """
+Die Operation `$validate` wird von der Referenzimplementierung für `Practitioner` unterstützt.
+"""
 * insert Expectation(rest[0].resource[3].operation[0], MAY)
 
 // =============================================================================
@@ -537,104 +1206,259 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[4], SHALL)
 * rest[0].resource[4].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
 * insert Expectation(rest[0].resource[4].supportedProfile[0], SHALL)
-* rest[0].resource[4].interaction[0].code = #read
+* rest[0].resource[4].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[4].interaction[0], SHALL)
-* rest[0].resource[4].interaction[1].code = #search-type
+* rest[0].resource[4].interaction[0].documentation = """
+Die REST-Interaktion `search-type` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`GET [base]/PractitionerRole?_id=123`
+"""
+* rest[0].resource[4].interaction[1].code = #update
 * insert Expectation(rest[0].resource[4].interaction[1], SHALL)
-* rest[0].resource[4].interaction[2].code = #create
+* rest[0].resource[4].interaction[1].documentation = """
+Die REST-Interaktion `update` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`PUT [base]/PractitionerRole/123`
+"""
+* rest[0].resource[4].interaction[2].code = #vread
 * insert Expectation(rest[0].resource[4].interaction[2], SHALL)
-* rest[0].resource[4].interaction[3].code = #update
+* rest[0].resource[4].interaction[2].documentation = """
+Die REST-Interaktion `vread` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`GET [base]/PractitionerRole/123/_history/1`
+"""
+* rest[0].resource[4].interaction[3].code = #read
 * insert Expectation(rest[0].resource[4].interaction[3], SHALL)
+* rest[0].resource[4].interaction[3].documentation = """
+Die REST-Interaktion `read` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`GET [base]/PractitionerRole/123`
+"""
 * rest[0].resource[4].interaction[4].code = #patch
-* insert Expectation(rest[0].resource[4].interaction[4], MAY)
-* rest[0].resource[4].interaction[5].code = #delete
-* insert Expectation(rest[0].resource[4].interaction[5], MAY)
-* rest[0].resource[4].interaction[6].code = #vread
-* insert Expectation(rest[0].resource[4].interaction[6], MAY)
-* rest[0].resource[4].interaction[7].code = #history-instance
-* insert Expectation(rest[0].resource[4].interaction[7], MAY)
-* rest[0].resource[4].interaction[8].code = #history-type
-* insert Expectation(rest[0].resource[4].interaction[8], MAY)
+* insert Expectation(rest[0].resource[4].interaction[4], SHALL)
+* rest[0].resource[4].interaction[4].documentation = """
+Die REST-Interaktion `patch` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`PATCH [base]/PractitionerRole/123`
+"""
+* rest[0].resource[4].interaction[5].code = #history-type
+* insert Expectation(rest[0].resource[4].interaction[5], SHALL)
+* rest[0].resource[4].interaction[5].documentation = """
+Die REST-Interaktion `history-type` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`GET [base]/PractitionerRole/_history`
+"""
+* rest[0].resource[4].interaction[6].code = #history-instance
+* insert Expectation(rest[0].resource[4].interaction[6], SHALL)
+* rest[0].resource[4].interaction[6].documentation = """
+Die REST-Interaktion `history-instance` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`GET [base]/PractitionerRole/123/_history`
+"""
+* rest[0].resource[4].interaction[7].code = #delete
+* insert Expectation(rest[0].resource[4].interaction[7], SHALL)
+* rest[0].resource[4].interaction[7].documentation = """
+Die REST-Interaktion `delete` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`DELETE [base]/PractitionerRole/123`
+"""
+* rest[0].resource[4].interaction[8].code = #create
+* insert Expectation(rest[0].resource[4].interaction[8], SHALL)
+* rest[0].resource[4].interaction[8].documentation = """
+Die REST-Interaktion `create` MUSS für `PractitionerRole` unterstützt werden.
+**Beispiel:**
+`POST [base]/PractitionerRole`
+"""
 * rest[0].resource[4].versioning = #versioned-update
 * rest[0].resource[4].searchParam[0].name = "date"
 * rest[0].resource[4].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-date"
 * rest[0].resource[4].searchParam[0].type = #date
-* rest[0].resource[4].searchParam[0].documentation = "The period during which the practitioner is authorized to perform in these role(s)"
+* rest[0].resource[4].searchParam[0].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?date=2026-09-16`
+
+**Anwendungshinweis:**
+The period during which the practitioner is authorized to perform in these role(s)
+"""
 * insert Expectation(rest[0].resource[4].searchParam[0], MAY)
 * rest[0].resource[4].searchParam[1].name = "identifier"
 * rest[0].resource[4].searchParam[1].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest[0].resource[4].searchParam[1].type = #token
-* rest[0].resource[4].searchParam[1].documentation = "A practitioner's Identifier"
+* rest[0].resource[4].searchParam[1].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?identifier=https://example.org/fhir/sid/example|12345`
+
+**Anwendungshinweis:**
+A practitioner's Identifier
+"""
 * insert Expectation(rest[0].resource[4].searchParam[1], SHALL)
 * rest[0].resource[4].searchParam[2].name = "specialty"
 * rest[0].resource[4].searchParam[2].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"
 * rest[0].resource[4].searchParam[2].type = #token
-* rest[0].resource[4].searchParam[2].documentation = "The practitioner has this specialty at an organization"
+* rest[0].resource[4].searchParam[2].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?specialty=<code>`
+
+**Anwendungshinweis:**
+The practitioner has this specialty at an organization
+"""
 * insert Expectation(rest[0].resource[4].searchParam[2], MAY)
 * rest[0].resource[4].searchParam[3].name = "role"
 * rest[0].resource[4].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-role"
 * rest[0].resource[4].searchParam[3].type = #token
-* rest[0].resource[4].searchParam[3].documentation = "The practitioner can perform this role at for the organization"
+* rest[0].resource[4].searchParam[3].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?role=<code>`
+
+**Anwendungshinweis:**
+The practitioner can perform this role at for the organization
+"""
 * insert Expectation(rest[0].resource[4].searchParam[3], MAY)
 * rest[0].resource[4].searchParam[4].name = "practitioner"
 * rest[0].resource[4].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"
 * rest[0].resource[4].searchParam[4].type = #reference
-* rest[0].resource[4].searchParam[4].documentation = "Practitioner that is able to provide the defined services for the organization"
+* rest[0].resource[4].searchParam[4].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?practitioner=Practitioner/123`
+
+**Anwendungshinweis:**
+Practitioner that is able to provide the defined services for the organization
+"""
 * insert Expectation(rest[0].resource[4].searchParam[4], SHALL)
 * rest[0].resource[4].searchParam[5].name = "active"
 * rest[0].resource[4].searchParam[5].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-active"
 * rest[0].resource[4].searchParam[5].type = #token
-* rest[0].resource[4].searchParam[5].documentation = "Whether this practitioner role record is in active use"
+* rest[0].resource[4].searchParam[5].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?active=true`
+
+**Anwendungshinweis:**
+Whether this practitioner role record is in active use
+"""
 * insert Expectation(rest[0].resource[4].searchParam[5], SHALL)
 * rest[0].resource[4].searchParam[6].name = "endpoint"
 * rest[0].resource[4].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-endpoint"
 * rest[0].resource[4].searchParam[6].type = #reference
-* rest[0].resource[4].searchParam[6].documentation = "Technical endpoints providing access to services operated for the practitioner with this role"
+* rest[0].resource[4].searchParam[6].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?endpoint=Endpoint/123`
+
+**Anwendungshinweis:**
+Technical endpoints providing access to services operated for the practitioner with this role
+"""
 * insert Expectation(rest[0].resource[4].searchParam[6], MAY)
 * rest[0].resource[4].searchParam[7].name = "phone"
 * rest[0].resource[4].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/individual-phone"
 * rest[0].resource[4].searchParam[7].type = #token
+* rest[0].resource[4].searchParam[7].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?phone=+49-30-123456`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A value in a phone contact
+* [Person](person.html): A value in a phone contact
+* [Practitioner](practitioner.html): A value in a phone contact
+* [PractitionerRole](practitionerrole.html): A value in a phone contact
+* [RelatedPerson](relatedperson.html): A value in a phone contact
+"""
 * insert Expectation(rest[0].resource[4].searchParam[7], MAY)
 * rest[0].resource[4].searchParam[8].name = "service"
 * rest[0].resource[4].searchParam[8].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-service"
 * rest[0].resource[4].searchParam[8].type = #reference
-* rest[0].resource[4].searchParam[8].documentation = "The list of healthcare services that this worker provides for this role's Organization/Location(s)"
+* rest[0].resource[4].searchParam[8].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?service=HealthcareService/123`
+
+**Anwendungshinweis:**
+The list of healthcare services that this worker provides for this role's Organization/Location(s)
+"""
 * insert Expectation(rest[0].resource[4].searchParam[8], MAY)
 * rest[0].resource[4].searchParam[9].name = "organization"
 * rest[0].resource[4].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-organization"
 * rest[0].resource[4].searchParam[9].type = #reference
-* rest[0].resource[4].searchParam[9].documentation = "The identity of the organization the practitioner represents / acts on behalf of"
+* rest[0].resource[4].searchParam[9].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?organization=Organization/123`
+
+**Anwendungshinweis:**
+The identity of the organization the practitioner represents / acts on behalf of
+"""
 * insert Expectation(rest[0].resource[4].searchParam[9], SHALL)
 * rest[0].resource[4].searchParam[10].name = "telecom"
 * rest[0].resource[4].searchParam[10].definition = "http://hl7.org/fhir/SearchParameter/individual-telecom"
 * rest[0].resource[4].searchParam[10].type = #token
+* rest[0].resource[4].searchParam[10].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?telecom=info@example.org`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): The value in any kind of telecom details of the patient
+* [Person](person.html): The value in any kind of contact
+* [Practitioner](practitioner.html): The value in any kind of contact
+* [PractitionerRole](practitionerrole.html): The value in any kind of contact
+* [RelatedPerson](relatedperson.html): The value in any kind of contact
+"""
 * insert Expectation(rest[0].resource[4].searchParam[10], MAY)
 * rest[0].resource[4].searchParam[11].name = "location"
 * rest[0].resource[4].searchParam[11].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-location"
 * rest[0].resource[4].searchParam[11].type = #reference
-* rest[0].resource[4].searchParam[11].documentation = "One of the locations at which this practitioner provides care"
+* rest[0].resource[4].searchParam[11].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?location=Location/123`
+
+**Anwendungshinweis:**
+One of the locations at which this practitioner provides care
+"""
 * insert Expectation(rest[0].resource[4].searchParam[11], MAY)
 * rest[0].resource[4].searchParam[12].name = "_id"
 * rest[0].resource[4].searchParam[12].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[0].resource[4].searchParam[12].type = #token
-* rest[0].resource[4].searchParam[12].documentation = "Logical id of this artifact"
+* rest[0].resource[4].searchParam[12].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?_id=123`
+
+**Anwendungshinweis:**
+Logical id of this artifact
+"""
 * insert Expectation(rest[0].resource[4].searchParam[12], SHALL)
 * rest[0].resource[4].searchParam[13].name = "email"
 * rest[0].resource[4].searchParam[13].definition = "http://hl7.org/fhir/SearchParameter/individual-email"
 * rest[0].resource[4].searchParam[13].type = #token
+* rest[0].resource[4].searchParam[13].documentation = """
+**Beispiel:**
+`GET [base]/PractitionerRole?email=info@example.org`
+
+**Anwendungshinweis:**
+Multiple Resources: 
+
+* [Patient](patient.html): A value in an email contact
+* [Person](person.html): A value in an email contact
+* [Practitioner](practitioner.html): A value in an email contact
+* [PractitionerRole](practitionerrole.html): A value in an email contact
+* [RelatedPerson](relatedperson.html): A value in an email contact
+"""
 * insert Expectation(rest[0].resource[4].searchParam[13], MAY)
-* rest[0].resource[4].searchInclude[0] = "PractitionerRole:practitioner"
-* insert Expectation(rest[0].resource[4].searchInclude[0], SHALL)
-* rest[0].resource[4].searchInclude[1] = "PractitionerRole:organization"
-* insert Expectation(rest[0].resource[4].searchInclude[1], SHALL)
+* rest[0].resource[4].searchInclude[0] = "*"
+* insert Expectation(rest[0].resource[4].searchInclude[0], MAY)
+* rest[0].resource[4].searchInclude[1] = "PractitionerRole:endpoint"
+* insert Expectation(rest[0].resource[4].searchInclude[1], MAY)
 * rest[0].resource[4].searchInclude[2] = "PractitionerRole:location"
 * insert Expectation(rest[0].resource[4].searchInclude[2], MAY)
-* rest[0].resource[4].searchInclude[3] = "PractitionerRole:service"
-* insert Expectation(rest[0].resource[4].searchInclude[3], MAY)
-* rest[0].resource[4].searchInclude[4] = "PractitionerRole:endpoint"
-* insert Expectation(rest[0].resource[4].searchInclude[4], MAY)
+* rest[0].resource[4].searchInclude[3] = "PractitionerRole:organization"
+* insert Expectation(rest[0].resource[4].searchInclude[3], SHALL)
+* rest[0].resource[4].searchInclude[4] = "PractitionerRole:practitioner"
+* insert Expectation(rest[0].resource[4].searchInclude[4], SHALL)
+* rest[0].resource[4].searchInclude[5] = "PractitionerRole:service"
+* insert Expectation(rest[0].resource[4].searchInclude[5], MAY)
 * rest[0].resource[4].operation[0].name = "validate"
 * rest[0].resource[4].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
+* rest[0].resource[4].operation[0].documentation = """
+Die Operation `$validate` wird von der Referenzimplementierung für `PractitionerRole` unterstützt.
+"""
 * insert Expectation(rest[0].resource[4].operation[0], MAY)
 
 // =============================================================================
@@ -644,55 +1468,145 @@ und muss durch Product Owner und Backend-Team bestätigt werden.
 * insert Expectation(rest[0].resource[5], SHALL)
 * rest[0].resource[5].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/OrgVBundle"
 * insert Expectation(rest[0].resource[5].supportedProfile[0], SHALL)
-* rest[0].resource[5].interaction[0].code = #read
-* insert Expectation(rest[0].resource[5].interaction[0], MAY)
-* rest[0].resource[5].interaction[1].code = #search-type
-* insert Expectation(rest[0].resource[5].interaction[1], MAY)
-* rest[0].resource[5].interaction[2].code = #create
-* insert Expectation(rest[0].resource[5].interaction[2], MAY)
-* rest[0].resource[5].interaction[3].code = #update
-* insert Expectation(rest[0].resource[5].interaction[3], MAY)
-* rest[0].resource[5].interaction[4].code = #vread
-* insert Expectation(rest[0].resource[5].interaction[4], MAY)
-* rest[0].resource[5].interaction[5].code = #history-instance
-* insert Expectation(rest[0].resource[5].interaction[5], MAY)
-* rest[0].resource[5].interaction[6].code = #history-type
-* insert Expectation(rest[0].resource[5].interaction[6], MAY)
+* rest[0].resource[5].interaction[0].code = #search-type
+* insert Expectation(rest[0].resource[5].interaction[0], SHALL)
+* rest[0].resource[5].interaction[0].documentation = """
+Die REST-Interaktion `search-type` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`GET [base]/Bundle?_id=123`
+"""
+* rest[0].resource[5].interaction[1].code = #update
+* insert Expectation(rest[0].resource[5].interaction[1], SHALL)
+* rest[0].resource[5].interaction[1].documentation = """
+Die REST-Interaktion `update` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`PUT [base]/Bundle/123`
+"""
+* rest[0].resource[5].interaction[2].code = #vread
+* insert Expectation(rest[0].resource[5].interaction[2], SHALL)
+* rest[0].resource[5].interaction[2].documentation = """
+Die REST-Interaktion `vread` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`GET [base]/Bundle/123/_history/1`
+"""
+* rest[0].resource[5].interaction[3].code = #read
+* insert Expectation(rest[0].resource[5].interaction[3], SHALL)
+* rest[0].resource[5].interaction[3].documentation = """
+Die REST-Interaktion `read` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`GET [base]/Bundle/123`
+"""
+* rest[0].resource[5].interaction[4].code = #patch
+* insert Expectation(rest[0].resource[5].interaction[4], SHALL)
+* rest[0].resource[5].interaction[4].documentation = """
+Die REST-Interaktion `patch` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`PATCH [base]/Bundle/123`
+"""
+* rest[0].resource[5].interaction[5].code = #history-type
+* insert Expectation(rest[0].resource[5].interaction[5], SHALL)
+* rest[0].resource[5].interaction[5].documentation = """
+Die REST-Interaktion `history-type` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`GET [base]/Bundle/_history`
+"""
+* rest[0].resource[5].interaction[6].code = #history-instance
+* insert Expectation(rest[0].resource[5].interaction[6], SHALL)
+* rest[0].resource[5].interaction[6].documentation = """
+Die REST-Interaktion `history-instance` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`GET [base]/Bundle/123/_history`
+"""
+* rest[0].resource[5].interaction[7].code = #delete
+* insert Expectation(rest[0].resource[5].interaction[7], SHALL)
+* rest[0].resource[5].interaction[7].documentation = """
+Die REST-Interaktion `delete` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`DELETE [base]/Bundle/123`
+"""
+* rest[0].resource[5].interaction[8].code = #create
+* insert Expectation(rest[0].resource[5].interaction[8], SHALL)
+* rest[0].resource[5].interaction[8].documentation = """
+Die REST-Interaktion `create` MUSS für `Bundle` unterstützt werden.
+**Beispiel:**
+`POST [base]/Bundle`
+"""
 * rest[0].resource[5].versioning = #versioned-update
 * rest[0].resource[5].searchParam[0].name = "identifier"
 * rest[0].resource[5].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Bundle-identifier"
 * rest[0].resource[5].searchParam[0].type = #token
-* rest[0].resource[5].searchParam[0].documentation = "Persistent identifier for the bundle"
+* rest[0].resource[5].searchParam[0].documentation = """
+**Beispiel:**
+`GET [base]/Bundle?identifier=https://example.org/fhir/sid/example|12345`
+
+**Anwendungshinweis:**
+Persistent identifier for the bundle
+"""
 * insert Expectation(rest[0].resource[5].searchParam[0], SHALL)
 * rest[0].resource[5].searchParam[1].name = "message"
 * rest[0].resource[5].searchParam[1].definition = "http://hl7.org/fhir/SearchParameter/Bundle-message"
 * rest[0].resource[5].searchParam[1].type = #reference
-* rest[0].resource[5].searchParam[1].documentation = "The first resource in the bundle, if the bundle type is \"message\" - this is a message header, and this parameter provides access to search its contents"
+* rest[0].resource[5].searchParam[1].documentation = """
+**Beispiel:**
+`GET [base]/Bundle?message=MessageHeader/123`
+
+**Anwendungshinweis:**
+The first resource in the bundle, if the bundle type is "message" - this is a message header, and this parameter provides access to search its contents
+"""
 * insert Expectation(rest[0].resource[5].searchParam[1], MAY)
 * rest[0].resource[5].searchParam[2].name = "type"
 * rest[0].resource[5].searchParam[2].definition = "http://hl7.org/fhir/SearchParameter/Bundle-type"
 * rest[0].resource[5].searchParam[2].type = #token
-* rest[0].resource[5].searchParam[2].documentation = "document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection"
+* rest[0].resource[5].searchParam[2].documentation = """
+**Beispiel:**
+`GET [base]/Bundle?type=<code>`
+
+**Anwendungshinweis:**
+document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection
+"""
 * insert Expectation(rest[0].resource[5].searchParam[2], SHALL)
 * rest[0].resource[5].searchParam[3].name = "composition"
 * rest[0].resource[5].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/Bundle-composition"
 * rest[0].resource[5].searchParam[3].type = #reference
-* rest[0].resource[5].searchParam[3].documentation = "The first resource in the bundle, if the bundle type is \"document\" - this is a composition, and this parameter provides access to search its contents"
+* rest[0].resource[5].searchParam[3].documentation = """
+**Beispiel:**
+`GET [base]/Bundle?composition=Composition/123`
+
+**Anwendungshinweis:**
+The first resource in the bundle, if the bundle type is "document" - this is a composition, and this parameter provides access to search its contents
+"""
 * insert Expectation(rest[0].resource[5].searchParam[3], MAY)
 * rest[0].resource[5].searchParam[4].name = "_id"
 * rest[0].resource[5].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest[0].resource[5].searchParam[4].type = #token
-* rest[0].resource[5].searchParam[4].documentation = "Logical id of this artifact"
+* rest[0].resource[5].searchParam[4].documentation = """
+**Beispiel:**
+`GET [base]/Bundle?_id=123`
+
+**Anwendungshinweis:**
+Logical id of this artifact
+"""
 * insert Expectation(rest[0].resource[5].searchParam[4], SHALL)
 * rest[0].resource[5].searchParam[5].name = "timestamp"
 * rest[0].resource[5].searchParam[5].definition = "http://hl7.org/fhir/SearchParameter/Bundle-timestamp"
 * rest[0].resource[5].searchParam[5].type = #date
-* rest[0].resource[5].searchParam[5].documentation = "When the bundle was assembled"
+* rest[0].resource[5].searchParam[5].documentation = """
+**Beispiel:**
+`GET [base]/Bundle?timestamp=2026-09-16`
+
+**Anwendungshinweis:**
+When the bundle was assembled
+"""
 * insert Expectation(rest[0].resource[5].searchParam[5], MAY)
-* rest[0].resource[5].searchInclude[0] = "Bundle:composition"
+* rest[0].resource[5].searchInclude[0] = "*"
 * insert Expectation(rest[0].resource[5].searchInclude[0], MAY)
-* rest[0].resource[5].searchInclude[1] = "Bundle:message"
+* rest[0].resource[5].searchInclude[1] = "Bundle:composition"
 * insert Expectation(rest[0].resource[5].searchInclude[1], MAY)
+* rest[0].resource[5].searchInclude[2] = "Bundle:message"
+* insert Expectation(rest[0].resource[5].searchInclude[2], MAY)
 * rest[0].resource[5].operation[0].name = "validate"
 * rest[0].resource[5].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
+* rest[0].resource[5].operation[0].documentation = """
+Die Operation `$validate` wird von der Referenzimplementierung für `Bundle` unterstützt.
+"""
 * insert Expectation(rest[0].resource[5].operation[0], MAY)
