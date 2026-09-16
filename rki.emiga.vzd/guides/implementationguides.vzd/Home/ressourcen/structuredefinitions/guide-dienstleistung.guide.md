@@ -70,14 +70,23 @@ for
 
 ## Anmerkungen zu Must-Support Elementen
 <fql>
-from
-	StructureDefinition
-where 
+using 'rki.emiga.vzd@2.0.0-alpha.24'
+
+from StructureDefinition
+
+where
     url = %canonical
-for differential.element
+
+for snapshot.element
+
 where mustSupport = true
+
 select
-	Feldname: id, Kurzbeschreibung: short, Beschreibung: definition, Hinweise: comment
+    Feldname: path,
+	Slice: sliceName,
+    Kurzbeschreibung: short,
+    Beschreibung: definition,
+    Hinweise: comment
 </fql>
 <br>&nbsp;<br>
 

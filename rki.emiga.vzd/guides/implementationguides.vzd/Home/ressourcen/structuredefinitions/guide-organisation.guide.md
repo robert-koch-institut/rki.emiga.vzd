@@ -70,14 +70,23 @@ for
 
 ## Anmerkungen zu Must-Support Elementen
 <fql>
-from
-	StructureDefinition
-where 
+using 'rki.emiga.vzd@2.0.0-alpha.24'
+
+from StructureDefinition
+
+where
     url = %canonical
-for differential.element
+
+for snapshot.element
+
 where mustSupport = true
+
 select
-	Feldname: id, Kurzbeschreibung: short, Beschreibung: definition, Hinweise: comment
+    Feldname: path,
+	Slice: sliceName,
+    Kurzbeschreibung: short,
+    Beschreibung: definition,
+    Hinweise: comment
 </fql>
 <br>&nbsp;<br>
 
@@ -87,16 +96,16 @@ Im Folgenden wird ein Beispiel für eine fiktive Organization dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:Organization-44588981.json}}
+        {{render:OrganizationMaximal.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Organization-44588981.json}}
+        {{xml:OrganizationMaximal.json}}
     </tab>
     <tab title="JSON">
-        {{json:Organization-44588981.json}}
+        {{json:OrganizationMaximal.json}}
     </tab>
     <tab title="Link">
-        {{link:Organization-44588981.json}}
+        {{link:OrganizationMaximal.json}}
     </tab>
 </tabs>
 
