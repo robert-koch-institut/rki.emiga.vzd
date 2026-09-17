@@ -102,3 +102,7 @@ RuleSet: StrictCoding
 * version 0..1 MS
 * code 1..1 MS
 * display 0..1 MS
+
+RuleSet: Expectation(path, expectation)
+* {path}.extension[0].url = $capExpectation
+* {path}.extension[0].valueCode = #{expectation}
