@@ -12,9 +12,9 @@ Description: "'PractitionerRole' definiert Attribute, die einem Practitioner zug
 * insert ProfileDomainResourceCommon
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole" 
 * insert ProfileMetaTags
 
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole" 
 // 'Additional content defined by implementations' - 0..* - Extension
 // Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt
 * extension 0..0
