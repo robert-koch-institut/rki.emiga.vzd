@@ -1,15 +1,15 @@
 // EMIGA VZD normative CapabilityStatement
 // Verifiziert gegen ref-get-capability-statement_08092026.json
 
-Instance: EmigaVzdCapabilityStatementRequirements
+Instance: EmigaEINRVCapabilityStatementRequirements
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://emiga.rki.de/fhir/vzd/CapabilityStatement/EmigaVzdRequirements"
-* version = "0.2.0-draft"
-* name = "EmigaVzdRequirements"
-* title = "CapabilityStatement für EMIGA VZD"
-* status = #draft
-* experimental = true
+* url = "https://emiga.rki.de/fhir/vzd/CapabilityStatement/EmigaEINRVCapabilityStatementRequirements"
+* version = "0.1.0"
+* name = "EmigaEINRVCapabilityStatementRequirements"
+* title = "Konformitätserklärung (CapabilityStatement) für EMIGA Einrichtungsverzeichnis (EINRV) - Anforderungen" 
+* status = #active
+* experimental = false
 * date = "2026-09-16"
 * publisher = "Robert Koch-Institut"
 * kind = #requirements
@@ -17,7 +17,7 @@ Usage: #definition
 * format[0] = #application/fhir+xml
 * format[1] = #application/fhir+json
 * description = """
-Dieses CapabilityStatement beschreibt die normativen FHIR-REST-Anforderungen für EMIGA VZD.
+Dieses Konformitätserklärung (CapabilityStatement) beschreibt die normativen FHIR-REST-Anforderungen für EMIGA VZD.
 Es ist vom Typ `requirements`. Zur Kennzeichnung der Verbindlichkeit wird die
 CapabilityStatement-Expectation-Extension mit den möglichen Werten 'SHALL' (=MUSS) 'SHOULD' (=SOLL) 'MAY' (=KANN) 'SHOULD-NOT' (=SOLL NICHT) verwendet.
 
