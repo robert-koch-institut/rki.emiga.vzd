@@ -1,6 +1,6 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung generischer Einrichtungen und Organisationen im Verzeichnisdienst (VZD).
+Dieser Anwendungsfall beschreibt die Verwaltung generischer Einrichtungen und Organisationen im Verzeichnisdienst (EINRV).
 
 ## Überblick
 
@@ -79,7 +79,7 @@ Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Org
 
 ## Schnittstellenoperationen
 
-Der VZD stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ Der VZD stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenen
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
+Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den EINRV übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
 
 ## Suche und Anzeige
 

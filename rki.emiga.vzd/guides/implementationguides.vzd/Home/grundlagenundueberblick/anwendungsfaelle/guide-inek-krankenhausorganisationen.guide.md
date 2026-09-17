@@ -1,10 +1,10 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Organisationen bzw. Standorten im Verzeichnisdienst (VZD).
+Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Organisationen bzw. Standorten im Einrichtungs Verzeichnis (EINRV).
 
 ## Überblick
 
-Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorischen Einheiten werden im VZD mehrere spezialisierte Profile verwendet:
+Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorischen Einheiten werden im EINRV mehrere spezialisierte Profile verwendet:
 
 - `EmigaHospitalOrganization` für das Krankenhaus,
 - `EmigaHospitalLocation` für besuchbare Krankenhausstandorte,
@@ -17,7 +17,7 @@ Die Profile unterscheiden zwischen organisatorischen Einheiten und physischen Or
 
 ## Fachlicher Ablauf
 
-Eine Krankenhausorganisation wird im VZD angelegt oder aus einer führenden Quelle übernommen. Anschließend werden die Organisationsdaten fachlich ergänzt und präzisiert. Dazu gehören insbesondere Name, Identifikatoren, Organisationsart, Zuständigkeiten und hierarchische Beziehungen.
+Eine Krankenhausorganisation wird im EINRV angelegt oder aus einer führenden Quelle übernommen. Anschließend werden die Organisationsdaten fachlich ergänzt und präzisiert. Dazu gehören insbesondere Name, Identifikatoren, Organisationsart, Zuständigkeiten und hierarchische Beziehungen.
 
 Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet. Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
@@ -82,7 +82,7 @@ Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab
 
 ## Schnittstellenoperationen
 
-Der VZD stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ Der VZD stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenen
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
+Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den EINRV übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
 
 ## Suche und Anzeige
 

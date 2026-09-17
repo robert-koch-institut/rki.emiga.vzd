@@ -1,6 +1,6 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD Organisationen und Einrichtungen, die im Rahmen von ÖGD fachlich relevant sind, im Verzeichnisdienst (VZD).
+Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD Organisationen und Einrichtungen, die im Rahmen von ÖGD fachlich relevant sind, im Einrichtungs Verzeichnis (EINRV).
 
 ## Überblick
 
@@ -32,7 +32,7 @@ Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaP
 
 ## Schnittstellenoperationen
 
-Der VZD stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von EpiWarn-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von EpiWarn-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |

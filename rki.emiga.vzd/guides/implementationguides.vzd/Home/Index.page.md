@@ -1,7 +1,7 @@
 # Implementierungsleitfaden für das EMIGA Einrichtungsverzeichnis
 
 
-<a href="https://simplifier.net/rki.emiga.vzd" class="btn btn-default">Zum EMIGA VZD Projekt auf Simplifier</a>
+<a href="https://simplifier.net/rki.emiga.vzd" class="btn btn-default">Zum EMIGA EINRV Projekt auf Simplifier</a>
 <a href="https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-3/FG32/EMIGA/emiga.html?templateQueryString=emiga" class="btn btn-default">Zur EMIGA-Webseite</a>
 
 
