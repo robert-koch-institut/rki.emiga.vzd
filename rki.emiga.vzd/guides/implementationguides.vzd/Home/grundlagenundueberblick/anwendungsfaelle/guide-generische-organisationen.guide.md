@@ -60,13 +60,13 @@ Das Profil `EmigaDepartmentOrganization` beschreibt einen organisatorischen Teil
 Eine `EmigaDepartmentOrganization` kann über `managingOrganization` einer Organisation zugeordnet werden.
 
 
-### Gesundheitsleistungen
+### Dienstleistungen im EINRV
 
-Falls eine Organisation eine gesundheitsbezogene Dienstleistung anbietet, kann diese über `EmigaHealthcareService` abgebildet werden.
+Falls eine Organisation eine Dienstleistung anbietet, kann diese über `EmigaHealthcareService` abgebildet werden. Beispiel einer Dienstleistung ist Ein Hotline einer Einrichtung oder ein/-e Ansprechpartner_in.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/HealthCareService.svg}}
 
-Die Gesundheitsleistung wird über `providedBy` der anbietenden Organisation zugeordnet. Die Standorte, an denen sie angeboten wird, werden über `EmigaLocation` referenziert.
+Die Dienstleistung wird über `providedBy` der anbietenden Organisation zugeordnet. Die Standorte, an denen sie angeboten wird, werden über `EmigaLocation` referenziert.
 
 ### Ansprechpersonen und Rollen
 
@@ -79,6 +79,37 @@ Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Org
 
 ## Schnittstellenoperationen
 
+<!--> NOTIZ: Probier mal diesen code 
+using scope
+
+from CapabilityStatement
+
+where
+    url = 'https://emiga.rki.de/fhir/vzd/CapabilityStatement/EmigaEINRVCapabilityStatementRequirements'
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for interaction
+
+select
+    'Operation': code,
+    'Zweck': documentation,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value
+
+with header
+<-->
 Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
 | Operation | Methode | Zweck | Ergebnis |

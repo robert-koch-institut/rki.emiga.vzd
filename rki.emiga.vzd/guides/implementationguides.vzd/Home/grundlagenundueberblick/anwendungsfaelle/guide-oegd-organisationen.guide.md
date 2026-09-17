@@ -33,6 +33,37 @@ Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaP
 ## Schnittstellenoperationen
 
 Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von EpiWarn-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+<!--> NOTIZ: Probier mal diesen code 
+using scope
+
+from CapabilityStatement
+
+where
+    url = 'https://emiga.rki.de/fhir/vzd/CapabilityStatement/EmigaEINRVCapabilityStatementRequirements'
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for interaction
+
+select
+    'Operation': code,
+    'Zweck': documentation,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value
+
+with header
+<-->
 
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |
