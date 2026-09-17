@@ -85,7 +85,6 @@ select
     Feldname: path,
 	Slice: sliceName,
     Kurzbeschreibung: short,
-    Beschreibung: definition,
     Hinweise: comment
 </fql>
 <br>&nbsp;<br>

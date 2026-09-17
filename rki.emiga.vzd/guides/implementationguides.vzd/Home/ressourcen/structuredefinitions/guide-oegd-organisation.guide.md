@@ -84,8 +84,7 @@ where mustSupport = true
 select
     Feldname: path,
 	Slice: sliceName,
-    Kurzbeschreibung: short,
-    Beschreibung: definition,
+    Kurzbeschreibung: short, 
     Hinweise: comment
 </fql>
 <br>&nbsp;<br>

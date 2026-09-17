@@ -85,11 +85,82 @@ select
     Feldname: path,
 	Slice: sliceName,
     Kurzbeschreibung: short,
-    Beschreibung: definition,
     Hinweise: comment
 </fql>
 <br>&nbsp;<br>
 
+<tabs>
+
+  <tab title="Interaktionen" active="true">
+    <fql>
+from CapabilityStatement
+for rest.resource
+where supportedProfile = %canonical
+for interaction
+
+select
+    'Name': %resource.name,
+    'Interaktion': code,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+    </fql>
+  </tab>
+
+
+  <tab title="Suchparameter">
+    <fql>
+from CapabilityStatement
+for rest.resource
+where supportedProfile = %canonical
+for searchParam
+
+select
+    'Name': %resource.name,
+    'Suchparameter': name,
+    'Typ': type,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+    </fql>
+  </tab>
+
+
+  <tab title="Operationen">
+    <fql>
+from CapabilityStatement
+for rest.resource
+where supportedProfile = %canonical
+for operation
+
+select
+    'Name': %resource.name,
+    'Operation': name,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+    </fql>
+  </tab>
+
+</tabs>
 
 ## Beispiel
 Im Folgenden wird ein Beispiel für einen fiktive Standort dargestellt.
