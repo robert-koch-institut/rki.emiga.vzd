@@ -12,7 +12,5 @@
   filename: guide-weiterfuehrende-informationen.guide.md
 - name: Lizenzen
   filename: guide-lizenzen.guide.md  
-- name: Implementierungshinweise
-  filename: implementierungshinweise
 - name: Ressourcen
   filename: ressourcen
