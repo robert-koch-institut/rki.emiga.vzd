@@ -89,118 +89,29 @@ select
 </fql>
 <br>&nbsp;<br>
 
-## Interaktionen
+## FHIR REST-Schnittstelle
 
 <tabs>
 
   <tab title="Interaktionen" active="true">
 
-<fql>
-using scope
-
-from CapabilityStatement
-
-for rest.resource
-
-where
-    supportedProfile
-        .where(
-            $this = %canonical
-        )
-        .exists()
-
-for interaction
-
-select
-    'Name': %resource.name,
-    'Interaktion': code,
-    'Verbindlichkeit':
-        extension
-            .where(
-                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-            )
-            .value,
-    'Dokumentation' [markdown]: documentation
-
-with header
-</fql>
+    {{render:fql-capability-interactions.fql}}
 
   </tab>
-
 
   <tab title="Suchparameter">
 
-<fql>
-using scope
-
-from CapabilityStatement
-
-for rest.resource
-
-where
-    supportedProfile
-        .where(
-            $this = %canonical
-        )
-        .exists()
-
-for searchParam
-
-select
-    'Name': %resource.name,
-    'Suchparameter': name,
-    'Typ': type,
-    'Verbindlichkeit':
-        extension
-            .where(
-                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-            )
-            .value,
-    'Dokumentation' [markdown]: documentation
-
-with header
-</fql>
+    {{render:fql-capability-searchparameters.fql}}
 
   </tab>
 
-
   <tab title="Operationen">
 
-<fql>
-using scope
-
-from CapabilityStatement
-
-for rest.resource
-
-where
-    supportedProfile
-        .where(
-            $this = %canonical
-        )
-        .exists()
-
-for operation
-
-select
-    'Name': %resource.name,
-    'Operation': name,
-    'Definition' [canonical]: definition,
-    'Verbindlichkeit':
-        extension
-            .where(
-                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-            )
-            .value,
-    'Dokumentation' [markdown]: documentation
-
-with header
-</fql>
+    {{render:fql-capability-operations.fql}}
 
   </tab>
 
 </tabs>
-
 
 ## Beispiel
  
