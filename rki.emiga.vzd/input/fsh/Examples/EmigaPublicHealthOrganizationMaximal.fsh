@@ -35,29 +35,23 @@ Description: "Maximale Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 
 /* -------- type (slice + extra allowed type because slicing is open) -------- */
 * type[emigaOrganizationType].coding.system = $OrganizationType
-* type[emigaOrganizationType].coding.code = #ga
-* type[emigaOrganizationType].coding.display = "Gesundheitsamt"
-
-/* additional type (allowed by open slicing) */
-* type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type[=].coding.code = #govt
-* type[=].coding.display = "Government"
+* type[emigaOrganizationType].coding.code = #rki
+* type[emigaOrganizationType].coding.display = "Robert Koch Institut"
 
 /* -------- name / alias (0..* MS) -------- */
-* name = "Stadt XYZ – Gesundheitsamt"
-* alias[0] = "GA Musterstadt"
-* alias[+] = "Gesundheitsamt XYZ"
-* alias[+] = "ÖGD – Stadt XYZ"
+* name = "Robert Koch Institut"
+* alias[0] = "RKI"
+
 
 /* -------- telecom -------- */
 * telecom[Email].system = #email
-* telecom[Email].value = "info@gesundheitsamt.de"
+* telecom[Email].value = "info@rki.de"
 
 * telecom[Phone].system = #phone
 * telecom[Phone].value = "+49 511 1234567"
 
 * telecom[Url].system = #url
-* telecom[Url].value = "https://www.gesundheitsamt.de"
+* telecom[Url].value = "https://www.rki.de"
 
 * telecom[Fax].system = #fax
 * telecom[Fax].value = "+49 511 1234568"
