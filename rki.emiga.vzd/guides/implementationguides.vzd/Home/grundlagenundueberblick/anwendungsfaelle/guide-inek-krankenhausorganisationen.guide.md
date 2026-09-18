@@ -21,6 +21,13 @@ Eine Krankenhausorganisation wird im EINRV angelegt oder aus einer führenden Qu
 
 Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet. Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
+### InEK Krankenhausverzeichnis
+
+
+INEK Daten beziehen sich auf die Datenerhebung und -übermittlung an das Institut für das Entgeltsystem im Krankenhaus (InEK). Diese Daten werden hauptsächlich für die Weiterentwicklung des Diagnosis- Related Groups G-DRG-Systems und des PEPP-Systems benötigt. Das InEK dient als zentrale Datenannahmestelle und nutzt diese Informationen zur Berechnung von Relativgewichten und zur Ermittlung des DRG-Erlös. 
+
+Unter krankenhausstandorte.de lässt sich nach Anmeldung ein vollständiges Verzeichnis der zugelassenen Krankenhäuser in Deutschland und deren Ambulanzen als XML-Datei herunterladen. Außerdem ist die Struktur des Verzeichnisses in einer XSD-Datei definiert. Diese daten werden in Einrichtungsverzeichnis importiert. Die InEK-Krankenhausorganizationen werden mit den Tag 'meta.tag:relevance' und dem Kode 'InEK' und Dispaly 'Aus Krankenhausverzeichnis' gekenzeichnet.
+
 ### InEK-Import
 Der **InEK Importer** ist eine eigenständige Komponente des Einrichtungsverzeichnisses und stellt eine **lesende Schnittstelle zum InEK** bereit. Über diese Schnittstelle lädt der InEK Importer regelmäßig eine Datei mit den vom InEK verwalteten Einrichtungsdaten herunter.
 

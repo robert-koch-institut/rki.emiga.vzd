@@ -59,7 +59,7 @@ Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses 
 
 ## Copyright
 
-Copyright (C) 2024 Robert Koch-Institut
+Copyright (C) 2026 Robert Koch-Institut
 
 Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
 
