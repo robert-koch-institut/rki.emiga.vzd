@@ -89,3 +89,135 @@ select
 </fql>
 <br>&nbsp;<br>
 
+## Interaktionen
+
+<tabs>
+
+  <tab title="Interaktionen" active="true">
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for interaction
+
+select
+    'Name': %resource.name,
+    'Interaktion': code,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+</fql>
+
+  </tab>
+
+
+  <tab title="Suchparameter">
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for searchParam
+
+select
+    'Name': %resource.name,
+    'Suchparameter': name,
+    'Typ': type,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+</fql>
+
+  </tab>
+
+
+  <tab title="Operationen">
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for operation
+
+select
+    'Name': %resource.name,
+    'Operation': name,
+    'Definition' [canonical]: definition,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+</fql>
+
+  </tab>
+
+</tabs>
+
+## Beispiel
+Im Folgenden wird ein Beispiel für eine fiktive Dienstleistung dargestellt.
+
+<tabs>
+    <tab title="Übersicht">      
+        {{render:Organization-DepartmentOrganization.json}}
+    </tab>
+    <tab title="XML">      
+        {{xml:Organization-DepartmentOrganization.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Organization-DepartmentOrganization.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Organization-DepartmentOrganization.json}}
+    </tab>
+</tabs>
+
+
+

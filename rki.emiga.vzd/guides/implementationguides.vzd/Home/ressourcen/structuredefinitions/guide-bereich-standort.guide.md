@@ -89,13 +89,26 @@ select
 </fql>
 <br>&nbsp;<br>
 
+## Interaktionen
+
 <tabs>
 
   <tab title="Interaktionen" active="true">
-    <fql>
+
+<fql>
+using scope
+
 from CapabilityStatement
+
 for rest.resource
-where supportedProfile = %canonical
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
 for interaction
 
 select
@@ -110,15 +123,27 @@ select
     'Dokumentation' [markdown]: documentation
 
 with header
-    </fql>
+</fql>
+
   </tab>
 
 
   <tab title="Suchparameter">
-    <fql>
+
+<fql>
+using scope
+
 from CapabilityStatement
+
 for rest.resource
-where supportedProfile = %canonical
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
 for searchParam
 
 select
@@ -134,20 +159,33 @@ select
     'Dokumentation' [markdown]: documentation
 
 with header
-    </fql>
+</fql>
+
   </tab>
 
 
   <tab title="Operationen">
-    <fql>
+
+<fql>
+using scope
+
 from CapabilityStatement
+
 for rest.resource
-where supportedProfile = %canonical
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
 for operation
 
 select
     'Name': %resource.name,
     'Operation': name,
+    'Definition' [canonical]: definition,
     'Verbindlichkeit':
         extension
             .where(
@@ -157,7 +195,8 @@ select
     'Dokumentation' [markdown]: documentation
 
 with header
-    </fql>
+</fql>
+
   </tab>
 
 </tabs>

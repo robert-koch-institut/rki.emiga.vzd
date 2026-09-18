@@ -89,6 +89,118 @@ select
 </fql>
 <br>&nbsp;<br>
 
+## Interaktionen
+
+<tabs>
+
+  <tab title="Interaktionen" active="true">
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for interaction
+
+select
+    'Name': %resource.name,
+    'Interaktion': code,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+</fql>
+
+  </tab>
+
+
+  <tab title="Suchparameter">
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for searchParam
+
+select
+    'Name': %resource.name,
+    'Suchparameter': name,
+    'Typ': type,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+</fql>
+
+  </tab>
+
+
+  <tab title="Operationen">
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+for rest.resource
+
+where
+    supportedProfile
+        .where(
+            $this = %canonical
+        )
+        .exists()
+
+for operation
+
+select
+    'Name': %resource.name,
+    'Operation': name,
+    'Definition' [canonical]: definition,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value,
+    'Dokumentation' [markdown]: documentation
+
+with header
+</fql>
+
+  </tab>
+
+</tabs>
+
 ## Beispiel
 Im Folgenden wird ein Beispiel für eine Practitioner Role dargestellt.
 
