@@ -79,7 +79,8 @@ Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Org
 
 ## Schnittstellenoperationen
 
-<!--> NOTIZ: Probier mal diesen code 
+<!--> NOTIZ: Dynamische mittels fql Represantation der Tabelle unten, wenn ok ich werde die Tabelle entfernen <-->
+<fql>
 using scope
 
 from CapabilityStatement
@@ -109,7 +110,8 @@ select
             .value
 
 with header
-<-->
+</fql>
+
 Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
 | Operation | Methode | Zweck | Ergebnis |
@@ -132,6 +134,36 @@ Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdat
 ## Suche und Anzeige
 
 Typische Suchkriterien sind Identifier, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
+
+## EpiWarn Organizationen
+
+EpiWarn-Organisationen dienen der eindeutigen Identifikation und Verwaltung von Einrichtungen und Stellen, die unter Paragraf 2 IfSG-Koordinierungs-VwV an EpiWarn-Prozessen beteiligt sind. EpiWarn-Organisationen werden grundsätzlich über die für generische Organisationen vorgesehenen EMIGA-Profile abgebildet mit befüllung der 'meta.tag:relevance' Elementes mit der Wert 'IfsgKoordVwV'. Je nach fachlichem Bedarf kann insbesondere EmigaOrganization verwendet werden. Handelt es sich bei einer EpiWarn-Organisation um eine direkt nutzende ÖGD-Organisation mit CodeSite-ID, wird EmigaPublicHealthOrganization verwendet.
+
+Eine EpiWarn-Organisation kann beispielsweise folgende Funktionen haben:
+
+- zuständige Organisation,
+- weiterleitende Organisation,
+- fachlich beteiligte Organisation,
+- koordinierende Stelle,
+- Kontaktstelle für Rückfragen.
+
+Im Folgenden wird ein Beispiel für einen EpiWarn Organization dargestellt.
+
+<tabs>
+    <tab title="Übersicht">      
+        {{render:Organization-EpiWarnOrganization.json}}
+    </tab>
+    <tab title="XML">      
+        {{xml:Organization-EpiWarnOrganization.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Organization-EpiWarnOrganization.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Organization-EpiWarnOrganization.json}}
+    </tab>
+</tabs>
+
 
 ## Interoperabilitätshinweise
 
