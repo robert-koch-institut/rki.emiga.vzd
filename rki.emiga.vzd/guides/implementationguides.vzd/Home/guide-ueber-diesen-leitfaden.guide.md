@@ -1,4 +1,7 @@
 # {{page-title}}
+
+{{render:guides/implementationguides.vzd/images/EMIGA_Wortbildmarke_UZ_Standard_RGB_72dpi.png}}
+
 Dieser Implementierungsleitfaden beschreibt die FHIR-Spezifikation des EMIGA-VZD-Pakets <a href="https://simplifier.net/rki.emiga.vzd">rki.emiga.vzd</a>. Er umfasst die grundlegenden FHIR-Profile, Terminologien und weiteren Artefakte, die für das Einrichtungsverzeichnis in EMIGA verwendet werden und die Basis für den standardisierten Austausch und die Verarbeitung von Daten über die FHIR-Schnittstelle gemäß dem definierten Datenmodell bilden. Dazu gehören unter anderem die Modellierung der *Organisationen*, *Krankenhäuser* und *leistungserbringenden Personen*. Zusammen mit den weiteren EMIGA-Implementierungsleitfäden bildet dieser die Grundlage für einen interoperablen und standardisierten Datenaustausch im Rahmen von EMIGA.
 
 ### Zielgruppe
