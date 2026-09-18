@@ -3,7 +3,7 @@
 - name: Über diesen Leitfaden
   filename: guide-ueber-diesen-leitfaden.guide.md
 - name: Grundlagen und Überblick
-  filename: guide-grundlagen-und-ueberblick.guide.md
+  filename: grundlagenundueberblick
 - name: Ergänzende Hinweise
   filename: guide-ergaenzende-hinweise.guide.md
 - name: Änderungshistorie
