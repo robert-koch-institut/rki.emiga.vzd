@@ -1,34 +1,53 @@
 @startuml
 title Überblick der Krankenhaus-Organisationen
 
-class EmigaHospitalFacilityLocation{
-Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
-Standortverzeichnis oder Stationen eines Krankenhauses ab 
-}
-class EmigaHospitalLocation{
-Dieses Profil bildet einen Standort eines Krankenhauses im Kontext 
-von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren 
-Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) 
-einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in 
-Melde-, Dokumentations- und Kommunikationsprozessen. 
-}
-class EmigaHospitalOrganization{
-Profil zur Abbildung eines Krankenhauses im Kontext von EMIGA. 
-Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses 
-(z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in 
-Melde-, Dokumentations- und Kommunikationsprozessen. 
-}
-class EmigaHospitalRoomLocation{
-Dieses Profil bildet einen Raum in einem Krankenhaus im Kontext von 
-EMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten 
-innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) 
-einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten. 
-}
+top to bottom direction
 
-EmigaHospitalRoomLocation --> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
-EmigaHospitalRoomLocation --> EmigaHospitalLocation: Teil von (partOf)
-EmigaHospitalOrganization --> Organization : Verwaltende Organisation (managingOrganization)
-EmigaHospitalLocation --> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
-EmigaHospitalFacilityLocation --> EmigaHospitalOrganization : Verwaltende Organisation (managingOrganization)
-EmigaHospitalFacilityLocation --> EmigaHospitalLocation: Teil von (partOf)
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultTextAlignment left
+skinparam ArrowFontSize 11
+
+skinparam nodesep 150
+skinparam ranksep 110
+
+
+rectangle "**EmigaHospitalFacilityLocation**\nKrankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK-\nStandortverzeichnis oder Stationen eines Krankenhauses ab." as EmigaHospitalFacilityLocation
+
+rectangle "**EmigaHospitalLocation**\nDieses Profil bildet einen Standort eines Krankenhauses im Kontext\nvon EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren\nKrankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen)\neinschließlich Adress- und ggf. Geokoordinaten für die Nutzung in\nMelde-, Dokumentations- und Kommunikationsprozessen." as EmigaHospitalLocation
+
+rectangle "**EmigaHospitalOrganization**\nProfil zur Abbildung eines Krankenhauses im Kontext von EMIGA.\nEs dient der strukturierten Erfassung von Stammdaten des Krankenhauses\n(z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in\nMelde-, Dokumentations- und Kommunikationsprozessen. Wenn ein Krankenhaus\n aus InEK importiert wird dann besizt keine Addresse.\n Die Adressen sind im Standort (EmigaHospitalLocation) zu finden." as EmigaHospitalOrganization
+
+rectangle "**EmigaHospitalRoomLocation**\nDieses Profil bildet einen Raum in einem Krankenhaus im Kontext von\nEMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten\ninnerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume,\nIsolationsbereiche) einschließlich ihrer Identifikation und Zuordnung\nzu übergeordneten Organisationseinheiten." as EmigaHospitalRoomLocation
+
+
+' --------------------------------------------------
+' Layout-Steuerung
+' --------------------------------------------------
+
+' obere Position
+EmigaHospitalLocation -[hidden]down- EmigaHospitalOrganization
+
+' mittlere Reihe
+EmigaHospitalFacilityLocation -[hidden]right- EmigaHospitalOrganization
+EmigaHospitalOrganization -[hidden]right- EmigaHospitalRoomLocation
+
+
+' --------------------------------------------------
+' Beziehungen
+' --------------------------------------------------
+
+' managingOrganization symmetrisch zur Mitte
+EmigaHospitalFacilityLocation -right-> EmigaHospitalOrganization : Verwaltende Organisation\n(managingOrganization)
+
+EmigaHospitalRoomLocation -up-> EmigaHospitalOrganization : Verwaltende Organisation\n(managingOrganization)
+
+EmigaHospitalLocation -down-> EmigaHospitalOrganization : Verwaltende Organisation\n(managingOrganization)
+
+
+' partOf symmetrisch nach oben
+EmigaHospitalFacilityLocation -up-> EmigaHospitalLocation : Teil von\n(partOf)
+
+EmigaHospitalRoomLocation -up-> EmigaHospitalLocation : Teil von\n(partOf)
+
 @enduml

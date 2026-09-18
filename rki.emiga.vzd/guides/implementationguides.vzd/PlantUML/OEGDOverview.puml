@@ -1,25 +1,74 @@
 @startuml
-title Überblick der ÖGD Organisationen
+title Überblick der ÖGD-Organisationen
 
-class EmigaPublicHealthOrganization{
-Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA
-direkt nutzende ÖDG-Organisationen sind, die eine CodeSite-ID besitzen.
-}
-class IdentifierCodeSiteId{
-Identifier-Profil für die vom RKI vergebene Kennung des Organisationen
-des ÖGDs (Gesundheitsamts, Landesstelle, usw.).
-}
-class EmigaPublicHealthLocation{
-Physischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden. 
-Der Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten
-eindeutig räumlich verortet.
-}
+top to bottom direction
 
-EmigaPublicHealthOrganization --> Organization : Teil von (partOf)
-EmigaPublicHealthLocation --> EmigaPublicHealthOrganization : Verwaltende Organisation (managingOrganization)
-EmigaPublicHealthOrganization --> IdentifierCodeSiteId : besitzt
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultTextAlignment left
+skinparam ArrowFontSize 11
 
-Organization -[hidden]down- EmigaPublicHealthOrganization
-EmigaPublicHealthOrganization -[hidden]down- EmigaPublicHealthLocation
+skinparam nodesep 160
+skinparam ranksep 180
+
+
+rectangle "**EmigaPublicHealthOrganization**\nUnter der ÖGD Organisation werden alle Organisationen zusammengefasst,\ndie EMIGA direkt nutzende ÖGD-Organisationen sind, die eine CodeSite-ID besitzen." as EmigaPublicHealthOrganization
+
+rectangle "**IdentifierCodeSiteId**\nIdentifier-Profil für die vom RKI vergebene Kennung der Organisationen\ndes ÖGD (Gesundheitsamt, Landesstelle usw.)." as IdentifierCodeSiteId
+
+rectangle "**EmigaPublicHealthLocation**\nPhysischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden.\nDer Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten\neindeutig räumlich verortet." as EmigaPublicHealthLocation
+
+rectangle "**EmigaPractitioner**\nPerson, die im Kontext des ÖGD Leistungen erbringt bzw. Aufgaben\ninnerhalb einer ÖGD-Organisation wahrnimmt." as EmigaPractitioner
+
+rectangle "**EmigaPractitionerRole**\nBeschreibt die Rolle einer Person innerhalb einer ÖGD-Organisation\nsowie die damit verbundenen organisatorischen und fachlichen Zuordnungen." as EmigaPractitionerRole
+
+rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die durch eine ÖGD-Organisation\nbzw. an deren Standorten angeboten wird." as EmigaHealthcareService
+
+
+' --------------------------------------------------
+' Layout-Steuerung
+' --------------------------------------------------
+
+' obere Reihe
+EmigaPractitioner -[hidden]right- EmigaPractitionerRole
+EmigaPractitionerRole -[hidden]right- EmigaHealthcareService
+
+' zentrale Organisation
+EmigaPractitionerRole -[hidden]down- EmigaPublicHealthOrganization
+
+' seitliche Elemente um die Organisation
+IdentifierCodeSiteId -[hidden]right- EmigaPublicHealthOrganization
+EmigaPublicHealthOrganization -[hidden]right- EmigaPublicHealthLocation
+
+
+' --------------------------------------------------
+' Practitioner / PractitionerRole
+' --------------------------------------------------
+
+EmigaPractitionerRole -left-> EmigaPractitioner : Person, der die für die\n Organisation definierten\n Leistungen erbringen kann\n(practitioner)
+
+EmigaPractitionerRole -down-> EmigaPublicHealthOrganization : Organisation, in der die Rolle\nausgeübt werden kann\n(organization)
+
+EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen,\n die der Practitioner\nfür die Organisation bzw.\n deren Standorte erbringt\n(healthcareService)
+
+
+' --------------------------------------------------
+' HealthcareService
+' --------------------------------------------------
+
+EmigaHealthcareService -left-> EmigaPublicHealthOrganization : bereitgestellt von\n(providedBy)
+
+EmigaHealthcareService --> EmigaPublicHealthLocation : Referenzierung der Standorte,\nan denen die Dienstleistung angeboten wird\n(location)
+
+
+' --------------------------------------------------
+' ÖGD Organisation / Standort
+' --------------------------------------------------
+
+EmigaPublicHealthOrganization -up-> EmigaPublicHealthOrganization : Teil von\n(partOf)
+
+EmigaPublicHealthLocation -left-> EmigaPublicHealthOrganization : Verwaltende Organisation\n(managingOrganization)
+
+EmigaPublicHealthOrganization -down-> IdentifierCodeSiteId : besitzt
 
 @enduml

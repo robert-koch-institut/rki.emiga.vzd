@@ -1,0 +1,60 @@
+@startuml
+title Überblick der EMIGA-VzD-Implementierung
+
+top to bottom direction
+
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultTextAlignment left
+
+' Mehr Abstand zwischen den Elementen
+skinparam nodesep 240
+skinparam ranksep 120
+
+' Schriftgröße der Pfeilbeschriftungen
+skinparam ArrowFontSize 11
+
+
+rectangle "**Organization**\nProfile\n• EmigaOrganization\n• EmigaHospitalOrganization\n• EmigaPublicHealthOrganization\n• EmigaDepartmentOrganization" as Organization
+
+rectangle "**Location**\nProfile\n• EmigaLocation\n• EmigaHospitalLocation\n• EmigaHospitalFacilityLocation\n• EmigaHospitalRoomLocation\n• EmigaPublicHealthLocation" as Location
+
+rectangle "**Practitioner**\nProfile\n• EmigaPractitioner" as Practitioner
+
+rectangle "**PractitionerRole**\nProfile\n• EmigaPractitionerRole" as PractitionerRole
+
+rectangle "**HealthcareService**\nProfile\n• EmigaHealthcareService" as HealthcareService
+
+
+' --------------------------------------------------
+' Layout-Steuerung
+' --------------------------------------------------
+
+' Organization -[hidden]right- Location
+
+' Practitioner -[hidden]right- PractitionerRole
+
+' Organization -[hidden]down- PractitionerRole
+
+
+' --------------------------------------------------
+' FHIR-Referenzen
+' --------------------------------------------------
+
+Organization -down-> Organization : Teil von\n(partOf)
+
+Location -up-> Organization : Verwaltende Organisation\n(managingOrganization)
+
+Location --> Location : Teil von\n(partOf)
+
+PractitionerRole --> Organization : Organisation, in der die Rolle\n ausgeübt werden kann\n(organization)
+
+PractitionerRole --> Practitioner : Practitioner, der die für\n die Organisation\n definierten Leistungen\n erbringen kann\n(practitioner)
+
+PractitionerRole -right-> HealthcareService : Dienstleistungen, die der Practitioner\n für die Organisation\n bzw. deren Standorte\n erbringt\n(healthcareservice)
+
+HealthcareService --> Organization : bereitgestellt von\n(providedBy)
+
+HealthcareService --> Location : Referenzierung der Standorte, an denen die Dienstleistung angeboten wird\n(location)
+
+@enduml

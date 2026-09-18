@@ -1,51 +1,66 @@
 @startuml
 title Überblick der generischen Organisationen
 
-class EmigaDepartmentOrganization{
-Unter einer Fachabteilung versteht man einen organisatorischen Teil 
-einer Abteilung (nicht der physischen Ort). 
-}
-class EmigaHealthcareService{
-Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem 
-Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, 
-Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle 
-}
-class EmigaLocation{
-Ein 'physischer' Ort, der besucht werden kann. Einem physischen Ort können 
-grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden. 
-}
-class EmigaOrganization{
-Unter der EMIGA Organization werden alle Organisationen zusammengefasst, die 
-NICHT EMIGA direkt nutzende ÖDG-Organisationen sind, die eine CodeSite-ID besitzen. 
-Damit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen, 
-wie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. 
-Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier 
-eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine 
-Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift. 
-}
-class EmigaPractitioner{
-Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/Erfüllung 
-von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit 
-explizit nicht nur Ärztinnen und Ärzte sondern auch andere Personengruppen, wie 
-z.B. MitarbeiterInnen im Gesundheitsamt, LeiterInnen/AnsprechpartnerInnen von 
-Gemeinschaftseinrichtungen. Patienten, Kontaktpersonen etc. fallen jedoch explizit 
-NICHT unter diese Kategorie. 
-}
-class EmigaPractitionerRole{
-Definiert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet 
-werden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation 
-aber auch die Rolle die wahrgenommen wird.      
-}
+top to bottom direction
 
-EmigaPractitionerRole --> EmigaOrganization : Organisation, in der die Rolle ausgeübt werden kann
-EmigaPractitionerRole --> EmigaPractitioner : Practitioner, der die für die Organisation definierten Leistungen erbringen kann
-EmigaPractitionerRole --> EmigaHealthcareService : Gesundheitsleistungen, die der Practitioner für die Organisation bzw. deren Standorte erbringt
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultTextAlignment left
+skinparam ArrowFontSize 11
 
-EmigaOrganization --> Organization: Teil von (partOf)
-EmigaLocation --> Organization : Verwaltende Organisation (managingOrganization)
+skinparam nodesep 140
+skinparam ranksep 100
 
-EmigaHealthcareService --> Organization: bereitgestellt von (providedBy)
-EmigaHealthcareService --> EmigaLocation: Referenzierung der Standorte, an denen die Dienstleistung angeboten wird (location)
 
-EmigaDepartmentOrganization --> Organization: Verwaltende Organisation (managingOrganization)
+rectangle "**EmigaDepartmentOrganization**\nUnter einer Fachabteilung versteht man einen organisatorischen Teil\neiner Abteilung (nicht der physische Ort)." as EmigaDepartmentOrganization
+
+rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die im weitesten Sinne mit dem\nGesundheitswesen assoziiert ist, z. B. Tuberkulosestelle,\nLebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle." as EmigaHealthcareService
+
+rectangle "**EmigaLocation**\nEin 'physischer' Ort, der besucht werden kann. Einem physischen Ort können\ngrundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse\nzugeordnet werden." as EmigaLocation
+
+rectangle "**EmigaOrganization**\nUnter der EMIGA Organization werden alle Organisationen zusammengefasst, die\nNICHT EMIGA direkt nutzende ÖGD-Organisationen sind, die eine CodeSite-ID besitzen.\nDamit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen,\nwie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert.\nDie jeweiligen Organisationen werden durch ihren Typ und/oder ihren Identifier\neindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine\nStraßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift." as EmigaOrganization
+
+rectangle "**EmigaPractitioner**\nPersonen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/\nErfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben.\nDies sind somit explizit nicht nur Ärztinnen und Ärzte, sondern auch andere\nPersonengruppen, wie z. B. MitarbeiterInnen im Gesundheitsamt,\nLeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen.\nPatienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie." as EmigaPractitioner
+
+rectangle "**EmigaPractitionerRole**\nDefiniert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet\nwerden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation,\naber auch die Rolle, die wahrgenommen wird." as EmigaPractitionerRole
+
+
+' --------------------------------------------------
+' Layout-Steuerung
+' --------------------------------------------------
+
+' obere Reihe
+EmigaPractitioner -[hidden]right- EmigaPractitionerRole
+
+' mittlere Reihe
+EmigaDepartmentOrganization -[hidden]right- EmigaOrganization
+EmigaOrganization -[hidden]right- EmigaHealthcareService
+
+' untere Reihe
+EmigaOrganization -[hidden]down- EmigaLocation
+
+' vertikale Ausrichtung
+EmigaPractitionerRole -[hidden]down- EmigaOrganization
+
+
+' --------------------------------------------------
+' Beziehungen
+' --------------------------------------------------
+
+EmigaPractitionerRole -down-> EmigaOrganization : Organisation, in der die Rolle\nausgeübt werden kann
+
+EmigaPractitionerRole -left-> EmigaPractitioner : Practitioner, der die\n für die Organisation\ndefinierten Leistungen\n erbringen kann
+
+EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen, die der Practitioner\nfür die Organisation bzw. deren Standorte erbringt
+
+EmigaOrganization -left-> EmigaOrganization : Teil von\n(partOf)
+
+EmigaLocation -up-> EmigaOrganization : Verwaltende Organisation\n(managingOrganization)
+
+EmigaHealthcareService -left-> EmigaOrganization : bereitgestellt von\n(providedBy)
+
+EmigaHealthcareService -down-> EmigaLocation : Referenzierung der Standorte,\nan denen die Dienstleistung angeboten wird\n(location)
+
+EmigaDepartmentOrganization -up-> EmigaOrganization : Verwaltende Organisation\n(managingOrganization)
+
 @enduml
