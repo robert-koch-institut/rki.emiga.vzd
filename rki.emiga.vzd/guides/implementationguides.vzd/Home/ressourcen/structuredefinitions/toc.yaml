@@ -1,28 +1,32 @@
 - name: Index
   filename: Index.page.md
+- name: Einrichtung
+  filename: guide-organisation.guide.md
+- name: Fachabteilung
+  filename: guide-fachabteilung.guide.md
 - name: Bereich / Standort
   filename: guide-bereich-standort.guide.md
 - name: Dienstleistung
   filename: guide-dienstleistung.guide.md
-- name: Fachabteilung
-  filename: guide-fachabteilung.guide.md
+- name: Akteur:in 
+  filename: guide-practitioner.guide.md
+- name: Rolle der Akteur:in
+  filename: guide-practitioner-role.guide.md
+- name: ÖGD Einrichtung
+  filename: guide-oegd-organisation.guide.md
+- name: ÖGD Fachbereich / Standort
+  filename: guide-oegd-fachbereich-standort.guide.md
 - name: Identifier-Profil CodeSiteId
   filename: guide-identifier-profil-codesiteid.guide.md
 - name: Krankenhaus
   filename: guide-krankenhaus.guide.md
+- name: Krankenhaus - Standort
+  filename: guide-krankenhaus-standort.guide.md
 - name: Krankenhaus - Einrichtungsstandort
   filename: guide-krankenhaus-einrichtungsstandort.guide.md
 - name: Krankenhaus - Raum
   filename: guide-krankenhaus-raum.guide.md
-- name: Krankenhaus - Standort
-  filename: guide-krankenhaus-standort.guide.md
-- name: ÖGD Fachbereich / Standort
-  filename: guide-oegd-fachbereich-standort.guide.md
-- name: ÖGD Einrichtung
-  filename: guide-oegd-organisation.guide.md
-- name: Einrichtung
-  filename: guide-organisation.guide.md
-- name: Akteur:in der Gesundheitsversorgung
-  filename: guide-practitioner.guide.md
-- name: Rolle in der Gesundheitsversorgung
-  filename: guide-practitioner-role.guide.md
+
+
+
+
