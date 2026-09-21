@@ -1,5 +1,5 @@
 @startuml
-title Überblick der generischen Organisationen
+title Überblick der generischen Einrichtungen
 
 top to bottom direction
 
@@ -18,11 +18,11 @@ rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die im
 
 rectangle "**EmigaLocation**\nEin 'physischer' Ort, der besucht werden kann. Einem physischen Ort können\ngrundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse\nzugeordnet werden." as EmigaLocation
 
-rectangle "**EmigaOrganization**\nUnter der EMIGA Organization werden alle Organisationen zusammengefasst, die\nNICHT EMIGA direkt nutzende ÖGD-Organisationen sind, die eine CodeSite-ID besitzen.\nDamit werden unter EMIGA Organisationen sowohl Behörden, Transport-Unternehmen,\nwie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert.\nDie jeweiligen Organisationen werden durch ihren Typ und/oder ihren Identifier\neindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine\nStraßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift." as EmigaOrganization
+rectangle "**EmigaOrganization**\nUnter der EMIGA Organization werden alle Einrichtungen zusammengefasst, die\nNICHT EMIGA direkt nutzende ÖGD-Einrichtungen sind, die eine CodeSite-ID besitzen.\nDamit werden unter EMIGA Einrichtungen sowohl Behörden, Transport-Unternehmen,\nwie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Einrichtung subsummiert.\nDie jeweiligen Einrichtungen werden durch ihren Typ und/oder ihren Identifier\neindeutig charakterisiert. EmigaEinrichtungen müssen nicht zwingend eine\nStraßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift." as EmigaOrganization
 
 rectangle "**EmigaPractitioner**\nPersonen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/\nErfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben.\nDies sind somit explizit nicht nur Ärztinnen und Ärzte, sondern auch andere\nPersonengruppen, wie z. B. MitarbeiterInnen im Gesundheitsamt,\nLeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen.\nPatienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie." as EmigaPractitioner
 
-rectangle "**EmigaPractitionerRole**\nDefiniert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet\nwerden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Organisation,\naber auch die Rolle, die wahrgenommen wird." as EmigaPractitionerRole
+rectangle "**EmigaPractitionerRole**\nDefiniert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet\nwerden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Einrichtung,\naber auch die Rolle, die wahrgenommen wird." as EmigaPractitionerRole
 
 
 ' --------------------------------------------------
@@ -47,20 +47,20 @@ EmigaPractitionerRole -[hidden]down- EmigaOrganization
 ' Beziehungen
 ' --------------------------------------------------
 
-EmigaPractitionerRole -down-> EmigaOrganization : Organisation, in der die Rolle\nausgeübt werden kann
+EmigaPractitionerRole -down-> EmigaOrganization : Einrichtung, in der die Rolle\nausgeübt werden kann
 
-EmigaPractitionerRole -left-> EmigaPractitioner : Practitioner, der die\n für die Organisation\ndefinierten Leistungen\n erbringen kann
+EmigaPractitionerRole -left-> EmigaPractitioner : Practitioner, der die\n für die Einrichtung\ndefinierten Leistungen\n erbringen kann
 
-EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen, die der Practitioner\nfür die Organisation bzw. deren Standorte erbringt
+EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen, die der Practitioner\nfür die Einrichtung bzw. deren Standorte erbringt
 
 EmigaOrganization -left-> EmigaOrganization : Teil von\n(partOf)
 
-EmigaLocation -up-> EmigaOrganization : Verwaltende Organisation\n(managingOrganization)
+EmigaLocation -up-> EmigaOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
 EmigaHealthcareService -left-> EmigaOrganization : bereitgestellt von\n(providedBy)
 
 EmigaHealthcareService -down-> EmigaLocation : Referenzierung der Standorte,\nan denen die Dienstleistung angeboten wird\n(location)
 
-EmigaDepartmentOrganization -up-> EmigaOrganization : Verwaltende Organisation\n(managingOrganization)
+EmigaDepartmentOrganization -up-> EmigaOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
 @enduml

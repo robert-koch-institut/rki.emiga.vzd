@@ -1,5 +1,5 @@
 @startuml
-title Überblick der Krankenhaus-Organisationen
+title Überblick der Krankenhaus-Einrichtungen
 
 top to bottom direction
 
@@ -18,7 +18,7 @@ rectangle "**EmigaHospitalLocation**\nDieses Profil bildet einen Standort eines 
 
 rectangle "**EmigaHospitalOrganization**\nProfil zur Abbildung eines Krankenhauses im Kontext von EMIGA.\nEs dient der strukturierten Erfassung von Stammdaten des Krankenhauses\n(z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in\nMelde-, Dokumentations- und Kommunikationsprozessen. Wenn ein Krankenhaus\n aus InEK importiert wird dann besizt keine Addresse.\n Die Adressen sind im Standort (EmigaHospitalLocation) zu finden." as EmigaHospitalOrganization
 
-rectangle "**EmigaHospitalRoomLocation**\nDieses Profil bildet einen Raum in einem Krankenhaus im Kontext von\nEMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten\ninnerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume,\nIsolationsbereiche) einschließlich ihrer Identifikation und Zuordnung\nzu übergeordneten Organisationseinheiten." as EmigaHospitalRoomLocation
+rectangle "**EmigaHospitalRoomLocation**\nDieses Profil bildet einen Raum in einem Krankenhaus im Kontext von\nEMIGA ab. Es dient der strukturierten Erfassung von räumlichen Einheiten\ninnerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume,\nIsolationsbereiche) einschließlich ihrer Identifikation und Zuordnung\nzu übergeordneten Einrichtungseinheiten." as EmigaHospitalRoomLocation
 
 
 ' --------------------------------------------------
@@ -38,11 +38,11 @@ EmigaHospitalOrganization -[hidden]right- EmigaHospitalRoomLocation
 ' --------------------------------------------------
 
 ' managingOrganization symmetrisch zur Mitte
-EmigaHospitalFacilityLocation -right-> EmigaHospitalOrganization : Verwaltende Organisation\n(managingOrganization)
+EmigaHospitalFacilityLocation -right-> EmigaHospitalOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
-EmigaHospitalRoomLocation -up-> EmigaHospitalOrganization : Verwaltende Organisation\n(managingOrganization)
+EmigaHospitalRoomLocation -up-> EmigaHospitalOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
-EmigaHospitalLocation -down-> EmigaHospitalOrganization : Verwaltende Organisation\n(managingOrganization)
+EmigaHospitalLocation -down-> EmigaHospitalOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
 
 ' partOf symmetrisch nach oben

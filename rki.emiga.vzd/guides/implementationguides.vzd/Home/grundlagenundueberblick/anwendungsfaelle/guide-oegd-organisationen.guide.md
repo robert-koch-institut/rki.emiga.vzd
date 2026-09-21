@@ -1,26 +1,26 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD Organisationen und Einrichtungen, die im Rahmen von ÖGD fachlich relevant sind, im Einrichtungs Verzeichnis (EINRV).
+Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD Einrichtungen und Einrichtungen, die im Rahmen von ÖGD fachlich relevant sind, im Einrichtungs Verzeichnis (EINRV).
 
 ## Überblick
 
-Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen.
+Unter der ÖGD Einrichtung werden alle Einrichtungen zusammengefasst, die EMIGA direkt nutzende ÖDG-Einrichtungen sind, die eine Code-Side-ID besitzen.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/OEGDOverview.svg}}
 
 ## Fachlicher Ablauf
 
-Eine ÖGD-Organisation wird aus einem zentralen ÖGD-Verzeichnis übernommen, manuell durch einen berechtigten Nutzer angelegt oder aus einer führenden Quelle synchronisiert. Der Client sucht eine Organisation anhand ihres Identifiers oder anhand fachlicher Suchparameter. Anschließend werden der aktuelle Detailstand, die fachliche Rolle, die Zuständigkeit und die erreichbaren Kommunikationsadressen abgerufen. Falls die Organisation über physische Standorte verfügt, werden diese über `EmigaPublicHealthLocation` referenziert. 
+Eine ÖGD-Einrichtung wird aus einem zentralen ÖGD-Verzeichnis übernommen, manuell durch einen berechtigten Nutzer angelegt oder aus einer führenden Quelle synchronisiert. Der Client sucht eine Einrichtung anhand ihres Identifiers oder anhand fachlicher Suchparameter. Anschließend werden der aktuelle Detailstand, die fachliche Rolle, die Zuständigkeit und die erreichbaren Kommunikationsadressen abgerufen. Falls die Einrichtung über physische Standorte verfügt, werden diese über `EmigaPublicHealthLocation` referenziert. 
 
 ## Beschreibung der Profile
 
-### ÖGD-Organisation
+### ÖGD-Einrichtung
 
-Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Organisation ab, die alle Organisationen zusammenfasst, die EMIGA direkt nutzende ÖDG-Organisationen sind und eine CodeSite ID besitzen.
+Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Einrichtung ab, die alle Einrichtungen zusammenfasst, die EMIGA direkt nutzende ÖDG-Einrichtungen sind und eine CodeSite ID besitzen.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/PublicHealthOrganization.svg}}
 
-Die CodeSite-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Organisationen, die nicht direkt nutzende ÖGD-Organisationen mit CodeSite-ID sind.
+Die CodeSite-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Einrichtungen, die nicht direkt nutzende ÖGD-Einrichtungen mit CodeSite-ID sind.
 
 ### ÖGD-Standort
 
@@ -32,7 +32,7 @@ Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaP
 
 ## Schnittstellenoperationen
 
-Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von EpiWarn-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von EpiWarn-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 <!--> NOTIZ: Dynamische mittels fql Represantation der Tabelle unten, wenn ok ich werde die Tabelle entfernen <-->
 <fql>
 using scope
@@ -69,39 +69,39 @@ with header
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |
 | `/metadata` | `GET` | Abruf des FHIR-`CapabilityStatement`. | `CapabilityStatement` |
-| `/Organization/$search-organization` | `GET`, `POST` | Suche nach EpiWarn-Organisationen. | `Bundle` vom Typ `searchset` |
-| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Organisationsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
+| `/Organization/$search-organization` | `GET`, `POST` | Suche nach EpiWarn-Einrichtungen. | `Bundle` vom Typ `searchset` |
+| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Einrichtungsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
 | `/Location/$search-location` | `GET`, `POST` | Suche nach Standorten. | `Bundle` vom Typ `searchset` |
-| `/Organization/$create-organization` | `POST` | Anlage einer EpiWarn-Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Organisation. | `OperationOutcome` |
+| `/Organization/$create-organization` | `POST` | Anlage einer EpiWarn-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
+| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
+| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Einrichtung. | `OperationOutcome` |
 | `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
+Beim Erstellen einer Krankenhaus-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar bleiben.
 
 ## Suche und Anzeige
 
-Typische Suchkriterien sind Identifier, CodeSite-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
+Typische Suchkriterien sind Identifier, CodeSite-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
 
-Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind.
+Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind.
 
-Bei der Anzeige muss zwischen Organisation, physischem Standort, Gesundheitsleistung und Ansprechperson unterschieden werden.
+Bei der Anzeige muss zwischen Einrichtung, physischem Standort, Gesundheitsleistung und Ansprechperson unterschieden werden.
 
 
 ## Interoperabilitätshinweise
 
 Clients sollten folgende Regeln berücksichtigen:
 
-- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Organisationen mit CodeSite-ID vorgesehen.
+- `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Einrichtungen mit CodeSite-ID vorgesehen.
 - Die CodeSite-ID wird über `IdentifierCodeSiteId` abgebildet.
-- Organisationen und physische Standorte sind getrennte Ressourcen.
+- Einrichtungen und physische Standorte sind getrennte Ressourcen.
 - Physische Standorte werden über `EmigaPublicHealthLocation` abgebildet.
-- Die verwaltende Organisation eines Standorts wird über `managingOrganization` referenziert.
-- Die Rolle einer Organisation muss im jeweiligen Prozess eindeutig ausgewertet werden.
-- Eine empfangende Organisation ist nicht automatisch die zuständige Organisation.
-- Nur aktive und aktuell gültige Organisationen sollen für neue Prozesse ausgewählt werden.
+- Die verwaltende Einrichtung eines Standorts wird über `managingOrganization` referenziert.
+- Die Rolle einer Einrichtung muss im jeweiligen Prozess eindeutig ausgewertet werden.
+- Eine empfangende Einrichtung ist nicht automatisch die zuständige Einrichtung.
+- Nur aktive und aktuell gültige Einrichtungen sollen für neue Prozesse ausgewählt werden.
 - Kommunikationsadressen müssen auf ihre Gültigkeit und Verwendbarkeit geprüft werden.
-- Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Organisation verweisen können.
+- Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Einrichtung verweisen können.
 - Personenbezogene Kontaktdaten müssen entsprechend den Datenschutz- und Berechtigungsvorgaben behandelt werden.

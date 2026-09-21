@@ -43,15 +43,15 @@ rectangle "**HealthcareService**\nProfile\n• EmigaHealthcareService" as Health
 
 Organization -down-> Organization : Teil von\n(partOf)
 
-Location -up-> Organization : Verwaltende Organisation\n(managingOrganization)
+Location -up-> Organization : Verwaltende Einrichtung\n(managingOrganization)
 
 Location --> Location : Teil von\n(partOf)
 
-PractitionerRole --> Organization : Organisation, in der die Rolle\n ausgeübt werden kann\n(organization)
+PractitionerRole --> Organization : Einrichtung, in der die Rolle\n ausgeübt werden kann\n(organization)
 
-PractitionerRole --> Practitioner : Practitioner, der die für\n die Organisation\n definierten Leistungen\n erbringen kann\n(practitioner)
+PractitionerRole --> Practitioner : Practitioner, der die für\n die Einrichtung\n definierten Leistungen\n erbringen kann\n(practitioner)
 
-PractitionerRole -right-> HealthcareService : Dienstleistungen, die der Practitioner\n für die Organisation\n bzw. deren Standorte\n erbringt\n(healthcareservice)
+PractitionerRole -right-> HealthcareService : Dienstleistungen, die der Practitioner\n für die Einrichtung\n bzw. deren Standorte\n erbringt\n(healthcareservice)
 
 HealthcareService --> Organization : bereitgestellt von\n(providedBy)
 

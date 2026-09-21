@@ -1,8 +1,8 @@
 - name: Index
   filename: Index.page.md
-- name: ÖGD-Organisationen
+- name: ÖGD-Einrichtungen
   filename: guide-oegd-organisationen.guide.md
-- name: Generische Organisationen
+- name: Generische Einrichtungen
   filename: guide-generische-organisationen.guide.md
 - name: Inek Krankenhausorganisationen
   filename: guide-inek-krankenhausorganisationen.guide.md

@@ -1,5 +1,5 @@
 @startuml
-title Überblick der ÖGD-Organisationen
+title Überblick der ÖGD-Einrichtungen
 
 top to bottom direction
 
@@ -12,17 +12,17 @@ skinparam nodesep 160
 skinparam ranksep 180
 
 
-rectangle "**EmigaPublicHealthOrganization**\nUnter der ÖGD Organisation werden alle Organisationen zusammengefasst,\ndie EMIGA direkt nutzende ÖGD-Organisationen sind, die eine CodeSite-ID besitzen." as EmigaPublicHealthOrganization
+rectangle "**EmigaPublicHealthOrganization**\nUnter der ÖGD Einrichtung werden alle Einrichtungen zusammengefasst,\ndie EMIGA direkt nutzende ÖGD-Einrichtungen sind, die eine CodeSite-ID besitzen." as EmigaPublicHealthOrganization
 
-rectangle "**IdentifierCodeSiteId**\nIdentifier-Profil für die vom RKI vergebene Kennung der Organisationen\ndes ÖGD (Gesundheitsamt, Landesstelle usw.)." as IdentifierCodeSiteId
+rectangle "**IdentifierCodeSiteId**\nIdentifier-Profil für die vom RKI vergebene Kennung der Einrichtungen\ndes ÖGD (Gesundheitsamt, Landesstelle usw.)." as IdentifierCodeSiteId
 
 rectangle "**EmigaPublicHealthLocation**\nPhysischer Standort eines ÖGD-Fachbereichs, an dem Leistungen erbracht werden.\nDer Standort ist in der Regel über eine Adresse und optional über Geo-Koordinaten\neindeutig räumlich verortet." as EmigaPublicHealthLocation
 
-rectangle "**EmigaPractitioner**\nPerson, die im Kontext des ÖGD Leistungen erbringt bzw. Aufgaben\ninnerhalb einer ÖGD-Organisation wahrnimmt." as EmigaPractitioner
+rectangle "**EmigaPractitioner**\nPerson, die im Kontext des ÖGD Leistungen erbringt bzw. Aufgaben\ninnerhalb einer ÖGD-Einrichtung wahrnimmt." as EmigaPractitioner
 
-rectangle "**EmigaPractitionerRole**\nBeschreibt die Rolle einer Person innerhalb einer ÖGD-Organisation\nsowie die damit verbundenen organisatorischen und fachlichen Zuordnungen." as EmigaPractitionerRole
+rectangle "**EmigaPractitionerRole**\nBeschreibt die Rolle einer Person innerhalb einer ÖGD-Einrichtung\nsowie die damit verbundenen organisatorischen und fachlichen Zuordnungen." as EmigaPractitionerRole
 
-rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die durch eine ÖGD-Organisation\nbzw. an deren Standorten angeboten wird." as EmigaHealthcareService
+rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die durch eine ÖGD-Einrichtung\nbzw. an deren Standorten angeboten wird." as EmigaHealthcareService
 
 
 ' --------------------------------------------------
@@ -33,10 +33,10 @@ rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die du
 EmigaPractitioner -[hidden]right- EmigaPractitionerRole
 EmigaPractitionerRole -[hidden]right- EmigaHealthcareService
 
-' zentrale Organisation
+' zentrale Einrichtung
 EmigaPractitionerRole -[hidden]down- EmigaPublicHealthOrganization
 
-' seitliche Elemente um die Organisation
+' seitliche Elemente um die Einrichtung
 IdentifierCodeSiteId -[hidden]right- EmigaPublicHealthOrganization
 EmigaPublicHealthOrganization -[hidden]right- EmigaPublicHealthLocation
 
@@ -45,11 +45,11 @@ EmigaPublicHealthOrganization -[hidden]right- EmigaPublicHealthLocation
 ' Practitioner / PractitionerRole
 ' --------------------------------------------------
 
-EmigaPractitionerRole -left-> EmigaPractitioner : Person, der die für die\n Organisation definierten\n Leistungen erbringen kann\n(practitioner)
+EmigaPractitionerRole -left-> EmigaPractitioner : Person, der die für die\n Einrichtung definierten\n Leistungen erbringen kann\n(practitioner)
 
-EmigaPractitionerRole -down-> EmigaPublicHealthOrganization : Organisation, in der die Rolle\nausgeübt werden kann\n(organization)
+EmigaPractitionerRole -down-> EmigaPublicHealthOrganization : Einrichtung, in der die Rolle\nausgeübt werden kann\n(organization)
 
-EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen,\n die der Practitioner\nfür die Organisation bzw.\n deren Standorte erbringt\n(healthcareService)
+EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen,\n die der Practitioner\nfür die Einrichtung bzw.\n deren Standorte erbringt\n(healthcareService)
 
 
 ' --------------------------------------------------
@@ -62,12 +62,12 @@ EmigaHealthcareService --> EmigaPublicHealthLocation : Referenzierung der Stando
 
 
 ' --------------------------------------------------
-' ÖGD Organisation / Standort
+' ÖGD Einrichtung / Standort
 ' --------------------------------------------------
 
 EmigaPublicHealthOrganization -up-> EmigaPublicHealthOrganization : Teil von\n(partOf)
 
-EmigaPublicHealthLocation -left-> EmigaPublicHealthOrganization : Verwaltende Organisation\n(managingOrganization)
+EmigaPublicHealthLocation -left-> EmigaPublicHealthOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
 EmigaPublicHealthOrganization -down-> IdentifierCodeSiteId : besitzt
 

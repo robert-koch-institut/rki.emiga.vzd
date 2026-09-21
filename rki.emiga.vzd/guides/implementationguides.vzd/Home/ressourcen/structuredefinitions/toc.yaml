@@ -18,9 +18,9 @@
   filename: guide-krankenhaus-standort.guide.md
 - name: ÖGD Fachbereich / Standort
   filename: guide-oegd-fachbereich-standort.guide.md
-- name: ÖGD Organisation
+- name: ÖGD Einrichtung
   filename: guide-oegd-organisation.guide.md
-- name: Organisation
+- name: Einrichtung
   filename: guide-organisation.guide.md
 - name: Akteur:in der Gesundheitsversorgung
   filename: guide-practitioner.guide.md

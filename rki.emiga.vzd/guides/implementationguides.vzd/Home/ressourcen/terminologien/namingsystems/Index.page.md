@@ -8,7 +8,7 @@
 
 ## NamingSystems Überblick
 
-Dieser Abschnitt beschreibt die **NamingSystems**, die zur eindeutigen Identifikation von Organisationen, Personen und anderen Entitäten verwendet werden. NamingSystems definieren, wie Identifier aufgebaut sind und welche Namenskonventionen verwendet werden.
+Dieser Abschnitt beschreibt die **NamingSystems**, die zur eindeutigen Identifikation von Einrichtungen, Personen und anderen Entitäten verwendet werden. NamingSystems definieren, wie Identifier aufgebaut sind und welche Namenskonventionen verwendet werden.
 
 <fql headers="true">
 from

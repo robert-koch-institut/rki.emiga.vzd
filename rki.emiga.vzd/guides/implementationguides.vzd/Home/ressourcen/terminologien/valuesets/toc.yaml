@@ -8,7 +8,7 @@
   filename: guide-art-typ-krankenhaus.guide.md
 - name: Art/Typ öffentlicher Gesundheitsdienst
   filename: guide-art-typ-oeffentlicher-gesundheitsdienst.guide.md
-- name: Art/Typ Organisation
+- name: Art/Typ Einrichtung
   filename: guide-art-typ-organisation.guide.md
 - name: Dienstleister Dienstzeiten
   filename: guide-dienstleister-dienstzeiten.guide.md
@@ -18,7 +18,7 @@
   filename: guide-dienstleister-kategorie.guide.md
 - name: Fachbereich
   filename: guide-fachbereich.guide.md
-- name: Generische Organisation
+- name: Generische Einrichtung
   filename: guide-generische-organisation.guide.md
 - name: IneK Einrichtungstyp
   filename: guide-inek-einrichtungstyp.guide.md

@@ -1,6 +1,6 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Organisationen bzw. Standorten im Einrichtungs Verzeichnis (EINRV).
+Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Einrichtungen bzw. Standorten im Einrichtungs Verzeichnis (EINRV).
 
 ## Überblick
 
@@ -17,7 +17,7 @@ Die Profile unterscheiden zwischen organisatorischen Einheiten und physischen Or
 
 ## Fachlicher Ablauf
 
-Eine Krankenhausorganisation wird im EINRV angelegt oder aus einer führenden Quelle übernommen. Anschließend werden die Organisationsdaten fachlich ergänzt und präzisiert. Dazu gehören insbesondere Name, Identifikatoren, Organisationsart, Zuständigkeiten und hierarchische Beziehungen.
+Eine Krankenhausorganisation wird im EINRV angelegt oder aus einer führenden Quelle übernommen. Anschließend werden die Einrichtungsdaten fachlich ergänzt und präzisiert. Dazu gehören insbesondere Name, Identifikatoren, Einrichtungsart, Zuständigkeiten und hierarchische Beziehungen.
 
 Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet. Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
@@ -57,7 +57,7 @@ Aufgrund dieser übergreifenden Anlageberechtigung ist eine zuverlässige **Doub
 ### Doublettenprüfung
 Vor der Anlage eines neuen Krankenhauses muss geprüft werden, ob dieses bereits in EMIGA vorhanden ist.
 
-Als eindeutiges Identifikationsmerkmal für die Doublettenprüfung dient die **Institutionskennzeichen-Nummer (IK-Nummer) der Organisation**. Die IK-Nummer ist daher bei der manuellen Anlage eines Krankenhauses ein **Pflichtfeld**.
+Als eindeutiges Identifikationsmerkmal für die Doublettenprüfung dient die **Institutionskennzeichen-Nummer (IK-Nummer) der Einrichtung**. Die IK-Nummer ist daher bei der manuellen Anlage eines Krankenhauses ein **Pflichtfeld**.
 
 Bei der Eingabe der IK-Nummer sollte den Nutzenden ein Hinweis auf eine geeignete Suchmöglichkeit zur Ermittlung der IK-Nummer bereitgestellt werden.
 
@@ -83,7 +83,7 @@ Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungen nach dem InEK St
 
 ### Krankenhausraum
 
-Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Organisationseinheiten.
+Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab. Es dient der strukturierten Erfassung von räumlichen Einheiten innerhalb eines Krankenhausstandorts (z. B. Zimmer, Behandlungsräume, Isolationsbereiche) einschließlich ihrer Identifikation und Zuordnung zu übergeordneten Einrichtungseinheiten.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/HospitalRoomLocation.svg}}
 
@@ -122,37 +122,37 @@ select
 with header
 </fql>
 
-Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Organisationen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
 | Operation | Methode | Zweck | Ergebnis |
 | --- | --- | --- | --- |
 | `/metadata` | `GET` | Abruf des FHIR-`CapabilityStatement`. | `CapabilityStatement` |
-| `/Organization/$search-organization` | `GET`, `POST` | Suche nach Krankenhaus-Organisationen. | `Bundle` vom Typ `searchset` |
-| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Krankenhaus-Organisationsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
+| `/Organization/$search-organization` | `GET`, `POST` | Suche nach Krankenhaus-Einrichtungen. | `Bundle` vom Typ `searchset` |
+| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Krankenhaus-Einrichtungsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
 | `/Location/$search-location` | `GET`, `POST` | Suche nach Krankenhaus-Standorten. | `Bundle` vom Typ `searchset` |
-| `/Organization/$create-organization` | `POST` | Anlage einer Krankenhaus-Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Krankenhaus-Organisation. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Krankenhaus-Organisation. | `OperationOutcome` |
+| `/Organization/$create-organization` | `POST` | Anlage einer Krankenhaus-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
+| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Krankenhaus-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
+| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Krankenhaus-Einrichtung. | `OperationOutcome` |
 | `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Organisation werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den EINRV übermittelt. Bei einer Änderung werden insbesondere Identifier, Organisationstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Organisationsstand nachvollziehbar bleiben.
+Beim Erstellen einer Krankenhaus-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den EINRV übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar bleiben.
 
 ## Suche und Anzeige
 
-Typische Suchkriterien sind Identifier, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Organisationen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
+Typische Suchkriterien sind Identifier, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
 
 ## Interoperabilitätshinweise
 
 Clients sollten folgende Regeln berücksichtigen:
 
-- Organisationen und physische Standorte sind getrennte Ressourcen.
+- Einrichtungen und physische Standorte sind getrennte Ressourcen.
 - Physische Standorte werden über `EmigaLocation` oder ein spezialisiertes Standortprofil abgebildet.
-- Die verwaltende Organisation eines Standorts wird über `managingOrganization` referenziert.
-- Die Rolle einer Organisation muss im jeweiligen Prozess eindeutig ausgewertet werden.
-- Eine empfangende Organisation ist nicht automatisch die zuständige Organisation.
-- Nur aktive und aktuell gültige Organisationen sollen für neue Prozesse ausgewählt werden.
+- Die verwaltende Einrichtung eines Standorts wird über `managingOrganization` referenziert.
+- Die Rolle einer Einrichtung muss im jeweiligen Prozess eindeutig ausgewertet werden.
+- Eine empfangende Einrichtung ist nicht automatisch die zuständige Einrichtung.
+- Nur aktive und aktuell gültige Einrichtungen sollen für neue Prozesse ausgewählt werden.
 - Kommunikationsadressen müssen auf ihre Gültigkeit und Verwendbarkeit geprüft werden.
-- Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Organisation verweisen können.
+- Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Einrichtung verweisen können.
 - Personenbezogene Kontaktdaten müssen entsprechend den Datenschutz- und Berechtigungsvorgaben behandelt werden.

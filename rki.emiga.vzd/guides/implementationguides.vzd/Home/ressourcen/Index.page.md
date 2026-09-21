@@ -12,10 +12,10 @@ Dieser Abschnitt bietet eine Übersicht über alle in diesem Implementierungslei
 #### Enthaltene Ordner:
 
 1. **StructureDefinitions**  
-   Enthält die definierten **Profile** für Organisationen, Standorte, Fachkräfte und Dienstleistungen im ÖGD. Diese Profile erweitern die Standard-FHIR-Ressourcen, um spezifische Anforderungen des EMIGA-Systems abzubilden.
+   Enthält die definierten **Profile** für Einrichtungen, Standorte, Fachkräfte und Dienstleistungen im ÖGD. Diese Profile erweitern die Standard-FHIR-Ressourcen, um spezifische Anforderungen des EMIGA-Systems abzubilden.
 
 2. **Terminologien**  
-   Beinhaltet **CodeSystems** und **ValueSets**, die zur Standardisierung der Datenerfassung und -auswertung verwendet werden. Diese Terminologien sorgen für eine konsistente und einheitliche Kodierung von Rollen, Organisationsarten, Zuständigkeiten und Verfügbarkeiten.
+   Beinhaltet **CodeSystems** und **ValueSets**, die zur Standardisierung der Datenerfassung und -auswertung verwendet werden. Diese Terminologien sorgen für eine konsistente und einheitliche Kodierung von Rollen, Einrichtungsarten, Zuständigkeiten und Verfügbarkeiten.
    - CodeSystems, z.B. **Rolle in der Gesundheitsversorgung (PractitionerRole)**, **Kategorie (HealthcareServiceCategory)** und **Zuständigkeit (ResponsibilityType)**.
    - ValueSets zur Auswahl und Validierung der oben genannten Codes.
 

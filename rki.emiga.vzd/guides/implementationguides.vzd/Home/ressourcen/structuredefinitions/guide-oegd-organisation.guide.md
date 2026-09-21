@@ -114,7 +114,7 @@ select
 </tabs>
 
 ## Beispiel
-Im Folgenden wird ein Beispiel für eine fiktiven ÖGD Organisation dargestellt.
+Im Folgenden wird ein Beispiel für eine fiktiven ÖGD Einrichtung dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
