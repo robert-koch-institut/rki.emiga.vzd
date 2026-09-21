@@ -51,4 +51,4 @@ Gesundheitsämtern, Landesbehörden und dem RKI werden in alle Entwicklungsphase
 dass die Software die tatsächlichen Bedürfnisse der Nutzer erfüllt.
 <br>&nbsp;<br>
 
-UML-Diagramme zur Darstellung der unterschiedlichen Anwendungsfälle sind im Unterkapitel Anwendungsfälle zu finden.
+Diagramme zur Darstellung der unterschiedlichen Anwendungsfälle sind im Unterkapitel Anwendungsfälle zu finden.
