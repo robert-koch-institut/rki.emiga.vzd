@@ -15,15 +15,15 @@ skinparam ranksep 120
 skinparam ArrowFontSize 11
 
 
-rectangle "**Organization**\nProfile\n• EmigaOrganization\n• EmigaHospitalOrganization\n• EmigaPublicHealthOrganization\n• EmigaDepartmentOrganization" as Organization
+rectangle "**Organization**\n\nProfile:\n• EmigaOrganization\n• EmigaHospitalOrganization\n• EmigaPublicHealthOrganization\n• EmigaDepartmentOrganization" as Organization
 
-rectangle "**Location**\nProfile\n• EmigaLocation\n• EmigaHospitalLocation\n• EmigaHospitalFacilityLocation\n• EmigaHospitalRoomLocation\n• EmigaPublicHealthLocation" as Location
+rectangle "**Location**\n\nProfile:\n• EmigaLocation\n• EmigaHospitalLocation\n• EmigaHospitalFacilityLocation\n• EmigaHospitalRoomLocation\n• EmigaPublicHealthLocation" as Location
 
-rectangle "**Practitioner**\nProfile\n• EmigaPractitioner" as Practitioner
+rectangle "**Practitioner**\n\nProfile:\n• EmigaPractitioner" as Practitioner
 
-rectangle "**PractitionerRole**\nProfile\n• EmigaPractitionerRole" as PractitionerRole
+rectangle "**PractitionerRole**\n\nProfile:\n• EmigaPractitionerRole" as PractitionerRole
 
-rectangle "**HealthcareService**\nProfile\n• EmigaHealthcareService" as HealthcareService
+rectangle "**HealthcareService**\n\nProfile:\n• EmigaHealthcareService" as HealthcareService
 
 
 ' --------------------------------------------------
