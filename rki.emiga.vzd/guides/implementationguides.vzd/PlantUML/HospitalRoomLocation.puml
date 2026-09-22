@@ -17,7 +17,7 @@ class EmigaHospitalRoomLocation{
 <b>+</b> status: code [1..1]
 <b>+</b> type: CodeableConcept [0..*]
 -- Meta --
-<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [1..1]
 <b>+</b> meta.security:responsibility: Coding [0..1]
 <b>+</b> meta.security:visibility: Coding [0..1]
 <b>+</b> meta.tag:einrvBundleId: Coding [0..1]
