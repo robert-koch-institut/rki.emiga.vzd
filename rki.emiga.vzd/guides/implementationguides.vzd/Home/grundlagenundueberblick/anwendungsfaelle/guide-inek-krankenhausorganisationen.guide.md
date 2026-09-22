@@ -101,17 +101,21 @@ where
 for rest.resource
 
 where
-    supportedProfile
-        .where(
-            $this = %canonical
-        )
-        .exists()
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation'
+   
 
 for interaction
 
 select
     'Operation': code,
-    'Zweck': documentation,
+    'Zweck'[markdown]: documentation,
     'Verbindlichkeit':
         extension
             .where(

@@ -32,7 +32,8 @@ Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaP
 
 ## Schnittstellenoperationen
 
-Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von EpiWarn-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von ÖGD-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+
 <!--> NOTIZ: Dynamische mittels fql Represantation der Tabelle unten, wenn ok ich werde die Tabelle entfernen <-->
 <fql>
 using scope
@@ -45,17 +46,29 @@ where
 for rest.resource
 
 where
-    supportedProfile
-        .where(
-            $this = %canonical
-        )
-        .exists()
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicLocation'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole'
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService'
 
 for interaction
 
 select
     'Operation': code,
-    'Zweck': documentation,
+    'Zweck'[markdown]: documentation,
     'Verbindlichkeit':
         extension
             .where(
