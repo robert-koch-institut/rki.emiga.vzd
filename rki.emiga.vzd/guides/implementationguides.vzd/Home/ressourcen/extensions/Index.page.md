@@ -8,8 +8,8 @@
 ## Extensions Überblick
 
 In diesem Abschnitt werden die **Extensions** beschrieben, die zur Erweiterung der Standard-FHIR-Ressourcen verwendet werden. Diese Extensions ermöglichen die Abbildung spezifischer Anforderungen des ÖGD, die nicht durch die Standardressourcen abgedeckt werden können.
-<br>&nbsp;<br>
 
+Extensions bieten die Möglichkeit, die Standard-FHIR-Modelle flexibel zu erweitern und an die spezifischen Anforderungen des EMIGA-Systems anzupassen.
 
 <fql headers="true">
 from
@@ -22,5 +22,3 @@ select
     Extension: title & ' (' & id & ')',
     Beschreibung: description
 </fql>
-
-Extensions bieten die Möglichkeit, die Standard-FHIR-Modelle flexibel zu erweitern und an die spezifischen Anforderungen des EMIGA-Systems anzupassen.

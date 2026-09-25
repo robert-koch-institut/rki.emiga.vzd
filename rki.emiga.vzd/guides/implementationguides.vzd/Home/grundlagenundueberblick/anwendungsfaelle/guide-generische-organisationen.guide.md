@@ -1,47 +1,29 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung generischer Einrichtungen und Einrichtungen im Verzeichnisdienst (EINRV).
+Dieser Anwendungsfall beschreibt die Abbildung generischer Einrichtungen im Einrichtungsverzeichnis (EINRV).
+Von generischen Einrichtungen abzugrenzen ist das Profil `EmigaPublicHealthOrganization`, das ÖGD-Einrichtungen abbildet, die EMIGA direkt nutzen und über eine CodeSite-ID verfügen.
 
 ## Überblick
-
-Generische Einrichtungen werden über das Profil `EmigaOrganization` abgebildet. 
+Unter Generische Einrichtungen werden alle Einrichtungen zusammengefasst, die EMIGA nicht direkt nutzen und daher über keine CodeSite-ID verfügen. Hierzu zählen beispielsweise Behörden, Transportunternehmen, Labore und Arztpraxen sowie weitere Arten von Einrichtungen.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/GenericOrganizationOverview.svg}}
 
-Das Profil umfasst Einrichtungen, die keine direkt nutzende ÖGD-Einrichtung und kein Krankenhaus sind und keine CodeSite-ID besitzen.
+Generische Einrichtungen werden über das Profil `EmigaOrganization` abgebildet.
+Für eine generische Einrichtung ist die Angabe einer Straßenanschrift optional. In der Regel verfügt sie jedoch mindestens über eine Postanschrift oder elektronische Kontaktdaten. Darüber hinaus können der Einrichtung physische Standorte, Gesundheitsleistungen sowie fachlich zugeordnete Personen zugeordnet werden.
 
-Dazu gehören beispielsweise:
-
-- Behörden,
-- Transport-Unternehmen,
-- Labore,
-- Arztpraxen,
-- Pflegeeinrichtungen,
-- Schulen,
-- Kindergärten,
-- Gemeinschaftseinrichtungen,
-- Unterkünfte,
-- Lebensmittelbetriebe,
-- Unternehmen,
-- Forschungseinrichtungen,
-- sonstige Institutionen.
-
-Eine generische Einrichtung muss nicht zwingend über eine Straßenanschrift verfügen. Häufig besitzt sie jedoch zumindest eine Postanschrift oder elektronische Kontaktdaten. Zusätzlich können physische Orte, Gesundheitsleistungen und fachlich zugeordnete Personen verwaltet werden.
 
 ## Fachlicher Ablauf
 
-Eine generische Einrichtung wird manuell angelegt, aus einem zentralen Verzeichnis übernommen, im Rahmen einer DEMIS-Meldung erzeugt oder eingelesen. Nach der Anlage werden Stammdaten, Einrichtungstyp, Identifier, Kontaktdaten und gegebenenfalls Standorte ergänzt.
+Eine generische Einrichtung kann manuell angelegt, aus einem zentralen Verzeichnis übernommen oder im Rahmen einer DEMIS-Meldung erzeugt beziehungsweise eingelesen werden. Nach der Anlage werden die relevanten Informationen zu Stammdaten, Einrichtungstyp, Identifikatoren und Kontaktdaten sowie gegebenenfalls zu den zugehörigen Standorten ergänzt.
 
-Physische Orte werden über `EmigaLocation` abgebildet. Gesundheitsleistungen werden über `EmigaHealthcareService` beschrieben und können den Einrichtungen sowie den Standorten zugeordnet werden.. Personen und deren Rollen werden über `EmigaPractitioner` und `EmigaPractitionerRole` mit der Einrichtung verknüpft. Die Einrichtung kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
+Physische Standorte einer generischen Einrichtung können über das Profil `EmigaLocation` abgebildet werden. Gesundheitsleistungen werden über `EmigaHealthcareService` beschrieben und können einer Einrichtung oder einem ihrer Standorte zugeordnet werden. Personen und deren Rollen werden über `EmigaPractitioner` und `EmigaPractitionerRole` mit der jeweiligen Einrichtung verknüpft.
+Im Rahmen der EMIGA-Fachprozesse können generische Einrichtungen mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
 ## Beschreibung der Profile
-### Generische Einrichtung
 
-Das Profil `EmigaOrganization` bildet eine generische Einrichtung im Kontext von EMIGA ab.
+`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. 
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/Organization.svg}}
-
-`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. Eine generische Einrichtung ist von einer `EmigaPublicHealthOrganization` zu unterscheiden. `EmigaPublicHealthOrganization` beschreibt direkt nutzende ÖGD-Einrichtungen mit einer CodeSite-ID.
 
 ### Physische Orte
 
@@ -62,7 +44,7 @@ Eine `EmigaDepartmentOrganization` kann über `managingOrganization` einer Einri
 
 ### Dienstleistungen im EINRV
 
-Falls eine Einrichtung eine Dienstleistung anbietet, kann diese über `EmigaHealthcareService` abgebildet werden. Beispiel einer Dienstleistung ist Ein Hotline einer Einrichtung oder ein/-e Ansprechpartner_in.
+Bietet eine Einrichtung eine Dienstleistung an, kann diese über `EmigaHealthcareService` abgebildet werden. Beispiele hierfür sind ein Hotline-Service oder das Angebot einer Ansprechperson für einen bestimmten fachlichen Bereich.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/HealthCareService.svg}}
 
@@ -73,6 +55,7 @@ Die Dienstleistung wird über `providedBy` der anbietenden Einrichtung zugeordne
 Einrichtungen können mit `EmigaPractitioner` und `EmigaPractitionerRole` verknüpft werden.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/Practitioner.svg}}
+
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/PractitionerRole.svg}}
 
 Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Einrichtung gesteuert.
@@ -138,23 +121,19 @@ Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegeben
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den EINRV übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar bleiben.
+Beim Anlegen eines Krankenhauses in EMIGA werden die erforderlichen Stammdaten, Identifikatoren, Rollen und Kommunikationsadressen an den EINRV übermittelt. 
+Bei Änderungen werden insbesondere Identifikatoren, Einrichtungstyp und Kommunikationsadressen geprüft und aktualisiert. Durch die Versionierung der Einträge bleiben historische Vorgänge mit dem jeweils zu diesem Zeitpunkt gültigen Stand der Einrichtung nachvollziehbar.
 
 ## Suche und Anzeige
 
-Typische Suchkriterien sind Identifier, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
+Es kann differenziert nach Krankenhaus, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum gesucht werden. Die Suchergebnisse werden entsprechend differenziert dargestellt. Die Suche berücksichtigt nur Einrichtungen, die für den jeweiligen EMIGA-Fachprozess sichtbar sind. Typische Suchkriterien sind Identifier, Name, Ort, Postleitzahl oder Kommunikationsadresse.
 
 ## EpiWarn Organizationen
 
-EpiWarn-Einrichtungen dienen der eindeutigen Identifikation und Verwaltung von Einrichtungen und Stellen, die unter Paragraf 2 IfSG-Koordinierungs-VwV an EpiWarn-Prozessen beteiligt sind. EpiWarn-Einrichtungen werden grundsätzlich über die für generische Einrichtungen vorgesehenen EMIGA-Profile abgebildet mit befüllung der 'meta.tag:relevance' Elementes mit der Wert 'IfsgKoordVwV'. Je nach fachlichem Bedarf kann insbesondere EmigaOrganization verwendet werden. Handelt es sich bei einer EpiWarn-Einrichtung um eine direkt nutzende ÖGD-Einrichtung mit CodeSite-ID, wird EmigaPublicHealthOrganization verwendet.
+Als **EpiWarn-Einrichtungen** werden in EMIGA Einrichtungen und Organistaionen bezeichnet, die im Rahmen der in §2 IfSG-Koordinierungs-VwV beschriebenen Koordinierungs- und Erreichbarkeitsprozesse relevant sind. Hierzu gehören insbesondere die dort genannten Behörden, Einrichtungen und zuständigen Stellen, deren Kontakt- und Erreichbarkeitsdaten für diese Prozesse vorgehalten werden.
 
-Eine EpiWarn-Einrichtung kann beispielsweise folgende Funktionen haben:
-
-- zuständige Einrichtung,
-- weiterleitende Einrichtung,
-- fachlich beteiligte Einrichtung,
-- koordinierende Stelle,
-- Kontaktstelle für Rückfragen.
+EpiWarn-Einrichtungen werden grundsätzlich über die für generische Einrichtungen vorgesehenen EMIGA-Profile abgebildet und durch die Belegung von `meta.tag:relevance` mit dem Wert `IfsgKoordVwV` entsprechend gekennzeichnet. 
+Handelt es sich um eine direkt EMIGA nutzende ÖGD-Stelle, wird stattdessen `EmigaPublicHealthOrganization` verwendet.
 
 Im Folgenden wird ein Beispiel für einen EpiWarn Organization dargestellt.
 
@@ -172,23 +151,3 @@ Im Folgenden wird ein Beispiel für einen EpiWarn Organization dargestellt.
         {{link:Organization-EpiWarnOrganization.json}}
     </tab>
 </tabs>
-
-
-## Interoperabilitätshinweise
-
-Clients sollten folgende Regeln berücksichtigen:
-
-- `EmigaOrganization` ist für nicht direkt nutzende ÖGD-Einrichtungen vorgesehen.
-- Einrichtungen und physische Standorte sind getrennte Ressourcen.
-- Physische Standorte werden über `EmigaLocation` oder ein spezialisiertes Standortprofil abgebildet.
-- Die verwaltende Einrichtung eines Standorts wird über `managingOrganization` referenziert.
-- Gesundheitsleistungen werden über `EmigaHealthcareService` abgebildet.
-- Die anbietende Einrichtung wird über `providedBy` referenziert.
-- Standorte einer Gesundheitsleistung werden über `location` referenziert.
-- Personen und Rollen werden über `EmigaPractitioner` und `EmigaPractitionerRole` abgebildet.
-- Die Rolle einer Einrichtung muss im jeweiligen Prozess eindeutig ausgewertet werden.
-- Eine empfangende Einrichtung ist nicht automatisch die zuständige Einrichtung.
-- Nur aktive und aktuell gültige Einrichtungen sollen für neue Prozesse ausgewählt werden.
-- Kommunikationsadressen müssen auf ihre Gültigkeit und Verwendbarkeit geprüft werden.
-- Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Einrichtung verweisen können.
-- Personenbezogene Kontaktdaten müssen entsprechend den Datenschutz- und Berechtigungsvorgaben behandelt werden.

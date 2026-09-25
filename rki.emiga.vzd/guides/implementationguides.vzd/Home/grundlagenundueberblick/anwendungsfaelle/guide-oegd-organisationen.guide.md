@@ -1,16 +1,17 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD Einrichtungen und Einrichtungen, die im Rahmen von ÖGD fachlich relevant sind, im Einrichtungs Verzeichnis (EINRV).
+Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD-Stellen sowie weiteren EMIGA-nutzenden Einrichtungen, die im Rahmen des Öffentlichen Gesundheitsdienstes fachlich relevant sind, im Einrichtungsverzeichnis (EINRV).
 
 ## Überblick
 
-Unter der ÖGD Einrichtung werden alle Einrichtungen zusammengefasst, die EMIGA direkt nutzende ÖDG-Einrichtungen sind, die eine Code-Side-ID besitzen.
+Unter ÖGD-Einrichtungen werden alle Einrichtungen des Öffentlichen Gesundheitsdienstes zusammengefasst, die EMIGA direkt nutzen. Diese Einrichtungen verfügen jeweils über eine CodeSite-ID, über die sie innerhalb von EMIGA eindeutig identifiziert werden können.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/OEGDOverview.svg}}
 
 ## Fachlicher Ablauf
 
-Eine ÖGD-Einrichtung wird aus einem zentralen ÖGD-Verzeichnis übernommen, manuell durch einen berechtigten Nutzer angelegt oder aus einer führenden Quelle synchronisiert. Der Client sucht eine Einrichtung anhand ihres Identifiers oder anhand fachlicher Suchparameter. Anschließend werden der aktuelle Detailstand, die fachliche Rolle, die Zuständigkeit und die erreichbaren Kommunikationsadressen abgerufen. Falls die Einrichtung über physische Standorte verfügt, werden diese über `EmigaPublicHealthLocation` referenziert. 
+Eine ÖGD-Einrichtung wird aus einem bestehenden zentralen ÖGD-Verzeichnis übernommen, durch einen berechtigten Nutzenden manuell angelegt oder aus einer führenden Datenquelle synchronisiert.
+Bei der Suche ermittelt der Client eine ÖGD-Einrichtung anhand ihres Identifiers oder über fachliche Suchparameter. Für die gefundene Einrichtung können anschließend die aktuellen Stammdaten, fachlichen Rollen, Zuständigkeiten und Kommunikationsdaten abgerufen werden. Sofern die Einrichtung über physische Standorte verfügt, werden diese über `EmigaPublicHealthLocation` referenziert.
 
 ## Beschreibung der Profile
 
@@ -92,16 +93,11 @@ with header
 
 ## Erstellung und Versionierung
 
-Beim Erstellen einer Krankenhaus-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar bleiben.
+Beim Erstellen einer ÖGD-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge bleiben weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar.
 
 ## Suche und Anzeige
 
 Typische Suchkriterien sind Identifier, CodeSite-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
-
-Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind.
-
-Bei der Anzeige muss zwischen Einrichtung, physischem Standort, Gesundheitsleistung und Ansprechperson unterschieden werden.
-
 
 ## Interoperabilitätshinweise
 
@@ -109,12 +105,11 @@ Clients sollten folgende Regeln berücksichtigen:
 
 - `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Einrichtungen mit CodeSite-ID vorgesehen.
 - Die CodeSite-ID wird über `IdentifierCodeSiteId` abgebildet.
-- Einrichtungen und physische Standorte sind getrennte Ressourcen.
-- Physische Standorte werden über `EmigaPublicHealthLocation` abgebildet.
-- Die verwaltende Einrichtung eines Standorts wird über `managingOrganization` referenziert.
+- Einrichtungen und physische Standorte sind technisch getrennte Ressourcen.
+    - Physische Standorte werden über `EmigaPublicHealthLocation` abgebildet.
+    - Die verwaltende Standort einer Einrichtung wird über `managingOrganization` referenziert.
 - Die Rolle einer Einrichtung muss im jeweiligen Prozess eindeutig ausgewertet werden.
-- Eine empfangende Einrichtung ist nicht automatisch die zuständige Einrichtung.
-- Nur aktive und aktuell gültige Einrichtungen sollen für neue Prozesse ausgewählt werden.
+- Für die fachlichen Prozesse in EMIGA werden ausschließlich aktive und zum jeweiligen Zeitpunkt gültige Einrichtungen berücksichtigt.
 - Kommunikationsadressen müssen auf ihre Gültigkeit und Verwendbarkeit geprüft werden.
 - Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Einrichtung verweisen können.
 - Personenbezogene Kontaktdaten müssen entsprechend den Datenschutz- und Berechtigungsvorgaben behandelt werden.

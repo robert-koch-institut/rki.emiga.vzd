@@ -9,11 +9,6 @@
 ## Über EMIGA
 {{render:guides/implementationguides.vzd/images/EMIGA_Wortbildmarke_UZ_Standard_RGB_72dpi.png}}
 
-Die COVID-19-Pandemie hat verdeutlicht, wie essenziell effiziente digitale Werkzeuge für die 
-Überwachung und Eindämmung übertragbarer Krankheiten sind. Doch nicht nur in Krisenzeiten, sondern 
-auch im Alltag unterstützt der Öffentliche Gesundheitsdienst (**ÖGD**) den Infektionsschutz in 
-Deutschland.
-
 Die Software **EMIGA** (Elektronisches Melde- und Informationssystem für Gesundheitsämter) wird im Auftrag 
 des Bundesministeriums für Gesundheit (BMG) am Robert Koch-Institut (RKI) entwickelt. Ziel ist es, den 
 ÖGD durch digitale Lösungen im Bereich Infektionsschutz zu entlasten und zu stärken. EMIGA soll die 

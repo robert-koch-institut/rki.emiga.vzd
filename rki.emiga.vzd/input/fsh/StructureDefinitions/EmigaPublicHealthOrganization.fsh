@@ -2,7 +2,7 @@ Profile: EmigaPublicHealthOrganization
 Parent: Organization
 Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organisation"
-Description: "Eine 'EmigaPublicHealthOrganization' stellt eine ÖGD Organisation dar, die alle Organisationen zusammenfasst, die EMIGA direkt nutzende ÖDG-Organisationen sind und eine CodeSite-ID besitzen."
+Description: "Eine 'EmigaPublicHealthOrganization' ist eine ÖGD-Stelle, die EMIGA direkt nutzt und über eine CodeSite-ID verfügt."
 
 * ^version = "1.4.1"
 * ^date = "2026-08-18"

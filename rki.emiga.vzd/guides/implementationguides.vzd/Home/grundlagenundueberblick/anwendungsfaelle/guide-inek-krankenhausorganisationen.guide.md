@@ -1,8 +1,12 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von Krankenhäusern und krankenhausbezogenen Einrichtungen bzw. Standorten im Einrichtungs Verzeichnis (EINRV).
+Dieser Anwendungsfall beschreibt die Abbildung von Krankenhäusern und krankenhausbezogenen Einrichtungen bzw. Standorten im Einrichtungs Verzeichnis (EINRV).
 
 ## Überblick
+
+Krankenhäuser sind medizinische Einrichtungen, in denen Patientinnen und Patienten stationär und/oder ambulant behandelt werden. Sie spielen insbesondere im Melde- und Kommunikationsprozess mit den Gesundheitsämtern eine wichtige Rolle.
+Im Kontext von EMIGA werden Krankenhäuser als eigenständige Einrichtungen mit eindeutigen Kennungen geführt.
+Die im Einrichtungsverzeichnis bereitgestellten Informationen zu Krankenhäusern orientieren sich unter anderem an den vom Institut für das Entgeltsystem im Krankenhaus (InEK) bereitgestellten Krankenhausdaten.
 
 Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorischen Einheiten werden im EINRV mehrere spezialisierte Profile verwendet:
 
@@ -13,16 +17,15 @@ Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorisch
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/HospitalOverview.svg}}
 
-Die Profile unterscheiden zwischen organisatorischen Einheiten und physischen Orten. Eine Klinik oder Fachabteilung ist beispielsweise eine organisatorische Einheit, während ein Krankenhausstandort, eine Station oder ein Raum einen physischen Ort beschreibt.
+Eine Klinik oder Fachabteilung ist beispielsweise eine organisatorische Einheit, während ein Krankenhausstandort, eine Station oder ein Raum einen physischen Ort beschreibt.
 
 ## Fachlicher Ablauf
 
-Eine Krankenhausorganisation wird im EINRV angelegt oder aus einer führenden Quelle übernommen. Anschließend werden die Einrichtungsdaten fachlich ergänzt und präzisiert. Dazu gehören insbesondere Name, Identifikatoren, Einrichtungsart, Zuständigkeiten und hierarchische Beziehungen.
+Eine Krankenhauseinrichtung wird im EINRV angelegt, aus einer führenden Quelle übernommen oder mit dieser synchronisiert. Anschließend können die Einrichtungsdaten fachlich ergänzt und präzisiert werden. Dazu gehören insbesondere Name, Identifikatoren, Einrichtungsart, Zuständigkeiten und hierarchische Beziehungen.
 
-Im nächsten Schritt können die zugehörigen Standorte und räumlichen Einheiten ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet. Die Krankenhausorganisation kann mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
+Die zugehörigen Standorte und räumlichen Einheiten können ebenfalls ergänzt werden. Je nach fachlichem Bedarf werden dabei Krankenhausstandorte, Einrichtungsstandorte, Stationen und Räume abgebildet.
 
 ### InEK Krankenhausverzeichnis
-
 
 INEK Daten beziehen sich auf die Datenerhebung und -übermittlung an das Institut für das Entgeltsystem im Krankenhaus (InEK). Diese Daten werden hauptsächlich für die Weiterentwicklung des Diagnosis- Related Groups G-DRG-Systems und des PEPP-Systems benötigt. Das InEK dient als zentrale Datenannahmestelle und nutzt diese Informationen zur Berechnung von Relativgewichten und zur Ermittlung des DRG-Erlös. 
 
@@ -31,41 +34,34 @@ Unter krankenhausstandorte.de lässt sich nach Anmeldung ein vollständiges Verz
 ### InEK-Import
 Der **InEK Importer** ist eine eigenständige Komponente des Einrichtungsverzeichnisses und stellt eine **lesende Schnittstelle zum InEK** bereit. Über diese Schnittstelle lädt der InEK Importer regelmäßig eine Datei mit den vom InEK verwalteten Einrichtungsdaten herunter.
 
-Die heruntergeladenen Daten werden mit dem bereits im **EMIGA FHIRStore Server** vorhandenen Datenbestand abgeglichen. Dabei werden Änderungen, beispielsweise neu hinzugekommene oder nicht mehr im InEK-Verzeichnis enthaltene Krankenhäuser, erkannt. Die erkannten Änderungen werden anschließend an den EMIGA FHIRStore Server übergeben und dort in den Datenbestand übernommen.
-
-Im Produktionsbetrieb wird der InEK-Datenbestand **monatlich** aktualisiert. Vor dem Produktivbetrieb ist ein **quartalsweiser Import** ausreichend.
+Die heruntergeladenen Daten werden mit dem bereits im **EMIGA FHIRStore Server** vorhandenen Datenbestand abgeglichen. Dabei werden Änderungen, beispielsweise neu hinzugekommene oder nicht mehr im InEK-Verzeichnis enthaltene Krankenhäuser, erfasst. Die erkannten Änderungen werden anschließend an den EMIGA FHIRStore Server übergeben und dort in den Datenbestand übernommen.
 
 Bei jedem erfolgreichen Import wird eine neue Version der Krankenhaus-Stammdaten erstellt und in der Versionshistorie dokumentiert.
 
+Im Produktionsbetrieb wird der InEK-Datenbestand **monatlich** aktualisiert. Vor dem Produktivbetrieb ist ein **quartalsweiser Import** vorgesehen.
+
 Die aus dem InEK-Verzeichnis importierten Daten sind als **Krankenhaus-Stammdaten** zu verstehen. Sie dürfen von Nutzenden weder bearbeitet noch gelöscht werden. Dadurch wird verhindert, dass manuelle Änderungen bei einer späteren Aktualisierung des InEK-Datenbestands zu Inkonsistenzen führen.
 
-Wird ein Krankenhaus bei einem späteren Import nicht mehr im InEK-Verzeichnis gefunden, wird der entsprechende Datensatz in EMIGA **als inaktiv bzw. „nicht mehr im InEK enthalten“** gekennzeichnet. Der Datensatz wird nicht gelöscht.
+Wird ein Krankenhaus bei einem späteren Import nicht mehr im InEK-Verzeichnis gefunden, wird der entsprechende Datensatz in EMIGA **als inaktiv bzw. „nicht mehr im InEK enthalten“** gekennzeichnet.
 
-Die Krankenhaus-Stammdaten sind für alle EMIGA-Nutzenden einsehbar. Der Zugriff auf diese Daten erfolgt lesend.
+Alle EMIGA-Nutzenden haben lesenden Zugriff auf die Krankenhaus-Stammdaten.
 
 ### Manuelle Anlage
-Da das InEK-Verzeichnis nicht alle in Deutschland ansässigen Krankenhäuser umfasst, muss zusätzlich die **manuelle Anlage von Krankenhäusern** möglich sein. Dies betrifft beispielsweise Privatkliniken. Darüber hinaus müssen auch **ausländische Krankenhäuser** angelegt werden können. Bei der Erfassung ausländischer Krankenhäuser ist der unterschiedliche Aufbau von Adressdaten zu berücksichtigen.
 
-Krankenhäuser, die nicht im InEK-Verzeichnis enthalten sind, werden entsprechend gekennzeichnet.
+Da das InEK-Verzeichnis nicht alle in Deutschland ansässigen Krankenhäuser umfasst, ist zusätzlich die manuelle Anlage von Krankenhäusern möglich. Krankenhäuser, die nicht im InEK-Verzeichnis enthalten sind, werden entsprechend gekennzeichnet. Dies betrifft beispielsweise Privatkliniken.
+Darüber hinaus können relevante Krankenhäuser mit Standort außerhalb Deutschlands angelegt werden. Bei deren Erfassung sind insbesondere die länderspezifischen Unterschiede bei der Abbildung von Adressdaten zu berücksichtigen.
 
-Die manuelle Anlage eines Krankenhauses ist ausschließlich Nutzenden mit entsprechenden Bearbeitungsrechten erlaubt. Hierzu zählen insbesondere das RKI, Landesbehörden sowie weitere Nutzende mit den erforderlichen Bearbeitungsrechten.
-
-Die Berechtigungen müssen dabei unabhängig von der örtlichen Zuständigkeit gelten. So muss beispielsweise auch ein Gesundheitsamt die Möglichkeit haben, ein Krankenhaus für einen Landkreis anzulegen, für den es nicht zuständig ist.
-
-Aufgrund dieser übergreifenden Anlageberechtigung ist eine zuverlässige **Doublettenprüfung** erforderlich.
+Die manuelle Anlage eines Krankenhauses ist ausschließlich Nutzenden mit entsprechenden Bearbeitungsrechten gestattet. Hierzu zählen insbesondere das RKI, Landesbehörden sowie weitere entsprechend berechtigte Nutzende.
+Die Berechtigung zur Anlage ist unabhängig von der örtlichen Zuständigkeit. So kann beispielsweise auch ein Gesundheitsamt ein Krankenhaus in einem Landkreis anlegen, für den es selbst nicht zuständig ist.
 
 ### Doublettenprüfung
-Vor der Anlage eines neuen Krankenhauses muss geprüft werden, ob dieses bereits in EMIGA vorhanden ist.
 
-Als eindeutiges Identifikationsmerkmal für die Doublettenprüfung dient die **Institutionskennzeichen-Nummer (IK-Nummer) der Einrichtung**. Die IK-Nummer ist daher bei der manuellen Anlage eines Krankenhauses ein **Pflichtfeld**.
-
-Bei der Eingabe der IK-Nummer sollte den Nutzenden ein Hinweis auf eine geeignete Suchmöglichkeit zur Ermittlung der IK-Nummer bereitgestellt werden.
-
+Vor der Anlage eines neuen Krankenhauses wird geprüft, ob dieses bereits in EMIGA vorhanden ist. Bei Krankenhäusern aus dem InEK-Verzeichnis wird für die Dublettenprüfung die Institutionskennzeichen-Nummer (IK-Nummer) als eindeutiges Identifikationsmerkmal verwendet. Bei Krankenhäusern ohne IK-Nummer erfolgt die Dublettenprüfung anhand weiterer vorhandener Einrichtungsdaten.
 
 ## Beschreibung der Profile
-### Krankenhausorganisation
 
-Das Profil `EmigaHospitalOrganization` bildet ein Krankenhaus im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. `EmigaHospitalOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`.
+### Krankenhausorganisation
+Das Profil `EmigaHospitalOrganization` bildet ein Krankenhaus im EMIGA-Kontext ab. Es dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen. `EmigaHospitalOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/HospitalOrganization.svg}}
 
@@ -77,7 +73,7 @@ Das Profil `EmigaHospitalLocation` bildet einen Standort eines Krankenhauses ab.
 
 ### Krankenhauseinrichtungsstandort
 
-Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungen nach dem InEK Standortverzeichnis oder Stationen eines Krankenhauses ab. Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungsstandorte nach dem InEK-Standortverzeichnis oder Stationen eines Krankenhauses ab.
+Das Profil `EmigaHospitalFacilityLocation` bildet Einrichtungen nach dem InEK Standortverzeichnis oder Stationen eines Krankenhauses ab. 
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/HospitalFacilityLocation.svg}}
 
@@ -138,25 +134,3 @@ Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegeben
 | `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Krankenhaus-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
 | `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Krankenhaus-Einrichtung. | `OperationOutcome` |
 | `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
-
-## Erstellung und Versionierung
-
-Beim Erstellen einer Krankenhaus-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den EINRV übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge müssen weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar bleiben.
-
-## Suche und Anzeige
-
-Typische Suchkriterien sind Identifier, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
-
-## Interoperabilitätshinweise
-
-Clients sollten folgende Regeln berücksichtigen:
-
-- Einrichtungen und physische Standorte sind getrennte Ressourcen.
-- Physische Standorte werden über `EmigaLocation` oder ein spezialisiertes Standortprofil abgebildet.
-- Die verwaltende Einrichtung eines Standorts wird über `managingOrganization` referenziert.
-- Die Rolle einer Einrichtung muss im jeweiligen Prozess eindeutig ausgewertet werden.
-- Eine empfangende Einrichtung ist nicht automatisch die zuständige Einrichtung.
-- Nur aktive und aktuell gültige Einrichtungen sollen für neue Prozesse ausgewählt werden.
-- Kommunikationsadressen müssen auf ihre Gültigkeit und Verwendbarkeit geprüft werden.
-- Historische Vorgänge müssen auch nach einer Deaktivierung auf die ursprüngliche Einrichtung verweisen können.
-- Personenbezogene Kontaktdaten müssen entsprechend den Datenschutz- und Berechtigungsvorgaben behandelt werden.
