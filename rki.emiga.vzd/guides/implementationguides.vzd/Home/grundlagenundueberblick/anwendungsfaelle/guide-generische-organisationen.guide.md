@@ -1,7 +1,7 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Abbildung generischer Einrichtungen im Einrichtungsverzeichnis (EINRV).
-Von generischen Einrichtungen abzugrenzen ist das Profil `EmigaPublicHealthOrganization`, das ÖGD-Einrichtungen abbildet, die EMIGA direkt nutzen und über eine CodeSite-ID verfügen.
+Dieser Anwendungsfall beschreibt die Abbildung **generischer Einrichtungen** im Einrichtungsverzeichnis (EINRV).
+Von generischen Einrichtungen abzugrenzen ist das Profil `EmigaPublicHealthOrganization`, das ÖGD-Einrichtungen abbildet, die EMIGA direkt nutzen.
 
 ## Überblick
 Unter Generische Einrichtungen werden alle Einrichtungen zusammengefasst, die EMIGA nicht direkt nutzen und daher über keine CodeSite-ID verfügen. Hierzu zählen beispielsweise Behörden, Transportunternehmen, Labore und Arztpraxen sowie weitere Arten von Einrichtungen.
@@ -15,8 +15,6 @@ Für eine generische Einrichtung ist die Angabe einer Straßenanschrift optional
 ## Fachlicher Ablauf
 
 Eine generische Einrichtung kann manuell angelegt, aus einem zentralen Verzeichnis übernommen oder im Rahmen einer DEMIS-Meldung erzeugt beziehungsweise eingelesen werden. Nach der Anlage werden die relevanten Informationen zu Stammdaten, Einrichtungstyp, Identifikatoren und Kontaktdaten sowie gegebenenfalls zu den zugehörigen Standorten ergänzt.
-
-Physische Standorte einer generischen Einrichtung können über das Profil `EmigaLocation` abgebildet werden. Gesundheitsleistungen werden über `EmigaHealthcareService` beschrieben und können einer Einrichtung oder einem ihrer Standorte zugeordnet werden. Personen und deren Rollen werden über `EmigaPractitioner` und `EmigaPractitionerRole` mit der jeweiligen Einrichtung verknüpft.
 Im Rahmen der EMIGA-Fachprozesse können generische Einrichtungen mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
 
 ## Beschreibung der Profile
@@ -121,20 +119,24 @@ Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegeben
 
 ## Erstellung und Versionierung
 
-Beim Anlegen eines Krankenhauses in EMIGA werden die erforderlichen Stammdaten, Identifikatoren, Rollen und Kommunikationsadressen an den EINRV übermittelt. 
-Bei Änderungen werden insbesondere Identifikatoren, Einrichtungstyp und Kommunikationsadressen geprüft und aktualisiert. Durch die Versionierung der Einträge bleiben historische Vorgänge mit dem jeweils zu diesem Zeitpunkt gültigen Stand der Einrichtung nachvollziehbar.
+Beim Anlegen einer generischen Einrichtung in EMIGA werden die erforderlichen Stammdaten, Identifikatoren, Rollen und Kommunikationsadressen an den EINRV übermittelt. 
+Bei Änderungen werden insbesondere Identifikatoren, Einrichtungstyp und Kommunikationsadressen geprüft und aktualisiert. 
+Durch die Versionierung der Einträge bleiben historische Versionen nachvollziehbar und können dem jeweils zu diesem Zeitpunkt gültigen Stand der Einrichtung zugeordnet werden.
 
 ## Suche und Anzeige
 
-Es kann differenziert nach Krankenhaus, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum gesucht werden. Die Suchergebnisse werden entsprechend differenziert dargestellt. Die Suche berücksichtigt nur Einrichtungen, die für den jeweiligen EMIGA-Fachprozess sichtbar sind. Typische Suchkriterien sind Identifier, Name, Ort, Postleitzahl oder Kommunikationsadresse.
+Es kann beispielsweise nach Einrichtungen, Einrichtungsstandorten und Gesundheitsleistungen anhand verschiedener Suchkriterien wie Identifikatoren, Name, Ort, Postleitzahl oder Kommunikationsadresse gesucht werden.
+Die Suchergebnisse werden entsprechend der jeweiligen Art differenziert dargestellt.
+Bei der Suche werden nur Einrichtungen berücksichtigt, die für den jeweiligen EMIGA-Fachprozess sichtbar sind.
 
-## EpiWarn Organizationen
+## Kennzeichnung von EpiWarn-Einrichtungen
 
-Als **EpiWarn-Einrichtungen** werden in EMIGA Einrichtungen und Organistaionen bezeichnet, die im Rahmen der in §2 IfSG-Koordinierungs-VwV beschriebenen Koordinierungs- und Erreichbarkeitsprozesse relevant sind. Hierzu gehören insbesondere die dort genannten Behörden, Einrichtungen und zuständigen Stellen, deren Kontakt- und Erreichbarkeitsdaten für diese Prozesse vorgehalten werden.
+Bei bestimmten generischen Einrichtungen kann die Kennzeichnung **„EpiWarn-Einrichtung“** angezeigt werden. Sie kennzeichnet Einrichtungen, die für bestimmte Koordinierungs- und Erreichbarkeitsprozesse im Kontext der **IfSG-Koordinierungs-VwV** relevant sind.
 
-EpiWarn-Einrichtungen werden grundsätzlich über die für generische Einrichtungen vorgesehenen EMIGA-Profile abgebildet und durch die Belegung von `meta.tag:relevance` mit dem Wert `IfsgKoordVwV` entsprechend gekennzeichnet. 
-Handelt es sich um eine direkt EMIGA nutzende ÖGD-Stelle, wird stattdessen `EmigaPublicHealthOrganization` verwendet.
+Die Kennzeichnung erfolgt technisch über `meta.tag:relevance` mit dem Wert `IfsgKoordVwV` und wird ausschließlich für entsprechende RKI-interne Anwendungsfälle genutzt. Für andere EMIGA-Nutzende hat diese Kennzeichnung keine fachliche Bedeutung.
 
+
+<!--
 Im Folgenden wird ein Beispiel für einen EpiWarn Organization dargestellt.
 
 <tabs>
@@ -151,3 +153,4 @@ Im Folgenden wird ein Beispiel für einen EpiWarn Organization dargestellt.
         {{link:Organization-EpiWarnOrganization.json}}
     </tab>
 </tabs>
+-->

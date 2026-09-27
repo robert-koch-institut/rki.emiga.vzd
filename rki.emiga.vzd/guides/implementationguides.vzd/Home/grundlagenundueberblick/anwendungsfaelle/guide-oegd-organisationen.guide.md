@@ -1,6 +1,6 @@
 # {{page-title}}
 
-Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD-Stellen sowie weiteren EMIGA-nutzenden Einrichtungen, die im Rahmen des Öffentlichen Gesundheitsdienstes fachlich relevant sind, im Einrichtungsverzeichnis (EINRV).
+Dieser Anwendungsfall beschreibt die Verwaltung von ÖGD-Stellen sowie weiteren EMIGA-nutzenden Einrichtungen im Einrichtungsverzeichnis (EINRV), die im Rahmen des Öffentlichen Gesundheitsdienstes fachlich relevant sind.
 
 ## Überblick
 
@@ -11,17 +11,25 @@ Unter ÖGD-Einrichtungen werden alle Einrichtungen des Öffentlichen Gesundheits
 ## Fachlicher Ablauf
 
 Eine ÖGD-Einrichtung wird aus einem bestehenden zentralen ÖGD-Verzeichnis übernommen, durch einen berechtigten Nutzenden manuell angelegt oder aus einer führenden Datenquelle synchronisiert.
-Bei der Suche ermittelt der Client eine ÖGD-Einrichtung anhand ihres Identifiers oder über fachliche Suchparameter. Für die gefundene Einrichtung können anschließend die aktuellen Stammdaten, fachlichen Rollen, Zuständigkeiten und Kommunikationsdaten abgerufen werden. Sofern die Einrichtung über physische Standorte verfügt, werden diese über `EmigaPublicHealthLocation` referenziert.
+
+### Erstellung und Versionierung
+
+Beim Erstellen einer ÖGD-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge bleiben weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar.
+### Suche und Anzeige
+
+ÖGD-Einrichtungen können anhand verschiedener Suchkriterien wie Identifier, CodeSite-ID, Name, Ort, Postleitzahl oder Kommunikationsadresse gesucht werden. Dabei werden nur Einrichtungen berücksichtigt, die für den jeweiligen Prozess aktiv und sichtbar sind.
+Für eine gefundene Einrichtung können die aktuellen Stammdaten, fachlichen Rollen, Zuständigkeiten und Kommunikationsdaten abgerufen werden.
+Verfügt eine ÖGD-Einrichtung über physische Standorte, werden diese über `EmigaPublicHealthLocation` abgebildet und der jeweiligen Einrichtung zugeordnet.
 
 ## Beschreibung der Profile
 
 ### ÖGD-Einrichtung
 
-Das Profil `EmigaPublicHealthOrganization` bildet eine ÖGD Einrichtung ab, die alle Einrichtungen zusammenfasst, die EMIGA direkt nutzende ÖDG-Einrichtungen sind und eine CodeSite ID besitzen.
+Das Profil `EmigaPublicHealthOrganization` bildet ÖGD-Einrichtungen ab, die EMIGA direkt nutzen und über eine CodeSite-ID verfügen.
 
 {{render:guides/implementationguides.vzd/PlantUML/SVGs/PublicHealthOrganization.svg}}
 
-Die CodeSite-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Einrichtungen, die nicht direkt nutzende ÖGD-Einrichtungen mit CodeSite-ID sind.
+Die CodeSite-ID wird über das Profil `IdentifierCodeSiteId` abgebildet. 
 
 ### ÖGD-Standort
 
@@ -91,18 +99,12 @@ with header
 | `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Einrichtung. | `OperationOutcome` |
 | `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
 
-## Erstellung und Versionierung
-
-Beim Erstellen einer ÖGD-Einrichtung werden die erforderlichen Stammdaten, Identifier, Rollen und Kommunikationsadressen an den VZD übermittelt. Bei einer Änderung werden insbesondere Identifier, Einrichtungstyp und Kommunikationsadresse geprüft. Historische Vorgänge bleiben weiterhin mit dem zum jeweiligen Zeitpunkt gültigen Einrichtungsstand nachvollziehbar.
-
-## Suche und Anzeige
-
-Typische Suchkriterien sind Identifier, CodeSite-ID, Name, Ort oder Postleitzahl oder Kommunikationsadresse. Die Suche soll nur Einrichtungen berücksichtigen, die für den jeweiligen Prozess aktiv und zugelassen sind. Bei der Anzeige muss zwischen Krankenhausorganisation, Krankenhausstandort, Krankenhauseinrichtungsstandort und Krankenhausraum unterschieden werden.
 
 ## Interoperabilitätshinweise
 
 Clients sollten folgende Regeln berücksichtigen:
 
+- `EmigaPublicHealthOrganization` ist von `EmigaOrganization` zu unterscheiden. `EmigaOrganization` umfasst Einrichtungen, die nicht direkt nutzende ÖGD-Einrichtungen mit CodeSite-ID sind.
 - `EmigaPublicHealthOrganization` ist für direkt nutzende ÖGD-Einrichtungen mit CodeSite-ID vorgesehen.
 - Die CodeSite-ID wird über `IdentifierCodeSiteId` abgebildet.
 - Einrichtungen und physische Standorte sind technisch getrennte Ressourcen.
