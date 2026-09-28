@@ -2,7 +2,7 @@ Profile: IdentifierCodeSiteId
 Parent: Identifier
 Id: IdentifierCodeSiteId
 Title: "Identifier-Profil CodeSiteId"
-Description: "'IdentifierCodeSiteId' ist ein Identifier-Profil für die vom RKI vergebene Kennung der Organisationen des ÖGDs (Gesundheitsamts, Landesstelle, usw.)."
+Description: "'IdentifierCodeSiteId' ist ein Identifier-Profil für die vom RKI vergebene eindeutige Kennung einer Einrichtung des ÖGDs (Gesundheitsamts, Landesstelle, usw.)."
 
 * ^version = "1.0.0"
 * ^date = "2026-08-18"

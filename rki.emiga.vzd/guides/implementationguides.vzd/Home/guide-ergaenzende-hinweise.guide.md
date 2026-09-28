@@ -2,11 +2,9 @@
 
 ## Bedeutung von MustSupport
 
-Mit der MustSupport-Markierung eines Elementes wird zusätzlich zu der Kardinalität eine Information darüber vorgegeben inwieweit ein Element unterstützt werden muss.
-
-Aus Sicht der Gesundheitsamts(GA)-Fachverfahren bedeutet das: Die entsprechende Information muss dem Nutzer mindestens angezeigt werden können. Die entsprechende Information soll ins interne Informationsmodelle der Anwendung überführt werden. Die Überführung kann ein einfaches Kopieren oder komplexeres Mappen der Daten sein.
-
-Aus Sicht der Emiga-Nutzende Systeme bedeutet das: Die entsprechende Information soll durch die Anwendung bereitgestellt werden, sofern sie vorhanden ist.
+Die MustSupport-Markierung eines Elements legt ergänzend zur Kardinalität fest, dass dieses Element von den beteiligten Systemen unterstützt werden muss.
+Aus Sicht von EMIGA bedeutet MustSupport, dass die entsprechende Information verarbeitet und den Nutzenden mindestens angezeigt werden können muss.
+Aus Sicht EMIGA-nutzender Systeme bedeutet es, dass die entsprechende Information von der Anwendung bereitgestellt werden soll, sofern sie im jeweiligen System vorhanden ist.
 
 ## Bedeutung von partOf
 
