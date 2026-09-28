@@ -93,8 +93,10 @@ where
     or
     supportedProfile =
         'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation'
-   
-
+    or
+    supportedProfile =
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation'
+    
 for interaction
 
 select

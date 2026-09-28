@@ -59,10 +59,7 @@ where
         'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization'
     or
     supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicLocation'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation'
+        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation'
     or
     supportedProfile =
         'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner'

@@ -118,16 +118,16 @@ Im Folgenden wird ein Beispiel für eine fiktive Organization dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:OrganizationMaximal.json}}
+        {{render:Organization-OrganizationMaximal.json}}
     </tab>
     <tab title="XML">      
-        {{xml:OrganizationMaximal.json}}
+        {{xml:Organization-OrganizationMaximal.json}}
     </tab>
     <tab title="JSON">
-        {{json:OrganizationMaximal.json}}
+        {{json:Organization-OrganizationMaximal.json}}
     </tab>
     <tab title="Link">
-        {{link:OrganizationMaximal.json}}
+        {{link:Organization-OrganizationMaximal.json}}
     </tab>
 </tabs>
 
