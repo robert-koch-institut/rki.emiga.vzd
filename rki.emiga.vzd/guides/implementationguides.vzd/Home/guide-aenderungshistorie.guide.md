@@ -4,7 +4,7 @@
 
 
 
-
+## Änderungshistorie dieses Leitfädens
 Diese Änderungshistorie dokumentiert alle Anpassungen und Erweiterungen des Implementierungsleitfadens. Sie enthält Informationen zu den vorgenommenen Änderungen, den verantwortlichen Autoren/Autorinnen sowie den jeweiligen Versionsständen. Die Historie ermöglicht eine transparente Nachverfolgung der Entwicklung und stellt sicher, dass alle Beteiligten stets auf dem aktuellen Stand sind.
 <br>&nbsp;<br>
 
@@ -13,3 +13,4 @@ Diese Änderungshistorie dokumentiert alle Anpassungen und Erweiterungen des Imp
 | 1.0         | 01.01.2025      | Michel NEUMANN<br>Dorothea DRESENKAMP<br>Konstantinos VOULGARIS      |   Initiale Erstellung des Implementierungsleitfadens.|
 | 1.1         | 09.09.2026      | Konstantinos VOULGARIS<br>Lisa Koehler      |   Hinzufügen technischer und fachlicher Beschreibungen.|
 | 1.2         | 21.09.2026      | Konstantinos VOULGARIS                      |   Hinzufügen von technischer/fachlicher Beschreibungen, umstrukturierung der Seiten-Baum und Anpassung von Diagramme
+| 1.2.1       | 28.09.2026      | Lei Mao                                     |   Hinzufügen von technischer/fachlicher Beschreibungen |
