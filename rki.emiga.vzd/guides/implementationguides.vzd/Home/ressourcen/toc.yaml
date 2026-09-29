@@ -1,7 +1,7 @@
 - name: Index
   filename: Index.page.md
-- name: CapabilityStatement
-  filename: guide-capabilitystatement.guide.md
+- name: Capability Statement
+  filename: guide-capability-statement.guide.md
 - name: StructureDefinitions
   filename: structuredefinitions
 - name: Terminologien

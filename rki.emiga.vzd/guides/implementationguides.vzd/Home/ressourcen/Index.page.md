@@ -15,5 +15,5 @@ Dieser Abschnitt bietet eine Übersicht über alle in diesem Implementierungslei
    **CodeSystems**, **ValueSets** und **NamingSystems** zur Standardisierung der Datenerfassung und -verarbeitung unter anderem Werte für Anrede, Bearbeitungsstatus, Beziehungen, Personenbezug, Relevanz, Ressourcensichtbarkeit, Ressourcenverantwortlichkeit, Verbindung zu Einrichtungen, Regionalschlüssel sowie Anzeigetext-Arten.
    
 **Extensions**  
-   Extensions für die Abbildung zusätzlicher Informationen jenseits des FHIR-Basisstandard. Diese dienen dazu, FHIR-Ressourcen entsprechend den fachlichen Anforderungen von EMIGA und des ÖGD zu erweitern. Beispiele hierfür sind der Bearbeitungsstatus (ProcessingStatus) oder das Geburtsland (LandOfBirth).
+   Extensions für die Abbildung zusätzlicher Informationen jenseits des FHIR-Basisstandards. Diese dienen dazu, FHIR-Ressourcen entsprechend den fachlichen Anforderungen von EMIGA und des ÖGD zu erweitern. Beispiele hierfür sind der Bearbeitungsstatus (ProcessingStatus) oder das Geburtsland (LandOfBirth).
 
