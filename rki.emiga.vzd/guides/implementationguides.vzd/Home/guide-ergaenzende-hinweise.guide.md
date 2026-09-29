@@ -1,6 +1,6 @@
 # {{page-title}}
 
-## Bedeutung von 
+## Bedeutung von Must Support
 
 Die **Must-Support-Markierung (MS)** eines Elements legt ergänzend zur Kardinalität fest, dass dieses Element von den beteiligten Systemen unterstützt werden muss. Aus Sicht von EMIGA bedeutet dies, dass die betreffende Information verarbeitet und den Nutzenden mindestens angezeigt werden können muss. Für EMIGA-nutzende Systeme bedeutet dies, dass die betreffende Information von der Anwendung bereitgestellt werden soll, sofern sie im jeweiligen System vorhanden ist.
 
