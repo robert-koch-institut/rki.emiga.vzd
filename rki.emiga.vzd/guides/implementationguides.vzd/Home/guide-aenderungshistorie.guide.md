@@ -11,4 +11,4 @@ Diese Änderungshistorie dokumentiert alle Anpassungen und Erweiterungen des Imp
 | 1.0.0       | 01.01.2025      | Michel NEUMANN<br>Dorothea DRESENKAMP<br>Konstantinos VOULGARIS      |   Initiale Erstellung des Implementierungsleitfadens.|
 | 1.1.0       | 09.09.2026      | Konstantinos VOULGARIS<br>Lisa Koehler      |   Hinzufügen von technischen und fachlichen Beschreibungen|
 | 1.2.0       | 21.09.2026      | Konstantinos VOULGARIS                      |   Hinzufügen von technischen und fachlichen Beschreibungen, Umstrukturierung der Navigationsstruktur und Anpassung von Diagrammen
-| 1.2.1       | 28.09.2026      | Lei Mao                                     |   Hinzufügen von technischer/fachlicher Beschreibungen |
+| 1.2.1       | 28.09.2026      | Lei Mao                                     |   Hinzufügen von technischen und fachlichen Beschreibungen |

@@ -1,30 +1,30 @@
 - name: Index
   filename: Index.page.md
-- name: Addresse Typ
+- name: Addressentyp
   filename: guide-addresse-typ.guide.md
-- name: Art/Typ Dienstleistung
+- name: Dienstleistungstyp
   filename: guide-art-typ-dienstleistung.guide.md
-- name: Art/Typ Krankenhaus
+- name: Krankenhaus-Organisationstyp
   filename: guide-art-typ-krankenhaus.guide.md
-- name: Art/Typ öffentlicher Gesundheitsdienst
+- name: ÖGD Organizationen
   filename: guide-art-typ-oeffentlicher-gesundheitsdienst.guide.md
-- name: Art/Typ Einrichtung
+- name: Organisationstyp
   filename: guide-art-typ-organisation.guide.md
-- name: Dienstleister Dienstzeiten
+- name: Dienstzeiten
   filename: guide-dienstleister-dienstzeiten.guide.md
-- name: Dienstleister Fachspezialisierung
+- name: Fachspezialisierung
   filename: guide-dienstleister-fachspezialisierung.guide.md
-- name: Dienstleister Kategorie
+- name: Dienstleistungskategorien
   filename: guide-dienstleister-kategorie.guide.md
 - name: Fachbereich
   filename: guide-fachbereich.guide.md
-- name: Generische Einrichtung
+- name: Generische Organisationstyp
   filename: guide-generische-organisation.guide.md
 - name: IneK Einrichtungstyp
   filename: guide-inek-einrichtungstyp.guide.md
-- name: Rolle in der Gesundheitsversorgung
+- name: Personenrolle
   filename: guide-practitioner-role.guide.md
 - name: Ressourcensichtbarkeit
   filename: guide-ressourcensichtbarkeit.guide.md
-- name: Zuständigkeit
+- name: Art der Zuständigkeit OEGD
   filename: guide-zustaendigkeit.guide.md

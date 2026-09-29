@@ -1,18 +1,18 @@
 - name: Index
   filename: Index.page.md
-- name: Einrichtung
+- name: EMIGA Organization
   filename: guide-organisation.guide.md
 - name: Fachabteilung
   filename: guide-fachabteilung.guide.md
-- name: Bereich / Standort
+- name: EMIGA Bereich / Standort
   filename: guide-bereich-standort.guide.md
 - name: Dienstleistung
   filename: guide-dienstleistung.guide.md
-- name: Akteur:in 
+- name: Practitioner 
   filename: guide-practitioner.guide.md
-- name: Rolle der Akteur:in
+- name: Practitioner Role
   filename: guide-practitioner-role.guide.md
-- name: ÖGD Einrichtung
+- name: ÖGD Organisation
   filename: guide-oegd-organisation.guide.md
 - name: ÖGD Fachbereich / Standort
   filename: guide-oegd-fachbereich-standort.guide.md

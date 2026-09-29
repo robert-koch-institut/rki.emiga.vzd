@@ -11,7 +11,7 @@ Die im Einrichtungsverzeichnis bereitgestellten Informationen zu Krankenhäusern
 Die InEK-Krankenhausorganizationen werden mit den Tag 'meta.tag:relevance' und dem Kode 'InEK' und Dispaly 'Aus Krankenhausverzeichnis' gekenzeichnet.
 Für die Abbildung von Krankenhäusern und deren räumlichen und organisatorischen Einheiten werden im EINRV mehrere spezialisierte Profile verwendet:
 
-- `EmigaHospitalOrganization` bildet das Krankenhaus a ,
+- `EmigaHospitalOrganization` bildet das Krankenhaus ab,
 - `EmigaHospitalLocation` für besuchbare Krankenhausstandorte,
 - `EmigaHospitalFacilityLocation` für Einrichtungsstandorte oder für Stationen nach dem InEK-Standortverzeichnis,
 - `EmigaHospitalRoomLocation` für Räume innerhalb eines Krankenhausstandorts.
