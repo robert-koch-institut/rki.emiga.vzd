@@ -73,7 +73,8 @@ Das Profil `EmigaHospitalRoomLocation` bildet einen Raum in einem Krankenhaus ab
 
 ## Schnittstellenoperationen
 
-<!--> NOTIZ: Dynamische mittels fql Represantation der Tabelle unten, wenn ok ich werde die Tabelle entfernen <-->
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+
 <fql>
 using scope
 
@@ -85,18 +86,10 @@ where
 for rest.resource
 
 where
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization'
+    type = 'Organization'
     or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation'
-    
+    type = 'Location'
+
 for interaction
 
 select
@@ -112,15 +105,4 @@ select
 with header
 </fql>
 
-Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von Krankenhaus-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
-| Operation | Methode | Zweck | Ergebnis |
-| --- | --- | --- | --- |
-| `/metadata` | `GET` | Abruf des FHIR-`CapabilityStatement`. | `CapabilityStatement` |
-| `/Organization/$search-organization` | `GET`, `POST` | Suche nach Krankenhaus-Einrichtungen. | `Bundle` vom Typ `searchset` |
-| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Krankenhaus-Einrichtungsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
-| `/Location/$search-location` | `GET`, `POST` | Suche nach Krankenhaus-Standorten. | `Bundle` vom Typ `searchset` |
-| `/Organization/$create-organization` | `POST` | Anlage einer Krankenhaus-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Krankenhaus-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Krankenhaus-Einrichtung. | `OperationOutcome` |
-| `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |

@@ -43,7 +43,6 @@ Eine `EmigaPublicHealthLocation` kann über `managingOrganization` einer `EmigaP
 
 Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von ÖGD-Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
 
-<!--> NOTIZ: Dynamische mittels fql Represantation der Tabelle unten, wenn ok ich werde die Tabelle entfernen <-->
 <fql>
 using scope
 
@@ -55,20 +54,15 @@ where
 for rest.resource
 
 where
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization'
+    type = 'Organization'
     or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService'
+    type = 'Location'
+	or 
+	type = 'Practitioner'
+	or 
+	type = 'PractitionerRole'
+	or
+	type = 'HealthcareService'
 
 for interaction
 
@@ -84,17 +78,6 @@ select
 
 with header
 </fql>
-
-| Operation | Methode | Zweck | Ergebnis |
-| --- | --- | --- | --- |
-| `/metadata` | `GET` | Abruf des FHIR-`CapabilityStatement`. | `CapabilityStatement` |
-| `/Organization/$search-organization` | `GET`, `POST` | Suche nach EpiWarn-Einrichtungen. | `Bundle` vom Typ `searchset` |
-| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Einrichtungsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
-| `/Location/$search-location` | `GET`, `POST` | Suche nach Standorten. | `Bundle` vom Typ `searchset` |
-| `/Organization/$create-organization` | `POST` | Anlage einer EpiWarn-Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Einrichtung. | `OperationOutcome` |
-| `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
 
 
 ## Interoperabilitätshinweise

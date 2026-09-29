@@ -1,6 +1,8 @@
-# CapabilityStatements
+# CapabilityStatement
 
 ## EMIGA Einrichtungsverzeichnis - Konformitätserklärung
+
+Es gilt zur Umsetzung der  Funktionalität für die EINRV-Schnittstelle insbesondere die Anforderungen aus den Capability Statement.
 
 ### Beschreibung
 

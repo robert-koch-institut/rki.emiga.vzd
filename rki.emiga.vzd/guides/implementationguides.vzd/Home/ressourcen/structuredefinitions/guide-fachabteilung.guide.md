@@ -130,6 +130,3 @@ Im Folgenden wird ein Beispiel für eine fiktive Dienstleistung dargestellt.
         {{link:Organization-DepartmentOrganization.json}}
     </tab>
 </tabs>
-
-
-

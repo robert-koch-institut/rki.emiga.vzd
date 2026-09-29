@@ -60,7 +60,8 @@ Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Ein
 
 ## Schnittstellenoperationen
 
-<!--> NOTIZ: Dynamische mittels fql Represantation der Tabelle unten, wenn ok ich werde die Tabelle entfernen <-->
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+
 <fql>
 using scope
 
@@ -72,20 +73,15 @@ where
 for rest.resource
 
 where
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization'
+    type = 'Organization'
     or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole'
-    or
-    supportedProfile =
-        'https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService'
+    type = 'Location'
+	or 
+	type = 'Practitioner'
+	or 
+	type = 'PractitionerRole'
+	or
+	type = 'HealthcareService'
 
 for interaction
 
@@ -102,20 +98,6 @@ select
 with header
 </fql>
 
-Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
-
-| Operation | Methode | Zweck | Ergebnis |
-| --- | --- | --- | --- |
-| `/metadata` | `GET` | Abruf des FHIR-`CapabilityStatement`. | `CapabilityStatement` |
-| `/Organization/$search-organization` | `GET`, `POST` | Suche nach generischen Einrichtungen. | `Bundle` vom Typ `searchset` |
-| `/Organization/{id}/$organization-details` | `GET`, `POST` | Abruf des aktuellen Einrichtungsstands. | FHIR-`Organization` oder FHIR-`Bundle` |
-| `/Location/$search-location` | `GET`, `POST` | Suche nach Standorten. | `Bundle` vom Typ `searchset` |
-| `/HealthcareService/$search-healthcare-service` | `GET`, `POST` | Suche nach Gesundheitsleistungen. | `Bundle` vom Typ `searchset` |
-| `/PractitionerRole/$search-practitioner-role` | `GET`, `POST` | Suche nach Personen und Rollen. | `Bundle` vom Typ `searchset` |
-| `/Organization/$create-organization` | `POST` | Anlage einer generischen Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/$update-organization` | `POST` | Änderung einer bestehenden Einrichtung. | Gespeicherte FHIR-Ressource oder FHIR-`Bundle` |
-| `/Organization/{id}/$deactivate-organization` | `POST` | Deaktivierung einer Einrichtung. | `OperationOutcome` |
-| `/OperationDefinition/{id}` | `GET` | Abruf der technischen Beschreibung einer Operation. | `OperationDefinition` |
 
 ## Erstellung und Versionierung
 
@@ -135,22 +117,3 @@ Bei bestimmten generischen Einrichtungen kann die Kennzeichnung **„EpiWarn-Ein
 
 Die Kennzeichnung erfolgt technisch über `meta.tag:relevance` mit dem Wert `IfsgKoordVwV` und wird ausschließlich für entsprechende RKI-interne Anwendungsfälle genutzt. Für andere EMIGA-Nutzende hat diese Kennzeichnung keine fachliche Bedeutung.
 
-
-<!--
-Im Folgenden wird ein Beispiel für einen EpiWarn Organization dargestellt.
-
-<tabs>
-    <tab title="Übersicht">      
-        {{render:Organization-EpiWarnOrganization.json}}
-    </tab>
-    <tab title="XML">      
-        {{xml:Organization-EpiWarnOrganization.json}}
-    </tab>
-    <tab title="JSON">
-        {{json:Organization-EpiWarnOrganization.json}}
-    </tab>
-    <tab title="Link">
-        {{link:Organization-EpiWarnOrganization.json}}
-    </tab>
-</tabs>
--->
