@@ -74,13 +74,13 @@ Der Server unterstützt die systemweite Historie.
 
 * rest[0].resource[2].type = #Organization
 * insert Expectation(rest[0].resource[2], SHALL)
-* rest[0].resource[2].supportedProfile[1] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
+* rest[0].resource[2].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
 * insert Expectation(rest[0].resource[2].supportedProfile[0], SHALL)
-* rest[0].resource[2].supportedProfile[2] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+* rest[0].resource[2].supportedProfile[1] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 * insert Expectation(rest[0].resource[2].supportedProfile[1], SHALL)
-* rest[0].resource[2].supportedProfile[3] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
+* rest[0].resource[2].supportedProfile[2] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 * insert Expectation(rest[0].resource[2].supportedProfile[2], SHALL)
-* rest[0].resource[2].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
+* rest[0].resource[2].supportedProfile[3] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 * insert Expectation(rest[0].resource[2].supportedProfile[3], SHALL)
 
 * rest[0].resource[2].interaction[0].code = #update
