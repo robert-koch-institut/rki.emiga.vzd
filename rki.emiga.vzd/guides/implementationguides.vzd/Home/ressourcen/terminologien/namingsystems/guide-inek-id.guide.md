@@ -18,24 +18,15 @@ select description
 <style>
   /* Entferne äußere Umrandung */
   #rendered-codesystem {
-      max-width: 100%;
-      overflow-x: auto;
       border: none;
       padding: 0;
       margin: 0;
   }
 
-  #rendered-codesystem,
-  #rendered-codesystem * {
-      box-sizing: border-box;
-  }
-
   /* Tabelle formatieren */
   #rendered-codesystem table {
       border-collapse: collapse;
-      width: 100%;
-      max-width: 100%;
-      table-layout: fixed;
+      width: auto;  /* Passt die Breite an den Inhalt an */
       border: 1px solid #d3d3d3;  /* Dünne, graue Umrandung der gesamten Tabelle */
   }
 
@@ -47,8 +38,6 @@ select description
       border: 1px solid #d3d3d3;  /* Dünne Linien zwischen den Zellen */
       font-family: Arial, sans-serif;
       font-size: 14px;
-      overflow-wrap: anywhere;
-      word-break: break-word;
   }
 
   /* Kopfzeile formatieren */
@@ -64,31 +53,16 @@ select description
   #rendered-codesystem th:nth-child(3) {
       display: none;
   }
-
-  tabs,
-  tab,
-  pre,
-  code {
-      max-width: 100%;
-      min-width: 0;
-  }
-
-  pre,
-  code {
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-  }
 </style>
 <br>&nbsp;<br>
 
 ### Inhalt
+
 <tabs>
-<tab= title="Darstellung">{{tree, buttons}} </tab>
+<tab title="Darstellung">{{tree, buttons}}</tab>
 <tab title="XML">{{xml}}</tab>
 <tab title="JSON">{{json}}</tab>
 <tab title="Link">{{link}}</tab>
 </tabs>
+</div>
 <br>&nbsp;<br>
-
-
