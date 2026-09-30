@@ -12,9 +12,8 @@ Description: "'EmigaOrganization' bildet Einrichtungen ab, die keine EMIGA direk
 * insert ProfileDomainResourceCommon
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
-//* insert ProfileMetaProfileTags
-
 * insert ProfileMetaProfileTags
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension

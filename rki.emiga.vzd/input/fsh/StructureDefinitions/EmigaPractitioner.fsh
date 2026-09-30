@@ -13,6 +13,7 @@ Description: "'EmigaPractitioner' bildet Personen ab, die Leistungen erbringen o
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 
 // 'Additional content defined by implementations' - 0..* - Extension
