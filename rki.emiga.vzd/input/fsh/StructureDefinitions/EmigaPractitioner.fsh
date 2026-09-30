@@ -2,7 +2,7 @@ Profile: EmigaPractitioner
 Parent: Practitioner
 Id: EmigaPractitioner
 Title: "Practitioner"
-Description: "'EmigaPractitioner' bildet Personen ab, die im EMIGA-Kontext Leistungen erbringen oder fachliche Aufgaben wahrnehmen. Hierzu zählen beispielsweise Ärztinnen und Ärzte, Mitarbeitende von Gesundheitsämtern sowie Leitungs- oder Ansprechpersonen von Gemeinschaftseinrichtungen. Patientinnen und Patienten sowie Kontaktpersonen werden nicht über dieses Profil abgebildet."
+Description: "'EmigaPractitioner' bildet Personen ab, die Leistungen erbringen oder fachliche Aufgaben wahrnehmen. Hierzu zählen beispielsweise Ärztinnen und Ärzte, Mitarbeitende von Gesundheitsämtern sowie Leitungs- oder Ansprechpersonen von Gemeinschaftseinrichtungen. Patientinnen und Patienten sowie Kontaktpersonen werden nicht über dieses Profil abgebildet."
 
 * ^version = "1.1.1"
 * ^date = "2026-08-18"

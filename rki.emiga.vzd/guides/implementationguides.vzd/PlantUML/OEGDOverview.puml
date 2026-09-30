@@ -56,7 +56,7 @@ EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen,\n die 
 ' HealthcareService
 ' --------------------------------------------------
 
-EmigaHealthcareService -left-> EmigaPublicHealthOrganization : bereitgestellt von\n(providedBy)
+EmigaHealthcareService -left-> EmigaPublicHealthOrganization : Bereitgestellt von\n(providedBy)
 
 EmigaHealthcareService --> EmigaPublicHealthLocation : Referenzierung der Standorte,\nan denen die Dienstleistung angeboten wird\n(location)
 

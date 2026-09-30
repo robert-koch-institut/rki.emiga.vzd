@@ -57,7 +57,7 @@ EmigaOrganization -left-> EmigaOrganization : Teil von\n(partOf)
 
 EmigaLocation -up-> EmigaOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
-EmigaHealthcareService -left-> EmigaOrganization : bereitgestellt von\n(providedBy)
+EmigaHealthcareService -left-> EmigaOrganization : Bereitgestellt von\n(providedBy)
 
 EmigaHealthcareService -down-> EmigaLocation : Referenzierung der Standorte,\nan denen die Dienstleistung angeboten wird\n(location)
 

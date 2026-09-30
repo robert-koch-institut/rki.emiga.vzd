@@ -41,7 +41,7 @@ Sie erreichen uns über das EMIGA-Kontaktformular.
 &nbsp;
 
 
-<a href="https://www.rki.de/SharedDocs/Kontaktformulare/E/EMIGA/Integrator.html" class="btn btn-default">zu EMIGA-Kontaktformular</a>
+<a href="https://www.rki.de/SharedDocs/Kontaktformulare/DE/E/EMIGA/Integrator.html" class="btn btn-default">zu EMIGA-Kontaktformular</a>
 
 
 
