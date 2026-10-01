@@ -51,37 +51,20 @@ Der Server unterstützt die systemweite Historie.
 
 * rest[0].operation[0].name = "fetch-org-details"
 * rest[0].operation[0].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-fetch-org-details"
-* insert Expectation(rest[0].operation[0], MAY)
+* insert Expectation(rest[0].operation[0], SHALL)
 * rest[0].operation[1].name = "fetch-department-details-for-org"
 * rest[0].operation[1].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-fetch-department-details-for-org"
-* insert Expectation(rest[0].operation[1], MAY)
-* rest[0].operation[2].name = "search-history"
-* rest[0].operation[2].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-search-history"
-* insert Expectation(rest[0].operation[2], MAY)
-* rest[0].operation[3].name = "fetch-history-org-details"
-* rest[0].operation[3].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-fetch-history-org-details"
-* insert Expectation(rest[0].operation[3], MAY)
-* rest[0].operation[4].name = "fetch-history-department-details"
-* rest[0].operation[4].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-fetch-history-department-details"
-* insert Expectation(rest[0].operation[4], MAY)
-* rest[0].operation[5].name = "fetch-history"
-* rest[0].operation[5].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/-s-fetch-history"
-* insert Expectation(rest[0].operation[5], MAY)
+* insert Expectation(rest[0].operation[1], SHALL)
 
 // =============================================================================
 // Organization
 // =============================================================================
 
 * rest[0].resource[2].type = #Organization
-* insert Expectation(rest[0].resource[2], SHALL)
 * rest[0].resource[2].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalOrganization"
-* insert Expectation(rest[0].resource[2].supportedProfile[0], SHALL)
 * rest[0].resource[2].supportedProfile[1] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
-* insert Expectation(rest[0].resource[2].supportedProfile[1], SHALL)
 * rest[0].resource[2].supportedProfile[2] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
-* insert Expectation(rest[0].resource[2].supportedProfile[2], SHALL)
 * rest[0].resource[2].supportedProfile[3] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
-* insert Expectation(rest[0].resource[2].supportedProfile[3], SHALL)
 
 * rest[0].resource[2].interaction[0].code = #update
 * insert Expectation(rest[0].resource[2].interaction[0], SHALL)
@@ -179,7 +162,7 @@ Eine Organisation, zu der diese Organisation gehört
 **Anwendungshinweis:**
 Eine serverdefinierte Suche, die mit beliebigen Zeichenkettenfeldern der Adresse übereinstimmen kann, einschließlich line, city, district, state, country, postalCode und/oder text
 """
-* insert Expectation(rest[0].resource[2].searchParam[2], MAY)
+* insert Expectation(rest[0].resource[2].searchParam[2], SHALL)
 * rest[0].resource[2].searchParam[3].name = "address-state"
 * rest[0].resource[2].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-state"
 * rest[0].resource[2].searchParam[3].type = #string
@@ -223,7 +206,7 @@ Ein Code für die Art der Organisation
 **Anwendungshinweis:**
 Eine in einer Adresse angegebene Postleitzahl
 """
-* insert Expectation(rest[0].resource[2].searchParam[6], MAY)
+* insert Expectation(rest[0].resource[2].searchParam[6], SHALL)
 * rest[0].resource[2].searchParam[7].name = "address-country"
 * rest[0].resource[2].searchParam[7].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-country"
 * rest[0].resource[2].searchParam[7].type = #string
@@ -245,7 +228,7 @@ Ein in einer Adresse angegebenes Land
 **Anwendungshinweis:**
 Ein Teil des Organisationsnamens unter Verwendung eines phonetischen Abgleichverfahrens
 """
-* insert Expectation(rest[0].resource[2].searchParam[8], MAY)
+* insert Expectation(rest[0].resource[2].searchParam[8], SHALL)
 * rest[0].resource[2].searchParam[9].name = "address-use"
 * rest[0].resource[2].searchParam[9].definition = "http://hl7.org/fhir/SearchParameter/Organization-address-use"
 * rest[0].resource[2].searchParam[9].type = #token
@@ -292,10 +275,8 @@ Eine in einer Adresse angegebene Stadt
 * insert Expectation(rest[0].resource[2].searchParam[12], MAY)
 * rest[0].resource[2].searchInclude[0] = "*"
 * insert Expectation(rest[0].resource[2].searchInclude[0], MAY)
-* rest[0].resource[2].searchInclude[1] = "Organization:endpoint"
-* insert Expectation(rest[0].resource[2].searchInclude[1], MAY)
 * rest[0].resource[2].searchInclude[2] = "Organization:partof"
-* insert Expectation(rest[0].resource[2].searchInclude[2], SHALL)
+* insert Expectation(rest[0].resource[2].searchInclude[1], SHALL)
 * rest[0].resource[2].searchRevInclude[0] = "HealthcareService:organization"
 * insert Expectation(rest[0].resource[2].searchRevInclude[0], MAY)
 * rest[0].resource[2].searchRevInclude[1] = "Location:organization"
@@ -310,35 +291,25 @@ Eine in einer Adresse angegebene Stadt
 * rest[0].resource[2].operation[0].documentation = """
 Die Operation `$set-active-flag` wird von der Referenzimplementierung für `Organization` unterstützt.
 """
-* insert Expectation(rest[0].resource[2].operation[0], MAY)
 * rest[0].resource[2].operation[1].name = "duplicate-check"
 * rest[0].resource[2].operation[1].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Organization-t-duplicate-check"
 * rest[0].resource[2].operation[1].documentation = """
 Die Operation `$duplicate-check` wird von der Referenzimplementierung für `Organization` unterstützt.
 """
-* insert Expectation(rest[0].resource[2].operation[1], MAY)
 * rest[0].resource[2].operation[2].name = "validate"
 * rest[0].resource[2].operation[2].definition = "https://orgvz.ref.emiga-rki.de/fhir/OperationDefinition/Multi-it-validate"
 * rest[0].resource[2].operation[2].documentation = """
 Die Operation `$validate` wird von der Referenzimplementierung für `Organization` unterstützt.
 """
-* insert Expectation(rest[0].resource[2].operation[2], MAY)
-
 // =============================================================================
 // Location
 // =============================================================================
 * rest[0].resource[1].type = #Location
-* insert Expectation(rest[0].resource[1], SHALL)
 * rest[0].resource[1].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalFacilityLocation"
-* insert Expectation(rest[0].resource[1].supportedProfile[0], SHALL)
 * rest[0].resource[1].supportedProfile[1] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
-* insert Expectation(rest[0].resource[1].supportedProfile[1], SHALL)
 * rest[0].resource[1].supportedProfile[2] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalRoomLocation"
-* insert Expectation(rest[0].resource[1].supportedProfile[2], SHALL)
 * rest[0].resource[1].supportedProfile[3] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
-* insert Expectation(rest[0].resource[1].supportedProfile[3], SHALL)
 * rest[0].resource[1].supportedProfile[4] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthLocation"
-* insert Expectation(rest[0].resource[1].supportedProfile[4], SHALL)
 * rest[0].resource[1].interaction[0].code = #search-type
 
 * insert Expectation(rest[0].resource[1].interaction[0], SHALL)
@@ -436,7 +407,7 @@ Ein Standort, zu dem dieser Standort gehört
 **Anwendungshinweis:**
 Die Adresse oder ein Teil der Adresse des Standorts
 """
-* insert Expectation(rest[0].resource[1].searchParam[2], MAY)
+* insert Expectation(rest[0].resource[1].searchParam[2], SHALL)
 * rest[0].resource[1].searchParam[3].name = "address-state"
 * rest[0].resource[1].searchParam[3].definition = "http://hl7.org/fhir/SearchParameter/Location-address-state"
 * rest[0].resource[1].searchParam[3].type = #string
@@ -447,7 +418,7 @@ Die Adresse oder ein Teil der Adresse des Standorts
 **Anwendungshinweis:**
 Ein in einer Adresse angegebenes Bundesland bzw. eine angegebene Region
 """
-* insert Expectation(rest[0].resource[1].searchParam[3], MAY)
+* insert Expectation(rest[0].resource[1].searchParam[3], SHALL)
 * rest[0].resource[1].searchParam[4].name = "operational-status"
 * rest[0].resource[1].searchParam[4].definition = "http://hl7.org/fhir/SearchParameter/Location-operational-status"
 * rest[0].resource[1].searchParam[4].type = #token
@@ -552,7 +523,7 @@ Server können unterschiedliche Suchverfahren verwenden, deren Genauigkeit abhä
 
 Erfordert zusätzlich die Angabe des Parameters near-distance
 """
-* insert Expectation(rest[0].resource[1].searchParam[12], SHALL)
+* insert Expectation(rest[0].resource[1].searchParam[12], MAY)
 * rest[0].resource[1].searchParam[13].name = "address-city"
 * rest[0].resource[1].searchParam[13].definition = "http://hl7.org/fhir/SearchParameter/Location-address-city"
 * rest[0].resource[1].searchParam[13].type = #string
@@ -594,15 +565,12 @@ Sucht nach Standorten mit einem bestimmten Status
 * rest[0].resource[1].operation[0].documentation = """
 Die Operation `$validate` wird von der Referenzimplementierung für `Location` unterstützt.
 """
-* insert Expectation(rest[0].resource[1].operation[0], MAY)
 
 // =============================================================================
 // Practitioner
 // =============================================================================
 * rest[0].resource[3].type = #Practitioner
-* insert Expectation(rest[0].resource[3], SHALL)
 * rest[0].resource[3].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
-* insert Expectation(rest[0].resource[3].supportedProfile[0], SHALL)
 * rest[0].resource[3].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[3].interaction[0], SHALL)
 * rest[0].resource[3].interaction[0].documentation = """
@@ -811,15 +779,12 @@ Mehrere Ressourcen:
 * rest[0].resource[3].operation[0].documentation = """
 Die Operation `$validate` wird von der Referenzimplementierung für `Practitioner` unterstützt.
 """
-* insert Expectation(rest[0].resource[3].operation[0], MAY)
 
 // =============================================================================
 // PractitionerRole
 // =============================================================================
 * rest[0].resource[4].type = #PractitionerRole
-* insert Expectation(rest[0].resource[4], SHALL)
 * rest[0].resource[4].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitionerRole"
-* insert Expectation(rest[0].resource[4].supportedProfile[0], SHALL)
 * rest[0].resource[4].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[4].interaction[0], SHALL)
 * rest[0].resource[4].interaction[0].documentation = """
@@ -952,7 +917,7 @@ Die Liste der Gesundheitsdienstleistungen, die diese tätige Person für die Org
 Die Organisation, die die tätige Person vertritt bzw. in deren Auftrag sie handelt
 """
 
-* insert Expectation(rest[0].resource[4].searchParam[5], MAY)
+* insert Expectation(rest[0].resource[4].searchParam[5], SHALL)
 * rest[0].resource[4].searchParam[6].name = "location"
 * rest[0].resource[4].searchParam[6].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-location"
 * rest[0].resource[4].searchParam[6].type = #reference
@@ -975,7 +940,7 @@ Einer der Standorte, an denen die tätige Person Leistungen erbringt
 Logische ID dieses Artefakts
 """
 
-* insert Expectation(rest[0].resource[4].searchParam[7], MAY)
+* insert Expectation(rest[0].resource[4].searchParam[7], SHALL)
 * rest[0].resource[4].searchInclude[0] = "*"
 * insert Expectation(rest[0].resource[4].searchInclude[0], MAY)
 * rest[0].resource[4].searchInclude[2] = "PractitionerRole:location"
@@ -991,15 +956,12 @@ Logische ID dieses Artefakts
 * rest[0].resource[4].operation[0].documentation = """
 Die Operation `$validate` wird von der Referenzimplementierung für `PractitionerRole` unterstützt.
 """
-* insert Expectation(rest[0].resource[4].operation[0], MAY)
 
 // =============================================================================
 // HealthcareService
 // =============================================================================
 * rest[0].resource[0].type = #HealthcareService
-* insert Expectation(rest[0].resource[0], SHALL)
 * rest[0].resource[0].supportedProfile[0] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHealthcareService"
-* insert Expectation(rest[0].resource[0].supportedProfile[0], SHALL)
 * rest[0].resource[0].interaction[0].code = #search-type
 * insert Expectation(rest[0].resource[0].interaction[0], SHALL)
 * rest[0].resource[0].interaction[0].documentation = """
@@ -1167,7 +1129,6 @@ Logische ID dieses Artefakts
 * rest[0].resource[0].operation[0].documentation = """
 Die Operation `$validate` wird von der Referenzimplementierung für `HealthcareService` unterstützt.
 """
-* insert Expectation(rest[0].resource[0].operation[0], MAY)
 
 /*Outcommented until we clarify with Backend Devs
 // =============================================================================
@@ -1318,6 +1279,6 @@ Zeitpunkt, zu dem das Bundle zusammengestellt wurde
 * rest[0].resource[5].operation[0].documentation = """
 Die Operation `$validate` wird von der Referenzimplementierung für `Bundle` unterstützt.
 """
-* insert Expectation(rest[0].resource[5].operation[0], MAY)
+* insert Expectation(rest[0].resource[0].operation[0], SHALL)
 
 */
