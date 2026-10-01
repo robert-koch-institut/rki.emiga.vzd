@@ -1,36 +1,36 @@
-Instance: Organization-maximal
+Instance: OrganizationMinimal
 InstanceOf: EmigaOrganization
 Usage: #example
 
 // ----------------------------------------------------
-// META (profile + security)
+// META (required MustSupport elements)
 // ----------------------------------------------------
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+
 * meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
+
+// (meta.tag slices also MS but we do NOT include them because you explicitly
+// decided earlier that missing ValueSets make them inactive)
 
 // ----------------------------------------------------
 // EXTENSION — organizationPeriod (MS, 0..*)
 // ----------------------------------------------------
 * extension[organizationPeriod].url = $OrganizationPeriod
-* extension[organizationPeriod].valuePeriod.start = "2000-01-01"
-* extension[organizationPeriod].valuePeriod.end = "2030-12-31"
+* extension[organizationPeriod].valuePeriod.start = "2020-01-01"
 
 // ----------------------------------------------------
-// IDENTIFIERS — all slices populated (all MS)
+// IDENTIFIERS — all slices included once (all MS)
 // ----------------------------------------------------
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
-* identifier[EmigaID].value = "999999"
-* identifier[EmigaID].use = #official
+* identifier[EmigaID].value = "001"
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[24681357]"
-* identifier[EmigaFileNumber].use = #official
+* identifier[EmigaFileNumber].value = "[Arztpraxis][1.][2026]-[14681358]"
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "123456789"
-* identifier[IKNR].period.start = "2015-01-01"
-* identifier[IKNR].period.end = "2030-12-31"
+* identifier[IKNR].period.start = "2020-01-01"
 
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "234567890"
@@ -55,51 +55,55 @@ Usage: #example
 // ----------------------------------------------------
 // TYPE — emigaOrganizationType slice (1..1 MS)
 // ----------------------------------------------------
-* type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
+* type[emigaOrganizationType] = $DemisOrgType#physicianOffice "Arztpraxis"
 
 // ----------------------------------------------------
-// NAME — required (1..1 MS)
+// NAME — required 1..1 MS
 // ----------------------------------------------------
-* name = "Bundesministerium für Musterwesen – Hauptsitz"
+* name = "Stadt XYZ - Oberste Bundesbehörde"
 
 // ----------------------------------------------------
-// ALIAS (0..1 MS)
+// ALIAS — 0..1 MS
 // ----------------------------------------------------
-* alias = "BM-MW-HQ"
-
-// ----------------------------------------------------
-// TELECOM — all slices included (all MS)
-// ----------------------------------------------------
-* telecom[Email][0].system = #email
-* telecom[Email][0].value = "kontakt@musterbund.de"
-
-* telecom[Phone][0].system = #phone
-* telecom[Phone][0].value = "+49 30 1234567"
-
-* telecom[Fax][0].system = #fax
-* telecom[Fax][0].value = "+49 30 7654321"
-
-* telecom[Url][0].system = #url
-* telecom[Url][0].value = "https://www.musterbund.de"
+* alias = "SK-XYZ"   // Stadt XYZ abbreviation
 
 // ----------------------------------------------------
-// ADDRESS — full MS structure (0..1 MS)
+// TELECOM — all slices included once (all MS)
 // ----------------------------------------------------
-/* -------- address -------- */
-* address[0].line[0] = "Musterstraße 1"
-* address[0].line[0].extension[Strasse].valueString = "Musterstraße"
-* address[0].line[0].extension[Hausnummer].valueString = "1"
-* address[0].line[0].extension[Adresszusatz].valueString = "Gebäude A"
-* address[0].extension[Stadtteil].valueString = "Zentrum"
-* address[0].line[1] = "Zentrum"
-* address[0].city = "Musterstadt"
-* address[0].state = "DE-BB"
-* address[0].postalCode = "12345"
+* telecom[Email].system = #email
+* telecom[Email].value = "info@muster.org"
+
+* telecom[Phone].system = #phone
+* telecom[Phone].value = "0123 4567890"
+
+* telecom[Url].system = #url
+* telecom[Url].value = "https://www.muster.org"
+
+* telecom[Fax].system = #fax
+* telecom[Fax].value = "0123 4567899"
+
+// ----------------------------------------------------
+// ADDRESS — 0..1 MS + all MS address extensions
+// ----------------------------------------------------
+* address.type = #postal
+* address.city = "Musterstadt"
+* address.state = "DE-BE"
+* address.postalCode = "10115"
+
+// Required MS extensions
+* address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
+* address.extension[Stadtteil].valueString = "Zentrum"
+* address.line[0] = "Musterstraße 12"
+* address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
+* address.line[0].extension[Strasse].valueString = "Musterstraße"
+* address.line[0].extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
+* address.line[0].extension[Hausnummer].valueString = "12"
+* address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
+* address.line[0].extension[Adresszusatz].valueString = "EG"
+* address.line[1] = "Zentrum"
 
 
 // ----------------------------------------------------
-// PART OF — 0..1 MS
+// PART OF — 0..1 MS (optional in minimal, but we include it here to show how to reference the minimal Organization as parent)
 // ----------------------------------------------------
-* partOf = Reference(Organization/Organization-minimal)
-* partOf.display = "Übergeordnete Organisation"
-
+// * partOf = Reference(Organization/Organization-minimal)

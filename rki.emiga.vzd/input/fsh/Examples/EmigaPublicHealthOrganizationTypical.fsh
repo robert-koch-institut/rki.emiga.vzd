@@ -62,4 +62,4 @@ Description: "Typische Instanz einer ÖGD Organisation (EMIGA v1.1.0)"
 * address[0].postalCode = "12345"
 
 /* -------- hierarchy -------- */
-* partOf = Reference(Organization/Organization-minimal)
+* partOf = Reference(Organization/OrganizationMinimal)

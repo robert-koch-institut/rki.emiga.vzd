@@ -3,7 +3,6 @@ Parent: Location
 Id: EmigaLocation
 Title: "EMIGA Bereich / Standort"
 Description: "Eine 'EmigaLocation' ist ein physischer Ort, der besucht werden kann. Einem physischen Ort können grundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse zugeordnet werden."
-
 * ^version = "1.5.1"
 * ^date = "2026-08-18"
 

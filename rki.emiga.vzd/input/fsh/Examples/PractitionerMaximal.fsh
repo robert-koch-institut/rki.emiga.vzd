@@ -1,4 +1,4 @@
-Instance: Practitioner-maximal
+Instance: PractitionerMaximal
 InstanceOf: EmigaPractitioner
 Usage: #example
 

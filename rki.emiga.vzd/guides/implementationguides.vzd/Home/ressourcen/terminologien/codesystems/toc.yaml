@@ -1,14 +1,19 @@
 - name: Index
   filename: Index.page.md
-- name: Dienstleister Dienstzeiten
-  filename: guide-dienstleister-dienstzeiten.guide.md
-- name: Dienstleister Fachspezialisierung
-  filename: guide-dienstleister-fachspezialisierung.guide.md
-- name: Dienstleister Kategorien
+- name: Dienstleistungskategorie
   filename: guide-dienstleister-kategorien.guide.md
+- name: Dienstzeiten
+  filename: guide-dienstleister-dienstzeiten.guide.md
+- name: Fachspezialisierung
+  filename: guide-dienstleister-fachspezialisierung.guide.md
 - name: InEK Einrichtungstyp
   filename: guide-inek-einrichtungstyp.guide.md
-- name: Rolle in der Gesundheitsversorgung
+- name: Personenrolle 
   filename: guide-practitioner-role.guide.md
-- name: Zuständigkeit
+- name: Art der Zuständigkeit OEGD
   filename: guide-zustaendigkeit.guide.md
+
+
+
+
+

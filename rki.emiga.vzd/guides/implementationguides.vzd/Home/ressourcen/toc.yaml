@@ -1,10 +1,12 @@
 - name: Index
   filename: Index.page.md
-- name: Dependencies
-  filename: guide-dependencies.guide.md
+- name: Capability Statement
+  filename: guide-capability-statement.guide.md
 - name: StructureDefinitions
   filename: structuredefinitions
 - name: Terminologien
   filename: terminologien
 - name: Extensions
   filename: extensions
+- name: Dependencies
+  filename: guide-dependencies.guide.md

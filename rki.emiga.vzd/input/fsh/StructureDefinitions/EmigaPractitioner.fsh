@@ -2,7 +2,7 @@ Profile: EmigaPractitioner
 Parent: Practitioner
 Id: EmigaPractitioner
 Title: "Practitioner"
-Description: "'EmigaPractitioner' sind Personen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen bzw. Erfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben. Dies sind somit explizit nicht nur Ärztinnen und Ärzte, sondern auch andere Personengruppen, wie z.B. MitarbeiterInnen im Gesundheitsamt oder LeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen. PatientenInnen, Kontaktpersonen, etc. fallen jedoch explizit nicht unter diese Kategorie."
+Description: "'EmigaPractitioner' bildet Personen ab, die Leistungen erbringen oder fachliche Aufgaben wahrnehmen. Hierzu zählen beispielsweise Ärztinnen und Ärzte, Mitarbeitende von Gesundheitsämtern sowie Leitungs- oder Ansprechpersonen von Gemeinschaftseinrichtungen. Patientinnen und Patienten sowie Kontaktpersonen werden nicht über dieses Profil abgebildet."
 
 * ^version = "1.1.1"
 * ^date = "2026-08-18"
@@ -13,6 +13,7 @@ Description: "'EmigaPractitioner' sind Personen, die im weiteren Sinne einen Bez
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPractitioner"
 
 // 'Additional content defined by implementations' - 0..* - Extension

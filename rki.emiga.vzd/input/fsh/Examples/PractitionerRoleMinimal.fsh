@@ -1,4 +1,4 @@
-Instance: PractitionerRole-minimal
+Instance: PractitionerRoleMinimal
 InstanceOf: EmigaPractitionerRole
 Usage: #example
 
@@ -12,7 +12,7 @@ Usage: #example
 // 1..1 MS elements
 // ---------------------------
 * active = true
-* practitioner = Reference(Practitioner/Practitioner-minimal)
+* practitioner = Reference(Practitioner/PractitionerMinimal)
 * organization = Reference(Organization/EmigaPublicHealthOrganizationMinimal)
 
 // ---------------------------
@@ -24,7 +24,7 @@ Usage: #example
 // ---------------------------
 // 0..1 MS element
 // ---------------------------
-* location = Reference(Location/Location-minimal)
+* location = Reference(Location/LocationMinimal)
 
 // ---------------------------
 // 0..* MS element (include once)

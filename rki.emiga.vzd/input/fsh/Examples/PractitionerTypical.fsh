@@ -1,4 +1,4 @@
-Instance: Practitioner-typical
+Instance: PractitionerTypical
 InstanceOf: EmigaPractitioner
 Usage: #example
 

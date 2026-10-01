@@ -1,4 +1,4 @@
-Instance: Location-typical
+Instance: LocationTypical
 InstanceOf: EmigaLocation
 Usage: #example
 

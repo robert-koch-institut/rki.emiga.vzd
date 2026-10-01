@@ -1,36 +1,43 @@
-Instance: Organization-minimal
-InstanceOf: EmigaOrganization
+Instance: LocationMaximal
+InstanceOf: EmigaLocation
 Usage: #example
 
 // ----------------------------------------------------
-// META (required MustSupport elements)
+// META (EMIGA profile + security + tags)
 // ----------------------------------------------------
-* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
+* meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaLocation"
 
 * meta.security[visibility] = $ResourceVisibilityType#inPublicHealthService
 * meta.security[responsibility] = $ResourceResponsibility#1.
 
-// (meta.tag slices also MS but we do NOT include them because you explicitly
-// decided earlier that missing ValueSets make them inactive)
+// meta.tag slices (all MS)
+// * meta.tag[relevance].system = $RelevanceCS
+// * meta.tag[relevance].code = #primary
+// * meta.tag[relevance].display = "Primärer Datensatz"
+
+// * meta.tag[orgvBundleId].system = $BundleIdCS
+// * meta.tag[orgvBundleId].code = #orgv-bundle-001
+// * meta.tag[orgvBundleId].display = "OrgV Bundle 001"
+
+// * meta.tag[orgvBundleVersion].system = $BundleVersionCS
+// * meta.tag[orgvBundleVersion].code = #1.0.0
+// * meta.tag[orgvBundleVersion].display = "Bundle Version 1.0.0"
 
 // ----------------------------------------------------
-// EXTENSION — organizationPeriod (MS, 0..*)
-// ----------------------------------------------------
-* extension[organizationPeriod].url = $OrganizationPeriod
-* extension[organizationPeriod].valuePeriod.start = "2020-01-01"
-
-// ----------------------------------------------------
-// IDENTIFIERS — all slices included once (all MS)
+// IDENTIFIERS — all slices populated
 // ----------------------------------------------------
 * identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
-* identifier[EmigaID].value = "001"
+* identifier[EmigaID].value = "ORGVID-123456"
+* identifier[EmigaID].use = #official
 
 * identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
-* identifier[EmigaFileNumber].value = "[Krankenhaus][1.][2026]-[14681358]"
+* identifier[EmigaFileNumber].value = "[Standort][1.][2026]-[98765432]"
+* identifier[EmigaFileNumber].use = #official
 
 * identifier[IKNR].system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[IKNR].value = "123456789"
 * identifier[IKNR].period.start = "2020-01-01"
+* identifier[IKNR].period.end = "2030-12-31"
 
 * identifier[BSNR].system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"
 * identifier[BSNR].value = "234567890"
@@ -48,62 +55,56 @@ Usage: #example
 * identifier[telematikID].value = "1-234567890"
 
 // ----------------------------------------------------
-// ACTIVE (1..1 MS)
+// CORE ATTRIBUTES
 // ----------------------------------------------------
-* active = true
+* status = #active
+
+* name = "Stadt XYZ – FB 9 / Standort Musterstraße"
+* alias = "FB9-MSTR"
+* description = "Beispielstandort für EMIGA maximal"
+
+* mode = #instance
 
 // ----------------------------------------------------
-// TYPE — emigaOrganizationType slice (1..1 MS)
+// ADDRESS (full, with all EMIGA MS extensions)
 // ----------------------------------------------------
-* type[emigaOrganizationType] = $DemisOrgType#hospital "Krankenhaus"
-
-// ----------------------------------------------------
-// NAME — required 1..1 MS
-// ----------------------------------------------------
-* name = "Stadt XYZ - Oberste Bundesbehörde"
-
-// ----------------------------------------------------
-// ALIAS — 0..1 MS
-// ----------------------------------------------------
-* alias = "SK-XYZ"   // Stadt XYZ abbreviation
-
-// ----------------------------------------------------
-// TELECOM — all slices included once (all MS)
-// ----------------------------------------------------
-* telecom[Email].system = #email
-* telecom[Email].value = "info@muster.org"
-
-* telecom[Phone].system = #phone
-* telecom[Phone].value = "0123 4567890"
-
-* telecom[Url].system = #url
-* telecom[Url].value = "https://www.muster.org"
-
-* telecom[Fax].system = #fax
-* telecom[Fax].value = "0123 4567899"
-
-// ----------------------------------------------------
-// ADDRESS — 0..1 MS + all MS address extensions
-// ----------------------------------------------------
-* address.type = #postal
+* address.use = #work
+* address.type = #physical
+* address.text = "Musterstraße 12, 10115 Musterstadt"
 * address.city = "Musterstadt"
 * address.state = "DE-BE"
 * address.postalCode = "10115"
+* address.country = "DE"
 
-// Required MS extensions
+// Stadtteil extension
 * address.extension[Stadtteil].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
-* address.extension[Stadtteil].valueString = "Zentrum"
+* address.extension[Stadtteil].valueString = "Musterbezirk"
+
+// Line + line extensions
 * address.line[0] = "Musterstraße 12"
 * address.line[0].extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
 * address.line[0].extension[Strasse].valueString = "Musterstraße"
+
 * address.line[0].extension[Hausnummer].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
 * address.line[0].extension[Hausnummer].valueString = "12"
+
 * address.line[0].extension[Adresszusatz].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"
-* address.line[0].extension[Adresszusatz].valueString = "EG"
-* address.line[1] = "Zentrum"
+* address.line[0].extension[Adresszusatz].valueString = "Haus A, EG"
+* address.line[1] = "Musterbezirk"
 
 
 // ----------------------------------------------------
-// PART OF — 0..1 MS (optional in minimal, but we include it here to show how to reference the minimal Organization as parent)
+// POSITION (0..1 MS) — longitude, latitude, altitude
 // ----------------------------------------------------
-// * partOf = Reference(Organization/Organization-minimal)
+* position.longitude = 13.4050
+* position.latitude = 52.5200
+* position.altitude = 35.2   // Not included in minimal or typical (completely optional)
+
+// ----------------------------------------------------
+// MANAGING ORGANIZATION & PART-OF
+// ----------------------------------------------------
+* managingOrganization = Reference(Organization/Organization-maximal)
+* managingOrganization.display = "Gesundheitsamt Stadt XYZ"
+
+* partOf = Reference(Location/Location-minimal)
+* partOf.display = "Hauptstandort Stadt XYZ"

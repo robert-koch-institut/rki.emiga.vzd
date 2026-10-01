@@ -60,6 +60,7 @@ Alias: $Fachabteilungsschluessel-erweitert = http://fhir.de/ValueSet/dkgev/Facha
 
 
 // HL7
+Alias: $capExpectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 Alias: $OrganizationPeriod = http://hl7.org/fhir/StructureDefinition/organization-period
 Alias: $HL7DesignationUse = http://terminology.hl7.org/CodeSystem/designation-usage
 Alias: $locationPhysicalType = http://terminology.hl7.org/CodeSystem/location-physical-type
