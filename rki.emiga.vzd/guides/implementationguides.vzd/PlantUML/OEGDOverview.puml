@@ -69,6 +69,6 @@ EmigaPublicHealthOrganization -up-> EmigaPublicHealthOrganization : Teil von\n(p
 
 EmigaPublicHealthLocation -left-> EmigaPublicHealthOrganization : Verwaltende Einrichtung\n(managingOrganization)
 
-EmigaPublicHealthOrganization -down-> IdentifierCodeSiteId : besitzt
+EmigaPublicHealthOrganization -down-> IdentifierCodeSiteId : Besitzt
 
 @enduml

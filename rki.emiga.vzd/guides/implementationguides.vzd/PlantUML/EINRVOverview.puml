@@ -53,7 +53,7 @@ PractitionerRole --> Practitioner : Practitioner, der Leistungen\n der Einrichtu
 
 PractitionerRole -right-> HealthcareService : Dienstleistungen, die der Practitioner\n für die Einrichtung\n bzw. deren Standorte\n erbringt\n(healthcareservice)
 
-HealthcareService --> Organization : bereitgestellt von\n(providedBy)
+HealthcareService --> Organization : Bereitgestellt von\n(providedBy)
 
 HealthcareService --> Location : Referenzierung der Standorte,\n an denen die Dienstleistung angeboten wird\n(location)
 
