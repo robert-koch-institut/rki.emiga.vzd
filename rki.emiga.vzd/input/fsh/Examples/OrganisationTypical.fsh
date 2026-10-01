@@ -1,4 +1,4 @@
-Instance: Organization-typical
+Instance: OrganizationTypical
 InstanceOf: EmigaOrganization
 Usage: #example
 

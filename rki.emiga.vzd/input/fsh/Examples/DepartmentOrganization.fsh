@@ -84,6 +84,6 @@ Usage: #example
 
 // PART OF — 0..1 MS
 
-* partOf = Reference(Organization/Organization-minimal)
+* partOf = Reference(Organization/OrganizationMinimal)
 * partOf.display = "Übergeordnete Organisation"
 

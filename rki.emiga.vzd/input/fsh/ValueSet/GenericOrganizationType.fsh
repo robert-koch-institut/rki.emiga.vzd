@@ -1,9 +1,9 @@
 ValueSet: GenericOrganizationType
 Id: GenericOrganizationType
-Title: "Organisationstyp"
+Title: "Generische Organisationstyp"
 Description: "GenericOrganizationType ist eine Werteliste mit Konzepten, die die Art bzw. den Typ einer generischen Organisation aus Sicht des ÖGD charakterisieren."
-* ^version = "1.1.2"
-* ^date = "2026-08-18"
+* ^version = "1.1.3"
+* ^date = "2026-09-29"
 
 * insert MetadataTerminology
 

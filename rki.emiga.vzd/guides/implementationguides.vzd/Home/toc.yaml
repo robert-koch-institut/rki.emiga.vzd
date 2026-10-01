@@ -3,9 +3,7 @@
 - name: Über diesen Leitfaden
   filename: guide-ueber-diesen-leitfaden.guide.md
 - name: Grundlagen und Überblick
-  filename: guide-grundlagen-und-ueberblick.guide.md
-- name: Anwendungsfälle
-  filename: anwendungsfaelle  
+  filename: grundlagenundueberblick
 - name: Ergänzende Hinweise
   filename: guide-ergaenzende-hinweise.guide.md
 - name: Änderungshistorie
@@ -14,7 +12,5 @@
   filename: guide-weiterfuehrende-informationen.guide.md
 - name: Lizenzen
   filename: guide-lizenzen.guide.md  
-- name: Implementierungshinweise
-  filename: implementierungshinweise
 - name: Ressourcen
   filename: ressourcen

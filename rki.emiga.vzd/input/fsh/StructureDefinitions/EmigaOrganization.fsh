@@ -2,7 +2,7 @@ Profile: EmigaOrganization
 Parent: Organization
 Id: EmigaOrganization
 Title: "EMIGA Organization"
-Description: "Unter der 'EmigaOrganization' werden alle Organisationen zusammengefasst, die nicht EMIGA direkt nutzende ÖDG-Organisationen sind, die eine CodeSite-ID besitzen. Damit werden unter 'EmigaOrganization' sowohl Behörden, Transport-Unternehmen, Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Organisation subsummiert. Die jeweiligen Organisation werden durch ihren Typen und/oder ihren Identifier eindeutig charakterisiert. EmigaOrganisationen müssen nicht zwingend eine Straßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift."
+Description: "'EmigaOrganization' bildet Einrichtungen ab, die keine EMIGA direkt nutzenden ÖGD-Stellen sind und über keine CodeSite-ID verfügen. Hierzu zählen beispielsweise Behörden, Transportunternehmen, Labore, Arztpraxen sowie weitere Organisationen. Die Einrichtungen werden durch ihren Einrichtungstyp und/oder ihre Identifikatoren charakterisiert."
 
 * ^version = "1.5.0"
 * ^date = "2026-09-28"
@@ -12,9 +12,8 @@ Description: "Unter der 'EmigaOrganization' werden alle Organisationen zusammeng
 * insert ProfileDomainResourceCommon
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
-//* insert ProfileMetaProfileTags
-
 * insert ProfileMetaProfileTags
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
