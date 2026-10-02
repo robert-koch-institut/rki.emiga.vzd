@@ -51,12 +51,12 @@ Description: "Typische Instanz eines Krankenhaus-Standorts (EMIGA)"
 * address.line[0] = "Am Krankenhaus 2"
 * address.line[0].extension[Strasse].valueString = "Am Krankenhaus"
 * address.line[0].extension[Hausnummer].valueString = "2"
-* address.extension[municipalityKey].valueCoding.system =
-  "http://fhir.de/sid/destatis/ags"
-* address.extension[municipalityKey].valueCoding.code = #05570052
 * address.extension[Stadtteil].valueString = "Innenstadt"
 * address.line[1] = "Innenstadt"
 * address.city = "Warendorf"
+* address.city.extension[municipalityKey].url = "http://fhir.de/StructureDefinition/destatis/ags"
+* address.city.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
+* address.city.extension[municipalityKey].valueCoding.code = #05570052
 * address.state = "DE-NW"
 * address.postalCode = "48231"
 /* -------- physicalType -------- */

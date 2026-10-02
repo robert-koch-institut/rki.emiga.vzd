@@ -85,9 +85,9 @@ Description: "Maximale Instanz eines Krankenhaus-Standorts (EMIGA)"
 * address.line[0].extension[Adresszusatz].valueString = "Gebäude A"
 * address.line[1] = "Postfach 100"
 * address.line[1].extension[Postfach].valueString = "Postfach 100"
-* address.extension[municipalityKey].valueCoding.system =
+* address.city.extension[municipalityKey].valueCoding.system =
   "http://fhir.de/sid/destatis/ags"
-* address.extension[municipalityKey].valueCoding.code = #05570052
+* address.city.extension[municipalityKey].valueCoding.code = #05570052
 * address.extension[Stadtteil].valueString = "Innenstadt"
 * address.line[2] = "Innenstadt"
 * address.city = "Warendorf"
