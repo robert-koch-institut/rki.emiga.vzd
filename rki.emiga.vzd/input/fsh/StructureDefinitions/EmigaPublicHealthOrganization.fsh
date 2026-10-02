@@ -2,17 +2,18 @@ Profile: EmigaPublicHealthOrganization
 Parent: Organization
 Id: EmigaPublicHealthOrganization
 Title: "ÖGD Organisation"
-Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengefasst, die EMIGA direkt nutzende ÖDG-Organisationen sind, die eine Code-Side-ID besitzen."
+Description: "Eine 'EmigaPublicHealthOrganization' ist eine ÖGD-Stelle, die EMIGA direkt nutzt und über eine CodeSite-ID verfügt."
 
-* ^version = "1.4.0"
-* ^date = "2026-07-08"
+* ^version = "1.5.0"
+* ^date = "2026-09-28"
+
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
-* insert MetaTagEinrVBundle
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaPublicHealthOrganization"
 
 // 'Additional content defined by implementations' - 0..* - Extension
@@ -58,7 +59,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier[EmigaID].use 0..1 MS
 * identifier[EmigaID].use = #official (exactly)
 * identifier[EmigaID].system 1..1 MS
-* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value 1..1 MS
 * identifier[EmigaID].value ^short = "Wert des Identifiers"
 * identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
@@ -67,7 +68,7 @@ Description: "Unter der ÖGD Organisation werden alle Organisationen zusammengef
 * identifier[EmigaFileNumber].use 0..1 MS
 * identifier[EmigaFileNumber].use = #official (exactly)
 * identifier[EmigaFileNumber].system 1..1 MS
-* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
 * identifier[EmigaFileNumber].value 1..1 MS
 * identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
 * identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"

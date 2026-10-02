@@ -42,7 +42,9 @@ select
   /* Tabelle formatieren */
   #rendered-codesystem table {
       border-collapse: collapse;
-      width: auto;  /* Passt die Breite an den Inhalt an */
+      width: 100%;
+      max-width: 100%;
+      table-layout: fixed;
       border: 1px solid #d3d3d3;  /* Dünne, graue Umrandung der gesamten Tabelle */
   }
 
@@ -54,6 +56,7 @@ select
       border: 1px solid #d3d3d3;  /* Dünne Linien zwischen den Zellen */
       font-family: Arial, sans-serif;
       font-size: 14px;
+    overflow-wrap: anywhere;
   }
 
   /* Kopfzeile formatieren */
@@ -67,6 +70,7 @@ select
   #rendered-codesystem td:nth-child(4), 
   #rendered-codesystem th:nth-child(4) {
       display: none;
+    }
 </style>
 <br>&nbsp;<br>
 

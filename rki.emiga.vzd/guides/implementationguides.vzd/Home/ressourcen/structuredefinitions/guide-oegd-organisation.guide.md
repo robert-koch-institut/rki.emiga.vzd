@@ -70,32 +70,64 @@ for
 
 ## Anmerkungen zu Must-Support Elementen
 <fql>
-from
-	StructureDefinition
-where 
+using 'rki.emiga.vzd@2.0.0-alpha.24'
+
+from StructureDefinition
+
+where
     url = %canonical
-for differential.element
+
+for snapshot.element
+
 where mustSupport = true
+
 select
-	Feldname: id, Kurzbeschreibung: short, Beschreibung: definition, Hinweise: comment
+    Feldname: path,
+	Slice: sliceName,
+    Kurzbeschreibung: short, 
+    Hinweise: comment
 </fql>
 <br>&nbsp;<br>
 
+## FHIR REST-Schnittstelle
+
+<tabs>
+
+  <tab title="Interaktionen" active="true">
+
+    {{render:fql-capability-interactions.fql}}
+
+  </tab>
+
+  <tab title="Suchparameter">
+
+    {{render:fql-capability-searchparameters.fql}}
+
+  </tab>
+
+  <tab title="Operationen">
+
+    {{render:fql-capability-operations.fql}}
+
+  </tab>
+
+</tabs>
+
 ## Beispiel
-Im Folgenden wird ein Beispiel für eine fiktiven ÖGD Organisation dargestellt.
+Im Folgenden wird ein Beispiel für eine fiktiven ÖGD Einrichtung dargestellt.
 
 <tabs>
     <tab title="Übersicht">      
-        {{render:Organization-44588980.json}}
+        {{render:Organization-EmigaPublicHealthOrganizationMaximal.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Organization-44588980.json}}
+        {{xml:Organization-EmigaPublicHealthOrganizationMaximal.json}}
     </tab>
     <tab title="JSON">
-        {{json:Organization-44588980.json}}
+        {{json:Organization-EmigaPublicHealthOrganizationMaximal.json}}
     </tab>
     <tab title="Link">
-        {{link:Organization-44588980.json}}
+        {{link:Organization-EmigaPublicHealthOrganizationMaximal.json}}
     </tab>
 </tabs>
 

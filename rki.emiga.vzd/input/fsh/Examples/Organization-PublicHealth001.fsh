@@ -34,4 +34,3 @@ Usage: #example
 * address.state = "DE-BB"
 * address.postalCode = "13353"
 * address.country = "DE"
-

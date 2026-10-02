@@ -1,7 +1,7 @@
-# Implementierungsleitfaden für EMIGA Organizationsverzeichnis
+# Implementierungsleitfaden für das EMIGA Einrichtungsverzeichnis
 
 
-<a href="https://simplifier.net/rki.emiga.vzd" class="btn btn-default">Zum EMIGA VZD Projekt auf Simplifier</a>
+<a href="https://simplifier.net/rki.emiga.vzd" class="btn btn-default">Zum EMIGA Einrichtungsverzeichnis-Projekt auf Simplifier</a>
 <a href="https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-3/FG32/EMIGA/emiga.html?templateQueryString=emiga" class="btn btn-default">Zur EMIGA-Webseite</a>
 
 
@@ -10,7 +10,7 @@
 
 ## Inhaltsverzeichnis
 
-{{index:children}}
+{{index:root}}
 
 &nbsp;
 
@@ -41,7 +41,7 @@ Sie erreichen uns über das EMIGA-Kontaktformular.
 &nbsp;
 
 
-<a href="https://www.rki.de/SharedDocs/Kontaktformulare/E/EMIGA/Integrator.html" class="btn btn-default">zu EMIGA-Kontaktformular</a>
+<a href="https://www.rki.de/SharedDocs/Kontaktformulare/DE/E/EMIGA/Integrator.html" class="btn btn-default">zu EMIGA-Kontaktformular</a>
 
 
 
@@ -59,7 +59,7 @@ Der Inhalt dieses Dokuments ist öffentlich. Zu beachten ist, dass Teile dieses 
 
 ## Copyright
 
-Copyright (C) 2024 Robert Koch-Institut
+Copyright (C) 2026 Robert Koch-Institut
 
 Der Inhalt dieser Spezifikation ist öffentlich. Die Nachnutzungs- bzw. Veröffentlichungsansprüche sind nicht beschränkt.
 

@@ -1,0 +1,66 @@
+@startuml
+title Resourcen-Überblick der generischen Einrichtungen
+
+top to bottom direction
+
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultTextAlignment left
+skinparam ArrowFontSize 11
+
+skinparam nodesep 140
+skinparam ranksep 100
+
+
+rectangle "**EmigaDepartmentOrganization**\nUnter einer Fachabteilung versteht man einen organisatorischen Teil\neiner Abteilung (nicht der physische Ort)." as EmigaDepartmentOrganization
+
+rectangle "**EmigaHealthcareService**\nBeschreibung einer Dienstleistung, die im weitesten Sinne mit dem\nGesundheitswesen assoziiert ist, z. B. Tuberkulosestelle,\nLebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle." as EmigaHealthcareService
+
+rectangle "**EmigaLocation**\nEin 'physischer' Ort, der besucht werden kann. Einem physischen Ort können\ngrundsätzlich Geo-Koordinaten und zumeist auch eine Straßenadresse\nzugeordnet werden." as EmigaLocation
+
+rectangle "**EmigaOrganization**\nUnter der EMIGA Organization werden alle Einrichtungen zusammengefasst, die\nNICHT EMIGA direkt nutzende ÖGD-Einrichtungen sind, die eine CodeSite-ID besitzen.\nDamit werden unter EMIGA Einrichtungen sowohl Behörden, Transport-Unternehmen,\nwie Krankenhäuser, Labore oder Arztpraxen aber auch jede andere Einrichtung subsummiert.\nDie jeweiligen Einrichtungen werden durch ihren Typ und/oder ihren Identifier\neindeutig charakterisiert. EmigaEinrichtungen müssen nicht zwingend eine\nStraßenanschrift haben, verfügen häufig jedoch zumindest über eine Postanschrift." as EmigaOrganization
+
+rectangle "**EmigaPractitioner**\nPersonen, die im weiteren Sinne einen Bezug zur Erbringung von Leistungen/\nErfüllung von Aufgaben innerhalb der Gesundheitsversorgung (hier: ÖGD) haben.\nDies sind somit explizit nicht nur Ärztinnen und Ärzte, sondern auch andere\nPersonengruppen, wie z. B. MitarbeiterInnen im Gesundheitsamt,\nLeiterInnen/AnsprechpartnerInnen von Gemeinschaftseinrichtungen.\nPatienten, Kontaktpersonen etc. fallen jedoch explizit NICHT unter diese Kategorie." as EmigaPractitioner
+
+rectangle "**EmigaPractitionerRole**\nDefiniert einen bestimmten Satz von Attributen, die einem Practitioner zugeordnet\nwerden. Dazu gehören beispielsweise die Zuordnung zu einer bestimmten Einrichtung,\naber auch die Rolle, die wahrgenommen wird." as EmigaPractitionerRole
+
+
+' --------------------------------------------------
+' Layout-Steuerung
+' --------------------------------------------------
+
+' obere Reihe
+EmigaPractitioner -[hidden]right- EmigaPractitionerRole
+
+' mittlere Reihe
+EmigaDepartmentOrganization -[hidden]right- EmigaOrganization
+EmigaOrganization -[hidden]right- EmigaHealthcareService
+
+' untere Reihe
+EmigaOrganization -[hidden]down- EmigaLocation
+
+' vertikale Ausrichtung
+EmigaPractitionerRole -[hidden]down- EmigaOrganization
+
+
+' --------------------------------------------------
+' Beziehungen
+' --------------------------------------------------
+
+EmigaPractitionerRole -down-> EmigaOrganization : Einrichtung, in der die Rolle\nausgeübt werden kann
+
+EmigaPractitionerRole -left-> EmigaPractitioner : Practitioner, der die\n für die Einrichtung\ndefinierten Leistungen\n erbringen kann
+
+EmigaPractitionerRole -right-> EmigaHealthcareService : Dienstleistungen, die der Practitioner\nfür die Einrichtung bzw. deren Standorte erbringt
+
+EmigaOrganization -left-> EmigaOrganization : Teil von\n(partOf)
+
+EmigaLocation -up-> EmigaOrganization : Verwaltende Einrichtung\n(managingOrganization)
+
+EmigaHealthcareService -left-> EmigaOrganization : Bereitgestellt von\n(providedBy)
+
+EmigaHealthcareService -down-> EmigaLocation : Referenzierung der Standorte,\nan denen die Dienstleistung angeboten wird\n(location)
+
+EmigaDepartmentOrganization -up-> EmigaOrganization : Verwaltende Einrichtung\n(managingOrganization)
+
+@enduml

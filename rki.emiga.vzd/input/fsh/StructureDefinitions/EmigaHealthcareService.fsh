@@ -2,10 +2,10 @@ Profile: EmigaHealthcareService
 Parent: HealthcareService
 Id: EmigaHealthcareService
 Title: "Dienstleistung"
-Description: "Beschreibung einer Dienstleistung, die im weitesten Sinne mit dem Gesundheitswesen assoziiert ist, z.B. Tuberkulosestelle, Lebensmittelpersonal-Beratungsstelle, AIDS-Beratungsstelle"
+Description: "Ein 'EmigaHealthcareService' bildet eine Dienstleistung ab, beispielsweise eine Beratungsstelle für Lebensmittelpersonal oder eine Tuberkulosestelle."
 
-* ^version = "1.1.1"
-* ^date = "2026-07-08"
+* ^version = "1.1.2"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon

@@ -1,17 +1,21 @@
 @startuml
 skinparam linetype ortho
  
-title EmigaPractitioner (Profile of Practitioner) - Class Diagram
+title EmigaPractitioner (Profile of Practitioner)
  
 ' Main Class
 class EmigaPractitioner{
--- Personal Information --
+-- Practitioner Information --
 <b>+</b> active: boolean [1..1]
-<b>+</b> name.family: string [1..1]
+<b>+</b> name: HumanName [1..1]
+<b>+</b> name.family: string [1..*]
+<b>+</b> name.family.extension:namenszusatz: string [0..1]
+<b>+</b> name.family.extension:nachname: string [0..1]
+<b>+</b> name.family.extension:vorsatzwort: string [0..1]
 <b>+</b> name.given: string [1..*]
 <b>+</b> name.prefix: string [0..*]
 -- Meta --
-<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [0..*]
+<b>+</b> meta.profile:emigaprofile: canonical(StructureDefinition) [1..1]
 <b>+</b> meta.security:responsibility: Coding [0..1]
 <b>+</b> meta.security:visibility: Coding [0..1]
 <b>+</b> meta.tag:einrvBundleId: Coding [0..1]

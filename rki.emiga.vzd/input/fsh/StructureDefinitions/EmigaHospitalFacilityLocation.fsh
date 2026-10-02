@@ -2,10 +2,10 @@ Profile: EmigaHospitalFacilityLocation
 Parent: Location
 Id: EmigaHospitalFacilityLocation
 Title: "Krankenhaus - Einrichtungsstandort"
-Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK Standortverzeichnis oder Stationen eines Krankenhauses ab"
-//
-* ^version = "0.4.0"
-* ^date = "2026-07-08"
+Description: "Eine 'EmigaHospitalFacilityLocation' bildet Einrichtungen nach dem InEK Standortverzeichnis oder Stationen eines Krankenhauses ab."
+
+* ^version = "0.5.0"
+* ^date = "2026-09-28"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -59,7 +59,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * identifier[EmigaID].use 0..1 MS
 * identifier[EmigaID].use = #official (exactly)
 * identifier[EmigaID].system 1..1 MS
-* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value 1..1 MS
 * identifier[EmigaID].value ^short = "Wert des Identifiers"
 * identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
@@ -68,7 +68,7 @@ Description: "Krankenhaus - Einrichtungsstandort bildet Einrichtungen nach InEK 
 * identifier[EmigaFileNumber].use 0..1 MS
 * identifier[EmigaFileNumber].use = #official (exactly)
 * identifier[EmigaFileNumber].system 1..1 MS
-* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
 * identifier[EmigaFileNumber].value 1..1 MS
 * identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
 * identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"

@@ -1,0 +1,119 @@
+# {{page-title}}
+
+Dieser Anwendungsfall beschreibt die Abbildung **generischer Einrichtungen** im Einrichtungsverzeichnis (EINRV).
+Von generischen Einrichtungen abzugrenzen ist das Profil `EmigaPublicHealthOrganization`, das ÖGD-Einrichtungen abbildet, die EMIGA direkt nutzen.
+
+## Überblick
+Unter Generische Einrichtungen werden alle Einrichtungen zusammengefasst, die EMIGA nicht direkt nutzen und daher über keine CodeSite-ID verfügen. Hierzu zählen beispielsweise Behörden, Transportunternehmen, Labore und Arztpraxen sowie weitere Arten von Einrichtungen.
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/GenericOrganizationOverview.svg}}
+
+Generische Einrichtungen werden über das Profil `EmigaOrganization` abgebildet.
+Für eine generische Einrichtung ist die Angabe einer Straßenanschrift optional. In der Regel verfügt sie jedoch mindestens über eine Postanschrift oder elektronische Kontaktdaten. Darüber hinaus können der Einrichtung physische Standorte, Gesundheitsleistungen sowie fachlich zugeordnete Personen zugeordnet werden.
+
+
+## Fachlicher Ablauf
+
+Eine generische Einrichtung kann manuell angelegt, aus einem zentralen Verzeichnis übernommen oder im Rahmen einer DEMIS-Meldung erzeugt beziehungsweise eingelesen werden. Nach der Anlage werden die relevanten Informationen zu Stammdaten, Einrichtungstyp, Identifikatoren und Kontaktdaten sowie gegebenenfalls zu den zugehörigen Standorten ergänzt.
+Im Rahmen der EMIGA-Fachprozesse können generische Einrichtungen mit Meldungen, Fällen, Kontakten, Kontaktevents, Ausbrüchen und Infektionsereignissen verknüpft werden.
+
+## Beschreibung der Profile
+
+`EmigaOrganization` ist eine Spezialisierung der FHIR-Ressource `Organization`. 
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/Organization.svg}}
+
+### Physische Orte
+
+Das Profil `EmigaLocation` beschreibt einen physischen Ort, der besucht werden kann.
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/Location.svg}}
+
+Ein physischer Ort kann grundsätzlich über Geokoordinaten und in der Regel über eine Straßenadresse beschrieben werden. Eine `EmigaLocation` kann über `managingOrganization` einer Einrichtung zugeordnet werden.
+
+### Fachabteilung
+
+Das Profil `EmigaDepartmentOrganization` beschreibt einen organisatorischen Teil einer Abteilung, nicht den physischen Ort.
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/DepartmentOrganization.svg}}
+
+Eine `EmigaDepartmentOrganization` kann über `managingOrganization` einer Einrichtung zugeordnet werden.
+
+
+### Dienstleistungen im EINRV
+
+Bietet eine Einrichtung eine Dienstleistung an, kann diese über `EmigaHealthcareService` abgebildet werden. Beispiele hierfür sind ein Hotline-Service oder das Angebot einer Ansprechperson für einen bestimmten fachlichen Bereich.
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/HealthCareService.svg}}
+
+Die Dienstleistung wird über `providedBy` der anbietenden Einrichtung zugeordnet. Die Standorte, an denen sie angeboten wird, werden über `EmigaLocation` referenziert.
+
+### Ansprechpersonen und Rollen
+
+Einrichtungen können mit `EmigaPractitioner` und `EmigaPractitionerRole` verknüpft werden.
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/Practitioner.svg}}
+
+{{render:guides/implementationguides.vzd/PlantUML/SVGs/PractitionerRole.svg}}
+
+Die Sichtbarkeit der Ansprechpersonen wird getrennt von der Sichtbarkeit der Einrichtung gesteuert.
+
+## Schnittstellenoperationen
+
+Der EINRV stellt FHIR-Schnittstellen für die Suche, den Detailabruf und gegebenenfalls die Pflege von generischen Einrichtungen, Standorten und Rollen bereit. Die Operationen verarbeiten FHIR-Ressourcen in den Formaten `application/fhir+json` oder `application/fhir+xml` und sind über Bearer Token abgesichert.
+
+<fql>
+using scope
+
+from CapabilityStatement
+
+where
+    url = 'https://emiga.rki.de/fhir/vzd/CapabilityStatement/EmigaEINRVCapabilityStatementRequirements'
+
+for rest.resource
+
+where
+    type = 'Organization'
+    or
+    type = 'Location'
+	or 
+	type = 'Practitioner'
+	or 
+	type = 'PractitionerRole'
+	or
+	type = 'HealthcareService'
+
+for interaction
+
+select
+    'Operation': code,
+    'Zweck'[markdown]: documentation,
+    'Verbindlichkeit':
+        extension
+            .where(
+                url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
+            )
+            .value
+
+with header
+</fql>
+
+
+## Erstellung und Versionierung
+
+Beim Anlegen einer generischen Einrichtung in EMIGA werden die erforderlichen Stammdaten, Identifikatoren, Rollen und Kommunikationsadressen an den EINRV übermittelt. 
+Bei Änderungen werden insbesondere Identifikatoren, Einrichtungstyp und Kommunikationsadressen geprüft und aktualisiert. 
+Durch die Versionierung der Einträge bleiben historische Versionen nachvollziehbar und können dem jeweils zu diesem Zeitpunkt gültigen Stand der Einrichtung zugeordnet werden.
+
+## Suche und Anzeige
+
+Es kann beispielsweise nach Einrichtungen, Einrichtungsstandorten und Gesundheitsleistungen anhand verschiedener Suchkriterien wie Identifikatoren, Name, Ort, Postleitzahl oder Kommunikationsadresse gesucht werden.
+Die Suchergebnisse werden entsprechend der jeweiligen Art differenziert dargestellt.
+Bei der Suche werden nur Einrichtungen berücksichtigt, die für den jeweiligen EMIGA-Fachprozess sichtbar sind.
+
+## Kennzeichnung von EpiWarn-Einrichtungen
+
+Bei bestimmten generischen Einrichtungen kann die Kennzeichnung **„EpiWarn-Einrichtung“** angezeigt werden. Sie kennzeichnet Einrichtungen, die für bestimmte Koordinierungs- und Erreichbarkeitsprozesse im Kontext der **IfSG-Koordinierungs-VwV** relevant sind.
+
+Die Kennzeichnung erfolgt technisch über `meta.tag:relevance` mit dem Wert `IfsgKoordVwV` und wird ausschließlich für entsprechende RKI-interne Anwendungsfälle genutzt. Für andere EMIGA-Nutzende hat diese Kennzeichnung keine fachliche Bedeutung.
+

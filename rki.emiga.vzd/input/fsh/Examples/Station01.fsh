@@ -2,7 +2,7 @@ Instance: Station01
 InstanceOf: EmigaHospitalFacilityLocation
 Usage: #example
 Title: "Beispiel eines Stationsstandorts"
-Description: "Beispiel eines Standorts, der eine Station in einem Krankenhaus beschreibt."
+Description: "Ein Beispiel für einen Standort, der eine Station in einem Krankenhaus darstellt."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
@@ -28,4 +28,3 @@ Description: "Beispiel eines Standorts, der eine Station in einem Krankenhaus be
 * managingOrganization.reference = "Organization/InekKrankenhausOrganization"
 * managingOrganization.identifier.system = $identifier-iknr
 * managingOrganization.identifier.value = "260551132"
-

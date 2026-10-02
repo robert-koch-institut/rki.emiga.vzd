@@ -1,12 +1,12 @@
-Instance: IneKStandort
+Instance: IneKStandort  
 InstanceOf: EmigaHospitalLocation
 Usage: #example
 Title: "InEK Standort Beispiel"
-Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
+Description: "Ein Beispiel für einen InEK Krankenhausstandort."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.
-* meta.tag[relevance] = $RelevanceCS#InEK "InEK Standortverzeichnis"
+* meta.tag[relevance] = $RelevanceCS#InEK "Aus Krankenhausverzeichnis"
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
 * extension[inekVersionPeriod].extension[version].valueInteger = 3
 * extension[inekVersionPeriod].extension[validPeriod].valuePeriod.start = "2019-01-01"
@@ -30,9 +30,9 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * mode = #instance
 * address.type = #both
 * address.line = "Am Krankenhaus 2"
-* address.extension[municipalityKey].url = "http://fhir.de/StructureDefinition/destatis/ags"
-* address.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
-* address.extension[municipalityKey].valueCoding.code = #05570052
+* address.city.extension[municipalityKey].url = "http://fhir.de/StructureDefinition/destatis/ags"
+* address.city.extension[municipalityKey].valueCoding.system = "http://fhir.de/sid/destatis/ags"
+* address.city.extension[municipalityKey].valueCoding.code = #05570052
 
 * address.line.extension[Strasse].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
 * address.line.extension[Strasse].valueString = "Am Krankenhaus"
@@ -45,7 +45,6 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 * physicalType.coding.code = #si
 * physicalType.coding.display = "Site"
 
-
 * position.latitude = 51.960420529706
 * position.longitude = 8.002352893336
 * position.extension[UTMCoordinates].extension[UTM_Zone].valueString = "32U"
@@ -54,6 +53,3 @@ Description: "Beispiel eines Standorts aus dem InEK Standortverzeichnis."
 //* address.state = "Niedersachsen"
 * address.postalCode = "48231"
 //* address.country = "DE"
-* managingOrganization.identifier.system = $identifier-iknr
-* managingOrganization.identifier.value = "260551132"
-* managingOrganization.identifier.extension[inekVersionPeriod].extension[version].valueInteger = 1

@@ -1,10 +1,11 @@
 Extension: IneKVersionPeriod
 Id: IneKVersionPeriod
 Title: "IneK Version Period"
-Description: "Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses."
+Description: "Die 'IneKVersionPeriod' enthält Informationen zur Version und Gültigkeitsdauer eines Standorts des IneK-Krankenhausverzeichnisses."
+
 * ^url = "https://emiga.rki.de/fhir/vzd/Extension/IneKVersionPeriod"
-* ^version = "0.2.0"
-* ^date = "2026-02-24"
+* ^version = "0.2.1"
+* ^date = "2026-08-18"
 
 * insert MetadataProfile
 

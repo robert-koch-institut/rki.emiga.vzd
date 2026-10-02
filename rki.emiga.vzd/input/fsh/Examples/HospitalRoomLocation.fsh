@@ -2,7 +2,7 @@ Instance: HospitalRoomLocation
 InstanceOf: EmigaHospitalRoomLocation
 Usage: #example
 Title: "KH Raum Beispiel"
-Description: "Beispiel eines Raums in einer Krankenhaus."
+Description: "Ein Beispiel für einen Raum in einem Krankenhaus."
 
 * meta.security[visibility] = $ResourceVisibilityType#public
 * meta.security[responsibility] = $ResourceResponsibility#1.

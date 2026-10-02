@@ -67,4 +67,3 @@ select
 <tab title="JSON">{{json}}</tab>
 <tab title="Link">{{link}}</tab>
 </tabs>
-<br>&nbsp;<br>## {{page-title}}

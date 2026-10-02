@@ -2,10 +2,10 @@ Profile: EmigaHospitalLocation
 Parent: Location
 Id: EmigaHospitalLocation
 Title: "Krankenhaus - Standort"
-Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext von EMIGA ab. Es dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
-//
-* ^version = "0.4.0"
-* ^date = "2026-07-08"
+Description: "Eine 'EmigaHospitalLocation' bildet einen Standort eines Krankenhauses ab. Dies dient der strukturierten Erfassung von besuchbaren Krankenhaus-Standorten (z. B. Hauptstandort, Klinikgebäude, Stationen) einschließlich Adress- und ggf. Geokoordinaten für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
+
+* ^version = "0.5.0"
+* ^date = "2026-09-28"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -13,7 +13,6 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaTags
 * insert ProfileMetaProfileTags
-
 
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaHospitalLocation"
 
@@ -46,7 +45,7 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 * identifier[EmigaID].use 0..1 MS
 * identifier[EmigaID].use = #official (exactly)
 * identifier[EmigaID].system 1..1 MS
-* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value 1..1 MS
 * identifier[EmigaID].value ^short = "Wert des Identifiers"
 * identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
@@ -55,7 +54,7 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 * identifier[EmigaFileNumber].use 0..1 MS
 * identifier[EmigaFileNumber].use = #official (exactly)
 * identifier[EmigaFileNumber].system 1..1 MS
-* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
 * identifier[EmigaFileNumber].value 1..1 MS
 * identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
 * identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
@@ -183,16 +182,16 @@ Description: "Dieses Profil bildet einen Standort eines Krankenhauses im Kontext
 * address.type ^definition = "Kennzeichnet den physische Addressen-Typ, z.B. ob es sich um  eine Besuchsadresse handelt oder eine Postanschrift und eine Besuchsadresse."
 * address.type.value MS
 //* address.type ^comment = "Es wird benötigt um den physische Addressen-Typ zu kennzeichnen, z.B. ob es sich um eine Postanschrift oder eine Besuchsadresse handelt."
-* address.extension contains $MunicipalityKey named municipalityKey 0..1 MS
-* address.extension[municipalityKey] ^short = "Gemeindeschlüssel"
-* address.extension[municipalityKey] ^definition = "Amtlicher Gemeindeschlüssel (AGS) der Gemeinde, in der sich der Standort befindet."
-* address.extension[municipalityKey] ^mustSupport = true
-* address.extension[municipalityKey].valueCoding MS
-* address.extension[municipalityKey].valueCoding.system MS
-* address.extension[municipalityKey].valueCoding.code MS
-* address.extension[municipalityKey].valueCoding ^short = "Gemeindeschlüssel"
-* address.extension[municipalityKey].valueCoding ^definition = "Der Gemeindeschlüssel (AGS) ist ein eindeutiger Identifikator für jede Gemeinde in Deutschland."
-* address.extension[municipalityKey].valueCoding ^mustSupport = true
+* address.city.extension contains $MunicipalityKey named municipalityKey 0..1 MS
+* address.city.extension[municipalityKey] ^short = "Gemeindeschlüssel"
+* address.city.extension[municipalityKey] ^definition = "Amtlicher Gemeindeschlüssel (AGS) der Gemeinde, in der sich der Standort befindet."
+* address.city.extension[municipalityKey] ^mustSupport = true
+* address.city.extension[municipalityKey].valueCoding MS
+* address.city.extension[municipalityKey].valueCoding.system MS
+* address.city.extension[municipalityKey].valueCoding.code MS
+* address.city.extension[municipalityKey].valueCoding ^short = "Gemeindeschlüssel"
+* address.city.extension[municipalityKey].valueCoding ^definition = "Der Gemeindeschlüssel (AGS) ist ein eindeutiger Identifikator für jede Gemeinde in Deutschland."
+* address.city.extension[municipalityKey].valueCoding ^mustSupport = true
 * address.extension[Stadtteil] ^mustSupport = true
 * address.extension[Stadtteil].valueString MS
 * address.extension[Stadtteil].valueString obeys validString

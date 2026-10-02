@@ -2,16 +2,18 @@ Profile: EmigaDepartmentOrganization
 Parent: Organization
 Id: EmigaDepartmentOrganization
 Title: "Fachabteilung"
-Description: "Unter einer Fachabteilung versteht man einen organisatorischen Teil einer Abteilung (nicht der physischen Ort)."
+Description: "Eine 'EmigaDepartmentOrganization' ist ein organisatorischer Teil einer Abteilung (nicht der physischen Ort)."
 
-* ^version = "1.3.0"
-* ^date = "2026-07-08"
+* ^version = "1.4.0"
+* ^date = "2026-09-28"
+
 * insert MetadataProfile
 * insert ProfileResourceCommon
 * insert ProfileDomainResourceCommon
 * insert EinrVProfileSecurityTags
 * insert ProfileMetaProfileTags
 * insert ProfileMetaTags
+
 * meta.profile[emigaprofile] = "https://emiga.rki.de/fhir/vzd/StructureDefinition/EmigaDepartmentOrganization"
 * extension MS
 * extension contains $OrganizationPeriod named organizationPeriod 0..*
@@ -43,7 +45,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * identifier[EmigaID].use 0..1 MS
 * identifier[EmigaID].use = #official (exactly)
 * identifier[EmigaID].system 1..1 MS
-* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value 1..1 MS
 * identifier[EmigaID].value ^short = "Wert des Identifiers"
 * identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
@@ -51,7 +53,7 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * identifier[EmigaFileNumber].use 0..1 MS
 * identifier[EmigaFileNumber].use = #official (exactly)
 * identifier[EmigaFileNumber].system 1..1 MS
-* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
 * identifier[EmigaFileNumber].value 1..1 MS
 * identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
 * identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"
@@ -184,7 +186,5 @@ Description: "Unter einer Fachabteilung versteht man einen organisatorischen Tei
 * contact 0..0
 * contact ^comment = "Wir verbieten 'contact' erstmal, bis wir es später für weitere Organisationstypen und eine weiterführende Kompatibilität ggf. benötigen"
 // 'Technical endpoints providing access to services operated for the organization' - 0..* - Reference(Endpoint)
-// Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt.
-// Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen
+// Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Sobald wir technische Endpoints abbilden, müssen wir hier eine weitere Profilierung vornehmen.
 * endpoint 0..0
-* endpoint ^comment = "Wird für die EMIGA Anwendungsfälle derzeit nicht benötigt. Sobald wir technische Endpoints abbilden, müssen wir hier bestimmt eine weitere Profilierung vornehmen"
