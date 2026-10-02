@@ -4,8 +4,8 @@ Id: EmigaHospitalOrganization
 Title: "Krankenhaus"
 Description: "Eine 'EmigaHospitalOrganization' dient der Abbildung eines Krankenhauses. Dies dient der strukturierten Erfassung von Stammdaten des Krankenhauses (z. B. Name, Kennziffern, Kontakt- und Adressdaten) für die Nutzung in Melde-, Dokumentations- und Kommunikationsprozessen."
 
-* ^version = "0.4.1"
-* ^date = "2026-08-18"
+* ^version = "0.5.0"
+* ^date = "2026-09-28"
 
 * insert MetadataProfile
 * insert ProfileResourceCommon
@@ -55,7 +55,7 @@ Description: "Eine 'EmigaHospitalOrganization' dient der Abbildung eines Kranken
 * identifier[EmigaID].use 0..1 MS
 * identifier[EmigaID].use = #official (exactly)
 * identifier[EmigaID].system 1..1 MS
-* identifier[EmigaID].system = "https://emiga.rki.de/fhir/sid/EmigaID"
+* identifier[EmigaID] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaID"
 * identifier[EmigaID].value 1..1 MS
 * identifier[EmigaID].value ^short = "Wert des Identifiers"
 * identifier[EmigaID].value ^definition = "Der eigentliche Wert des Identifiers."
@@ -64,7 +64,7 @@ Description: "Eine 'EmigaHospitalOrganization' dient der Abbildung eines Kranken
 * identifier[EmigaFileNumber].use 0..1 MS
 * identifier[EmigaFileNumber].use = #official (exactly)
 * identifier[EmigaFileNumber].system 1..1 MS
-* identifier[EmigaFileNumber].system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
+* identifier[EmigaFileNumber] ^patternIdentifier.system = "https://emiga.rki.de/fhir/sid/EmigaFileNumber"
 * identifier[EmigaFileNumber].value 1..1 MS
 * identifier[EmigaFileNumber].value ^short = "Wert des Identifiers"
 * identifier[EmigaFileNumber].value ^definition = "Der eigentliche Wert des Identifiers. Das EMIGA Aktenzeichen wird wie folgt generiert: [ENTITÄT][CODE-SITE-ID][JAHR]-[Achtstellige-Zahl]"

@@ -7,19 +7,19 @@ Description: "Beispiel eines Transaction Bundle zum Erstellen eines Krankenhause
 * timestamp = 2026-09-14T12:00:00Z
 
 // Entry 1: Create the Hospital Organization
-* entry[0].fullUrl = "urn:uuid:hospital-org-12345678"
+* entry[0].fullUrl = "urn:uuid:00000000-0000-4000-8000-000000000001"
 * entry[0].resource = ExampleEmigaOrganization
 * entry[0].request.method = #POST
 * entry[0].request.url = "Organization"
 
 // Entry 2: Create the Hospital Location (Standort)
-* entry[1].fullUrl = "urn:uuid:hospital-location-87654321"
+* entry[1].fullUrl = "urn:uuid:00000000-0000-4000-8000-000000000002"
 * entry[1].resource = ExampleEmigaLocation
 * entry[1].request.method = #POST
 * entry[1].request.url = "Location"
 
 // Entry 3: Create the Hospital Facility Location (Einrichtungsstandort)
-* entry[2].fullUrl = "urn:uuid:facility-location-11223344"
+* entry[2].fullUrl = "urn:uuid:00000000-0000-4000-8000-000000000003"
 * entry[2].resource = ExampleEmigaFacilityLocation
 * entry[2].request.method = #POST
 * entry[2].request.url = "Location"
@@ -173,7 +173,7 @@ Usage: #inline
 * position.extension[utmCoordinates].extension[UTM_Northing_Y].valueDecimal = 5757106
 
 // managing organization 
-* managingOrganization.reference = "urn:uuid:hospital-org-12345678"
+* managingOrganization.reference = "urn:uuid:00000000-0000-4000-8000-000000000001"
 
 // entry[2] -> Josephs-Krankenhaus Station A
 
@@ -245,7 +245,7 @@ Usage: #inline
 * position.altitude = 56
 
 // managing organization 
-* managingOrganization.reference = "urn:uuid:hospital-org-12345678"
+* managingOrganization.reference = "urn:uuid:00000000-0000-4000-8000-000000000001"
 
 // partOf (reference to main location) 
-* partOf.reference = "urn:uuid:hospital-location-87654321"
+* partOf.reference = "urn:uuid:00000000-0000-4000-8000-000000000002"
